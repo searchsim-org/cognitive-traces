@@ -2,7 +2,7 @@
 
 import { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
-import { Upload, FileText, Loader2 } from 'lucide-react'
+import { Upload, FileText, Loader2, ArrowRight } from 'lucide-react'
 
 interface FileUploaderProps {
   onUpload: (file: File) => void
@@ -22,6 +22,7 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
     accept: {
       'text/csv': ['.csv'],
       'application/json': ['.json'],
+      'application/xml': ['.xml'],
     },
     maxFiles: 1,
     disabled: isLoading,
@@ -29,6 +30,27 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
   
   return (
     <div className="max-w-3xl mx-auto">
+      {/* Dataset Converter CTA (visible above upload) */}
+      {!isLoading && (
+        <div className="mb-6 p-6 rounded-2xl border border-yellow-200 bg-yellow-50">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="font-bold text-2xl text-yellow-900 mb-1">Dataset Converter</h3>
+              <p className="text-yellow-800 text-md">
+                Your dataset doesn't match the required fields? <br/>Convert it by mapping columns (CSV/JSON/XML).
+              </p>
+            </div>
+            <a
+              href="/converter"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-yellow-600 text-white hover:bg-yellow-700 text-lg font-medium"
+            >
+              Open Converter
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      )}
+
       <div className="p-10 rounded-3xl border border-gray-200 bg-white">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-blue-500 mb-6">
@@ -68,8 +90,8 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
                   <p className="text-xl text-gray-900 mb-2 font-medium">
                     Drag and drop your file here, or click to browse
                   </p>
-                  <p className="text-gray-500">
-                    Supported formats: CSV, JSON (Max 100MB)
+                <p className="text-gray-500">
+                  Supported formats: CSV, JSON, XML (Max 100MB)
                   </p>
                 </>
               )}

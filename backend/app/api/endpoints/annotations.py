@@ -6,6 +6,7 @@ from fastapi import APIRouter, UploadFile, File, HTTPException
 from typing import List, Dict, Any
 from app.schemas.annotation import AnnotationRequest, AnnotationResponse, BatchAnnotationRequest
 from app.services.annotation_service import AnnotationService
+from datetime import datetime
 
 router = APIRouter()
 annotation_service = AnnotationService()
@@ -55,6 +56,18 @@ async def upload_dataset(
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/dataset/{dataset_id}")
+async def get_dataset_info(dataset_id: str, page: int = 1, limit: int = 10):
+    """
+    Get dataset information with paginated session preview.
+    """
+    try:
+        info = await annotation_service.get_dataset_info(dataset_id, page, limit)
+        return info
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=f"Dataset {dataset_id} not found")
 
 
 @router.get("/job/{job_id}")
@@ -146,12 +159,18 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
         if not log:
             raise HTTPException(status_code=404, detail=f"Log not found for session {session_id}")
 
-        # Overwrite flagged events' cognitive_label with user label
+        # Overwrite flagged events' cognitive_label with user label and bump version
         for ev in log.get('events', []):
             if ev.get('flagged_for_review', False):
                 ev['cognitive_label'] = label
                 ev['user_override'] = True
                 ev['user_note'] = note
+                # Increment version (default from 1)
+                try:
+                  ev['override_version'] = int(ev.get('override_version', 1)) + 1
+                except Exception:
+                  ev['override_version'] = 2
+                ev['override_timestamp'] = datetime.now().isoformat()
 
         # Persist back to log file
         orchestrator.session_logs[session_id] = log

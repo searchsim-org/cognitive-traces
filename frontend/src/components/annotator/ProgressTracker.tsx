@@ -174,6 +174,15 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
               )}
             </div>
           </div>
+          {jobStatus?.disagreement_model && (
+            <div className="mt-2 text-xs">
+              {jobStatus.disagreement_model.loaded ? (
+                <span className="text-green-600">Disagreement model: loaded</span>
+              ) : (
+                <span className="text-red-600">Disagreement model: not loaded{jobStatus.disagreement_model.error ? ` — ${jobStatus.disagreement_model.error}` : ''}</span>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Current Session */}

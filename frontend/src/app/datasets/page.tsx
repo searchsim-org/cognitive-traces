@@ -34,6 +34,16 @@ const datasets = [
     bgColor: 'bg-purple-600',
     textColor: 'text-purple-600',
   },
+  {
+    name: 'AQL Archive Query Logs',
+    description: 'Historical archive query logs',
+    sessions: '—',
+    labels: '—',
+    icon: Search,
+    bgColor: 'bg-indigo-600',
+    textColor: 'text-indigo-600',
+    status: 'Coming Soon'
+  },
 ]
 
 export default function DatasetsPage() {
@@ -66,9 +76,14 @@ export default function DatasetsPage() {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                  {dataset.name}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <h3 className="text-2xl font-bold text-gray-900">{dataset.name}</h3>
+                  {dataset.status && (
+                    <span className="px-2 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium whitespace-nowrap">
+                      {dataset.status}
+                    </span>
+                  )}
+                </div>
                 <p className="text-gray-600 mb-8 leading-relaxed">
                   {dataset.description}
                 </p>
@@ -90,6 +105,27 @@ export default function DatasetsPage() {
                 </div>
               </div>
             ))}
+
+            {/* Request a dataset card */}
+            <div className="group p-10 rounded-3xl border-2 border-dashed border-gray-300 hover:border-gray-400 transition-all bg-white flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Request a Dataset</h3>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Don’t see the dataset you need? Open a request and tell us about your use case.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/searchsim-org/cognitive-traces/issues/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-12 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 text-lg font-medium"
+                >
+                  Request
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* CTA Section */}

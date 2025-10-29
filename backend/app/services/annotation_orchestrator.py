@@ -48,6 +48,8 @@ class AnnotationOrchestrator:
         
         # For semantic similarity comparison
         self.similarity_model = None
+        self.similarity_model_loaded: bool = False
+        self.similarity_model_error: Optional[str] = None
         
         # Progress tracking
         self.progress = {
@@ -303,7 +305,11 @@ class AnnotationOrchestrator:
                     'judge_justification': judge_decisions[i].get('justification', '') if has_judge else '',
                     'confidence_score': judge_decisions[i].get('confidence', 0.0) if has_judge else 0.0,
                     'disagreement_score': disagreement_scores[i] if i < len(disagreement_scores) else 0,
-                    'flagged_for_review': (disagreement_scores[i] > 0.75) if i < len(disagreement_scores) else False
+                    'flagged_for_review': (disagreement_scores[i] > 0.75) if i < len(disagreement_scores) else False,
+                    # Versioning fields for non-destructive overrides
+                    'user_override': False,
+                    'override_version': 1,
+                    'override_timestamp': datetime.now().isoformat()
                 }
                 annotated_events.append(annotated_event)
             
@@ -345,7 +351,19 @@ class AnnotationOrchestrator:
         try:
             # Lazy load similarity model
             if self.similarity_model is None:
-                self.similarity_model = SentenceTransformer('all-MiniLM-L6-v2')
+                try:
+                    print("[DISAGREEMENT] Loading SentenceTransformer 'all-MiniLM-L6-v2'...")
+                    self.similarity_model = SentenceTransformer('all-MiniLM-L6-v2')
+                    self.similarity_model_loaded = True
+                    self.similarity_model_error = None
+                    print("[DISAGREEMENT] SentenceTransformer loaded successfully.")
+                except Exception as load_err:
+                    self.similarity_model = None
+                    self.similarity_model_loaded = False
+                    self.similarity_model_error = str(load_err)
+                    print(f"[DISAGREEMENT][ERROR] Failed to load SentenceTransformer: {load_err}")
+                    # Early return zeros so pipeline continues without flags
+                    return [0.0] * len(analyst_decisions)
             
             disagreement_scores = []
             
@@ -368,7 +386,7 @@ class AnnotationOrchestrator:
             return disagreement_scores
             
         except Exception as e:
-            print(f"Error calculating disagreement: {e}")
+            print(f"[DISAGREEMENT][ERROR] Error calculating disagreement: {e}")
             return [0.0] * len(analyst_decisions)
     
     def _write_csv_header(self, output_file: Path):
@@ -378,7 +396,9 @@ class AnnotationOrchestrator:
             'cognitive_label', 'analyst_label', 'analyst_justification',
             'critic_label', 'critic_agreement', 'critic_justification',
             'judge_justification', 'confidence_score', 'disagreement_score',
-            'flagged_for_review'
+            'flagged_for_review',
+            # New versioning/audit columns
+            'user_override', 'override_version', 'override_timestamp'
         ]
         
         with open(output_file, 'w') as f:
@@ -407,7 +427,11 @@ class AnnotationOrchestrator:
                     event['judge_justification'][:500],
                     event['confidence_score'],
                     event['disagreement_score'],
-                    event['flagged_for_review']
+                    event.get('flagged_for_review', False),
+                    # New versioning/audit columns (with safe defaults)
+                    event.get('user_override', False),
+                    event.get('override_version', 1),
+                    event.get('override_timestamp', datetime.now().isoformat())
                 ]
                 writer.writerow(row)
     

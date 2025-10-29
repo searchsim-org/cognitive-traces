@@ -24,12 +24,12 @@ export function Navigation() {
             <Image
               src="/images/logo.png"
               alt="Cognitive Traces Logo"
-              width={32}
-              height={32}
+              width={38}
+              height={38}
               className="group-hover:scale-105 transition-transform"
             />
-            <span className="text-2xl font-bold text-gray-900">
-              CogTraces
+            <span className="text-3xl font-bold text-gray-900">
+              Traces
             </span>
           </Link>
 

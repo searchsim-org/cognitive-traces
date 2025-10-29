@@ -106,6 +106,45 @@ class AnnotationService:
             'session_ids': session_ids
         }
     
+    async def get_dataset_info(self, dataset_id: str, page: int = 1, limit: int = 10) -> Dict[str, Any]:
+        """Get dataset information with paginated session preview"""
+        if dataset_id not in self.uploaded_datasets:
+            raise ValueError(f"Dataset {dataset_id} not found")
+        
+        dataset = self.uploaded_datasets[dataset_id]
+        parsed_data = dataset['parsed_data']
+        sessions = parsed_data['sessions']
+        
+        # Calculate pagination
+        total_sessions = len(sessions)
+        start_idx = (page - 1) * limit
+        end_idx = min(start_idx + limit, total_sessions)
+        
+        # Get paginated sessions (with limited events per session for preview)
+        preview_sessions = []
+        for session in sessions[start_idx:end_idx]:
+            preview_session = {
+                'session_id': session['session_id'],
+                'num_events': session.get('num_events', len(session.get('events', []))),
+                'start_time': session.get('start_time', ''),
+                'end_time': session.get('end_time', ''),
+                # Include only first 3 events for preview
+                'events_preview': session.get('events', [])[:3]
+            }
+            preview_sessions.append(preview_session)
+        
+        return {
+            'dataset_id': dataset_id,
+            'filename': dataset['filename'],
+            'total_sessions': total_sessions,
+            'total_events': parsed_data.get('total_events', 0),
+            'dataset_info': parsed_data.get('dataset_info', {}),
+            'page': page,
+            'limit': limit,
+            'total_pages': (total_sessions + limit - 1) // limit,
+            'sessions': preview_sessions
+        }
+
     async def annotate_session(self, request: AnnotationRequest) -> Dict[str, Any]:
         """Annotate a single session"""
         # Create temporary config and orchestrator
@@ -153,7 +192,12 @@ class AnnotationService:
             "stop_requested": progress.get('stop_requested', False),
             "session_ids": getattr(orchestrator, 'session_ids', []),
             "flagged_sessions": progress.get('flagged_sessions', []),
-            "session_event_counts": getattr(orchestrator, 'session_event_counts', {})
+            "session_event_counts": getattr(orchestrator, 'session_event_counts', {}),
+            # Diagnostics for disagreement model
+            "disagreement_model": {
+                "loaded": getattr(orchestrator, 'similarity_model_loaded', False),
+                "error": getattr(orchestrator, 'similarity_model_error', None)
+            }
         }
         
         return status_response

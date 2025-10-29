@@ -13,12 +13,12 @@ export function Footer() {
               <Image 
                 src="/images/logo.png" 
                 alt="Cognitive Traces Logo" 
-                width={32} 
-                height={32}
+                width={40} 
+                height={40}
                 className="group-hover:scale-105 transition-transform"
               />
-              <span className="text-2xl font-bold text-gray-900">
-                CogTraces
+              <span className="text-3xl font-bold text-gray-900">
+                Traces
               </span>
             </Link>
             <p className="text-gray-600 leading-relaxed max-w-sm">

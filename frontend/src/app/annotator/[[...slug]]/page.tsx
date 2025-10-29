@@ -5,7 +5,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { FileUploader } from '@/components/annotator/FileUploader'
-import { SessionList } from '@/components/annotator/SessionList'
+import { DatasetReview } from '@/components/annotator/DatasetReview'
 import { LLMConfigPanel } from '@/components/annotator/LLMConfigPanel'
 import { ProgressTracker } from '@/components/annotator/ProgressTracker'
 import { FlaggedSessions } from '@/components/annotator/FlaggedSessions'
@@ -51,26 +51,43 @@ function AnnotatorContent() {
   const [sessionIds, setSessionIds] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
-  // Restore dataset from localStorage on mount
+  // Restore dataset metadata from localStorage on mount
   useEffect(() => {
-    const savedDataset = localStorage.getItem('annotator_dataset')
-    if (savedDataset) {
+    // Clean up old full-dataset localStorage key (migration)
+    if (localStorage.getItem('annotator_dataset')) {
+      localStorage.removeItem('annotator_dataset')
+      console.log('[Cleanup] Removed old full dataset from localStorage')
+    }
+    
+    const savedMeta = localStorage.getItem('annotator_dataset_meta')
+    if (savedMeta) {
       try {
-        const dataset = JSON.parse(savedDataset)
-        setUploadedDataset(dataset)
-        console.log('[Restore] Loaded dataset from localStorage:', dataset.filename)
+        const meta = JSON.parse(savedMeta)
+        console.log('[Restore] Dataset metadata restored:', meta.filename)
+        setUploadedDataset(meta)
       } catch (e) {
-        console.error('[Restore] Failed to parse saved dataset:', e)
-        localStorage.removeItem('annotator_dataset')
+        console.error('[Restore] Failed to parse saved metadata:', e)
+        localStorage.removeItem('annotator_dataset_meta')
       }
     }
   }, [])
 
-  // Save dataset to localStorage whenever it changes
+  // Save only dataset metadata to localStorage (not full sessions data)
   useEffect(() => {
     if (uploadedDataset) {
-      localStorage.setItem('annotator_dataset', JSON.stringify(uploadedDataset))
-      console.log('[Save] Dataset saved to localStorage')
+      try {
+        const meta = {
+          dataset_id: uploadedDataset.dataset_id,
+          filename: uploadedDataset.filename,
+          total_sessions: uploadedDataset.total_sessions,
+          total_events: uploadedDataset.total_events,
+        }
+        localStorage.setItem('annotator_dataset_meta', JSON.stringify(meta))
+        console.log('[Save] Dataset metadata saved to localStorage')
+      } catch (e) {
+        console.warn('[Save] Could not save metadata to localStorage (quota exceeded?):', e)
+        // Silently fail - not critical
+      }
     }
   }, [uploadedDataset])
   
@@ -109,8 +126,8 @@ function AnnotatorContent() {
       console.log('[Upload] Received dataset:', data)
       console.log('[Upload] Sessions count:', data.sessions?.length)
       
-      // Clear old dataset from localStorage before setting new one
-      localStorage.removeItem('annotator_dataset')
+      // Clear old dataset metadata from localStorage before setting new one
+      localStorage.removeItem('annotator_dataset_meta')
       
       setUploadedDataset(data)
       updateStep('review')
@@ -246,55 +263,39 @@ function AnnotatorContent() {
             )}
 
             {/* Step 2: Review Sessions */}
-            {currentStep === 'review' && uploadedDataset && (
-              <div className="space-y-6">
-                <div className="bg-white rounded-3xl border border-gray-200 p-8">
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <h2 className="text-2xl font-bold text-gray-900">Dataset Overview</h2>
-                      <p className="text-gray-600 mt-1">Review extracted sessions before annotation</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-blue-600">{uploadedDataset.total_sessions}</div>
-                      <div className="text-sm text-gray-500">Sessions</div>
-                    </div>
-                  </div>
-
-                  {uploadedDataset.sessions && uploadedDataset.sessions.length > 0 ? (
-                    <SessionList sessions={uploadedDataset.sessions} />
-                  ) : (
-                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-                      <p className="text-blue-800 font-medium mb-2">
-                        Dataset loaded: {uploadedDataset.total_sessions} sessions with {uploadedDataset.total_events} events
-                      </p>
-                      <p className="text-blue-600 text-sm">
-                        Session details ready for annotation
-                      </p>
-                    </div>
-                  )}
-                  
-                  <div className="mt-8 flex justify-between">
-                    <button
-                      onClick={() => {
-                        setUploadedDataset(null)
-                        setJobId(null)
-                        localStorage.removeItem('annotator_dataset')
-                        updateStep('upload', null)
-                      }}
-                      className="px-6 py-3 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50"
-                    >
-                      Upload Different File
-                    </button>
-                    <button
-                      onClick={() => updateStep('configure')}
-                      className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium"
-                    >
-                      Continue to Configuration
-                    </button>
-                  </div>
-                </div>
+            {currentStep === 'review' && uploadedDataset ? (
+              <>
+                {console.log('[Annotator] Rendering DatasetReview with:', {
+                  datasetId: uploadedDataset.dataset_id,
+                  filename: uploadedDataset.filename,
+                  totalSessions: uploadedDataset.total_sessions,
+                  totalEvents: uploadedDataset.total_events
+                })}
+                <DatasetReview
+                  datasetId={uploadedDataset.dataset_id}
+                  filename={uploadedDataset.filename}
+                  totalSessions={uploadedDataset.total_sessions}
+                  totalEvents={uploadedDataset.total_events}
+                  onBack={() => {
+                    setUploadedDataset(null)
+                    setJobId(null)
+                    localStorage.removeItem('annotator_dataset_meta')
+                    updateStep('upload', null)
+                  }}
+                  onContinue={() => updateStep('configure')}
+                />
+              </>
+            ) : currentStep === 'review' ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500">No dataset uploaded. Please upload a dataset first.</p>
+                <button
+                  onClick={() => updateStep('upload', null)}
+                  className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
+                >
+                  Go to Upload
+                </button>
               </div>
-            )}
+            ) : null}
 
             {/* Step 3: Configure LLM Models */}
             {currentStep === 'configure' && (
@@ -362,7 +363,7 @@ function AnnotatorContent() {
                     setLLMConfig(null)
                     setJobId(null)
                     setSessionIds([])
-                    localStorage.removeItem('annotator_dataset')
+                    localStorage.removeItem('annotator_dataset_meta')
                     updateStep('upload', null)
                   }}
                   className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium"

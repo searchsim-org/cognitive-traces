@@ -7,6 +7,10 @@ import { Button } from '@/components/ui/button'
 export function Hero() {
   return (
     <div className="relative bg-white">
+      {/* Subtle background fading */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.04),_transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-gray-50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-gray-50 to-transparent" />
       <div className="container">
         <div className="flex flex-col items-center text-center py-16 md:py-20 lg:py-32 space-y-12 max-w-4xl mx-auto">
           {/* Ultra minimal heading */}
@@ -38,7 +42,7 @@ export function Hero() {
           </div>
 
           {/* Minimal stats */}
-          <div className="flex flex-wrap justify-center gap-12 pt-8 text-md text-gray-500">
+          {/* <div className="flex flex-wrap justify-center gap-12 pt-8 text-md text-gray-500">
             <div>
               <span className="text-4xl font-bold text-gray-900">44.5M+&nbsp;</span> annotations
             </div>
@@ -46,12 +50,10 @@ export function Hero() {
             <div>
               <span className="text-4xl font-bold text-gray-900">3&nbsp;</span> datasets
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-gray-50 to-transparent" />
     </div>
   )
 }

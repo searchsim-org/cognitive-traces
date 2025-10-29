@@ -36,8 +36,15 @@ class FileParser:
     async def _parse_csv(file_content: bytes) -> Dict[str, Any]:
         """Parse CSV file and extract sessions"""
         try:
-            # Read CSV into pandas DataFrame
-            df = pd.read_csv(io.BytesIO(file_content))
+            # Read CSV into pandas DataFrame with proper quoting for JSON content
+            df = pd.read_csv(
+                io.BytesIO(file_content),
+                quoting=csv.QUOTE_ALL,
+                encoding='utf-8',
+                keep_default_na=False
+            )
+            
+            print(f"[FileParser] Loaded CSV with {len(df)} rows and columns: {list(df.columns)}")
             
             # Validate required columns
             required_cols = ['session_id', 'timestamp', 'action_type', 'content']
@@ -49,35 +56,46 @@ class FileParser:
             # Group events by session_id
             sessions_dict = defaultdict(list)
             
-            for _, row in df.iterrows():
-                event = {
-                    'event_id': str(row.get('event_id', f"{row['session_id']}_{row['timestamp']}")),
-                    'timestamp': str(row['timestamp']),
-                    'action_type': str(row['action_type']),
-                    'content': str(row['content']),
-                    'metadata': {}
-                }
-                
-                # Add any additional columns as metadata
-                for col in df.columns:
-                    if col not in required_cols and col != 'event_id':
-                        event['metadata'][col] = row[col]
-                
-                sessions_dict[str(row['session_id'])].append(event)
+            for idx, row in df.iterrows():
+                try:
+                    event = {
+                        'event_id': str(row.get('event_id', f"{row['session_id']}_{idx}")),
+                        'timestamp': str(row['timestamp']) if pd.notna(row['timestamp']) else '',
+                        'action_type': str(row['action_type']) if pd.notna(row['action_type']) else '',
+                        'content': str(row['content']) if pd.notna(row['content']) else '',
+                        'metadata': {}
+                    }
+                    
+                    # Add any additional columns as metadata
+                    for col in df.columns:
+                        if col not in required_cols and col != 'event_id':
+                            val = row[col]
+                            if pd.notna(val):
+                                event['metadata'][col] = val
+                    
+                    sessions_dict[str(row['session_id'])].append(event)
+                except Exception as row_error:
+                    print(f"[FileParser] Error processing row {idx}: {row_error}")
+                    raise ValueError(f"Error processing row {idx}: {row_error}")
             
             # Convert to list of sessions
             sessions = []
             for session_id, events in sessions_dict.items():
-                # Sort events by timestamp
-                events.sort(key=lambda e: e['timestamp'])
+                # Sort events by timestamp (handle empty timestamps gracefully)
+                try:
+                    events.sort(key=lambda e: e.get('timestamp', ''))
+                except Exception as sort_error:
+                    print(f"[FileParser] Could not sort events for session {session_id}: {sort_error}")
                 
                 sessions.append({
                     'session_id': session_id,
                     'num_events': len(events),
-                    'start_time': events[0]['timestamp'],
-                    'end_time': events[-1]['timestamp'],
+                    'start_time': events[0].get('timestamp', '') if events else '',
+                    'end_time': events[-1].get('timestamp', '') if events else '',
                     'events': events
                 })
+            
+            print(f"[FileParser] Successfully parsed {len(sessions)} sessions with {len(df)} total events")
             
             return {
                 'total_sessions': len(sessions),
@@ -85,11 +103,14 @@ class FileParser:
                 'sessions': sessions,
                 'dataset_info': {
                     'columns': list(df.columns),
-                    'action_types': df['action_type'].unique().tolist()
+                    'action_types': df['action_type'].unique().tolist() if 'action_type' in df.columns else []
                 }
             }
             
         except Exception as e:
+            print(f"[FileParser] Error parsing CSV file: {str(e)}")
+            import traceback
+            traceback.print_exc()
             raise ValueError(f"Error parsing CSV file: {str(e)}")
     
     @staticmethod
