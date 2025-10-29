@@ -90,6 +90,13 @@ uploads/
 data/raw/
 data/processed/
 
+# Annotation output (keep structure, ignore contents)
+data/*/
+!data/.gitkeep
+!data/checkpoints/
+data/checkpoints/*
+!data/checkpoints/.gitkeep
+
 # Model files (large)
 *.pt
 *.pth
@@ -120,3 +127,11 @@ Desktop.ini
 *.backup
 *.old
 
+# Process ID files
+*.pid
+.backend.pid
+.frontend.pid
+
+
+builder/*
+data/checkpoints/*

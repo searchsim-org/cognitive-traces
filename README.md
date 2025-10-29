@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![Cognitive Traces](https://img.shields.io/badge/Cognitive-Traces-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10+-green?style=flat-square)
 ![Next.js](https://img.shields.io/badge/Next.js-14.0-black?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)

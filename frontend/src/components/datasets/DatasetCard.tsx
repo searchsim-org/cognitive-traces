@@ -1,4 +1,7 @@
 import { LucideIcon } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 
 interface DatasetCardProps {
   dataset: {
@@ -14,9 +17,9 @@ interface DatasetCardProps {
 }
 
 const colorMap: Record<string, string> = {
-  blue: 'bg-blue-100 text-blue-600',
-  orange: 'bg-orange-100 text-orange-600',
-  purple: 'bg-purple-100 text-purple-600',
+  blue: 'bg-blue-500/10 text-blue-600',
+  orange: 'bg-orange-500/10 text-orange-600',
+  purple: 'bg-purple-500/10 text-purple-600',
 }
 
 export function DatasetCard({ dataset }: DatasetCardProps) {
@@ -24,38 +27,42 @@ export function DatasetCard({ dataset }: DatasetCardProps) {
   const colorClass = colorMap[dataset.color] || colorMap.blue
   
   return (
-    <div className="card hover:shadow-lg transition-shadow duration-200">
-      <div className={`w-12 h-12 rounded-lg ${colorClass} flex items-center justify-center mb-4`}>
-        <Icon className="w-6 h-6" />
-      </div>
-      
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-        {dataset.name}
-      </h3>
-      
-      <div className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mb-4">
-        {dataset.domain}
-      </div>
-      
-      <p className="text-gray-600 mb-6">
-        {dataset.description}
-      </p>
-      
-      <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span className="text-gray-600">Sessions/Users:</span>
-          <span className="font-semibold text-gray-900">{dataset.sessions}</span>
+    <Card className="group hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+      <CardHeader>
+        <div className={`w-12 h-12 rounded-lg ${colorClass} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+          <Icon className="w-6 h-6" />
         </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Total Events:</span>
-          <span className="font-semibold text-gray-900">{dataset.events}</span>
+        
+        <CardTitle className="text-2xl">{dataset.name}</CardTitle>
+        
+        <Badge variant="secondary" className="w-fit">
+          {dataset.domain}
+        </Badge>
+      </CardHeader>
+      
+      <CardContent className="space-y-4">
+        <CardDescription className="leading-relaxed">
+          {dataset.description}
+        </CardDescription>
+        
+        <Separator />
+        
+        <div className="space-y-3 text-sm">
+          <div className="flex justify-between items-center">
+            <span className="text-muted-foreground">Sessions/Users:</span>
+            <span className="font-semibold">{dataset.sessions}</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-muted-foreground">Total Events:</span>
+            <span className="font-semibold">{dataset.events}</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-muted-foreground">Cognitive Labels:</span>
+            <span className="font-semibold">{dataset.labels}</span>
+          </div>
         </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Cognitive Labels:</span>
-          <span className="font-semibold text-gray-900">{dataset.labels}</span>
-        </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 

@@ -1,56 +1,68 @@
-import { FileCode, Layers, Upload, Download } from 'lucide-react'
+import { Layers, Upload, Zap, Users } from 'lucide-react'
 
 const features = [
   {
     icon: Layers,
     title: 'Multi-Agent Framework',
-    description: 'Three specialized AI agents (Analyst, Critic, Judge) collaborate to ensure high-quality annotations with transparent reasoning.',
+    description: 'Three specialized AI agents collaborate to produce high-quality annotations with transparent reasoning.',
+    bgColor: 'bg-blue-500',
   },
   {
     icon: Upload,
     title: 'Flexible Data Ingestion',
-    description: 'Upload session logs in CSV or JSON format. Supports AOL, Stack Overflow, MovieLens, and custom datasets.',
+    description: 'Upload session logs in CSV or JSON format. Works with any behavioral dataset.',
+    bgColor: 'bg-purple-500',
   },
   {
-    icon: FileCode,
+    icon: Zap,
     title: 'Pre-Trained Model',
-    description: 'Lightweight transformer model for fast cognitive label prediction. 73% F1-score on session abandonment prediction.',
+    description: 'Fast cognitive label prediction with 73% F1-score on session abandonment.',
+    bgColor: 'bg-amber-500',
   },
   {
-    icon: Download,
-    title: 'Easy Export',
-    description: 'Export annotated data in analysis-ready formats with comprehensive metadata and justifications.',
+    icon: Users,
+    title: 'Human-in-the-Loop',
+    description: 'Active learning flags uncertain cases for expert review and validation.',
+    bgColor: 'bg-green-500',
   },
 ]
 
 export function Features() {
   return (
-    <div className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Powerful Features
+    <section className="relative py-20 md:py-32 bg-white">
+      <div className="container">
+        <div className="text-center mb-20 space-y-6 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
+            Why Cognitive Traces?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to annotate user behavior with cognitive traces
+          <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+            Everything you need to enrich behavioral data with cognitive insights
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="card hover:shadow-lg transition-shadow duration-200">
-              <feature.icon className="w-12 h-12 text-primary-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <div 
+              key={index}
+              className="p-10 rounded-3xl border border-gray-200 hover:border-gray-300 transition-all bg-white"
+            >
+              {/* Icon */}
+              <div className={`w-16 h-16 rounded-2xl ${feature.bgColor} p-4 mb-6`}>
+                <feature.icon className="w-full h-full text-white" />
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

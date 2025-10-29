@@ -13,33 +13,39 @@ export function ExportSection({ sessionId }: ExportSectionProps) {
   }
   
   return (
-    <div className="card">
-      <div className="flex items-center space-x-2 mb-4">
-        <Download className="w-5 h-5 text-gray-700" />
-        <h2 className="text-xl font-semibold text-gray-900">
+    <div className="p-10 rounded-3xl border border-gray-200 bg-white">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center">
+          <Download className="w-6 h-6 text-white" />
+        </div>
+        <h2 className="text-2xl font-bold text-gray-900">
           Export Annotations
         </h2>
       </div>
       
-      <p className="text-gray-600 mb-4">
+      <p className="text-gray-600 mb-6 leading-relaxed">
         Download your annotated data in your preferred format
       </p>
       
       <div className="grid grid-cols-2 gap-4">
         <button
           onClick={() => handleExport('csv')}
-          className="flex items-center justify-center space-x-2 p-4 border-2 border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-all"
+          className="flex flex-col items-center justify-center gap-3 p-6 border-2 border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all"
         >
-          <FileSpreadsheet className="w-6 h-6 text-green-600" />
-          <span className="font-medium">CSV</span>
+          <div className="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center">
+            <FileSpreadsheet className="w-6 h-6 text-white" />
+          </div>
+          <span className="font-bold text-gray-900">CSV</span>
         </button>
         
         <button
           onClick={() => handleExport('json')}
-          className="flex items-center justify-center space-x-2 p-4 border-2 border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-all"
+          className="flex flex-col items-center justify-center gap-3 p-6 border-2 border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all"
         >
-          <FileJson className="w-6 h-6 text-blue-600" />
-          <span className="font-medium">JSON</span>
+          <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center">
+            <FileJson className="w-6 h-6 text-white" />
+          </div>
+          <span className="font-bold text-gray-900">JSON</span>
         </button>
       </div>
     </div>

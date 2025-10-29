@@ -1,0 +1,25 @@
+# This directory stores annotation output files
+
+Each annotation job creates a subdirectory with the following structure:
+
+```
+data/
+└── {job_id}/
+    ├── {dataset_name}_cognitive_traces.csv    # Main output file with cognitive labels
+    ├── {dataset_name}_summary.json            # Job summary and statistics
+    └── logs/
+        ├── {session_id_1}_log.json            # Detailed agent logs for session 1
+        ├── {session_id_2}_log.json            # Detailed agent logs for session 2
+        └── ...
+```
+
+## Files
+
+- **cognitive_traces.csv**: Incremental output file with all annotated events and cognitive labels
+- **summary.json**: Job statistics, completion status, flagged sessions, and errors
+- **logs/{session_id}_log.json**: Complete agent interaction logs for each session (Analyst, Critic, Judge decisions)
+
+## Checkpoints
+
+Checkpoint files are stored in `data/checkpoints/` and allow resuming interrupted jobs.
+
