@@ -9,6 +9,7 @@ import { DatasetReview } from '@/components/annotator/DatasetReview'
 import { LLMConfigPanel } from '@/components/annotator/LLMConfigPanel'
 import { ProgressTracker } from '@/components/annotator/ProgressTracker'
 import { FlaggedSessions } from '@/components/annotator/FlaggedSessions'
+import { ExportSection } from '@/components/annotator/ExportSection'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
 
@@ -346,30 +347,52 @@ function AnnotatorContent() {
             )}
 
             {/* Step 6: Complete */}
-            {currentStep === 'complete' && (
-              <div className="text-center py-16">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 mb-6">
-                  <span className="text-5xl">✓</span>
+            {currentStep === 'complete' && jobId && uploadedDataset && (
+              <div className="space-y-8">
+                {/* Success Message */}
+                <div className="text-center py-12">
+                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 mb-6">
+                    <span className="text-5xl">✓</span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Annotation Complete!
+                  </h2>
+                  <p className="text-lg text-gray-600 mb-2">
+                    Your cognitive traces have been successfully generated.
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Download your annotated data below or start a new annotation job.
+                  </p>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Annotation Complete!
-                </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Your cognitive traces have been generated and saved to the data directory.
-                </p>
-                <button
-                  onClick={() => {
-                    setUploadedDataset(null)
-                    setLLMConfig(null)
-                    setJobId(null)
-                    setSessionIds([])
-                    localStorage.removeItem('annotator_dataset_meta')
-                    updateStep('upload', null)
-                  }}
-                  className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium"
-                >
-                  Annotate Another Dataset
-                </button>
+
+                {/* Export Section */}
+                <ExportSection 
+                  jobId={jobId} 
+                  datasetName={uploadedDataset.filename.replace(/\.(csv|json)$/i, '')}
+                />
+
+                {/* Action Buttons */}
+                <div className="flex justify-center gap-4 pt-4">
+                  <button
+                    onClick={() => updateStep('resolve')}
+                    className="px-6 py-3 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50"
+                  >
+                    Review Flagged Sessions
+                  </button>
+                  <button
+                    onClick={() => {
+                      setUploadedDataset(null)
+                      setLLMConfig(null)
+                      setJobId(null)
+                      setSessionIds([])
+                      localStorage.removeItem('annotator_dataset_meta')
+                      updateStep('upload', null)
+                    }}
+                    className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium"
+                  >
+                    Annotate Another Dataset
+                  </button>
+                </div>
               </div>
             )}
           </div>
