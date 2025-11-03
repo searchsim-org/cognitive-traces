@@ -54,6 +54,7 @@ function AnnotatorContent() {
   const [jobId, setJobId] = useState<string | null>(urlJobId)
   const [sessionIds, setSessionIds] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [flaggedSessionsCount, setFlaggedSessionsCount] = useState<number>(0)
 
   // Restore dataset metadata from localStorage on mount
   useEffect(() => {
@@ -335,8 +336,43 @@ function AnnotatorContent() {
                 jobId={jobId}
                 totalSessions={uploadedDataset.total_sessions}
                 sessionIds={sessionIds}
-                onComplete={() => updateStep('resolve')}
-                onStopped={() => updateStep('resolve')}
+                onComplete={async () => {
+                  // Check if there are flagged sessions
+                  try {
+                    const response = await api.getJobStatus(jobId)
+                    const flaggedCount = response.data.flagged_sessions?.length || 0
+                    setFlaggedSessionsCount(flaggedCount)
+                    
+                    // Skip resolve step if no flagged sessions
+                    if (flaggedCount === 0) {
+                      toast.success('No sessions flagged for review. Proceeding to completion!')
+                      updateStep('complete')
+                    } else {
+                      updateStep('resolve')
+                    }
+                  } catch (error) {
+                    // Fallback to resolve step on error
+                    updateStep('resolve')
+                  }
+                }}
+                onStopped={async () => {
+                  // Check if there are flagged sessions
+                  try {
+                    const response = await api.getJobStatus(jobId)
+                    const flaggedCount = response.data.flagged_sessions?.length || 0
+                    setFlaggedSessionsCount(flaggedCount)
+                    
+                    // Skip resolve step if no flagged sessions
+                    if (flaggedCount === 0) {
+                      updateStep('complete')
+                    } else {
+                      updateStep('resolve')
+                    }
+                  } catch (error) {
+                    // Fallback to resolve step on error
+                    updateStep('resolve')
+                  }
+                }}
               />
             )}
 

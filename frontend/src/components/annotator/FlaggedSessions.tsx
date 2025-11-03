@@ -31,8 +31,27 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
   const [showHistory, setShowHistory] = useState<boolean>(false)
   const [fullContext, setFullContext] = useState<Record<string, boolean>>({})
   const [resolvedSessions, setResolvedSessions] = useState<Set<string>>(new Set())
-  const [isAutoAnnotatingAll, setIsAutoAnnotatingAll] = useState<boolean>(false)
   const currentEventRef = useRef<HTMLDivElement>(null)
+
+  // Load resolved sessions from localStorage on mount
+  useEffect(() => {
+    const savedResolved = localStorage.getItem(`resolved_sessions_${jobId}`)
+    if (savedResolved) {
+      try {
+        const parsed = JSON.parse(savedResolved)
+        setResolvedSessions(new Set(parsed))
+      } catch (e) {
+        console.error('Failed to parse saved resolved sessions:', e)
+      }
+    }
+  }, [jobId])
+
+  // Save resolved sessions to localStorage whenever it changes
+  useEffect(() => {
+    if (resolvedSessions.size > 0) {
+      localStorage.setItem(`resolved_sessions_${jobId}`, JSON.stringify(Array.from(resolvedSessions)))
+    }
+  }, [resolvedSessions, jobId])
 
   useEffect(() => {
     const load = async () => {
@@ -40,9 +59,33 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
         const res = await api.getJobStatus(jobId)
         const flaggedSessions = res.data.flagged_sessions || []
         setFlagged(flaggedSessions)
-        // Pre-load the first session
+        
+        // Load saved resolved sessions
+        const savedResolved = localStorage.getItem(`resolved_sessions_${jobId}`)
+        let resolved = new Set<string>()
+        if (savedResolved) {
+          try {
+            resolved = new Set(JSON.parse(savedResolved))
+            setResolvedSessions(resolved)
+          } catch (e) {
+            console.error('Failed to parse saved resolved sessions:', e)
+          }
+        }
+        
+        // Find first unresolved session and start there
+        let startIndex = 0
+        for (let i = 0; i < flaggedSessions.length; i++) {
+          if (!resolved.has(flaggedSessions[i])) {
+            startIndex = i
+            break
+          }
+        }
+        
+        setCurrentIndex(startIndex)
+        
+        // Pre-load the starting session
         if (flaggedSessions.length > 0) {
-          await ensureSessionLog(flaggedSessions[0])
+          await ensureSessionLog(flaggedSessions[startIndex])
         }
       } catch (e) {
         toast.error('Failed to load flagged sessions')
@@ -152,60 +195,6 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
     }
   }
   
-  const autoAnnotateAll = async () => {
-    if (isAutoAnnotatingAll) return
-    
-    setIsAutoAnnotatingAll(true)
-    let successCount = 0
-    let errorCount = 0
-    
-    try {
-      // Process all remaining flagged sessions
-      for (let i = currentIndex; i < flagged.length; i++) {
-        const sessionId = flagged[i]
-        if (resolvedSessions.has(sessionId)) continue
-        
-        const events = sessionLogs[sessionId] || []
-        if (events.length === 0) {
-          await ensureSessionLog(sessionId)
-        }
-        
-        const flaggedEvents = events.filter(ev => ev.flagged_for_review)
-        if (flaggedEvents.length === 0) continue
-        
-        // Get most common label
-        const labels = flaggedEvents.map(ev => ev.cognitive_label || ev.label).filter(Boolean)
-        if (labels.length === 0) continue
-        
-        const labelCounts: Record<string, number> = {}
-        labels.forEach(label => {
-          labelCounts[label] = (labelCounts[label] || 0) + 1
-        })
-        
-        const mostCommonLabel = Object.entries(labelCounts)
-          .sort((a, b) => b[1] - a[1])[0][0]
-        
-        // Submit resolution
-        try {
-          await api.resolveSession(jobId, sessionId, mostCommonLabel, 'Auto-annotated', datasetName)
-          successCount++
-        } catch (e) {
-          console.error(`Failed to auto-annotate session ${sessionId}:`, e)
-          errorCount++
-        }
-      }
-      
-      toast.success(`Auto-annotation complete! ${successCount} sessions resolved${errorCount > 0 ? `, ${errorCount} errors` : ''}`)
-      
-      // Refresh to show completion
-      setTimeout(() => {
-        setResolvedSessions(new Set(flagged))
-        onFinish?.()
-      }, 1500)
-    } finally {
-      setIsAutoAnnotatingAll(false)
-    }
-  }
 
   if (loading) {
     return <div className="text-gray-500">Loading flagged sessions…</div>
@@ -247,7 +236,7 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
     try { return url ? new URL(url).hostname.replace('www.', '') : undefined } catch { return undefined }
   }
 
-  const autoAnnotateWithFinal = () => {
+  const autoAnnotateWithFinal = async () => {
     // Use the final label from the judge for this session
     const flaggedEvents = events.filter(ev => ev.flagged_for_review)
     if (flaggedEvents.length === 0) {
@@ -271,8 +260,27 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
     const mostCommonLabel = Object.entries(labelCounts)
       .sort((a, b) => b[1] - a[1])[0][0]
     
+    // Auto-select and immediately save
     setSelectedLabels({ ...selectedLabels, [sessionId]: mostCommonLabel })
-    toast.success(`Auto-selected: ${mostCommonLabel}`)
+    toast.success(`Auto-selected: ${mostCommonLabel}. Saving...`)
+    
+    // Automatically submit the resolution
+    try {
+      await api.resolveSession(jobId, sessionId, mostCommonLabel, 'Auto-annotated using final label', datasetName)
+      setResolvedSessions(new Set([...resolvedSessions, sessionId]))
+      toast.success(`Session ${sessionId} resolved!`)
+      
+      // Move to next session or finish
+      if (currentIndex < flagged.length - 1) {
+        await handleNext()
+      } else {
+        toast.success('All flagged sessions resolved!')
+        setTimeout(() => onFinish?.(), 1500)
+      }
+    } catch (e: any) {
+      console.error('Failed to auto-annotate session:', e)
+      toast.error(e?.response?.data?.detail || 'Failed to auto-annotate session')
+    }
   }
   
   const toggleFullContext = (sessionId: string) => {
@@ -311,26 +319,10 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
           </div>
           <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-green-500 to-green-600 transition-all duration-300"
+              className="h-full bg-green-600 transition-all duration-300"
               style={{ width: `${(resolvedSessions.size / flagged.length) * 100}%` }}
             />
           </div>
-        </div>
-        
-        {/* Auto-Annotate All Button */}
-        <div className="mt-4 flex justify-center">
-          <button
-            onClick={autoAnnotateAll}
-            disabled={isAutoAnnotatingAll}
-            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-              isAutoAnnotatingAll
-                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:from-purple-600 hover:to-purple-700 shadow-md'
-            }`}
-          >
-            <CheckCircle2 className="w-5 h-5" />
-            {isAutoAnnotatingAll ? 'Auto-Annotating...' : `Auto-Annotate All Remaining (${flagged.length - resolvedSessions.size})`}
-          </button>
         </div>
       </div>
 
@@ -343,7 +335,7 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${
               currentIndex === 0
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-sm'
+                : 'bg-blue-600 text-white hover:bg-blue-700'
             }`}
           >
             <ChevronLeft className="w-5 h-5" />
@@ -360,7 +352,7 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${
               currentIndex === flagged.length - 1
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-sm'
+                : 'bg-blue-600 text-white hover:bg-blue-700'
             }`}
           >
             Next
@@ -370,16 +362,34 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
       </div>
 
       {/* Current Session */}
-      <div className="bg-gradient-to-br from-orange-50 via-white to-white rounded-3xl border-2 border-orange-200 p-8">
+      <div className={`rounded-3xl border-2 p-8 ${
+        isResolved 
+          ? 'bg-gradient-to-br from-green-50 via-white to-white border-green-300' 
+          : 'bg-gradient-to-br from-orange-50 via-white to-white border-orange-200'
+      }`}>
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-              <AlertTriangle className="w-6 h-6 text-white" />
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+              isResolved ? 'bg-green-500' : 'bg-orange-500'
+            }`}>
+              {isResolved ? (
+                <CheckCircle2 className="w-6 h-6 text-white" />
+              ) : (
+                <AlertTriangle className="w-6 h-6 text-white" />
+              )}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Session {sessionId}</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-xl font-bold text-gray-900">Session {sessionId}</h3>
+                {isResolved && (
+                  <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
+                    RESOLVED
+                  </span>
+                )}
+              </div>
               <p className="text-sm text-gray-600">
                 {events.length} events • Flagged event {currentFlaggedIdx + 1} of {indicesFlagged.length}
+                {isResolved && <span className="ml-2 text-green-600">• You can still override</span>}
               </p>
             </div>
           </div>
@@ -635,7 +645,7 @@ export function FlaggedSessions({ jobId, datasetName, onFinish }: FlaggedSession
             disabled={!selectedLabels[sessionId]}
             className={`px-8 py-3 rounded-xl font-bold transition-all flex items-center gap-2 ${
               selectedLabels[sessionId]
-                ? 'bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 shadow-md'
+                ? 'bg-green-600 text-white hover:bg-green-700'
                 : 'bg-gray-200 text-gray-400 cursor-not-allowed'
             }`}
           >

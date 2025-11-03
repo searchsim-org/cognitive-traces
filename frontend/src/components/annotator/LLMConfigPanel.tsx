@@ -27,6 +27,7 @@ interface LLMConfig {
   anthropic_api_key?: string
   openai_api_key?: string
   google_api_key?: string
+  mistral_api_key?: string
   ollama_base_url?: string
   
   // Custom endpoints
@@ -104,6 +105,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     anthropic_api_key: '',
     openai_api_key: '',
     google_api_key: '',
+    mistral_api_key: '',
     ollama_base_url: 'http://localhost:11434',
     
     // Custom endpoints
@@ -144,18 +146,21 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     anthropic: false,
     openai: false,
     google: false,
+    mistral: false,
   })
 
   const [availableModels, setAvailableModels] = useState<{
     anthropic: ModelInfo[]
     openai: ModelInfo[]
     google: ModelInfo[]
+    mistral: ModelInfo[]
     ollama: ModelInfo[]
     custom: ModelInfo[]
   }>({
     anthropic: [],
     openai: [],
     google: [],
+    mistral: [],
     ollama: [],
     custom: [],
   })
@@ -194,6 +199,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     const savedAnthropicKey = localStorage.getItem('encrypted_anthropic_key')
     const savedOpenAIKey = localStorage.getItem('encrypted_openai_key')
     const savedGoogleKey = localStorage.getItem('encrypted_google_key')
+    const savedMistralKey = localStorage.getItem('encrypted_mistral_key')
     const savedOllamaUrl = localStorage.getItem('ollama_base_url')
 
     if (savedAnthropicKey) {
@@ -204,6 +210,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     }
     if (savedGoogleKey) {
       setConfig(prev => ({ ...prev, google_api_key: decrypt(savedGoogleKey) }))
+    }
+    if (savedMistralKey) {
+      setConfig(prev => ({ ...prev, mistral_api_key: decrypt(savedMistralKey) }))
     }
     if (savedOllamaUrl) {
       setConfig(prev => ({ ...prev, ollama_base_url: savedOllamaUrl }))
@@ -455,6 +464,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     if (config.google_api_key) {
       localStorage.setItem('encrypted_google_key', encrypt(config.google_api_key))
     }
+    if (config.mistral_api_key) {
+      localStorage.setItem('encrypted_mistral_key', encrypt(config.mistral_api_key))
+    }
     if (config.ollama_base_url) {
       localStorage.setItem('ollama_base_url', config.ollama_base_url)
     }
@@ -536,7 +548,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative p-4 rounded-xl transition-all text-left ${
                   isActive
-                    ? 'bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-500 shadow-sm'
+                    ? 'bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-500'
                     : isCompleted
                     ? 'bg-gray-50 border-2 border-gray-300 hover:border-gray-400'
                     : 'bg-white border-2 border-gray-200 hover:border-gray-300'
@@ -756,6 +768,30 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
               </div>
             </div>
 
+            {/* Mistral API Key */}
+                <div className="bg-gradient-to-br from-amber-50 to-white border-2 border-amber-100 rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <label className="text-sm font-semibold text-gray-900">Mistral AI</label>
+                    <span className="text-xs text-amber-600 bg-amber-100 px-2 py-1 rounded-full">Mistral models</span>
+                  </div>
+              <div className="relative">
+                <input
+                  type={showKeys.mistral ? 'text' : 'password'}
+                  value={config.mistral_api_key || ''}
+                  onChange={(e) => setConfig({ ...config, mistral_api_key: e.target.value })}
+                  placeholder="..."
+                      className="w-full px-4 py-2.5 pr-10 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowKeys({ ...showKeys, mistral: !showKeys.mistral })}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                      {showKeys.mistral ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
             {/* Ollama Configuration */}
                 <div className="bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-100 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
@@ -799,7 +835,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                 <h3 className="text-lg font-bold text-gray-900">Custom Endpoints</h3>
                 <button
                   onClick={() => setShowCustomEndpointForm(!showCustomEndpointForm)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all font-medium text-sm"
+                  className="flex items-center gap-2 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-all font-medium text-sm"
                 >
                   <Server className="w-4 h-4" />
                   Add Custom Endpoint
@@ -807,7 +843,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
               </div>
 
               {showCustomEndpointForm && (
-                <div className="mb-6 p-6 bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-200 rounded-xl">
+                <div className="mb-6 p-6 bg-cyan-50 border-2 border-cyan-200 rounded-xl">
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
                     <Server className="w-5 h-5 text-cyan-600" />
                     Connect OpenAI-Compatible Endpoint
@@ -893,7 +929,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
               {config.custom_endpoints && config.custom_endpoints.length > 0 && (
                 <div className="space-y-3">
                   {config.custom_endpoints.map((endpoint) => (
-                    <div key={endpoint.id} className="p-4 bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl">
+                    <div key={endpoint.id} className="p-4 bg-gray-50 border-2 border-gray-200 rounded-xl">
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
@@ -942,7 +978,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
 
             {/* Fallback Configuration */}
             {config.custom_endpoints && config.custom_endpoints.length > 0 && (
-              <div className="mt-8 p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl">
+              <div className="mt-8 p-6 bg-amber-50 border-2 border-amber-200 rounded-xl">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
@@ -1450,7 +1486,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
               isConfigValid
                 ? isSaved
                   ? 'bg-green-600 text-white'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-sm'
+                  : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm'
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
           >

@@ -14,6 +14,7 @@ async def get_available_models(
     anthropic_key: Optional[str] = Query(None, description="Anthropic API key for validation"),
     openai_key: Optional[str] = Query(None, description="OpenAI API key for validation"),
     google_key: Optional[str] = Query(None, description="Google API key for validation"),
+    mistral_key: Optional[str] = Query(None, description="Mistral API key for validation"),
     ollama_url: Optional[str] = Query("http://localhost:11434", description="Ollama base URL"),
     include_ollama: bool = Query(True, description="Include Ollama models")
 ) -> Dict[str, Any]:
@@ -25,6 +26,7 @@ async def get_available_models(
         anthropic_key=anthropic_key,
         openai_key=openai_key,
         google_key=google_key,
+        mistral_key=mistral_key,
         ollama_url=ollama_url,
         include_ollama=include_ollama
     )
@@ -60,6 +62,15 @@ async def get_google_models(
 ):
     """Get available Google Gemini models"""
     models = await ModelProvider.get_google_models(api_key)
+    return {'models': models, 'count': len(models)}
+
+
+@router.get("/mistral")
+async def get_mistral_models(
+    api_key: Optional[str] = Query(None, description="Mistral API key")
+):
+    """Get available Mistral AI models"""
+    models = await ModelProvider.get_mistral_models(api_key)
     return {'models': models, 'count': len(models)}
 
 

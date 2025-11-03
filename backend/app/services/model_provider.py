@@ -33,6 +33,13 @@ class ModelProvider:
             'gemini-1.5-pro',
             'gemini-2.0-flash-exp',
         ],
+        'mistral': [
+            'mistral-large-latest',
+            'mistral-medium-latest',
+            'mistral-small-latest',
+            'pixtral-large-latest',
+            'open-mistral-nemo',
+        ],
     }
     
     @staticmethod
@@ -242,6 +249,63 @@ class ModelProvider:
             return []
     
     @staticmethod
+    async def get_mistral_models(api_key: Optional[str] = None) -> List[Dict[str, Any]]:
+        """Get available Mistral AI models"""
+        try:
+            models = [
+                {
+                    'id': 'mistral-large-latest',
+                    'name': 'Mistral Large',
+                    'provider': 'mistral',
+                    'description': 'Most capable flagship model for complex tasks',
+                    'context_window': 128000,
+                    'cost': 'medium',
+                    'recommended': True
+                },
+                {
+                    'id': 'mistral-medium-latest',
+                    'name': 'Mistral Medium',
+                    'provider': 'mistral',
+                    'description': 'Balanced performance and efficiency',
+                    'context_window': 32000,
+                    'cost': 'low',
+                    'recommended': True
+                },
+                {
+                    'id': 'mistral-small-latest',
+                    'name': 'Mistral Small',
+                    'provider': 'mistral',
+                    'description': 'Fast and cost-effective for simple tasks',
+                    'context_window': 32000,
+                    'cost': 'very-low',
+                    'recommended': True
+                },
+                {
+                    'id': 'pixtral-large-latest',
+                    'name': 'Pixtral Large',
+                    'provider': 'mistral',
+                    'description': 'Multimodal model with vision capabilities',
+                    'context_window': 128000,
+                    'cost': 'medium',
+                    'recommended': False
+                },
+                {
+                    'id': 'open-mistral-nemo',
+                    'name': 'Mistral Nemo',
+                    'provider': 'mistral',
+                    'description': 'Open-weight model, Apache 2.0 license',
+                    'context_window': 128000,
+                    'cost': 'very-low',
+                    'recommended': True
+                },
+            ]
+            return models
+            
+        except Exception as e:
+            print(f"Error fetching Mistral models: {e}")
+            return []
+    
+    @staticmethod
     async def get_ollama_models(base_url: str = "http://localhost:11434") -> List[Dict[str, Any]]:
         """Get available Ollama models from local instance"""
         try:
@@ -283,6 +347,7 @@ class ModelProvider:
         anthropic_key: Optional[str] = None,
         openai_key: Optional[str] = None,
         google_key: Optional[str] = None,
+        mistral_key: Optional[str] = None,
         ollama_url: str = "http://localhost:11434",
         include_ollama: bool = True
     ) -> Dict[str, List[Dict[str, Any]]]:
@@ -292,6 +357,7 @@ class ModelProvider:
             'anthropic': await ModelProvider.get_anthropic_models(anthropic_key),
             'openai': await ModelProvider.get_openai_models(openai_key),
             'google': await ModelProvider.get_google_models(google_key),
+            'mistral': await ModelProvider.get_mistral_models(mistral_key),
         }
         
         if include_ollama:

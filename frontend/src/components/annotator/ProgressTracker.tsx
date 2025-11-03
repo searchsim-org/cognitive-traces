@@ -49,7 +49,12 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
           setIsPolling(false)
           
           if (status.status === 'completed') {
-            toast.success('All sessions annotated successfully!')
+            const hasFlaggedSessions = status.flagged_sessions && status.flagged_sessions.length > 0
+            if (hasFlaggedSessions) {
+              toast.success('All sessions annotated successfully! Review flagged sessions.')
+            } else {
+              toast.success('All sessions annotated successfully! No sessions flagged for review.')
+            }
             setTimeout(() => onComplete(), 2000)
           } else if (status.status === 'stopped') {
             toast.success('Job stopped successfully. Progress saved via checkpoint.')
@@ -167,7 +172,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500 ease-out flex items-center justify-end pr-2"
+              className="h-full bg-blue-600 transition-all duration-500 ease-out flex items-center justify-end pr-2"
               style={{ width: `${progressPercentage}%` }}
             >
               {progressPercentage > 10 && (

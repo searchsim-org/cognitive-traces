@@ -335,6 +335,7 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
 
         # Overwrite flagged events' cognitive_label with user label and add metadata
         updated_count = 0
+        flagged_event_ids = []
         for ev in log.get('events', []):
             if ev.get('flagged_for_review', False):
                 ev['cognitive_label'] = label
@@ -346,7 +347,10 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
                 except Exception:
                     ev['override_version'] = 2
                 ev['override_timestamp'] = datetime.now().isoformat()
+                flagged_event_ids.append(ev.get('event_id'))
                 updated_count += 1
+        
+        print(f"RESOLVE: Session {session_id} - Updated {updated_count} events in log. Flagged IDs: {flagged_event_ids}")
 
         # Persist back to log file
         log_file = annotation_service.output_dir / job_id / "logs" / f"{session_id}_log.json"
@@ -364,27 +368,76 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
             # Read existing CSV, find and update the session rows, then rewrite
             import csv
             rows = []
+            fieldnames = None
+            updated_csv_count = 0
+            session_event_ids_in_csv = set()
+            
             with open(output_file, 'r', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
+                fieldnames = reader.fieldnames
                 for row in reader:
                     if row.get('session_id') == session_id:
-                        # Update the cognitive_label for this event
+                        session_event_ids_in_csv.add(row.get('event_id'))
+                        # Find corresponding event in the updated log
                         event_id = row.get('event_id')
                         for ev in log.get('events', []):
-                            if str(ev.get('event_id')) == str(event_id) and ev.get('flagged_for_review'):
-                                row['cognitive_label'] = label
-                                row['user_override'] = 'True'
-                                row['user_note'] = note
+                            if str(ev.get('event_id')) == str(event_id):
+                                # Check if this event was flagged and now has user_override
+                                if ev.get('user_override', False):
+                                    print(f"CSV UPDATE: Updating event {event_id} with label {label}")
+                                    row['cognitive_label'] = label
+                                    row['user_override'] = 'True'
+                                    # Update override_version and timestamp
+                                    row['override_version'] = str(ev.get('override_version', 2))
+                                    row['override_timestamp'] = ev.get('override_timestamp', datetime.now().isoformat())
+                                    updated_csv_count += 1
                                 break
                     rows.append(row)
             
+            # Check if there are events in the log that are missing from CSV
+            log_event_ids = {str(ev['event_id']) for ev in log.get('events', [])}
+            missing_event_ids = log_event_ids - session_event_ids_in_csv
+            
+            if missing_event_ids:
+                print(f"CSV UPDATE: WARNING - {len(missing_event_ids)} events in log but not in CSV: {missing_event_ids}")
+                # Add missing events from log to CSV
+                for ev in log.get('events', []):
+                    if str(ev['event_id']) in missing_event_ids:
+                        new_row = {
+                            'session_id': session_id,
+                            'event_id': ev.get('event_id', ''),
+                            'event_timestamp': ev.get('timestamp', ''),
+                            'action_type': ev.get('action_type', ''),
+                            'content': ev.get('content', ''),
+                            'cognitive_label': ev.get('cognitive_label', ''),
+                            'analyst_label': ev.get('analyst_label', ''),
+                            'analyst_justification': ev.get('analyst_justification', ''),
+                            'critic_label': ev.get('critic_label', ''),
+                            'critic_agreement': ev.get('critic_agreement', ''),
+                            'critic_justification': ev.get('critic_justification', ''),
+                            'judge_justification': ev.get('judge_justification', ''),
+                            'confidence_score': ev.get('confidence_score', 0),
+                            'disagreement_score': ev.get('disagreement_score', 0),
+                            'flagged_for_review': str(ev.get('flagged_for_review', False)),
+                            'user_override': 'True' if ev.get('user_override', False) else 'False',
+                            'override_version': ev.get('override_version', 1),
+                            'override_timestamp': ev.get('override_timestamp', '')
+                        }
+                        rows.append(new_row)
+                        if ev.get('user_override', False):
+                            updated_csv_count += 1
+                            print(f"CSV UPDATE: Added missing event {ev['event_id']} with user override")
+            
             # Rewrite CSV with updated data
-            if rows:
+            if rows and fieldnames:
                 with open(output_file, 'w', encoding='utf-8', newline='') as f:
-                    fieldnames = rows[0].keys()
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()
                     writer.writerows(rows)
+                
+                print(f"CSV UPDATE: Updated {updated_csv_count} events for session {session_id} in {output_file}")
+            else:
+                print(f"CSV UPDATE: WARNING - No rows or fieldnames found for {output_file}")
 
         return {
             "status": "ok",

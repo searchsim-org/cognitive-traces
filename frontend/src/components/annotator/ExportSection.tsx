@@ -47,47 +47,60 @@ export function ExportSection({ jobId, datasetName }: ExportSectionProps) {
   return (
     <div className="p-10 rounded-3xl border border-gray-200 bg-white">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center">
+        <div className="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center">
           <Download className="w-6 h-6 text-white" />
         </div>
-        <h2 className="text-2xl font-bold text-gray-900">
-          Export Annotations
-        </h2>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Download Your Results
+          </h2>
+          <p className="text-sm text-gray-500 mt-1">
+            Cognitive traces with full annotations
+          </p>
+        </div>
       </div>
       
-      <p className="text-gray-600 mb-6 leading-relaxed">
-        Download your annotated data in your preferred format
-      </p>
+      {/* Primary CSV Download Button */}
+      <button
+        onClick={() => handleExport('csv')}
+        disabled={isExporting !== null}
+        className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white rounded-xl font-semibold text-lg flex items-center justify-center gap-3 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {isExporting === 'csv' ? (
+          <>
+            <Loader2 className="w-6 h-6 animate-spin" />
+            <span>Preparing Download...</span>
+          </>
+        ) : (
+          <>
+            <FileSpreadsheet className="w-6 h-6" />
+            <span>Download CSV File</span>
+          </>
+        )}
+      </button>
       
-      <div className="grid grid-cols-2 gap-4">
-        <button
-          onClick={() => handleExport('csv')}
-          disabled={isExporting !== null}
-          className="flex flex-col items-center justify-center gap-3 p-6 border-2 border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isExporting === 'csv' ? (
-            <Loader2 className="w-12 h-12 text-green-500 animate-spin" />
-          ) : (
-            <div className="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center">
-              <FileSpreadsheet className="w-6 h-6 text-white" />
-            </div>
-          )}
-          <span className="font-bold text-gray-900">CSV</span>
-        </button>
+      <div className="mt-4 text-center">
+        <p className="text-xs text-gray-500 mb-3">
+          Includes session IDs, events, cognitive labels, justifications, and review flags
+        </p>
         
+        {/* Optional JSON Download Link */}
         <button
           onClick={() => handleExport('json')}
           disabled={isExporting !== null}
-          className="flex flex-col items-center justify-center gap-3 p-6 border-2 border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="text-sm text-blue-600 hover:text-blue-700 underline decoration-dotted underline-offset-4 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-1.5"
         >
           {isExporting === 'json' ? (
-            <Loader2 className="w-12 h-12 text-blue-500 animate-spin" />
+            <>
+              <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              <span>Preparing...</span>
+            </>
           ) : (
-            <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center">
-              <FileJson className="w-6 h-6 text-white" />
-            </div>
+            <>
+              <FileJson className="w-3.5 h-3.5" />
+              <span>Also download summary report (JSON)</span>
+            </>
           )}
-          <span className="font-bold text-gray-900">JSON</span>
         </button>
       </div>
     </div>

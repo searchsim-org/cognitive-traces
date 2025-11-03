@@ -93,8 +93,8 @@ async def export_json(
     session_ids: Optional[str] = Query(None, description="Comma-separated session IDs")
 ):
     """
-    Export annotations as JSON file.
-    Converts CSV to structured JSON format.
+    Export summary report as JSON file.
+    Returns the summary.json file with job metadata and statistics.
     """
     try:
         # Get project root
@@ -104,78 +104,47 @@ async def export_json(
         if not data_dir.exists():
             raise HTTPException(status_code=404, detail="Data directory not found")
         
-        # Find the CSV file (same logic as CSV export)
-        csv_file = None
+        # Find the summary JSON file
+        summary_file = None
         if dataset:
-            csv_pattern = f"{dataset}_cognitive_traces.csv"
+            summary_pattern = f"{dataset}_summary.json"
             for job_dir in data_dir.iterdir():
                 if job_dir.is_dir() and not job_dir.name.startswith('.'):
-                    candidate = job_dir / csv_pattern
+                    candidate = job_dir / summary_pattern
                     if candidate.exists():
-                        csv_file = candidate
+                        summary_file = candidate
                         break
         
-        if not csv_file or not csv_file.exists():
+        if not summary_file or not summary_file.exists():
+            # Try to find any summary JSON
             for job_dir in data_dir.iterdir():
                 if job_dir.is_dir() and not job_dir.name.startswith('.'):
-                    for f in job_dir.glob("*_cognitive_traces.csv"):
-                        csv_file = f
+                    for f in job_dir.glob("*_summary.json"):
+                        summary_file = f
                         break
-                    if csv_file:
+                    if summary_file:
                         break
         
-        if not csv_file or not csv_file.exists():
-            raise HTTPException(status_code=404, detail=f"CSV file not found for dataset: {dataset}")
+        if not summary_file or not summary_file.exists():
+            raise HTTPException(status_code=404, detail=f"Summary JSON file not found for dataset: {dataset}")
         
-        # Parse CSV to JSON
-        sessions_data = {}
-        with open(csv_file, 'r', encoding='utf-8', newline='') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                session_id = row.get('session_id', '')
-                
-                # Filter by session IDs if provided
-                if session_ids:
-                    session_id_list = [sid.strip() for sid in session_ids.split(',')]
-                    if session_id not in session_id_list:
-                        continue
-                
-                if session_id not in sessions_data:
-                    sessions_data[session_id] = {
-                        'session_id': session_id,
-                        'events': []
-                    }
-                
-                sessions_data[session_id]['events'].append({
-                    'event_id': row.get('event_id', ''),
-                    'timestamp': row.get('event_timestamp', ''),
-                    'action_type': row.get('action_type', ''),
-                    'content': row.get('content', ''),
-                    'cognitive_label': row.get('cognitive_label', ''),
-                    'analyst_label': row.get('analyst_label', ''),
-                    'analyst_justification': row.get('analyst_justification', ''),
-                    'critic_label': row.get('critic_label', ''),
-                    'critic_agreement': row.get('critic_agreement', ''),
-                    'critic_justification': row.get('critic_justification', ''),
-                    'judge_justification': row.get('judge_justification', ''),
-                    'confidence_score': float(row.get('confidence_score', 0)),
-                    'disagreement_score': float(row.get('disagreement_score', 0)),
-                    'flagged_for_review': row.get('flagged_for_review', '').lower() == 'true',
-                    'user_override': row.get('user_override', '').lower() == 'true',
-                    'override_version': int(row.get('override_version', 1)),
-                    'override_timestamp': row.get('override_timestamp', '')
-                })
+        # Read the summary file
+        with open(summary_file, 'r', encoding='utf-8') as f:
+            summary_data = json.load(f)
         
-        # Convert to list
-        result = {
-            'dataset': dataset or 'unknown',
-            'total_sessions': len(sessions_data),
-            'sessions': list(sessions_data.values())
-        }
+        # Optionally filter by session IDs if needed
+        if session_ids:
+            session_id_list = [sid.strip() for sid in session_ids.split(',')]
+            # Filter flagged_sessions if present
+            if 'flagged_sessions' in summary_data:
+                summary_data['flagged_sessions'] = [
+                    sid for sid in summary_data['flagged_sessions'] 
+                    if sid in session_id_list
+                ]
         
         # Return as downloadable JSON
-        filename = f"{dataset}_cognitive_traces.json" if dataset else "cognitive_traces.json"
-        json_content = json.dumps(result, indent=2)
+        filename = f"{dataset}_summary.json" if dataset else "summary.json"
+        json_content = json.dumps(summary_data, indent=2)
         
         return Response(
             content=json_content,
