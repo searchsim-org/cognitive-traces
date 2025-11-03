@@ -2,9 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import { Eye, EyeOff, Save, Key, Brain, RefreshCw, Server, CheckCircle, XCircle, Settings, Zap, FileText, AlertCircle, Info, HelpCircle, Loader2 } from 'lucide-react'
-import CryptoJS from 'crypto-js'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
+
+// Dynamic import for crypto-js to avoid SSR issues
+let CryptoJS: any = null
+if (typeof window !== 'undefined') {
+  import('crypto-js').then(module => {
+    CryptoJS = module.default
+  })
+}
 
 interface LLMConfigPanelProps {
   onConfigComplete: (config: LLMConfig) => void
@@ -168,10 +175,12 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
 
   // Encryption/Decryption functions
   const encrypt = (text: string): string => {
+    if (!CryptoJS) return text // Fallback if crypto not loaded yet
     return CryptoJS.AES.encrypt(text, ENCRYPTION_KEY).toString()
   }
 
   const decrypt = (ciphertext: string): string => {
+    if (!CryptoJS) return ciphertext // Fallback if crypto not loaded yet
     try {
       const bytes = CryptoJS.AES.decrypt(ciphertext, ENCRYPTION_KEY)
       return bytes.toString(CryptoJS.enc.Utf8)

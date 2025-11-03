@@ -12,13 +12,7 @@ const nextConfig = {
   },
   // Add webpack config to handle problematic modules
   webpack: (config, { isServer }) => {
-    if (isServer) {
-      // On the server, provide Math polyfill for problematic modules
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'crypto-js': false,
-      }
-    } else {
+    if (!isServer) {
       // Ensure Math and other globals are available in the browser
       config.resolve.fallback = {
         ...config.resolve.fallback,

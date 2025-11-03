@@ -8,41 +8,13 @@ import { Footer } from '@/components/layout/Footer'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center py-20">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600">Loading...</p>
-    </div>
-  </div>
-)
-
 // Dynamic imports for components that may have SSR issues
-const FileUploader = dynamic(() => import('@/components/annotator/FileUploader').then(mod => ({ default: mod.FileUploader })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
-const DatasetReview = dynamic(() => import('@/components/annotator/DatasetReview').then(mod => ({ default: mod.DatasetReview })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
-const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
-const ProgressTracker = dynamic(() => import('@/components/annotator/ProgressTracker').then(mod => ({ default: mod.ProgressTracker })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
-const FlaggedSessions = dynamic(() => import('@/components/annotator/FlaggedSessions').then(mod => ({ default: mod.FlaggedSessions })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
-const ExportSection = dynamic(() => import('@/components/annotator/ExportSection').then(mod => ({ default: mod.ExportSection })), { 
-  ssr: false,
-  loading: () => <LoadingSpinner />
-})
+const FileUploader = dynamic(() => import('@/components/annotator/FileUploader').then(mod => ({ default: mod.FileUploader })), { ssr: false })
+const DatasetReview = dynamic(() => import('@/components/annotator/DatasetReview').then(mod => ({ default: mod.DatasetReview })), { ssr: false })
+const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { ssr: false })
+const ProgressTracker = dynamic(() => import('@/components/annotator/ProgressTracker').then(mod => ({ default: mod.ProgressTracker })), { ssr: false })
+const FlaggedSessions = dynamic(() => import('@/components/annotator/FlaggedSessions').then(mod => ({ default: mod.FlaggedSessions })), { ssr: false })
+const ExportSection = dynamic(() => import('@/components/annotator/ExportSection').then(mod => ({ default: mod.ExportSection })), { ssr: false })
 
 type Step = 'upload' | 'review' | 'configure' | 'annotate' | 'resolve' | 'complete'
 
