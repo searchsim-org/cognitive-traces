@@ -1,8 +1,8 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
-import { Upload, FileText, Loader2, ArrowRight } from 'lucide-react'
+import { Upload, FileText, Loader2, ArrowRight, Database } from 'lucide-react'
 
 interface FileUploaderProps {
   onUpload: (file: File) => void
@@ -10,6 +10,8 @@ interface FileUploaderProps {
 }
 
 export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
+  const [isLoadingExample, setIsLoadingExample] = useState(false)
+
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0]
     if (file) {
@@ -25,8 +27,28 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
       'application/xml': ['.xml'],
     },
     maxFiles: 1,
-    disabled: isLoading,
+    disabled: isLoading || isLoadingExample,
   })
+
+  const loadExampleDataset = async () => {
+    setIsLoadingExample(true)
+    try {
+      // Fetch the example dataset from the public folder
+      const response = await fetch('/example-datasets/aol_1k.csv')
+      if (!response.ok) {
+        throw new Error('Failed to load example dataset')
+      }
+      
+      const blob = await response.blob()
+      const file = new File([blob], 'aol_1k_example.csv', { type: 'text/csv' })
+      onUpload(file)
+    } catch (error) {
+      console.error('Error loading example dataset:', error)
+      alert('Failed to load example dataset. Please try uploading your own file.')
+    } finally {
+      setIsLoadingExample(false)
+    }
+  }
   
   return (
     <div className="max-w-3xl mx-auto">
@@ -71,7 +93,7 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
           </p>
         </div>
         
-        {!isLoading && (
+        {!isLoading && !isLoadingExample && (
           <>
             <div
               {...getRootProps()}
@@ -96,6 +118,30 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
                 </>
               )}
             </div>
+
+            {/* Example Dataset Option */}
+            <div className="mt-6 text-center">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-200"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-4 bg-white text-gray-500">Or try with example data</span>
+                </div>
+              </div>
+              
+              <button
+                onClick={loadExampleDataset}
+                disabled={isLoadingExample}
+                className="mt-4 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-medium hover:from-green-600 hover:to-emerald-600 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <Database className="w-5 h-5" />
+                Load Example Dataset (AOL Search - 1000 sessions)
+              </button>
+              <p className="mt-2 text-xs text-gray-500">
+                Pre-loaded search sessions with QUERY, SERP_VIEW, and CLICK events
+              </p>
+            </div>
             
             <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-200">
               <h3 className="font-bold text-gray-900 mb-4">Required CSV Fields:</h3>
@@ -109,10 +155,13 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
           </>
         )}
         
-        {isLoading && (
+        {(isLoading || isLoadingExample) && (
           <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200 text-center">
             <p className="text-blue-800 font-medium">
-              Please wait while we analyze your dataset structure and extract all sessions...
+              {isLoadingExample 
+                ? 'Loading example dataset...'
+                : 'Please wait while we analyze your dataset structure and extract all sessions...'
+              }
             </p>
           </div>
         )}

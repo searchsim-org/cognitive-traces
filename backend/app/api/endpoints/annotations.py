@@ -2,11 +2,17 @@
 Annotation endpoints for cognitive trace generation
 """
 
-from fastapi import APIRouter, UploadFile, File, HTTPException
-from typing import List, Dict, Any
-from app.schemas.annotation import AnnotationRequest, AnnotationResponse, BatchAnnotationRequest
+from fastapi import APIRouter, UploadFile, File, HTTPException, Body
+from typing import List, Dict, Any, Optional
+from app.schemas.annotation import (
+    AnnotationRequest, 
+    AnnotationResponse, 
+    BatchAnnotationRequest,
+    LLMConfigSchema
+)
 from app.services.annotation_service import AnnotationService
 from datetime import datetime
+from pydantic import BaseModel
 
 router = APIRouter()
 annotation_service = AnnotationService()
@@ -82,27 +88,31 @@ async def get_job_status(job_id: str):
         raise HTTPException(status_code=404, detail=f"Job {job_id} not found")
 
 
+class StartJobRequest(BaseModel):
+    """Request to start an annotation job"""
+    dataset_id: str
+    llm_config: LLMConfigSchema
+    dataset_name: str = "dataset"
+    resume_job_id: Optional[str] = None
+
+
 @router.post("/start-job")
-async def start_annotation_job(request: Dict[str, Any]):
+async def start_annotation_job(request: StartJobRequest):
     """
     Start annotation job for an uploaded dataset.
     
     Required fields:
     - dataset_id: ID from upload endpoint
-    - llm_config: Configuration for LLM models and API keys
+    - llm_config: Configuration for LLM models, API keys, and processing strategies
     - dataset_name: Name for output files (optional)
+    - resume_job_id: Job ID to resume from checkpoint (optional)
     """
     try:
-        dataset_id = request.get('dataset_id')
-        llm_config = request.get('llm_config', {})
-        dataset_name = request.get('dataset_name', 'dataset')
-        
-        if not dataset_id:
-            raise HTTPException(status_code=400, detail="dataset_id is required")
-        
-        resume_job_id = request.get('resume_job_id')
         result = await annotation_service.start_annotation_job(
-            dataset_id, llm_config, dataset_name, resume_job_id
+            request.dataset_id, 
+            request.llm_config.model_dump(), 
+            request.dataset_name, 
+            request.resume_job_id
         )
         return result
     except Exception as e:
@@ -136,30 +146,195 @@ async def stop_job(job_id: str):
         raise HTTPException(status_code=404, detail=str(e))
 
 
+@router.get("/config/default")
+async def get_default_config():
+    """
+    Get default LLM configuration with all available options and their descriptions.
+    Use this as a starting point for customization.
+    """
+    default_config = LLMConfigSchema()
+    return {
+        "config": default_config.model_dump(),
+        "schema": LLMConfigSchema.model_json_schema(),
+        "strategies": {
+            "truncate": {
+                "name": "Truncate Content",
+                "description": "Processes all events but truncates content length based on session size",
+                "best_for": "Most sessions, balances accuracy and cost",
+                "pros": ["Sees entire session context", "Good for understanding full journey"],
+                "cons": ["May lose detail in long content"]
+            },
+            "sliding_window": {
+                "name": "Sliding Window",
+                "description": "Only processes the last N events (configurable window_size)",
+                "best_for": "Very long sessions (>100 events)",
+                "pros": ["Consistent processing time", "Full detail for recent events"],
+                "cons": ["Loses early session context", "May miss important patterns"]
+            },
+            "full": {
+                "name": "Full Processing",
+                "description": "Processes all events with full content (may hit token limits)",
+                "best_for": "Short sessions with critical detail",
+                "pros": ["Maximum detail preserved", "Best accuracy for short sessions"],
+                "cons": ["Expensive", "May fail on very long sessions"]
+            }
+        }
+    }
+
+
+@router.get("/config/prompts")
+async def get_default_prompts():
+    """
+    Get default prompts for each agent (Analyst, Critic, Judge).
+    Copy and modify these for custom prompt overrides.
+    """
+    from app.services.llm_agents import LABEL_SCHEMA
+    
+    analyst_prompt = """You are an expert behavioral analyst specializing in Information Foraging Theory. Your task is to analyze user behavior and assign cognitive labels to each event in the session.
+
+{LABEL_SCHEMA}
+
+## Session to Analyze:
+{events_str}
+
+## Your Task:
+For EACH event in the session, provide:
+1. The most appropriate cognitive label
+2. Step-by-step justification for your choice
+3. Confidence score (0.0-1.0)
+
+## Output Format (JSON):
+Return a JSON array with one object per event:
+```json
+[
+  {{
+    "event_id": "...",
+    "label": "FollowingScent",
+    "justification": "Step-by-step reasoning...",
+    "confidence": 0.85
+  }}
+]
+```
+
+Provide ONLY the JSON array, no additional text."""
+    
+    critic_prompt = """You are a critical reviewer specializing in Information Foraging Theory. Your role is to challenge and review the Analyst's cognitive label assignments.
+
+{LABEL_SCHEMA}
+
+## Analyst's Analysis:
+{analysis_str}
+
+## Your Task:
+For EACH event, either:
+1. AGREE with the Analyst's label and provide brief supporting argument
+2. DISAGREE and propose a different label with counter-argument
+
+Be thorough and question assumptions. Look for alternative explanations.
+
+## Output Format (JSON):
+```json
+[
+  {{
+    "event_id": "...",
+    "agreement": "agree" | "disagree",
+    "label": "FollowingScent",
+    "justification": "Reasoning for agreement or alternative explanation...",
+    "confidence": 0.80
+  }}
+]
+```
+
+Provide ONLY the JSON array, no additional text."""
+    
+    judge_prompt = """You are the final arbiter in a multi-agent cognitive labeling system. Your role is to synthesize the Analyst's and Critic's perspectives and make the final decision.
+
+{LABEL_SCHEMA}
+
+## Agent Deliberations:
+{deliberation_str}
+
+## Your Task:
+For EACH event, provide:
+1. Your FINAL cognitive label decision
+2. Comprehensive justification synthesizing both perspectives
+3. Final confidence score
+4. Flag for human review if there's significant disagreement
+
+## Output Format (JSON):
+```json
+[
+  {{
+    "event_id": "...",
+    "final_label": "FollowingScent",
+    "justification": "Comprehensive synthesis of all perspectives...",
+    "confidence": 0.87,
+    "flag_for_review": false,
+    "disagreement_score": 0.15
+  }}
+]
+```
+
+Provide ONLY the JSON array, no additional text."""
+    
+    return {
+        "analyst_prompt": analyst_prompt,
+        "critic_prompt": critic_prompt,
+        "judge_prompt": judge_prompt,
+        "label_schema": LABEL_SCHEMA,
+        "notes": {
+            "placeholders": {
+                "{LABEL_SCHEMA}": "Automatically replaced with cognitive label definitions",
+                "{events_str}": "Automatically replaced with formatted session events (Analyst)",
+                "{analysis_str}": "Automatically replaced with analyst decisions (Critic)",
+                "{deliberation_str}": "Automatically replaced with all agent decisions (Judge)"
+            },
+            "customization_tips": [
+                "Keep the JSON output format exactly as shown",
+                "You can adjust the tone, level of detail, or add domain-specific guidance",
+                "Placeholders are automatically filled - don't remove them",
+                "Test with a few sessions before running on full dataset"
+            ]
+        }
+    }
+
+
 @router.post("/job/{job_id}/session/{session_id}/resolve")
 async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict[str, Any]):
     """
     Resolve flagged annotations for a session by applying a user-selected label.
     Overwrites cognitive labels for flagged events and updates output/logs.
+    Works with both active and completed jobs.
     """
     try:
-        from app.services.annotation_orchestrator import AnnotationOrchestrator
+        from pathlib import Path
+        import json
+        from datetime import datetime
+        
         label = payload.get('label')
         note = payload.get('note', '')
+        dataset_name = payload.get('dataset_name', 'dataset')
+        
         if not label:
             raise HTTPException(status_code=400, detail="label is required")
 
-        # Locate orchestrator
-        if job_id not in annotation_service.active_jobs:
-            raise HTTPException(status_code=404, detail=f"Job {job_id} not found")
-        orchestrator: AnnotationOrchestrator = annotation_service.active_jobs[job_id]
-
-        # Load existing log
-        log = orchestrator.get_session_log(session_id, job_id)
+        # Try to get log from active job first
+        log = None
+        if job_id in annotation_service.active_jobs:
+            orchestrator = annotation_service.active_jobs[job_id]
+            log = orchestrator.get_session_log(session_id, job_id)
+        
+        # If not in active jobs, load from saved log file
         if not log:
-            raise HTTPException(status_code=404, detail=f"Log not found for session {session_id}")
+            log_file = annotation_service.output_dir / job_id / "logs" / f"{session_id}_log.json"
+            if not log_file.exists():
+                raise HTTPException(status_code=404, detail=f"Log not found for session {session_id} in job {job_id}")
+            
+            with open(log_file, 'r') as f:
+                log = json.load(f)
 
-        # Overwrite flagged events' cognitive_label with user label and bump version
+        # Overwrite flagged events' cognitive_label with user label and add metadata
+        updated_count = 0
         for ev in log.get('events', []):
             if ev.get('flagged_for_review', False):
                 ev['cognitive_label'] = label
@@ -167,32 +342,60 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
                 ev['user_note'] = note
                 # Increment version (default from 1)
                 try:
-                  ev['override_version'] = int(ev.get('override_version', 1)) + 1
+                    ev['override_version'] = int(ev.get('override_version', 1)) + 1
                 except Exception:
-                  ev['override_version'] = 2
+                    ev['override_version'] = 2
                 ev['override_timestamp'] = datetime.now().isoformat()
+                updated_count += 1
 
         # Persist back to log file
-        orchestrator.session_logs[session_id] = log
-        from pathlib import Path
-        import json
-        log_file = orchestrator.output_dir / job_id / "logs" / f"{session_id}_log.json"
+        log_file = annotation_service.output_dir / job_id / "logs" / f"{session_id}_log.json"
+        log_file.parent.mkdir(parents=True, exist_ok=True)
         with open(log_file, 'w') as f:
             json.dump(log, f, indent=2)
 
-        # Also update CSV rows by appending corrected events
-        # Note: For simplicity we append corrected rows; a full replacement would require rewriting CSV.
-        corrected_result = {
-            'session_id': session_id,
-            'annotated_events': log.get('events', [])
-        }
-        output_file = orchestrator.output_dir / job_id / f"{payload.get('dataset_name', 'dataset')}_cognitive_traces.csv"
-        if output_file.exists():
-            orchestrator._append_to_csv(output_file, corrected_result)
+        # Update session log in active orchestrator if available
+        if job_id in annotation_service.active_jobs:
+            annotation_service.active_jobs[job_id].session_logs[session_id] = log
 
-        return {"status": "ok", "session_id": session_id, "label": label}
+        # Update CSV file
+        output_file = annotation_service.output_dir / job_id / f"{dataset_name}_cognitive_traces.csv"
+        if output_file.exists():
+            # Read existing CSV, find and update the session rows, then rewrite
+            import csv
+            rows = []
+            with open(output_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row.get('session_id') == session_id:
+                        # Update the cognitive_label for this event
+                        event_id = row.get('event_id')
+                        for ev in log.get('events', []):
+                            if str(ev.get('event_id')) == str(event_id) and ev.get('flagged_for_review'):
+                                row['cognitive_label'] = label
+                                row['user_override'] = 'True'
+                                row['user_note'] = note
+                                break
+                    rows.append(row)
+            
+            # Rewrite CSV with updated data
+            if rows:
+                with open(output_file, 'w', encoding='utf-8', newline='') as f:
+                    fieldnames = rows[0].keys()
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(rows)
+
+        return {
+            "status": "ok",
+            "session_id": session_id,
+            "label": label,
+            "updated_events": updated_count
+        }
     except HTTPException:
         raise
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 

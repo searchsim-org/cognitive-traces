@@ -166,7 +166,7 @@ export default function ConverterPage() {
   const [contentAsJson, setContentAsJson] = useState<boolean>(false)
   const [contentJsonKeys, setContentJsonKeys] = useState<string[]>([])
 
-  const standardRows = useMemo(() => {
+  const standardRows = useMemo((): RawRow[] => {
     if (!rawRows.length) return []
     try {
       if (contentAsJson && contentJsonKeys.length > 0) {
@@ -179,7 +179,7 @@ export default function ConverterPage() {
             timestamp: r.timestamp ?? (mapping.timestamp ? r[mapping.timestamp] : r['starttime'] ?? ''),
             action_type: r.action_type ?? (mapping.action_type ? r[mapping.action_type] : r['type'] ?? ''),
             content: JSON.stringify(obj),
-          }
+          } as RawRow
         })
       }
       return toStandardRows(rawRows, mapping)

@@ -185,7 +185,8 @@ function AnnotatorContent() {
             </p>
           </div>
 
-          {/* Progress Steps */}
+          {/* Progress Steps - Hidden on resolve step */}
+          {currentStep !== 'resolve' && (
           <div className="max-w-6xl mx-auto mb-12">
             <div className="flex items-center justify-between">
               {['Upload', 'Review', 'Configure', 'Annotate', 'Resolve Flags', 'Complete'].map((step, index) => {
@@ -254,6 +255,7 @@ function AnnotatorContent() {
               })}
             </div>
           </div>
+          )}
 
           {/* Main Content */}
           <div className="max-w-6xl mx-auto">
@@ -337,9 +339,7 @@ function AnnotatorContent() {
             {/* Step 5: Resolve Flags */}
             {currentStep === 'resolve' && jobId && (
               <div className="space-y-6">
-                <div className="bg-white rounded-3xl border border-gray-200 p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Resolve Flagged Annotations</h2>
-                  <p className="text-gray-600 mb-6">Review sessions flagged for high disagreement and finalize labels. Your decisions will overwrite previous annotations.</p>
+                <div className="bg-white rounded-3xl p-8">
                   <FlaggedSessions jobId={jobId} datasetName={uploadedDataset?.filename.replace(/\.(csv|json)$/i, '') || 'dataset'} onFinish={() => updateStep('complete')} />
                 </div>
               </div>

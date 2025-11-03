@@ -211,13 +211,19 @@ class AnnotationOrchestrator:
         session_id = session['session_id']
         events = session['events']
         
+        # Log warning for large sessions
+        num_events = len(events)
+        if num_events > 50:
+            print(f"[WARN] Session {session_id} has {num_events} events - processing may take longer")
+        
         # Initialize session log
         log = {
             'session_id': session_id,
             'job_id': job_id,
             'timestamp': datetime.now().isoformat(),
             'events': [],
-            'agent_interactions': []
+            'agent_interactions': [],
+            'num_events': num_events
         }
         
         try:
@@ -264,17 +270,40 @@ class AnnotationOrchestrator:
                 'status': 'started'
             })
             
-            judge_result = await self.judge.decide(
-                events,
-                analyst_result['decisions'],
-                critic_result['decisions']
-            )
-            
-            log['agent_interactions'][-1].update({
-                'status': 'completed',
-                'elapsed_time': judge_result['elapsed_time'],
-                'decisions': judge_result['decisions']
-            })
+            try:
+                judge_result = await self.judge.decide(
+                    events,
+                    analyst_result['decisions'],
+                    critic_result['decisions']
+                )
+                
+                log['agent_interactions'][-1].update({
+                    'status': 'completed',
+                    'elapsed_time': judge_result['elapsed_time'],
+                    'decisions': judge_result['decisions']
+                })
+            except Exception as judge_error:
+                # Log judge error but continue with critic decisions
+                print(f"[WARN] Session {session_id}: Judge failed with {num_events} events. Error: {str(judge_error)}")
+                log['agent_interactions'][-1].update({
+                    'status': 'fallback_to_critic',
+                    'error': str(judge_error)
+                })
+                # Use critic decisions as fallback
+                judge_result = {
+                    'decisions': [
+                        {
+                            'event_id': d['event_id'],
+                            'final_label': d['label'],
+                            'justification': f'Judge failed, using critic decision',
+                            'confidence': d.get('confidence', 0.5) * 0.8,
+                            'flag_for_review': True,
+                            'disagreement_score': 0.5
+                        }
+                        for d in critic_result['decisions']
+                    ],
+                    'elapsed_time': 0
+                }
             
             # Determine if session should be flagged for review
             max_disagreement = max(disagreement_scores) if disagreement_scores else 0

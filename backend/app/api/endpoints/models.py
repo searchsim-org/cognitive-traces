@@ -77,6 +77,83 @@ async def get_ollama_models(
     }
 
 
+@router.post("/custom/test")
+async def test_custom_endpoint(
+    base_url: str = Query(..., description="Custom endpoint base URL"),
+    api_key: Optional[str] = Query(None, description="API key if required")
+):
+    """
+    Test custom OpenAI-compatible endpoint and discover available models.
+    Acts as a proxy to avoid CORS issues.
+    """
+    import httpx
+    
+    # Normalize base URL
+    base_url = base_url.rstrip('/')
+    
+    # Add /v1 if not present
+    if not base_url.endswith('/v1'):
+        if '/v1/' in base_url:
+            # Already has /v1 in path, just normalize
+            pass
+        else:
+            base_url = f"{base_url}/v1"
+    
+    models_url = f"{base_url}/models"
+    
+    try:
+        headers = {}
+        if api_key:
+            headers['Authorization'] = f'Bearer {api_key}'
+        
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            response = await client.get(models_url, headers=headers)
+            response.raise_for_status()
+            
+            data = response.json()
+            models_list = data.get('data', data.get('models', []))
+            
+            # Convert to our format
+            models = [
+                {
+                    'id': model.get('id', model.get('model', 'unknown')),
+                    'name': model.get('id', model.get('model', 'unknown')),
+                    'provider': 'custom',
+                    'description': model.get('description', 'Custom model'),
+                    'contextWindow': model.get('context_length', 8192)
+                }
+                for model in models_list
+            ]
+            
+            return {
+                'success': True,
+                'models': models,
+                'count': len(models),
+                'base_url': base_url.replace('/v1', '')  # Return without /v1
+            }
+            
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(
+            status_code=e.response.status_code,
+            detail=f"HTTP {e.response.status_code}: {e.response.text}"
+        )
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=503,
+            detail="Could not connect to endpoint. Check the URL and ensure it's accessible."
+        )
+    except httpx.TimeoutException:
+        raise HTTPException(
+            status_code=504,
+            detail="Connection timed out. The endpoint may be slow or unreachable."
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to connect: {str(e)}"
+        )
+
+
 @router.get("/info")
 async def get_model_info():
     """Get information about model providers and recommendations"""

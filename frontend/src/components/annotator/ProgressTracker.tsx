@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { CheckCircle2, XCircle, Loader2, FileText, AlertTriangle, Eye } from 'lucide-react'
+import { CheckCircle2, XCircle, Loader2, FileText, AlertTriangle, Eye, X } from 'lucide-react'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
 
@@ -27,6 +27,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
   const [isPolling, setIsPolling] = useState(true)
   const [isStopRequested, setIsStopRequested] = useState(false)
   const [showStopConfirm, setShowStopConfirm] = useState(false)
+  const [dismissedErrors, setDismissedErrors] = useState(false)
   
   // Use session IDs from job status if available, otherwise use prop
   const sessionIds = jobStatus?.session_ids || propSessionIds
@@ -174,7 +175,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
               )}
             </div>
           </div>
-          {jobStatus?.disagreement_model && (
+          {/* {jobStatus?.disagreement_model && (
             <div className="mt-2 text-xs">
               {jobStatus.disagreement_model.loaded ? (
                 <span className="text-green-600">Disagreement model: loaded</span>
@@ -182,7 +183,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
                 <span className="text-red-600">Disagreement model: not loaded{jobStatus.disagreement_model.error ? ` — ${jobStatus.disagreement_model.error}` : ''}</span>
               )}
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Current Session */}
@@ -251,7 +252,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
               Loading session list...
             </div>
           ) : (
-            sessionIds.map((sessionId, i) => {
+            sessionIds.map((sessionId: any, i: any) => {
             const sessionNum = i + 1
             const isCompleted = sessionNum <= completedSessions
             const isCurrent = jobStatus?.current_session === sessionId
@@ -309,13 +310,20 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
         </div>
 
         {/* Errors */}
-        {jobStatus?.errors && jobStatus.errors.length > 0 && (
-          <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+        {jobStatus?.errors && jobStatus.errors.length > 0 && !dismissedErrors && (
+          <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-xl relative">
+            <button
+              onClick={() => setDismissedErrors(true)}
+              className="absolute top-2 right-2 text-red-400 hover:text-red-600 transition-colors p-1 rounded-lg hover:bg-red-100"
+              title="Dismiss errors"
+            >
+              <X className="w-4 h-4" />
+            </button>
             <div className="flex items-center gap-2 text-red-800 font-medium mb-2">
               <AlertTriangle className="w-5 h-5" />
               Errors Encountered
             </div>
-            <ul className="text-sm text-red-700 space-y-1">
+            <ul className="text-sm text-red-700 space-y-1 pr-8">
               {jobStatus.errors.map((error: string, i: number) => (
                 <li key={i}>• {error}</li>
               ))}
