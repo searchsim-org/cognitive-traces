@@ -1,17 +1,20 @@
 'use client'
 
 import { useState, useEffect, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter, useParams } from 'next/navigation'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
-import { FileUploader } from '@/components/annotator/FileUploader'
-import { DatasetReview } from '@/components/annotator/DatasetReview'
-import { LLMConfigPanel } from '@/components/annotator/LLMConfigPanel'
-import { ProgressTracker } from '@/components/annotator/ProgressTracker'
-import { FlaggedSessions } from '@/components/annotator/FlaggedSessions'
-import { ExportSection } from '@/components/annotator/ExportSection'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
+
+// Dynamic imports for components that may have SSR issues
+const FileUploader = dynamic(() => import('@/components/annotator/FileUploader').then(mod => ({ default: mod.FileUploader })), { ssr: false })
+const DatasetReview = dynamic(() => import('@/components/annotator/DatasetReview').then(mod => ({ default: mod.DatasetReview })), { ssr: false })
+const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { ssr: false })
+const ProgressTracker = dynamic(() => import('@/components/annotator/ProgressTracker').then(mod => ({ default: mod.ProgressTracker })), { ssr: false })
+const FlaggedSessions = dynamic(() => import('@/components/annotator/FlaggedSessions').then(mod => ({ default: mod.FlaggedSessions })), { ssr: false })
+const ExportSection = dynamic(() => import('@/components/annotator/ExportSection').then(mod => ({ default: mod.ExportSection })), { ssr: false })
 
 type Step = 'upload' | 'review' | 'configure' | 'annotate' | 'resolve' | 'complete'
 
