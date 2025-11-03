@@ -12,9 +12,9 @@ This repository contains the source code, datasets, and tools for the paper **Be
 
 ## Abstract
 
-User simulators are essential for evaluating search systems, but they primarily copy user actions without understanding the underlying thought process. This gap exists because large-scale interaction logs record what users do, but not what they might be thinking or feeling, such as confusion or satisfaction. To solve this problem, we present a new framework that computationally infers cognitive traces from behavioral data. Our method uses a multi-agent language model system, grounded in Information Foraging Theory and calibrated by human experts, to annotate user actions with their likely cognitive state. To show the value of these traces, we demonstrate that they significantly improve a model's ability to predict when a user will abandon a search task. We release a collection of annotations for several public datasets, including AOL and Stack Overflow, and an open-source tool that allows researchers to apply our method to their own data. This work provides the tools and data needed to build more human-like user simulators and to assess retrieval systems on user-oriented dimensions of performance.
+> User simulators are essential for evaluating search systems, but they primarily copy user actions without understanding the underlying thought process. This gap exists because large-scale interaction logs record what users do, but not what they might be thinking or feeling, such as confusion or satisfaction. To solve this problem, we present a new framework that computationally infers cognitive traces from behavioral data. Our method uses a multi-agent language model system, grounded in Information Foraging Theory and calibrated by human experts, to annotate user actions with their likely cognitive state. To show the value of these traces, we demonstrate that they significantly improve a model's ability to predict when a user will abandon a search task. We release a collection of annotations for several public datasets, including AOL and Stack Overflow, and an open-source tool that allows researchers to apply our method to their own data. This work provides the tools and data needed to build more human-like user simulators and to assess retrieval systems on user-oriented dimensions of performance.
 
-**Keywords**: User Simulation, Cognitive Modeling, Information Retrieval, Data Annotation, Large Language Models
+**Keywords**: *User Simulation • Cognitive Modeling • Information Retrieval • Data Annotation • Large Language Models*
 
 ---
 
@@ -591,20 +591,6 @@ Exports include non-destructive versioning so human resolutions do not rewrite e
 
 ---
 
-## Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@inproceedings{cognitive-traces-2025,
-  title={Beyond the Click: A Framework for Inferring Cognitive Traces in Search},
-  author={Saber Zerhoudi and Michael Granitzer},
-  journal={CoRR},
-  year={2025}
-}
-```
-
----
 
 ## License
 
@@ -642,3 +628,21 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - Add annotations for new datasets
 - Improve the Annotator tool
 - Enhance documentation
+
+
+
+<!-- ---
+
+### Citation
+
+If you use this work in your research, please cite:
+
+```bibtex
+@inproceedings{cognitive-traces-2025,
+  title={Beyond the Click: A Framework for Inferring Cognitive Traces in Search},
+  author={Saber Zerhoudi and Michael Granitzer},
+  journal={CoRR},
+  year={2025}
+}
+``` 
+-->
