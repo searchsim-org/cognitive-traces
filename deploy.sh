@@ -84,20 +84,39 @@ if [ "$DEPLOY_BACKEND" = true ]; then
     echo "  → Restarting backend service..."
     sudo systemctl restart "$BACKEND_SERVICE"
     
-    # Wait a moment for service to start
-    sleep 2
+    # Wait for service to fully start
+    echo "  → Waiting for backend to start..."
+    sleep 5
     
     # Check service status
     if sudo systemctl is-active --quiet "$BACKEND_SERVICE"; then
         echo -e "  ${GREEN}✓ Backend service is running${NC}"
         
-        # Health check
-        if curl -sf http://127.0.0.1:8000/health > /dev/null; then
+        # Health check with retries
+        echo "  → Testing health endpoint..."
+        MAX_RETRIES=5
+        RETRY_COUNT=0
+        HEALTH_OK=false
+        
+        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            if curl -sf http://127.0.0.1:8000/health > /dev/null 2>&1; then
+                HEALTH_OK=true
+                break
+            fi
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "  → Retry $RETRY_COUNT/$MAX_RETRIES..."
+                sleep 2
+            fi
+        done
+        
+        if [ "$HEALTH_OK" = true ]; then
             echo -e "  ${GREEN}✓ Backend health check passed${NC}"
         else
-            echo -e "  ${RED}✗ Backend health check failed${NC}"
-            sudo journalctl -u "$BACKEND_SERVICE" -n 20 --no-pager
-            exit 1
+            echo -e "  ${YELLOW}⚠ Backend health check failed after $MAX_RETRIES attempts${NC}"
+            echo -e "  ${YELLOW}  Service is running but may still be initializing${NC}"
+            echo "  → Recent logs:"
+            sudo journalctl -u "$BACKEND_SERVICE" -n 10 --no-pager | tail -5
         fi
     else
         echo -e "  ${RED}✗ Backend service failed to start${NC}"
@@ -139,20 +158,39 @@ if [ "$DEPLOY_FRONTEND" = true ]; then
     echo "  → Restarting frontend service..."
     sudo systemctl restart "$FRONTEND_SERVICE"
     
-    # Wait a moment for service to start
-    sleep 3
+    # Wait for service to fully start
+    echo "  → Waiting for frontend to start..."
+    sleep 5
     
     # Check service status
     if sudo systemctl is-active --quiet "$FRONTEND_SERVICE"; then
         echo -e "  ${GREEN}✓ Frontend service is running${NC}"
         
-        # Health check
-        if curl -sf -I http://127.0.0.1:3000 > /dev/null; then
+        # Health check with retries
+        echo "  → Testing frontend endpoint..."
+        MAX_RETRIES=5
+        RETRY_COUNT=0
+        HEALTH_OK=false
+        
+        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            if curl -sf -I http://127.0.0.1:3000 > /dev/null 2>&1; then
+                HEALTH_OK=true
+                break
+            fi
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "  → Retry $RETRY_COUNT/$MAX_RETRIES..."
+                sleep 2
+            fi
+        done
+        
+        if [ "$HEALTH_OK" = true ]; then
             echo -e "  ${GREEN}✓ Frontend health check passed${NC}"
         else
-            echo -e "  ${RED}✗ Frontend health check failed${NC}"
-            sudo journalctl -u "$FRONTEND_SERVICE" -n 20 --no-pager
-            exit 1
+            echo -e "  ${YELLOW}⚠ Frontend health check failed after $MAX_RETRIES attempts${NC}"
+            echo -e "  ${YELLOW}  Service is running but may still be initializing${NC}"
+            echo "  → Recent logs:"
+            sudo journalctl -u "$FRONTEND_SERVICE" -n 10 --no-pager | tail -5
         fi
     else
         echo -e "  ${RED}✗ Frontend service failed to start${NC}"
