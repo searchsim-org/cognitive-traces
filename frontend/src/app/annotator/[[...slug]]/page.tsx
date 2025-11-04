@@ -1,20 +1,12 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, Suspense, type ComponentType } from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter, useParams } from 'next/navigation'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
-
-// Dynamic imports for components that may have SSR issues
-const FileUploader = dynamic(() => import('@/components/annotator/FileUploader').then(mod => ({ default: mod.FileUploader })), { ssr: false })
-const DatasetReview = dynamic(() => import('@/components/annotator/DatasetReview').then(mod => ({ default: mod.DatasetReview })), { ssr: false })
-const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { ssr: false })
-const ProgressTracker = dynamic(() => import('@/components/annotator/ProgressTracker').then(mod => ({ default: mod.ProgressTracker })), { ssr: false })
-const FlaggedSessions = dynamic(() => import('@/components/annotator/FlaggedSessions').then(mod => ({ default: mod.FlaggedSessions })), { ssr: false })
-const ExportSection = dynamic(() => import('@/components/annotator/ExportSection').then(mod => ({ default: mod.ExportSection })), { ssr: false })
 
 type Step = 'upload' | 'review' | 'configure' | 'annotate' | 'resolve' | 'complete'
 
@@ -25,6 +17,21 @@ interface UploadedDataset {
   total_events: number
   sessions: any[]
 }
+
+type CompleteSectionProps = {
+  jobId: string
+  uploadedDataset: Pick<UploadedDataset, 'dataset_id' | 'filename' | 'total_sessions' | 'total_events'>
+  onReviewFlags: () => void
+  onStartNew: () => void
+}
+
+// Dynamic imports for components that may have SSR issues
+const FileUploader = dynamic(() => import('@/components/annotator/FileUploader').then(mod => ({ default: mod.FileUploader })), { ssr: false })
+const DatasetReview = dynamic(() => import('@/components/annotator/DatasetReview').then(mod => ({ default: mod.DatasetReview })), { ssr: false })
+const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { ssr: false })
+const ProgressTracker = dynamic(() => import('@/components/annotator/ProgressTracker').then(mod => ({ default: mod.ProgressTracker })), { ssr: false })
+const FlaggedSessions = dynamic(() => import('@/components/annotator/FlaggedSessions').then(mod => ({ default: mod.FlaggedSessions })), { ssr: false })
+const CompleteSection = dynamic(() => import('@/components/annotator/CompleteSection').then(mod => ({ default: mod.CompleteSection })), { ssr: false }) as ComponentType<CompleteSectionProps>
 
 function AnnotatorContent() {
   const router = useRouter()
@@ -387,52 +394,19 @@ function AnnotatorContent() {
 
             {/* Step 6: Complete */}
             {currentStep === 'complete' && jobId && uploadedDataset && (
-              <div className="space-y-8">
-                {/* Success Message */}
-                <div className="text-center py-12">
-                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 mb-6">
-                    <span className="text-5xl">✓</span>
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Annotation Complete!
-                  </h2>
-                  <p className="text-lg text-gray-600 mb-2">
-                    Your cognitive traces have been successfully generated.
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Download your annotated data below or start a new annotation job.
-                  </p>
-                </div>
-
-                {/* Export Section */}
-                <ExportSection 
-                  jobId={jobId} 
-                  datasetName={uploadedDataset.filename.replace(/\.(csv|json)$/i, '')}
-                />
-
-                {/* Action Buttons */}
-                <div className="flex justify-center gap-4 pt-4">
-                  <button
-                    onClick={() => updateStep('resolve')}
-                    className="px-6 py-3 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50"
-                  >
-                    Review Flagged Sessions
-                  </button>
-                  <button
-                    onClick={() => {
-                      setUploadedDataset(null)
-                      setLLMConfig(null)
-                      setJobId(null)
-                      setSessionIds([])
-                      localStorage.removeItem('annotator_dataset_meta')
-                      updateStep('upload', null)
-                    }}
-                    className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium"
-                  >
-                    Annotate Another Dataset
-                  </button>
-                </div>
-              </div>
+              <CompleteSection 
+                jobId={jobId}
+                uploadedDataset={uploadedDataset}
+                onReviewFlags={() => updateStep('resolve')}
+                onStartNew={() => {
+                  setUploadedDataset(null)
+                  setLLMConfig(null)
+                  setJobId(null)
+                  setSessionIds([])
+                  localStorage.removeItem('annotator_dataset_meta')
+                  updateStep('upload', null)
+                }}
+              />
             )}
           </div>
         </div>

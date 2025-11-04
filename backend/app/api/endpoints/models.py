@@ -188,6 +188,12 @@ async def get_model_info():
                 'api_key_url': 'https://makersuite.google.com/app/apikey',
                 'recommended_for': ['fast processing', 'large contexts']
             },
+            'mistral': {
+                'name': 'Mistral AI',
+                'description': 'European models with strong performance',
+                'api_key_url': 'https://console.mistral.ai/',
+                'recommended_for': ['balanced performance', 'European data privacy']
+            },
             'ollama': {
                 'name': 'Ollama',
                 'description': 'Local models - free, private, no API keys needed',

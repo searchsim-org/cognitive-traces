@@ -111,7 +111,15 @@ class AnnotationService:
         # Debug: Log received config
         print(f"[DEBUG] Received llm_config keys: {list(llm_config.keys())}")
         print(f"[DEBUG] custom_endpoints in config: {llm_config.get('custom_endpoints', 'NOT PRESENT')}")
+        print(f"[DEBUG] Received llm_config keys: {list(llm_config.keys())}")
         print(f"[DEBUG] analyst_model: {llm_config.get('analyst_model', 'NOT SET')}")
+        print(f"[DEBUG] critic_model: {llm_config.get('critic_model', 'NOT SET')}")
+        print(f"[DEBUG] judge_model: {llm_config.get('judge_model', 'NOT SET')}")
+        print(f"[DEBUG] has_anthropic_api_key: {bool(llm_config.get('anthropic_api_key'))}")
+        print(f"[DEBUG] has_openai_api_key: {bool(llm_config.get('openai_api_key'))}")
+        print(f"[DEBUG] has_google_api_key: {bool(llm_config.get('google_api_key'))}")
+        print(f"[DEBUG] has_mistral_api_key: {bool(llm_config.get('mistral_api_key'))}")
+        print(f"[DEBUG] mistral_api_key value: {repr(llm_config.get('mistral_api_key'))}")
         
         # Create LLM config with all parameters
         config = LLMConfig(
@@ -124,6 +132,7 @@ class AnnotationService:
             anthropic_api_key=llm_config.get('anthropic_api_key'),
             openai_api_key=llm_config.get('openai_api_key'),
             google_api_key=llm_config.get('google_api_key'),
+            mistral_api_key=llm_config.get('mistral_api_key'),
             ollama_base_url=llm_config.get('ollama_base_url', 'http://localhost:11434'),
             
             # Custom endpoints and fallback

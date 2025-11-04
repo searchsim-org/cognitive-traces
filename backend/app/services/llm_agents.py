@@ -18,6 +18,7 @@ class ModelProvider(str, Enum):
     ANTHROPIC = "anthropic"
     OPENAI = "openai"
     GOOGLE = "google"
+    MISTRAL = "mistral"
     OLLAMA = "ollama"
 
 
@@ -41,6 +42,7 @@ class LLMConfig:
         anthropic_api_key: Optional[str] = None,
         openai_api_key: Optional[str] = None,
         google_api_key: Optional[str] = None,
+        mistral_api_key: Optional[str] = None,
         ollama_base_url: str = "http://localhost:11434",
         
         # Custom endpoints
@@ -81,11 +83,19 @@ class LLMConfig:
         self.critic_model = critic_model
         self.judge_model = judge_model
         
-        # API keys
-        self.anthropic_api_key = anthropic_api_key
-        self.openai_api_key = openai_api_key
-        self.google_api_key = google_api_key
+        # API keys (convert empty strings to None for cleaner validation)
+        self.anthropic_api_key = anthropic_api_key if anthropic_api_key else None
+        self.openai_api_key = openai_api_key if openai_api_key else None
+        self.google_api_key = google_api_key if google_api_key else None
+        self.mistral_api_key = mistral_api_key if mistral_api_key else None
         self.ollama_base_url = ollama_base_url
+        
+        # Debug: Log API key status (first 8 chars only for security)
+        print(f"[LLMConfig] API Keys initialized:")
+        print(f"  - Anthropic: {'***' + self.anthropic_api_key[:8] if self.anthropic_api_key else 'NOT SET'}")
+        print(f"  - OpenAI: {'***' + self.openai_api_key[:8] if self.openai_api_key else 'NOT SET'}")
+        print(f"  - Google: {'***' + self.google_api_key[:8] if self.google_api_key else 'NOT SET'}")
+        print(f"  - Mistral: {'***' + self.mistral_api_key[:8] if self.mistral_api_key else 'NOT SET'}")
         
         # Custom endpoints
         self.custom_endpoints = custom_endpoints or []
@@ -142,6 +152,8 @@ class LLMConfig:
             return ModelProvider.OPENAI
         elif model.startswith('gemini'):
             return ModelProvider.GOOGLE
+        elif model.startswith('mistral') or model.startswith('pixtral') or model.startswith('open-mistral'):
+            return ModelProvider.MISTRAL
         else:
             return ModelProvider.OLLAMA
     
@@ -392,6 +404,8 @@ class UniversalLLMClient:
                 response_text = await self._generate_openai(model, prompt, max_tokens, temp)
             elif provider == ModelProvider.GOOGLE:
                 response_text = await self._generate_google(model, prompt, max_tokens, temp)
+            elif provider == ModelProvider.MISTRAL:
+                response_text = await self._generate_mistral(model, prompt, max_tokens, temp)
             elif provider == ModelProvider.OLLAMA:
                 response_text = await self._generate_ollama(model, prompt, max_tokens, temp)
             else:
@@ -433,11 +447,14 @@ class UniversalLLMClient:
             client = openai.OpenAI(
                 api_key=custom_endpoint.get('api_key', ''),
                 base_url=base_url,
-                timeout=60.0  # Set explicit timeout
+                timeout=300.0  # Longer timeout for large sessions (5 minutes)
             )
         else:
             # Use standard OpenAI
-            client = openai.OpenAI(api_key=self.config.openai_api_key)
+            client = openai.OpenAI(
+                api_key=self.config.openai_api_key,
+                timeout=300.0  # Longer timeout for large sessions (5 minutes)
+            )
         
         # Wrap synchronous call in thread to avoid blocking
         response = await asyncio.to_thread(
@@ -462,9 +479,70 @@ class UniversalLLMClient:
         )
         return response.text
     
+    async def _generate_mistral(self, model: str, prompt: str, max_tokens: int, temperature: float) -> str:
+        """Generate using Mistral AI"""
+        # Validate API key
+        if not self.config.mistral_api_key:
+            print(f"[Mistral] API key validation failed. Key value: {repr(self.config.mistral_api_key)}")
+            raise ValueError("Mistral API key is required but not provided. Please add your Mistral API key in the configuration.")
+        
+        print(f"[Mistral] Using model: {model}")
+        print(f"[Mistral] Using API key: ***{self.config.mistral_api_key[:8] if len(self.config.mistral_api_key) > 8 else '***'}")
+        
+        # Mistral uses OpenAI-compatible API
+        # Use longer timeout for large sessions (5 minutes)
+        async with httpx.AsyncClient(timeout=300.0) as client:
+            try:
+                print(f"[Mistral] Sending request to Mistral API...")
+                response = await client.post(
+                    "https://api.mistral.ai/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self.config.mistral_api_key}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "model": model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": max_tokens,
+                        "temperature": temperature
+                    }
+                )
+                print(f"[Mistral] Response status: {response.status_code}")
+                response.raise_for_status()
+                result = response.json()
+                return result["choices"][0]["message"]["content"]
+            except httpx.HTTPStatusError as e:
+                error_detail = ""
+                try:
+                    error_detail = e.response.text
+                except:
+                    error_detail = "Unable to read error response"
+                
+                if e.response.status_code == 401:
+                    raise ValueError(f"Mistral API authentication failed (401). Please check your API key is valid and has not expired. Error: {error_detail}")
+                elif e.response.status_code == 404:
+                    raise ValueError(f"Mistral API model not found (404). Model '{model}' may not exist or may not be available with your API key. Valid models: mistral-large-latest, mistral-medium-latest, mistral-small-latest, open-mistral-nemo. Error: {error_detail}")
+                elif e.response.status_code == 429:
+                    raise ValueError(f"Mistral API rate limit exceeded (429). Please wait before retrying. Error: {error_detail}")
+                elif e.response.status_code >= 500:
+                    raise ValueError(f"Mistral API server error ({e.response.status_code}). The service may be temporarily unavailable. Error: {error_detail}")
+                else:
+                    raise ValueError(f"Mistral API error ({e.response.status_code}): {error_detail}")
+            except httpx.TimeoutException as e:
+                raise ValueError(f"Mistral API request timed out after 300 seconds (5 minutes). The session may be too large for the model to process in time. Try using 'Sliding Window' strategy with a smaller window size (20-30 events), or use a faster model. Error: {str(e)}")
+            except httpx.ConnectError as e:
+                raise ValueError(f"Failed to connect to Mistral API. Please check your network connection and ensure you can reach api.mistral.ai. Error: {str(e)}")
+            except httpx.RequestError as e:
+                raise ValueError(f"Mistral API network error: {type(e).__name__} - {str(e)}")
+            except KeyError as e:
+                raise ValueError(f"Mistral API returned unexpected response format. Missing key: {str(e)}. This may indicate an API change or service issue.")
+            except Exception as e:
+                raise ValueError(f"Mistral API request failed with unexpected error ({type(e).__name__}): {str(e)}")
+    
     async def _generate_ollama(self, model: str, prompt: str, max_tokens: int, temperature: float) -> str:
         """Generate using local Ollama"""
-        async with httpx.AsyncClient(timeout=120.0) as client:
+        # Use longer timeout for large sessions (5 minutes)
+        async with httpx.AsyncClient(timeout=300.0) as client:
             response = await client.post(
                 f"{self.config.ollama_base_url}/api/generate",
                 json={
@@ -537,7 +615,8 @@ class AnalystAgent:
         if max_tokens < 500:
             raise Exception(
                 f"Session too large ({len(processed_events)} events, ~{estimated_input_tokens} input tokens). "
-                f"Please use 'Sliding Window' strategy or reduce window size."
+                f"Model '{self.config.analyst_model}' context window ({context_window:,} tokens) cannot fit this session. "
+                f"Solutions: 1) Use 'Sliding Window' strategy (recommended), 2) Reduce window size to 20-30 events, or 3) Choose a model with larger context window (e.g., Gemini 1.5 Pro with 2M tokens)."
             )
         
         try:
@@ -673,7 +752,8 @@ class CriticAgent:
         if max_tokens < 500:
             raise Exception(
                 f"Session too large ({len(processed_events)} events, ~{estimated_input_tokens} input tokens). "
-                f"Please use 'Sliding Window' strategy or reduce window size."
+                f"Model '{self.config.critic_model}' context window ({context_window:,} tokens) cannot fit this session. "
+                f"Solutions: 1) Use 'Sliding Window' strategy (recommended), 2) Reduce window size to 20-30 events, or 3) Choose a model with larger context window (e.g., Gemini 1.5 Pro with 2M tokens)."
             )
         
         try:
@@ -817,7 +897,8 @@ class JudgeAgent:
         if max_tokens < 500:
             raise Exception(
                 f"Session too large ({len(processed_events)} events, ~{estimated_input_tokens} input tokens). "
-                f"Please use 'Sliding Window' strategy or reduce window size."
+                f"Model '{self.config.judge_model}' context window ({context_window:,} tokens) cannot fit this session. "
+                f"Solutions: 1) Use 'Sliding Window' strategy (recommended), 2) Reduce window size to 20-30 events, or 3) Choose a model with larger context window (e.g., Gemini 1.5 Pro with 2M tokens)."
             )
         
         try:

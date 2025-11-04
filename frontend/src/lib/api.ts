@@ -79,6 +79,17 @@ class ApiClient {
   }
 
   async startAnnotationJob(datasetId: string, llmConfig: any, datasetName: string = 'dataset') {
+    console.log('[API] Starting annotation job with config:', {
+      analyst_model: llmConfig.analyst_model,
+      critic_model: llmConfig.critic_model,
+      judge_model: llmConfig.judge_model,
+      has_anthropic_key: !!llmConfig.anthropic_api_key,
+      has_openai_key: !!llmConfig.openai_api_key,
+      has_google_key: !!llmConfig.google_api_key,
+      has_mistral_key: !!llmConfig.mistral_api_key,
+      mistral_key_length: llmConfig.mistral_api_key?.length || 0,
+      mistral_key_preview: llmConfig.mistral_api_key ? `***${llmConfig.mistral_api_key.substring(0, 8)}` : 'NOT SET',
+    })
     return this.client.post('/annotations/start-job', {
       dataset_id: datasetId,
       llm_config: llmConfig,
@@ -142,6 +153,7 @@ class ApiClient {
     anthropic_key?: string
     openai_key?: string
     google_key?: string
+    mistral_key?: string
     ollama_url?: string
     include_ollama?: boolean
   }) {
@@ -158,6 +170,10 @@ class ApiClient {
 
   async getGoogleModels(apiKey?: string) {
     return this.client.get('/models/google', { params: { api_key: apiKey } })
+  }
+
+  async getMistralModels(apiKey?: string) {
+    return this.client.get('/models/mistral', { params: { api_key: apiKey } })
   }
 
   async getOllamaModels(baseUrl?: string) {

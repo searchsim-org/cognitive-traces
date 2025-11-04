@@ -7,9 +7,11 @@ import toast from 'react-hot-toast'
 
 // Dynamic import for crypto-js to avoid SSR issues
 let CryptoJS: any = null
+let cryptoJSLoaded = false
 if (typeof window !== 'undefined') {
   import('crypto-js').then(module => {
     CryptoJS = module.default
+    cryptoJSLoaded = true
   })
 }
 
@@ -180,52 +182,97 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
 
   // Encryption/Decryption functions
   const encrypt = (text: string): string => {
-    if (!CryptoJS) return text // Fallback if crypto not loaded yet
+    if (!CryptoJS || !cryptoJSLoaded) {
+      console.warn('[LLMConfigPanel] CryptoJS not loaded yet, cannot encrypt')
+      return text // Fallback if crypto not loaded yet
+    }
     return CryptoJS.AES.encrypt(text, ENCRYPTION_KEY).toString()
   }
 
   const decrypt = (ciphertext: string): string => {
-    if (!CryptoJS) return ciphertext // Fallback if crypto not loaded yet
+    if (!CryptoJS || !cryptoJSLoaded) {
+      console.warn('[LLMConfigPanel] CryptoJS not loaded yet, cannot decrypt')
+      return '' // Return empty string if crypto not loaded yet
+    }
     try {
       const bytes = CryptoJS.AES.decrypt(ciphertext, ENCRYPTION_KEY)
-      return bytes.toString(CryptoJS.enc.Utf8)
-    } catch {
+      const decrypted = bytes.toString(CryptoJS.enc.Utf8)
+      // Validate decryption worked (should not be empty and should not be the same as input)
+      if (decrypted && decrypted !== ciphertext) {
+        return decrypted
+      }
+      console.error('[LLMConfigPanel] Decryption failed or returned invalid result')
+      return ''
+    } catch (error) {
+      console.error('[LLMConfigPanel] Decryption error:', error)
       return ''
     }
   }
 
-  // Load saved API keys on mount
+  // Load saved API keys on mount (wait for CryptoJS to load)
   useEffect(() => {
-    const savedAnthropicKey = localStorage.getItem('encrypted_anthropic_key')
-    const savedOpenAIKey = localStorage.getItem('encrypted_openai_key')
-    const savedGoogleKey = localStorage.getItem('encrypted_google_key')
-    const savedMistralKey = localStorage.getItem('encrypted_mistral_key')
-    const savedOllamaUrl = localStorage.getItem('ollama_base_url')
+    const loadKeys = async () => {
+      // Wait for CryptoJS to load
+      let attempts = 0
+      while (!cryptoJSLoaded && attempts < 50) { // Max 5 seconds wait
+        await new Promise(resolve => setTimeout(resolve, 100))
+        attempts++
+      }
+      
+      if (!cryptoJSLoaded) {
+        console.error('[LLMConfigPanel] CryptoJS failed to load after 5 seconds')
+        return
+      }
 
-    if (savedAnthropicKey) {
-      setConfig(prev => ({ ...prev, anthropic_api_key: decrypt(savedAnthropicKey) }))
-    }
-    if (savedOpenAIKey) {
-      setConfig(prev => ({ ...prev, openai_api_key: decrypt(savedOpenAIKey) }))
-    }
-    if (savedGoogleKey) {
-      setConfig(prev => ({ ...prev, google_api_key: decrypt(savedGoogleKey) }))
-    }
-    if (savedMistralKey) {
-      setConfig(prev => ({ ...prev, mistral_api_key: decrypt(savedMistralKey) }))
-    }
-    if (savedOllamaUrl) {
-      setConfig(prev => ({ ...prev, ollama_base_url: savedOllamaUrl }))
+      const savedAnthropicKey = localStorage.getItem('encrypted_anthropic_key')
+      const savedOpenAIKey = localStorage.getItem('encrypted_openai_key')
+      const savedGoogleKey = localStorage.getItem('encrypted_google_key')
+      const savedMistralKey = localStorage.getItem('encrypted_mistral_key')
+      const savedOllamaUrl = localStorage.getItem('ollama_base_url')
+
+      if (savedAnthropicKey) {
+        const decrypted = decrypt(savedAnthropicKey)
+        if (decrypted) {
+          setConfig(prev => ({ ...prev, anthropic_api_key: decrypted }))
+        }
+      }
+      if (savedOpenAIKey) {
+        const decrypted = decrypt(savedOpenAIKey)
+        if (decrypted) {
+          setConfig(prev => ({ ...prev, openai_api_key: decrypted }))
+        }
+      }
+      if (savedGoogleKey) {
+        const decrypted = decrypt(savedGoogleKey)
+        if (decrypted) {
+          setConfig(prev => ({ ...prev, google_api_key: decrypted }))
+        }
+      }
+      if (savedMistralKey) {
+        const decrypted = decrypt(savedMistralKey)
+        if (decrypted) {
+          setConfig(prev => ({ ...prev, mistral_api_key: decrypted }))
+        }
+      }
+      if (savedOllamaUrl) {
+        setConfig(prev => ({ ...prev, ollama_base_url: savedOllamaUrl }))
+      }
+
+      // Load models after keys are decrypted
+      loadAvailableModels()
     }
 
-    // Load models initially
-    loadAvailableModels()
+    loadKeys()
   }, [])
 
   const loadAvailableModels = async () => {
     setIsLoadingModels(true)
     try {
       const response = await api.getAvailableModels({
+        anthropic_key: config.anthropic_api_key,
+        openai_key: config.openai_api_key,
+        google_key: config.google_api_key,
+        mistral_key: config.mistral_api_key,
         include_ollama: true,
         ollama_url: config.ollama_base_url,
       })
@@ -471,8 +518,16 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
       localStorage.setItem('ollama_base_url', config.ollama_base_url)
     }
 
-    console.log('[DEBUG Frontend] Config being sent:', {
+    console.log('[DEBUG Frontend] Config being sent to parent:', {
       analyst_model: config.analyst_model,
+      critic_model: config.critic_model,
+      judge_model: config.judge_model,
+      has_anthropic_key: !!config.anthropic_api_key,
+      has_openai_key: !!config.openai_api_key,
+      has_google_key: !!config.google_api_key,
+      has_mistral_key: !!config.mistral_api_key,
+      mistral_key_length: config.mistral_api_key?.length || 0,
+      mistral_key_preview: config.mistral_api_key ? `***${config.mistral_api_key.substring(0, 8)}` : 'NOT SET',
       custom_endpoints: config.custom_endpoints,
       custom_endpoints_count: config.custom_endpoints?.length || 0,
       has_custom_endpoints: !!config.custom_endpoints
@@ -489,6 +544,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     config.anthropic_api_key || 
     config.openai_api_key || 
     config.google_api_key || 
+    config.mistral_api_key ||
     (ollamaConnected && config.ollama_base_url)
 
   const getModelsForRole = (role: 'analyst' | 'critic' | 'judge') => {
@@ -497,6 +553,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
       ...availableModels.anthropic,
       ...availableModels.openai,
       ...availableModels.google,
+      ...availableModels.mistral,
       ...availableModels.ollama,
       ...(availableModels.custom || []),
     ]
@@ -678,6 +735,7 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                           <div><strong>Anthropic Claude:</strong> Excellent reasoning, best for Analyst</div>
                           <div><strong>OpenAI GPT:</strong> Versatile and powerful for all roles</div>
                           <div><strong>Google Gemini:</strong> Fast with large context windows</div>
+                          <div><strong>Mistral AI:</strong> European models with strong performance</div>
                           <div><strong>Ollama:</strong> Free local models (requires installation)</div>
                         </div>
                         <div className="absolute -top-1 left-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>

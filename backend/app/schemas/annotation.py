@@ -99,6 +99,7 @@ class LLMConfigSchema(BaseModel):
     anthropic_api_key: Optional[str] = Field(None, description="Anthropic API key")
     openai_api_key: Optional[str] = Field(None, description="OpenAI API key")
     google_api_key: Optional[str] = Field(None, description="Google API key")
+    mistral_api_key: Optional[str] = Field(None, description="Mistral API key")
     ollama_base_url: str = Field(
         default="http://localhost:11434",
         description="Ollama base URL for local models"

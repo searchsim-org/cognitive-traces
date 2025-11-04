@@ -12,9 +12,11 @@ These datasets are **excerpts** from the full-sized datasets used in our researc
 
 ## Full Dataset Access
 
-The **complete datasets** with all cognitive trace annotations will be made available on Zenodo.
+The **complete datasets** with all cognitive trace annotations are being made available on Zenodo.
 
-**Zenodo Link**: *Coming soon*
+**Stack Overflow Dataset**: [https://doi.org/10.5281/zenodo.17523285](https://doi.org/10.5281/zenodo.17523285) 
+
+**AOL & MovieLens Datasets**: *Coming soon*
 
 ## Available Datasets
 
@@ -24,9 +26,11 @@ The **complete datasets** with all cognitive trace annotations will be made avai
 
 ### MovieLens User Interactions
 - **Input**: `movielens_input.csv` - User-movie interaction data
-- **Output**: `movielens_annotated.csv` - Cognitive traces with annotations
+- **Output**: `movielens_annotated.csv` - Cognitive traces with multi-agent annotations
 
-
+### StackOverflow User Interactions
+- **Input**: `stackoverflow_input.csv` - Technical Q&A interaction data
+- **Output**: `stackoverflow_annotated.csv` - Cognitive traces with multi-agent annotations
 
 
 ## Format Details
