@@ -227,6 +227,8 @@ class AnnotationOrchestrator:
         }
         
         try:
+            # For sliding window: process ALL events but pass full session for context
+            # Agents will handle windowing internally
             # Step 1: Analyst analyzes
             log['agent_interactions'].append({
                 'step': 1,
@@ -471,9 +473,30 @@ class AnnotationOrchestrator:
         progress: Dict[str, Any]
     ):
         """Save checkpoint for recovery"""
+        # Save config as dict for restoration
+        config_dict = {
+            'analyst_model': self.config.analyst_model,
+            'critic_model': self.config.critic_model,
+            'judge_model': self.config.judge_model,
+            'anthropic_api_key': self.config.anthropic_api_key,
+            'openai_api_key': self.config.openai_api_key,
+            'google_api_key': self.config.google_api_key,
+            'mistral_api_key': self.config.mistral_api_key,
+            'ollama_base_url': self.config.ollama_base_url,
+            'custom_endpoints': self.config.custom_endpoints,  # Save custom endpoints!
+            'enable_fallback': self.config.enable_fallback,
+            'fallback_analyst_model': self.config.fallback_analyst_model,
+            'fallback_critic_model': self.config.fallback_critic_model,
+            'fallback_judge_model': self.config.fallback_judge_model,
+            'session_strategy': self.config.session_strategy.value if hasattr(self.config.session_strategy, 'value') else str(self.config.session_strategy),
+            'temperature': self.config.temperature,
+            'window_size': self.config.window_size,
+        }
+        
         checkpoint = {
             'completed_sessions': list(completed_sessions),
             'progress': progress,
+            'config': config_dict,
             'timestamp': datetime.now().isoformat()
         }
         
@@ -519,4 +542,11 @@ class AnnotationOrchestrator:
     def is_stopped(self) -> bool:
         """Check if the job was stopped"""
         return self.progress['status'] == 'stopped'
+    
+    def reset_stop_flag(self):
+        """Reset the stop flag when resuming a job"""
+        self.progress['stop_requested'] = False
+        if self.progress['status'] == 'stopped':
+            self.progress['status'] = 'processing'
+        print(f"[INFO] Stop flag reset, job ready to resume")
 

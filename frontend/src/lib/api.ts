@@ -105,6 +105,13 @@ class ApiClient {
     return this.client.post(`/annotations/job/${jobId}/stop`)
   }
 
+  async resumeJob(jobId: string, datasetId?: string, llmConfig?: any) {
+    return this.client.post(`/annotations/job/${jobId}/resume`, {
+      dataset_id: datasetId,
+      llm_config: llmConfig
+    })
+  }
+
   async getDefaultConfig() {
     return this.client.get('/annotations/config/default')
   }

@@ -268,6 +268,27 @@ class AnnotationService:
             orchestrator = self.active_jobs[job_id]
             progress = orchestrator.get_progress()
             
+            # Get completed session IDs from checkpoint if available
+            checkpoint_path = self.checkpoint_dir / f"{job_id}_checkpoint.json"
+            completed_session_ids = []
+            if checkpoint_path.exists():
+                try:
+                    with open(checkpoint_path, 'r') as f:
+                        checkpoint = json.load(f)
+                        completed_session_ids = checkpoint.get('completed_sessions', [])
+                except Exception:
+                    pass
+            
+            # Check if checkpoint has saved config
+            has_saved_config = False
+            if checkpoint_path.exists():
+                try:
+                    with open(checkpoint_path, 'r') as f:
+                        checkpoint_data = json.load(f)
+                        has_saved_config = 'config' in checkpoint_data and checkpoint_data['config']
+                except Exception:
+                    pass
+            
             status_response = {
                 "job_id": job_id,
                 "status": progress['status'],
@@ -281,8 +302,10 @@ class AnnotationService:
                 "errors": progress['errors'],
                 "stop_requested": progress.get('stop_requested', False),
                 "session_ids": getattr(orchestrator, 'session_ids', []),
+                "completed_session_ids": completed_session_ids,  # List of completed session IDs
                 "flagged_sessions": progress.get('flagged_sessions', []),
                 "session_event_counts": getattr(orchestrator, 'session_event_counts', {}),
+                "has_saved_config": has_saved_config,  # Whether checkpoint has LLM config
                 # Diagnostics for disagreement model
                 "disagreement_model": {
                     "loaded": getattr(orchestrator, 'similarity_model_loaded', False),
@@ -306,19 +329,41 @@ class AnnotationService:
                 job_dir = self.output_dir / job_id
                 summary_files = list(job_dir.glob('*_summary.json')) if job_dir.exists() else []
                 
-                # Determine status
+                # Try to get full session list from dataset
+                all_session_ids = []
+                for did, dataset in self.uploaded_datasets.items():
+                    if 'job_sessions' in dataset:
+                        # Check if this is the right dataset
+                        dataset_sessions = dataset.get('job_sessions', [])
+                        if any(sid in completed_sessions for sid in dataset_sessions[:5]):
+                            all_session_ids = dataset_sessions
+                            break
+                
+                # If we couldn't find the dataset, use completed sessions as fallback
+                if not all_session_ids:
+                    all_session_ids = completed_sessions
+                
+                # Determine status based on whether all sessions are done
                 if summary_files:
-                    # Job completed, load summary for more info
+                    # Check summary for actual completion status
                     with open(summary_files[0], 'r') as f:
                         summary = json.load(f)
-                    status = 'completed'
-                    total_sessions = summary.get('total_sessions', len(completed_sessions))
+                    total_sessions = summary.get('total_sessions', len(all_session_ids))
                     flagged_sessions = summary.get('flagged_sessions', progress.get('flagged_sessions', []))
+                    
+                    # Check if truly completed (all sessions done)
+                    if len(completed_sessions) >= total_sessions:
+                        status = 'completed'
+                    else:
+                        status = 'stopped'  # Paused with remaining sessions
                 else:
                     # Job was stopped or is incomplete
                     status = progress.get('status', 'stopped')
-                    total_sessions = progress.get('total_sessions', len(completed_sessions))
+                    total_sessions = progress.get('total_sessions', len(all_session_ids))
                     flagged_sessions = progress.get('flagged_sessions', [])
+                
+                # Check if checkpoint has saved config
+                has_saved_config = 'config' in checkpoint and checkpoint['config']
                 
                 status_response = {
                     "job_id": job_id,
@@ -332,9 +377,11 @@ class AnnotationService:
                     ),
                     "errors": progress.get('errors', []),
                     "stop_requested": False,
-                    "session_ids": completed_sessions,
+                    "session_ids": all_session_ids,  # Full list of all sessions
+                    "completed_session_ids": completed_sessions,  # List of completed session IDs
                     "flagged_sessions": flagged_sessions,
                     "session_event_counts": {},
+                    "has_saved_config": has_saved_config,  # Whether checkpoint has LLM config
                     "disagreement_model": {
                         "loaded": False,
                         "error": None
@@ -380,4 +427,158 @@ class AnnotationService:
             "job_id": job_id,
             "status": "stop_requested",
             "message": "Stop request sent. The job will complete the current session and then stop."
+        }
+    
+    async def resume_job(
+        self, 
+        job_id: str, 
+        dataset_id: Optional[str] = None,
+        llm_config_dict: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Resume a paused or stopped job from checkpoint"""
+        
+        # Check if job is already running
+        if job_id in self.active_jobs:
+            orchestrator = self.active_jobs[job_id]
+            progress = orchestrator.get_progress()
+            if progress['status'] not in ['stopped', 'idle']:
+                raise ValueError(f"Job {job_id} is already running")
+        
+        # Check for checkpoint
+        checkpoint_path = self.checkpoint_dir / f"{job_id}_checkpoint.json"
+        if not checkpoint_path.exists():
+            raise ValueError(f"No checkpoint found for job {job_id}")
+        
+        # Load checkpoint to get job details
+        with open(checkpoint_path, 'r') as f:
+            checkpoint = json.load(f)
+        
+        # Find the dataset and config for this job
+        # Look for summary file to get dataset info
+        job_dir = self.output_dir / job_id
+        summary_files = list(job_dir.glob('*_summary.json')) if job_dir.exists() else []
+        
+        if not summary_files:
+            raise ValueError(f"Cannot resume job {job_id}: missing job metadata")
+        
+        with open(summary_files[0], 'r') as f:
+            summary = json.load(f)
+        
+        dataset_name = summary.get('dataset_name', 'dataset')
+        
+        # If dataset_id provided, use it; otherwise try to find the original dataset
+        if not dataset_id:
+            # Look through uploaded datasets for matching sessions
+            for did, dataset in self.uploaded_datasets.items():
+                if 'job_sessions' in dataset:
+                    # Check if this might be the right dataset by comparing session IDs
+                    sessions = dataset['parsed_data']['sessions']
+                    session_ids = [s['session_id'] for s in sessions]
+                    completed_sessions = set(checkpoint.get('completed_sessions', []))
+                    
+                    # If some of the completed sessions match, this is likely our dataset
+                    if any(sid in completed_sessions for sid in session_ids[:5]):  # Check first 5
+                        dataset_id = did
+                        break
+        
+        if not dataset_id:
+            raise ValueError(
+                f"Cannot resume job {job_id}: original dataset not found. "
+                "Please re-upload the dataset and provide dataset_id when resuming."
+            )
+        
+        if dataset_id not in self.uploaded_datasets:
+            raise ValueError(f"Dataset {dataset_id} not found. Please upload the dataset first.")
+        
+        # Get or create LLM config
+        from app.services.llm_agents import SessionHandlingStrategy
+        
+        # First, try to load config from checkpoint
+        saved_config = checkpoint.get('config', {})
+        
+        if llm_config_dict:
+            # Use provided config (override)
+            config = LLMConfig(
+                analyst_model=llm_config_dict.get('analyst_model', 'claude-3-5-sonnet-20241022'),
+                critic_model=llm_config_dict.get('critic_model', 'gpt-4o'),
+                judge_model=llm_config_dict.get('judge_model', 'gpt-4o'),
+                anthropic_api_key=llm_config_dict.get('anthropic_api_key'),
+                openai_api_key=llm_config_dict.get('openai_api_key'),
+                google_api_key=llm_config_dict.get('google_api_key'),
+                mistral_api_key=llm_config_dict.get('mistral_api_key'),
+                ollama_base_url=llm_config_dict.get('ollama_base_url', 'http://localhost:11434'),
+                custom_endpoints=llm_config_dict.get('custom_endpoints'),  # Include custom endpoints!
+                enable_fallback=llm_config_dict.get('enable_fallback', False),
+                fallback_analyst_model=llm_config_dict.get('fallback_analyst_model', 'gpt-4o-mini'),
+                fallback_critic_model=llm_config_dict.get('fallback_critic_model', 'gpt-4o-mini'),
+                fallback_judge_model=llm_config_dict.get('fallback_judge_model', 'gpt-4o-mini'),
+                session_strategy=SessionHandlingStrategy(llm_config_dict.get('session_strategy', 'truncate')),
+                temperature=llm_config_dict.get('temperature', 0.7),
+                window_size=llm_config_dict.get('window_size', 30),
+            )
+            print(f"[RESUME] Using provided LLM config")
+            if llm_config_dict.get('custom_endpoints'):
+                print(f"[RESUME] Using {len(llm_config_dict.get('custom_endpoints', []))} custom endpoints")
+        elif saved_config:
+            # Restore from checkpoint
+            config = LLMConfig(
+                analyst_model=saved_config.get('analyst_model', 'claude-3-5-sonnet-20241022'),
+                critic_model=saved_config.get('critic_model', 'gpt-4o'),
+                judge_model=saved_config.get('judge_model', 'gpt-4o'),
+                anthropic_api_key=saved_config.get('anthropic_api_key'),
+                openai_api_key=saved_config.get('openai_api_key'),
+                google_api_key=saved_config.get('google_api_key'),
+                mistral_api_key=saved_config.get('mistral_api_key'),
+                ollama_base_url=saved_config.get('ollama_base_url', 'http://localhost:11434'),
+                custom_endpoints=saved_config.get('custom_endpoints'),  # Restore custom endpoints!
+                enable_fallback=saved_config.get('enable_fallback', False),
+                fallback_analyst_model=saved_config.get('fallback_analyst_model', 'gpt-4o-mini'),
+                fallback_critic_model=saved_config.get('fallback_critic_model', 'gpt-4o-mini'),
+                fallback_judge_model=saved_config.get('fallback_judge_model', 'gpt-4o-mini'),
+                session_strategy=SessionHandlingStrategy(saved_config.get('session_strategy', 'truncate')),
+                temperature=saved_config.get('temperature', 0.7),
+                window_size=saved_config.get('window_size', 30),
+            )
+            print(f"[RESUME] Restored LLM config from checkpoint: {saved_config.get('analyst_model')}, {saved_config.get('critic_model')}, {saved_config.get('judge_model')}")
+            if saved_config.get('custom_endpoints'):
+                print(f"[RESUME] Restored {len(saved_config.get('custom_endpoints', []))} custom endpoints")
+        else:
+            # Fallback to defaults (should not happen for newer jobs)
+            print(f"[RESUME] WARNING: No config in checkpoint, using defaults")
+            config = LLMConfig(
+                analyst_model='claude-3-5-sonnet-20241022',
+                critic_model='gpt-4o',
+                judge_model='gpt-4o',
+                session_strategy=SessionHandlingStrategy('truncate'),
+            )
+        
+        # Create new orchestrator
+        orchestrator = AnnotationOrchestrator(config)
+        self.active_jobs[job_id] = orchestrator
+        
+        # Reset stop flag using the proper method
+        orchestrator.reset_stop_flag()
+        
+        # Get sessions from dataset
+        dataset = self.uploaded_datasets[dataset_id]
+        sessions = dataset['parsed_data']['sessions']
+        session_ids = [s['session_id'] for s in sessions]
+        
+        # Store session list
+        orchestrator.session_ids = session_ids
+        
+        # Start annotation in background thread
+        def _run_annotation():
+            asyncio.run(orchestrator.annotate_dataset(sessions, job_id, dataset_name))
+        
+        thread = threading.Thread(target=_run_annotation, daemon=True)
+        thread.start()
+        
+        return {
+            'job_id': job_id,
+            'status': 'resumed',
+            'message': 'Job resumed from checkpoint',
+            'total_sessions': len(sessions),
+            'completed_sessions': len(checkpoint.get('completed_sessions', [])),
+            'session_ids': session_ids
         }

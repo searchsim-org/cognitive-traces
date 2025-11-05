@@ -146,6 +146,32 @@ async def stop_job(job_id: str):
         raise HTTPException(status_code=404, detail=str(e))
 
 
+class ResumeJobRequest(BaseModel):
+    """Request to resume an annotation job"""
+    dataset_id: Optional[str] = None
+    llm_config: Optional[LLMConfigSchema] = None
+
+
+@router.post("/job/{job_id}/resume")
+async def resume_job(job_id: str, request: Optional[ResumeJobRequest] = None):
+    """
+    Resume a paused or stopped annotation job from its checkpoint.
+    
+    If the original dataset is not in memory, you can provide:
+    - dataset_id: ID from a freshly uploaded dataset
+    - llm_config: LLM configuration to use (optional, will use default if not provided)
+    
+    The job will continue processing remaining sessions from where it left off.
+    """
+    try:
+        dataset_id = request.dataset_id if request else None
+        llm_config = request.llm_config.model_dump() if request and request.llm_config else None
+        result = await annotation_service.resume_job(job_id, dataset_id, llm_config)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
 @router.get("/config/default")
 async def get_default_config():
     """

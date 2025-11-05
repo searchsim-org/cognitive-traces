@@ -182,17 +182,13 @@ class LLMConfig:
         """
         Apply session handling strategy to events
         
-        Returns: Processed events list
+        For sliding window: Returns ALL events (windowing happens in prompt building)
+        For other strategies: Returns all events as-is
+        
+        Returns: Processed events list (always full list)
         """
-        if self.session_strategy == SessionHandlingStrategy.SLIDING_WINDOW:
-            # Use only the last N events
-            return events[-self.window_size:] if len(events) > self.window_size else events
-        elif self.session_strategy == SessionHandlingStrategy.FULL:
-            # Return all events
-            return events
-        else:  # TRUNCATE
-            # Return all events (truncation happens in prompt building)
-            return events
+        # Always return all events - windowing is handled at prompt level
+        return events
     
     def calculate_max_tokens(self, num_events: int, model_id: str) -> int:
         """
@@ -421,8 +417,8 @@ class UniversalLLMClient:
     
     async def _generate_anthropic(self, model: str, prompt: str, max_tokens: int, temperature: float) -> str:
         """Generate using Anthropic Claude"""
-        client = anthropic.Anthropic(api_key=self.config.anthropic_api_key)
-        message = client.messages.create(
+        client = anthropic.AsyncAnthropic(api_key=self.config.anthropic_api_key)
+        message = await client.messages.create(
             model=model,
             max_tokens=max_tokens,
             temperature=temperature,
@@ -651,6 +647,21 @@ class AnalystAgent:
         # Get truncation limits from config
         content_limit, _ = self.config.get_truncation_limits(len(session_events))
         
+        # Build sliding window instruction if applicable
+        sliding_window_note = ""
+        if self.config.session_strategy == SessionHandlingStrategy.SLIDING_WINDOW and len(session_events) > self.config.window_size:
+            sliding_window_note = f"""
+## Important - Sliding Window Context:
+When analyzing each event, only consider the previous {self.config.window_size} events as context.
+For example:
+- Event 1-{self.config.window_size}: Consider all previous events
+- Event {self.config.window_size + 1}: Only consider events 1-{self.config.window_size + 1}  
+- Event {self.config.window_size + 2}: Only consider events 2-{self.config.window_size + 2}
+- Event N: Only consider events (N-{self.config.window_size})-N
+
+This sliding window helps you focus on recent context while still annotating ALL {len(session_events)} events.
+"""
+        
         events_str = ""
         for i, event in enumerate(session_events, 1):
             events_str += f"\nEvent {i}:\n"
@@ -662,7 +673,7 @@ class AnalystAgent:
         return f"""You are an expert behavioral analyst specializing in Information Foraging Theory. Your task is to analyze user behavior and assign cognitive labels to each event in the session.
 
 {LABEL_SCHEMA}
-
+{sliding_window_note}
 ## Session to Analyze:
 {events_str}
 
@@ -685,7 +696,7 @@ Return a JSON array with one object per event:
 ]
 ```
 
-Provide ONLY the JSON array, no additional text.
+Provide ONLY the JSON array, no additional text. MUST include all {len(session_events)} events in your response.
 """
     
     def _parse_response(self, response: str, session_events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -730,13 +741,12 @@ class CriticAgent:
     ) -> Dict[str, Any]:
         """Review analyst's decisions and propose alternatives if needed"""
         
-        # Apply session handling strategy
+        # Apply session handling strategy (now returns all events)
         processed_events = self.config.apply_session_strategy(session_events)
         
-        # Match decisions to processed events
-        if len(processed_events) < len(session_events):
-            # Windowed - take last N decisions
-            analyst_decisions = analyst_decisions[-len(processed_events):]
+        # Decisions should match events 1:1 now
+        if len(analyst_decisions) != len(processed_events):
+            print(f"[WARN] Mismatch: {len(analyst_decisions)} decisions for {len(processed_events)} events")
         
         prompt = self._build_prompt(processed_events, analyst_decisions)
         
@@ -789,6 +799,16 @@ class CriticAgent:
         # Get truncation limits from config
         content_limit, reasoning_limit = self.config.get_truncation_limits(len(session_events))
         
+        # Build sliding window instruction if applicable
+        sliding_window_note = ""
+        if self.config.session_strategy == SessionHandlingStrategy.SLIDING_WINDOW and len(session_events) > self.config.window_size:
+            sliding_window_note = f"""
+## Important - Sliding Window Context:
+When reviewing each event, only consider the previous {self.config.window_size} events as context.
+Apply the same windowing logic as the Analyst to ensure consistency.
+You must still review ALL {len(session_events)} events.
+"""
+        
         analysis_str = ""
         for i, (event, decision) in enumerate(zip(session_events, analyst_decisions), 1):
             analysis_str += f"\nEvent {i}:\n"
@@ -800,7 +820,7 @@ class CriticAgent:
         return f"""You are a critical reviewer specializing in Information Foraging Theory. Your role is to challenge and review the Analyst's cognitive label assignments.
 
 {LABEL_SCHEMA}
-
+{sliding_window_note}
 ## Analyst's Analysis:
 {analysis_str}
 
@@ -824,7 +844,7 @@ Be thorough and question assumptions. Look for alternative explanations.
 ]
 ```
 
-Provide ONLY the JSON array, no additional text.
+Provide ONLY the JSON array, no additional text. MUST include all {len(session_events)} events in your response.
 """
     
     def _parse_response(
@@ -935,6 +955,15 @@ class JudgeAgent:
         # Get truncation limits from config
         content_limit, reasoning_limit = self.config.get_truncation_limits(len(session_events))
         
+        # Build sliding window instruction if applicable
+        sliding_window_note = ""
+        if self.config.session_strategy == SessionHandlingStrategy.SLIDING_WINDOW and len(session_events) > self.config.window_size:
+            sliding_window_note = f"""
+## Important - Sliding Window Context:
+When making final decisions for each event, apply the same sliding window context of {self.config.window_size} events.
+You must still decide on ALL {len(session_events)} events.
+"""
+        
         deliberation_str = ""
         for i, (event, analyst, critic) in enumerate(
             zip(session_events, analyst_decisions, critic_decisions), 1
@@ -950,7 +979,7 @@ class JudgeAgent:
         return f"""You are the final arbiter in a multi-agent cognitive labeling system. Your role is to synthesize the Analyst's and Critic's perspectives and make the final decision.
 
 {LABEL_SCHEMA}
-
+{sliding_window_note}
 ## Agent Deliberations:
 {deliberation_str}
 
@@ -975,7 +1004,7 @@ For EACH event, provide:
 ]
 ```
 
-Provide ONLY the JSON array, no additional text.
+Provide ONLY the JSON array, no additional text. MUST include all {len(session_events)} events in your response.
 """
     
     def _parse_response(self, response: str, fallback_decisions: Optional[List[Dict[str, Any]]] = None) -> List[Dict[str, Any]]:

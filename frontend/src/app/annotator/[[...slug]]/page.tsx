@@ -62,6 +62,7 @@ function AnnotatorContent() {
   const [sessionIds, setSessionIds] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [flaggedSessionsCount, setFlaggedSessionsCount] = useState<number>(0)
+  const [isCheckingJobStatus, setIsCheckingJobStatus] = useState(false)
 
   // Restore dataset metadata from localStorage on mount
   useEffect(() => {
@@ -83,6 +84,60 @@ function AnnotatorContent() {
       }
     }
   }, [])
+
+  // Check for existing job status when returning to annotation page with jobId
+  useEffect(() => {
+    const checkExistingJob = async () => {
+      // Only check if we have a jobId in URL and we're on annotate step
+      if (urlJobId && urlStep === 'annotate' && !isCheckingJobStatus) {
+        setIsCheckingJobStatus(true)
+        try {
+          console.log('[Annotator] Checking status for existing job:', urlJobId)
+          const response = await api.getJobStatus(urlJobId)
+          const status = response.data
+          
+          console.log('[Annotator] Job status:', status.status, `Completed: ${status.completed_sessions}/${status.total_sessions}`)
+          
+          // Update state with job info
+          setJobId(urlJobId)
+          setSessionIds(status.session_ids || [])
+          
+          // Set a dummy config to allow the page to function
+          setLLMConfig({ exists: true })
+          
+          // Check if annotation is truly finished (all sessions completed)
+          const hasRemainingSessions = status.completed_sessions < status.total_sessions
+          
+          // Only redirect if ALL sessions are complete AND job is finished
+          if (status.status === 'completed' && !hasRemainingSessions) {
+            const flaggedCount = status.flagged_sessions?.length || 0
+            setFlaggedSessionsCount(flaggedCount)
+            
+            console.log('[Annotator] Job fully completed, redirecting to resolve/complete')
+            if (flaggedCount > 0) {
+              updateStep('resolve')
+            } else {
+              updateStep('complete')
+            }
+          } else {
+            // Stay on annotate page - job is incomplete, paused, or in progress
+            console.log('[Annotator] Job has remaining sessions or is in progress, staying on annotate page')
+          }
+        } catch (error: any) {
+          console.error('[Annotator] Failed to check job status:', error)
+          // If job not found, redirect to upload
+          if (error.response?.status === 404) {
+            toast.error('Job not found. Please start a new annotation.')
+            updateStep('upload', null)
+          }
+        } finally {
+          setIsCheckingJobStatus(false)
+        }
+      }
+    }
+    
+    checkExistingJob()
+  }, [urlJobId, urlStep]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Save only dataset metadata to localStorage (not full sessions data)
   useEffect(() => {
@@ -338,49 +393,46 @@ function AnnotatorContent() {
             )}
 
             {/* Step 4: Annotation Progress */}
-            {currentStep === 'annotate' && jobId && uploadedDataset && (
-              <ProgressTracker
-                jobId={jobId}
-                totalSessions={uploadedDataset.total_sessions}
-                sessionIds={sessionIds}
-                onComplete={async () => {
-                  // Check if there are flagged sessions
-                  try {
-                    const response = await api.getJobStatus(jobId)
-                    const flaggedCount = response.data.flagged_sessions?.length || 0
-                    setFlaggedSessionsCount(flaggedCount)
-                    
-                    // Skip resolve step if no flagged sessions
-                    if (flaggedCount === 0) {
-                      toast.success('No sessions flagged for review. Proceeding to completion!')
-                      updateStep('complete')
-                    } else {
-                      updateStep('resolve')
-                    }
-                  } catch (error) {
-                    // Fallback to resolve step on error
-                    updateStep('resolve')
-                  }
-                }}
-                onStopped={async () => {
-                  // Check if there are flagged sessions
-                  try {
-                    const response = await api.getJobStatus(jobId)
-                    const flaggedCount = response.data.flagged_sessions?.length || 0
-                    setFlaggedSessionsCount(flaggedCount)
-                    
-                    // Skip resolve step if no flagged sessions
-                    if (flaggedCount === 0) {
-                      updateStep('complete')
-                    } else {
-                      updateStep('resolve')
-                    }
-                  } catch (error) {
-                    // Fallback to resolve step on error
-                    updateStep('resolve')
-                  }
-                }}
-              />
+            {currentStep === 'annotate' && jobId && (
+              <>
+                {isCheckingJobStatus ? (
+                  <div className="text-center py-12">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                    <p className="text-gray-600">Loading job status...</p>
+                  </div>
+                ) : (
+                  <ProgressTracker
+                    jobId={jobId}
+                    totalSessions={uploadedDataset?.total_sessions || sessionIds.length}
+                    sessionIds={sessionIds}
+                    llmConfig={llmConfig}
+                    onComplete={async () => {
+                      // Check if there are flagged sessions
+                      try {
+                        const response = await api.getJobStatus(jobId)
+                        const flaggedCount = response.data.flagged_sessions?.length || 0
+                        setFlaggedSessionsCount(flaggedCount)
+                        
+                        // Skip resolve step if no flagged sessions
+                        if (flaggedCount === 0) {
+                          toast.success('No sessions flagged for review. Proceeding to completion!')
+                          updateStep('complete')
+                        } else {
+                          updateStep('resolve')
+                        }
+                      } catch (error) {
+                        // Fallback to resolve step on error
+                        updateStep('resolve')
+                      }
+                    }}
+                    onStopped={async () => {
+                      // When job is paused, just stay on this page
+                      // User can resume or navigate away
+                      toast.success('Job paused. You can resume anytime by returning to this page.')
+                    }}
+                  />
+                )}
+              </>
             )}
 
             {/* Step 5: Resolve Flags */}

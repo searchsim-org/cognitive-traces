@@ -4,11 +4,15 @@ import { useState, useEffect } from 'react'
 import { CheckCircle2, XCircle, Loader2, FileText, AlertTriangle, Eye, X } from 'lucide-react'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
+import dynamic from 'next/dynamic'
+
+const LLMConfigPanel = dynamic(() => import('@/components/annotator/LLMConfigPanel').then(mod => ({ default: mod.LLMConfigPanel })), { ssr: false })
 
 interface ProgressTrackerProps {
   jobId: string
   totalSessions: number
   sessionIds: string[]
+  llmConfig?: any
   onComplete: () => void
   onStopped?: () => void
 }
@@ -19,7 +23,7 @@ interface SessionStatus {
   progress?: number
 }
 
-export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionIds, onComplete, onStopped }: ProgressTrackerProps) {
+export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionIds, llmConfig, onComplete, onStopped }: ProgressTrackerProps) {
   const [jobStatus, setJobStatus] = useState<any>(null)
   const [sessionLogs, setSessionLogs] = useState<Map<string, any>>(new Map())
   const [selectedLog, setSelectedLog] = useState<any | null>(null)
@@ -28,6 +32,13 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
   const [isStopRequested, setIsStopRequested] = useState(false)
   const [showStopConfirm, setShowStopConfirm] = useState(false)
   const [dismissedErrors, setDismissedErrors] = useState(false)
+  const [isResuming, setIsResuming] = useState(false)
+  const [showReuploadModal, setShowReuploadModal] = useState(false)
+  const [reuploadFile, setReuploadFile] = useState<File | null>(null)
+  const [isUploading, setIsUploading] = useState(false)
+  const [showReconfigureModal, setShowReconfigureModal] = useState(false)
+  const [reconfigureLlmConfig, setReconfigureLlmConfig] = useState<any>(null)
+  const [needsReconfigure, setNeedsReconfigure] = useState(false)
   
   // Use session IDs from job status if available, otherwise use prop
   const sessionIds = jobStatus?.session_ids || propSessionIds
@@ -44,11 +55,25 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
         console.log('[ProgressTracker] Status:', status.status, `${status.completed_sessions}/${status.total_sessions}`, `Sessions: ${status.session_ids?.length || 0}`)
         setJobStatus(status)
 
+        // Check if checkpoint has saved config
+        if (status.has_saved_config === false) {
+          setNeedsReconfigure(true)
+        }
+
+        // If job is processing and we were resuming, clear resuming state
+        if ((status.status === 'processing' || status.status.startsWith('processing')) && isResuming) {
+          setIsResuming(false)
+        }
+
+        // Check if all sessions are truly completed
+        const hasRemainingSessions = status.completed_sessions < status.total_sessions
+        const isFullyCompleted = status.status === 'completed' && !hasRemainingSessions
+
         // Stop polling if completed, stopped, or failed
-        if (status.status === 'completed' || status.status === 'stopped' || status.status === 'failed') {
+        if (isFullyCompleted || status.status === 'stopped' || status.status === 'failed') {
           setIsPolling(false)
           
-          if (status.status === 'completed') {
+          if (isFullyCompleted) {
             const hasFlaggedSessions = status.flagged_sessions && status.flagged_sessions.length > 0
             if (hasFlaggedSessions) {
               toast.success('All sessions annotated successfully! Review flagged sessions.')
@@ -57,7 +82,7 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
             }
             setTimeout(() => onComplete(), 2000)
           } else if (status.status === 'stopped') {
-            toast.success('Job stopped successfully. Progress saved via checkpoint.')
+            toast.success('Job paused successfully. Progress saved via checkpoint.')
             if (onStopped) {
               setTimeout(() => onStopped(), 2000)
             }
@@ -84,20 +109,92 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
     const pollInterval = setInterval(fetchStatus, 2000) // Poll every 2 seconds
 
     return () => clearInterval(pollInterval)
-  }, [jobId, isPolling, onComplete, onStopped])
+  }, [jobId, isPolling, isResuming, onComplete, onStopped])
 
-  // Stop job
+  // Stop job (pause)
   const handleStopJob = async () => {
     setIsStopRequested(true)
-    toast.loading('Requesting stop...', { id: 'stop' })
+    toast.loading('Requesting pause...', { id: 'stop' })
 
     try {
       await api.stopJob(jobId)
-      toast.success('Stop requested. Job will finish current session and stop.', { id: 'stop' })
+      toast.success('Pause requested. Job will finish current session and pause.', { id: 'stop' })
     } catch (error: any) {
-      toast.error('Failed to stop job', { id: 'stop' })
+      toast.error('Failed to pause job', { id: 'stop' })
       setIsStopRequested(false)
     }
+  }
+
+  // Resume job
+  const handleResumeJob = async () => {
+    setIsResuming(true)
+    toast.loading('Resuming annotation...', { id: 'resume' })
+
+    try {
+      await api.resumeJob(jobId)
+      toast.success('Job resumed successfully!', { id: 'resume' })
+      setIsPolling(true)  // Re-enable polling
+      setIsStopRequested(false)
+    } catch (error: any) {
+      const errorMsg = error.response?.data?.detail || 'Failed to resume job'
+      
+      // Check if error is about missing dataset
+      if (errorMsg.includes('dataset not found') || errorMsg.includes('re-upload')) {
+        toast.error('Dataset not found. Please re-upload to resume.', { id: 'resume' })
+        setShowReuploadModal(true)
+      } else {
+        toast.error(errorMsg, { id: 'resume' })
+      }
+      setIsResuming(false)
+    }
+  }
+
+  // Handle re-upload and resume
+  const handleReuploadAndResume = async () => {
+    if (!reuploadFile) {
+      toast.error('Please select a file')
+      return
+    }
+
+    setIsUploading(true)
+    try {
+      // Upload dataset
+      toast.loading('Uploading dataset...', { id: 'reupload' })
+      const uploadResponse = await api.uploadDataset(reuploadFile, 'custom')
+      const datasetId = uploadResponse.data.dataset_id
+      
+      // Determine which config to use: reconfigured or original
+      const configToUse = reconfigureLlmConfig || llmConfig
+      
+      // Resume with the uploaded dataset and LLM config (if available)
+      toast.loading('Resuming with uploaded dataset...', { id: 'reupload' })
+      await api.resumeJob(jobId, datasetId, configToUse)
+      
+      toast.success('Job resumed successfully!', { id: 'reupload' })
+      setShowReuploadModal(false)
+      setReuploadFile(null)
+      setReconfigureLlmConfig(null)  // Clear reconfigured config after use
+      setIsPolling(true)
+      setIsStopRequested(false)
+      setIsResuming(false)
+    } catch (error: any) {
+      toast.error(error.response?.data?.detail || 'Failed to resume job', { id: 'reupload' })
+    } finally {
+      setIsUploading(false)
+    }
+  }
+
+  // Handle reconfigure - save config and open re-upload modal
+  const handleReconfigureAndResume = () => {
+    if (!reconfigureLlmConfig) {
+      toast.error('Please complete the configuration')
+      return
+    }
+
+    // Close config modal and open re-upload modal
+    setShowReconfigureModal(false)
+    setShowReuploadModal(true)
+    toast.success('Configuration saved. Now upload the dataset to resume.')
   }
 
   // Load session log
@@ -125,12 +222,20 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
   const progressPercentage = jobStatus?.progress_percentage || 0
   const completedSessions = jobStatus?.completed_sessions || 0
   const eventCounts: Record<string, number> = jobStatus?.session_event_counts || {}
+  const completedSessionIds = new Set(jobStatus?.completed_session_ids || [])
+  
+  // Check if all sessions are truly completed
+  const hasRemainingSessions = jobStatus ? (jobStatus.completed_sessions < jobStatus.total_sessions) : false
+  const isFullyCompleted = jobStatus?.status === 'completed' && !hasRemainingSessions
+  
+  // Terminal means the job cannot be resumed (fully completed or failed)
   const isTerminal = jobStatus ? (
-    jobStatus.status === 'completed' ||
-    jobStatus.status === 'stopped' ||
-    jobStatus.status === 'failed' ||
-    jobStatus.status === 'idle'
+    isFullyCompleted ||
+    jobStatus.status === 'failed'
   ) : false
+  
+  // Job is paused if stopped but has remaining sessions
+  const isPaused = jobStatus?.status === 'stopped' && hasRemainingSessions
 
   return (
     <div className="space-y-6">
@@ -143,19 +248,49 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
               Processing {totalSessions} sessions with multi-agent framework
             </p>
           </div>
-          {!isTerminal && !isStopRequested && (
+          {/* Show Pause button when job is actively running */}
+          {!isTerminal && !isPaused && !isStopRequested && !isResuming && (
             <button
               onClick={() => setShowStopConfirm(true)}
-              className="px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 font-medium flex items-center gap-2 transition-colors"
+              className="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-700 font-medium flex items-center gap-2 transition-colors"
             >
               <XCircle className="w-5 h-5" />
-              Stop Job
+              Pause Job
             </button>
           )}
-          {isStopRequested && (
+          {/* Show Pausing status */}
+          {isStopRequested && !isPaused && (
             <div className="px-6 py-3 bg-orange-100 text-orange-800 rounded-xl font-medium flex items-center gap-2">
               <Loader2 className="w-5 h-5 animate-spin" />
-              Stopping...
+              Pausing...
+            </div>
+          )}
+          {/* Show Resume buttons when job is paused */}
+          {isPaused && !isResuming && (
+            <div className="flex items-center gap-3">
+              {/* Only show reconfigure button if checkpoint has no saved config */}
+              {needsReconfigure && (
+                <button
+                  onClick={() => setShowReconfigureModal(true)}
+                  className="px-4 py-2 border border-orange-300 text-orange-700 bg-orange-50 rounded-xl hover:bg-orange-100 font-medium transition-colors"
+                >
+                  Reconfigure & Resume
+                </button>
+              )}
+              <button
+                onClick={handleResumeJob}
+                className="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 font-medium flex items-center gap-2 transition-colors"
+              >
+                <CheckCircle2 className="w-5 h-5" />
+                Resume Job
+              </button>
+            </div>
+          )}
+          {/* Show Resuming status */}
+          {isResuming && (
+            <div className="px-6 py-3 bg-green-100 text-green-800 rounded-xl font-medium flex items-center gap-2">
+              <Loader2 className="w-5 h-5 animate-spin" />
+              Resuming...
             </div>
           )}
         </div>
@@ -206,16 +341,16 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
           </div>
         )}
 
-        {/* Stopped Status */}
-        {jobStatus?.status === 'stopped' && (
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 flex items-center gap-3">
-            <AlertTriangle className="w-5 h-5 text-orange-600 flex-shrink-0" />
-            <div>
-              <div className="font-medium text-orange-900">
-                Job Stopped
+        {/* Paused/Stopped Status */}
+        {isPaused && !isResuming && (
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center gap-3">
+            <AlertTriangle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+            <div className="flex-1">
+              <div className="font-medium text-blue-900">
+                Job Paused ({completedSessions}/{totalSessions} sessions completed)
               </div>
-              <div className="text-sm text-orange-700">
-                Progress has been saved. You can resume this job later by uploading the same dataset with the same name.
+              <div className="text-sm text-blue-700">
+                Progress has been saved via checkpoint. Click &quot;Resume Job&quot; to continue from where you left off.
               </div>
             </div>
           </div>
@@ -245,8 +380,13 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
       {/* Session List with Logs */}
       <div className="bg-white rounded-3xl border border-gray-200 p-8">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-bold text-gray-900">Session Details</h3>
-          <span className="text-sm text-gray-500">Click to view agent logs</span>
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">Session Details</h3>
+            <p className="text-sm text-gray-500 mt-1">
+              {completedSessions} completed • {totalSessions - completedSessions} remaining
+            </p>
+          </div>
+          <span className="text-sm text-gray-500">Click completed sessions to view logs</span>
         </div>
 
         <div className="space-y-2 max-h-[400px] overflow-y-auto">
@@ -259,9 +399,9 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
           ) : (
             sessionIds.map((sessionId: any, i: any) => {
             const sessionNum = i + 1
-            const isCompleted = sessionNum <= completedSessions
+            const isCompleted = completedSessionIds.has(sessionId)
             const isCurrent = jobStatus?.current_session === sessionId
-            const isPending = sessionNum > completedSessions + 1
+            const isPending = !isCompleted && !isCurrent
 
             return (
               <div
@@ -287,15 +427,20 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
                       {sessionId}
                       <span className="ml-2 text-xs text-gray-500">({eventCounts[sessionId] || 0} events)</span>
                       {isCurrent && (
-                        <span className="ml-2 text-xs text-blue-600">(processing)</span>
+                        <span className="ml-2 text-xs text-blue-600 font-semibold">(processing)</span>
+                      )}
+                      {isPending && isPaused && (
+                        <span className="ml-2 text-xs text-orange-600 font-semibold">(pending)</span>
                       )}
                     </div>
                     <div className="text-xs text-gray-500">
                       {isCompleted
-                        ? 'Annotation complete'
+                        ? '✓ Annotation complete'
                         : isCurrent
                         ? 'In progress...'
-                        : 'Waiting'}
+                        : isPaused
+                        ? 'Waiting to resume'
+                        : 'Pending'}
                     </div>
                   </div>
                 </div>
@@ -460,14 +605,14 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
         </div>
       )}
 
-      {/* Stop Confirmation Modal */}
+      {/* Pause Confirmation Modal */}
       {showStopConfirm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden">
             <div className="p-6 border-b border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900">Stop Annotation?</h3>
+              <h3 className="text-xl font-bold text-gray-900">Pause Annotation?</h3>
               <p className="mt-2 text-sm text-gray-600">
-                Are you sure you want to stop the annotation job? Progress will be saved and you can resume later.
+                Are you sure you want to pause the annotation job? Progress will be saved via checkpoint and you can resume anytime by returning to this page.
               </p>
             </div>
             <div className="p-6 flex items-center justify-end gap-3">
@@ -482,9 +627,119 @@ export function ProgressTracker({ jobId, totalSessions, sessionIds: propSessionI
                   setShowStopConfirm(false)
                   await handleStopJob()
                 }}
-                className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700"
+                className="px-4 py-2 rounded-lg bg-orange-600 text-white hover:bg-orange-700"
               >
-                Stop Job
+                Pause Job
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Re-upload Dataset Modal */}
+      {showReuploadModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl w-full max-w-lg overflow-hidden">
+            <div className="p-6 border-b border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900">
+                {reconfigureLlmConfig ? 'Upload Dataset with New Config' : 'Re-upload Dataset to Resume'}
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                {reconfigureLlmConfig 
+                  ? 'Upload the same dataset file to resume annotation with your new configuration.'
+                  : 'The original dataset is no longer in memory. Please upload the same dataset file to resume annotation from where you left off.'
+                }
+              </p>
+            </div>
+            <div className="p-6">
+              <label className="block">
+                <span className="text-sm font-medium text-gray-700 mb-2 block">
+                  Select Dataset File (CSV or JSON)
+                </span>
+                <input
+                  type="file"
+                  accept=".csv,.json"
+                  onChange={(e) => setReuploadFile(e.target.files?.[0] || null)}
+                  className="block w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-lg file:border-0
+                    file:text-sm file:font-medium
+                    file:bg-blue-50 file:text-blue-700
+                    hover:file:bg-blue-100
+                    cursor-pointer"
+                />
+              </label>
+              {reuploadFile && (
+                <div className="mt-3 text-sm text-gray-600">
+                  Selected: <span className="font-medium">{reuploadFile.name}</span>
+                </div>
+              )}
+            </div>
+            <div className="p-6 bg-gray-50 flex items-center justify-end gap-3">
+              <button
+                onClick={() => {
+                  setShowReuploadModal(false)
+                  setReuploadFile(null)
+                }}
+                disabled={isUploading}
+                className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleReuploadAndResume}
+                disabled={!reuploadFile || isUploading}
+                className="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {isUploading && <Loader2 className="w-4 h-4 animate-spin" />}
+                {isUploading ? 'Uploading...' : 'Upload & Resume'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Reconfigure LLM Config Modal */}
+      {showReconfigureModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl w-full max-w-6xl my-8 overflow-hidden">
+            <div className="p-6 border-b border-gray-200">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Reconfigure LLM Settings</h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Update your LLM configuration before resuming. The job will continue with these new settings.
+                  </p>
+                </div>
+                <button
+                  onClick={() => setShowReconfigureModal(false)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+            <div className="p-6 max-h-[70vh] overflow-y-auto">
+              <LLMConfigPanel onConfigComplete={(config) => {
+                setReconfigureLlmConfig(config)
+              }} />
+            </div>
+            <div className="p-6 bg-gray-50 flex items-center justify-end gap-3 border-t">
+              <button
+                onClick={() => {
+                  setShowReconfigureModal(false)
+                  setReconfigureLlmConfig(null)
+                }}
+                className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleReconfigureAndResume}
+                disabled={!reconfigureLlmConfig}
+                className="px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+              >
+                Next: Upload Dataset
               </button>
             </div>
           </div>
