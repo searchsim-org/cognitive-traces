@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3508",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:53:11.137800",
+  "events": [
+    {
+      "session_id": "14668_3508",
+      "event_id": "14668_3508_qq-1965",
+      "timestamp": "2006-05-30 07:41:40",
+      "action_type": "QUERY",
+      "content": "mickeys army and navy store",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mickeys army and navy store...' appears to lack enough specificity or clarity, leading to the likelihood that it did not return promising results, indicated by the analysis error. Therefore, it suggests that the user is experiencing poor scent rather than successfully following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9318857908248901,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:53:52.466305"
+    },
+    {
+      "session_id": "14668_3508",
+      "event_id": "14668_3508_qq-1965_serp",
+      "timestamp": "2006-05-30 07:41:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: army navy com army navy store cam o clothing tactical military gear, army navy com army navy store cam o clothing tactical military gear, army navy com army navy store cam o clothing tactical military gear (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, which indicates an unsuccessful exploration of the search results, suggesting a lack of engaging content. This aligns more with the concept of LeavingPatch, as the user did not find satisfactory information and may be on the verge of abandoning their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.968505808711052,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:53:52.466328"
+    },
+    {
+      "session_id": "14668_3508",
+      "event_id": "14668_3508_qq-1965_cd-11426",
+      "timestamp": "2006-05-30 07:41:40",
+      "action_type": "CLICK",
+      "content": "army navy military gear tactical preparedness and more army navy store a roth co exclusive dealer",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which indicates interest in exploring the content further. This action aligns more with ApproachingSource, reflecting an engagement with a promising result rather than simply following a scent. The previous events suggest that the user was not following a successful scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0076359167695046,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:53:52.466335"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.34065294265747,
+      "decisions": [
+        {
+          "event_id": "14668_3508_qq-1965",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3508_qq-1965_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3508_qq-1965_cd-11426",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.662698984146118,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mickeys army and navy store...' appears to lack enough specificity or clarity, leading to the likelihood that it did not return promising results, indicated by the analysis error. Therefore, it suggests that the user is experiencing poor scent rather than successfully following a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not click on any, which indicates an unsuccessful exploration of the search results, suggesting a lack of engaging content. This aligns more with the concept of LeavingPatch, as the user did not find satisfactory information and may be on the verge of abandoning their search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result, which indicates interest in exploring the content further. This action aligns more with ApproachingSource, reflecting an engagement with a promising result rather than simply following a scent. The previous events suggest that the user was not following a successful scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.053908109664917,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0076359167695046
+}

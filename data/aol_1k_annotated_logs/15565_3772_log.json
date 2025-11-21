@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3772",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:43:29.729500",
+  "events": [
+    {
+      "session_id": "15565_3772",
+      "event_id": "15565_3772_qq-2120",
+      "timestamp": "2006-04-17 00:41:05",
+      "action_type": "QUERY",
+      "content": "swimsuits",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'swimsuits...' does not indicate a clear intent or well-formed search. The ellipsis suggests uncertainty or lack of specificity, which aligns more with PoorScent as it implies the user is not confident in the results they will receive.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9439908683300018,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:01.118533"
+    },
+    {
+      "session_id": "15565_3772",
+      "event_id": "15565_3772_qq-2120_serp",
+      "timestamp": "2006-04-17 00:41:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: plus size swimsuits swim shorts swim dresses and cover ups swimsuits just for us, flotation swimwear swim diapers flotation swimsuits, swimsuit magazine com is almost here (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, indicating that the results did not meet their needs or expectations. This aligns with LeavingPatch, as it suggests the user is not finding promising information and may abandon their search after reviewing insufficient options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9501512050628662,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:01.118552"
+    },
+    {
+      "session_id": "15565_3772",
+      "event_id": "15565_3772_qq-2120_cd-11946",
+      "timestamp": "2006-04-17 00:41:05",
+      "action_type": "CLICK",
+      "content": "swimsuits bikinis tank in is swimwear kids bathing suits for men women juniors girls boys swimsuits com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result for 'swimsuits bikinis tank in is swimwear...' indicates an attempt to find specific information based on the title/content viewed. This is better labeled as ApproachingSource, as the user is engaging with a result that appears to be relevant to their inquiry, rather than merely following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9844826281070709,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:01.118559"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.711956024169922,
+      "decisions": [
+        {
+          "event_id": "15565_3772_qq-2120",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3772_qq-2120_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3772_qq-2120_cd-11946",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.359931945800781,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'swimsuits...' does not indicate a clear intent or well-formed search. The ellipsis suggests uncertainty or lack of specificity, which aligns more with PoorScent as it implies the user is not confident in the results they will receive.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not click on any, indicating that the results did not meet their needs or expectations. This aligns with LeavingPatch, as it suggests the user is not finding promising information and may abandon their search after reviewing insufficient options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result for 'swimsuits bikinis tank in is swimwear...' indicates an attempt to find specific information based on the title/content viewed. This is better labeled as ApproachingSource, as the user is engaging with a result that appears to be relevant to their inquiry, rather than merely following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.058487892150879,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9844826281070709
+}

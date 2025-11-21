@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2625",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:46:30.538914",
+  "events": [
+    {
+      "session_id": "10900_2625",
+      "event_id": "10900_2625_qq-437",
+      "timestamp": "2006-03-11 13:54:55",
+      "action_type": "QUERY",
+      "content": "ebay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query that results in an error suggests a lack of promising information scent, indicating that the initial query did not lead to any fruitful results. A FollowingScent label implies a clear intent and direction in the search, which is not evident here due to the invalid character error.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8723228693008422,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:47:05.351197"
+    },
+    {
+      "session_id": "10900_2625",
+      "event_id": "10900_2625_qq-437_serp",
+      "timestamp": "2006-03-11 13:54:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: electronics cars fashion collectibles coupons and more ebay, items for sale by collector crazy king ebay, auction sniper ebay bidding tools go of bid (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any indication of intent or successful engagement suggests that the user did not find adequate information scent in the results. A FollowingScent label would require that the user shows clear intent or interest, which is not supported by the generic nature of the content viewed.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0013627085834742,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:47:05.351225"
+    },
+    {
+      "session_id": "10900_2625",
+      "event_id": "10900_2625_qq-437_cd-367",
+      "timestamp": "2006-03-11 13:54:55",
+      "action_type": "CLICK",
+      "content": "electronics cars fashion collectibles coupons and more ebay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a generic category like 'electronics cars fashion collectibles' without a specific intent or promising details suggests that the user is still exploring without a clear target. This action does not demonstrate a strong information scent that would justify a FollowingScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0283556222915649,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:47:05.351232"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.8718740940094,
+      "decisions": [
+        {
+          "event_id": "10900_2625_qq-437",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2625_qq-437_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2625_qq-437_cd-367",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.672420024871826,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query that results in an error suggests a lack of promising information scent, indicating that the initial query did not lead to any fruitful results. A FollowingScent label implies a clear intent and direction in the search, which is not evident here due to the invalid character error.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without any indication of intent or successful engagement suggests that the user did not find adequate information scent in the results. A FollowingScent label would require that the user shows clear intent or interest, which is not supported by the generic nature of the content viewed.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a generic category like 'electronics cars fashion collectibles' without a specific intent or promising details suggests that the user is still exploring without a clear target. This action does not demonstrate a strong information scent that would justify a FollowingScent label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.007321119308472,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0283556222915649
+}

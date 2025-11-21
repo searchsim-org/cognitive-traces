@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2484",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:41:02.496208",
+  "events": [
+    {
+      "session_id": "10215_2484",
+      "event_id": "10215_2484_qq-1306",
+      "timestamp": "2006-03-25 17:22:11",
+      "action_type": "QUERY",
+      "content": "david beckman",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'david beckman...' lacks specificity and does not demonstrate a clear intent to follow a particular scent. The presence of an invalid control character suggests a possible error in the query, indicating that the user may not have found promising scent in their initial search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9038418650627136,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:29.162336"
+    },
+    {
+      "session_id": "10215_2484",
+      "event_id": "10215_2484_qq-1306_serp",
+      "timestamp": "2006-03-25 17:22:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: david morris boats david morris yacht brokers, david hill vineyard winery david hill winery, davids place themes davids place themes com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results related to the query but did not engage with any specific result. This indicates a lack of strong information scent from the titles/snippets viewed, suggesting that the results were not sufficiently promising to warrant further investigation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9554930865764618,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:29.162347"
+    },
+    {
+      "session_id": "10215_2484",
+      "event_id": "10215_2484_qq-1306_cd-8320",
+      "timestamp": "2006-03-25 17:22:11",
+      "action_type": "CLICK",
+      "content": "beckman law offices p l c estate planning lawyer",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'beckman law offices p l c estate planning lawyer...' suggests an attempt to approach a specific source based on perceived relevance, but this may have been driven by a lack of better alternatives due to the previous poor scent. Thus, labeling it as 'ApproachingSource' may overlook the context of the prior events indicating a search without promising results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9839410081505775,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:29.162351"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.47867202758789,
+      "decisions": [
+        {
+          "event_id": "10215_2484_qq-1306",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2484_qq-1306_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2484_qq-1306_cd-8320",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.479144811630249,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'david beckman...' lacks specificity and does not demonstrate a clear intent to follow a particular scent. The presence of an invalid control character suggests a possible error in the query, indicating that the user may not have found promising scent in their initial search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results related to the query but did not engage with any specific result. This indicates a lack of strong information scent from the titles/snippets viewed, suggesting that the results were not sufficiently promising to warrant further investigation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'beckman law offices p l c estate planning lawyer...' suggests an attempt to approach a specific source based on perceived relevance, but this may have been driven by a lack of better alternatives due to the previous poor scent. Thus, labeling it as 'ApproachingSource' may overlook the context of the prior events indicating a search without promising results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.431046962738037,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9839410081505775
+}

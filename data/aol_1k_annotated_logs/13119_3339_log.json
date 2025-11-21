@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3339",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:09:43.816190",
+  "events": [
+    {
+      "session_id": "13119_3339",
+      "event_id": "13119_3339_qq-1829",
+      "timestamp": "2006-05-22 12:00:39",
+      "action_type": "QUERY",
+      "content": "shot guns 410 pumps for sale",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'shot guns 410 pumps for sale' lacks specificity and does not indicate strong intent. Additionally, the mention of an error suggests that the user may not have found what they were looking for, leading to a new exploration rather than a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9852852806448936,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:10:33.218517"
+    },
+    {
+      "session_id": "13119_3339",
+      "event_id": "13119_3339_qq-1829_serp",
+      "timestamp": "2006-05-22 12:00:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pressure washers pumps seattle pump seattle washington, mcclelland gun shop firearms and gear for sale dallas 75228, industrial water pump manufacturers mw i pumps (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, indicating that the presented options did not meet their needs or were not compelling enough. This suggests they were likely dissatisfied with the search results, signaling a potential exit from the search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9699661493301391,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:10:33.218532"
+    },
+    {
+      "session_id": "13119_3339",
+      "event_id": "13119_3339_qq-1829_cd-10051",
+      "timestamp": "2006-05-22 12:00:39",
+      "action_type": "CLICK",
+      "content": "guns america buy guns and sell guns online",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'guns america buy guns and sell guns online' indicates an attempt to gather more information based on the title's promise. However, given the lack of engagement in the previous events, this click may represent a last-ditch effort rather than an informed decision driven by a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0043237805366516,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:10:33.218539"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.98453402519226,
+      "decisions": [
+        {
+          "event_id": "13119_3339_qq-1829",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3339_qq-1829_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3339_qq-1829_cd-10051",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.505489826202393,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'shot guns 410 pumps for sale' lacks specificity and does not indicate strong intent. Additionally, the mention of an error suggests that the user may not have found what they were looking for, leading to a new exploration rather than a focused search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, indicating that the presented options did not meet their needs or were not compelling enough. This suggests they were likely dissatisfied with the search results, signaling a potential exit from the search process.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'guns america buy guns and sell guns online' indicates an attempt to gather more information based on the title's promise. However, given the lack of engagement in the previous events, this click may represent a last-ditch effort rather than an informed decision driven by a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 29.630069971084595,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0043237805366516
+}

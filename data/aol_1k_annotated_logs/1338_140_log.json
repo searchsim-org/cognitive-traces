@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_140",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:48:10.990434",
+  "events": [
+    {
+      "session_id": "1338_140",
+      "event_id": "1338_140_qq-63",
+      "timestamp": "2006-05-31 07:31:42",
+      "action_type": "QUERY",
+      "content": "pilotonline.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query typically indicates an attempt to engage with information; however, the presence of an analysis error and the lack of subsequent clicks suggest that the user did not find the results promising. This aligns more closely with PoorScent, indicating that the user did not perceive the initial query's results as adequate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9623435199260711,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:49:08.738711"
+    },
+    {
+      "session_id": "1338_140",
+      "event_id": "1338_140_qq-63_serp",
+      "timestamp": "2006-05-31 07:31:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: arts entertainment news the virginian pilot, home utah back country pilots association, becker helicopters pilot academy becker helicopters (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but the context suggests that the presence of an invalid control character might have led to frustration or confusion. If the user was unable to gain useful insights from these results, it indicates a lack of fruitful engagement, which aligns more with LeavingPatch, as they may have decided to abandon the search due to ineffective results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8591967582702636,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:49:08.738730"
+    },
+    {
+      "session_id": "1338_140",
+      "event_id": "1338_140_qq-63_cd-1572",
+      "timestamp": "2006-05-31 07:31:42",
+      "action_type": "CLICK",
+      "content": "arts entertainment news the virginian pilot",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the persistent errors in the analysis suggest that the clicked content may not have met their expectations or needs, indicating a lack of satisfactory engagement. This situation aligns with PoorScent, as the click did not lead to a successful information retrieval, reinforcing the user's disappointment.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.960464009642601,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:49:08.738737"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 28.022225856781006,
+      "decisions": [
+        {
+          "event_id": "1338_140_qq-63",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_140_qq-63_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_140_qq-63_cd-1572",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.449275970458984,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query typically indicates an attempt to engage with information; however, the presence of an analysis error and the lack of subsequent clicks suggest that the user did not find the results promising. This aligns more closely with PoorScent, indicating that the user did not perceive the initial query's results as adequate.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, but the context suggests that the presence of an invalid control character might have led to frustration or confusion. If the user was unable to gain useful insights from these results, it indicates a lack of fruitful engagement, which aligns more with LeavingPatch, as they may have decided to abandon the search due to ineffective results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user clicked on a result, the persistent errors in the analysis suggest that the clicked content may not have met their expectations or needs, indicating a lack of satisfactory engagement. This situation aligns with PoorScent, as the click did not lead to a successful information retrieval, reinforcing the user's disappointment.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.91361117362976,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9623435199260711
+}

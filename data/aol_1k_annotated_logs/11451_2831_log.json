@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2831",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:37:53.519439",
+  "events": [
+    {
+      "session_id": "11451_2831",
+      "event_id": "11451_2831_qq-1190",
+      "timestamp": "2006-05-08 11:49:11",
+      "action_type": "QUERY",
+      "content": "craigslist",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'craigslist...' suggests the user is looking for specific information related to Craigslist. However, the presence of 'Invalid control character' indicates an issue with the query itself, suggesting the user is either not getting relevant results or is confused by the system, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8820877909660338,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:38:41.371755"
+    },
+    {
+      "session_id": "11451_2831",
+      "event_id": "11451_2831_qq-1190_serp",
+      "timestamp": "2006-05-08 11:49:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: craigslist lansing mi jobs apartments for sale services community and events, craigslist pittsburgh pa jobs apartments for sale services community and events, craigslist new haven ct jobs apartments for sale services community and events (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results related to Craigslist, but if the results did not meet their needs or were not relevant (which might be implied given the prior error), this could indicate frustration leading to a potential abandonment of the search rather than a clear intent to continue exploring. Thus, LeavingPatch may be more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9741716504096984,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:38:41.371776"
+    },
+    {
+      "session_id": "11451_2831",
+      "event_id": "11451_2831_qq-1190_cd-1326",
+      "timestamp": "2006-05-08 11:49:11",
+      "action_type": "CLICK",
+      "content": "craigslist dallas fort worth jobs apartments for sale services community and events",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result could imply interest, but if the previous events suggested confusion or lack of relevant information, this click might stem from desperation rather than a clear intent. Therefore, it may better fit PoorScent, indicating that the user did not find satisfactory information in the previous steps.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9978360384702682,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:38:41.371783"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.2303249835968,
+      "decisions": [
+        {
+          "event_id": "11451_2831_qq-1190",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2831_qq-1190_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2831_qq-1190_cd-1326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.926387071609497,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'craigslist...' suggests the user is looking for specific information related to Craigslist. However, the presence of 'Invalid control character' indicates an issue with the query itself, suggesting the user is either not getting relevant results or is confused by the system, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results related to Craigslist, but if the results did not meet their needs or were not relevant (which might be implied given the prior error), this could indicate frustration leading to a potential abandonment of the search rather than a clear intent to continue exploring. Thus, LeavingPatch may be more appropriate than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of clicking on a result could imply interest, but if the previous events suggested confusion or lack of relevant information, this click might stem from desperation rather than a clear intent. Therefore, it may better fit PoorScent, indicating that the user did not find satisfactory information in the previous steps.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 25.576233863830566,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9978360384702682
+}

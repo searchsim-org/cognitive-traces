@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2694",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:42:01.495816",
+  "events": [
+    {
+      "session_id": "10900_2694",
+      "event_id": "10900_2694_qq-5",
+      "timestamp": "2006-04-25 13:46:08",
+      "action_type": "QUERY",
+      "content": "yahoo",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query that resulted in an analysis error, suggesting they did not find relevant results or were unable to proceed with their intended action. This indicates dissatisfaction with the current patch, rather than a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9055474758148193,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:43:09.490635"
+    },
+    {
+      "session_id": "10900_2694",
+      "event_id": "10900_2694_qq-5_serp",
+      "timestamp": "2006-04-25 13:46:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bookmarks yahoo com, ny yahoo com, rc yahoo com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clear engagement or clicks implies a lack of promising scent. The action appears to reflect a search that did not meet the user's expectations, leading to insufficient information gathering.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9959118142724037,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:43:09.490664"
+    },
+    {
+      "session_id": "10900_2694",
+      "event_id": "10900_2694_qq-5_cd-726",
+      "timestamp": "2006-04-25 13:46:08",
+      "action_type": "CLICK",
+      "content": "www yahoo com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a link following a series of unsuccessful interactions suggests that the user is attempting to salvage their search experience but may ultimately be leaving the patch due to continued dissatisfaction with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9626838982105255,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:43:09.490670"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 41.883405923843384,
+      "decisions": [
+        {
+          "event_id": "10900_2694_qq-5",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2694_qq-5_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2694_qq-5_cd-726",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.961181879043579,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query that resulted in an analysis error, suggesting they did not find relevant results or were unable to proceed with their intended action. This indicates dissatisfaction with the current patch, rather than a targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without clear engagement or clicks implies a lack of promising scent. The action appears to reflect a search that did not meet the user's expectations, leading to insufficient information gathering.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a link following a series of unsuccessful interactions suggests that the user is attempting to salvage their search experience but may ultimately be leaving the patch due to continued dissatisfaction with the results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.844754934310913,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9959118142724037
+}

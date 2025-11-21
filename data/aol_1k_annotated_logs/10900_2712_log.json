@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2712",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:59:10.866602",
+  "events": [
+    {
+      "session_id": "10900_2712",
+      "event_id": "10900_2712_qq-1461",
+      "timestamp": "2006-05-03 13:55:44",
+      "action_type": "QUERY",
+      "content": "davids bridal",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The provided content 'davids bridal...' is vague and lacks specificity, suggesting the user might not have a clear intent or sufficient information to continue the search. The invalid control character error could indicate the query was malformed or incomplete, leading to poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8922070503234862,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:00:04.068204"
+    },
+    {
+      "session_id": "10900_2712",
+      "event_id": "10900_2712_qq-1461_serp",
+      "timestamp": "2006-05-03 13:55:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: melissa sweet bridal wedding dresses 2020 david s bridal, wedding dresses bridesmaid dresses gowns david s bridal, wedding dresses bridesmaid dresses gowns david s bridal (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results indicates the user is exploring options based on information scent but does not necessarily reflect a well-formed query. The titles suggest a mix of relevance, and the presence of 'david s bridal' multiple times indicates the user might be narrowing down based on prior knowledge rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9910351015627384,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:00:04.068221"
+    },
+    {
+      "session_id": "10900_2712",
+      "event_id": "10900_2712_qq-1461_cd-8726",
+      "timestamp": "2006-05-03 13:55:44",
+      "action_type": "CLICK",
+      "content": "wedding dresses bridesmaid dresses gowns david s bridal",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'wedding dresses bridesmaid dresses gowns david s bridal...' suggests the user is testing a specific source rather than indicating a strong information scent from a targeted query. Given the earlier issues and lack of clarity in the query and results, this action does not demonstrate a clear intent indicative of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9874968618154526,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:00:04.068227"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.382232189178467,
+      "decisions": [
+        {
+          "event_id": "10900_2712_qq-1461",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2712_qq-1461_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2712_qq-1461_cd-8726",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.618153810501099,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The provided content 'davids bridal...' is vague and lacks specificity, suggesting the user might not have a clear intent or sufficient information to continue the search. The invalid control character error could indicate the query was malformed or incomplete, leading to poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing multiple results indicates the user is exploring options based on information scent but does not necessarily reflect a well-formed query. The titles suggest a mix of relevance, and the presence of 'david s bridal' multiple times indicates the user might be narrowing down based on prior knowledge rather than following a strong scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'wedding dresses bridesmaid dresses gowns david s bridal...' suggests the user is testing a specific source rather than indicating a strong information scent from a targeted query. Given the earlier issues and lack of clarity in the query and results, this action does not demonstrate a clear intent indicative of FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.879519939422607,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9910351015627384
+}

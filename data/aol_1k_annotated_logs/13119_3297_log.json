@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3297",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:37:28.922637",
+  "events": [
+    {
+      "session_id": "13119_3297",
+      "event_id": "13119_3297_qq-1781",
+      "timestamp": "2006-03-04 20:45:43",
+      "action_type": "QUERY",
+      "content": "old military pay charts",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query related to 'old military pay charts' suggests that the user did not find relevant or satisfactory results based on their expectation, as indicated by the subsequent analysis error. This indicates a lack of promising scent rather than a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9303532063961029,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:38:16.273576"
+    },
+    {
+      "session_id": "13119_3297",
+      "event_id": "13119_3297_qq-1781_serp",
+      "timestamp": "2006-03-04 20:45:43",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: old newark, old cars, old fuckers (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that include a mix of seemingly unrelated topics (old newark, old cars, old fuckers) indicates that the user did not find relevant information related to their original query. This suggests that the user was likely assessing the scent of the information but found it insufficient, leading to a likely reevaluation of their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9623222142457962,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:38:16.273585"
+    },
+    {
+      "session_id": "13119_3297",
+      "event_id": "13119_3297_qq-1781_cd-1422",
+      "timestamp": "2006-03-04 20:45:43",
+      "action_type": "CLICK",
+      "content": "military and veteran benefits news veteran jobs military com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result related to 'military and veteran benefits news' which indicates a targeted action to explore a potentially relevant source. This aligns more closely with ApproachingSource, as the click implies a perception of strong information scent, even if the initial query was flawed.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9882355578243732,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:38:16.273588"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.719635009765625,
+      "decisions": [
+        {
+          "event_id": "13119_3297_qq-1781",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3297_qq-1781_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3297_qq-1781_cd-1422",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.238976001739502,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query related to 'old military pay charts' suggests that the user did not find relevant or satisfactory results based on their expectation, as indicated by the subsequent analysis error. This indicates a lack of promising scent rather than a targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that include a mix of seemingly unrelated topics (old newark, old cars, old fuckers) indicates that the user did not find relevant information related to their original query. This suggests that the user was likely assessing the scent of the information but found it insufficient, leading to a likely reevaluation of their query.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result related to 'military and veteran benefits news' which indicates a targeted action to explore a potentially relevant source. This aligns more closely with ApproachingSource, as the click implies a perception of strong information scent, even if the initial query was flawed.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.10291600227356,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9882355578243732
+}

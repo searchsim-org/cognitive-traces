@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2635",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:51:22.584788",
+  "events": [
+    {
+      "session_id": "10900_2635",
+      "event_id": "10900_2635_qq-1421",
+      "timestamp": "2006-03-17 15:00:07",
+      "action_type": "QUERY",
+      "content": "playhouse disney",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'playhouse disney...' suggests the user is searching for content related to Disney but lacks specificity. This could indicate poor scent if it leads to no clicks or engagement. The analyst's interpretation of 'FollowingScent' assumes clear intent, which is not evident here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.009272114932537,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:52:03.812179"
+    },
+    {
+      "session_id": "10900_2635",
+      "event_id": "10900_2635_qq-1421_serp",
+      "timestamp": "2006-03-17 15:00:07",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: disney com the official home for all things disney, watch disney xd shows full episodes videos disney now, disney com the official home for all things disney (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the 10 results indicates that the user is exploring options rather than following a strong scent. The analyst's label of 'FollowingScent' implies a direct intent to find something specific, which is not supported by merely viewing multiple results without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.961463326215744,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:52:03.812189"
+    },
+    {
+      "session_id": "10900_2635",
+      "event_id": "10900_2635_qq-1421_cd-3453",
+      "timestamp": "2006-03-17 15:00:07",
+      "action_type": "CLICK",
+      "content": "disney uk the official home for all things disney",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'disney uk the official home for all things disney...' suggests the user is investigating a specific source rather than strongly following a scent. Labeling this as 'FollowingScent' assumes a clear intent that may not be justified by the preceding events, which indicate ambiguity in the user's search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.023900419473648,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:52:03.812195"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.405667781829834,
+      "decisions": [
+        {
+          "event_id": "10900_2635_qq-1421",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2635_qq-1421_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2635_qq-1421_cd-3453",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 11.669816017150879,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'playhouse disney...' suggests the user is searching for content related to Disney but lacks specificity. This could indicate poor scent if it leads to no clicks or engagement. The analyst's interpretation of 'FollowingScent' assumes clear intent, which is not evident here.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing the 10 results indicates that the user is exploring options rather than following a strong scent. The analyst's label of 'FollowingScent' implies a direct intent to find something specific, which is not supported by merely viewing multiple results without clicks.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'disney uk the official home for all things disney...' suggests the user is investigating a specific source rather than strongly following a scent. Labeling this as 'FollowingScent' assumes a clear intent that may not be justified by the preceding events, which indicate ambiguity in the user's search behavior.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.82334017753601,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.023900419473648
+}

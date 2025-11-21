@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3774",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:44:36.975076",
+  "events": [
+    {
+      "session_id": "15565_3774",
+      "event_id": "15565_3774_qq-2123",
+      "timestamp": "2006-04-18 00:33:54",
+      "action_type": "QUERY",
+      "content": "payless shoes",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'payless shoes...' does not indicate a clear intention or a well-formed search. Given the ellipsis, it suggests the user may not have completed their thought or is uncertain about what they are searching for, which aligns more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0089749418199063,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:45:04.852456"
+    },
+    {
+      "session_id": "15565_3774",
+      "event_id": "15565_3774_qq-2123_serp",
+      "timestamp": "2006-04-18 00:33:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pay less shoe source, pay less shoe source, pay less shoe stores com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that included 'pay less shoe source' multiple times, which suggests that while they are investigating further, the redundancy indicates a lack of promising information scent. This behavior is more characteristic of PoorScent as they are not finding relevant or diverse results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0211506277322768,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:45:04.852465"
+    },
+    {
+      "session_id": "15565_3774",
+      "event_id": "15565_3774_qq-2123_cd-7042",
+      "timestamp": "2006-04-18 00:33:54",
+      "action_type": "CLICK",
+      "content": "pay less shoe source",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'pay less shoe source...' suggests the user is attempting to find relevant information, but without prior successful engagement or quality scent from the SERP, this action does not necessarily indicate a well-targeted search. Therefore, it could be interpreted as an effort driven by PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0155292943120002,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:45:04.852470"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.501222848892212,
+      "decisions": [
+        {
+          "event_id": "15565_3774_qq-2123",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3774_qq-2123_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3774_qq-2123_cd-7042",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.268583059310913,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'payless shoes...' does not indicate a clear intention or a well-formed search. Given the ellipsis, it suggests the user may not have completed their thought or is uncertain about what they are searching for, which aligns more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results that included 'pay less shoe source' multiple times, which suggests that while they are investigating further, the redundancy indicates a lack of promising information scent. This behavior is more characteristic of PoorScent as they are not finding relevant or diverse results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'pay less shoe source...' suggests the user is attempting to find relevant information, but without prior successful engagement or quality scent from the SERP, this action does not necessarily indicate a well-targeted search. Therefore, it could be interpreted as an effort driven by PoorScent rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.81735897064209,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0211506277322768
+}

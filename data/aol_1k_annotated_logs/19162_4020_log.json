@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4020",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:46:00.204133",
+  "events": [
+    {
+      "session_id": "19162_4020",
+      "event_id": "19162_4020_qq-2278",
+      "timestamp": "2006-03-03 18:40:29",
+      "action_type": "QUERY",
+      "content": "the jonas brothers",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the jonas brothers...' is vague and lacks specificity, indicating that the user is struggling to find relevant information. This suggests a lack of promising scent rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0236601293087007,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:46:32.285502"
+    },
+    {
+      "session_id": "19162_4020",
+      "event_id": "19162_4020_qq-2278_serp",
+      "timestamp": "2006-03-03 18:40:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www jonas brothers com, jonas ferry, billy jonas band billy jonas official website (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The act of viewing 10 results that do not seem relevant indicates that the user is not finding promising information. The presence of multiple irrelevant results suggests that the user is not encountering a strong information scent, but rather is struggling to find relevant sources.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9664951890707016,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:46:32.285524"
+    },
+    {
+      "session_id": "19162_4020",
+      "event_id": "19162_4020_qq-2278_cd-13769",
+      "timestamp": "2006-03-03 18:40:29",
+      "action_type": "CLICK",
+      "content": "www jonas brothers com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www jonas brothers com' suggests that the user found the title or snippet enticing enough to investigate further, indicating an approach to a potentially relevant source rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9980495102703572,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:46:32.285530"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.876970052719116,
+      "decisions": [
+        {
+          "event_id": "19162_4020_qq-2278",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4020_qq-2278_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4020_qq-2278_cd-13769",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.153573989868164,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the jonas brothers...' is vague and lacks specificity, indicating that the user is struggling to find relevant information. This suggests a lack of promising scent rather than a clear intent to follow a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The act of viewing 10 results that do not seem relevant indicates that the user is not finding promising information. The presence of multiple irrelevant results suggests that the user is not encountering a strong information scent, but rather is struggling to find relevant sources.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www jonas brothers com' suggests that the user found the title or snippet enticing enough to investigate further, indicating an approach to a potentially relevant source rather than simply following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.726055860519409,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0236601293087007
+}

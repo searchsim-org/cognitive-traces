@@ -1,0 +1,159 @@
+{
+  "session_id": "14551_3377",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:22:14.414874",
+  "events": [
+    {
+      "session_id": "14551_3377",
+      "event_id": "14551_3377_qq-1866",
+      "timestamp": "2006-05-13 22:44:48",
+      "action_type": "QUERY",
+      "content": "unclaimed money bklyn ny",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query but the nature of the query 'unclaimed money bklyn ny...' suggests a lack of specificity or clarity in information need, which typically indicates poor scent rather than a targeted search. The analysis error noted does not pertain to the user's intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.87926127910614,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:23:08.551722"
+    },
+    {
+      "session_id": "14551_3377",
+      "event_id": "14551_3377_qq-1866_serp",
+      "timestamp": "2006-05-13 22:44:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: unclaimed money, unclaimed money search how to find unclaimed money unclaimed money net, bk lyn weather (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but the diverse nature of the results suggests that the initial query did not provide a strong scent or clear direction. The presence of varied topics (including weather) indicates the user might be struggling to find relevant information, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9978432208299637,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:23:08.551727"
+    },
+    {
+      "session_id": "14551_3377",
+      "event_id": "14551_3377_qq-1866_cd-11225",
+      "timestamp": "2006-05-13 22:44:48",
+      "action_type": "CLICK",
+      "content": "bk lyn genealogy info com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'bk lyn genealogy info com...' suggests the user is attempting to explore a potential relevant source rather than following a strong scent. Given the previous poor performance of the search, this click indicates a search strategy where the user is trying to see if this result might yield useful information, which is more aligned with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9702431172132492,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:23:08.551729"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.392458200454712,
+      "decisions": [
+        {
+          "event_id": "14551_3377_qq-1866",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3377_qq-1866_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3377_qq-1866_cd-11225",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.68441104888916,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query but the nature of the query 'unclaimed money bklyn ny...' suggests a lack of specificity or clarity in information need, which typically indicates poor scent rather than a targeted search. The analysis error noted does not pertain to the user's intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results, but the diverse nature of the results suggests that the initial query did not provide a strong scent or clear direction. The presence of varied topics (including weather) indicates the user might be struggling to find relevant information, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'bk lyn genealogy info com...' suggests the user is attempting to explore a potential relevant source rather than following a strong scent. Given the previous poor performance of the search, this click indicates a search strategy where the user is trying to see if this result might yield useful information, which is more aligned with ApproachingSource.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 30.784332990646362,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9978432208299637
+}

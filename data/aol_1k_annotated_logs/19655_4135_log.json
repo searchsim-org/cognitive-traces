@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4135",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:22:07.877822",
+  "events": [
+    {
+      "session_id": "19655_4135",
+      "event_id": "19655_4135_qq-2389",
+      "timestamp": "2006-04-22 05:38:58",
+      "action_type": "QUERY",
+      "content": "frontier airlines",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'frontier airlines...' likely indicates that the user is still in the process of refining their search rather than initiating a well-formed targeted query. The ellipsis suggests uncertainty or the need for additional specifications, which aligns more with the concept of modifying a query for better results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9217970490455627,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:22:40.190661"
+    },
+    {
+      "session_id": "19655_4135",
+      "event_id": "19655_4135_qq-2389_serp",
+      "timestamp": "2006-04-22 05:38:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www frontier airline com, low fares done right frontier airlines, low fares done right frontier airlines (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this event as 'FollowingScent', but the user has only viewed results without indicating strong intent to select a specific source yet. The viewing of multiple results hints at a broader examination rather than a targeted search, aligning better with 'ApproachingSource' where the user begins to assess the relevance of various options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9860349714756012,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:22:40.190682"
+    },
+    {
+      "session_id": "19655_4135",
+      "event_id": "19655_4135_qq-2389_cd-10529",
+      "timestamp": "2006-04-22 05:38:58",
+      "action_type": "CLICK",
+      "content": "low fares done right frontier airlines",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result does indicate some level of intent, but the label 'FollowingScent' assumes that the query was well-formed and targeted. Given the previous events and the context of viewing results, this click appears more exploratory rather than a pursuit of a specific, well-formed target, thus better classified under 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0211758941411972,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:22:40.190690"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.317954063415527,
+      "decisions": [
+        {
+          "event_id": "19655_4135_qq-2389",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4135_qq-2389_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4135_qq-2389_cd-10529",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.58051085472107,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The query 'frontier airlines...' likely indicates that the user is still in the process of refining their search rather than initiating a well-formed targeted query. The ellipsis suggests uncertainty or the need for additional specifications, which aligns more with the concept of modifying a query for better results.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The analyst labeled this event as 'FollowingScent', but the user has only viewed results without indicating strong intent to select a specific source yet. The viewing of multiple results hints at a broader examination rather than a targeted search, aligning better with 'ApproachingSource' where the user begins to assess the relevance of various options.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result does indicate some level of intent, but the label 'FollowingScent' assumes that the query was well-formed and targeted. Given the previous events and the context of viewing results, this click appears more exploratory rather than a pursuit of a specific, well-formed target, thus better classified under 'ApproachingSource'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.260562896728516,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0211758941411972
+}

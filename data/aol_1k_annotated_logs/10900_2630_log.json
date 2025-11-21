@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2630",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:49:03.779691",
+  "events": [
+    {
+      "session_id": "10900_2630",
+      "event_id": "10900_2630_qq-1415",
+      "timestamp": "2006-03-13 13:48:38",
+      "action_type": "QUERY",
+      "content": "chase manhattan bank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action taken by the user appears to reflect an incomplete or vague query ('chase manhattan bank...') which lacks specificity and does not demonstrate clear intent for a focused search. This ambiguity suggests the user may not find what they need, leading to a poor scent experience rather than a strong initiation of a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9612477153539658,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:30.528179"
+    },
+    {
+      "session_id": "10900_2630",
+      "event_id": "10900_2630_qq-1415_serp",
+      "timestamp": "2006-03-13 13:48:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: credit card mortgage banking auto chase online chase com, credit card mortgage banking auto chase online chase com, credit card mortgage banking auto chase online chase com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results that seem repetitive and potentially irrelevant, indicating they are not strongly attracted to any specific source. The repeated content suggests a lack of strong information scent, which contradicts the idea of 'FollowingScent'. Instead, this behavior aligns more with 'ApproachingSource' as they are examining options but not necessarily with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0082508608698846,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:30.528196"
+    },
+    {
+      "session_id": "10900_2630",
+      "event_id": "10900_2630_qq-1415_cd-8643",
+      "timestamp": "2006-03-13 13:48:38",
+      "action_type": "CLICK",
+      "content": "credit card mortgage banking auto chase online chase com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a link that appears to be generic and repetitively stated suggests that the user may not have found a compelling scent from the SERP. Instead of 'FollowingScent', this action may better represent 'ApproachingSource' as the user is exploring further without clear intent or confidence in the selected content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0186415150761605,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:30.528200"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.484978199005127,
+      "decisions": [
+        {
+          "event_id": "10900_2630_qq-1415",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2630_qq-1415_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2630_qq-1415_cd-8643",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.5086939334869385,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action taken by the user appears to reflect an incomplete or vague query ('chase manhattan bank...') which lacks specificity and does not demonstrate clear intent for a focused search. This ambiguity suggests the user may not find what they need, leading to a poor scent experience rather than a strong initiation of a search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results that seem repetitive and potentially irrelevant, indicating they are not strongly attracted to any specific source. The repeated content suggests a lack of strong information scent, which contradicts the idea of 'FollowingScent'. Instead, this behavior aligns more with 'ApproachingSource' as they are examining options but not necessarily with clear intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a link that appears to be generic and repetitively stated suggests that the user may not have found a compelling scent from the SERP. Instead of 'FollowingScent', this action may better represent 'ApproachingSource' as the user is exploring further without clear intent or confidence in the selected content.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.572343826293945,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0186415150761605
+}

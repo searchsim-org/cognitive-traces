@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4150",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:29:56.146093",
+  "events": [
+    {
+      "session_id": "19655_4150",
+      "event_id": "19655_4150_qq-2420",
+      "timestamp": "2006-05-02 15:28:29",
+      "action_type": "QUERY",
+      "content": "michaels",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'michaels...' appears to be vague and lacks specificity, suggesting that the user may not have clear intent or did not find relevant results that enticed them to pursue further. The control character error indicates potential confusion in the input, which aligns with a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8285237073898315,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:30:24.061971"
+    },
+    {
+      "session_id": "19655_4150",
+      "event_id": "19655_4150_qq-2420_serp",
+      "timestamp": "2006-05-02 15:28:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: michael woodall home mind spring com, saint michael s ce high school, the michael g ebert writer site (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any specific indication of interest suggests that the user may not have found sufficiently relevant or promising information. The presence of multiple results without clear intent to click indicates a lack of strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9644639074802399,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:30:24.061977"
+    },
+    {
+      "session_id": "19655_4150",
+      "event_id": "19655_4150_qq-2420_cd-2693",
+      "timestamp": "2006-05-02 15:28:29",
+      "action_type": "CLICK",
+      "content": "michaels stores art supplies crafts framing",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'michaels stores art supplies crafts framing...' implies a targeted approach based on perceived relevance from the snippet. This action suggests that the user found some level of information scent in the title, making 'ApproachingSource' a more appropriate label than 'FollowingScent' which requires a more robust initial search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0258677899837494,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:30:24.061980"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.183701992034912,
+      "decisions": [
+        {
+          "event_id": "19655_4150_qq-2420",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4150_qq-2420_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4150_qq-2420_cd-2693",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.011200904846191,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'michaels...' appears to be vague and lacks specificity, suggesting that the user may not have clear intent or did not find relevant results that enticed them to pursue further. The control character error indicates potential confusion in the input, which aligns with a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any specific indication of interest suggests that the user may not have found sufficiently relevant or promising information. The presence of multiple results without clear intent to click indicates a lack of strong information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'michaels stores art supplies crafts framing...' implies a targeted approach based on perceived relevance from the snippet. This action suggests that the user found some level of information scent in the title, making 'ApproachingSource' a more appropriate label than 'FollowingScent' which requires a more robust initial search intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.621668815612793,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0258677899837494
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_4003",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:34:57.404479",
+  "events": [
+    {
+      "session_id": "18689_4003",
+      "event_id": "18689_4003_qq-2266",
+      "timestamp": "2006-05-21 18:55:23",
+      "action_type": "QUERY",
+      "content": "sarasota county school zone",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sarasota county school zone...' implies a specific search intent, but the presence of an invalid control character suggests that the query may not have been successfully processed or returned relevant results. This indicates a lack of promising scent, rather than a well-formed targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9530974209308625,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:35:54.234036"
+    },
+    {
+      "session_id": "18689_4003",
+      "event_id": "18689_4003_qq-2266_serp",
+      "timestamp": "2006-05-21 18:55:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: upland country day school private co ed school chester county pa, st luke s school new canaan private school in fairfield county, acorn montessori school hunter don county nj s top private school (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any of them may indicate dissatisfaction or confusion regarding the search results. This behavior aligns more closely with leaving the patch due to a lack of relevant or satisfactory options, rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0049082916229963,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:35:54.234046"
+    },
+    {
+      "session_id": "18689_4003",
+      "event_id": "18689_4003_qq-2266_cd-13318",
+      "timestamp": "2006-05-21 18:55:23",
+      "action_type": "CLICK",
+      "content": "www sarasota k 12 fl us",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that appears to contain an invalid control character raises doubts about the effectiveness of the information scent. The click may not indicate a successful pursuit of a relevant resource and reflects a potential misalignment between user expectation and result quality.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8900462865829468,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:35:54.234049"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 31.4582839012146,
+      "decisions": [
+        {
+          "event_id": "18689_4003_qq-2266",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_4003_qq-2266_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_4003_qq-2266_cd-13318",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.476065158843994,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sarasota county school zone...' implies a specific search intent, but the presence of an invalid control character suggests that the query may not have been successfully processed or returned relevant results. This indicates a lack of promising scent, rather than a well-formed targeted query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging with any of them may indicate dissatisfaction or confusion regarding the search results. This behavior aligns more closely with leaving the patch due to a lack of relevant or satisfactory options, rather than following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that appears to contain an invalid control character raises doubts about the effectiveness of the information scent. The click may not indicate a successful pursuit of a relevant resource and reflects a potential misalignment between user expectation and result quality.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.80281400680542,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0049082916229963
+}

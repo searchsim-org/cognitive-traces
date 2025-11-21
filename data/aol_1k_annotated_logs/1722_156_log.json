@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_156",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:10:58.947040",
+  "events": [
+    {
+      "session_id": "1722_156",
+      "event_id": "1722_156_qq-71",
+      "timestamp": "2006-03-13 10:49:42",
+      "action_type": "QUERY",
+      "content": "tunica",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query with an incomplete or unclear term ('tunica...'), indicating a lack of targeted intent. This suggests that the user is uncertain about their information need, leading to a new query without having clicked any results, thus aligning with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9540598154067993,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:11:26.937986"
+    },
+    {
+      "session_id": "1722_156",
+      "event_id": "1722_156_qq-71_serp",
+      "timestamp": "2006-03-13 10:49:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tunica national golf and tennis tunica resorts ms, tunica miss com, resorts tunica update (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the titles suggest a lack of clear relevance to their initial query. The presence of a vague query and the diverse nature of the results indicate that the user might not have found promising information scent, thus reflecting PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0020903570577502,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:11:26.938008"
+    },
+    {
+      "session_id": "1722_156",
+      "event_id": "1722_156_qq-71_cd-1584",
+      "timestamp": "2006-03-13 10:49:42",
+      "action_type": "CLICK",
+      "content": "tunica mississippi information portal everything related to tunica mississippi",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, indicating a decision to investigate further. However, considering the previous context where the search lacked clarity and relevance, this click appears to be a last attempt to find satisfactory information rather than indicative of a strong scent, suggesting ApproachingSource is a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9889888361096382,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:11:26.938015"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.21958875656128,
+      "decisions": [
+        {
+          "event_id": "1722_156_qq-71",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_156_qq-71_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_156_qq-71_cd-1584",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.1289849281311035,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query with an incomplete or unclear term ('tunica...'), indicating a lack of targeted intent. This suggests that the user is uncertain about their information need, leading to a new query without having clicked any results, thus aligning with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed multiple results, the titles suggest a lack of clear relevance to their initial query. The presence of a vague query and the diverse nature of the results indicate that the user might not have found promising information scent, thus reflecting PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, indicating a decision to investigate further. However, considering the previous context where the search lacked clarity and relevance, this click appears to be a last attempt to find satisfactory information rather than indicative of a strong scent, suggesting ApproachingSource is a more appropriate label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.361423015594482,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0020903570577502
+}

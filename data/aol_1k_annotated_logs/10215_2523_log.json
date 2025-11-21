@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2523",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:03:27.526201",
+  "events": [
+    {
+      "session_id": "10215_2523",
+      "event_id": "10215_2523_qq-1332",
+      "timestamp": "2006-04-19 14:04:38",
+      "action_type": "QUERY",
+      "content": "www.7pointsmarina.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query, but the analyst's reasoning suggests an invalid control character error, indicating that the user may not have found the information they were seeking. This implies a lack of effective scent guiding the user's query, thus aligning more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9054478645324707,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:04:02.132857"
+    },
+    {
+      "session_id": "10215_2523",
+      "event_id": "10215_2523_qq-1332_serp",
+      "timestamp": "2006-04-19 14:04:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: new bern nc hotel marina bridge pointe hotel marina, dennis point marina com nbsp this website is for sale nbsp dennis point marina resources and information, seven points marina rays town lake pennsylvania (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, indicating that the information scent was insufficiently promising. This suggests a loss of interest in the current search, leading to LeavingPatch rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9852104246616363,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:04:02.132887"
+    },
+    {
+      "session_id": "10215_2523",
+      "event_id": "10215_2523_qq-1332_cd-8377",
+      "timestamp": "2006-04-19 14:04:38",
+      "action_type": "CLICK",
+      "content": "seven points marina rays town lake pennsylvania",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the prior events suggest that the user did not have a strong guiding scent. The click appears to be a last resort rather than a confident decision based on a clear intent, thus more accurately fitting PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9863278418779373,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:04:02.132897"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.336827754974365,
+      "decisions": [
+        {
+          "event_id": "10215_2523_qq-1332",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2523_qq-1332_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2523_qq-1332_cd-8377",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.034122943878174,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query, but the analyst's reasoning suggests an invalid control character error, indicating that the user may not have found the information they were seeking. This implies a lack of effective scent guiding the user's query, thus aligning more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, indicating that the information scent was insufficiently promising. This suggests a loss of interest in the current search, leading to LeavingPatch rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user clicked on a result, the prior events suggest that the user did not have a strong guiding scent. The click appears to be a last resort rather than a confident decision based on a clear intent, thus more accurately fitting PoorScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.977165937423706,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9863278418779373
+}

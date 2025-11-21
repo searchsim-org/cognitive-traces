@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2602",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:31:26.023213",
+  "events": [
+    {
+      "session_id": "10436_2602",
+      "event_id": "10436_2602_qq-1393",
+      "timestamp": "2006-05-11 17:43:34",
+      "action_type": "QUERY",
+      "content": "lyrics to the wiz - charlie smalls",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query for lyrics appears to lack specificity and may indicate a lack of promising results, as shown by the 'Invalid control character' error which suggests the query was not well-formed. This indicates that the user likely did not find any relevant results and was dissatisfied, fitting the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8933412790298462,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:11.539506"
+    },
+    {
+      "session_id": "10436_2602",
+      "event_id": "10436_2602_qq-1393_serp",
+      "timestamp": "2006-05-11 17:43:34",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the charlie chan family home, the truth about charlie com, homepage the charlie daniels band (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results related to 'Charlie Chan' and 'Charlie Daniels Band', but these results do not align with the original query about lyrics. This could indicate a failure to find relevant content, leading to possible abandonment of the intended search goal, hence the LeavingPatch label is more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.971140256524086,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:11.539531"
+    },
+    {
+      "session_id": "10436_2602",
+      "event_id": "10436_2602_qq-1393_cd-825",
+      "timestamp": "2006-05-11 17:43:34",
+      "action_type": "CLICK",
+      "content": "lyrics on demand song lyrics lyrics of songs free lyrics free song lyrics country lyrics hip hop lyrics rock lyrics christian lyrics music lyrics",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'lyrics on demand' suggests that the user was drawn to a specific source that appeared to offer a rich set of lyrics, indicating a stronger information scent. This action aligns better with the ApproachingSource label as the user actively engaged with a result rather than continuing to forage without finding relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0168176636099815,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:11.539537"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.541018724441528,
+      "decisions": [
+        {
+          "event_id": "10436_2602_qq-1393",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2602_qq-1393_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2602_qq-1393_cd-825",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 14.642465829849243,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query for lyrics appears to lack specificity and may indicate a lack of promising results, as shown by the 'Invalid control character' error which suggests the query was not well-formed. This indicates that the user likely did not find any relevant results and was dissatisfied, fitting the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results related to 'Charlie Chan' and 'Charlie Daniels Band', but these results do not align with the original query about lyrics. This could indicate a failure to find relevant content, leading to possible abandonment of the intended search goal, hence the LeavingPatch label is more appropriate than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'lyrics on demand' suggests that the user was drawn to a specific source that appeared to offer a rich set of lyrics, indicating a stronger information scent. This action aligns better with the ApproachingSource label as the user actively engaged with a result rather than continuing to forage without finding relevant information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.068454027175903,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0168176636099815
+}

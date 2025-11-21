@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3115",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:56:33.658649",
+  "events": [
+    {
+      "session_id": "12495_3115",
+      "event_id": "12495_3115_qq-1628",
+      "timestamp": "2006-04-05 22:43:55",
+      "action_type": "QUERY",
+      "content": "usc track and field",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'usc track and field...' lacks specificity and does not show a clear intent to follow a scent, suggesting a lack of promising options leading to no engagement. The presence of an error indicates a potential misunderstanding of the query's effectiveness.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9370742440223694,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:57:18.835189"
+    },
+    {
+      "session_id": "12495_3115",
+      "event_id": "12495_3115_qq-1628_serp",
+      "timestamp": "2006-04-05 22:43:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www usc track and field com, world track and field website the track and field news resource, on track track and field equipment and supplies (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clicks implies the user did not find promising scents in the displayed options. The analyst's label of 'FollowingScent' does not account for the lack of engagement with the results, indicating a search that did not yield strong enough signals.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.970446914434433,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:57:18.835216"
+    },
+    {
+      "session_id": "12495_3115",
+      "event_id": "12495_3115_qq-1628_cd-9633",
+      "timestamp": "2006-04-05 22:43:55",
+      "action_type": "CLICK",
+      "content": "www usc track and field com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the click suggests some intent, it is more indicative of an attempt to approach a source rather than a well-formed query. The earlier events demonstrate poor engagement, indicating the click may have been exploratory rather than a targeted search, thus better fitting 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9884861722588539,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:57:18.835224"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.66251301765442,
+      "decisions": [
+        {
+          "event_id": "12495_3115_qq-1628",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3115_qq-1628_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3115_qq-1628_cd-9633",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.678515911102295,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'usc track and field...' lacks specificity and does not show a clear intent to follow a scent, suggesting a lack of promising options leading to no engagement. The presence of an error indicates a potential misunderstanding of the query's effectiveness.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without clicks implies the user did not find promising scents in the displayed options. The analyst's label of 'FollowingScent' does not account for the lack of engagement with the results, indicating a search that did not yield strong enough signals.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the click suggests some intent, it is more indicative of an attempt to approach a source rather than a well-formed query. The earlier events demonstrate poor engagement, indicating the click may have been exploratory rather than a targeted search, thus better fitting 'ApproachingSource'.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.563184976577759,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9884861722588539
+}

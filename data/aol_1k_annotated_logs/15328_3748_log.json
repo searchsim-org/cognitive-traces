@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3748",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:30:49.862982",
+  "events": [
+    {
+      "session_id": "15328_3748",
+      "event_id": "15328_3748_qq-2095",
+      "timestamp": "2006-05-28 20:36:47",
+      "action_type": "QUERY",
+      "content": "zombie time",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'zombie time...' lacks specificity and clarity, suggesting the user may not know what they are looking for, indicating poor scent rather than a targeted search. A well-formed query typically does not include ellipses, which can imply uncertainty or a lack of focus.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9746387273073196,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:31:19.957616"
+    },
+    {
+      "session_id": "15328_3748",
+      "event_id": "15328_3748_qq-2095_serp",
+      "timestamp": "2006-05-28 20:36:47",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: zombie time, zombie junkyard zombie, zombie (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not engage with any specific item. This suggests that the results did not meet their information needs or expectations, indicating a lack of strong information scent rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9850406646728516,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:31:19.957633"
+    },
+    {
+      "session_id": "15328_3748",
+      "event_id": "15328_3748_qq-2095_cd-11820",
+      "timestamp": "2006-05-28 20:36:47",
+      "action_type": "CLICK",
+      "content": "zombie time",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'zombie time...' after viewing results suggests a lack of satisfactory options, as the user may have clicked out of desperation rather than following a clear scent. This indicates that the item clicked did not provide a strong enough signal to represent a successful targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9727010846138,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:31:19.957640"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.308454036712646,
+      "decisions": [
+        {
+          "event_id": "15328_3748_qq-2095",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3748_qq-2095_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3748_qq-2095_cd-11820",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.136049032211304,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'zombie time...' lacks specificity and clarity, suggesting the user may not know what they are looking for, indicating poor scent rather than a targeted search. A well-formed query typically does not include ellipses, which can imply uncertainty or a lack of focus.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results but did not engage with any specific item. This suggests that the results did not meet their information needs or expectations, indicating a lack of strong information scent rather than a clear intent to follow a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'zombie time...' after viewing results suggests a lack of satisfactory options, as the user may have clicked out of desperation rather than following a clear scent. This indicates that the item clicked did not provide a strong enough signal to represent a successful targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.336143016815186,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9850406646728516
+}

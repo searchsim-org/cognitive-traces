@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3756",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:34:57.163834",
+  "events": [
+    {
+      "session_id": "15565_3756",
+      "event_id": "15565_3756_qq-2102",
+      "timestamp": "2006-03-12 20:05:50",
+      "action_type": "QUERY",
+      "content": "mori lee dress",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query for 'mori lee dress', but the presence of an error message suggests that the query did not yield relevant results. This indicates a lack of promising scent rather than a targeted search with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9693184971809388,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:25.522198"
+    },
+    {
+      "session_id": "15565_3756",
+      "event_id": "15565_3756_qq-2102_serp",
+      "timestamp": "2006-03-12 20:05:50",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: luxury wedding dresses by madeline gardner mori lee, www mori lee inc com, mori age (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite the user viewing multiple results, the invalid control character error indicates that the query may not have provided the expected or relevant results. This suggests a weak scent, rather than a continued search with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8173847675323487,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:25.522219"
+    },
+    {
+      "session_id": "15565_3756",
+      "event_id": "15565_3756_qq-2102_cd-11869",
+      "timestamp": "2006-03-12 20:05:50",
+      "action_type": "CLICK",
+      "content": "luxury wedding dresses by madeline gardner mori lee",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which typically indicates some level of success or interest. However, given the context of the previous errors, this click might have been an attempt to salvage the search, indicating the user is leaving a patch that failed to meet their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9362899243831635,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:25.522225"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.121510744094849,
+      "decisions": [
+        {
+          "event_id": "15565_3756_qq-2102",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3756_qq-2102_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3756_qq-2102_cd-11869",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.427968978881836,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query for 'mori lee dress', but the presence of an error message suggests that the query did not yield relevant results. This indicates a lack of promising scent rather than a targeted search with clear intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite the user viewing multiple results, the invalid control character error indicates that the query may not have provided the expected or relevant results. This suggests a weak scent, rather than a continued search with clear intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result, which typically indicates some level of success or interest. However, given the context of the previous errors, this click might have been an attempt to salvage the search, indicating the user is leaving a patch that failed to meet their needs.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.452815771102905,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9693184971809388
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4022",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:47:05.790990",
+  "events": [
+    {
+      "session_id": "19162_4022",
+      "event_id": "19162_4022_qq-2287",
+      "timestamp": "2006-03-04 14:32:49",
+      "action_type": "QUERY",
+      "content": "how to play guitar",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'how to play guitar...' lacks specificity and does not indicate a clear intent for a targeted search, suggesting that they may not have found promising information from prior attempts. This fits the PoorScent label, as it implies frustration or dissatisfaction with the previous results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.978704360127449,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:47:30.401179"
+    },
+    {
+      "session_id": "19162_4022",
+      "event_id": "19162_4022_qq-2287_serp",
+      "timestamp": "2006-03-04 14:32:49",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: learn how to play guitar guitar wiki, learn how to play guitar with free lessons play guitar com, guitar noise learn how to play guitar with free lessons (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the presence of multiple similarly titled options ('learn how to play guitar...') indicates they may be scanning for the most relevant content rather than exhibiting a clear intent to follow a promising scent. This aligns more with the ApproachingSource label, where the user is evaluating potential sources rather than confirming a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.993573509156704,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:47:30.401188"
+    },
+    {
+      "session_id": "19162_4022",
+      "event_id": "19162_4022_qq-2287_cd-13781",
+      "timestamp": "2006-03-04 14:32:49",
+      "action_type": "CLICK",
+      "content": "guitar noise learn how to play guitar with free lessons",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that is not clearly superior among many similar options suggests the user is still in the process of evaluating their options, rather than confidently following a scent. This aligns better with the ApproachingSource label, as the user is likely still determining the best source and not fully convinced of a foraging success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.010784701257944,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:47:30.401192"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.23831033706665,
+      "decisions": [
+        {
+          "event_id": "19162_4022_qq-2287",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4022_qq-2287_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4022_qq-2287_cd-13781",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.919188976287842,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'how to play guitar...' lacks specificity and does not indicate a clear intent for a targeted search, suggesting that they may not have found promising information from prior attempts. This fits the PoorScent label, as it implies frustration or dissatisfaction with the previous results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the presence of multiple similarly titled options ('learn how to play guitar...') indicates they may be scanning for the most relevant content rather than exhibiting a clear intent to follow a promising scent. This aligns more with the ApproachingSource label, where the user is evaluating potential sources rather than confirming a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result that is not clearly superior among many similar options suggests the user is still in the process of evaluating their options, rather than confidently following a scent. This aligns better with the ApproachingSource label, as the user is likely still determining the best source and not fully convinced of a foraging success.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.127964973449707,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.010784701257944
+}

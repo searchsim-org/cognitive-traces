@@ -1,0 +1,282 @@
+{
+  "session_id": "1035_53",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:55:14.268511",
+  "events": [
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-16",
+      "timestamp": "2006-05-01 12:56:09",
+      "action_type": "QUERY",
+      "content": "realtor.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query on realtor.com, but the absence of clicks or further interactions indicates that the user did not find promising scent related to their query. The analysis error mentioned does not validate the labeling as FollowingScent, as it suggests a failure in capturing relevant information.",
+      "judge_justification": "The Analyst's label of 'FollowingScent' is invalidated by a parsing error, rendering its reasoning unreliable. The Critic's perspective is compelling: the user issued a query on 'realtor.com' but did not engage further (e.g., no clicks or interactions), which strongly suggests the search results lacked promising information scent. The absence of follow-up actions aligns with the definition of 'PoorScent,' where the user\u2019s query fails to yield useful or engaging results. The Critic\u2019s high confidence (0.85) and logical reasoning further support this decision.",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.8945515871047973,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253588"
+    },
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-16_serp",
+      "timestamp": "2006-05-01 12:56:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: utah valley real estate com julie b pierce realtor utah real estate, find real estate homes for sale apartments houses for rent realtor com, find real estate homes for sale apartments houses for rent realtor com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further engagement suggests that the user was not satisfied with the results presented. This aligns more with PoorScent, as the user likely did not find a strong enough signal to justify further clicks.",
+      "judge_justification": "The Analyst\u2019s 'FollowingScent' label is again marred by a parsing error, leaving the Critic\u2019s argument as the sole valid perspective. The user viewed 10 SERP results but took no further action (e.g., no clicks), which is a hallmark of 'PoorScent.' The Critic\u2019s reasoning\u2014that the lack of engagement indicates dissatisfaction with the information scent\u2014is consistent with the schema\u2019s definition. The user\u2019s inaction suggests the results did not meet their needs, warranting the 'PoorScent' label with high confidence (0.8).",
+      "confidence_score": 0.82,
+      "disagreement_score": 0.9941476516425609,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253600"
+    },
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-16_cd-433",
+      "timestamp": "2006-05-01 12:56:09",
+      "action_type": "CLICK",
+      "content": "find real estate homes for sale apartments houses for rent realtor com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result does not indicate a strong intent if it was made after viewing a list of results that did not satisfy the user's needs. The click could stem from desperation or lack of better options, which aligns with PoorScent more than FollowingScent.",
+      "judge_justification": "While the Critic argues for 'PoorScent' (0.75 confidence), the user\u2019s action\u2014a **click** on a result\u2014is a deliberate engagement that aligns more closely with 'ApproachingSource.' The Critic\u2019s point about potential desperation is noted, but the schema defines 'ApproachingSource' as clicking based on *any* information scent, regardless of its strength. The click itself is the key signal here, as it represents an attempt to investigate further. The Analyst\u2019s error is disregarded, but the Critic\u2019s perspective is partially valid; thus, a moderate confidence score is assigned. However, the click action is definitive enough to override 'PoorScent.'",
+      "confidence_score": 0.7,
+      "disagreement_score": 1.0002172455191611,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253606"
+    },
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-1",
+      "timestamp": "2006-05-01 13:01:03",
+      "action_type": "QUERY",
+      "content": "diaryland",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The new query on diaryland does not represent a well-formed, targeted search but suggests a lack of promising results in previous attempts. This aligns more with the PoorScent label since the user is likely searching for something more relevant.",
+      "judge_justification": "The Analyst\u2019s 'FollowingScent' label is unreliable due to parsing errors, while the Critic\u2019s 'PoorScent' argument (0.8 confidence) is well-founded. The query 'diaryland' appears abrupt and untargeted, suggesting the user pivoted away from their original search (realtor.com) without finding satisfactory results. This behavior\u2014issuing a new, less-specific query without prior engagement\u2014is characteristic of 'PoorScent,' where the user perceives the current information patch as unpromising. The Critic\u2019s reasoning aligns perfectly with the schema\u2019s definition.",
+      "confidence_score": 0.83,
+      "disagreement_score": 1.029502534866333,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253610"
+    },
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-1_serp",
+      "timestamp": "2006-05-01 13:01:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: diary land members area, diary land members area, diary land members area (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to Event 2, viewing 10 results without clicks indicates that the user did not identify strong information scent. This reinforces the notion of PoorScent, as the user is likely disappointed with the available content.",
+      "judge_justification": "The Analyst\u2019s label is invalid due to parsing errors, leaving the Critic\u2019s 'PoorScent' argument (0.85 confidence) as the primary basis for decision-making. The user viewed 10 results without clicking any, which is a clear indicator of 'PoorScent.' The Critic\u2019s reasoning\u2014that the lack of engagement reflects dissatisfaction with the information scent\u2014is consistent with the schema. The repetitive nature of the results (e.g., 'diary land members area' repeated) further suggests low utility, reinforcing the 'PoorScent' label.",
+      "confidence_score": 0.87,
+      "disagreement_score": 1.0117968320846558,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253615"
+    },
+    {
+      "session_id": "1035_53",
+      "event_id": "1035_53_qq-1_cd-1099",
+      "timestamp": "2006-05-01 13:01:03",
+      "action_type": "CLICK",
+      "content": "diary land members area",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result after viewing multiple options that did not attract any clicks suggests a lack of genuine interest or satisfaction. Thus, labeling this as PoorScent is more appropriate, as it indicates the user is still searching for something that meets their needs.",
+      "judge_justification": "Despite the Critic\u2019s 'PoorScent' argument (0.75 confidence), the user\u2019s **click** on a result is the defining action here, aligning with 'ApproachingSource.' The Critic\u2019s point about potential desperation is acknowledged, but the schema does not require the click to stem from *strong* scent\u2014only that the user chose to investigate further. The click suggests the user perceived *some* scent, even if weak. The Analyst\u2019s error is disregarded, but the action itself is sufficient to justify 'ApproachingSource.' The moderate confidence reflects the nuanced interpretation of the click\u2019s intent.",
+      "confidence_score": 0.72,
+      "disagreement_score": 1.0057779304683208,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:55:49.253619"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.945633172988892,
+      "decisions": [
+        {
+          "event_id": "1035_53_qq-16",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_53_qq-16_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_53_qq-16_cd-433",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_53_qq-1",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_53_qq-1_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_53_qq-1_cd-1099",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.609425067901611,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query on realtor.com, but the absence of clicks or further interactions indicates that the user did not find promising scent related to their query. The analysis error mentioned does not validate the labeling as FollowingScent, as it suggests a failure in capturing relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without further engagement suggests that the user was not satisfied with the results presented. This aligns more with PoorScent, as the user likely did not find a strong enough signal to justify further clicks.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result does not indicate a strong intent if it was made after viewing a list of results that did not satisfy the user's needs. The click could stem from desperation or lack of better options, which aligns with PoorScent more than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "4",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The new query on diaryland does not represent a well-formed, targeted search but suggests a lack of promising results in previous attempts. This aligns more with the PoorScent label since the user is likely searching for something more relevant.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "5",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to Event 2, viewing 10 results without clicks indicates that the user did not identify strong information scent. This reinforces the notion of PoorScent, as the user is likely disappointed with the available content.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "6",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result after viewing multiple options that did not attract any clicks suggests a lack of genuine interest or satisfaction. Thus, labeling this as PoorScent is more appropriate, as it indicates the user is still searching for something that meets their needs.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.291185855865479,
+      "decisions": [
+        {
+          "event_id": "1035_53_qq-16",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's label of 'FollowingScent' is invalidated by a parsing error, rendering its reasoning unreliable. The Critic's perspective is compelling: the user issued a query on 'realtor.com' but did not engage further (e.g., no clicks or interactions), which strongly suggests the search results lacked promising information scent. The absence of follow-up actions aligns with the definition of 'PoorScent,' where the user\u2019s query fails to yield useful or engaging results. The Critic\u2019s high confidence (0.85) and logical reasoning further support this decision.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "1035_53_qq-16_serp",
+          "final_label": "PoorScent",
+          "justification": "The Analyst\u2019s 'FollowingScent' label is again marred by a parsing error, leaving the Critic\u2019s argument as the sole valid perspective. The user viewed 10 SERP results but took no further action (e.g., no clicks), which is a hallmark of 'PoorScent.' The Critic\u2019s reasoning\u2014that the lack of engagement indicates dissatisfaction with the information scent\u2014is consistent with the schema\u2019s definition. The user\u2019s inaction suggests the results did not meet their needs, warranting the 'PoorScent' label with high confidence (0.8).",
+          "confidence": 0.82,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "1035_53_qq-16_cd-433",
+          "final_label": "ApproachingSource",
+          "justification": "While the Critic argues for 'PoorScent' (0.75 confidence), the user\u2019s action\u2014a **click** on a result\u2014is a deliberate engagement that aligns more closely with 'ApproachingSource.' The Critic\u2019s point about potential desperation is noted, but the schema defines 'ApproachingSource' as clicking based on *any* information scent, regardless of its strength. The click itself is the key signal here, as it represents an attempt to investigate further. The Analyst\u2019s error is disregarded, but the Critic\u2019s perspective is partially valid; thus, a moderate confidence score is assigned. However, the click action is definitive enough to override 'PoorScent.'",
+          "confidence": 0.7,
+          "flag_for_review": true,
+          "disagreement_score": 0.25
+        },
+        {
+          "event_id": "1035_53_qq-1",
+          "final_label": "PoorScent",
+          "justification": "The Analyst\u2019s 'FollowingScent' label is unreliable due to parsing errors, while the Critic\u2019s 'PoorScent' argument (0.8 confidence) is well-founded. The query 'diaryland' appears abrupt and untargeted, suggesting the user pivoted away from their original search (realtor.com) without finding satisfactory results. This behavior\u2014issuing a new, less-specific query without prior engagement\u2014is characteristic of 'PoorScent,' where the user perceives the current information patch as unpromising. The Critic\u2019s reasoning aligns perfectly with the schema\u2019s definition.",
+          "confidence": 0.83,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "1035_53_qq-1_serp",
+          "final_label": "PoorScent",
+          "justification": "The Analyst\u2019s label is invalid due to parsing errors, leaving the Critic\u2019s 'PoorScent' argument (0.85 confidence) as the primary basis for decision-making. The user viewed 10 results without clicking any, which is a clear indicator of 'PoorScent.' The Critic\u2019s reasoning\u2014that the lack of engagement reflects dissatisfaction with the information scent\u2014is consistent with the schema. The repetitive nature of the results (e.g., 'diary land members area' repeated) further suggests low utility, reinforcing the 'PoorScent' label.",
+          "confidence": 0.87,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "1035_53_qq-1_cd-1099",
+          "final_label": "ApproachingSource",
+          "justification": "Despite the Critic\u2019s 'PoorScent' argument (0.75 confidence), the user\u2019s **click** on a result is the defining action here, aligning with 'ApproachingSource.' The Critic\u2019s point about potential desperation is acknowledged, but the schema does not require the click to stem from *strong* scent\u2014only that the user chose to investigate further. The click suggests the user perceived *some* scent, even if weak. The Analyst\u2019s error is disregarded, but the action itself is sufficient to justify 'ApproachingSource.' The moderate confidence reflects the nuanced interpretation of the click\u2019s intent.",
+          "confidence": 0.72,
+          "flag_for_review": true,
+          "disagreement_score": 0.25
+        }
+      ]
+    }
+  ],
+  "num_events": 6,
+  "flagged_for_review": true,
+  "max_disagreement": 1.029502534866333
+}

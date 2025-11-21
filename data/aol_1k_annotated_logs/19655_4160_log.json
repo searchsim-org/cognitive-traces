@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4160",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:37:20.773061",
+  "events": [
+    {
+      "session_id": "19655_4160",
+      "event_id": "19655_4160_qq-2444",
+      "timestamp": "2006-05-06 15:44:33",
+      "action_type": "QUERY",
+      "content": "super 8 hotel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query with 'super 8 hotel...', indicating some interest. However, the presence of an analysis error suggests that the query may not have led to promising scent, resulting in no clicks or further engagement. Thus, this suggests a lack of sufficient information scent rather than a clear following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9328442215919495,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:37:43.450438"
+    },
+    {
+      "session_id": "19655_4160",
+      "event_id": "19655_4160_qq-2444_serp",
+      "timestamp": "2006-05-06 15:44:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home super 8 stuff super 8 stuff keeping super 8 mm alive, super 8 hotels book hotel rooms discount rates and deals, super 8 hotels book hotel rooms discount rates and deals (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed results related to 'super 8', the repeated content in the SERP and the inclusion of an analysis error indicates that the search did not provide satisfactory or diverse options. A true FollowingScent would imply engagement with varied and relevant results, which seems lacking here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9394473791122436,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:37:43.450445"
+    },
+    {
+      "session_id": "19655_4160",
+      "event_id": "19655_4160_qq-2444_cd-11137",
+      "timestamp": "2006-05-06 15:44:33",
+      "action_type": "CLICK",
+      "content": "super 8 hotels book hotel rooms discount rates and deals",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result implies an attempt to engage, but if the click led to low satisfaction or if the content was not as expected (possibly indicated by the analysis error), it could suggest the user was still searching for a better option. This indicates they may not have found what they were looking for and could lead to leaving the search without satisfactory results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9045900344848633,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:37:43.450447"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.258421897888184,
+      "decisions": [
+        {
+          "event_id": "19655_4160_qq-2444",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4160_qq-2444_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4160_qq-2444_cd-11137",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.720026969909668,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query with 'super 8 hotel...', indicating some interest. However, the presence of an analysis error suggests that the query may not have led to promising scent, resulting in no clicks or further engagement. Thus, this suggests a lack of sufficient information scent rather than a clear following scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed results related to 'super 8', the repeated content in the SERP and the inclusion of an analysis error indicates that the search did not provide satisfactory or diverse options. A true FollowingScent would imply engagement with varied and relevant results, which seems lacking here.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result implies an attempt to engage, but if the click led to low satisfaction or if the content was not as expected (possibly indicated by the analysis error), it could suggest the user was still searching for a better option. This indicates they may not have found what they were looking for and could lead to leaving the search without satisfactory results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.5941832065582275,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9394473791122436
+}

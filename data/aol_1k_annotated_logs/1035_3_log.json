@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_3",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:43:39.836134",
+  "events": [
+    {
+      "session_id": "1035_3",
+      "event_id": "1035_3_qq-2",
+      "timestamp": "2006-03-02 17:51:52",
+      "action_type": "QUERY",
+      "content": "spanish english dictionary online",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'spanish english dictionary online...' seems vague and lacks specificity. The user might not have encountered promising results leading to a lack of clicks or subsequent actions, indicating a poor information scent rather than a clear search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9930508606135845,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:44:00.318777"
+    },
+    {
+      "session_id": "1035_3",
+      "event_id": "1035_3_qq-2_serp",
+      "timestamp": "2006-03-02 17:51:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www english to spanish com, diction ar engle z roman english romanian dictionary online, comprehensive english urdu dictionary with advance search urdu seek com english urdu dictionary (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further engagement suggests that the user did not find any relevant or appealing options in the SERP, indicative of poor scent instead of a continuing search with intent. It reflects a lack of effective information retrieval rather than a focused search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9990823186933995,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:44:00.318809"
+    },
+    {
+      "session_id": "1035_3",
+      "event_id": "1035_3_qq-2_cd-1100",
+      "timestamp": "2006-03-02 17:51:52",
+      "action_type": "CLICK",
+      "content": "free online dictionaries",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'free online dictionaries...' may suggest the user was attempting to find something useful, but given the context of the previous events where the user did not engage meaningfully with the SERP, this action likely reflects a desperate attempt to find value after poor performance in prior searches, rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9906886696815491,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:44:00.318814"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.103355884552002,
+      "decisions": [
+        {
+          "event_id": "1035_3_qq-2",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_3_qq-2_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_3_qq-2_cd-1100",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 90)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.78018593788147,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'spanish english dictionary online...' seems vague and lacks specificity. The user might not have encountered promising results leading to a lack of clicks or subsequent actions, indicating a poor information scent rather than a clear search intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without further engagement suggests that the user did not find any relevant or appealing options in the SERP, indicative of poor scent instead of a continuing search with intent. It reflects a lack of effective information retrieval rather than a focused search behavior.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'free online dictionaries...' may suggest the user was attempting to find something useful, but given the context of the previous events where the user did not engage meaningfully with the SERP, this action likely reflects a desperate attempt to find value after poor performance in prior searches, rather than a clear intent to follow a scent.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.417249917984009,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9990823186933995
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2521",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:02:17.172133",
+  "events": [
+    {
+      "session_id": "10215_2521",
+      "event_id": "10215_2521_qq-1331",
+      "timestamp": "2006-04-18 10:03:48",
+      "action_type": "QUERY",
+      "content": "nickjr.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query seems to be malformed or not yielding useful results, as indicated by the mention of an invalid control character. This suggests that the user did not find the query promising, leading to a lack of engagement with the content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8540738701820374,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:02:42.464495"
+    },
+    {
+      "session_id": "10215_2521",
+      "event_id": "10215_2521_qq-1331_serp",
+      "timestamp": "2006-04-18 10:03:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: arcade nick jr com, preschool games nick jr show full episodes video clips on nick jr, harry con nick jr official site (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite the user viewing results, the presence of an invalid control character in the query indicates that the search may not have been effective or relevant. The lack of satisfactory results suggests the user was not following a strong scent but rather exploring a weak or misguided search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8547349214553832,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:02:42.464512"
+    },
+    {
+      "session_id": "10215_2521",
+      "event_id": "10215_2521_qq-1331_cd-3447",
+      "timestamp": "2006-04-18 10:03:48",
+      "action_type": "CLICK",
+      "content": "preschool games nick jr show full episodes video clips on nick jr",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a link, suggesting they found it promising based on the information scent from the title. This indicates a transition from poor search results to a targeted exploration of a specific source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0006510019302368,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:02:42.464515"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.8731689453125,
+      "decisions": [
+        {
+          "event_id": "10215_2521_qq-1331",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2521_qq-1331_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2521_qq-1331_cd-3447",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.075992822647095,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query seems to be malformed or not yielding useful results, as indicated by the mention of an invalid control character. This suggests that the user did not find the query promising, leading to a lack of engagement with the content.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite the user viewing results, the presence of an invalid control character in the query indicates that the search may not have been effective or relevant. The lack of satisfactory results suggests the user was not following a strong scent but rather exploring a weak or misguided search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a link, suggesting they found it promising based on the information scent from the title. This indicates a transition from poor search results to a targeted exploration of a specific source.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.067742347717285,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0006510019302368
+}

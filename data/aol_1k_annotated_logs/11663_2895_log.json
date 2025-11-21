@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2895",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:25:44.700224",
+  "events": [
+    {
+      "session_id": "11663_2895",
+      "event_id": "11663_2895_qq-1488",
+      "timestamp": "2006-05-04 12:19:41",
+      "action_type": "QUERY",
+      "content": "hancock county",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hancock county...' lacks specificity and appears to be a general search, which might indicate a lack of clear intent. The presence of an error in the reasoning suggests that the user may not have found relevant information, leading to a failure in scent detection.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9968422159552575,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:26:29.703772"
+    },
+    {
+      "session_id": "11663_2895",
+      "event_id": "11663_2895_qq-1488_serp",
+      "timestamp": "2006-05-04 12:19:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sheriff hancock county, hancock county indiana, hancock county ohio (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results related to 'hancock county', which suggests they are exploring options rather than following a strong scent. This action aligns more closely with the behavior of someone assessing potential sources for information rather than decisively following a well-formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.017410859465599,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:26:29.703789"
+    },
+    {
+      "session_id": "11663_2895",
+      "event_id": "11663_2895_qq-1488_cd-8984",
+      "timestamp": "2006-05-04 12:19:41",
+      "action_type": "CLICK",
+      "content": "hancock county ohio",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'hancock county ohio...' indicates a potential interest based on the results viewed, but it does not necessarily reflect a clear following of scent, as the previous steps indicate a lack of strong intent. This action may be better labeled as ApproachingSource, where the user is still assessing information rather than decisively following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.035617971420288,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:26:29.703796"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.00924801826477,
+      "decisions": [
+        {
+          "event_id": "11663_2895_qq-1488",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2895_qq-1488_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2895_qq-1488_cd-8984",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.187684059143066,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hancock county...' lacks specificity and appears to be a general search, which might indicate a lack of clear intent. The presence of an error in the reasoning suggests that the user may not have found relevant information, leading to a failure in scent detection.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results related to 'hancock county', which suggests they are exploring options rather than following a strong scent. This action aligns more closely with the behavior of someone assessing potential sources for information rather than decisively following a well-formed query.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'hancock county ohio...' indicates a potential interest based on the results viewed, but it does not necessarily reflect a clear following of scent, as the previous steps indicate a lack of strong intent. This action may be better labeled as ApproachingSource, where the user is still assessing information rather than decisively following a scent.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.520370960235596,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.035617971420288
+}

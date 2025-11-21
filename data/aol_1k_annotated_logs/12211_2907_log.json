@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2907",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:34:56.354109",
+  "events": [
+    {
+      "session_id": "12211_2907",
+      "event_id": "12211_2907_qq-1501",
+      "timestamp": "2006-03-01 13:24:25",
+      "action_type": "QUERY",
+      "content": "microsoft updates",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'microsoft updates...' lacks specificity and does not demonstrate a clear intent to find targeted information. The mention of an error suggests the user may have encountered a dead end, indicating a lack of promising scent rather than a well-formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9656972885131836,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:35:36.190697"
+    },
+    {
+      "session_id": "12211_2907",
+      "event_id": "12211_2907_qq-1501_serp",
+      "timestamp": "2006-03-01 13:24:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: infrastructure updates, search microsoft com, crystal reports microsoft (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results like 'infrastructure updates' and 'search microsoft com' does not necessarily indicate a strong information scent if the user finds the results unhelpful or off-target. The analyst's label does not account for the potential low relevance of the results, which could lead to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9327106237411499,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:35:36.190705"
+    },
+    {
+      "session_id": "12211_2907",
+      "event_id": "12211_2907_qq-1501_cd-1057",
+      "timestamp": "2006-03-01 13:24:25",
+      "action_type": "CLICK",
+      "content": "www microsoft com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www microsoft com...' could indicate an attempt to find relevant information, but if the previous actions were not satisfactory, this click may represent an exploratory attempt rather than a well-defined pursuit of a goal. This suggests the user is still searching but may be abandoning previous leads, characteristic of leaving a patch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9880740068852901,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:35:36.190707"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.535722017288208,
+      "decisions": [
+        {
+          "event_id": "12211_2907_qq-1501",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2907_qq-1501_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2907_qq-1501_cd-1057",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.665977716445923,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'microsoft updates...' lacks specificity and does not demonstrate a clear intent to find targeted information. The mention of an error suggests the user may have encountered a dead end, indicating a lack of promising scent rather than a well-formed query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results like 'infrastructure updates' and 'search microsoft com' does not necessarily indicate a strong information scent if the user finds the results unhelpful or off-target. The analyst's label does not account for the potential low relevance of the results, which could lead to a lack of promising scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on 'www microsoft com...' could indicate an attempt to find relevant information, but if the previous actions were not satisfactory, this click may represent an exploratory attempt rather than a well-defined pursuit of a goal. This suggests the user is still searching but may be abandoning previous leads, characteristic of leaving a patch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.435869932174683,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9880740068852901
+}

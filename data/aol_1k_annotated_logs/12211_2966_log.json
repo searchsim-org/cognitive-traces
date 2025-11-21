@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2966",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:25:23.035398",
+  "events": [
+    {
+      "session_id": "12211_2966",
+      "event_id": "12211_2966_qq-1518",
+      "timestamp": "2006-03-30 15:14:17",
+      "action_type": "QUERY",
+      "content": "surfacing products international",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'surfacing products international...' appears vague and lacks specificity, suggesting that the user did not find promising information scent, leading to the formulation of a new query. This aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0103167228400707,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:26:04.563673"
+    },
+    {
+      "session_id": "12211_2966",
+      "event_id": "12211_2966_qq-1518_serp",
+      "timestamp": "2006-03-30 15:14:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: precision surfaces international, surfacing products com is for sale, home micro surface finishing products inc (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the content suggests a lack of engagement or interest in the items presented, indicating that they may not have found relevant information. This suggests a potential abandonment of the search session, fitting the LeavingPatch label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9808619052171708,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:26:04.563680"
+    },
+    {
+      "session_id": "12211_2966",
+      "event_id": "12211_2966_qq-1518_cd-9297",
+      "timestamp": "2006-03-30 15:14:17",
+      "action_type": "CLICK",
+      "content": "surfacing products com is for sale",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, indicating a targeted action based on perceived relevance or scent. The label FollowingScent implies a continuous, directed search, while ApproachingSource captures the decision-making process leading to the click on a specific item more accurately.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0241360723972321,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:26:04.563683"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.52866816520691,
+      "decisions": [
+        {
+          "event_id": "12211_2966_qq-1518",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2966_qq-1518_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2966_qq-1518_cd-9297",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.966235876083374,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'surfacing products international...' appears vague and lacks specificity, suggesting that the user did not find promising information scent, leading to the formulation of a new query. This aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Although the user viewed multiple results, the content suggests a lack of engagement or interest in the items presented, indicating that they may not have found relevant information. This suggests a potential abandonment of the search session, fitting the LeavingPatch label better than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, indicating a targeted action based on perceived relevance or scent. The label FollowingScent implies a continuous, directed search, while ApproachingSource captures the decision-making process leading to the click on a specific item more accurately.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.961841821670532,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0241360723972321
+}

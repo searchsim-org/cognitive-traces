@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3797",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:59:23.879874",
+  "events": [
+    {
+      "session_id": "15565_3797",
+      "event_id": "15565_3797_qq-2153",
+      "timestamp": "2006-05-18 00:29:08",
+      "action_type": "QUERY",
+      "content": "thousand oaks cheerleading kids",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'thousand oaks cheerleading kids...' lacks specificity and clarity, suggesting that the user may not have a strong intent or may be uncertain about what they want. This indicates poor information scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9954084996134043,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:50.725000"
+    },
+    {
+      "session_id": "15565_3797",
+      "event_id": "15565_3797_qq-2153_serp",
+      "timestamp": "2006-05-18 00:29:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: thousand oaks acorn thousand oaks ca news, thousand oaks acorn thousand oaks ca news, thousand oaks toyota (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but the titles suggest a lack of relevance or strong information scent. If the results do not align closely with the user's initial query, it implies that they are not finding promising options, which is indicative of poor scent rather than a following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9665535688400269,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:50.725024"
+    },
+    {
+      "session_id": "15565_3797",
+      "event_id": "15565_3797_qq-2153_cd-11900",
+      "timestamp": "2006-05-18 00:29:08",
+      "action_type": "CLICK",
+      "content": "thousand oaks acorn thousand oaks ca news",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'thousand oaks acorn thousand oaks ca news...' does not indicate a strong information scent if the previous results were not satisfactory. The action might be driven by desperation to find relevant information rather than a well-formed query, suggesting a weak approach rather than a confident follow.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9993530690670014,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:50.725032"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.804234981536865,
+      "decisions": [
+        {
+          "event_id": "15565_3797_qq-2153",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3797_qq-2153_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3797_qq-2153_cd-11900",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.589475870132446,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'thousand oaks cheerleading kids...' lacks specificity and clarity, suggesting that the user may not have a strong intent or may be uncertain about what they want. This indicates poor information scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but the titles suggest a lack of relevance or strong information scent. If the results do not align closely with the user's initial query, it implies that they are not finding promising options, which is indicative of poor scent rather than a following scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'thousand oaks acorn thousand oaks ca news...' does not indicate a strong information scent if the previous results were not satisfactory. The action might be driven by desperation to find relevant information rather than a well-formed query, suggesting a weak approach rather than a confident follow.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.325092792510986,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9993530690670014
+}

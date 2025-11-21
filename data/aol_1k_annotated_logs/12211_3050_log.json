@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3050",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:54:09.099258",
+  "events": [
+    {
+      "session_id": "12211_3050",
+      "event_id": "12211_3050_qq-1579",
+      "timestamp": "2006-05-08 04:41:53",
+      "action_type": "QUERY",
+      "content": "currency conversion",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query regarding currency conversion does not clearly indicate a targeted search with clear intent, particularly given that it appears to be vague and lacks specific details. This suggests the user did not find strong information scent, hence leading to a lack of engagement with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9603914320468903,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:49.803625"
+    },
+    {
+      "session_id": "12211_3050",
+      "event_id": "12211_3050_qq-1579_serp",
+      "timestamp": "2006-05-08 04:41:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the domain name conversion center com is for sale dan com, extreme quality audio and video conversions wrong or obsolete format convert, the metric system online metric converters and metric conversion calculator download (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this as FollowingScent, but viewing 10 results that include irrelevant or low-quality content indicates that the user did not find strong information scent. The variety of topics and relevance suggests they may be exploring options without a clear focus, which better aligns with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9915216289460659,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:49.803635"
+    },
+    {
+      "session_id": "12211_3050",
+      "event_id": "12211_3050_qq-1579_cd-9429",
+      "timestamp": "2006-05-08 04:41:53",
+      "action_type": "CLICK",
+      "content": "xe the world s trusted currency authority money transfers free exchange rate tools",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'xe the world s trusted currency authority' indicates the user was investigating a promising source rather than simply following a scent. This suggests the user identified something of potential value and actively chose to engage with that specific resource, which aligns more with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9751434698700905,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:49.803638"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.000688791275024,
+      "decisions": [
+        {
+          "event_id": "12211_3050_qq-1579",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3050_qq-1579_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3050_qq-1579_cd-9429",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.284165143966675,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query regarding currency conversion does not clearly indicate a targeted search with clear intent, particularly given that it appears to be vague and lacks specific details. This suggests the user did not find strong information scent, hence leading to a lack of engagement with the results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst labeled this as FollowingScent, but viewing 10 results that include irrelevant or low-quality content indicates that the user did not find strong information scent. The variety of topics and relevance suggests they may be exploring options without a clear focus, which better aligns with PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'xe the world s trusted currency authority' indicates the user was investigating a promising source rather than simply following a scent. This suggests the user identified something of potential value and actively chose to engage with that specific resource, which aligns more with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.223850011825562,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9915216289460659
+}

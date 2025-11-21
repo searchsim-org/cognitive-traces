@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2284",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:00:05.730879",
+  "events": [
+    {
+      "session_id": "10008_2284",
+      "event_id": "10008_2284_qq-1199",
+      "timestamp": "2006-04-18 21:57:15",
+      "action_type": "QUERY",
+      "content": "westville nh",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'westville nh...' appears to be vague and lacks specificity, which suggests that the user may not have a clear target in mind. Instead of a well-formed query indicating intent, this shows a lack of effective information scent, leading to the conclusion that the user is not yet on a successful foraging path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9873993307352066,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:00:54.077094"
+    },
+    {
+      "session_id": "10008_2284",
+      "event_id": "10008_2284_qq-1199_serp",
+      "timestamp": "2006-04-18 21:57:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: northeast organic farming association of new hampshire n of a nh, drywall supply building materials ma nh vt me wallboard supply company, serendipity day spa a luxury day spa located in concord nh (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing 10 results, the user's engagement does not indicate strong information scent. The titles of the viewed results seem diverse and not closely aligned with a specific query intent. This suggests that the user may not be finding promising information, indicating a poor scent rather than a strong one.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9827218219637871,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:00:54.077102"
+    },
+    {
+      "session_id": "10008_2284",
+      "event_id": "10008_2284_qq-1199_cd-2559",
+      "timestamp": "2006-04-18 21:57:15",
+      "action_type": "CLICK",
+      "content": "nh gov the official web site of new hampshire state government",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the NH government website could indicate the user is moving toward a source; however, without context on the user's intent or prior engagement, this could also represent a last resort action due to poor scent from preceding search results. Therefore, labeling it as 'ApproachingSource' assumes intent that may not be justified by previous actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0159009546041489,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:00:54.077104"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 29.15651774406433,
+      "decisions": [
+        {
+          "event_id": "10008_2284_qq-1199",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2284_qq-1199_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2284_qq-1199_cd-2559",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.768449783325195,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'westville nh...' appears to be vague and lacks specificity, which suggests that the user may not have a clear target in mind. Instead of a well-formed query indicating intent, this shows a lack of effective information scent, leading to the conclusion that the user is not yet on a successful foraging path.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing 10 results, the user's engagement does not indicate strong information scent. The titles of the viewed results seem diverse and not closely aligned with a specific query intent. This suggests that the user may not be finding promising information, indicating a poor scent rather than a strong one.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the NH government website could indicate the user is moving toward a source; however, without context on the user's intent or prior engagement, this could also represent a last resort action due to poor scent from preceding search results. Therefore, labeling it as 'ApproachingSource' assumes intent that may not be justified by previous actions.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.084987878799438,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0159009546041489
+}

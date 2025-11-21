@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3039",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:45:42.599216",
+  "events": [
+    {
+      "session_id": "12211_3039",
+      "event_id": "12211_3039_qq-1572",
+      "timestamp": "2006-05-02 17:50:41",
+      "action_type": "QUERY",
+      "content": "lutron homeworks 180",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'lutron homeworks 180...' lacks specificity and may indicate that the user is unsure about what they are looking for. The presence of an 'Invalid control character' error suggests that the query input may be flawed or incomplete, leading to a poor scent rather than a clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8614426970481872,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:46:25.440080"
+    },
+    {
+      "session_id": "12211_3039",
+      "event_id": "12211_3039_qq-1572_serp",
+      "timestamp": "2006-05-02 17:50:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: europe lu tron com, lu tron electronics inc dimmers and lighting controls, tk 144 tk 118 180 180 180 best terrier com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a variety of results without engaging with them suggests that the user does not find strong relevance in the titles or snippets. The broad range of results indicates a lack of focused intent, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9995935425162316,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:46:25.440099"
+    },
+    {
+      "session_id": "12211_3039",
+      "event_id": "12211_3039_qq-1572_cd-9400",
+      "timestamp": "2006-05-02 17:50:41",
+      "action_type": "CLICK",
+      "content": "lu tron electronics inc dimmers and lighting controls",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, which indicates that they found enough relevant information in the snippet to warrant further investigation. This aligns more with the ApproachingSource label, as it reflects a more directed action in response to perceived information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9750856429338455,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:46:25.440106"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.441065073013306,
+      "decisions": [
+        {
+          "event_id": "12211_3039_qq-1572",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3039_qq-1572_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3039_qq-1572_cd-9400",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.7958409786224365,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'lutron homeworks 180...' lacks specificity and may indicate that the user is unsure about what they are looking for. The presence of an 'Invalid control character' error suggests that the query input may be flawed or incomplete, leading to a poor scent rather than a clear intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a variety of results without engaging with them suggests that the user does not find strong relevance in the titles or snippets. The broad range of results indicates a lack of focused intent, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, which indicates that they found enough relevant information in the snippet to warrant further investigation. This aligns more with the ApproachingSource label, as it reflects a more directed action in response to perceived information scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.415565013885498,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9995935425162316
+}

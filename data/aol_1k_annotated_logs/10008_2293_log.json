@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2293",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:05:43.677714",
+  "events": [
+    {
+      "session_id": "10008_2293",
+      "event_id": "10008_2293_qq-1214",
+      "timestamp": "2006-04-23 18:17:30",
+      "action_type": "QUERY",
+      "content": "the sherborn inn",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the sherborn inn...' does not seem to be a well-formed targeted query, as indicated by the presence of an invalid control character. This suggests that the user may not have a clear intent or that the query was insufficiently constructed to yield promising results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9109791100025177,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:06.372966"
+    },
+    {
+      "session_id": "10008_2293",
+      "event_id": "10008_2293_qq-1214_serp",
+      "timestamp": "2006-04-23 18:17:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: s her born inn, dover s her born regional school district, annie s outlet her creativity the loves of her life her writings her ranting s (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results indicate a lack of relevant and coherent options related to 'the sherborn inn...', suggesting the user is encountering poor information scent. The disorganized nature of the results implies that the query did not effectively target the desired information, leading to an ineffective search experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9573044657707215,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:06.372987"
+    },
+    {
+      "session_id": "10008_2293",
+      "event_id": "10008_2293_qq-1214_cd-7879",
+      "timestamp": "2006-04-23 18:17:30",
+      "action_type": "CLICK",
+      "content": "s her born inn",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 's her born inn...' appears to be a result of frustration or an attempt to salvage a poor search experience rather than a clear, targeted intent. Given the context of previous events showing poor information scent, this click does not reflect a successful or well-formed search action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9514584392309189,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:06.372994"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.718758821487427,
+      "decisions": [
+        {
+          "event_id": "10008_2293_qq-1214",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2293_qq-1214_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2293_qq-1214_cd-7879",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.0413901805877686,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the sherborn inn...' does not seem to be a well-formed targeted query, as indicated by the presence of an invalid control character. This suggests that the user may not have a clear intent or that the query was insufficiently constructed to yield promising results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewed results indicate a lack of relevant and coherent options related to 'the sherborn inn...', suggesting the user is encountering poor information scent. The disorganized nature of the results implies that the query did not effectively target the desired information, leading to an ineffective search experience.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 's her born inn...' appears to be a result of frustration or an attempt to salvage a poor search experience rather than a clear, targeted intent. Given the context of previous events showing poor information scent, this click does not reflect a successful or well-formed search action.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.64404296875,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9573044657707215
+}

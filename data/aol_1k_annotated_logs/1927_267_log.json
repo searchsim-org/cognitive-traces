@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_267",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:37:58.041332",
+  "events": [
+    {
+      "session_id": "1927_267",
+      "event_id": "1927_267_qq-164",
+      "timestamp": "2006-05-20 12:37:12",
+      "action_type": "QUERY",
+      "content": "orlando sentinel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'orlando sentinel...' suggests an initial search attempt, but the mention of an 'invalid control character' indicates a potential error in the query itself. This implies that the user might not have a clear or valid scent to follow, leading to a lack of clicks or relevant results, which aligns more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9110861003398896,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:38:21.287787"
+    },
+    {
+      "session_id": "1927_267",
+      "event_id": "1927_267_qq-164_serp",
+      "timestamp": "2006-05-20 12:37:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: feeds orlando sentinel com, orlando news weather sports business orlando sentinel, orlando news weather sports business orlando sentinel (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's view of 10 results that appear repetitive and lack diversity indicates a weak information scent. This could suggest that the user is not encountering promising or varied results, leading to a lack of engagement with the content. Hence, this scenario aligns more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0093306109309197,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:38:21.287805"
+    },
+    {
+      "session_id": "1927_267",
+      "event_id": "1927_267_qq-164_cd-1920",
+      "timestamp": "2006-05-20 12:37:12",
+      "action_type": "CLICK",
+      "content": "orlando news weather sports business orlando sentinel",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a specific result suggests that the user found some potential value in the snippet or title. While the previous events indicate issues with the search process, this click indicates an attempt to explore a source that seemed to offer relevant content, justifying the label ApproachingSource rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.971714797616005,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:38:21.287812"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.860201835632324,
+      "decisions": [
+        {
+          "event_id": "1927_267_qq-164",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_267_qq-164_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_267_qq-164_cd-1920",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.3000099658966064,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'orlando sentinel...' suggests an initial search attempt, but the mention of an 'invalid control character' indicates a potential error in the query itself. This implies that the user might not have a clear or valid scent to follow, leading to a lack of clicks or relevant results, which aligns more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's view of 10 results that appear repetitive and lack diversity indicates a weak information scent. This could suggest that the user is not encountering promising or varied results, leading to a lack of engagement with the content. Hence, this scenario aligns more with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a specific result suggests that the user found some potential value in the snippet or title. While the previous events indicate issues with the search process, this click indicates an attempt to explore a source that seemed to offer relevant content, justifying the label ApproachingSource rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.795444965362549,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0093306109309197
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2797",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:09:55.964596",
+  "events": [
+    {
+      "session_id": "11451_2797",
+      "event_id": "11451_2797_qq-1190",
+      "timestamp": "2006-03-15 22:37:11",
+      "action_type": "QUERY",
+      "content": "craigslist",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'craigslist...' lacks specificity and does not indicate a clear intent to find a particular item or information, suggesting the user is not finding promising results, leading to a new query without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0115952849388123,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:10:44.594477"
+    },
+    {
+      "session_id": "11451_2797",
+      "event_id": "11451_2797_qq-1190_serp",
+      "timestamp": "2006-03-15 22:37:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: craigslist lansing mi jobs apartments for sale services community and events, craigslist pittsburgh pa jobs apartments for sale services community and events, craigslist new haven ct jobs apartments for sale services community and events (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed 10 results, the content suggests a lack of focus or effectiveness in the search. The broad nature of the viewed results indicates that the user may not have found a satisfactory scent, and thus the label should reflect poor scent rather than continuing the search with intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9720499992370606,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:10:44.594500"
+    },
+    {
+      "session_id": "11451_2797",
+      "event_id": "11451_2797_qq-1190_cd-1326",
+      "timestamp": "2006-03-15 22:37:11",
+      "action_type": "CLICK",
+      "content": "craigslist dallas fort worth jobs apartments for sale services community and events",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'craigslist dallas fort worth jobs apartments for sale services community and events...' suggests the user is responding to a perceived strong scent from the result, indicating a specific exploration rather than a continuation of a prior search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0015975944697857,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:10:44.594504"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.388470888137817,
+      "decisions": [
+        {
+          "event_id": "11451_2797_qq-1190",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2797_qq-1190_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2797_qq-1190_cd-1326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.012103080749512,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'craigslist...' lacks specificity and does not indicate a clear intent to find a particular item or information, suggesting the user is not finding promising results, leading to a new query without clicks.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed 10 results, the content suggests a lack of focus or effectiveness in the search. The broad nature of the viewed results indicates that the user may not have found a satisfactory scent, and thus the label should reflect poor scent rather than continuing the search with intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'craigslist dallas fort worth jobs apartments for sale services community and events...' suggests the user is responding to a perceived strong scent from the result, indicating a specific exploration rather than a continuation of a prior search intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.9442241191864,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0115952849388123
+}

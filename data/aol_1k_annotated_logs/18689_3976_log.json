@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3976",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:21:07.010107",
+  "events": [
+    {
+      "session_id": "18689_3976",
+      "event_id": "18689_3976_qq-2238",
+      "timestamp": "2006-03-28 07:13:53",
+      "action_type": "QUERY",
+      "content": "newyorktimes",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query that results in an analysis error indicates a lack of clear information scent, as the user did not engage with any results or receive relevant feedback. This suggests the query did not lead to promising outcomes, aligning better with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9171915173530578,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:21:35.872717"
+    },
+    {
+      "session_id": "18689_3976",
+      "event_id": "18689_3976_qq-2238_serp",
+      "timestamp": "2006-03-28 07:13:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the new york times breaking news world news multimedia, hotels in times square the belvedere hotel new york, elizabeth let ts 1 new york times bestselling author (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, indicating they were assessing potential sources of information. This aligns more closely with ApproachingSource as they were exploring options based on scent from titles/snippets rather than indicating a targeted follow-up to a specific query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.983758270740509,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:21:35.872727"
+    },
+    {
+      "session_id": "18689_3976",
+      "event_id": "18689_3976_qq-2238_cd-8807",
+      "timestamp": "2006-03-28 07:13:53",
+      "action_type": "CLICK",
+      "content": "the new york times breaking news world news multimedia",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a search result suggests the user was investigating a specific source rather than following a clear scent from a successful search. Thus, this action is better categorized as ApproachingSource, as it reflects an active decision to explore further rather than merely following an initial scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.656,
+      "disagreement_score": 1.0073642775416374,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:21:35.872731"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.517697095870972,
+      "decisions": [
+        {
+          "event_id": "18689_3976_qq-2238",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3976_qq-2238_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3976_qq-2238_cd-8807",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.7890801429748535,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query that results in an analysis error indicates a lack of clear information scent, as the user did not engage with any results or receive relevant feedback. This suggests the query did not lead to promising outcomes, aligning better with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results, indicating they were assessing potential sources of information. This aligns more closely with ApproachingSource as they were exploring options based on scent from titles/snippets rather than indicating a targeted follow-up to a specific query.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a search result suggests the user was investigating a specific source rather than following a clear scent from a successful search. Thus, this action is better categorized as ApproachingSource, as it reflects an active decision to explore further rather than merely following an initial scent.",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.31853985786438,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.656,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0073642775416374
+}

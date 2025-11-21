@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3063",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:06:12.905158",
+  "events": [
+    {
+      "session_id": "12211_3063",
+      "event_id": "12211_3063_qq-1589",
+      "timestamp": "2006-05-12 15:22:18",
+      "action_type": "QUERY",
+      "content": "glatzconcerts.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a search but encountered an error, indicating that the query likely did not yield promising results. This suggests a lack of effective information scent rather than a clear, targeted intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9551085710525513,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:07:13.599807"
+    },
+    {
+      "session_id": "12211_3063",
+      "event_id": "12211_3063_qq-1589_serp",
+      "timestamp": "2006-05-12 15:22:18",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: anchorage concert association inspires and entertains alaskans, music celebrations international concert tours with integrity, tickets ticket monster sports concerts theater events (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed results, the presence of an analysis error implies that the user may not have found the titles compelling or relevant, thus failing to engage with the content meaningfully. This aligns more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9332243442535401,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:07:13.599826"
+    },
+    {
+      "session_id": "12211_3063",
+      "event_id": "12211_3063_qq-1589_cd-9472",
+      "timestamp": "2006-05-12 15:22:18",
+      "action_type": "CLICK",
+      "content": "salute to vienna new year s concert",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a specific concert suggests the user was drawn to it based on the title or description, which indicates an intent to explore further rather than simply following a scent. Thus, ApproachingSource is a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.028757068514824,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:07:13.599832"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.707600831985474,
+      "decisions": [
+        {
+          "event_id": "12211_3063_qq-1589",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3063_qq-1589_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3063_qq-1589_cd-9472",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.855557203292847,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a search but encountered an error, indicating that the query likely did not yield promising results. This suggests a lack of effective information scent rather than a clear, targeted intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed results, the presence of an analysis error implies that the user may not have found the titles compelling or relevant, thus failing to engage with the content meaningfully. This aligns more closely with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a specific concert suggests the user was drawn to it based on the title or description, which indicates an intent to explore further rather than simply following a scent. Thus, ApproachingSource is a more appropriate label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 33.95402908325195,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.028757068514824
+}

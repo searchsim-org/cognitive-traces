@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3421",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:51:54.117672",
+  "events": [
+    {
+      "session_id": "14668_3421",
+      "event_id": "14668_3421_qq-1886",
+      "timestamp": "2006-03-10 17:05:57",
+      "action_type": "QUERY",
+      "content": "why is the boston red sox logo a pair of sox",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'why is the boston red sox logo a pair of sox...' lacks specificity and a clear intent, suggesting the user may not have found what they were looking for in prior searches. This indicates a poor scent rather than a focused effort to pursue a known query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9760607182979584,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:52:37.220239"
+    },
+    {
+      "session_id": "14668_3421",
+      "event_id": "14668_3421_qq-1886_serp",
+      "timestamp": "2006-03-10 17:05:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the cambridge school of weston boston area private school the cambridge school of weston, red es escar lat a, m rosa red a kcia (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further engagement or clicks suggests that the user did not find the presented information satisfactory, leading to a conclusion of poor scent rather than following a clear, targeted search intention.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9863629281520844,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:52:37.220252"
+    },
+    {
+      "session_id": "14668_3421",
+      "event_id": "14668_3421_qq-1886_cd-11263",
+      "timestamp": "2006-03-10 17:05:57",
+      "action_type": "CLICK",
+      "content": "chris creamer s sports logos page sports logos net",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'chris creamer s sports logos page sports logos net...' which indicates they found the title/snippet compelling enough to investigate further, aligning more closely with the 'ApproachingSource' label rather than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0172381967306137,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:52:37.220257"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.86121392250061,
+      "decisions": [
+        {
+          "event_id": "14668_3421_qq-1886",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3421_qq-1886_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3421_qq-1886_cd-11263",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.91212797164917,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'why is the boston red sox logo a pair of sox...' lacks specificity and a clear intent, suggesting the user may not have found what they were looking for in prior searches. This indicates a poor scent rather than a focused effort to pursue a known query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without further engagement or clicks suggests that the user did not find the presented information satisfactory, leading to a conclusion of poor scent rather than following a clear, targeted search intention.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'chris creamer s sports logos page sports logos net...' which indicates they found the title/snippet compelling enough to investigate further, aligning more closely with the 'ApproachingSource' label rather than 'FollowingScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.942859172821045,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0172381967306137
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_205",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:43:08.739137",
+  "events": [
+    {
+      "session_id": "1722_205",
+      "event_id": "1722_205_qq-87",
+      "timestamp": "2006-05-20 15:31:22",
+      "action_type": "QUERY",
+      "content": "greenbaypressgazette",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query related to 'greenbaypressgazette', but the presence of an analysis error suggests that the query did not lead to promising results or an effective search path. This indicates a lack of strong information scent, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9051390707492828,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:43:42.416868"
+    },
+    {
+      "session_id": "1722_205",
+      "event_id": "1722_205_qq-87_serp",
+      "timestamp": "2006-05-20 15:31:22",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: press gazette media, press gazette media, press gazette journalism news (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the repeated mention of 'press gazette media' with an analysis error implies that the user did not find satisfactory information and may have been frustrated. This is more indicative of LeavingPatch, as they were likely to abandon their search due to insufficient results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9175900042057037,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:43:42.416893"
+    },
+    {
+      "session_id": "1722_205",
+      "event_id": "1722_205_qq-87_cd-1604",
+      "timestamp": "2006-05-20 15:31:22",
+      "action_type": "CLICK",
+      "content": "press gazette media",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The act of clicking on a result does not necessarily indicate FollowingScent if the prior context (errors and previous results) suggests a lack of quality information. Given the overall context of errors and potential dissatisfaction, this indicates the user was likely to leave the search rather than continuing effectively.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9807116985321045,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:43:42.416901"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.956523180007935,
+      "decisions": [
+        {
+          "event_id": "1722_205_qq-87",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_205_qq-87_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_205_qq-87_cd-1604",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.56692099571228,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query related to 'greenbaypressgazette', but the presence of an analysis error suggests that the query did not lead to promising results or an effective search path. This indicates a lack of strong information scent, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed multiple results, the repeated mention of 'press gazette media' with an analysis error implies that the user did not find satisfactory information and may have been frustrated. This is more indicative of LeavingPatch, as they were likely to abandon their search due to insufficient results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The act of clicking on a result does not necessarily indicate FollowingScent if the prior context (errors and previous results) suggests a lack of quality information. Given the overall context of errors and potential dissatisfaction, this indicates the user was likely to leave the search rather than continuing effectively.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.829946041107178,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9807116985321045
+}

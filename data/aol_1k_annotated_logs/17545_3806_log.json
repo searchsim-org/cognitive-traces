@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3806",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:54:44.030742",
+  "events": [
+    {
+      "session_id": "17545_3806",
+      "event_id": "17545_3806_qq-724",
+      "timestamp": "2006-03-08 09:47:39",
+      "action_type": "QUERY",
+      "content": "bankofamerica",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this as 'FollowingScent' despite the presence of an error message indicating a problem with the query. This suggests that the user's intent may not be clear or successful, indicating a lack of promising scent rather than a targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9495051264762878,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:13.476472"
+    },
+    {
+      "session_id": "17545_3806",
+      "event_id": "17545_3806_qq-724_serp",
+      "timestamp": "2006-03-08 09:47:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any suggests that the user did not find the results promising enough to pursue further. The repeated content also indicates a failure to provide diverse or relevant information, aligning more closely with 'PoorScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9813397660851478,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:13.476480"
+    },
+    {
+      "session_id": "17545_3806",
+      "event_id": "17545_3806_qq-724_cd-2599",
+      "timestamp": "2006-03-08 09:47:39",
+      "action_type": "CLICK",
+      "content": "bank of america banking credit cards loans and investing",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result following the previous actions indicates a potential last-ditch effort to find relevant information, but given the context of prior errors and poor scent, it could be argued that the user was not satisfied. This suggests they might be on the verge of abandoning the search altogether, aligning more with 'LeavingPatch'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9508989989757538,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:13.476483"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.802252054214478,
+      "decisions": [
+        {
+          "event_id": "17545_3806_qq-724",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3806_qq-724_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3806_qq-724_cd-2599",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.18196177482605,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst labeled this as 'FollowingScent' despite the presence of an error message indicating a problem with the query. This suggests that the user's intent may not be clear or successful, indicating a lack of promising scent rather than a targeted query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without engaging with any suggests that the user did not find the results promising enough to pursue further. The repeated content also indicates a failure to provide diverse or relevant information, aligning more closely with 'PoorScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result following the previous actions indicates a potential last-ditch effort to find relevant information, but given the context of prior errors and poor scent, it could be argued that the user was not satisfied. This suggests they might be on the verge of abandoning the search altogether, aligning more with 'LeavingPatch'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.146435022354126,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9813397660851478
+}

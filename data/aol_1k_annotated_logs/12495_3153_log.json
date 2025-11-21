@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3153",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:29:10.969340",
+  "events": [
+    {
+      "session_id": "12495_3153",
+      "event_id": "12495_3153_qq-358",
+      "timestamp": "2006-05-03 11:25:12",
+      "action_type": "QUERY",
+      "content": "bank of america",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'bank of america...' indicates a lack of specificity and clarity, which suggests that the user may not have a strong intent or focus. The use of an ellipsis further implies uncertainty, indicating that this query does not exhibit the characteristics of a well-formed, targeted query as would be expected in 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9277586460113525,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:30:01.239567"
+    },
+    {
+      "session_id": "12495_3153",
+      "event_id": "12495_3153_qq-358_serp",
+      "timestamp": "2006-05-03 11:25:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The repeated view of the same SERP results suggests that the user is not finding relevant information, and the viewing of multiple results without subsequent clicks indicates that they may be stuck in an unproductive search. This aligns more with 'LeavingPatch' as the user may be preparing to abandon the session due to a lack of promising options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.984743469953537,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:30:01.239587"
+    },
+    {
+      "session_id": "12495_3153",
+      "event_id": "12495_3153_qq-358_cd-2599",
+      "timestamp": "2006-05-03 11:25:12",
+      "action_type": "CLICK",
+      "content": "bank of america banking credit cards loans and investing",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the content indicates a lack of genuine interest or intent, as the query and previous actions suggest uncertainty. The click does not imply strong information scent if the previous actions failed to yield satisfactory results. Thus, it seems more appropriate to label it as 'ApproachingSource' where the user is exploring options without a clear indication of success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.998062002658844,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:30:01.239596"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.733643054962158,
+      "decisions": [
+        {
+          "event_id": "12495_3153_qq-358",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3153_qq-358_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3153_qq-358_cd-2599",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.209625005722046,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'bank of america...' indicates a lack of specificity and clarity, which suggests that the user may not have a strong intent or focus. The use of an ellipsis further implies uncertainty, indicating that this query does not exhibit the characteristics of a well-formed, targeted query as would be expected in 'FollowingScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The repeated view of the same SERP results suggests that the user is not finding relevant information, and the viewing of multiple results without subsequent clicks indicates that they may be stuck in an unproductive search. This aligns more with 'LeavingPatch' as the user may be preparing to abandon the session due to a lack of promising options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the content indicates a lack of genuine interest or intent, as the query and previous actions suggest uncertainty. The click does not imply strong information scent if the previous actions failed to yield satisfactory results. Thus, it seems more appropriate to label it as 'ApproachingSource' where the user is exploring options without a clear indication of success.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.071670055389404,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.998062002658844
+}

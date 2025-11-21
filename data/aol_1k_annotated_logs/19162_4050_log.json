@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4050",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:01:18.200580",
+  "events": [
+    {
+      "session_id": "19162_4050",
+      "event_id": "19162_4050_qq-2324",
+      "timestamp": "2006-04-02 17:57:33",
+      "action_type": "QUERY",
+      "content": "the zoo bahamas clubs",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'the zoo bahamas clubs...' appears to be vague and not well-formed, indicating a lack of clear intent or information scent. The presence of an analysis error suggests confusion or misalignment in the search process, which aligns with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.924443244934082,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:50.913600"
+    },
+    {
+      "session_id": "19162_4050",
+      "event_id": "19162_4050_qq-2324_serp",
+      "timestamp": "2006-04-02 17:57:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: port luca ya resort and yacht club in freeport grand bahama island bahamas, bahamas vacation guide travel information bahamas, bahamas vacation guide travel information bahamas (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While viewing 10 results indicates some engagement, the content viewed seems to be repetitive and lacks variety. The user may not find promising information, suggesting that their scent is poor. Therefore, this should be labeled as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0138975724577903,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:50.913607"
+    },
+    {
+      "session_id": "19162_4050",
+      "event_id": "19162_4050_qq-2324_cd-13828",
+      "timestamp": "2006-04-02 17:57:33",
+      "action_type": "CLICK",
+      "content": "bahamas vacations bahamas vacation travel resources",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result could imply engagement; however, if the content does not meet the user's needs, it may indicate that the user is still seeking relevant information. If the click is unfulfilling, it could lead to a LeavingPatch scenario rather than a FollowingScent. The user's path suggests ongoing confusion rather than a successful search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.032994332909584,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:50.913610"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.804111003875732,
+      "decisions": [
+        {
+          "event_id": "19162_4050_qq-2324",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4050_qq-2324_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4050_qq-2324_cd-13828",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.400652885437012,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'the zoo bahamas clubs...' appears to be vague and not well-formed, indicating a lack of clear intent or information scent. The presence of an analysis error suggests confusion or misalignment in the search process, which aligns with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While viewing 10 results indicates some engagement, the content viewed seems to be repetitive and lacks variety. The user may not find promising information, suggesting that their scent is poor. Therefore, this should be labeled as PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result could imply engagement; however, if the content does not meet the user's needs, it may indicate that the user is still seeking relevant information. If the click is unfulfilling, it could lead to a LeavingPatch scenario rather than a FollowingScent. The user's path suggests ongoing confusion rather than a successful search intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.400140762329102,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.032994332909584
+}

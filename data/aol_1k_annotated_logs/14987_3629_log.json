@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3629",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:13:13.973185",
+  "events": [
+    {
+      "session_id": "14987_3629",
+      "event_id": "14987_3629_qq-1159",
+      "timestamp": "2006-05-13 11:49:32",
+      "action_type": "QUERY",
+      "content": "nyc dept of education",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'nyc dept of education...' lacks specificity and does not demonstrate clear intent or focus, suggesting the user may not have found satisfactory information from previous attempts. The absence of clicks or engagement indicates a poor scent rather than a targeted search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9965840518474579,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:51.955593"
+    },
+    {
+      "session_id": "14987_3629",
+      "event_id": "14987_3629_qq-1159_serp",
+      "timestamp": "2006-05-13 11:49:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: jewish foundation for education of women, organization of american kod ly educators, sce school of continuing education home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any of them suggests the user did not find the listings compelling or relevant. This indicates a poor scent rather than a following scent, as the user likely did not perceive these results as fulfilling their information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 1.0035105034708978,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:51.955605"
+    },
+    {
+      "session_id": "14987_3629",
+      "event_id": "14987_3629_qq-1159_cd-7797",
+      "timestamp": "2006-05-13 11:49:32",
+      "action_type": "CLICK",
+      "content": "new york city department of education",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'new york city department of education...' indicates the user found this particular result promising enough to investigate further. This suggests they were approaching a source based on its perceived relevance, rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.992647585272789,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:51.955609"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.616197109222412,
+      "decisions": [
+        {
+          "event_id": "14987_3629_qq-1159",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3629_qq-1159_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3629_qq-1159_cd-7797",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.28406286239624,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'nyc dept of education...' lacks specificity and does not demonstrate clear intent or focus, suggesting the user may not have found satisfactory information from previous attempts. The absence of clicks or engagement indicates a poor scent rather than a targeted search effort.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without engaging with any of them suggests the user did not find the listings compelling or relevant. This indicates a poor scent rather than a following scent, as the user likely did not perceive these results as fulfilling their information need.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'new york city department of education...' indicates the user found this particular result promising enough to investigate further. This suggests they were approaching a source based on its perceived relevance, rather than simply following a scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.81278681755066,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0035105034708978
+}

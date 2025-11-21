@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3827",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:05:14.166523",
+  "events": [
+    {
+      "session_id": "17545_3827",
+      "event_id": "17545_3827_qq-2190",
+      "timestamp": "2006-04-06 14:23:57",
+      "action_type": "QUERY",
+      "content": "stuntlife",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'stuntlife...' suggests an unclear or incomplete search intent, which may indicate that the user did not find the initial scent promising enough, as evidenced by the invalid control character error. This lack of clarity points to a poor scent rather than a strong, targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9080720543861389,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:05:40.840529"
+    },
+    {
+      "session_id": "17545_3827",
+      "event_id": "17545_3827_qq-2190_serp",
+      "timestamp": "2006-04-06 14:23:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: stunt riding 4 life, stunt factory, united stunt women s association usa stunts (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not explicitly demonstrate strong intent to engage with any specific result, which is a requirement for 'FollowingScent'. The mere act of viewing results does not indicate a clear and targeted search; instead, it could imply the user is still evaluating options, aligning more closely with 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9995446344837546,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:05:40.840545"
+    },
+    {
+      "session_id": "17545_3827",
+      "event_id": "17545_3827_qq-2190_cd-12870",
+      "timestamp": "2006-04-06 14:23:57",
+      "action_type": "CLICK",
+      "content": "stunt bike forum",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'stunt bike forum' could indicate some interest, but without additional context regarding the user's intent or satisfaction level, it cannot be labeled as 'FollowingScent'. It might better fit 'ApproachingSource' if the click was based on a promising title or snippet, but given the previous events, it may reflect a lack of clear direction in the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0258307307958603,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:05:40.840548"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.800966739654541,
+      "decisions": [
+        {
+          "event_id": "17545_3827_qq-2190",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3827_qq-2190_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3827_qq-2190_cd-12870",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.02026104927063,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'stuntlife...' suggests an unclear or incomplete search intent, which may indicate that the user did not find the initial scent promising enough, as evidenced by the invalid control character error. This lack of clarity points to a poor scent rather than a strong, targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not explicitly demonstrate strong intent to engage with any specific result, which is a requirement for 'FollowingScent'. The mere act of viewing results does not indicate a clear and targeted search; instead, it could imply the user is still evaluating options, aligning more closely with 'ApproachingSource'.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'stunt bike forum' could indicate some interest, but without additional context regarding the user's intent or satisfaction level, it cannot be labeled as 'FollowingScent'. It might better fit 'ApproachingSource' if the click was based on a promising title or snippet, but given the previous events, it may reflect a lack of clear direction in the search.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.64136815071106,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0258307307958603
+}

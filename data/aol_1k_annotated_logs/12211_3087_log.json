@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3087",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:32:12.460325",
+  "events": [
+    {
+      "session_id": "12211_3087",
+      "event_id": "12211_3087_qq-276",
+      "timestamp": "2006-05-26 03:57:04",
+      "action_type": "QUERY",
+      "content": "mapquest",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action represents a query with a vague term 'mapquest...' which likely did not provide the user with a clear intent or strong information scent. The mention of an 'invalid control character' suggests that there may have been issues with the query itself, indicating that the user did not find satisfactory information, leading to a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8832143664360046,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:33:14.600840"
+    },
+    {
+      "session_id": "12211_3087",
+      "event_id": "12211_3087_qq-276_serp",
+      "timestamp": "2006-05-26 03:57:04",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: help mapquest com, discover the new mapquest, www mapquest s com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results related to 'mapquest' without subsequent clicks suggests that the user did not find any promising or relevant results. The presence of an 'invalid control character' likely indicates that the search did not yield satisfactory outcomes, which is consistent with a poor scent rather than a following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.913801634311676,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:33:14.600858"
+    },
+    {
+      "session_id": "12211_3087",
+      "event_id": "12211_3087_qq-276_cd-5463",
+      "timestamp": "2006-05-26 03:57:04",
+      "action_type": "CLICK",
+      "content": "discover the new mapquest",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'discover the new mapquest', which indicates an action taken to explore further based on perceived relevance. However, the earlier events suggest a lack of satisfactory information, so this click might not signify a strong following scent but rather an attempt to find something useful after poor initial results. Therefore, this could be better labeled as 'ApproachingSource' if the search was promising, but given the context, it aligns closer with a 'PoorScent' leading to an exploratory click.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0305595487356185,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:33:14.600867"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 28.765345811843872,
+      "decisions": [
+        {
+          "event_id": "12211_3087_qq-276",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3087_qq-276_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3087_qq-276_cd-5463",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.569977045059204,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action represents a query with a vague term 'mapquest...' which likely did not provide the user with a clear intent or strong information scent. The mention of an 'invalid control character' suggests that there may have been issues with the query itself, indicating that the user did not find satisfactory information, leading to a poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results related to 'mapquest' without subsequent clicks suggests that the user did not find any promising or relevant results. The presence of an 'invalid control character' likely indicates that the search did not yield satisfactory outcomes, which is consistent with a poor scent rather than a following scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'discover the new mapquest', which indicates an action taken to explore further based on perceived relevance. However, the earlier events suggest a lack of satisfactory information, so this click might not signify a strong following scent but rather an attempt to find something useful after poor initial results. Therefore, this could be better labeled as 'ApproachingSource' if the search was promising, but given the context, it aligns closer with a 'PoorScent' leading to an exploratory click.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 25.38729190826416,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0305595487356185
+}

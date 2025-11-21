@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3174",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:46:28.688197",
+  "events": [
+    {
+      "session_id": "12495_3174",
+      "event_id": "12495_3174_qq-1667",
+      "timestamp": "2006-05-27 18:50:09",
+      "action_type": "QUERY",
+      "content": "new mexico state golf course",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'new mexico state golf course...' does not seem to indicate a strong sense of direction or intent. Instead, it appears vague and may not have resulted in any meaningful interactions, suggesting the user likely did not find promising information, leading to the assignment of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.008572083711624,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:47:01.458539"
+    },
+    {
+      "session_id": "12495_3174",
+      "event_id": "12495_3174_qq-1667_serp",
+      "timestamp": "2006-05-27 18:50:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dead horse lake golf course knoxville public golf course driving range welcome to dead horse lake golf course, home western new mexico university western new mexico university, new mexico phone book and new mexico phone directory (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results does not necessarily indicate a strong scent. If the user was presented with a list of results but did not find any appealing or relevant options, this could indicate dissatisfaction or confusion, supporting a LeavingPatch label instead of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9867279320955277,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:47:01.458575"
+    },
+    {
+      "session_id": "12495_3174",
+      "event_id": "12495_3174_qq-1667_cd-9642",
+      "timestamp": "2006-05-27 18:50:09",
+      "action_type": "CLICK",
+      "content": "new mexico state university be bold shape the future",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result like 'new mexico state university be bold shape the future...' suggests that the user had a specific interest in that content, showing intent to explore further. This aligns more closely with ApproachingSource than FollowingScent, which implies starting a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0029130667448043,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:47:01.458586"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.408002853393555,
+      "decisions": [
+        {
+          "event_id": "12495_3174_qq-1667",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3174_qq-1667_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3174_qq-1667_cd-9642",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.715008020401001,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'new mexico state golf course...' does not seem to indicate a strong sense of direction or intent. Instead, it appears vague and may not have resulted in any meaningful interactions, suggesting the user likely did not find promising information, leading to the assignment of PoorScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results does not necessarily indicate a strong scent. If the user was presented with a list of results but did not find any appealing or relevant options, this could indicate dissatisfaction or confusion, supporting a LeavingPatch label instead of FollowingScent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result like 'new mexico state university be bold shape the future...' suggests that the user had a specific interest in that content, showing intent to explore further. This aligns more closely with ApproachingSource than FollowingScent, which implies starting a search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.297959804534912,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.008572083711624
+}

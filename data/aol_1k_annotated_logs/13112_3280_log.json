@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3280",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:26:06.731099",
+  "events": [
+    {
+      "session_id": "13112_3280",
+      "event_id": "13112_3280_qq-1763",
+      "timestamp": "2006-05-21 10:07:26",
+      "action_type": "QUERY",
+      "content": "flood fringe indiana",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'flood fringe indiana...' suggests the user is searching for specific information but may indicate a lack of clarity or specificity in their search, resulting in a potential failure to find useful results. This aligns more with the PoorScent label, as it implies the user may not find promising information from their initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9731324017047882,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:26:45.670138"
+    },
+    {
+      "session_id": "13112_3280",
+      "event_id": "13112_3280_qq-1763_serp",
+      "timestamp": "2006-05-21 10:07:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: in gov the official website of the state of indiana, holy spirit parish at gei st catholic church fishers indiana, home official ships he wana website ships he wana indiana (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, which indicates an exploratory behavior rather than a focused intent to follow a specific scent. The results may not have provided the strong information scent the analyst suggests, thus it aligns more with ApproachingSource as the user is attempting to find relevant content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9568675428628921,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:26:45.670151"
+    },
+    {
+      "session_id": "13112_3280",
+      "event_id": "13112_3280_qq-1763_cd-711",
+      "timestamp": "2006-05-21 10:07:26",
+      "action_type": "CLICK",
+      "content": "in gov the official website of the state of indiana",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the government website may not reflect a clear intent to follow a scent but rather an attempt to explore what might be relevant. If the previous searches did not yield satisfactory results, clicking could indicate a last resort to find information rather than a confident following of a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.028106725215912,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:26:45.670157"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.863778829574585,
+      "decisions": [
+        {
+          "event_id": "13112_3280_qq-1763",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3280_qq-1763_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3280_qq-1763_cd-711",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.236257076263428,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'flood fringe indiana...' suggests the user is searching for specific information but may indicate a lack of clarity or specificity in their search, resulting in a potential failure to find useful results. This aligns more with the PoorScent label, as it implies the user may not find promising information from their initial query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, which indicates an exploratory behavior rather than a focused intent to follow a specific scent. The results may not have provided the strong information scent the analyst suggests, thus it aligns more with ApproachingSource as the user is attempting to find relevant content.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the government website may not reflect a clear intent to follow a scent but rather an attempt to explore what might be relevant. If the previous searches did not yield satisfactory results, clicking could indicate a last resort to find information rather than a confident following of a scent.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.544488906860352,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.028106725215912
+}

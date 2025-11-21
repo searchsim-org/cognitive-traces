@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3049",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:53:14.921020",
+  "events": [
+    {
+      "session_id": "12211_3049",
+      "event_id": "12211_3049_qq-1578",
+      "timestamp": "2006-05-05 19:17:32",
+      "action_type": "QUERY",
+      "content": "97.1 fm",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content '97.1 fm...' appears to be incomplete or malformed, suggesting that the user's query did not yield useful or relevant results. The invalid control character indicates that the user might not have received satisfactory information, leading to a new query without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8120437383651733,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:09.095306"
+    },
+    {
+      "session_id": "12211_3049",
+      "event_id": "12211_3049_qq-1578_serp",
+      "timestamp": "2006-05-05 19:17:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: 97 97 97, fm 97 3 w z bg, 97 97 (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The SERP view shows a series of results that seem to be repetitive or nonsensical ('97 97 97, fm 97...'), which likely indicates the user did not find any promising or relevant information. This lack of meaningful results suggests that the user is encountering poor scent, rather than continuing a successful search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9559648394584656,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:09.095330"
+    },
+    {
+      "session_id": "12211_3049",
+      "event_id": "12211_3049_qq-1578_cd-9311",
+      "timestamp": "2006-05-05 19:17:32",
+      "action_type": "CLICK",
+      "content": "news talk 97 1 fm st louis news and talk kf tk fm radio com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result with similar nonsensical content ('news talk 97 1 fm...') indicates that the user may have been driven by desperation for relevant information rather than a clear, targeted intent. This aligns more with encountering poor scent leading to a click out of frustration rather than an intentional following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7040000000000001,
+      "disagreement_score": 0.9848240315914154,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:54:09.095337"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.283880949020386,
+      "decisions": [
+        {
+          "event_id": "12211_3049_qq-1578",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3049_qq-1578_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3049_qq-1578_cd-9311",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.539690017700195,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content '97.1 fm...' appears to be incomplete or malformed, suggesting that the user's query did not yield useful or relevant results. The invalid control character indicates that the user might not have received satisfactory information, leading to a new query without clicks.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The SERP view shows a series of results that seem to be repetitive or nonsensical ('97 97 97, fm 97...'), which likely indicates the user did not find any promising or relevant information. This lack of meaningful results suggests that the user is encountering poor scent, rather than continuing a successful search.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result with similar nonsensical content ('news talk 97 1 fm...') indicates that the user may have been driven by desperation for relevant information rather than a clear, targeted intent. This aligns more with encountering poor scent leading to a click out of frustration rather than an intentional following scent.",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 30.100211143493652,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7040000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9848240315914154
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3602",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:58:17.550291",
+  "events": [
+    {
+      "session_id": "14987_3602",
+      "event_id": "14987_3602_qq-1048",
+      "timestamp": "2006-04-10 17:48:28",
+      "action_type": "QUERY",
+      "content": "motorola",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query that does not provide a clear intent or context, indicated by the incomplete content 'motorola...'. The lack of specificity suggests the user may not have a strong scent leading them to a targeted query, thus labeling it as PoorScent is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9890799768269062,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:58:48.470120"
+    },
+    {
+      "session_id": "14987_3602",
+      "event_id": "14987_3602_qq-1048_serp",
+      "timestamp": "2006-04-10 17:48:28",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: motorola us unlocked cell phones moto razr, motorola 2 way radio nationwide sales service, motorola us unlocked cell phones moto razr (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple SERP results, but the content indicates a lack of clarity or relevance in the results (e.g., 'motorola us unlocked cell phones moto razr' followed by unrelated items). This suggests the user may be experiencing frustration with the results, leading to a potential exit from the search session rather than a continued focused search. Thus, LeavingPatch fits better.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9734471499919891,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:58:48.470140"
+    },
+    {
+      "session_id": "14987_3602",
+      "event_id": "14987_3602_qq-1048_cd-9098",
+      "timestamp": "2006-04-10 17:48:28",
+      "action_type": "CLICK",
+      "content": "motorola us unlocked cell phones moto razr",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'motorola us unlocked cell phones moto razr' does not reflect a clear scent or intention since the previous event indicates confusion or lack of clarity in the search. It may indicate a desperate attempt to find relevant information rather than a targeted approach, suggesting ApproachingSource is not the correct label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.989841541647911,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:58:48.470145"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.69717001914978,
+      "decisions": [
+        {
+          "event_id": "14987_3602_qq-1048",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3602_qq-1048_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3602_qq-1048_cd-9098",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.5723230838775635,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query that does not provide a clear intent or context, indicated by the incomplete content 'motorola...'. The lack of specificity suggests the user may not have a strong scent leading them to a targeted query, thus labeling it as PoorScent is more appropriate.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple SERP results, but the content indicates a lack of clarity or relevance in the results (e.g., 'motorola us unlocked cell phones moto razr' followed by unrelated items). This suggests the user may be experiencing frustration with the results, leading to a potential exit from the search session rather than a continued focused search. Thus, LeavingPatch fits better.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'motorola us unlocked cell phones moto razr' does not reflect a clear scent or intention since the previous event indicates confusion or lack of clarity in the search. It may indicate a desperate attempt to find relevant information rather than a targeted approach, suggesting ApproachingSource is not the correct label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.405946254730225,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.989841541647911
+}

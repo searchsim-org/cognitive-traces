@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3141",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:18:57.995733",
+  "events": [
+    {
+      "session_id": "12495_3141",
+      "event_id": "12495_3141_qq-1648",
+      "timestamp": "2006-04-22 18:24:46",
+      "action_type": "QUERY",
+      "content": "zianet.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'zianet.com...' indicates an attempt to search for specific information, but the presence of an 'Invalid control character' implies that the query failed to execute properly, leading to potential confusion or lack of relevant results. This suggests a poor scent due to the error rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9035809099674225,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:19:52.064601"
+    },
+    {
+      "session_id": "12495_3141",
+      "event_id": "12495_3141_qq-1648_serp",
+      "timestamp": "2006-04-22 18:24:46",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www kri zia net, zia net premium internet service, www de side ren zia net (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results from a SERP without any indication of clicks or engagement suggests that the user did not find the results promising. The presence of an invalid control character in the original query likely left the user unsatisfied with the results, indicating a poor scent rather than a continuous search with intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9162846565246582,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:19:52.064619"
+    },
+    {
+      "session_id": "12495_3141",
+      "event_id": "12495_3141_qq-1648_cd-9657",
+      "timestamp": "2006-04-22 18:24:46",
+      "action_type": "CLICK",
+      "content": "zia net premium internet service",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'zia net premium internet service' could be seen as an attempt to engage with the content, but given the context of the previous errors, it is more indicative of a search driven by confusion or desperation rather than a well-formed intent to follow a scent. This suggests the label 'ApproachingSource' is not appropriate as it assumes a stronger information scent than what is indicated by the previous events.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9823941439390182,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:19:52.064622"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.17869210243225,
+      "decisions": [
+        {
+          "event_id": "12495_3141_qq-1648",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3141_qq-1648_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3141_qq-1648_cd-9657",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 13.306388854980469,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'zianet.com...' indicates an attempt to search for specific information, but the presence of an 'Invalid control character' implies that the query failed to execute properly, leading to potential confusion or lack of relevant results. This suggests a poor scent due to the error rather than a clear intent to follow a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results from a SERP without any indication of clicks or engagement suggests that the user did not find the results promising. The presence of an invalid control character in the original query likely left the user unsatisfied with the results, indicating a poor scent rather than a continuous search with intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'zia net premium internet service' could be seen as an attempt to engage with the content, but given the context of the previous errors, it is more indicative of a search driven by confusion or desperation rather than a well-formed intent to follow a scent. This suggests the label 'ApproachingSource' is not appropriate as it assumes a stronger information scent than what is indicated by the previous events.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.253602981567383,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9823941439390182
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3311",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:48:00.548098",
+  "events": [
+    {
+      "session_id": "13119_3311",
+      "event_id": "13119_3311_qq-1795",
+      "timestamp": "2006-03-31 18:37:32",
+      "action_type": "QUERY",
+      "content": "real estate agents in panama city fl",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'real estate agents in panama city fl' lacks specificity and does not show a clear intent to find a particular agent or service, which suggests a weak information scent. The analyst's label of 'FollowingScent' implies a strong intent that is not present here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0014377985149623,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:35.783383"
+    },
+    {
+      "session_id": "13119_3311",
+      "event_id": "13119_3311_qq-1795_serp",
+      "timestamp": "2006-03-31 18:37:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: st augustine fl real estate agents, st augustine fl real estate agents, mesa real estate city mesa real estate agents (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The repeated viewing of results for 'st augustine fl real estate agents' indicates that the user is not finding satisfactory information, leading to a lack of engagement with the content. This aligns with the characteristics of 'PoorScent' rather than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9905121758580208,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:35.783392"
+    },
+    {
+      "session_id": "13119_3311",
+      "event_id": "13119_3311_qq-1795_cd-10080",
+      "timestamp": "2006-03-31 18:37:32",
+      "action_type": "CLICK",
+      "content": "panama city beach real estate panama city beach condos for sale",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'panama city beach real estate panama city beach condos for sale' suggests that the user is attempting to gather more information based on the perceived relevance of the title, indicating a strong information scent rather than just a continuation of a search. This aligns more closely with 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0095118276774884,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:35.783395"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.241688013076782,
+      "decisions": [
+        {
+          "event_id": "13119_3311_qq-1795",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3311_qq-1795_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3311_qq-1795_cd-10080",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.4390411376953125,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'real estate agents in panama city fl' lacks specificity and does not show a clear intent to find a particular agent or service, which suggests a weak information scent. The analyst's label of 'FollowingScent' implies a strong intent that is not present here.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The repeated viewing of results for 'st augustine fl real estate agents' indicates that the user is not finding satisfactory information, leading to a lack of engagement with the content. This aligns with the characteristics of 'PoorScent' rather than 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'panama city beach real estate panama city beach condos for sale' suggests that the user is attempting to gather more information based on the perceived relevance of the title, indicating a strong information scent rather than just a continuation of a search. This aligns more closely with 'ApproachingSource'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.200031995773315,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0095118276774884
+}

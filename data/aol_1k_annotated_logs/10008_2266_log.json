@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2266",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:50:22.009840",
+  "events": [
+    {
+      "session_id": "10008_2266",
+      "event_id": "10008_2266_qq-1178",
+      "timestamp": "2006-03-16 15:30:24",
+      "action_type": "QUERY",
+      "content": "cabot house furniture",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cabot house furniture' seems vague and does not convey a strong intent or specificity. This suggests the user might not find promising results and could lead to a lack of engagement or further attempts. The presence of an error message indicates issues with the query, supporting the notion of poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9635674089193345,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:54.282697"
+    },
+    {
+      "session_id": "10008_2266",
+      "event_id": "10008_2266_qq-1178_serp",
+      "timestamp": "2006-03-16 15:30:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cabot house, design your home a fresh approach for inspired spaces cabot house furniture and design furniture, cabot public school district cabot arkansas (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clicking on any suggests that the user did not find relevant or compelling information. This aligns with the concept of PoorScent, as the user is likely encountering a lack of useful content or strong signals in the results presented.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9884035356342793,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:54.282704"
+    },
+    {
+      "session_id": "10008_2266",
+      "event_id": "10008_2266_qq-1178_cd-7832",
+      "timestamp": "2006-03-16 15:30:24",
+      "action_type": "CLICK",
+      "content": "design your home a fresh approach for inspired spaces cabot house furniture and design furniture",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the previous actions indicate that the query and SERP view did not present strong signals. Therefore, the click may not stem from a clear intent or strong information scent, but instead, a last-ditch effort to find relevant content, indicating a less certain approach than suggested by FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9990054458379746,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:54.282707"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.574403762817383,
+      "decisions": [
+        {
+          "event_id": "10008_2266_qq-1178",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2266_qq-1178_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2266_qq-1178_cd-7832",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.952079057693481,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cabot house furniture' seems vague and does not convey a strong intent or specificity. This suggests the user might not find promising results and could lead to a lack of engagement or further attempts. The presence of an error message indicates issues with the query, supporting the notion of poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without clicking on any suggests that the user did not find relevant or compelling information. This aligns with the concept of PoorScent, as the user is likely encountering a lack of useful content or strong signals in the results presented.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the previous actions indicate that the query and SERP view did not present strong signals. Therefore, the click may not stem from a clear intent or strong information scent, but instead, a last-ditch effort to find relevant content, indicating a less certain approach than suggested by FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.415916681289673,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9990054458379746
+}

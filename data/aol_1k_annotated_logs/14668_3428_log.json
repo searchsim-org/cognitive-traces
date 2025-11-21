@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3428",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:56:59.582172",
+  "events": [
+    {
+      "session_id": "14668_3428",
+      "event_id": "14668_3428_qq-1136",
+      "timestamp": "2006-03-17 15:45:44",
+      "action_type": "QUERY",
+      "content": "bbb",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have issues (invalid control character), which suggests that the user may not have formulated a clear or targeted query. This indicates a lack of promising information scent rather than a well-formed search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8809030413627624,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:57:31.704647"
+    },
+    {
+      "session_id": "14668_3428",
+      "event_id": "14668_3428_qq-1136_serp",
+      "timestamp": "2006-03-17 15:45:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bbb serving western michigan start with trust, sexiest bbb w s on the planet, bbb serving new jersey start with trust (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results with poor content quality (due to the invalid control character) suggests that the user is not effectively engaging with valuable information. The output does not indicate strong information scent leading to a targeted search, but rather reflects a situation where the user may be evaluating low-quality results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8609145164489747,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:57:31.704655"
+    },
+    {
+      "session_id": "14668_3428",
+      "event_id": "14668_3428_qq-1136_cd-7756",
+      "timestamp": "2006-03-17 15:45:44",
+      "action_type": "CLICK",
+      "content": "bbb start with trust better business bureau",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicks on a result that does not seem to meet their needs due to prior issues with the search. This may suggest frustration or confusion leading to a potential exit from the search session rather than a successful continuation of a well-formed search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.974645659327507,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:57:31.704659"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.414777994155884,
+      "decisions": [
+        {
+          "event_id": "14668_3428_qq-1136",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3428_qq-1136_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3428_qq-1136_cd-7756",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.454843282699585,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have issues (invalid control character), which suggests that the user may not have formulated a clear or targeted query. This indicates a lack of promising information scent rather than a well-formed search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results with poor content quality (due to the invalid control character) suggests that the user is not effectively engaging with valuable information. The output does not indicate strong information scent leading to a targeted search, but rather reflects a situation where the user may be evaluating low-quality results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicks on a result that does not seem to meet their needs due to prior issues with the search. This may suggest frustration or confusion leading to a potential exit from the search session rather than a successful continuation of a well-formed search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.017040014266968,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.974645659327507
+}

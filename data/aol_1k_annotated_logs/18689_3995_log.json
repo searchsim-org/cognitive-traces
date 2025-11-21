@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3995",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:30:35.893056",
+  "events": [
+    {
+      "session_id": "18689_3995",
+      "event_id": "18689_3995_qq-2256",
+      "timestamp": "2006-04-29 10:54:51",
+      "action_type": "QUERY",
+      "content": "how to calculate nutritional values",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'how to calculate nutritional values...' lacks specificity and does not indicate strong intent. The presence of an invalid control character suggests an error, and this could lead the user to realize that they need a more refined or focused query, thus indicating a PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8849403262138367,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:31:00.534213"
+    },
+    {
+      "session_id": "18689_3995",
+      "event_id": "18689_3995_qq-2256_serp",
+      "timestamp": "2006-04-29 10:54:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: future value calculator a financial calculator for windows, www value nutrition center com, to m cc credit calculate how phuket one real estate (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of 10 results that include misformatted or irrelevant content suggests that the user is not finding promising options. This indicates a lack of strong information scent, aligning more with PoorScent rather than FollowingScent, as the user likely needs to reevaluate their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9775389194488525,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:31:00.534220"
+    },
+    {
+      "session_id": "18689_3995",
+      "event_id": "18689_3995_qq-2256_cd-13254",
+      "timestamp": "2006-04-29 10:54:51",
+      "action_type": "CLICK",
+      "content": "self nutrition data food facts information calorie calculator",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'self nutrition data food facts information calorie calculator...' suggests that the user is attempting to gather specific information. This aligns more with ApproachingSource, as the user is transitioning from viewing search results to investigating a particular resource that presumably has strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9581365615129471,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:31:00.534222"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.281538009643555,
+      "decisions": [
+        {
+          "event_id": "18689_3995_qq-2256",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3995_qq-2256_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3995_qq-2256_cd-13254",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.1502790451049805,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'how to calculate nutritional values...' lacks specificity and does not indicate strong intent. The presence of an invalid control character suggests an error, and this could lead the user to realize that they need a more refined or focused query, thus indicating a PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of 10 results that include misformatted or irrelevant content suggests that the user is not finding promising options. This indicates a lack of strong information scent, aligning more with PoorScent rather than FollowingScent, as the user likely needs to reevaluate their search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'self nutrition data food facts information calorie calculator...' suggests that the user is attempting to gather specific information. This aligns more with ApproachingSource, as the user is transitioning from viewing search results to investigating a particular resource that presumably has strong information scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.101720094680786,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9775389194488525
+}

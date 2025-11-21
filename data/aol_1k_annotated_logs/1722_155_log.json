@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_155",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:10:32.955932",
+  "events": [
+    {
+      "session_id": "1722_155",
+      "event_id": "1722_155_qq-73",
+      "timestamp": "2006-03-12 14:02:29",
+      "action_type": "QUERY",
+      "content": "hampton inn",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hampton inn...' lacks specificity and does not demonstrate clear intent or focus on a particular aspect, suggesting that the user may not have found the initial search promising. A more targeted query would typically indicate FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0073411829769612,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:10:58.942722"
+    },
+    {
+      "session_id": "1722_155",
+      "event_id": "1722_155_qq-73_serp",
+      "timestamp": "2006-03-12 14:02:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: hampton inn hilton com, hampton inn tropicana com, hampton inn and suites (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results implies the user is assessing their options, but without an indication of which result they find promising or relevant, it is more aligned with ApproachingSource rather than FollowingScent. The user might still be in an exploratory phase.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0099534496665001,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:10:58.942738"
+    },
+    {
+      "session_id": "1722_155",
+      "event_id": "1722_155_qq-73_cd-1586",
+      "timestamp": "2006-03-12 14:02:29",
+      "action_type": "CLICK",
+      "content": "hampton inn hilton com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'hampton inn hilton com' suggests the user is investigating a potential source based on its title/snippet. However, without additional context indicating they had a clear intent before clicking, this is better labeled as ApproachingSource rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0006330765783786,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:10:58.942744"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.614375829696655,
+      "decisions": [
+        {
+          "event_id": "1722_155_qq-73",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_155_qq-73_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_155_qq-73_cd-1586",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.9010701179504395,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hampton inn...' lacks specificity and does not demonstrate clear intent or focus on a particular aspect, suggesting that the user may not have found the initial search promising. A more targeted query would typically indicate FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results implies the user is assessing their options, but without an indication of which result they find promising or relevant, it is more aligned with ApproachingSource rather than FollowingScent. The user might still be in an exploratory phase.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'hampton inn hilton com' suggests the user is investigating a potential source based on its title/snippet. However, without additional context indicating they had a clear intent before clicking, this is better labeled as ApproachingSource rather than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.244992971420288,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0099534496665001
+}

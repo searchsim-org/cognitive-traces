@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4078",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:47:35.127717",
+  "events": [
+    {
+      "session_id": "19655_4078",
+      "event_id": "19655_4078_qq-2356",
+      "timestamp": "2006-03-22 11:54:03",
+      "action_type": "QUERY",
+      "content": "public records search",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'public records search' lacks specificity and does not show a clear intent towards a specific outcome, indicating that the user may not find promising results. The mention of an analysis error suggests a lack of engagement or interest in the results presented, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.924687671661377,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:48:00.267584"
+    },
+    {
+      "session_id": "19655_4078",
+      "event_id": "19655_4078_qq-2356_serp",
+      "timestamp": "2006-03-22 11:54:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: locate records com offers free background property public records people search file search, free public records search the original resource worldwide, free public records search the original resource worldwide (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, which indicates an interest in the information presented. However, the lack of specificity in the content viewed suggests they are still in the exploratory phase rather than demonstrating a strong targeted query intent. Thus, ApproachingSource is more appropriate as they are actively assessing potential sources.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0041567236185074,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:48:00.267595"
+    },
+    {
+      "session_id": "19655_4078",
+      "event_id": "19655_4078_qq-2356_cd-244",
+      "timestamp": "2006-03-22 11:54:03",
+      "action_type": "CLICK",
+      "content": "free public records search the original resource worldwide",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the content description does not indicate a clear and targeted intent that would justify the label FollowingScent. The click could represent curiosity rather than a well-defined search intent, suggesting that ApproachingSource fits better as the user is investigating a possible option.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.0179926782846451,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:48:00.267598"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.177252769470215,
+      "decisions": [
+        {
+          "event_id": "19655_4078_qq-2356",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4078_qq-2356_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4078_qq-2356_cd-244",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.120151042938232,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'public records search' lacks specificity and does not show a clear intent towards a specific outcome, indicating that the user may not find promising results. The mention of an analysis error suggests a lack of engagement or interest in the results presented, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, which indicates an interest in the information presented. However, the lack of specificity in the content viewed suggests they are still in the exploratory phase rather than demonstrating a strong targeted query intent. Thus, ApproachingSource is more appropriate as they are actively assessing potential sources.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the content description does not indicate a clear and targeted intent that would justify the label FollowingScent. The click could represent curiosity rather than a well-defined search intent, suggesting that ApproachingSource fits better as the user is investigating a possible option.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.75777006149292,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0179926782846451
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3144",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:21:46.658491",
+  "events": [
+    {
+      "session_id": "12495_3144",
+      "event_id": "12495_3144_qq-1650",
+      "timestamp": "2006-04-26 21:19:08",
+      "action_type": "QUERY",
+      "content": "la vina winery",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query with 'la vina winery', which indicates a lack of sufficient information scent if the analyst noted an invalid control character. This suggests the query was not well-formed or targeted enough to lead to a successful search, warranting a PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8535811901092529,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:22:35.795569"
+    },
+    {
+      "session_id": "12495_3144",
+      "event_id": "12495_3144_qq-1650_serp",
+      "timestamp": "2006-04-26 21:19:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: vina robles, www la winery com, la dolce vita winery (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results without indicated engagement (like clicks) and the mention of an invalid control character suggests that the user did not find promising information scent in the SERP. Therefore, this event is better labeled as PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9822384387254715,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:22:35.795579"
+    },
+    {
+      "session_id": "12495_3144",
+      "event_id": "12495_3144_qq-1650_cd-9658",
+      "timestamp": "2006-04-26 21:19:08",
+      "action_type": "CLICK",
+      "content": "la vi a winery welcome",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'la vi a winery welcome' indicates an attempt to engage with content, but given the context of the previous events indicating poor information scent, this action could be interpreted as a final attempt before abandoning the search entirely. Thus, LeavingPatch may be more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9972491361200809,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:22:35.795583"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.290608167648315,
+      "decisions": [
+        {
+          "event_id": "12495_3144_qq-1650",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3144_qq-1650_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3144_qq-1650_cd-9658",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.997744083404541,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query with 'la vina winery', which indicates a lack of sufficient information scent if the analyst noted an invalid control character. This suggests the query was not well-formed or targeted enough to lead to a successful search, warranting a PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of viewing 10 results without indicated engagement (like clicks) and the mention of an invalid control character suggests that the user did not find promising information scent in the SERP. Therefore, this event is better labeled as PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'la vi a winery welcome' indicates an attempt to engage with content, but given the context of the previous events indicating poor information scent, this action could be interpreted as a final attempt before abandoning the search entirely. Thus, LeavingPatch may be more appropriate than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.477149963378906,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9972491361200809
+}

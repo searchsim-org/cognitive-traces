@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4042",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:56:50.991260",
+  "events": [
+    {
+      "session_id": "19162_4042",
+      "event_id": "19162_4042_qq-2313",
+      "timestamp": "2006-03-24 19:14:33",
+      "action_type": "QUERY",
+      "content": "forever 21",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'forever 21...' lacks specificity, which suggests the user may not have a clear intent in their search. The presence of an invalid control character indicates that the query may have been malformed, leading to a lack of promising scent from the results. Therefore, it is more fitting to label this as PoorScent, as the user did not engage further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8933048248291016,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:57:46.454743"
+    },
+    {
+      "session_id": "19162_4042",
+      "event_id": "19162_4042_qq-2313_serp",
+      "timestamp": "2006-03-24 19:14:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: shop forever 21 for the latest trends and the best deals forever 21, forever 21 a it y c com, forever photos forever photo (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not express a clear intent to continue the search based on the information scent. Instead, the results viewed indicate a potential lack of relevance due to the repeated mention of 'forever 21.' This suggests that the user may have been scanning for options without a solid direction, fitting the ApproachingSource label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.969085443019867,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:57:46.454775"
+    },
+    {
+      "session_id": "19162_4042",
+      "event_id": "19162_4042_qq-2313_cd-3361",
+      "timestamp": "2006-03-24 19:14:33",
+      "action_type": "CLICK",
+      "content": "shop forever 21 for the latest trends and the best deals forever 21",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the result 'shop forever 21 for the latest trends and the best deals forever 21...' does not indicate a successful foraging experience. The repetitive nature of the content suggests that the user may have been misled by the title or snippet and found the content unsatisfactory, indicating a PoorScent situation rather than a FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9797720089554787,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:57:46.454783"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.28048825263977,
+      "decisions": [
+        {
+          "event_id": "19162_4042_qq-2313",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4042_qq-2313_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4042_qq-2313_cd-3361",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.449653148651123,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'forever 21...' lacks specificity, which suggests the user may not have a clear intent in their search. The presence of an invalid control character indicates that the query may have been malformed, leading to a lack of promising scent from the results. Therefore, it is more fitting to label this as PoorScent, as the user did not engage further.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results but did not express a clear intent to continue the search based on the information scent. Instead, the results viewed indicate a potential lack of relevance due to the repeated mention of 'forever 21.' This suggests that the user may have been scanning for options without a solid direction, fitting the ApproachingSource label better than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on the result 'shop forever 21 for the latest trends and the best deals forever 21...' does not indicate a successful foraging experience. The repetitive nature of the content suggests that the user may have been misled by the title or snippet and found the content unsatisfactory, indicating a PoorScent situation rather than a FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 33.40286684036255,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9797720089554787
+}

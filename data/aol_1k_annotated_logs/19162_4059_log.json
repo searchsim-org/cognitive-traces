@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4059",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:06:59.922496",
+  "events": [
+    {
+      "session_id": "19162_4059",
+      "event_id": "19162_4059_qq-2335",
+      "timestamp": "2006-05-06 13:45:40",
+      "action_type": "QUERY",
+      "content": "franz ferdinand myspace",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'franz ferdinand myspace...' does not demonstrate a well-formed targeted search. Instead, the lack of specificity and clarity in the query suggests that the user may not be confident in the information they seek, indicating a poor scent for relevant results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9983892127871513,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:07:30.600962"
+    },
+    {
+      "session_id": "19162_4059",
+      "event_id": "19162_4059_qq-2335_serp",
+      "timestamp": "2006-05-06 13:45:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: featured content on myspace, www bling myspace com, featured content on myspace (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst's label of FollowingScent may not be appropriate as viewing 10 results with generic content (e.g., 'featured content on myspace') indicates that the user may not have found relevant information. This suggests they are losing interest and may be considering abandoning the search, fitting the LeavingPatch label better.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9250750660896301,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:07:30.600980"
+    },
+    {
+      "session_id": "19162_4059",
+      "event_id": "19162_4059_qq-2335_cd-699",
+      "timestamp": "2006-05-06 13:45:40",
+      "action_type": "CLICK",
+      "content": "featured content on myspace",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'featured content on myspace...' implies that the user found this specific result appealing enough to investigate further, which aligns more closely with ApproachingSource. The label of FollowingScent is misleading as it implies a strong and continued intent rather than a decision to explore a potentially relevant source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0149428352713585,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:07:30.600988"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.322509765625,
+      "decisions": [
+        {
+          "event_id": "19162_4059_qq-2335",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4059_qq-2335_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4059_qq-2335_cd-699",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.697039842605591,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'franz ferdinand myspace...' does not demonstrate a well-formed targeted search. Instead, the lack of specificity and clarity in the query suggests that the user may not be confident in the information they seek, indicating a poor scent for relevant results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The analyst's label of FollowingScent may not be appropriate as viewing 10 results with generic content (e.g., 'featured content on myspace') indicates that the user may not have found relevant information. This suggests they are losing interest and may be considering abandoning the search, fitting the LeavingPatch label better.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'featured content on myspace...' implies that the user found this specific result appealing enough to investigate further, which aligns more closely with ApproachingSource. The label of FollowingScent is misleading as it implies a strong and continued intent rather than a decision to explore a potentially relevant source.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.437240839004517,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0149428352713585
+}

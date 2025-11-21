@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2356",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:37:15.204900",
+  "events": [
+    {
+      "session_id": "10133_2356",
+      "event_id": "10133_2356_qq-1254",
+      "timestamp": "2006-03-24 12:16:55",
+      "action_type": "QUERY",
+      "content": "free bass lesson on line",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'free bass lesson on line...' does not indicate a clear intent or direction, as it appears to be a vague and incomplete search term. This suggests that the user may not have found promising information and is exploring alternatives, which aligns more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9813638955354691,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:37:33.494094"
+    },
+    {
+      "session_id": "10133_2356",
+      "event_id": "10133_2356_qq-1254_serp",
+      "timestamp": "2006-03-24 12:16:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: study bass free online bass lessons, classical guitar free on line lessons, on line piano lessons (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results indicates a search for specific information, but the titles suggest a broad range of topics rather than a targeted query. This indicates that the user is likely assessing the information available rather than continuing with a strong scent, making ApproachingSource a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9867418289184571,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:37:33.494111"
+    },
+    {
+      "session_id": "10133_2356",
+      "event_id": "10133_2356_qq-1254_cd-8031",
+      "timestamp": "2006-03-24 12:16:55",
+      "action_type": "CLICK",
+      "content": "online bass lessons cyber fret bass com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'online bass lessons cyber fret bass com...' suggests the user is exploring a specific result but does not indicate a clear intention that follows a well-formed query. The lack of strong scent in the previous events indicates that this click may be exploratory rather than indicative of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.985624897480011,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:37:33.494118"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.708580255508423,
+      "decisions": [
+        {
+          "event_id": "10133_2356_qq-1254",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2356_qq-1254_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2356_qq-1254_cd-8031",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.661332130432129,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'free bass lesson on line...' does not indicate a clear intent or direction, as it appears to be a vague and incomplete search term. This suggests that the user may not have found promising information and is exploring alternatives, which aligns more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user's action of viewing 10 results indicates a search for specific information, but the titles suggest a broad range of topics rather than a targeted query. This indicates that the user is likely assessing the information available rather than continuing with a strong scent, making ApproachingSource a more fitting label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'online bass lessons cyber fret bass com...' suggests the user is exploring a specific result but does not indicate a clear intention that follows a well-formed query. The lack of strong scent in the previous events indicates that this click may be exploratory rather than indicative of FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.660770654678345,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9867418289184571
+}

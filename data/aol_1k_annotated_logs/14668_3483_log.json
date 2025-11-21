@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3483",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:36:40.970461",
+  "events": [
+    {
+      "session_id": "14668_3483",
+      "event_id": "14668_3483_qq-1920",
+      "timestamp": "2006-05-01 13:04:14",
+      "action_type": "QUERY",
+      "content": "ohio dept of taxation",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query with the phrase 'ohio dept of taxation...', which suggests the user might not have a clear targeted intent, indicated by the lack of clarity and specificity in the query. This could reflect a weak scent leading to ineffective search results, hence labeling it as PoorScent is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9820718869566918,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:37:11.539967"
+    },
+    {
+      "session_id": "14668_3483",
+      "event_id": "14668_3483_qq-1920_serp",
+      "timestamp": "2006-05-01 13:04:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ohio department of taxation home, ohio department of taxation online services login, ohio department of taxation online services login (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that are variations of 'ohio department of taxation' does not indicate a strong scent. The titles are quite similar and may not fulfill the user's information need, suggesting the search is not yielding promising results. This aligns with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0133990526199341,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:37:11.540004"
+    },
+    {
+      "session_id": "14668_3483",
+      "event_id": "14668_3483_qq-1920_cd-11322",
+      "timestamp": "2006-05-01 13:04:14",
+      "action_type": "CLICK",
+      "content": "ohio department of taxation home",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'ohio department of taxation home' indicates the user is seeking further information and finds this particular link promising based on the title and context. This behavior aligns better with ApproachingSource rather than FollowingScent, as the user is acting on a perceived stronger information scent from the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0333485275506973,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:37:11.540008"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.025335788726807,
+      "decisions": [
+        {
+          "event_id": "14668_3483_qq-1920",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3483_qq-1920_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3483_qq-1920_cd-11322",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.554556846618652,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query with the phrase 'ohio dept of taxation...', which suggests the user might not have a clear targeted intent, indicated by the lack of clarity and specificity in the query. This could reflect a weak scent leading to ineffective search results, hence labeling it as PoorScent is more appropriate.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that are variations of 'ohio department of taxation' does not indicate a strong scent. The titles are quite similar and may not fulfill the user's information need, suggesting the search is not yielding promising results. This aligns with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'ohio department of taxation home' indicates the user is seeking further information and finds this particular link promising based on the title and context. This behavior aligns better with ApproachingSource rather than FollowingScent, as the user is acting on a perceived stronger information scent from the search results.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.708380937576294,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0333485275506973
+}

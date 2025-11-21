@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3627",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:12:17.346712",
+  "events": [
+    {
+      "session_id": "14987_3627",
+      "event_id": "14987_3627_qq-2022",
+      "timestamp": "2006-05-11 19:44:17",
+      "action_type": "QUERY",
+      "content": "aviatorsports.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query that led to an analysis error, indicating no effective scent was present. The presence of an invalid control character suggests that the query did not yield promising results, which aligns more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.913706773519516,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:12:50.131157"
+    },
+    {
+      "session_id": "14987_3627",
+      "event_id": "14987_3627_qq-2022_serp",
+      "timestamp": "2006-05-11 19:44:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www aviator sports com, u s sport aviation expo sebring, rainbow aviation the light sport professionals (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results that contain errors or are not informative suggests that the user is not finding relevant information. The analyst's label of FollowingScent implies the user is on a successful search path, which contradicts the observation of viewing results that are not promising.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9084936559200287,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:12:50.131165"
+    },
+    {
+      "session_id": "14987_3627",
+      "event_id": "14987_3627_qq-2022_cd-11608",
+      "timestamp": "2006-05-11 19:44:17",
+      "action_type": "CLICK",
+      "content": "www aviator sports com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that comes from an analysis error indicates the user may not have found a suitable or relevant source. This aligns more with PoorScent, as the click did not stem from a clear, effective query but rather from an unsuccessful search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8648142457008361,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:12:50.131167"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.768615245819092,
+      "decisions": [
+        {
+          "event_id": "14987_3627_qq-2022",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3627_qq-2022_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3627_qq-2022_cd-11608",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.3055641651153564,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query that led to an analysis error, indicating no effective scent was present. The presence of an invalid control character suggests that the query did not yield promising results, which aligns more closely with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results that contain errors or are not informative suggests that the user is not finding relevant information. The analyst's label of FollowingScent implies the user is on a successful search path, which contradicts the observation of viewing results that are not promising.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that comes from an analysis error indicates the user may not have found a suitable or relevant source. This aligns more with PoorScent, as the click did not stem from a clear, effective query but rather from an unsuccessful search process.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.421241998672485,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.913706773519516
+}

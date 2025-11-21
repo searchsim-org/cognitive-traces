@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_135",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:44:59.828850",
+  "events": [
+    {
+      "session_id": "1338_135",
+      "event_id": "1338_135_qq-62",
+      "timestamp": "2006-05-27 07:57:05",
+      "action_type": "QUERY",
+      "content": "graduation gifts ideas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query for 'graduation gifts ideas' suggests an initial exploration, but the presence of an invalid control character indicates a potential error in the query itself. This may lead to a lack of relevant results, causing the user to issue a new query without success. Therefore, it reflects poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8826855421066284,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:45:57.332484"
+    },
+    {
+      "session_id": "1338_135",
+      "event_id": "1338_135_qq-62_serp",
+      "timestamp": "2006-05-27 07:57:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: birthday gift ideas wedding gifts baby announcements anniversary gifts personalized gifts, gifts online buy gifts for men women kids gift idea, gift baskets online gift baskets tips unique gift basket ideas (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the lack of specificity in the search results suggests that the user might not find any satisfactory content. If they are viewing a broad array of results without any engagement, it indicates that they may be losing interest in the current patch, leading to a possible abandonment of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9960191741585731,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:45:57.332510"
+    },
+    {
+      "session_id": "1338_135",
+      "event_id": "1338_135_qq-62_cd-1566",
+      "timestamp": "2006-05-27 07:57:05",
+      "action_type": "CLICK",
+      "content": "find unique gift ideas and creative gifts find gift com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a link indicating a desire to gather more information, but the content description provided does not strongly suggest they are following a well-formed query with clear intent. Instead, it reflects an attempt to see if the link matches their information needs, which is more indicative of approaching a source rather than a clear scent-following action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.012554132938385,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:45:57.332516"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.970048904418945,
+      "decisions": [
+        {
+          "event_id": "1338_135_qq-62",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_135_qq-62_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_135_qq-62_cd-1566",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.260690212249756,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query for 'graduation gifts ideas' suggests an initial exploration, but the presence of an invalid control character indicates a potential error in the query itself. This may lead to a lack of relevant results, causing the user to issue a new query without success. Therefore, it reflects poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Although the user viewed multiple results, the lack of specificity in the search results suggests that the user might not find any satisfactory content. If they are viewing a broad array of results without any engagement, it indicates that they may be losing interest in the current patch, leading to a possible abandonment of the search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a link indicating a desire to gather more information, but the content description provided does not strongly suggest they are following a well-formed query with clear intent. Instead, it reflects an attempt to see if the link matches their information needs, which is more indicative of approaching a source rather than a clear scent-following action.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 33.8420569896698,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.012554132938385
+}

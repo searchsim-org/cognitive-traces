@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2514",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:58:53.189993",
+  "events": [
+    {
+      "session_id": "10215_2514",
+      "event_id": "10215_2514_qq-1303",
+      "timestamp": "2006-04-14 17:09:03",
+      "action_type": "QUERY",
+      "content": "boxer anatomy forums",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'boxer anatomy forums' does not indicate a well-formed, targeted search given the presence of an analysis error. The invalid control character implies that there may have been an issue with the query itself, leading to ineffective search results. This suggests the user did not effectively engage with the search process, characteristic of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.822894811630249,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:23.703157"
+    },
+    {
+      "session_id": "10215_2514",
+      "event_id": "10215_2514_qq-1303_serp",
+      "timestamp": "2006-04-14 17:09:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: human anatomy and physiology society, grey s anatomy tv fanatic, www anatomy in motion com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that do not align with the initial query indicates that the user was not finding the desired information. The presence of irrelevant results suggests that the user's initial scent was poor, leading to the need for reevaluation of their query. This aligns more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9982485964894294,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:23.703164"
+    },
+    {
+      "session_id": "10215_2514",
+      "event_id": "10215_2514_qq-1303_cd-8270",
+      "timestamp": "2006-04-14 17:09:03",
+      "action_type": "CLICK",
+      "content": "boxer world com welcome to boxer world the ultimate dog resource",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not necessarily indicate a successful search; in this case, it may suggest the user was desperate for information due to poor results from previous steps. The click on 'boxer world com' could be seen as an attempt to salvage the search rather than a confident following of a scent. Therefore, it may be more appropriate to label this event as LeavingPatch, as the user was likely not satisfied with the prior interactions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9765085861086845,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:23.703167"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.8852081298828125,
+      "decisions": [
+        {
+          "event_id": "10215_2514_qq-1303",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2514_qq-1303_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2514_qq-1303_cd-8270",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.859438180923462,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'boxer anatomy forums' does not indicate a well-formed, targeted search given the presence of an analysis error. The invalid control character implies that there may have been an issue with the query itself, leading to ineffective search results. This suggests the user did not effectively engage with the search process, characteristic of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that do not align with the initial query indicates that the user was not finding the desired information. The presence of irrelevant results suggests that the user's initial scent was poor, leading to the need for reevaluation of their query. This aligns more closely with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result does not necessarily indicate a successful search; in this case, it may suggest the user was desperate for information due to poor results from previous steps. The click on 'boxer world com' could be seen as an attempt to salvage the search rather than a confident following of a scent. Therefore, it may be more appropriate to label this event as LeavingPatch, as the user was likely not satisfied with the prior interactions.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.36630129814148,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9982485964894294
+}

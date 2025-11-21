@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3313",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:49:12.928593",
+  "events": [
+    {
+      "session_id": "13119_3313",
+      "event_id": "13119_3313_qq-1797",
+      "timestamp": "2006-04-03 20:08:55",
+      "action_type": "QUERY",
+      "content": "wheel of fortune spin id",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'wheel of fortune spin id...' suggests a specific intent, but the presence of an invalid control character indicates that the query may not have been well-formed or effective, leading to a lack of promising scent. This suggests that the user is not following a strong scent but rather struggling to articulate their need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9279829323291778,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:50:01.188160"
+    },
+    {
+      "session_id": "13119_3313",
+      "event_id": "13119_3313_qq-1797_serp",
+      "timestamp": "2006-04-03 20:08:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: wheel of fortune fan wheel of fortune fan, wheels of chance wheels of fortune custom wheels promotional wheels, wheel of fortune america s game wheel watchers club (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results suggest that the user is scanning for relevant content based on their query. However, the range of results indicates a lack of strong information scent from the titles, which may lead the user to reconsider their search. Thus, labeling it as 'FollowingScent' is misleading; 'ApproachingSource' better reflects their tentative engagement with the content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0096545085310935,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:50:01.188178"
+    },
+    {
+      "session_id": "13119_3313",
+      "event_id": "13119_3313_qq-1797_cd-5005",
+      "timestamp": "2006-04-03 20:08:55",
+      "action_type": "CLICK",
+      "content": "wheel of fortune america s game wheel watchers club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the specific nature of the click does not indicate strong intent or satisfaction. Given the prior confusion with the query and the potential lack of clarity in the result, a label like 'ApproachingSource' may be more appropriate as it captures the user's exploratory behavior without implying confident scent-following.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0270122647285462,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:50:01.188183"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.30170774459839,
+      "decisions": [
+        {
+          "event_id": "13119_3313_qq-1797",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3313_qq-1797_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3313_qq-1797_cd-5005",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.53537392616272,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'wheel of fortune spin id...' suggests a specific intent, but the presence of an invalid control character indicates that the query may not have been well-formed or effective, leading to a lack of promising scent. This suggests that the user is not following a strong scent but rather struggling to articulate their need.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The viewed results suggest that the user is scanning for relevant content based on their query. However, the range of results indicates a lack of strong information scent from the titles, which may lead the user to reconsider their search. Thus, labeling it as 'FollowingScent' is misleading; 'ApproachingSource' better reflects their tentative engagement with the content.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the specific nature of the click does not indicate strong intent or satisfaction. Given the prior confusion with the query and the potential lack of clarity in the result, a label like 'ApproachingSource' may be more appropriate as it captures the user's exploratory behavior without implying confident scent-following.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.125847816467285,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0270122647285462
+}

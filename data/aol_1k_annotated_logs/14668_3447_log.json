@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3447",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:10:07.117566",
+  "events": [
+    {
+      "session_id": "14668_3447",
+      "event_id": "14668_3447_qq-1914",
+      "timestamp": "2006-04-06 09:38:39",
+      "action_type": "QUERY",
+      "content": "adoption",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'adoption...' lacks specificity and does not reflect a clear, targeted intent. The presence of an analysis error suggests the user may have been unsure or frustrated, indicating a poor scent rather than a confident search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8817739248275757,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:10:44.979405"
+    },
+    {
+      "session_id": "14668_3447",
+      "event_id": "14668_3447_qq-1914_serp",
+      "timestamp": "2006-04-06 09:38:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: adopting adoption com, adoption adopting org, adopting a child adoption help how to adopt adopting (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results with a vague query suggests a lack of strong information scent. The user's actions indicate they did not find any of the results compelling enough to warrant a confident search, instead showing exploratory behavior without clear direction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9795282945036888,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:10:44.979426"
+    },
+    {
+      "session_id": "14668_3447",
+      "event_id": "14668_3447_qq-1914_cd-11315",
+      "timestamp": "2006-04-06 09:38:39",
+      "action_type": "CLICK",
+      "content": "adoption adopting org",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the lack of targeted queries and the context of previous events indicate that this click may not stem from a strong scent. It could be more about trial and error than a confident approach to a promising source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9884241193532943,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:10:44.979433"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.604521989822388,
+      "decisions": [
+        {
+          "event_id": "14668_3447_qq-1914",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3447_qq-1914_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3447_qq-1914_cd-11315",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.1448869705200195,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'adoption...' lacks specificity and does not reflect a clear, targeted intent. The presence of an analysis error suggests the user may have been unsure or frustrated, indicating a poor scent rather than a confident search initiation.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results with a vague query suggests a lack of strong information scent. The user's actions indicate they did not find any of the results compelling enough to warrant a confident search, instead showing exploratory behavior without clear direction.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the lack of targeted queries and the context of previous events indicate that this click may not stem from a strong scent. It could be more about trial and error than a confident approach to a promising source.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.909436225891113,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9884241193532943
+}

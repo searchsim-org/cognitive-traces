@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2278",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:57:28.666723",
+  "events": [
+    {
+      "session_id": "10008_2278",
+      "event_id": "10008_2278_qq-1191",
+      "timestamp": "2006-04-05 18:31:46",
+      "action_type": "QUERY",
+      "content": "the boston design center",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'the boston design center...' appears to be vague and lacks specificity, which likely indicates a lack of promising information scent. If the query had clear intent, we would expect a more focused search term. The error message does not inherently indicate strong scent; rather, it suggests a failed attempt to extract useful information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8977027654647827,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:57:55.385676"
+    },
+    {
+      "session_id": "10008_2278",
+      "event_id": "10008_2278_qq-1191_serp",
+      "timestamp": "2006-04-05 18:31:46",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: local boston breaking news sports weather and events boston com, audubon center of the north woods audubon center of the north woods environmental learning center, local boston breaking news sports weather and events boston com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results does not necessarily imply a strong information scent, especially given the vague nature of the original query. If the user was truly following a scent, we would expect them to engage more deeply with the results. The broad and generic content viewed indicates that the user may still be exploring without a clear direction, suggesting poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.999762612208724,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:57:55.385685"
+    },
+    {
+      "session_id": "10008_2278",
+      "event_id": "10008_2278_qq-1191_cd-2529",
+      "timestamp": "2006-04-05 18:31:46",
+      "action_type": "CLICK",
+      "content": "local boston breaking news sports weather and events boston com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result could indicate an interest in the content, but given the vague nature of the previous query and the lack of specificity in the result title, the action is better labeled as PoorScent. The user appears to be clicking out of desperation for relevant information rather than following a strong scent, as the clicked item may not represent a well-defined information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0087130226194858,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:57:55.385688"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.320417165756226,
+      "decisions": [
+        {
+          "event_id": "10008_2278_qq-1191",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2278_qq-1191_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2278_qq-1191_cd-2529",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.572211027145386,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'the boston design center...' appears to be vague and lacks specificity, which likely indicates a lack of promising information scent. If the query had clear intent, we would expect a more focused search term. The error message does not inherently indicate strong scent; rather, it suggests a failed attempt to extract useful information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of viewing 10 results does not necessarily imply a strong information scent, especially given the vague nature of the original query. If the user was truly following a scent, we would expect them to engage more deeply with the results. The broad and generic content viewed indicates that the user may still be exploring without a clear direction, suggesting poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result could indicate an interest in the content, but given the vague nature of the previous query and the lack of specificity in the result title, the action is better labeled as PoorScent. The user appears to be clicking out of desperation for relevant information rather than following a strong scent, as the clicked item may not represent a well-defined information need.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.518245220184326,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0087130226194858
+}

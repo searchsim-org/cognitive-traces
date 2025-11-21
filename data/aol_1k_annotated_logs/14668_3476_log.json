@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3476",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:30:31.775042",
+  "events": [
+    {
+      "session_id": "14668_3476",
+      "event_id": "14668_3476_qq-1936",
+      "timestamp": "2006-04-27 10:43:09",
+      "action_type": "QUERY",
+      "content": "the ohio adoption process",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query about the 'ohio adoption process,' but the mention of an 'Invalid control character' suggests that the content was likely not well-formed or relevant, resulting in no further action. This indicates a poor scent rather than a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8721554279327393,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:31:13.850775"
+    },
+    {
+      "session_id": "14668_3476",
+      "event_id": "14668_3476_qq-1936_serp",
+      "timestamp": "2006-04-27 10:43:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: meat processing food safety poultry processing meat poultry, process text com process text resources and information, uv process supply inc uv process supply inc (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that appear to be unrelated or poorly targeted (e.g., 'meat processing food safety'), which indicates a lack of relevant information scent. A successful search would involve more relevant results, suggesting that this cannot be categorized as FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9781088426709175,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:31:13.850797"
+    },
+    {
+      "session_id": "14668_3476",
+      "event_id": "14668_3476_qq-1936_cd-11314",
+      "timestamp": "2006-04-27 10:43:09",
+      "action_type": "CLICK",
+      "content": "how to adopt baby foster child adoption find birth parents adoption org",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result regarding foster child adoption, indicating a move towards examining a specific source rather than simply following a scent. The action implies the user found the title or snippet compelling enough to investigate further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9765777319669724,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:31:13.850805"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.472700357437134,
+      "decisions": [
+        {
+          "event_id": "14668_3476_qq-1936",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3476_qq-1936_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3476_qq-1936_cd-11314",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.584147930145264,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query about the 'ohio adoption process,' but the mention of an 'Invalid control character' suggests that the content was likely not well-formed or relevant, resulting in no further action. This indicates a poor scent rather than a targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results that appear to be unrelated or poorly targeted (e.g., 'meat processing food safety'), which indicates a lack of relevant information scent. A successful search would involve more relevant results, suggesting that this cannot be categorized as FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result regarding foster child adoption, indicating a move towards examining a specific source rather than simply following a scent. The action implies the user found the title or snippet compelling enough to investigate further.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.754830837249756,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9781088426709175
+}

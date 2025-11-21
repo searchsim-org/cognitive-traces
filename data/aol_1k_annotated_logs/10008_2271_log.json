@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2271",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:53:34.629601",
+  "events": [
+    {
+      "session_id": "10008_2271",
+      "event_id": "10008_2271_qq-1182",
+      "timestamp": "2006-03-24 17:48:08",
+      "action_type": "QUERY",
+      "content": "newport ri",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'newport ri...' lacks specificity and does not indicate a clear intent for exploration, suggesting they may not find the information they seek. The label 'FollowingScent' assumes a targeted search which is not evident here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.998554315045476,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:54:07.608005"
+    },
+    {
+      "session_id": "10008_2271",
+      "event_id": "10008_2271_qq-1182_serp",
+      "timestamp": "2006-03-24 17:48:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: newport resort newport resort our property website, newport yellow pages and newport tn guide, newport public schools newport public schools homepage (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not yet indicate a strong intent to engage with any specific content. This action suggests they are evaluating options rather than following a strong scent, which is more aligned with 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9985273376107215,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:54:07.608038"
+    },
+    {
+      "session_id": "10008_2271",
+      "event_id": "10008_2271_qq-1182_cd-7842",
+      "timestamp": "2006-03-24 17:48:08",
+      "action_type": "CLICK",
+      "content": "the official site for newport ri offers all the information you need",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, it appears more as an exploration of options rather than a clear, targeted follow-up on a scent. The label 'FollowingScent' implies a decisive action based on a well-formed query, which is not supported in this context.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0117039628326894,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:54:07.608048"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.351258993148804,
+      "decisions": [
+        {
+          "event_id": "10008_2271_qq-1182",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2271_qq-1182_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2271_qq-1182_cd-7842",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.140823841094971,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'newport ri...' lacks specificity and does not indicate a clear intent for exploration, suggesting they may not find the information they seek. The label 'FollowingScent' assumes a targeted search which is not evident here.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not yet indicate a strong intent to engage with any specific content. This action suggests they are evaluating options rather than following a strong scent, which is more aligned with 'ApproachingSource'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, it appears more as an exploration of options rather than a clear, targeted follow-up on a scent. The label 'FollowingScent' implies a decisive action based on a well-formed query, which is not supported in this context.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.05249571800232,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0117039628326894
+}

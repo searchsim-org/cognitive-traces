@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3583",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:47:19.965661",
+  "events": [
+    {
+      "session_id": "14987_3583",
+      "event_id": "14987_3583_qq-1079",
+      "timestamp": "2006-03-17 10:08:41",
+      "action_type": "QUERY",
+      "content": "bed bath and beyond",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'bed bath and beyond...' lacks specificity and clarity, which may indicate that they are unsure of what they are searching for. It does not demonstrate a clear intent, suggesting that they might be experiencing poor scent rather than following a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9879365131258965,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:47:45.950434"
+    },
+    {
+      "session_id": "14987_3583",
+      "event_id": "14987_3583_qq-1079_serp",
+      "timestamp": "2006-03-17 10:08:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: chef central bed bath beyond, bed and bath beyond com nbsp this website is for sale nbsp bed and bath beyond resources and information, bedding bath towels cook ware fine china wedding gift registry bed bath beyond (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results with generic content suggests that the user did not find relevant information worth pursuing. The titles indicate a lack of clear information scent, leading to an assumption that the user is not following a strong scent but rather encountering poor quality results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9737001538276673,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:47:45.950448"
+    },
+    {
+      "session_id": "14987_3583",
+      "event_id": "14987_3583_qq-1079_cd-2616",
+      "timestamp": "2006-03-17 10:08:41",
+      "action_type": "CLICK",
+      "content": "bedding bath towels cook ware fine china wedding gift registry bed bath beyond",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result about 'bedding bath towels cook ware fine china wedding gift registry bed bath beyond...' indicates a move towards a specific item or source based on the information scent perceived from the title. This suggests an investigation rather than merely following a scent, as the user is taking action to find more details.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.995416185259819,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:47:45.950454"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.14990520477295,
+      "decisions": [
+        {
+          "event_id": "14987_3583_qq-1079",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3583_qq-1079_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3583_qq-1079_cd-2616",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.497239112854004,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'bed bath and beyond...' lacks specificity and clarity, which may indicate that they are unsure of what they are searching for. It does not demonstrate a clear intent, suggesting that they might be experiencing poor scent rather than following a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of viewing 10 results with generic content suggests that the user did not find relevant information worth pursuing. The titles indicate a lack of clear information scent, leading to an assumption that the user is not following a strong scent but rather encountering poor quality results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result about 'bedding bath towels cook ware fine china wedding gift registry bed bath beyond...' indicates a move towards a specific item or source based on the information scent perceived from the title. This suggests an investigation rather than merely following a scent, as the user is taking action to find more details.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.850677013397217,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.995416185259819
+}

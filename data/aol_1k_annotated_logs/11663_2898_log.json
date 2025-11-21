@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2898",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:27:38.392083",
+  "events": [
+    {
+      "session_id": "11663_2898",
+      "event_id": "11663_2898_qq-1500",
+      "timestamp": "2006-05-08 22:32:27",
+      "action_type": "QUERY",
+      "content": "ohio family getaways",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ohio family getaways...' is vague and does not demonstrate a clear intent to find specific information. The lack of specificity suggests that the user might be dissatisfied with the results, leading to a search without clicks, indicative of poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.008587009459734,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:28:16.890077"
+    },
+    {
+      "session_id": "11663_2898",
+      "event_id": "11663_2898_qq-1500_serp",
+      "timestamp": "2006-05-08 22:32:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: roberts family photography fun whimsical family portraits in marietta ohio parkersburg west virginia and detroit michigan, ohio hot tub cabin getaway weekend for romantic couples honeymoon lodging or anniversary near big rock, mag lamborghini in columbus ohio lamborghini ohio in columbus ohio (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results related to family photography and getaways, indicating a potential interest in these topics. However, the action does not represent 'FollowingScent' as it lacks a targeted query and may suggest exploration rather than a focused search intent. The user is likely assessing various sources, thus better fitting the 'ApproachingSource' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0134616687893867,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:28:16.890086"
+    },
+    {
+      "session_id": "11663_2898",
+      "event_id": "11663_2898_qq-1500_cd-9001",
+      "timestamp": "2006-05-08 22:32:27",
+      "action_type": "CLICK",
+      "content": "ohio tourist attractions ohio travel tourism",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'ohio tourist attractions' suggests the user is still searching for relevant information rather than indicating a successful search. If this was their only click after a vague query, it may reflect frustration with the search process, suggesting they are on the verge of abandoning the search. Therefore, this event could signify a transition towards 'LeavingPatch'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9784004092216492,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:28:16.890089"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.325982093811035,
+      "decisions": [
+        {
+          "event_id": "11663_2898_qq-1500",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2898_qq-1500_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2898_qq-1500_cd-9001",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.246015310287476,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ohio family getaways...' is vague and does not demonstrate a clear intent to find specific information. The lack of specificity suggests that the user might be dissatisfied with the results, leading to a search without clicks, indicative of poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results related to family photography and getaways, indicating a potential interest in these topics. However, the action does not represent 'FollowingScent' as it lacks a targeted query and may suggest exploration rather than a focused search intent. The user is likely assessing various sources, thus better fitting the 'ApproachingSource' label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'ohio tourist attractions' suggests the user is still searching for relevant information rather than indicating a successful search. If this was their only click after a vague query, it may reflect frustration with the search process, suggesting they are on the verge of abandoning the search. Therefore, this event could signify a transition towards 'LeavingPatch'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.652623176574707,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0134616687893867
+}

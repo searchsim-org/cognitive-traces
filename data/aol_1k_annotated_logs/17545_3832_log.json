@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3832",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:08:04.438465",
+  "events": [
+    {
+      "session_id": "17545_3832",
+      "event_id": "17545_3832_qq-2195",
+      "timestamp": "2006-04-21 20:59:25",
+      "action_type": "QUERY",
+      "content": "woodcraft",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'woodcraft...' suggests an incomplete or vague search intent. The presence of an invalid control character indicates likely confusion or error in the user's input, which does not exhibit a clear targeted intent. This lack of clarity aligns more with a poor scent than a strong initial foraging strategy.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9142705082893372,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:33.380176"
+    },
+    {
+      "session_id": "17545_3832",
+      "event_id": "17545_3832_qq-2195_serp",
+      "timestamp": "2006-04-21 20:59:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: woodcraft mill, woodcraft technologies, woodcraft unlimited (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the 10 results without engaging with them suggests that the user did not find any promising information scent. The action of viewing results does not confirm a strong intent but rather reflects a lack of engaging options, which indicates a poor scent rather than an active following of scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9888202711939812,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:33.380185"
+    },
+    {
+      "session_id": "17545_3832",
+      "event_id": "17545_3832_qq-2195_cd-12886",
+      "timestamp": "2006-04-21 20:59:25",
+      "action_type": "CLICK",
+      "content": "woodcraft technologies",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'woodcraft technologies' implies an attempt to engage with a specific result that seemed promising based on its title/snippet. However, considering the prior events showing poor engagement and potential confusion, it may indicate a desperate attempt to find relevant information rather than a well-formed search intent. Thus, 'ApproachingSource' may not fully capture the user's intent in this context.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9956356335431338,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:33.380199"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.316139936447144,
+      "decisions": [
+        {
+          "event_id": "17545_3832_qq-2195",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3832_qq-2195_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3832_qq-2195_cd-12886",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.345031023025513,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'woodcraft...' suggests an incomplete or vague search intent. The presence of an invalid control character indicates likely confusion or error in the user's input, which does not exhibit a clear targeted intent. This lack of clarity aligns more with a poor scent than a strong initial foraging strategy.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing the 10 results without engaging with them suggests that the user did not find any promising information scent. The action of viewing results does not confirm a strong intent but rather reflects a lack of engaging options, which indicates a poor scent rather than an active following of scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'woodcraft technologies' implies an attempt to engage with a specific result that seemed promising based on its title/snippet. However, considering the prior events showing poor engagement and potential confusion, it may indicate a desperate attempt to find relevant information rather than a well-formed search intent. Thus, 'ApproachingSource' may not fully capture the user's intent in this context.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.898123741149902,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9956356335431338
+}

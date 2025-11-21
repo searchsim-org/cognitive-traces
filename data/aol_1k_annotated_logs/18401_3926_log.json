@@ -1,0 +1,159 @@
+{
+  "session_id": "18401_3926",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:53:19.355249",
+  "events": [
+    {
+      "session_id": "18401_3926",
+      "event_id": "18401_3926_qq-2216",
+      "timestamp": "2006-03-02 20:45:42",
+      "action_type": "QUERY",
+      "content": "mercruiser boat parts",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mercruiser boat parts...' appears to be vague and lacks specificity, indicating that the user may not find promising results. The error noted does not validate the label of FollowingScent, as the query does not show clear intent or targeted information seeking.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9359146416187286,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:54:05.358382"
+    },
+    {
+      "session_id": "18401_3926",
+      "event_id": "18401_3926_qq-2216_serp",
+      "timestamp": "2006-03-02 20:45:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: nordic power boats boats for life, trailer boats all boat classifieds com, dock rite boat lifts boat docks (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any indication of clicks or further actions suggests that the user was not satisfied with the information presented. This behavior indicates a lack of promising scent, leading to a potential abandonment of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9751943722367287,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:54:05.358404"
+    },
+    {
+      "session_id": "18401_3926",
+      "event_id": "18401_3926_qq-2216_cd-13053",
+      "timestamp": "2006-03-02 20:45:42",
+      "action_type": "CLICK",
+      "content": "doug russell marine marine engines boats trailers service and parts for boat motors boat propellers stern drives transmissions cylinder heads doug russell marine",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a long and detailed title suggests the user is trying to approach a specific source of information rather than indicating a clear intent to continue searching. The title is overly descriptive and may not represent a focused query, leading to a more exploratory behavior rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9757357269525528,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:54:05.358411"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.46867299079895,
+      "decisions": [
+        {
+          "event_id": "18401_3926_qq-2216",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3926_qq-2216_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3926_qq-2216_cd-13053",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.327823162078857,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mercruiser boat parts...' appears to be vague and lacks specificity, indicating that the user may not find promising results. The error noted does not validate the label of FollowingScent, as the query does not show clear intent or targeted information seeking.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without any indication of clicks or further actions suggests that the user was not satisfied with the information presented. This behavior indicates a lack of promising scent, leading to a potential abandonment of the search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a long and detailed title suggests the user is trying to approach a specific source of information rather than indicating a clear intent to continue searching. The title is overly descriptive and may not represent a focused query, leading to a more exploratory behavior rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.853423833847046,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9757357269525528
+}

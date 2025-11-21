@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2473",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:34:32.876546",
+  "events": [
+    {
+      "session_id": "10215_2473",
+      "event_id": "10215_2473_qq-1298",
+      "timestamp": "2006-03-20 11:42:43",
+      "action_type": "QUERY",
+      "content": "boxer puppy ear cropping",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boxer puppy ear cropping' is vague and does not indicate a clear intent for further exploration. The mention of an analysis error suggests that the user may not have found relevant information, leading to a lack of clicks or engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9293574631214142,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:11.910887"
+    },
+    {
+      "session_id": "10215_2473",
+      "event_id": "10215_2473_qq-1298_serp",
+      "timestamp": "2006-03-20 11:42:43",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www boxer friends net, uss boxer veterans association, www beautiful boxer com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results but failing to find a satisfactory option suggests that the user did not encounter strong information scent. The presence of an analysis error also implies that the user may not have found results aligning with their expectations.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8888931393623352,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:11.910919"
+    },
+    {
+      "session_id": "10215_2473",
+      "event_id": "10215_2473_qq-1298_cd-8309",
+      "timestamp": "2006-03-20 11:42:43",
+      "action_type": "CLICK",
+      "content": "www cinema boxers com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www cinema boxers com' indicates an attempt to investigate further based on a perceived information scent. However, if the prior search did not yield promising results, this click may be more exploratory rather than a continuation of a well-formed query. Therefore, 'ApproachingSource' is more appropriate than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0330101519823074,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:11.910929"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.042325973510742,
+      "decisions": [
+        {
+          "event_id": "10215_2473_qq-1298",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2473_qq-1298_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2473_qq-1298_cd-8309",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.83377480506897,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boxer puppy ear cropping' is vague and does not indicate a clear intent for further exploration. The mention of an analysis error suggests that the user may not have found relevant information, leading to a lack of clicks or engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results but failing to find a satisfactory option suggests that the user did not encounter strong information scent. The presence of an analysis error also implies that the user may not have found results aligning with their expectations.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www cinema boxers com' indicates an attempt to investigate further based on a perceived information scent. However, if the prior search did not yield promising results, this click may be more exploratory rather than a continuation of a well-formed query. Therefore, 'ApproachingSource' is more appropriate than 'FollowingScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.893247127532959,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0330101519823074
+}

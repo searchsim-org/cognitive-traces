@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2404",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:01:14.948114",
+  "events": [
+    {
+      "session_id": "10133_2404",
+      "event_id": "10133_2404_qq-1257",
+      "timestamp": "2006-04-27 13:09:35",
+      "action_type": "QUERY",
+      "content": "skylight bank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query with limited context ('skylight bank...'), which lacks specificity or clarity. The presence of an invalid control character suggests a potential issue with the query formulation, indicating a lack of promising scent. Thus, it aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9345582544803619,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:01:47.277787"
+    },
+    {
+      "session_id": "10133_2404",
+      "event_id": "10133_2404_qq-1257_serp",
+      "timestamp": "2006-04-27 13:09:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: skylight trust skylight trust, skylight solutions home skylight solutions, sun tek skylights skylights home commercial from sun tek skylights (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that appear to be variations on a similar theme ('skylight trust', 'skylight solutions'), but the absence of a clear and compelling result suggests that the search did not yield promising leads. This is indicative of PoorScent as it implies a lack of satisfactory information to follow up on.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0074482329189778,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:01:47.277794"
+    },
+    {
+      "session_id": "10133_2404",
+      "event_id": "10133_2404_qq-1257_cd-8013",
+      "timestamp": "2006-04-27 13:09:35",
+      "action_type": "CLICK",
+      "content": "www skylight net",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result ('www skylight net...'), but the click does not necessarily indicate a successful foraging attempt. Given the previous context of unclear or poor scent, this click may represent a last-ditch effort to find relevant information, thus indicating a LeavingPatch rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0075440376996994,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:01:47.277796"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.678107023239136,
+      "decisions": [
+        {
+          "event_id": "10133_2404_qq-1257",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2404_qq-1257_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2404_qq-1257_cd-8013",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.294578075408936,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query with limited context ('skylight bank...'), which lacks specificity or clarity. The presence of an invalid control character suggests a potential issue with the query formulation, indicating a lack of promising scent. Thus, it aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results that appear to be variations on a similar theme ('skylight trust', 'skylight solutions'), but the absence of a clear and compelling result suggests that the search did not yield promising leads. This is indicative of PoorScent as it implies a lack of satisfactory information to follow up on.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result ('www skylight net...'), but the click does not necessarily indicate a successful foraging attempt. Given the previous context of unclear or poor scent, this click may represent a last-ditch effort to find relevant information, thus indicating a LeavingPatch rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.070811986923218,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0075440376996994
+}

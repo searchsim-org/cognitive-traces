@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3435",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:02:55.782937",
+  "events": [
+    {
+      "session_id": "14668_3435",
+      "event_id": "14668_3435_qq-1901",
+      "timestamp": "2006-03-24 10:51:06",
+      "action_type": "QUERY",
+      "content": "rite aid",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'rite aid...' is vague and lacks specificity, suggesting they may not have a clear intent or direction in their search. This indicates a poor scent rather than a well-formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9915260918438434,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:03:49.889750"
+    },
+    {
+      "session_id": "14668_3435",
+      "event_id": "14668_3435_qq-1901_serp",
+      "timestamp": "2006-03-24 10:51:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: gro rite, show rite, ride rite (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any clicks may indicate that the user did not find the results promising enough to pursue further, suggesting a potential abandonment of the search rather than following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9866966754198074,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:03:49.889762"
+    },
+    {
+      "session_id": "14668_3435",
+      "event_id": "14668_3435_qq-1901_cd-11289",
+      "timestamp": "2006-03-24 10:51:06",
+      "action_type": "CLICK",
+      "content": "online pharmacy and store rite aid with us it s personal",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'online pharmacy and store rite aid with us it s personal...' suggests the user found some relevance but it does not indicate a clear scent. This click could be seen as an effort to explore more options rather than a targeted search, aligning more with an approaching source than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9962421379983425,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:03:49.889766"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.730796098709106,
+      "decisions": [
+        {
+          "event_id": "14668_3435_qq-1901",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3435_qq-1901_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3435_qq-1901_cd-11289",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.5571630001068115,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'rite aid...' is vague and lacks specificity, suggesting they may not have a clear intent or direction in their search. This indicates a poor scent rather than a well-formed query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without any clicks may indicate that the user did not find the results promising enough to pursue further, suggesting a potential abandonment of the search rather than following a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'online pharmacy and store rite aid with us it s personal...' suggests the user found some relevance but it does not indicate a clear scent. This click could be seen as an effort to explore more options rather than a targeted search, aligning more with an approaching source than following a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 30.550934076309204,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9962421379983425
+}

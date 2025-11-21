@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3275",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:22:31.918844",
+  "events": [
+    {
+      "session_id": "13112_3275",
+      "event_id": "13112_3275_qq-1756",
+      "timestamp": "2006-05-12 13:54:54",
+      "action_type": "QUERY",
+      "content": "trane.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user is querying a specific domain (trane.com) but encounters an error indicating that the current patch (search results) is not providing relevant information. The presence of an error suggests the user is not receiving useful output from their search, which aligns more with poor information scent than with a well-formed intent to continue the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9659148097038269,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:23:07.527929"
+    },
+    {
+      "session_id": "13112_3275",
+      "event_id": "13112_3275_qq-1756_serp",
+      "timestamp": "2006-05-12 13:54:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www gardiner tra ne com, tra ne ge addresses com, international jazz club a tra ne berlin se it 1992 jazz club a tra ne berlin (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that seem unrelated or erroneous indicates a lack of relevant information scent. The analyst's label of FollowingScent implies a clear intent, but the presence of invalid characters suggests the user may not have found promising content to pursue further, thus reflecting a poor scent situation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9031185686588288,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:23:07.527941"
+    },
+    {
+      "session_id": "13112_3275",
+      "event_id": "13112_3275_qq-1756_cd-9882",
+      "timestamp": "2006-05-12 13:54:54",
+      "action_type": "CLICK",
+      "content": "heating and air conditioning services systems tra ne",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result related to heating and air conditioning services may not indicate a successful search; instead, it could suggest the user was driven by desperation to find something relevant after encountering errors in previous attempts. The click does not imply a strong scent, as the errors indicate the user may have been forced to make a suboptimal choice.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9376626491546631,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:23:07.527946"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.103294134140015,
+      "decisions": [
+        {
+          "event_id": "13112_3275_qq-1756",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3275_qq-1756_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3275_qq-1756_cd-9882",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.668965816497803,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user is querying a specific domain (trane.com) but encounters an error indicating that the current patch (search results) is not providing relevant information. The presence of an error suggests the user is not receiving useful output from their search, which aligns more with poor information scent than with a well-formed intent to continue the search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results that seem unrelated or erroneous indicates a lack of relevant information scent. The analyst's label of FollowingScent implies a clear intent, but the presence of invalid characters suggests the user may not have found promising content to pursue further, thus reflecting a poor scent situation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result related to heating and air conditioning services may not indicate a successful search; instead, it could suggest the user was driven by desperation to find something relevant after encountering errors in previous attempts. The click does not imply a strong scent, as the errors indicate the user may have been forced to make a suboptimal choice.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.515162229537964,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9659148097038269
+}

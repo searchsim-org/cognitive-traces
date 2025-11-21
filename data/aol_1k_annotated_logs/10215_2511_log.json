@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2511",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:57:26.433837",
+  "events": [
+    {
+      "session_id": "10215_2511",
+      "event_id": "10215_2511_qq-1322",
+      "timestamp": "2006-04-08 17:00:29",
+      "action_type": "QUERY",
+      "content": "new condos orlando florida",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a vague query 'new condos orlando florida...' which does not indicate a strong, targeted intent. The presence of an analysis error further implies that the query was not successfully processed, leading to a lack of promising scent from the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9087565183639527,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:58.128014"
+    },
+    {
+      "session_id": "10215_2511",
+      "event_id": "10215_2511_qq-1322_serp",
+      "timestamp": "2006-04-08 17:00:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: florida condo association attorney miami dade county civil litigation lawyer boca raton condo contract review law firm, holler classic automotive group new used cars proudly serving orlando fl and central florida for 80 years, orlando organics orlando organic produce home delivery (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any indication of further engagement suggests that the user did not find a strong match for their needs. The titles provided do not seem closely related to the initial query about condos, indicating a lack of relevant information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9753001064062119,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:58.128031"
+    },
+    {
+      "session_id": "10215_2511",
+      "event_id": "10215_2511_qq-1322_cd-1920",
+      "timestamp": "2006-04-08 17:00:29",
+      "action_type": "CLICK",
+      "content": "orlando news weather sports business orlando sentinel",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'orlando news weather sports business orlando sentinel...' does not indicate a clear intent related to searching for condos. This click suggests the user may have been seeking general information rather than specific real estate content, reflecting a misalignment with the initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9927362583577632,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:58.128036"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.177842378616333,
+      "decisions": [
+        {
+          "event_id": "10215_2511_qq-1322",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2511_qq-1322_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2511_qq-1322_cd-1920",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.229514837265015,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a vague query 'new condos orlando florida...' which does not indicate a strong, targeted intent. The presence of an analysis error further implies that the query was not successfully processed, leading to a lack of promising scent from the search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any indication of further engagement suggests that the user did not find a strong match for their needs. The titles provided do not seem closely related to the initial query about condos, indicating a lack of relevant information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'orlando news weather sports business orlando sentinel...' does not indicate a clear intent related to searching for condos. This click suggests the user may have been seeking general information rather than specific real estate content, reflecting a misalignment with the initial query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.954074144363403,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9927362583577632
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4069",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:43:14.556549",
+  "events": [
+    {
+      "session_id": "19655_4069",
+      "event_id": "19655_4069_qq-2348",
+      "timestamp": "2006-03-04 07:12:33",
+      "action_type": "QUERY",
+      "content": "thistle marble arch",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'thistle marble arch...' lacks specificity and does not indicate a clear intent or focused search. The presence of an error message suggests that the query may not have been well-formed, aligning more with PoorScent as the user may not receive promising information from this query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9670283496379852,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:43:45.959622"
+    },
+    {
+      "session_id": "19655_4069",
+      "event_id": "19655_4069_qq-2348_serp",
+      "timestamp": "2006-03-04 07:12:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: arch washington dc, arch iphoto com, arch enemy deviantart (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results indicates that the user is exploring potential sources, but it does not show strong intent as seen in FollowingScent. The content viewed appears disjointed and likely lacks compelling information scent, suggesting the user is assessing options rather than following a clear scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0075622454285622,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:43:45.959629"
+    },
+    {
+      "session_id": "19655_4069",
+      "event_id": "19655_4069_qq-2348_cd-14080",
+      "timestamp": "2006-03-04 07:12:33",
+      "action_type": "CLICK",
+      "content": "central london hotels best prices guaranteed thistle hotels",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'central london hotels best prices guaranteed thistle hotels...' suggests the user found a relevant item, but this action might represent an exploratory click rather than a targeted search. The prior events indicate a lack of clear intent, making this click more reflective of approaching a source rather than following a distinct scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0164746254682542,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:43:45.959633"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.028459072113037,
+      "decisions": [
+        {
+          "event_id": "19655_4069_qq-2348",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4069_qq-2348_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4069_qq-2348_cd-14080",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.021944046020508,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'thistle marble arch...' lacks specificity and does not indicate a clear intent or focused search. The presence of an error message suggests that the query may not have been well-formed, aligning more with PoorScent as the user may not receive promising information from this query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results indicates that the user is exploring potential sources, but it does not show strong intent as seen in FollowingScent. The content viewed appears disjointed and likely lacks compelling information scent, suggesting the user is assessing options rather than following a clear scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'central london hotels best prices guaranteed thistle hotels...' suggests the user found a relevant item, but this action might represent an exploratory click rather than a targeted search. The prior events indicate a lack of clear intent, making this click more reflective of approaching a source rather than following a distinct scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.1636879444122314,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0164746254682542
+}

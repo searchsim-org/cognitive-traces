@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3624",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:10:57.511198",
+  "events": [
+    {
+      "session_id": "14987_3624",
+      "event_id": "14987_3624_qq-2020",
+      "timestamp": "2006-05-08 19:30:14",
+      "action_type": "QUERY",
+      "content": "degrassi",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is merely a query ('degrassi...') without any indication of a targeted intent or refined search. The presence of an invalid control character suggests that the query may not have been properly formed or meaningful, which aligns more closely with a poor scent rather than a following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9096712052822113,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:11:23.388197"
+    },
+    {
+      "session_id": "14987_3624",
+      "event_id": "14987_3624_qq-2020_serp",
+      "timestamp": "2006-05-08 19:30:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: degrassi, degrassi, degrassi fan (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the repeated mention of 'degrassi' suggests a lack of effective information scent, indicating that the user may not have found promising options. This scenario aligns better with 'LeavingPatch' as the user likely did not find satisfactory results to continue their search effectively.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9725947916507721,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:11:23.388208"
+    },
+    {
+      "session_id": "14987_3624",
+      "event_id": "14987_3624_qq-2020_cd-11603",
+      "timestamp": "2006-05-08 19:30:14",
+      "action_type": "CLICK",
+      "content": "degrassi",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'degrassi...' does not inherently indicate a clear intent or successful search outcome. Given the prior context of invalid character issues and the lack of a meaningful query, it is more accurate to categorize this as 'PoorScent', reflecting the user's inability to find relevant or satisfactory information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9491890430450439,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:11:23.388211"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.002416133880615,
+      "decisions": [
+        {
+          "event_id": "14987_3624_qq-2020",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3624_qq-2020_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3624_qq-2020_cd-11603",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.321143865585327,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is merely a query ('degrassi...') without any indication of a targeted intent or refined search. The presence of an invalid control character suggests that the query may not have been properly formed or meaningful, which aligns more closely with a poor scent rather than a following scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results, the repeated mention of 'degrassi' suggests a lack of effective information scent, indicating that the user may not have found promising options. This scenario aligns better with 'LeavingPatch' as the user likely did not find satisfactory results to continue their search effectively.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'degrassi...' does not inherently indicate a clear intent or successful search outcome. Given the prior context of invalid character issues and the lack of a meaningful query, it is more accurate to categorize this as 'PoorScent', reflecting the user's inability to find relevant or satisfactory information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.270783185958862,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9725947916507721
+}

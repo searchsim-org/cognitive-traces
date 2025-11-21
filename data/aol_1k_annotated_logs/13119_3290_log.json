@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3290",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:32:59.150484",
+  "events": [
+    {
+      "session_id": "13119_3290",
+      "event_id": "13119_3290_qq-1776",
+      "timestamp": "2006-03-01 18:40:13",
+      "action_type": "QUERY",
+      "content": "tn lottery",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'tn lottery...' lacks specificity and does not indicate a clear intent, which suggests that the user might not be receiving relevant results. This aligns more with the PoorScent label as the query seems vague and could lead to disappointment upon viewing results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9691243201494217,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:33:29.163266"
+    },
+    {
+      "session_id": "13119_3290",
+      "event_id": "13119_3290_qq-1776_serp",
+      "timestamp": "2006-03-01 18:40:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the lottery site com, www 101 lottery com, homepage new hampshire lottery (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the lack of a specific intent in the query suggests they were exploring options rather than following a strong scent. The term 'FollowingScent' implies a more directed search behavior that is not reflected here, as the user is likely still assessing the value of the results without a clear target.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0040235210210084,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:33:29.163278"
+    },
+    {
+      "session_id": "13119_3290",
+      "event_id": "13119_3290_qq-1776_cd-9986",
+      "timestamp": "2006-03-01 18:40:13",
+      "action_type": "CLICK",
+      "content": "home page tennessee lottery",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does indicate some level of interest, but given the previous vague query and the context of potentially poor scent, this event may better fit as 'LeavingPatch' if the click was a last resort after viewing unsatisfactory results. The action does not strongly indicate a successful follow-through on a scent, as it may just be an exploration of the least undesirable option.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0112869381904601,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:33:29.163282"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.03353500366211,
+      "decisions": [
+        {
+          "event_id": "13119_3290_qq-1776",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3290_qq-1776_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3290_qq-1776_cd-9986",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.883547782897949,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'tn lottery...' lacks specificity and does not indicate a clear intent, which suggests that the user might not be receiving relevant results. This aligns more with the PoorScent label as the query seems vague and could lead to disappointment upon viewing results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the lack of a specific intent in the query suggests they were exploring options rather than following a strong scent. The term 'FollowingScent' implies a more directed search behavior that is not reflected here, as the user is likely still assessing the value of the results without a clear target.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result does indicate some level of interest, but given the previous vague query and the context of potentially poor scent, this event may better fit as 'LeavingPatch' if the click was a last resort after viewing unsatisfactory results. The action does not strongly indicate a successful follow-through on a scent, as it may just be an exploration of the least undesirable option.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.78066110610962,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0112869381904601
+}

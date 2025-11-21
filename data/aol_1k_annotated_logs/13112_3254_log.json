@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3254",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:04:01.031816",
+  "events": [
+    {
+      "session_id": "13112_3254",
+      "event_id": "13112_3254_qq-1731",
+      "timestamp": "2006-03-30 08:53:53",
+      "action_type": "QUERY",
+      "content": "new hampshire state",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'new hampshire state...' is too vague and lacks specificity, indicating they may not have found promising information. This suggests a PoorScent scenario where the user did not find satisfactory results, leading to a need for further refinement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9866947382688522,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:04:44.349235"
+    },
+    {
+      "session_id": "13112_3254",
+      "event_id": "13112_3254_qq-1731_serp",
+      "timestamp": "2006-03-30 08:53:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: foster care in new hampshire, new hampshire nh hunting moose deer bear turkey fishing salmon trout new hampshire guides services welcome new hampshire guide services, new hampshire tenants and new hampshire apartments for rent find tenants to share apartments and roommates roommate in new hampshire (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed 10 results, the content viewed appears to lack coherence and relevance to a focused query, implying dissatisfaction with the results. The multiple views of less relevant content suggest the user might be close to abandoning their search, indicating a LeavingPatch situation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9867054581642151,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:04:44.349250"
+    },
+    {
+      "session_id": "13112_3254",
+      "event_id": "13112_3254_qq-1731_cd-2559",
+      "timestamp": "2006-03-30 08:53:53",
+      "action_type": "CLICK",
+      "content": "nh gov the official web site of new hampshire state government",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on the 'nh gov the official web site of new hampshire state government...' may indicate an attempt to find authoritative information but does not necessarily imply a strong information scent. The click could also indicate a last resort action rather than a clear intent to follow a promising lead, suggesting a PoorScent instead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.029625403881073,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:04:44.349264"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.722251176834106,
+      "decisions": [
+        {
+          "event_id": "13112_3254_qq-1731",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3254_qq-1731_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3254_qq-1731_cd-2559",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.790414810180664,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'new hampshire state...' is too vague and lacks specificity, indicating they may not have found promising information. This suggests a PoorScent scenario where the user did not find satisfactory results, leading to a need for further refinement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Although the user viewed 10 results, the content viewed appears to lack coherence and relevance to a focused query, implying dissatisfaction with the results. The multiple views of less relevant content suggest the user might be close to abandoning their search, indicating a LeavingPatch situation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on the 'nh gov the official web site of new hampshire state government...' may indicate an attempt to find authoritative information but does not necessarily imply a strong information scent. The click could also indicate a last resort action rather than a clear intent to follow a promising lead, suggesting a PoorScent instead.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.482527017593384,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.029625403881073
+}

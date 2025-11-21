@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3419",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:50:03.910919",
+  "events": [
+    {
+      "session_id": "14668_3419",
+      "event_id": "14668_3419_qq-1882",
+      "timestamp": "2006-03-10 11:57:45",
+      "action_type": "QUERY",
+      "content": "offer in compromise for irs",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'offer in compromise for irs...' suggests an initial intent to gather information, but the mention of an analysis error indicates that the query likely did not yield satisfactory results, leading to a lack of meaningful engagement. Therefore, it aligns more with PoorScent, as the user may have perceived the information patch as unpromising.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9047351956367493,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:40.608008"
+    },
+    {
+      "session_id": "14668_3419",
+      "event_id": "14668_3419_qq-1882_serp",
+      "timestamp": "2006-03-10 11:57:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: apps irs gov, irs forms com, laura ve irs (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, which may suggest some engagement, but without further clicks or a clear indication of satisfaction, this behavior reflects a potential frustration or lack of promising information. It indicates the user is still searching but is on the verge of abandoning the effort, hence LeavingPatch is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.978792417049408,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:40.608031"
+    },
+    {
+      "session_id": "14668_3419",
+      "event_id": "14668_3419_qq-1882_cd-2026",
+      "timestamp": "2006-03-10 11:57:45",
+      "action_type": "CLICK",
+      "content": "www irs gov",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'www irs gov...' indicates the user identified this result as potentially valuable based on the title/snippet. However, the context suggests an ongoing struggle to find relevant information that may not have been satisfied by prior results, thus it better aligns with ApproachingSource rather than FollowingScent, as the user is seeking specific information rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0084571689367294,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:40.608037"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.658382177352905,
+      "decisions": [
+        {
+          "event_id": "14668_3419_qq-1882",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3419_qq-1882_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3419_qq-1882_cd-2026",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.617309093475342,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'offer in compromise for irs...' suggests an initial intent to gather information, but the mention of an analysis error indicates that the query likely did not yield satisfactory results, leading to a lack of meaningful engagement. Therefore, it aligns more with PoorScent, as the user may have perceived the information patch as unpromising.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, which may suggest some engagement, but without further clicks or a clear indication of satisfaction, this behavior reflects a potential frustration or lack of promising information. It indicates the user is still searching but is on the verge of abandoning the effort, hence LeavingPatch is more appropriate.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'www irs gov...' indicates the user identified this result as potentially valuable based on the title/snippet. However, the context suggests an ongoing struggle to find relevant information that may not have been satisfied by prior results, thus it better aligns with ApproachingSource rather than FollowingScent, as the user is seeking specific information rather than simply following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.188958883285522,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0084571689367294
+}

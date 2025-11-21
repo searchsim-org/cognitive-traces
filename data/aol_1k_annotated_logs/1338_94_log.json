@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_94",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:57:46.808335",
+  "events": [
+    {
+      "session_id": "1338_94",
+      "event_id": "1338_94_qq-32",
+      "timestamp": "2006-03-10 19:20:23",
+      "action_type": "QUERY",
+      "content": "transaxle solenoid assembly lexus",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'transaxle solenoid assembly lexus...' does not indicate a strong intent to follow a scent, especially if it leads to an error indicating a lack of information. This suggests that the user may not have found relevant results to engage with, reflecting a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9685616254806518,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:58:33.334164"
+    },
+    {
+      "session_id": "1338_94",
+      "event_id": "1338_94_qq-32_serp",
+      "timestamp": "2006-03-10 19:20:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: wire harness assembly pcb assembly electro mechanical, new york state assembly home assembly home, new york state assembly home assembly home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results does not inherently indicate a strong scent. The list viewed includes repetitive and potentially irrelevant items, suggesting the user is still struggling to find the right information, indicative of poor scent rather than following a clear trail.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9945122472941875,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:58:33.334184"
+    },
+    {
+      "session_id": "1338_94",
+      "event_id": "1338_94_qq-32_cd-1403",
+      "timestamp": "2006-03-10 19:20:23",
+      "action_type": "CLICK",
+      "content": "lexus experience amazing",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'lexus experience amazing...' suggests that the user was attempting to explore a specific resource that seemed promising. This action fits better with the 'ApproachingSource' label, as the user is engaging with content they found appealing rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9936527565121651,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:58:33.334197"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.18696403503418,
+      "decisions": [
+        {
+          "event_id": "1338_94_qq-32",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_94_qq-32_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_94_qq-32_cd-1403",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.250385999679565,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'transaxle solenoid assembly lexus...' does not indicate a strong intent to follow a scent, especially if it leads to an error indicating a lack of information. This suggests that the user may not have found relevant results to engage with, reflecting a poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results does not inherently indicate a strong scent. The list viewed includes repetitive and potentially irrelevant items, suggesting the user is still struggling to find the right information, indicative of poor scent rather than following a clear trail.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'lexus experience amazing...' suggests that the user was attempting to explore a specific resource that seemed promising. This action fits better with the 'ApproachingSource' label, as the user is engaging with content they found appealing rather than simply following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.76601004600525,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9945122472941875
+}

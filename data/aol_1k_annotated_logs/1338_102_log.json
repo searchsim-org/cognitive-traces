@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_102",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:18:05.012855",
+  "events": [
+    {
+      "session_id": "1338_102",
+      "event_id": "1338_102_qq-41",
+      "timestamp": "2006-03-29 21:52:56",
+      "action_type": "QUERY",
+      "content": "they call me the fat man lyrics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'they call me the fat man lyrics...' indicates a specific intent but if the user did not click on any results or had issues with invalid control characters, it suggests that the user found the results unsatisfactory, leading to poor scent rather than a successful following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9578640878200531,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:18:43.962501"
+    },
+    {
+      "session_id": "1338_102",
+      "event_id": "1338_102_qq-41_serp",
+      "timestamp": "2006-03-29 21:52:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www lyrics quest com, www lyrical swords com, lyric songs tripod com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, if the previous query did not yield satisfactory results or if the user did not engage with any of the results, this indicates that the information scent was weak, categorizing this as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9981552820652724,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:18:43.962511"
+    },
+    {
+      "session_id": "1338_102",
+      "event_id": "1338_102_qq-41_cd-732",
+      "timestamp": "2006-03-29 21:52:56",
+      "action_type": "CLICK",
+      "content": "www lyrics download com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www lyrics download com' might suggest interest, but if the preceding events indicate a lack of promising scent and dissatisfaction, it cannot be considered FollowingScent. It reflects an attempt to salvage value from a poor result rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0047115549445151,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:18:43.962514"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.997620105743408,
+      "decisions": [
+        {
+          "event_id": "1338_102_qq-41",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_102_qq-41_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_102_qq-41_cd-732",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.0743303298950195,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'they call me the fat man lyrics...' indicates a specific intent but if the user did not click on any results or had issues with invalid control characters, it suggests that the user found the results unsatisfactory, leading to poor scent rather than a successful following scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed 10 results, if the previous query did not yield satisfactory results or if the user did not engage with any of the results, this indicates that the information scent was weak, categorizing this as PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'www lyrics download com' might suggest interest, but if the preceding events indicate a lack of promising scent and dissatisfaction, it cannot be considered FollowingScent. It reflects an attempt to salvage value from a poor result rather than a targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.445654153823853,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0047115549445151
+}

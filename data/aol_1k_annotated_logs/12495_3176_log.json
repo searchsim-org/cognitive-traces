@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3176",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:47:55.429252",
+  "events": [
+    {
+      "session_id": "12495_3176",
+      "event_id": "12495_3176_qq-358",
+      "timestamp": "2006-05-29 13:36:51",
+      "action_type": "QUERY",
+      "content": "bank of america",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a vague query 'bank of america...' which lacks specificity and may indicate confusion or a lack of clear intent. This suggests that the user is not following a strong scent but rather struggling to define their information need, leading to a potential lack of promising options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9371328294277191,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:48:47.310170"
+    },
+    {
+      "session_id": "12495_3176",
+      "event_id": "12495_3176_qq-358_serp",
+      "timestamp": "2006-05-29 13:36:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing, bank of america banking credit cards loans and investing (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but the repetitive nature of the results ('bank of america banking credit cards loans and investing' listed multiple times) suggests they are not finding diverse or useful information. This could indicate frustration, leading them to consider abandoning the search rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9414976596832275,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:48:47.310186"
+    },
+    {
+      "session_id": "12495_3176",
+      "event_id": "12495_3176_qq-358_cd-2599",
+      "timestamp": "2006-05-29 13:36:51",
+      "action_type": "CLICK",
+      "content": "bank of america banking credit cards loans and investing",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that appears redundant and poorly defined does not indicate a strong intent to follow a scent. Instead, it reflects that the user might have clicked out of desperation or lack of better options, which is characteristic of poor scent rather than a successful targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9891090765595436,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:48:47.310191"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.373780965805054,
+      "decisions": [
+        {
+          "event_id": "12495_3176_qq-358",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3176_qq-358_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3176_qq-358_cd-2599",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.057616949081421,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a vague query 'bank of america...' which lacks specificity and may indicate confusion or a lack of clear intent. This suggests that the user is not following a strong scent but rather struggling to define their information need, leading to a potential lack of promising options.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but the repetitive nature of the results ('bank of america banking credit cards loans and investing' listed multiple times) suggests they are not finding diverse or useful information. This could indicate frustration, leading them to consider abandoning the search rather than following a strong scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result that appears redundant and poorly defined does not indicate a strong intent to follow a scent. Instead, it reflects that the user might have clicked out of desperation or lack of better options, which is characteristic of poor scent rather than a successful targeted search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.20108699798584,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9891090765595436
+}

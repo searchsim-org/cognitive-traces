@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3195",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:06:08.649296",
+  "events": [
+    {
+      "session_id": "12653_3195",
+      "event_id": "12653_3195_qq-1679",
+      "timestamp": "2006-03-13 09:19:25",
+      "action_type": "QUERY",
+      "content": "westsuburbanbank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'westsuburbanbank...' appears to have issues that may indicate confusion or lack of clarity in intent, possibly leading to the invalid character error. This suggests the user did not have a strong information scent, resulting in a failed attempt to articulate a clear search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8627765655517579,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:06:51.162436"
+    },
+    {
+      "session_id": "12653_3195",
+      "event_id": "12653_3195_qq-1679_serp",
+      "timestamp": "2006-03-13 09:19:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: welcome to west suburban bank unlike any other bank, west suburban ymca, west suburban sports complex (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results such as 'welcome to west suburban bank unlike any other bank' suggests that the user may not have found relevant information, given the previous query's issues. The presence of multiple unrelated results indicates a lack of strong information scent, which should lead to a PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9552767664194107,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:06:51.162448"
+    },
+    {
+      "session_id": "12653_3195",
+      "event_id": "12653_3195_qq-1679_cd-9724",
+      "timestamp": "2006-03-13 09:19:25",
+      "action_type": "CLICK",
+      "content": "welcome to west suburban bank unlike any other bank",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not necessarily indicate a successful following of scent, especially if the previous attempts were unclear or confusing. Given the earlier context of poor queries and potential lack of relevant results, the user may have clicked out of frustration or curiosity rather than clear intent, indicating a LeavingPatch scenario.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9915719605982304,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:06:51.162453"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.716148138046265,
+      "decisions": [
+        {
+          "event_id": "12653_3195_qq-1679",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3195_qq-1679_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3195_qq-1679_cd-9724",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.0783538818359375,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'westsuburbanbank...' appears to have issues that may indicate confusion or lack of clarity in intent, possibly leading to the invalid character error. This suggests the user did not have a strong information scent, resulting in a failed attempt to articulate a clear search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results such as 'welcome to west suburban bank unlike any other bank' suggests that the user may not have found relevant information, given the previous query's issues. The presence of multiple unrelated results indicates a lack of strong information scent, which should lead to a PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result does not necessarily indicate a successful following of scent, especially if the previous attempts were unclear or confusing. Given the earlier context of poor queries and potential lack of relevant results, the user may have clicked out of frustration or curiosity rather than clear intent, indicating a LeavingPatch scenario.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.39872908592224,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9915719605982304
+}

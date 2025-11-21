@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2299",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:08:23.673364",
+  "events": [
+    {
+      "session_id": "10008_2299",
+      "event_id": "10008_2299_qq-1224",
+      "timestamp": "2006-04-28 09:55:47",
+      "action_type": "QUERY",
+      "content": "bridgton me",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'bridgton me...' is vague and likely indicates the user did not find a satisfactory direction for their search, which suggests a lack of promising scent. The analyst's label of FollowingScent assumes the user's intent is clear, but the incomplete query indicates uncertainty.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9503205597400666,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:08:46.041936"
+    },
+    {
+      "session_id": "10008_2299",
+      "event_id": "10008_2299_qq-1224_serp",
+      "timestamp": "2006-04-28 09:55:47",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: b rid gt on hospital b rid gt on maine me central maine healthcare, highland lake resort b rid gt on maine highland lake resort b rid gt on maine, www b rid gt on academy org (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, but the content suggests they may not have found relevant information, shown by the fragmented phrases and potential confusion in the titles. This indicates they are likely on the verge of abandoning their current search patch rather than following a clear scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6240000000000001,
+      "disagreement_score": 0.9704287767410278,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:08:46.041942"
+    },
+    {
+      "session_id": "10008_2299",
+      "event_id": "10008_2299_qq-1224_cd-7892",
+      "timestamp": "2006-04-28 09:55:47",
+      "action_type": "CLICK",
+      "content": "home town of b rid gt on maine",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'home town of bridgton maine...' suggests the user is attempting to gather specific information, which aligns more closely with ApproachingSource than FollowingScent. The title appears to provide a clearer path for the user to find the desired information, indicating they are moving toward a source rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9973566994071007,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:08:46.041944"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.436622142791748,
+      "decisions": [
+        {
+          "event_id": "10008_2299_qq-1224",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2299_qq-1224_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2299_qq-1224_cd-7892",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.400128126144409,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'bridgton me...' is vague and likely indicates the user did not find a satisfactory direction for their search, which suggests a lack of promising scent. The analyst's label of FollowingScent assumes the user's intent is clear, but the incomplete query indicates uncertainty.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results, but the content suggests they may not have found relevant information, shown by the fragmented phrases and potential confusion in the titles. This indicates they are likely on the verge of abandoning their current search patch rather than following a clear scent.",
+          "confidence": 0.78
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'home town of bridgton maine...' suggests the user is attempting to gather specific information, which aligns more closely with ApproachingSource than FollowingScent. The title appears to provide a clearer path for the user to find the desired information, indicating they are moving toward a source rather than simply following a scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.221665859222412,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6240000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9973566994071007
+}

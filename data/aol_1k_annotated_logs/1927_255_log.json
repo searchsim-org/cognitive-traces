@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_255",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:30:20.828930",
+  "events": [
+    {
+      "session_id": "1927_255",
+      "event_id": "1927_255_qq-141",
+      "timestamp": "2006-04-23 08:03:16",
+      "action_type": "QUERY",
+      "content": "free ecards",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'free ecards...' suggests the user was seeking specific information but the lack of subsequent actions (like clicks) indicates that the query did not yield satisfactory results or relevant options. This reflects a poor scent rather than a clear intent to follow a path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9970815345644951,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:30:43.769974"
+    },
+    {
+      "session_id": "1927_255",
+      "event_id": "1927_255_qq-141_serp",
+      "timestamp": "2006-04-23 08:03:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: free e cards online greeting cards free e cards, e greetings e cards free e cards premium e cards customize an e card, free greeting cards funny greeting cards free e cards (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed the SERP, the titles and snippets listed do not appear to strongly indicate a specific direction of inquiry. Instead, this could be seen as an exploratory phase where the user is scanning for relevant information, thus leaning more towards an 'ApproachingSource' label rather than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.017160876095295,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:30:43.769982"
+    },
+    {
+      "session_id": "1927_255",
+      "event_id": "1927_255_qq-141_cd-1587",
+      "timestamp": "2006-04-23 08:03:16",
+      "action_type": "CLICK",
+      "content": "free e cards greeting cards blue mountain",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result indicates an interest in pursuing that specific source. However, without evidence of prior successful scent from the previous queries leading to this click, categorizing it as 'FollowingScent' is premature. A more fitting label is 'ApproachingSource' as the click suggests an exploration rather than a continuation of a well-founded search path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0028767138719559,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:30:43.769984"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.705158710479736,
+      "decisions": [
+        {
+          "event_id": "1927_255_qq-141",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_255_qq-141_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_255_qq-141_cd-1587",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.3798418045043945,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'free ecards...' suggests the user was seeking specific information but the lack of subsequent actions (like clicks) indicates that the query did not yield satisfactory results or relevant options. This reflects a poor scent rather than a clear intent to follow a path.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed the SERP, the titles and snippets listed do not appear to strongly indicate a specific direction of inquiry. Instead, this could be seen as an exploratory phase where the user is scanning for relevant information, thus leaning more towards an 'ApproachingSource' label rather than 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result indicates an interest in pursuing that specific source. However, without evidence of prior successful scent from the previous queries leading to this click, categorizing it as 'FollowingScent' is premature. A more fitting label is 'ApproachingSource' as the click suggests an exploration rather than a continuation of a well-founded search path.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.497594833374023,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.017160876095295
+}

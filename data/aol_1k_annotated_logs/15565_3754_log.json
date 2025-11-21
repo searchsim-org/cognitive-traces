@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3754",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:34:04.389473",
+  "events": [
+    {
+      "session_id": "15565_3754",
+      "event_id": "15565_3754_qq-2100",
+      "timestamp": "2006-03-06 00:42:26",
+      "action_type": "QUERY",
+      "content": "frys",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'frys...' does not provide a clear or specific intent, suggesting the user may not have found promising information scent. The presence of an invalid control character further indicates a lack of clarity in the query, which is more consistent with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9328411757946015,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:34:28.479149"
+    },
+    {
+      "session_id": "15565_3754",
+      "event_id": "15565_3754_qq-2100_serp",
+      "timestamp": "2006-03-06 00:42:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: welcome small fry s children s store, fry reg let home fry reg let, fry s home electronics computer parts accessories software games tvs cameras fry s com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that include vague references to 'fry' suggests the user is still searching for relevant content but does not imply a strong information scent. The lack of clarity and specificity in the titles indicates that the user may not have found promising leads, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9580733954906464,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:34:28.479164"
+    },
+    {
+      "session_id": "15565_3754",
+      "event_id": "15565_3754_qq-2100_cd-11905",
+      "timestamp": "2006-03-06 00:42:26",
+      "action_type": "CLICK",
+      "content": "fry s home electronics computer parts accessories software games tvs cameras fry s com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the previous context indicates a lack of strong information scent. The user's click seems more exploratory rather than a decisive action based on clear intent. Therefore, ApproachingSource is more fitting than FollowingScent, as it implies a more confident search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.027920377254486,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:34:28.479169"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.066420078277588,
+      "decisions": [
+        {
+          "event_id": "15565_3754_qq-2100",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3754_qq-2100_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3754_qq-2100_cd-11905",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.655949831008911,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'frys...' does not provide a clear or specific intent, suggesting the user may not have found promising information scent. The presence of an invalid control character further indicates a lack of clarity in the query, which is more consistent with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that include vague references to 'fry' suggests the user is still searching for relevant content but does not imply a strong information scent. The lack of clarity and specificity in the titles indicates that the user may not have found promising leads, aligning more with PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the previous context indicates a lack of strong information scent. The user's click seems more exploratory rather than a decisive action based on clear intent. Therefore, ApproachingSource is more fitting than FollowingScent, as it implies a more confident search behavior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.01694107055664,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.027920377254486
+}

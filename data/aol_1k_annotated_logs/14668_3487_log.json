@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3487",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:39:25.478196",
+  "events": [
+    {
+      "session_id": "14668_3487",
+      "event_id": "14668_3487_qq-1944",
+      "timestamp": "2006-05-05 09:56:33",
+      "action_type": "QUERY",
+      "content": "weight chart for men",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'weight chart for men...' lacks specificity and may not have provided sufficient scent to engage the user further, evidenced by the noted error. This suggests the user did not find promising results, leading to a lack of clicks or further actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9065099596977234,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:40:03.636913"
+    },
+    {
+      "session_id": "14668_3487",
+      "event_id": "14668_3487_qq-1944_serp",
+      "timestamp": "2006-05-05 09:56:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www weight loss software com, www weight loss discovery com, free intense weight training workouts (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewing 10 results without any indication of engagement (e.g., clicks) suggests that the results did not satisfy their information need, which indicates poor scent rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9853961855173111,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:40:03.636922"
+    },
+    {
+      "session_id": "14668_3487",
+      "event_id": "14668_3487_qq-1944_cd-4047",
+      "timestamp": "2006-05-05 09:56:33",
+      "action_type": "CLICK",
+      "content": "diet weight loss plans menus",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking indicates that the user was drawn to the content based on a perceived strong scent from the title or snippet, suggesting they were investigating further. This does not align with 'FollowingScent,' which implies a more proactive query initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.015199714899063,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:40:03.636926"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.31044888496399,
+      "decisions": [
+        {
+          "event_id": "14668_3487_qq-1944",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3487_qq-1944_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3487_qq-1944_cd-4047",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.339702844619751,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'weight chart for men...' lacks specificity and may not have provided sufficient scent to engage the user further, evidenced by the noted error. This suggests the user did not find promising results, leading to a lack of clicks or further actions.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewing 10 results without any indication of engagement (e.g., clicks) suggests that the results did not satisfy their information need, which indicates poor scent rather than following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking indicates that the user was drawn to the content based on a perceived strong scent from the title or snippet, suggesting they were investigating further. This does not align with 'FollowingScent,' which implies a more proactive query initiation.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.235166788101196,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.015199714899063
+}

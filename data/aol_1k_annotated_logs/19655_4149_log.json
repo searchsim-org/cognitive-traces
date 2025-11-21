@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4149",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:29:28.176517",
+  "events": [
+    {
+      "session_id": "19655_4149",
+      "event_id": "19655_4149_qq-2419",
+      "timestamp": "2006-05-02 04:19:59",
+      "action_type": "QUERY",
+      "content": "kubla khan commentary",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query for 'kubla khan commentary...' does not indicate a clear intent for a focused search, especially given the error noted. The analyst's reasoning suggests that the user might have abandoned the search due to the error, indicating no promising scent was found.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9224659085273743,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:29:56.140141"
+    },
+    {
+      "session_id": "19655_4149",
+      "event_id": "19655_4149_qq-2419_serp",
+      "timestamp": "2006-05-02 04:19:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the cape rock com midwestern news commentary, kierkegaard d anthony storm s commentary on, commentary at jerome huy ler american declaration (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the SERP results without clicking on any suggests that the user did not find the information satisfying or relevant, leading to an indication of poor scent rather than following a scent. The presence of multiple results without engagement indicates a lack of promising leads.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0114979431033135,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:29:56.140163"
+    },
+    {
+      "session_id": "19655_4149",
+      "event_id": "19655_4149_qq-2419_cd-14226",
+      "timestamp": "2006-05-02 04:19:59",
+      "action_type": "CLICK",
+      "content": "commentary a magazine of significant thought and opinion",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'commentary a magazine of significant thought and opinion...' suggests that the user was intrigued enough by the title/snippet to investigate further, indicative of approaching a source rather than following a scent. This aligns with the act of seeking out potentially valuable information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9732688248157502,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:29:56.140171"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.063364028930664,
+      "decisions": [
+        {
+          "event_id": "19655_4149_qq-2419",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4149_qq-2419_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4149_qq-2419_cd-14226",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.4989049434661865,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query for 'kubla khan commentary...' does not indicate a clear intent for a focused search, especially given the error noted. The analyst's reasoning suggests that the user might have abandoned the search due to the error, indicating no promising scent was found.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing the SERP results without clicking on any suggests that the user did not find the information satisfying or relevant, leading to an indication of poor scent rather than following a scent. The presence of multiple results without engagement indicates a lack of promising leads.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'commentary a magazine of significant thought and opinion...' suggests that the user was intrigued enough by the title/snippet to investigate further, indicative of approaching a source rather than following a scent. This aligns with the act of seeking out potentially valuable information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.320436239242554,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0114979431033135
+}

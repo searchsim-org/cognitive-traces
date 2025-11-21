@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3030",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:38:21.246656",
+  "events": [
+    {
+      "session_id": "12211_3030",
+      "event_id": "12211_3030_qq-1561",
+      "timestamp": "2006-04-26 22:36:09",
+      "action_type": "QUERY",
+      "content": "enlux",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query appears to have an invalid control character, which suggests that the query may not have been well-formed or targeted. This indicates a lack of promising scent, as the user could not effectively communicate their information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8715424060821533,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:04.894693"
+    },
+    {
+      "session_id": "12211_3030",
+      "event_id": "12211_3030_qq-1561_serp",
+      "timestamp": "2006-04-26 22:36:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: luxe walls, loretta lux, luxe style (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results indicates a level of exploration, but the invalid control character in the query suggests that the content may not have been relevant or clear to the user. This implies that the user did not find strong information scent in the results, leading to potential frustration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8653341770172118,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:04.894701"
+    },
+    {
+      "session_id": "12211_3030",
+      "event_id": "12211_3030_qq-1561_cd-9397",
+      "timestamp": "2006-04-26 22:36:09",
+      "action_type": "CLICK",
+      "content": "en lux lighting leading commercial led down light provider",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, which typically indicates an intention to investigate further. However, the previous issues with the query suggest that this click may not stem from a strong scent but rather from a lack of better options. Hence, a more suitable label would be 'ApproachingSource' as the user still engaged with a specific potential source despite the poor initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9768037348985672,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:04.894704"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.61738395690918,
+      "decisions": [
+        {
+          "event_id": "12211_3030_qq-1561",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3030_qq-1561_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3030_qq-1561_cd-9397",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.81932806968689,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query appears to have an invalid control character, which suggests that the query may not have been well-formed or targeted. This indicates a lack of promising scent, as the user could not effectively communicate their information need.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of viewing 10 results indicates a level of exploration, but the invalid control character in the query suggests that the content may not have been relevant or clear to the user. This implies that the user did not find strong information scent in the results, leading to potential frustration.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, which typically indicates an intention to investigate further. However, the previous issues with the query suggest that this click may not stem from a strong scent but rather from a lack of better options. Hence, a more suitable label would be 'ApproachingSource' as the user still engaged with a specific potential source despite the poor initial query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.0597140789032,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9768037348985672
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3814",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:58:53.552677",
+  "events": [
+    {
+      "session_id": "17545_3814",
+      "event_id": "17545_3814_qq-2179",
+      "timestamp": "2006-03-24 16:46:02",
+      "action_type": "QUERY",
+      "content": "chatterbox",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query, especially with a vague identifier like 'chatterbox...', suggests uncertainty or a lack of clear direction. The control character error further implies that the query may not have been formulated effectively, thus indicating poor information scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8756601572036743,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:25.737193"
+    },
+    {
+      "session_id": "17545_3814",
+      "event_id": "17545_3814_qq-2179_serp",
+      "timestamp": "2006-03-24 16:46:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: chatterbox usa chatterbox usa, chatterbox type pad com, www chatterbox inc com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without a clear focused query (as indicated by 'chatterbox usa chatterbox usa' among others) suggests the user is still exploring options rather than following a strong scent. The presence of an invalid control character further emphasizes that the search intent may not be well-formed.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8972203254699707,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:25.737215"
+    },
+    {
+      "session_id": "17545_3814",
+      "event_id": "17545_3814_qq-2179_cd-12858",
+      "timestamp": "2006-03-24 16:46:02",
+      "action_type": "CLICK",
+      "content": "chatterbox usa chatterbox usa",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that appears to be a repetition of previous results ('chatterbox usa chatterbox usa') indicates that the user may be struggling to find relevant information, rather than confidently following a strong scent. The repeated nature of the clicked content suggests a lack of clarity in the user's search goal.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0039965622127056,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:25.737222"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.794821739196777,
+      "decisions": [
+        {
+          "event_id": "17545_3814_qq-2179",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3814_qq-2179_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3814_qq-2179_cd-12858",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.326841115951538,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query, especially with a vague identifier like 'chatterbox...', suggests uncertainty or a lack of clear direction. The control character error further implies that the query may not have been formulated effectively, thus indicating poor information scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without a clear focused query (as indicated by 'chatterbox usa chatterbox usa' among others) suggests the user is still exploring options rather than following a strong scent. The presence of an invalid control character further emphasizes that the search intent may not be well-formed.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that appears to be a repetition of previous results ('chatterbox usa chatterbox usa') indicates that the user may be struggling to find relevant information, rather than confidently following a strong scent. The repeated nature of the clicked content suggests a lack of clarity in the user's search goal.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.77128005027771,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0039965622127056
+}

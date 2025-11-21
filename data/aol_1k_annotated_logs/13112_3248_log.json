@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3248",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:58:04.160382",
+  "events": [
+    {
+      "session_id": "13112_3248",
+      "event_id": "13112_3248_qq-1725",
+      "timestamp": "2006-03-24 10:29:12",
+      "action_type": "QUERY",
+      "content": "maytag.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to be malformed or incomplete, leading to an analysis error. The presence of an invalid control character suggests the user is not following a clear scent, as the query does not form a coherent search intent. This aligns more with PoorScent, as the user likely abandoned the initial query due to its inadequacy.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8272106409072876,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:56.081023"
+    },
+    {
+      "session_id": "13112_3248",
+      "event_id": "13112_3248_qq-1725_serp",
+      "timestamp": "2006-03-24 10:29:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: may tag brand canada english may tag, may tag collectors club, www may tag blue com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without interaction indicates that the user may not have found relevant information, suggesting they were not following a strong scent. Instead, this behavior is more indicative of LeavingPatch, where the user is likely to abandon the search session due to dissatisfaction with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9728106051683426,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:56.081045"
+    },
+    {
+      "session_id": "13112_3248",
+      "event_id": "13112_3248_qq-1725_cd-9238",
+      "timestamp": "2006-03-24 10:29:12",
+      "action_type": "CLICK",
+      "content": "dependable kitchen laundry appliances may tag",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result indicates a step toward further investigation rather than following a strong scent. Given the context of the previous events where the user exhibited signs of confusion or lack of clear intent, this suggests the user was approaching a source without a strong information scent, which is more aligned with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9813063025474549,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:56.081055"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.042248964309692,
+      "decisions": [
+        {
+          "event_id": "13112_3248_qq-1725",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3248_qq-1725_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3248_qq-1725_cd-9238",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.918254852294922,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to be malformed or incomplete, leading to an analysis error. The presence of an invalid control character suggests the user is not following a clear scent, as the query does not form a coherent search intent. This aligns more with PoorScent, as the user likely abandoned the initial query due to its inadequacy.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without interaction indicates that the user may not have found relevant information, suggesting they were not following a strong scent. Instead, this behavior is more indicative of LeavingPatch, where the user is likely to abandon the search session due to dissatisfaction with the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result indicates a step toward further investigation rather than following a strong scent. Given the context of the previous events where the user exhibited signs of confusion or lack of clear intent, this suggests the user was approaching a source without a strong information scent, which is more aligned with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.574309825897217,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9813063025474549
+}

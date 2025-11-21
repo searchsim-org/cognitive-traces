@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2603",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:32:11.544215",
+  "events": [
+    {
+      "session_id": "10436_2603",
+      "event_id": "10436_2603_qq-1394",
+      "timestamp": "2006-05-12 16:57:17",
+      "action_type": "QUERY",
+      "content": "long island railrod schedule",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'long island railrod schedule...' suggests that the user is searching for a specific schedule. However, the presence of an invalid control character indicates a potential error in the query that could lead to ineffective search results. This suggests the user did not find strong scent in the results and was likely not satisfied with the initial query, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.91312255859375,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:47.480302"
+    },
+    {
+      "session_id": "10436_2603",
+      "event_id": "10436_2603_qq-1394_serp",
+      "timestamp": "2006-05-12 16:57:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: long island boating ami long island ny, long island equine long island horse properties, long island movers long island storage warehouse (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did so for a topic that seems misaligned with their original intent (long island railroad). The variety of results like 'long island boating' and 'long island equine' suggests a lack of relevant options for the user's intended query. This indicates they are likely frustrated and may abandon their search, fitting more with LeavingPatch than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9692433416843415,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:47.480440"
+    },
+    {
+      "session_id": "10436_2603",
+      "event_id": "10436_2603_qq-1394_cd-8578",
+      "timestamp": "2006-05-12 16:57:17",
+      "action_type": "CLICK",
+      "content": "long island railroad schedule information low adjustable rate mortgage com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'long island railroad schedule information low adjustable rate mortgage com...' suggests the user was trying to obtain specific schedule information. However, the presence of unrelated content ('low adjustable rate mortgage') indicates that the click was likely due to misleading information scent, rather than a clear or targeted intent. This aligns better with PoorScent, as the user may have been misled into clicking on irrelevant content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9575700253248215,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:32:47.480451"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.534626960754395,
+      "decisions": [
+        {
+          "event_id": "10436_2603_qq-1394",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2603_qq-1394_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2603_qq-1394_cd-8578",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 13.059128999710083,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'long island railrod schedule...' suggests that the user is searching for a specific schedule. However, the presence of an invalid control character indicates a potential error in the query that could lead to ineffective search results. This suggests the user did not find strong scent in the results and was likely not satisfied with the initial query, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did so for a topic that seems misaligned with their original intent (long island railroad). The variety of results like 'long island boating' and 'long island equine' suggests a lack of relevant options for the user's intended query. This indicates they are likely frustrated and may abandon their search, fitting more with LeavingPatch than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'long island railroad schedule information low adjustable rate mortgage com...' suggests the user was trying to obtain specific schedule information. However, the presence of unrelated content ('low adjustable rate mortgage') indicates that the click was likely due to misleading information scent, rather than a clear or targeted intent. This aligns better with PoorScent, as the user may have been misled into clicking on irrelevant content.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.979273080825806,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9692433416843415
+}

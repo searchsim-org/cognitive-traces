@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3276",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:23:07.531713",
+  "events": [
+    {
+      "session_id": "13112_3276",
+      "event_id": "13112_3276_qq-1757",
+      "timestamp": "2006-05-14 13:00:16",
+      "action_type": "QUERY",
+      "content": "sample nicet examinations",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sample nicet examinations...' appears to lack clarity and specificity, suggesting that the user did not find promising results, leading to a new search without clicks. This indicates a poor scent rather than a strong intent to follow a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9605172455310822,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:02.515922"
+    },
+    {
+      "session_id": "13112_3276",
+      "event_id": "13112_3276_qq-1757_serp",
+      "timestamp": "2006-05-14 13:00:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home nice t, nice, nice produce com nice things for nice people (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of 10 results that include repetitive and vague terms ('nice') suggests that the user was not satisfied with the information available, indicative of poor scent. This does not reflect a strong intent or effective targeting in the search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9938572820276022,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:02.515929"
+    },
+    {
+      "session_id": "13112_3276",
+      "event_id": "13112_3276_qq-1757_cd-9950",
+      "timestamp": "2006-05-14 13:00:16",
+      "action_type": "CLICK",
+      "content": "home nice t",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result that appears vague ('home nice t...') indicates that the user may have been exploring options but did not find satisfactory results after multiple attempts. It suggests the user was still searching but may have been ready to abandon this particular line of inquiry due to perceived inadequacies, warranting a label of LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9603426784276963,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:02.515931"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.004611015319824,
+      "decisions": [
+        {
+          "event_id": "13112_3276_qq-1757",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3276_qq-1757_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3276_qq-1757_cd-9950",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.98374605178833,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sample nicet examinations...' appears to lack clarity and specificity, suggesting that the user did not find promising results, leading to a new search without clicks. This indicates a poor scent rather than a strong intent to follow a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewing of 10 results that include repetitive and vague terms ('nice') suggests that the user was not satisfied with the information available, indicative of poor scent. This does not reflect a strong intent or effective targeting in the search process.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on a result that appears vague ('home nice t...') indicates that the user may have been exploring options but did not find satisfactory results after multiple attempts. It suggests the user was still searching but may have been ready to abandon this particular line of inquiry due to perceived inadequacies, warranting a label of LeavingPatch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 31.73425579071045,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9938572820276022
+}

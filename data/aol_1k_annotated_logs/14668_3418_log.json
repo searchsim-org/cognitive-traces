@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3418",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:49:35.593057",
+  "events": [
+    {
+      "session_id": "14668_3418",
+      "event_id": "14668_3418_qq-1881",
+      "timestamp": "2006-03-09 23:40:47",
+      "action_type": "QUERY",
+      "content": "candlelight winery in garrettsville ohio",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'candlelight winery in garrettsville ohio...' may indicate a lack of clear intent or promising scent if it was issued with an error such as an invalid control character. This suggests the user might have been unsure about the query, leading to a lack of engagement or follow-up actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9294727325439454,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:03.908370"
+    },
+    {
+      "session_id": "14668_3418",
+      "event_id": "14668_3418_qq-1881_serp",
+      "timestamp": "2006-03-09 23:40:47",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: candlelight winery com, village of garrett s ville ohio official website, www garrett s ville hiram area com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 search results without any clicks may imply that none of the results provided a strong scent for the user, which aligns more closely with the PoorScent label. If the user was not compelled by the titles/snippets to take further action, it reflects a lack of promising information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.000943985953927,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:03.908379"
+    },
+    {
+      "session_id": "14668_3418",
+      "event_id": "14668_3418_qq-1881_cd-11259",
+      "timestamp": "2006-03-09 23:40:47",
+      "action_type": "CLICK",
+      "content": "candlelight winery com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'candlelight winery com...' indicates the user sensed potential value in that link, hence it aligns with ApproachingSource rather than FollowingScent. FollowingScent implies a stronger sequential search behavior rather than a reaction to a specific click.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0136545211076737,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:50:03.908383"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.521176099777222,
+      "decisions": [
+        {
+          "event_id": "14668_3418_qq-1881",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3418_qq-1881_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3418_qq-1881_cd-11259",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.135171175003052,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'candlelight winery in garrettsville ohio...' may indicate a lack of clear intent or promising scent if it was issued with an error such as an invalid control character. This suggests the user might have been unsure about the query, leading to a lack of engagement or follow-up actions.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 search results without any clicks may imply that none of the results provided a strong scent for the user, which aligns more closely with the PoorScent label. If the user was not compelled by the titles/snippets to take further action, it reflects a lack of promising information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'candlelight winery com...' indicates the user sensed potential value in that link, hence it aligns with ApproachingSource rather than FollowingScent. FollowingScent implies a stronger sequential search behavior rather than a reaction to a specific click.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.490819692611694,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0136545211076737
+}

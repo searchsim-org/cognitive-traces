@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4015",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:43:02.023096",
+  "events": [
+    {
+      "session_id": "19162_4015",
+      "event_id": "19162_4015_qq-2284",
+      "timestamp": "2006-03-02 20:17:30",
+      "action_type": "QUERY",
+      "content": "the jonas brothers lyrics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the jonas brothers lyrics...' is vague and lacks specificity, indicating that the user may not have found a satisfactory scent leading to further exploration. The presence of an error doesn't justify labeling this as FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0129409462213517,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:43:35.520478"
+    },
+    {
+      "session_id": "19162_4015",
+      "event_id": "19162_4015_qq-2284_serp",
+      "timestamp": "2006-03-02 20:17:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www song lyrics world com, www elvis presley lyrics com, our lyrics we bark org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results that do not seem to align well with their initial query, suggesting a lack of promising scent. The fact that the user is viewing results but not clicking implies that the information presented did not meet their needs, reinforcing the idea of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9961789593100547,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:43:35.520512"
+    },
+    {
+      "session_id": "19162_4015",
+      "event_id": "19162_4015_qq-2284_cd-12361",
+      "timestamp": "2006-03-02 20:17:30",
+      "action_type": "CLICK",
+      "content": "az lyrics request for access",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'az lyrics request for access...' suggests that the user is trying to engage with content but may be encountering barriers. Given the previous events, it's more indicative of frustration and a potential exit from the search process rather than a targeted search, aligning it more with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9429859638214111,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:43:35.520520"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.678386926651001,
+      "decisions": [
+        {
+          "event_id": "19162_4015_qq-2284",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4015_qq-2284_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4015_qq-2284_cd-12361",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.625863790512085,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the jonas brothers lyrics...' is vague and lacks specificity, indicating that the user may not have found a satisfactory scent leading to further exploration. The presence of an error doesn't justify labeling this as FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results that do not seem to align well with their initial query, suggesting a lack of promising scent. The fact that the user is viewing results but not clicking implies that the information presented did not meet their needs, reinforcing the idea of PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'az lyrics request for access...' suggests that the user is trying to engage with content but may be encountering barriers. Given the previous events, it's more indicative of frustration and a potential exit from the search process rather than a targeted search, aligning it more with LeavingPatch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.071715116500854,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0129409462213517
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3672",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:39:06.571930",
+  "events": [
+    {
+      "session_id": "15328_3672",
+      "event_id": "15328_3672_qq-2036",
+      "timestamp": "2006-03-25 12:46:17",
+      "action_type": "QUERY",
+      "content": "montgomery county common pleas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a search query, but the context suggests that there was an error in the input, indicating a lack of clarity or relevance in the results. Therefore, the user likely perceived no promising scent and needed to reformulate or abandon the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9229367256164551,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:39:33.999303"
+    },
+    {
+      "session_id": "15328_3672",
+      "event_id": "15328_3672_qq-2036_serp",
+      "timestamp": "2006-03-25 12:46:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: city of montgomery ohio official website, gym in montgomery al metro fitness, montgomery college aca log a cms (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Even though the user viewed multiple search results, the presence of several irrelevant or misaligned results implies that the user did not find a satisfactory scent. The list of viewed results does not indicate a strong intent to continue exploring based on the information provided.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9902565956115723,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:39:33.999309"
+    },
+    {
+      "session_id": "15328_3672",
+      "event_id": "15328_3672_qq-2036_cd-11710",
+      "timestamp": "2006-03-25 12:46:17",
+      "action_type": "CLICK",
+      "content": "www clerk co montgomery oh us",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific link, which suggests an attempt to investigate further based on the perceived relevance of the source. This action is more indicative of an effort to approach a source rather than a continuation of a scent-driven search, especially given the context of previous errors.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9689620733261108,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:39:33.999312"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.590209007263184,
+      "decisions": [
+        {
+          "event_id": "15328_3672_qq-2036",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3672_qq-2036_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3672_qq-2036_cd-11710",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.057058811187744,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a search query, but the context suggests that there was an error in the input, indicating a lack of clarity or relevance in the results. Therefore, the user likely perceived no promising scent and needed to reformulate or abandon the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Even though the user viewed multiple search results, the presence of several irrelevant or misaligned results implies that the user did not find a satisfactory scent. The list of viewed results does not indicate a strong intent to continue exploring based on the information provided.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific link, which suggests an attempt to investigate further based on the perceived relevance of the source. This action is more indicative of an effort to approach a source rather than a continuation of a scent-driven search, especially given the context of previous errors.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.63405704498291,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9902565956115723
+}

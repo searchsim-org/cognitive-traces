@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_12",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:33:57.657372",
+  "events": [
+    {
+      "session_id": "1035_12",
+      "event_id": "1035_12_qq-2",
+      "timestamp": "2006-03-09 16:58:18",
+      "action_type": "QUERY",
+      "content": "spanish english dictionary online",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'spanish english dictionary online' may indicate initial intent, but if the user encounters an error (invalid control character), it suggests a lack of traction in finding relevant information. This aligns more with PoorScent as it indicates the user may not have found promising results to pursue further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9251168727874756,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:34:31.672228"
+    },
+    {
+      "session_id": "1035_12",
+      "event_id": "1035_12_qq-2_serp",
+      "timestamp": "2006-03-09 16:58:18",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www english to spanish com, diction ar engle z roman english romanian dictionary online, comprehensive english urdu dictionary with advance search urdu seek com english urdu dictionary (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results suggests that the user was actively assessing options based on the information scent. However, since the results were not clicked on and may not have led to a satisfactory outcome, a better label here could be ApproachingSource, indicating they are evaluating but not committing yet.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9836633414030075,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:34:31.672247"
+    },
+    {
+      "session_id": "1035_12",
+      "event_id": "1035_12_qq-2_cd-1100",
+      "timestamp": "2006-03-09 16:58:18",
+      "action_type": "CLICK",
+      "content": "free online dictionaries",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'free online dictionaries' suggests the user was exploring before leaving the search. If the click did not lead to satisfaction or further engagement, this could indicate they are leaving due to poor results overall. Thus, LeavingPatch is more appropriate than FollowingScent as the user did not find the desired outcome.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.001175618171692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:34:31.672250"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.962769031524658,
+      "decisions": [
+        {
+          "event_id": "1035_12_qq-2",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_12_qq-2_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_12_qq-2_cd-1100",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.923702955245972,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'spanish english dictionary online' may indicate initial intent, but if the user encounters an error (invalid control character), it suggests a lack of traction in finding relevant information. This aligns more with PoorScent as it indicates the user may not have found promising results to pursue further.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing multiple results suggests that the user was actively assessing options based on the information scent. However, since the results were not clicked on and may not have led to a satisfactory outcome, a better label here could be ApproachingSource, indicating they are evaluating but not committing yet.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'free online dictionaries' suggests the user was exploring before leaving the search. If the click did not lead to satisfaction or further engagement, this could indicate they are leaving due to poor results overall. Thus, LeavingPatch is more appropriate than FollowingScent as the user did not find the desired outcome.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.919536113739014,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.001175618171692
+}

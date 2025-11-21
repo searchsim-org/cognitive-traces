@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3761",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:37:05.071101",
+  "events": [
+    {
+      "session_id": "15565_3761",
+      "event_id": "15565_3761_qq-2108",
+      "timestamp": "2006-03-27 21:40:19",
+      "action_type": "QUERY",
+      "content": "val pak",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'val pak...' is vague and lacks clarity, suggesting the user may not have a clear intent or direction in their search. The invalid control character indicates a potential error in query formulation, which aligns with poor scent rather than a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.833319616317749,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:37:36.277140"
+    },
+    {
+      "session_id": "15565_3761",
+      "event_id": "15565_3761_qq-2108_serp",
+      "timestamp": "2006-03-27 21:40:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: val pak printable coupons online promo codes local deals, web pak, jovi pak (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the content indicates a lack of specificity and clarity in the search intent. The presence of multiple vague terms suggests the user may not be finding promising information, which aligns better with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9900452867150307,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:37:36.277161"
+    },
+    {
+      "session_id": "15565_3761",
+      "event_id": "15565_3761_qq-2108_cd-11924",
+      "timestamp": "2006-03-27 21:40:19",
+      "action_type": "CLICK",
+      "content": "val pak printable coupons online promo codes local deals",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Given the content of the clicked result appears to be part of a broader, unclear search, it indicates the user may be trying to gather information but is likely still frustrated with their query's effectiveness. This reflects an attempt to leave the patch rather than a clear, targeted action indicated by FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9878473907709122,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:37:36.277168"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.298437118530273,
+      "decisions": [
+        {
+          "event_id": "15565_3761_qq-2108",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3761_qq-2108_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3761_qq-2108_cd-11924",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.6226277351379395,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'val pak...' is vague and lacks clarity, suggesting the user may not have a clear intent or direction in their search. The invalid control character indicates a potential error in query formulation, which aligns with poor scent rather than a focused search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed 10 results, the content indicates a lack of specificity and clarity in the search intent. The presence of multiple vague terms suggests the user may not be finding promising information, which aligns better with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Given the content of the clicked result appears to be part of a broader, unclear search, it indicates the user may be trying to gather information but is likely still frustrated with their query's effectiveness. This reflects an attempt to leave the patch rather than a clear, targeted action indicated by FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.019474744796753,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9900452867150307
+}

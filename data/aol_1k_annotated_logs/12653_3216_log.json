@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3216",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:29:00.225918",
+  "events": [
+    {
+      "session_id": "12653_3216",
+      "event_id": "12653_3216_qq-1677",
+      "timestamp": "2006-03-28 17:53:00",
+      "action_type": "QUERY",
+      "content": "world furniture mall",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'world furniture mall...' does not demonstrate a clear intent or well-formed structure. The presence of an error message indicates that the query may not have been effectively communicated, leading to a lack of promising scent from the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9572951316833496,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:29:54.518145"
+    },
+    {
+      "session_id": "12653_3216",
+      "event_id": "12653_3216_qq-1677_serp",
+      "timestamp": "2006-03-28 17:53:00",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www world furniture mall net, world furniture world furniture, world mall (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that may not have been relevant to the user's intent suggests that the user was not receiving strong information scent. The analysis error indicates that the initial query was flawed, leading to an ineffective SERP view.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8560631036758423,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:29:54.518157"
+    },
+    {
+      "session_id": "12653_3216",
+      "event_id": "12653_3216_qq-1677_cd-9729",
+      "timestamp": "2006-03-28 17:53:00",
+      "action_type": "CLICK",
+      "content": "www world furniture mall net",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a link from the SERP does not necessarily indicate a strong information scent. Given the previous errors and potential lack of relevance in the results, this click could indicate an attempt to salvage the search rather than a confident search continuation, leading to a potential session abandonment.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9732499837875366,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:29:54.518160"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.567198991775513,
+      "decisions": [
+        {
+          "event_id": "12653_3216_qq-1677",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3216_qq-1677_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3216_qq-1677_cd-9729",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.32178521156311,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'world furniture mall...' does not demonstrate a clear intent or well-formed structure. The presence of an error message indicates that the query may not have been effectively communicated, leading to a lack of promising scent from the search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that may not have been relevant to the user's intent suggests that the user was not receiving strong information scent. The analysis error indicates that the initial query was flawed, leading to an ineffective SERP view.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a link from the SERP does not necessarily indicate a strong information scent. Given the previous errors and potential lack of relevance in the results, this click could indicate an attempt to salvage the search rather than a confident search continuation, leading to a potential session abandonment.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.113334894180298,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9732499837875366
+}

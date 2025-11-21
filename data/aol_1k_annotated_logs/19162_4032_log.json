@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4032",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:51:43.152643",
+  "events": [
+    {
+      "session_id": "19162_4032",
+      "event_id": "19162_4032_qq-2300",
+      "timestamp": "2006-03-08 15:06:51",
+      "action_type": "QUERY",
+      "content": "aimfilez",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'aimfilez...' does not indicate a strong intent or specificity in the query, suggesting the user may not have found promising information. The invalid control character points to a possible error or lack of clarity in the search, leading to a lack of engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8448577165603638,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:52:05.094708"
+    },
+    {
+      "session_id": "19162_4032",
+      "event_id": "19162_4032_qq-2300_serp",
+      "timestamp": "2006-03-08 15:06:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www aim file z com, aim z ster blogspot com, the gert z file (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that include 'www aim file z com' and others does not imply a strong scent as they seem to be poorly formed or irrelevant. The analyst's reasoning about the invalid control character suggests the user's intent was not clear, leading to low confidence in the selection of these results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8477645874023437,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:52:05.094732"
+    },
+    {
+      "session_id": "19162_4032",
+      "event_id": "19162_4032_qq-2300_cd-13800",
+      "timestamp": "2006-03-08 15:06:51",
+      "action_type": "CLICK",
+      "content": "www aim file z com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www aim file z com' does not necessarily indicate a well-formed search intent given the previous context of error messages. The click may stem from desperation due to lack of better options rather than a strong scent, indicating confusion rather than targeted searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.964138513803482,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:52:05.094739"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.216286897659302,
+      "decisions": [
+        {
+          "event_id": "19162_4032_qq-2300",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4032_qq-2300_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4032_qq-2300_cd-13800",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.166636943817139,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'aimfilez...' does not indicate a strong intent or specificity in the query, suggesting the user may not have found promising information. The invalid control character points to a possible error or lack of clarity in the search, leading to a lack of engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that include 'www aim file z com' and others does not imply a strong scent as they seem to be poorly formed or irrelevant. The analyst's reasoning about the invalid control character suggests the user's intent was not clear, leading to low confidence in the selection of these results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'www aim file z com' does not necessarily indicate a well-formed search intent given the previous context of error messages. The click may stem from desperation due to lack of better options rather than a strong scent, indicating confusion rather than targeted searching.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.47639274597168,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.964138513803482
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3983",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:24:44.111862",
+  "events": [
+    {
+      "session_id": "18689_3983",
+      "event_id": "18689_3983_qq-2247",
+      "timestamp": "2006-04-14 09:32:21",
+      "action_type": "QUERY",
+      "content": "chicken recipes",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'chicken recipes...' suggests the user is seeking a broader range of options rather than a targeted search. The ellipsis indicates uncertainty or an incomplete thought, which could imply the user is still refining their query rather than confidently following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9502924025058747,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:25:03.455598"
+    },
+    {
+      "session_id": "18689_3983",
+      "event_id": "18689_3983_qq-2247_serp",
+      "timestamp": "2006-04-14 09:32:21",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: all recipes food friends and recipe inspiration, all pasta recipes all pasta recipes com, all recipes food friends and recipe inspiration (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed a list of results, which indicates they are exploring options based on perceived information scent. This action suggests they are approaching sources rather than confidently following a scent since they are still evaluating multiple results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9825316905975342,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:25:03.455615"
+    },
+    {
+      "session_id": "18689_3983",
+      "event_id": "18689_3983_qq-2247_cd-6682",
+      "timestamp": "2006-04-14 09:32:21",
+      "action_type": "CLICK",
+      "content": "all recipes food friends and recipe inspiration",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'all recipes food friends and recipe inspiration' indicates that the user is acting on a perceived promising result, which aligns more with the label 'ApproachingSource' as they are engaging with a specific source after evaluating their options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0014160003513097,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:25:03.455623"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 5.4373860359191895,
+      "decisions": [
+        {
+          "event_id": "18689_3983_qq-2247",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3983_qq-2247_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3983_qq-2247_cd-6682",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.967557191848755,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The query 'chicken recipes...' suggests the user is seeking a broader range of options rather than a targeted search. The ellipsis indicates uncertainty or an incomplete thought, which could imply the user is still refining their query rather than confidently following a scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed a list of results, which indicates they are exploring options based on perceived information scent. This action suggests they are approaching sources rather than confidently following a scent since they are still evaluating multiple results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'all recipes food friends and recipe inspiration' indicates that the user is acting on a perceived promising result, which aligns more with the label 'ApproachingSource' as they are engaging with a specific source after evaluating their options.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.743387937545776,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0014160003513097
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3807",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:55:13.531592",
+  "events": [
+    {
+      "session_id": "17545_3807",
+      "event_id": "17545_3807_qq-2170",
+      "timestamp": "2006-03-10 12:33:27",
+      "action_type": "QUERY",
+      "content": "helmetdepot",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query but received an error indicating that the query was not processed successfully. This suggests that the user did not find promising information scent, as evidenced by the invalid control character error. Therefore, it's more appropriate to label this as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9037692546844482,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:42.190971"
+    },
+    {
+      "session_id": "17545_3807",
+      "event_id": "17545_3807_qq-2170_serp",
+      "timestamp": "2006-03-10 12:33:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: helmet depot com, helmet depot home page, nfl helmets mini helmets riddell helmets replica helmets authentic helmets (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but the presence of an analysis error indicates that the search did not yield relevant or useful options. Thus, the label should reflect that the user was not presented with a satisfactory scent, leading to a PoorScent classification.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.90744708776474,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:42.190987"
+    },
+    {
+      "session_id": "17545_3807",
+      "event_id": "17545_3807_qq-2170_cd-12842",
+      "timestamp": "2006-03-10 12:33:27",
+      "action_type": "CLICK",
+      "content": "helmet depot home page",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, which indicates an interest in further investigation based on the perceived relevance of the title/snippet. This behavior aligns more closely with ApproachingSource rather than FollowingScent, which is reserved for the initial search intent rather than the action of clicking.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.001627402752638,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:55:42.190990"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.869701147079468,
+      "decisions": [
+        {
+          "event_id": "17545_3807_qq-2170",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3807_qq-2170_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3807_qq-2170_cd-12842",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.410569906234741,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query but received an error indicating that the query was not processed successfully. This suggests that the user did not find promising information scent, as evidenced by the invalid control character error. Therefore, it's more appropriate to label this as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results but the presence of an analysis error indicates that the search did not yield relevant or useful options. Thus, the label should reflect that the user was not presented with a satisfactory scent, leading to a PoorScent classification.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, which indicates an interest in further investigation based on the perceived relevance of the title/snippet. This behavior aligns more closely with ApproachingSource rather than FollowingScent, which is reserved for the initial search intent rather than the action of clicking.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.130811929702759,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.001627402752638
+}

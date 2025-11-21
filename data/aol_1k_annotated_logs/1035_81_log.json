@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_81",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:12:17.849047",
+  "events": [
+    {
+      "session_id": "1035_81",
+      "event_id": "1035_81_qq-22",
+      "timestamp": "2006-05-27 09:13:45",
+      "action_type": "QUERY",
+      "content": "dehanas realestate",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dehanas realestate...' seems vague and lacks specificity, indicating that the user might not have found relevant information leading to a new search without clicking on any results. This suggests a lack of promising scent rather than an intentional targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0093767747282982,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:12:43.334597"
+    },
+    {
+      "session_id": "1035_81",
+      "event_id": "1035_81_qq-22_serp",
+      "timestamp": "2006-05-27 09:13:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: waldorf maryland real estate de han as real estate services maryland real estate property management new construction bank owned homes short sales foreclosures, hod de real estate, florida real estate boca raton real estate mid as international real estate (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The fact that the user viewed 10 results without clicking on any indicates that the information scent from those results was not strong enough to warrant further investigation, suggesting a failure in finding relevant content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9559355020523072,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:12:43.334604"
+    },
+    {
+      "session_id": "1035_81",
+      "event_id": "1035_81_qq-22_cd-1126",
+      "timestamp": "2006-05-27 09:13:45",
+      "action_type": "CLICK",
+      "content": "waldorf maryland real estate de han as real estate services maryland real estate property management new construction bank owned homes short sales foreclosures",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'waldorf maryland real estate de han as real estate services...' suggests that the user was drawn to a specific result that seemed relevant to their query. This indicates that they were exploring a promising lead rather than simply following an information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9932874754071236,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:12:43.334606"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.075304985046387,
+      "decisions": [
+        {
+          "event_id": "1035_81_qq-22",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_81_qq-22_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_81_qq-22_cd-1126",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.519519805908203,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dehanas realestate...' seems vague and lacks specificity, indicating that the user might not have found relevant information leading to a new search without clicking on any results. This suggests a lack of promising scent rather than an intentional targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The fact that the user viewed 10 results without clicking on any indicates that the information scent from those results was not strong enough to warrant further investigation, suggesting a failure in finding relevant content.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'waldorf maryland real estate de han as real estate services...' suggests that the user was drawn to a specific result that seemed relevant to their query. This indicates that they were exploring a promising lead rather than simply following an information scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.570816993713379,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0093767747282982
+}

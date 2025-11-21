@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_61",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:59:27.479881",
+  "events": [
+    {
+      "session_id": "1035_61",
+      "event_id": "1035_61_qq-19",
+      "timestamp": "2006-05-09 16:42:42",
+      "action_type": "QUERY",
+      "content": "www.disneychannel.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query resulted in an error that indicates a lack of promising scent or relevance. Instead of showing a clear intent to search effectively, the error suggests that the user may not have found relevant results to pursue further, which aligns with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9424858808517456,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:04.545675"
+    },
+    {
+      "session_id": "1035_61",
+      "event_id": "1035_61_qq-19_serp",
+      "timestamp": "2006-05-09 16:42:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: disney online the official home page of the walt disney company, disney hotels official site for walt disney world swan and dolphin, disney fr le site of fi ciel de l univers disney (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results but did not engage with any of them due to the prior error. This indicates that the session may not have met their needs, leading to a potential exit from the search without finding satisfactory information. This aligns more with LeavingPatch than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9570763438940049,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:04.545711"
+    },
+    {
+      "session_id": "1035_61",
+      "event_id": "1035_61_qq-19_cd-1128",
+      "timestamp": "2006-05-09 16:42:42",
+      "action_type": "CLICK",
+      "content": "disney online the official home page of the walt disney company",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not inherently indicate a successful search or strong intent if the previous events indicated poor scent. The action seems more impulsive given the context of prior failures, suggesting the user was still in a state of searching without clear signals of success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0013286598026752,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:04.545718"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.927348852157593,
+      "decisions": [
+        {
+          "event_id": "1035_61_qq-19",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_61_qq-19_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_61_qq-19_cd-1128",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.223572015762329,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query resulted in an error that indicates a lack of promising scent or relevance. Instead of showing a clear intent to search effectively, the error suggests that the user may not have found relevant results to pursue further, which aligns with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed results but did not engage with any of them due to the prior error. This indicates that the session may not have met their needs, leading to a potential exit from the search without finding satisfactory information. This aligns more with LeavingPatch than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result does not inherently indicate a successful search or strong intent if the previous events indicated poor scent. The action seems more impulsive given the context of prior failures, suggesting the user was still in a state of searching without clear signals of success.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 21.56292986869812,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0013286598026752
+}

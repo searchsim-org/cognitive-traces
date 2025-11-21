@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2261",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:47:13.009827",
+  "events": [
+    {
+      "session_id": "10008_2261",
+      "event_id": "10008_2261_qq-1172",
+      "timestamp": "2006-03-12 12:28:31",
+      "action_type": "QUERY",
+      "content": "the total gym",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the total gym...' appears to be vague and does not indicate a strong intent or specific need, suggesting the user might not have found promising information scent. The error message indicates a possible issue in query formulation, rather than a well-defined search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9284248650074005,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:47:45.925073"
+    },
+    {
+      "session_id": "10008_2261",
+      "event_id": "10008_2261_qq-1172_serp",
+      "timestamp": "2006-03-12 12:28:31",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: total gym home gyms exercise machines total gym, personal training with total gym total gym workouts for newbies, forget total gym the vigor fit home gym offers real results (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results with a focus on 'total gym' likely indicates that the initial query was not yielding satisfactory results, leading to a broader examination of related content. The lack of specificity in the query suggests that the user is not strongly following a scent but rather exploring options due to insufficient initial information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9749527603387833,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:47:45.925080"
+    },
+    {
+      "session_id": "10008_2261",
+      "event_id": "10008_2261_qq-1172_cd-7821",
+      "timestamp": "2006-03-12 12:28:31",
+      "action_type": "CLICK",
+      "content": "total gym the world leader in incline body weight training total gym global leader in functional training since 1974",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result about 'total gym' seems to indicate that the user is trying to gather more information rather than having a strong, clear intent from the outset. The click represents an attempt to investigate a promising source based on the user's broader search rather than a direct follow-up from a successful scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9925883203744889,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:47:45.925091"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.405717134475708,
+      "decisions": [
+        {
+          "event_id": "10008_2261_qq-1172",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2261_qq-1172_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2261_qq-1172_cd-7821",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.325758934020996,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the total gym...' appears to be vague and does not indicate a strong intent or specific need, suggesting the user might not have found promising information scent. The error message indicates a possible issue in query formulation, rather than a well-defined search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing 10 results with a focus on 'total gym' likely indicates that the initial query was not yielding satisfactory results, leading to a broader examination of related content. The lack of specificity in the query suggests that the user is not strongly following a scent but rather exploring options due to insufficient initial information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result about 'total gym' seems to indicate that the user is trying to gather more information rather than having a strong, clear intent from the outset. The click represents an attempt to investigate a promising source based on the user's broader search rather than a direct follow-up from a successful scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.570708990097046,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9925883203744889
+}

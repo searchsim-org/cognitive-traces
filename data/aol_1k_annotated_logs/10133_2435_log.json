@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2435",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:16:54.161970",
+  "events": [
+    {
+      "session_id": "10133_2435",
+      "event_id": "10133_2435_qq-1257",
+      "timestamp": "2006-05-27 12:21:39",
+      "action_type": "QUERY",
+      "content": "skylight bank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'skylight bank...' does not indicate a clear intent or direction, which suggests the user may not be finding promising results. Instead of showing a targeted search, the ellipsis indicates uncertainty or lack of clarity in the query, reflecting a poor scent rather than a strong one.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9430174589157104,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:17:13.542696"
+    },
+    {
+      "session_id": "10133_2435",
+      "event_id": "10133_2435_qq-1257_serp",
+      "timestamp": "2006-05-27 12:21:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: skylight trust skylight trust, skylight solutions home skylight solutions, sun tek skylights skylights home commercial from sun tek skylights (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without clicking suggests that the user did not find the titles or snippets compelling enough to pursue further. The presence of repeated terms like 'skylight trust' implies redundancy rather than a targeted exploration, which aligns more with poor scent than following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0011136315762996,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:17:13.542720"
+    },
+    {
+      "session_id": "10133_2435",
+      "event_id": "10133_2435_qq-1257_cd-8013",
+      "timestamp": "2006-05-27 12:21:39",
+      "action_type": "CLICK",
+      "content": "www skylight net",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www skylight net...' indicates the user found some information scent in the result, suggesting they were intrigued enough to investigate further. However, the earlier events indicate a lack of clear intent, which contradicts the notion of FollowingScent. Thus, ApproachingSource better captures the action of exploring a potentially relevant source despite prior uncertainties.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0195990532636643,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:17:13.542727"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.905649185180664,
+      "decisions": [
+        {
+          "event_id": "10133_2435_qq-1257",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2435_qq-1257_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2435_qq-1257_cd-8013",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.545047998428345,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'skylight bank...' does not indicate a clear intent or direction, which suggests the user may not be finding promising results. Instead of showing a targeted search, the ellipsis indicates uncertainty or lack of clarity in the query, reflecting a poor scent rather than a strong one.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without clicking suggests that the user did not find the titles or snippets compelling enough to pursue further. The presence of repeated terms like 'skylight trust' implies redundancy rather than a targeted exploration, which aligns more with poor scent than following scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www skylight net...' indicates the user found some information scent in the result, suggesting they were intrigued enough to investigate further. However, the earlier events indicate a lack of clear intent, which contradicts the notion of FollowingScent. Thus, ApproachingSource better captures the action of exploring a potentially relevant source despite prior uncertainties.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.676460027694702,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0195990532636643
+}

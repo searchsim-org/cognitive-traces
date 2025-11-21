@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2281",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:58:49.602843",
+  "events": [
+    {
+      "session_id": "10008_2281",
+      "event_id": "10008_2281_qq-1196",
+      "timestamp": "2006-04-12 10:51:54",
+      "action_type": "QUERY",
+      "content": "moschella winston somerville ma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'moschella winston somerville ma...' does not reflect a clear and targeted intent due to the presence of an analysis error. This suggests that the user may not have received relevant results or that the query itself was not well-formed, indicating a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8990664720535277,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:59:23.840355"
+    },
+    {
+      "session_id": "10008_2281",
+      "event_id": "10008_2281_qq-1196_serp",
+      "timestamp": "2006-04-12 10:51:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www mos chell a winston com, www alexandre mos chell a com, somerville yellow pages and somerville ma guide (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The fact that the user viewed multiple results but was unable to engage with them due to an analysis error suggests that they were not finding satisfactory information, leading to a poor scent experience rather than a continuing effective search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9173869550228119,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:59:23.840386"
+    },
+    {
+      "session_id": "10008_2281",
+      "event_id": "10008_2281_qq-1196_cd-7854",
+      "timestamp": "2006-04-12 10:51:54",
+      "action_type": "CLICK",
+      "content": "www mos chell a winston com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the result 'www mos chell a winston com...' in the context of an analysis error indicates a potential misdirection; the user may have clicked out of frustration or out of lack of better options, which does not imply a strong following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9110574841499328,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:59:23.840395"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.021454095840454,
+      "decisions": [
+        {
+          "event_id": "10008_2281_qq-1196",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2281_qq-1196_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2281_qq-1196_cd-7854",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.703263998031616,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'moschella winston somerville ma...' does not reflect a clear and targeted intent due to the presence of an analysis error. This suggests that the user may not have received relevant results or that the query itself was not well-formed, indicating a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The fact that the user viewed multiple results but was unable to engage with them due to an analysis error suggests that they were not finding satisfactory information, leading to a poor scent experience rather than a continuing effective search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on the result 'www mos chell a winston com...' in the context of an analysis error indicates a potential misdirection; the user may have clicked out of frustration or out of lack of better options, which does not imply a strong following scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.18651008605957,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9173869550228119
+}

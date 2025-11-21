@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3277",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:24:02.521524",
+  "events": [
+    {
+      "session_id": "13112_3277",
+      "event_id": "13112_3277_qq-1759",
+      "timestamp": "2006-05-15 09:03:32",
+      "action_type": "QUERY",
+      "content": "vitra",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query 'vitra...' which suggests a lack of clarity or specificity in their search intention. The presence of an analysis error indicates that the query may not have provided sufficient information scent, leading to a likely poor user experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8482993125915528,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:45.935395"
+    },
+    {
+      "session_id": "13112_3277",
+      "event_id": "13112_3277_qq-1759_serp",
+      "timestamp": "2006-05-15 09:03:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: vitr a global, vitr a home, vitr it urf (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing multiple results, the content 'vitr a global, vitr a home, vitr it urf' suggests that the user is still operating under a vague or poorly defined search. The analyst's label of 'FollowingScent' misinterprets the user's intent given the unclear nature of the results viewed, reflecting a lack of strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9663277566432953,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:45.935413"
+    },
+    {
+      "session_id": "13112_3277",
+      "event_id": "13112_3277_qq-1759_cd-9956",
+      "timestamp": "2006-05-15 09:03:32",
+      "action_type": "CLICK",
+      "content": "vitr a global",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'vitr a global...' seems to stem from a lack of clear alternatives rather than a strong information scent. The previous events indicate that the user was not experiencing satisfactory results, making this click more indicative of desperation to find relevant content rather than a targeted search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9619207978248596,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:24:45.935418"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.624680995941162,
+      "decisions": [
+        {
+          "event_id": "13112_3277_qq-1759",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3277_qq-1759_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3277_qq-1759_cd-9956",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.02383804321289,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query 'vitra...' which suggests a lack of clarity or specificity in their search intention. The presence of an analysis error indicates that the query may not have provided sufficient information scent, leading to a likely poor user experience.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing multiple results, the content 'vitr a global, vitr a home, vitr it urf' suggests that the user is still operating under a vague or poorly defined search. The analyst's label of 'FollowingScent' misinterprets the user's intent given the unclear nature of the results viewed, reflecting a lack of strong information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'vitr a global...' seems to stem from a lack of clear alternatives rather than a strong information scent. The previous events indicate that the user was not experiencing satisfactory results, making this click more indicative of desperation to find relevant content rather than a targeted search effort.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.51723289489746,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9663277566432953
+}

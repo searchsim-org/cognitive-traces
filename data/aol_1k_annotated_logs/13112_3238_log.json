@@ -1,0 +1,282 @@
+{
+  "session_id": "13112_3238",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:48:03.431697",
+  "events": [
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1711",
+      "timestamp": "2006-03-01 19:15:15",
+      "action_type": "QUERY",
+      "content": "meadow burke .com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'meadow burke .com...' suggests an incomplete or malformed input, which does not provide a clear intent for a focused search. The invalid control character indicates the query lacks clarity, leading to a poor scent. Hence, it should be labeled as PoorScent rather than FollowingScent.",
+      "judge_justification": "The query 'meadow burke .com...' is malformed, containing invalid control characters and an incomplete structure (e.g., trailing ellipsis and '.com' without proper spacing or context). This strongly indicates a lack of clear intent or target, which is a hallmark of **PoorScent**. The **Analyst**'s default label of *FollowingScent* is unreliable due to a parsing error, while the **Critic**'s reasoning aligns with the schema: a poorly formed query with no evidence of refinement or successful interaction suggests the user is not following a viable scent. The high confidence (0.85) from the Critic further supports this decision, as the query\u2019s structure itself undermines the possibility of targeted foraging.",
+      "confidence_score": 0.9,
+      "disagreement_score": 0.8993187069892883,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023054"
+    },
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1711_serp",
+      "timestamp": "2006-03-01 19:15:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: meadow burke, homepage brooke burke brooke burke, burke s cycles burke s cycles (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results based on a query that has invalid characters indicates that the user is likely not finding relevant information. The repeated viewing of results from a poorly formed query suggests a lack of valid scent, thus it aligns more with PoorScent.",
+      "judge_justification": "The **SERP_VIEW** action follows a malformed query (as established in Event 1), and the results displayed (e.g., 'meadow burke', 'brooke burke', 'burke s cycles') show a mismatch between the user\u2019s likely intent (e.g., a specific website or entity) and the returned items. The **Critic** correctly argues that viewing results from a poorly constructed query indicates weak information scent, as the user is not engaging with relevant sources. The **Analyst**\u2019s error-riddled *FollowingScent* label is invalidated by the lack of query clarity and the Critic\u2019s consistent reasoning (confidence: 0.8). The absence of clicks or further refinement in this event reinforces the **PoorScent** classification.",
+      "confidence_score": 0.88,
+      "disagreement_score": 0.9185542821884155,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023071"
+    },
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1711_cd-9845",
+      "timestamp": "2006-03-01 19:15:15",
+      "action_type": "CLICK",
+      "content": "meadow burke",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "A click on a result following a query with an invalid character is unlikely to reflect clear intent or a successful search. This behavior typically indicates that the user is still searching for relevant information amidst poor scent conditions, hence it should be labeled as PoorScent.",
+      "judge_justification": "The **CLICK** on 'meadow burke' occurs after a series of malformed queries and SERP views with weak relevance. While clicks often suggest *ApproachingSource*, the context here undermines this interpretation: the query was poorly formed, and the clicked result ('meadow burke') is ambiguous (e.g., could refer to a person, business, or unrelated entity). The **Critic**\u2019s argument (confidence: 0.75) that this reflects continued struggle\u2014rather than targeted investigation\u2014is compelling. The **Analyst**\u2019s error-prone *FollowingScent* label is unsupported by the evidence. The click is more likely a desperate attempt to resolve ambiguity, aligning with **PoorScent**.",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.929064679145813,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023077"
+    },
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1712",
+      "timestamp": "2006-03-01 19:27:09",
+      "action_type": "QUERY",
+      "content": "meadow burke",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Once again, the query 'meadow burke...' appears to lack clarity and does not reflect a well-formed intention. The repetition of this query without improvement suggests the user is not finding useful information, justifying a PoorScent label.",
+      "judge_justification": "The repeated query 'meadow burke...' (now without the '.com' fragment but still trailing ellipsis) demonstrates no improvement in clarity or intent. The **Critic**\u2019s assessment (confidence: 0.8) that this reflects persistent poor scent is well-founded: the user is not refining the query or exhibiting signs of successful foraging. The **Analyst**\u2019s default *FollowingScent* label is again invalid due to parsing errors. The repetition of an ambiguous query without clicks or reformulation is a textbook example of **PoorScent**, as the user appears stuck in an unproductive patch.",
+      "confidence_score": 0.9,
+      "disagreement_score": 0.9829670906066894,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023084"
+    },
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1712_serp",
+      "timestamp": "2006-03-01 19:27:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: meadow burke, homepage brooke burke brooke burke, burke s cycles burke s cycles (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of results from a poorly constructed query indicates that the user is not effectively identifying relevant sources. This aligns with the characteristics of PoorScent rather than FollowingScent, as the scent is weak and uninformative.",
+      "judge_justification": "This **SERP_VIEW** mirrors Event 2, with the same ambiguous results displayed (e.g., 'meadow burke', 'brooke burke') following an unrefined query. The **Critic**\u2019s reasoning (confidence: 0.85) that the user is not identifying relevant sources is consistent with the schema: the lack of query improvement or targeted clicks suggests the information scent remains weak. The **Analyst**\u2019s error does not provide a valid counterargument. The user\u2019s passive viewing of irrelevant results further supports **PoorScent**, as there is no evidence of progress toward foraging success.",
+      "confidence_score": 0.92,
+      "disagreement_score": 1.0060649693012238,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023089"
+    },
+    {
+      "session_id": "13112_3238",
+      "event_id": "13112_3238_qq-1712_cd-9845",
+      "timestamp": "2006-03-01 19:27:09",
+      "action_type": "CLICK",
+      "content": "meadow burke",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to previous events, the click following a query with invalid characters suggests the user is still struggling to find relevant information. This behavior indicates a weak scent and a lack of successful navigation, justifying a PoorScent classification.",
+      "judge_justification": "The **CLICK** on 'meadow burke' in this context is indistinguishable from Event 3: it follows a repeated, ambiguous query and a SERP with mismatched results. The **Critic**\u2019s argument (confidence: 0.8) that this reflects ongoing poor scent is persuasive, as the user\u2019s behavior shows no signs of intentional navigation or scent-following. The **Analyst**\u2019s *FollowingScent* label is unreliable due to persistent parsing errors. The click is more plausibly an attempt to escape ambiguity rather than a targeted action, warranting **PoorScent**. The cumulative pattern across events strengthens this conclusion.",
+      "confidence_score": 0.87,
+      "disagreement_score": 0.9311174035072327,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:49:16.023096"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 28.781151294708252,
+      "decisions": [
+        {
+          "event_id": "13112_3238_qq-1711",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3238_qq-1711_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3238_qq-1711_cd-9845",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3238_qq-1712",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3238_qq-1712_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3238_qq-1712_cd-9845",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 18.75751304626465,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'meadow burke .com...' suggests an incomplete or malformed input, which does not provide a clear intent for a focused search. The invalid control character indicates the query lacks clarity, leading to a poor scent. Hence, it should be labeled as PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results based on a query that has invalid characters indicates that the user is likely not finding relevant information. The repeated viewing of results from a poorly formed query suggests a lack of valid scent, thus it aligns more with PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "A click on a result following a query with an invalid character is unlikely to reflect clear intent or a successful search. This behavior typically indicates that the user is still searching for relevant information amidst poor scent conditions, hence it should be labeled as PoorScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "4",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Once again, the query 'meadow burke...' appears to lack clarity and does not reflect a well-formed intention. The repetition of this query without improvement suggests the user is not finding useful information, justifying a PoorScent label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "5",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewing of results from a poorly constructed query indicates that the user is not effectively identifying relevant sources. This aligns with the characteristics of PoorScent rather than FollowingScent, as the scent is weak and uninformative.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "6",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to previous events, the click following a query with invalid characters suggests the user is still struggling to find relevant information. This behavior indicates a weak scent and a lack of successful navigation, justifying a PoorScent classification.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.638688802719116,
+      "decisions": [
+        {
+          "event_id": "13112_3238_qq-1711",
+          "final_label": "PoorScent",
+          "justification": "The query 'meadow burke .com...' is malformed, containing invalid control characters and an incomplete structure (e.g., trailing ellipsis and '.com' without proper spacing or context). This strongly indicates a lack of clear intent or target, which is a hallmark of **PoorScent**. The **Analyst**'s default label of *FollowingScent* is unreliable due to a parsing error, while the **Critic**'s reasoning aligns with the schema: a poorly formed query with no evidence of refinement or successful interaction suggests the user is not following a viable scent. The high confidence (0.85) from the Critic further supports this decision, as the query\u2019s structure itself undermines the possibility of targeted foraging.",
+          "confidence": 0.9,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "13112_3238_qq-1711_serp",
+          "final_label": "PoorScent",
+          "justification": "The **SERP_VIEW** action follows a malformed query (as established in Event 1), and the results displayed (e.g., 'meadow burke', 'brooke burke', 'burke s cycles') show a mismatch between the user\u2019s likely intent (e.g., a specific website or entity) and the returned items. The **Critic** correctly argues that viewing results from a poorly constructed query indicates weak information scent, as the user is not engaging with relevant sources. The **Analyst**\u2019s error-riddled *FollowingScent* label is invalidated by the lack of query clarity and the Critic\u2019s consistent reasoning (confidence: 0.8). The absence of clicks or further refinement in this event reinforces the **PoorScent** classification.",
+          "confidence": 0.88,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "13112_3238_qq-1711_cd-9845",
+          "final_label": "PoorScent",
+          "justification": "The **CLICK** on 'meadow burke' occurs after a series of malformed queries and SERP views with weak relevance. While clicks often suggest *ApproachingSource*, the context here undermines this interpretation: the query was poorly formed, and the clicked result ('meadow burke') is ambiguous (e.g., could refer to a person, business, or unrelated entity). The **Critic**\u2019s argument (confidence: 0.75) that this reflects continued struggle\u2014rather than targeted investigation\u2014is compelling. The **Analyst**\u2019s error-prone *FollowingScent* label is unsupported by the evidence. The click is more likely a desperate attempt to resolve ambiguity, aligning with **PoorScent**.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.25
+        },
+        {
+          "event_id": "13112_3238_qq-1712",
+          "final_label": "PoorScent",
+          "justification": "The repeated query 'meadow burke...' (now without the '.com' fragment but still trailing ellipsis) demonstrates no improvement in clarity or intent. The **Critic**\u2019s assessment (confidence: 0.8) that this reflects persistent poor scent is well-founded: the user is not refining the query or exhibiting signs of successful foraging. The **Analyst**\u2019s default *FollowingScent* label is again invalid due to parsing errors. The repetition of an ambiguous query without clicks or reformulation is a textbook example of **PoorScent**, as the user appears stuck in an unproductive patch.",
+          "confidence": 0.9,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "13112_3238_qq-1712_serp",
+          "final_label": "PoorScent",
+          "justification": "This **SERP_VIEW** mirrors Event 2, with the same ambiguous results displayed (e.g., 'meadow burke', 'brooke burke') following an unrefined query. The **Critic**\u2019s reasoning (confidence: 0.85) that the user is not identifying relevant sources is consistent with the schema: the lack of query improvement or targeted clicks suggests the information scent remains weak. The **Analyst**\u2019s error does not provide a valid counterargument. The user\u2019s passive viewing of irrelevant results further supports **PoorScent**, as there is no evidence of progress toward foraging success.",
+          "confidence": 0.92,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "13112_3238_qq-1712_cd-9845",
+          "final_label": "PoorScent",
+          "justification": "The **CLICK** on 'meadow burke' in this context is indistinguishable from Event 3: it follows a repeated, ambiguous query and a SERP with mismatched results. The **Critic**\u2019s argument (confidence: 0.8) that this reflects ongoing poor scent is persuasive, as the user\u2019s behavior shows no signs of intentional navigation or scent-following. The **Analyst**\u2019s *FollowingScent* label is unreliable due to persistent parsing errors. The click is more plausibly an attempt to escape ambiguity rather than a targeted action, warranting **PoorScent**. The cumulative pattern across events strengthens this conclusion.",
+          "confidence": 0.87,
+          "flag_for_review": false,
+          "disagreement_score": 0.25
+        }
+      ]
+    }
+  ],
+  "num_events": 6,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0060649693012238
+}

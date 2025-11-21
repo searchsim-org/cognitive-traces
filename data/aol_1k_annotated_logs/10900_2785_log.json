@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2785",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:00:22.610553",
+  "events": [
+    {
+      "session_id": "10900_2785",
+      "event_id": "10900_2785_qq-1478",
+      "timestamp": "2006-05-31 08:57:15",
+      "action_type": "QUERY",
+      "content": "jennifer convertibles",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'jennifer convertibles...' lacks specificity and does not appear to indicate a clear intent, particularly as it is truncated. This suggests the user may not have found promising information, leading to a lack of interaction or clicks thereafter.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9431285500526428,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:01:08.601534"
+    },
+    {
+      "session_id": "10900_2785",
+      "event_id": "10900_2785_qq-1478_serp",
+      "timestamp": "2006-05-31 08:57:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ig bts inverter s converters from applied power systems, performance transmissions and torque converters for gm ford dodge, ac power sources and frequency converters compact power company (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any interaction suggests that the user did not find sufficient information scent in the SERP. The complexity and length of the titles indicate potential confusion rather than a clear targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9604681342840194,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:01:08.601738"
+    },
+    {
+      "session_id": "10900_2785",
+      "event_id": "10900_2785_qq-1478_cd-8762",
+      "timestamp": "2006-05-31 08:57:15",
+      "action_type": "CLICK",
+      "content": "jennifer furniture buy home furniture in new york new jersey ct",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'jennifer furniture buy home furniture in new york new jersey ct...' suggests that the user was trying to engage with a relevant source based on the information scent, rather than a clear indication of following scent from a previous query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9827226504683495,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:01:08.601747"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.002686262130737,
+      "decisions": [
+        {
+          "event_id": "10900_2785_qq-1478",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2785_qq-1478_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2785_qq-1478_cd-8762",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.522641897201538,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'jennifer convertibles...' lacks specificity and does not appear to indicate a clear intent, particularly as it is truncated. This suggests the user may not have found promising information, leading to a lack of interaction or clicks thereafter.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any interaction suggests that the user did not find sufficient information scent in the SERP. The complexity and length of the titles indicate potential confusion rather than a clear targeted query.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'jennifer furniture buy home furniture in new york new jersey ct...' suggests that the user was trying to engage with a relevant source based on the information scent, rather than a clear indication of following scent from a previous query.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.309099197387695,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9827226504683495
+}

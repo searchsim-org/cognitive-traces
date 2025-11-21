@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3042",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:48:20.709256",
+  "events": [
+    {
+      "session_id": "12211_3042",
+      "event_id": "12211_3042_qq-1574",
+      "timestamp": "2006-05-03 12:52:41",
+      "action_type": "QUERY",
+      "content": "station casino",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'station casino...' does not demonstrate a clear intent or well-formed search. The presence of an error suggests the user may have been frustrated or confused, thus indicating a lack of promising information scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9477165579795838,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:48:59.369648"
+    },
+    {
+      "session_id": "12211_3042",
+      "event_id": "12211_3042_qq-1574_serp",
+      "timestamp": "2006-05-03 12:52:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: boulder highway hotels casinos boulder station hotel casino, las vegas hotels resorts station casinos, las vegas hotels resorts station casinos (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any indicates that the user may not find the presented options satisfactory, leading to potential abandonment of the search. This suggests that they are not following a scent but rather are stuck in a patch with poor information value.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9933941714465618,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:48:59.369668"
+    },
+    {
+      "session_id": "12211_3042",
+      "event_id": "12211_3042_qq-1574_cd-9419",
+      "timestamp": "2006-05-03 12:52:41",
+      "action_type": "CLICK",
+      "content": "las vegas hotels resorts station casinos",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'las vegas hotels resorts station casinos...' does not imply the user is following a strong scent. Instead, it could represent an exploratory click due to the lack of better options. The user may be attempting to salvage the search rather than pursuing a well-formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9745419740676879,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:48:59.369680"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.243749856948853,
+      "decisions": [
+        {
+          "event_id": "12211_3042_qq-1574",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3042_qq-1574_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3042_qq-1574_cd-9419",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.8906166553497314,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'station casino...' does not demonstrate a clear intent or well-formed search. The presence of an error suggests the user may have been frustrated or confused, thus indicating a lack of promising information scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging with any indicates that the user may not find the presented options satisfactory, leading to potential abandonment of the search. This suggests that they are not following a scent but rather are stuck in a patch with poor information value.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'las vegas hotels resorts station casinos...' does not imply the user is following a strong scent. Instead, it could represent an exploratory click due to the lack of better options. The user may be attempting to salvage the search rather than pursuing a well-formed query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.239291191101074,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9933941714465618
+}

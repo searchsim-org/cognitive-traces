@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2705",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:53:52.459003",
+  "events": [
+    {
+      "session_id": "10900_2705",
+      "event_id": "10900_2705_qq-1458",
+      "timestamp": "2006-05-02 01:24:16",
+      "action_type": "QUERY",
+      "content": "charlesschwab",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query containing an invalid control character, which indicates confusion or lack of clarity in their information need. This suggests that the query did not have strong intent or scent, thus fitting the 'PoorScent' label better than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9098928093910217,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:54:30.690022"
+    },
+    {
+      "session_id": "10900_2705",
+      "event_id": "10900_2705_qq-1458_serp",
+      "timestamp": "2006-05-02 01:24:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: charles and helen schwa b foundation welcome, about schwa b about schwa b, u s investing online trading charles schwa b (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with poorly constructed queries suggests the user is not finding relevant content that meets their needs. The lack of strong scent from the viewed results indicates that the search was not successful, further aligning with the 'PoorScent' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9628169149160385,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:54:30.690054"
+    },
+    {
+      "session_id": "10900_2705",
+      "event_id": "10900_2705_qq-1458_cd-8722",
+      "timestamp": "2006-05-02 01:24:16",
+      "action_type": "CLICK",
+      "content": "charles schwa b a modern approach to investing retirement",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result with an unclear query suggests a lack of solid information scent. The user may have clicked out of desperation or confusion rather than strong intent, making 'PoorScent' a more appropriate label than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.972092580795288,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:54:30.690064"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.485792875289917,
+      "decisions": [
+        {
+          "event_id": "10900_2705_qq-1458",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2705_qq-1458_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2705_qq-1458_cd-8722",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.756577014923096,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query containing an invalid control character, which indicates confusion or lack of clarity in their information need. This suggests that the query did not have strong intent or scent, thus fitting the 'PoorScent' label better than 'FollowingScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with poorly constructed queries suggests the user is not finding relevant content that meets their needs. The lack of strong scent from the viewed results indicates that the search was not successful, further aligning with the 'PoorScent' label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result with an unclear query suggests a lack of solid information scent. The user may have clicked out of desperation or confusion rather than strong intent, making 'PoorScent' a more appropriate label than 'FollowingScent'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.619478702545166,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.972092580795288
+}

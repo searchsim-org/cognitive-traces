@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4153",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:31:57.899191",
+  "events": [
+    {
+      "session_id": "19655_4153",
+      "event_id": "19655_4153_qq-2424",
+      "timestamp": "2006-05-05 10:37:13",
+      "action_type": "QUERY",
+      "content": "washington dc taxis",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'washington dc taxis...' is vague and lacks specificity, which suggests that the user may not be receiving relevant results, indicating poor scent rather than a well-formed targeted query. The incomplete nature of the query also implies that the user may not find satisfactory information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9732839167118073,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:32:40.051860"
+    },
+    {
+      "session_id": "19655_4153",
+      "event_id": "19655_4153_qq-2424_serp",
+      "timestamp": "2006-05-05 10:37:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dc taxi dc gov, washington dc jobs washington dc dc job search washington recruiter com, washington dc apartments for rent washington apartments washington dc rentals (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of 10 results that include a mix of unrelated content (e.g., job searches and apartments) indicates that the user is encountering irrelevant information. This lack of relevant results suggests that the search results do not match the user's intent, which aligns with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9786483436822891,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:32:40.051868"
+    },
+    {
+      "session_id": "19655_4153",
+      "event_id": "19655_4153_qq-2424_cd-14234",
+      "timestamp": "2006-05-05 10:37:13",
+      "action_type": "CLICK",
+      "content": "dc taxi dc gov",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'dc taxi dc gov', which implies they found a title or snippet that they believed would lead to relevant information. This click demonstrates an attempt to further investigate a promising source, aligning more closely with ApproachingSource than FollowingScent, which requires a clear and targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9965625308454037,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:32:40.051873"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.67737603187561,
+      "decisions": [
+        {
+          "event_id": "19655_4153_qq-2424",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4153_qq-2424_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4153_qq-2424_cd-14234",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.342282056808472,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'washington dc taxis...' is vague and lacks specificity, which suggests that the user may not be receiving relevant results, indicating poor scent rather than a well-formed targeted query. The incomplete nature of the query also implies that the user may not find satisfactory information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewing of 10 results that include a mix of unrelated content (e.g., job searches and apartments) indicates that the user is encountering irrelevant information. This lack of relevant results suggests that the search results do not match the user's intent, which aligns with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'dc taxi dc gov', which implies they found a title or snippet that they believed would lead to relevant information. This click demonstrates an attempt to further investigate a promising source, aligning more closely with ApproachingSource than FollowingScent, which requires a clear and targeted query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.01842999458313,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9965625308454037
+}

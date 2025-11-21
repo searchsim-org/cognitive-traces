@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3424",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:53:47.985495",
+  "events": [
+    {
+      "session_id": "14668_3424",
+      "event_id": "14668_3424_qq-1889",
+      "timestamp": "2006-03-15 12:56:02",
+      "action_type": "QUERY",
+      "content": "miniature schnauzer",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'miniature schnauzer...' suggests an incomplete or unclear intent, and the subsequent analysis error indicates that the query did not yield promising results, as evidenced by the invalid control character. This suggests the user may not have found sufficient information to proceed, aligning more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.852773094177246,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:54:25.854447"
+    },
+    {
+      "session_id": "14668_3424",
+      "event_id": "14668_3424_qq-1889_serp",
+      "timestamp": "2006-03-15 12:56:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: legacy miniature schnauzers, schnauzer land schnauzers miniature custom and giant schnauzers, schnauzer rescue adopt a miniature schnauzer (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results suggests the user is in the process of evaluating options rather than following a strong scent. The diverse results imply a search for information rather than a targeted approach, which aligns more with ApproachingSource. The analyst's label of FollowingScent does not account for the user's exploratory behavior evident in viewing multiple results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9661653995513916,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:54:25.854454"
+    },
+    {
+      "session_id": "14668_3424",
+      "event_id": "14668_3424_qq-1889_cd-11239",
+      "timestamp": "2006-03-15 12:56:02",
+      "action_type": "CLICK",
+      "content": "the american miniature schnauzer club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a specific result indicates that the user is evaluating potential sources based on the scent from the title/snippet. While the analyst labeled it as FollowingScent, the click action after reviewing results suggests a more investigative phase, which is better captured by ApproachingSource, as the user is examining a potentially relevant source rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9822827577590942,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:54:25.854458"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.225163698196411,
+      "decisions": [
+        {
+          "event_id": "14668_3424_qq-1889",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3424_qq-1889_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3424_qq-1889_cd-11239",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.237349271774292,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'miniature schnauzer...' suggests an incomplete or unclear intent, and the subsequent analysis error indicates that the query did not yield promising results, as evidenced by the invalid control character. This suggests the user may not have found sufficient information to proceed, aligning more with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results suggests the user is in the process of evaluating options rather than following a strong scent. The diverse results imply a search for information rather than a targeted approach, which aligns more with ApproachingSource. The analyst's label of FollowingScent does not account for the user's exploratory behavior evident in viewing multiple results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a specific result indicates that the user is evaluating potential sources based on the scent from the title/snippet. While the analyst labeled it as FollowingScent, the click action after reviewing results suggests a more investigative phase, which is better captured by ApproachingSource, as the user is examining a potentially relevant source rather than following a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.100439071655273,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9822827577590942
+}

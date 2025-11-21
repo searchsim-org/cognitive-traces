@@ -1,0 +1,282 @@
+{
+  "session_id": "13112_3245",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:55:01.206950",
+  "events": [
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1721",
+      "timestamp": "2006-03-13 09:48:52",
+      "action_type": "QUERY",
+      "content": "wishtv.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query issued appears to lack a clear target and did not lead to any clicks, indicating that the user did not find promising information in the results. This aligns more with the characteristics of PoorScent rather than FollowingScent.",
+      "judge_justification": "The Analyst's reasoning is invalid due to a parsing error, rendering its 'FollowingScent' label unreliable (confidence: 0.5). The Critic provides a coherent argument that the query 'wishtv.com...' lacks specificity and did not lead to any clicks, which is a hallmark of **PoorScent**\u2014the user did not find promising information scent in the results. The vague query and absence of engagement (e.g., clicks) strongly suggest dissatisfaction with the current patch. The Critic's confidence (0.85) is significantly higher and aligns with observable behavioral cues (no clicks, low-intent query).",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.98851930052042,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382092"
+    },
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1721_serp",
+      "timestamp": "2006-03-13 09:48:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: a wish with wings, make a wish connecticut, the wish house home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any indication of clicks suggests that the user was not satisfied with the offerings, reflecting PoorScent rather than an active pursuit of information with FollowingScent.",
+      "judge_justification": "Again, the Analyst's 'FollowingScent' label is invalid due to a parsing error (confidence: 0.5). The Critic's assessment is compelling: the user viewed 10 SERP results (e.g., 'a wish with wings,' 'make a wish connecticut') but did not click any, indicating a lack of promising information scent. This behavior is prototypical of **PoorScent**, where the user scans multiple options without finding a viable source. The Critic's confidence (0.8) is well-justified by the absence of engagement, reinforcing the label.",
+      "confidence_score": 0.82,
+      "disagreement_score": 1.0170110672712327,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382112"
+    },
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1721_cd-9865",
+      "timestamp": "2006-03-13 09:48:52",
+      "action_type": "CLICK",
+      "content": "indianapolis news indiana weather indiana traffic indiana sports news 8 cw wish tv com",
+      "cognitive_label": "FollowingScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "FollowingScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the context suggests that the click was exploratory rather than a confident pursuit of information. Without any previous successful interactions, this could represent a PoorScent situation where the user is still searching for relevant information.",
+      "judge_justification": "While the Critic initially suggests **PoorScent** (confidence: 0.75) due to the exploratory nature of the click, the *action itself* (a **CLICK**) is a stronger signal of **FollowingScent** than the Critic acknowledges. The user selected a result ('indianapolis news indiana weather...') from the SERP, which\u2014despite prior ambiguity\u2014demonstrates an active pursuit of information scent. The Critic's hesitation stems from the lack of prior successful interactions, but the click itself is a clear **ApproachingSource** or **FollowingScent** behavior. Given the schema, **FollowingScent** is more appropriate here, as the user is *continuing* the search with a targeted action (even if tentative). Confidence is moderate due to the Critic's valid contextual concerns.",
+      "confidence_score": 0.7,
+      "disagreement_score": 0.39484275579452516,
+      "flagged_for_review": false,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382117"
+    },
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1722",
+      "timestamp": "2006-03-13 09:55:10",
+      "action_type": "QUERY",
+      "content": "wthr",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "This query appears to be vague and lacks specificity, which indicates that the user may not have a clear intent or has not found satisfactory results in previous searches. Therefore, it aligns better with PoorScent.",
+      "judge_justification": "The Analyst's 'FollowingScent' label is again invalid (parsing error, confidence: 0.5). The Critic's argument for **PoorScent** (confidence: 0.78) is robust: the query 'wthr' is vague, lacks specificity, and follows a pattern of unsuccessful prior interactions (no clicks in Event 2). This aligns with **PoorScent**, where the user issues a low-intent query after failing to find promising scent in previous attempts. The Critic's reasoning is consistent with the schema's definition of **PoorScent** (reformulation without clicks or clear intent).",
+      "confidence_score": 0.8,
+      "disagreement_score": 0.9891623817384243,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382122"
+    },
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1722_serp",
+      "timestamp": "2006-03-13 09:55:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: w thr nbc 13 fan site, indianapolis news indiana weather sports 13 w thr indianapolis, indianapolis news indiana weather sports 13 w thr indianapolis (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to Event 2, the user\u2019s view of multiple results without clicks suggests a lack of satisfying information, indicating that they are not on a targeted path but rather experiencing PoorScent.",
+      "judge_justification": "The Analyst's label is unreliable (parsing error, confidence: 0.5). The Critic's **PoorScent** assessment (confidence: 0.82) is well-supported: the user viewed 10 results (e.g., 'w thr nbc 13 fan site') but did not click any, mirroring Event 2's behavior. This repeated pattern of scanning without engagement strongly indicates **PoorScent**\u2014the user is not finding viable information scent in the patch. The Critic's high confidence and alignment with observable behavior justify this label.",
+      "confidence_score": 0.85,
+      "disagreement_score": 1.0166487291455268,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382169"
+    },
+    {
+      "session_id": "13112_3245",
+      "event_id": "13112_3245_qq-1722_cd-9866",
+      "timestamp": "2006-03-13 09:55:10",
+      "action_type": "CLICK",
+      "content": "indianapolis news indiana weather sports 13 w thr indianapolis",
+      "cognitive_label": "FollowingScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "FollowingScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user clicked on a result, the overall context suggests that this action was not driven by a clear intent or successful previous interactions, which would align more with PoorScent. The user may still be searching for relevant content.",
+      "judge_justification": "Despite the Critic's initial lean toward **PoorScent** (confidence: 0.7), the **CLICK** action on 'indianapolis news indiana weather sports 13 w thr indianapolis' is a definitive signal of **FollowingScent** or **ApproachingSource**. The Critic's concern about 'lack of clear intent' is outweighed by the user's active selection of a result, which demonstrates engagement with the information scent. While the prior context suggests some ambiguity, the click itself is a stronger indicator of **FollowingScent** (user continuing the search with a targeted action). The Critic's confidence is lower here, and the action-based evidence supports the label.",
+      "confidence_score": 0.75,
+      "disagreement_score": 0.4046354368329048,
+      "flagged_for_review": false,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:56:15.382199"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 28.809596061706543,
+      "decisions": [
+        {
+          "event_id": "13112_3245_qq-1721",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3245_qq-1721_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3245_qq-1721_cd-9865",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3245_qq-1722",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3245_qq-1722_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3245_qq-1722_cd-9866",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 13.86284613609314,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query issued appears to lack a clear target and did not lead to any clicks, indicating that the user did not find promising information in the results. This aligns more with the characteristics of PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without any indication of clicks suggests that the user was not satisfied with the offerings, reflecting PoorScent rather than an active pursuit of information with FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "FollowingScent",
+          "justification": "While the user clicked on a result, the context suggests that the click was exploratory rather than a confident pursuit of information. Without any previous successful interactions, this could represent a PoorScent situation where the user is still searching for relevant information.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 4",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "This query appears to be vague and lacks specificity, which indicates that the user may not have a clear intent or has not found satisfactory results in previous searches. Therefore, it aligns better with PoorScent.",
+          "confidence": 0.78
+        },
+        {
+          "event_id": "Event 5",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to Event 2, the user\u2019s view of multiple results without clicks suggests a lack of satisfying information, indicating that they are not on a targeted path but rather experiencing PoorScent.",
+          "confidence": 0.82
+        },
+        {
+          "event_id": "Event 6",
+          "agreement": "disagree",
+          "label": "FollowingScent",
+          "justification": "Although the user clicked on a result, the overall context suggests that this action was not driven by a clear intent or successful previous interactions, which would align more with PoorScent. The user may still be searching for relevant content.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 31.097639083862305,
+      "decisions": [
+        {
+          "event_id": "13112_3245_qq-1721",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's reasoning is invalid due to a parsing error, rendering its 'FollowingScent' label unreliable (confidence: 0.5). The Critic provides a coherent argument that the query 'wishtv.com...' lacks specificity and did not lead to any clicks, which is a hallmark of **PoorScent**\u2014the user did not find promising information scent in the results. The vague query and absence of engagement (e.g., clicks) strongly suggest dissatisfaction with the current patch. The Critic's confidence (0.85) is significantly higher and aligns with observable behavioral cues (no clicks, low-intent query).",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "13112_3245_qq-1721_serp",
+          "final_label": "PoorScent",
+          "justification": "Again, the Analyst's 'FollowingScent' label is invalid due to a parsing error (confidence: 0.5). The Critic's assessment is compelling: the user viewed 10 SERP results (e.g., 'a wish with wings,' 'make a wish connecticut') but did not click any, indicating a lack of promising information scent. This behavior is prototypical of **PoorScent**, where the user scans multiple options without finding a viable source. The Critic's confidence (0.8) is well-justified by the absence of engagement, reinforcing the label.",
+          "confidence": 0.82,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "13112_3245_qq-1721_cd-9865",
+          "final_label": "FollowingScent",
+          "justification": "While the Critic initially suggests **PoorScent** (confidence: 0.75) due to the exploratory nature of the click, the *action itself* (a **CLICK**) is a stronger signal of **FollowingScent** than the Critic acknowledges. The user selected a result ('indianapolis news indiana weather...') from the SERP, which\u2014despite prior ambiguity\u2014demonstrates an active pursuit of information scent. The Critic's hesitation stems from the lack of prior successful interactions, but the click itself is a clear **ApproachingSource** or **FollowingScent** behavior. Given the schema, **FollowingScent** is more appropriate here, as the user is *continuing* the search with a targeted action (even if tentative). Confidence is moderate due to the Critic's valid contextual concerns.",
+          "confidence": 0.7,
+          "flag_for_review": false,
+          "disagreement_score": 0.25
+        },
+        {
+          "event_id": "13112_3245_qq-1722",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's 'FollowingScent' label is again invalid (parsing error, confidence: 0.5). The Critic's argument for **PoorScent** (confidence: 0.78) is robust: the query 'wthr' is vague, lacks specificity, and follows a pattern of unsuccessful prior interactions (no clicks in Event 2). This aligns with **PoorScent**, where the user issues a low-intent query after failing to find promising scent in previous attempts. The Critic's reasoning is consistent with the schema's definition of **PoorScent** (reformulation without clicks or clear intent).",
+          "confidence": 0.8,
+          "flag_for_review": false,
+          "disagreement_score": 0.28
+        },
+        {
+          "event_id": "13112_3245_qq-1722_serp",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's label is unreliable (parsing error, confidence: 0.5). The Critic's **PoorScent** assessment (confidence: 0.82) is well-supported: the user viewed 10 results (e.g., 'w thr nbc 13 fan site') but did not click any, mirroring Event 2's behavior. This repeated pattern of scanning without engagement strongly indicates **PoorScent**\u2014the user is not finding viable information scent in the patch. The Critic's high confidence and alignment with observable behavior justify this label.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.32
+        },
+        {
+          "event_id": "13112_3245_qq-1722_cd-9866",
+          "final_label": "FollowingScent",
+          "justification": "Despite the Critic's initial lean toward **PoorScent** (confidence: 0.7), the **CLICK** action on 'indianapolis news indiana weather sports 13 w thr indianapolis' is a definitive signal of **FollowingScent** or **ApproachingSource**. The Critic's concern about 'lack of clear intent' is outweighed by the user's active selection of a result, which demonstrates engagement with the information scent. While the prior context suggests some ambiguity, the click itself is a stronger indicator of **FollowingScent** (user continuing the search with a targeted action). The Critic's confidence is lower here, and the action-based evidence supports the label.",
+          "confidence": 0.75,
+          "flag_for_review": false,
+          "disagreement_score": 0.25
+        }
+      ]
+    }
+  ],
+  "num_events": 6,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0170110672712327
+}

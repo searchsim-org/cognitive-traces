@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3423",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:53:11.033350",
+  "events": [
+    {
+      "session_id": "14668_3423",
+      "event_id": "14668_3423_qq-1888",
+      "timestamp": "2006-03-13 12:15:26",
+      "action_type": "QUERY",
+      "content": "realty one",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'realty one...' does not demonstrate a well-formed, targeted query, especially with the presence of an error indicating a possible lack of clarity. This suggests that the user may not have a clear intent, thus reflecting poor scent rather than following it.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9512887299060822,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:53:47.980061"
+    },
+    {
+      "session_id": "14668_3423",
+      "event_id": "14668_3423_qq-1888_serp",
+      "timestamp": "2006-03-13 12:15:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: realty one, realty one com, realty one com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results, especially with titles like 'realty one com' and 'realty one com (+7 more)', indicates the user is likely not finding relevant content, which does not reflect a targeted search. The results may not align with their intent, suggesting they are struggling to find useful information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9527241498231888,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:53:47.980502"
+    },
+    {
+      "session_id": "14668_3423",
+      "event_id": "14668_3423_qq-1888_cd-11269",
+      "timestamp": "2006-03-13 12:15:26",
+      "action_type": "CLICK",
+      "content": "realty one com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'realty one com...' does not indicate a strong information scent, especially given the context of prior events where the user was seemingly dissatisfied. The click may reflect a last-resort action rather than a clear intent, indicating poor scent rather than following it.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9950059175491333,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:53:47.980522"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.774632930755615,
+      "decisions": [
+        {
+          "event_id": "14668_3423_qq-1888",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3423_qq-1888_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3423_qq-1888_cd-11269",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.790682792663574,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'realty one...' does not demonstrate a well-formed, targeted query, especially with the presence of an error indicating a possible lack of clarity. This suggests that the user may not have a clear intent, thus reflecting poor scent rather than following it.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results, especially with titles like 'realty one com' and 'realty one com (+7 more)', indicates the user is likely not finding relevant content, which does not reflect a targeted search. The results may not align with their intent, suggesting they are struggling to find useful information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'realty one com...' does not indicate a strong information scent, especially given the context of prior events where the user was seemingly dissatisfied. The click may reflect a last-resort action rather than a clear intent, indicating poor scent rather than following it.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.118830919265747,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9950059175491333
+}

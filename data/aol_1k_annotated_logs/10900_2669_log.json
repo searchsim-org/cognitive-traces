@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2669",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:21:08.996856",
+  "events": [
+    {
+      "session_id": "10900_2669",
+      "event_id": "10900_2669_qq-319",
+      "timestamp": "2006-04-04 17:47:19",
+      "action_type": "QUERY",
+      "content": "ups",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ups...' is vague and does not exhibit clear intent or focus. The presence of an invalid control character suggests that the user may have encountered an issue with their input, indicating a lack of promising information scent rather than a targeted search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9255687534809113,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:21:50.225853"
+    },
+    {
+      "session_id": "10900_2669",
+      "event_id": "10900_2669_qq-319_serp",
+      "timestamp": "2006-04-04 17:47:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bengali language groups meet up, www up g net com, democratic underground groups meet up (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without a clear indication of satisfaction or intent suggests that the user may be exploring but is not finding relevant information. This behavior aligns more with an unsuccessful search attempt, indicating a potential abandonment of the current search strategy rather than a targeted search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9776614665985107,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:21:50.225860"
+    },
+    {
+      "session_id": "10900_2669",
+      "event_id": "10900_2669_qq-319_cd-2724",
+      "timestamp": "2006-04-04 17:47:19",
+      "action_type": "CLICK",
+      "content": "global home ups united states",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'global home ups united states' does not necessarily indicate a well-formed intent. The click may result from a lack of better options or from curiosity rather than a clear understanding of what the user is searching for. This indicates that the search did not yield strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0144258856773376,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:21:50.225863"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.00148320198059,
+      "decisions": [
+        {
+          "event_id": "10900_2669_qq-319",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2669_qq-319_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2669_qq-319_cd-2724",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.864751100540161,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ups...' is vague and does not exhibit clear intent or focus. The presence of an invalid control character suggests that the user may have encountered an issue with their input, indicating a lack of promising information scent rather than a targeted search effort.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without a clear indication of satisfaction or intent suggests that the user may be exploring but is not finding relevant information. This behavior aligns more with an unsuccessful search attempt, indicating a potential abandonment of the current search strategy rather than a targeted search effort.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'global home ups united states' does not necessarily indicate a well-formed intent. The click may result from a lack of better options or from curiosity rather than a clear understanding of what the user is searching for. This indicates that the search did not yield strong information scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.155147075653076,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0144258856773376
+}

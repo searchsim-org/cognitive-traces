@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2940",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:04:25.733644",
+  "events": [
+    {
+      "session_id": "12211_2940",
+      "event_id": "12211_2940_qq-1517",
+      "timestamp": "2006-03-20 16:26:41",
+      "action_type": "QUERY",
+      "content": "blue cross",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query input that doesn't lead to any clicks or further engagement, indicating a lack of promising information scent. The invalid control character suggests a potential miscommunication or confusion in the user's intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8309516906738281,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:08.996696"
+    },
+    {
+      "session_id": "12211_2940",
+      "event_id": "12211_2940_qq-1517_serp",
+      "timestamp": "2006-03-20 16:26:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: blue cross arena blue cross arena com, blue cross blue shield, blue cross blue shield (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not interact with any of them, which suggests they were scanning for relevant information rather than showing clear intent to continue based on a strong scent. This indicates a search for better options rather than a targeted approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9738686233758926,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:08.996704"
+    },
+    {
+      "session_id": "12211_2940",
+      "event_id": "12211_2940_qq-1517_cd-5059",
+      "timestamp": "2006-03-20 16:26:41",
+      "action_type": "CLICK",
+      "content": "blue cross blue shield",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the click may not represent a targeted search intention but rather an exploration of options after a poor scent from previous events. The click does not imply a clear understanding or satisfaction with the initial query, suggesting a search for clarity rather than a successful follow-up.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0090654790401459,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:08.996707"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 23.45061707496643,
+      "decisions": [
+        {
+          "event_id": "12211_2940_qq-1517",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2940_qq-1517_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2940_qq-1517_cd-5059",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.0948100090026855,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query input that doesn't lead to any clicks or further engagement, indicating a lack of promising information scent. The invalid control character suggests a potential miscommunication or confusion in the user's intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not interact with any of them, which suggests they were scanning for relevant information rather than showing clear intent to continue based on a strong scent. This indicates a search for better options rather than a targeted approach.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the click may not represent a targeted search intention but rather an exploration of options after a poor scent from previous events. The click does not imply a clear understanding or satisfaction with the initial query, suggesting a search for clarity rather than a successful follow-up.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.601733922958374,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0090654790401459
+}

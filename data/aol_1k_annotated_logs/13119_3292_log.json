@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3292",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:34:02.079608",
+  "events": [
+    {
+      "session_id": "13119_3292",
+      "event_id": "13119_3292_qq-1777",
+      "timestamp": "2006-03-02 18:00:04",
+      "action_type": "QUERY",
+      "content": "wheel of fortune spin number",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'wheel of fortune spin number...' indicates an unclear or poorly defined intent, especially if it is related to a specific feature of the game. The user's lack of specificity suggests that they are not fully engaged with a direct search intent, which aligns more with PoorScent as there is no indication of strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9751575961709023,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:49.589322"
+    },
+    {
+      "session_id": "13119_3292",
+      "event_id": "13119_3292_qq-1777_serp",
+      "timestamp": "2006-03-02 18:00:04",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: wheel of fortune fan wheel of fortune fan, wheels of chance wheels of fortune custom wheels promotional wheels, wheel of fortune america s game wheel watchers club (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, which suggests they may not have found promising information. This behavior indicates a potential abandonment of the search strategy, aligning more closely with LeavingPatch rather than FollowingScent, as there is a lack of engagement with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9795884415507317,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:49.589338"
+    },
+    {
+      "session_id": "13119_3292",
+      "event_id": "13119_3292_qq-1777_cd-5005",
+      "timestamp": "2006-03-02 18:00:04",
+      "action_type": "CLICK",
+      "content": "wheel of fortune america s game wheel watchers club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, which typically indicates they were drawn in by the information scent from that title/snippet. However, labeling it as FollowingScent assumes an ongoing clear intent, which might not be the case if the prior content failed to satisfy their information need. ApproachingSource better captures the action of moving towards a specific source of information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0256927192211152,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:49.589344"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.10411286354065,
+      "decisions": [
+        {
+          "event_id": "13119_3292_qq-1777",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3292_qq-1777_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3292_qq-1777_cd-5005",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.897528171539307,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'wheel of fortune spin number...' indicates an unclear or poorly defined intent, especially if it is related to a specific feature of the game. The user's lack of specificity suggests that they are not fully engaged with a direct search intent, which aligns more with PoorScent as there is no indication of strong information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, which suggests they may not have found promising information. This behavior indicates a potential abandonment of the search strategy, aligning more closely with LeavingPatch rather than FollowingScent, as there is a lack of engagement with the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, which typically indicates they were drawn in by the information scent from that title/snippet. However, labeling it as FollowingScent assumes an ongoing clear intent, which might not be the case if the prior content failed to satisfy their information need. ApproachingSource better captures the action of moving towards a specific source of information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.044109106063843,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0256927192211152
+}

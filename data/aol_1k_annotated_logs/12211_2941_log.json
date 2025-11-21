@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2941",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:05:08.998761",
+  "events": [
+    {
+      "session_id": "12211_2941",
+      "event_id": "12211_2941_qq-1518",
+      "timestamp": "2006-03-20 17:19:02",
+      "action_type": "QUERY",
+      "content": "surfacing products international",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'surfacing products international...' does not indicate a targeted search with clear intent. The phrase is vague and does not showcase a specific information need, suggesting that the user may not have found useful results, hence reflecting a poor scent. The analyst's reasoning based on an error does not address the lack of clarity in the query itself.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9259348750114441,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:57.537376"
+    },
+    {
+      "session_id": "12211_2941",
+      "event_id": "12211_2941_qq-1518_serp",
+      "timestamp": "2006-03-20 17:19:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: precision surfaces international, surfacing products com is for sale, home micro surface finishing products inc (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results which implies an exploration phase rather than a focused search. Given the variety of results viewed, the intent seems to be exploratory rather than targeted, indicating the user is assessing options rather than following a clear scent. Thus, 'ApproachingSource' is more fitting than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0129978090524674,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:57.537395"
+    },
+    {
+      "session_id": "12211_2941",
+      "event_id": "12211_2941_qq-1518_cd-9297",
+      "timestamp": "2006-03-20 17:19:02",
+      "action_type": "CLICK",
+      "content": "surfacing products com is for sale",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'surfacing products com is for sale...' suggests an exploration of information rather than a clear following of scent. The user could be clicking out of curiosity rather than continuing a well-formed query. This indicates a transition towards abandoning the search if the clicked result does not meet their needs, hence 'LeavingPatch' may be more accurate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9973863452672959,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:05:57.537401"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.01577115058899,
+      "decisions": [
+        {
+          "event_id": "12211_2941_qq-1518",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2941_qq-1518_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2941_qq-1518_cd-9297",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.539838790893555,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'surfacing products international...' does not indicate a targeted search with clear intent. The phrase is vague and does not showcase a specific information need, suggesting that the user may not have found useful results, hence reflecting a poor scent. The analyst's reasoning based on an error does not address the lack of clarity in the query itself.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results which implies an exploration phase rather than a focused search. Given the variety of results viewed, the intent seems to be exploratory rather than targeted, indicating the user is assessing options rather than following a clear scent. Thus, 'ApproachingSource' is more fitting than 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'surfacing products com is for sale...' suggests an exploration of information rather than a clear following of scent. The user could be clicking out of curiosity rather than continuing a well-formed query. This indicates a transition towards abandoning the search if the clicked result does not meet their needs, hence 'LeavingPatch' may be more accurate.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.895418167114258,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0129978090524674
+}

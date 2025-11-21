@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2469",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:32:53.923099",
+  "events": [
+    {
+      "session_id": "10215_2469",
+      "event_id": "10215_2469_qq-1296",
+      "timestamp": "2006-03-19 20:10:59",
+      "action_type": "QUERY",
+      "content": "pocono",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pocono...' appears to be incomplete or vague, suggesting that the user did not have a clear intent, leading to a lack of promising results. This indicates a lack of effective information scent rather than a strong initiation of a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.963856452703476,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:33:18.339329"
+    },
+    {
+      "session_id": "10215_2469",
+      "event_id": "10215_2469_qq-1296_serp",
+      "timestamp": "2006-03-19 20:10:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www buy pocono homes com, www rama da pocono com, www pocono s land com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating a process of evaluating options rather than a strong intent to continue a well-formed search. The presence of multiple results suggests a potential exploration phase rather than a targeted following of scent, which could be better captured by 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9992777984589338,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:33:18.339346"
+    },
+    {
+      "session_id": "10215_2469",
+      "event_id": "10215_2469_qq-1296_cd-8308",
+      "timestamp": "2006-03-19 20:10:59",
+      "action_type": "CLICK",
+      "content": "whitewater rafting pocono whitewater rafting",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'whitewater rafting pocono whitewater rafting...' indicates the user was attracted to a specific result that appeared promising. This aligns more with 'ApproachingSource' as they are seeking further information, rather than demonstrating a clear, well-formed query intent as suggested by 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9985974591225386,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:33:18.339352"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.48265528678894,
+      "decisions": [
+        {
+          "event_id": "10215_2469_qq-1296",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2469_qq-1296_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2469_qq-1296_cd-8308",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.096218109130859,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pocono...' appears to be incomplete or vague, suggesting that the user did not have a clear intent, leading to a lack of promising results. This indicates a lack of effective information scent rather than a strong initiation of a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating a process of evaluating options rather than a strong intent to continue a well-formed search. The presence of multiple results suggests a potential exploration phase rather than a targeted following of scent, which could be better captured by 'ApproachingSource'.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'whitewater rafting pocono whitewater rafting...' indicates the user was attracted to a specific result that appeared promising. This aligns more with 'ApproachingSource' as they are seeking further information, rather than demonstrating a clear, well-formed query intent as suggested by 'FollowingScent'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.635447978973389,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9992777984589338
+}

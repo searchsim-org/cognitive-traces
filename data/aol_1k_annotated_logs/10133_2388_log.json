@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2388",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:53:09.083167",
+  "events": [
+    {
+      "session_id": "10133_2388",
+      "event_id": "10133_2388_qq-1257",
+      "timestamp": "2006-04-18 00:51:45",
+      "action_type": "QUERY",
+      "content": "skylight bank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action 'QUERY' with content 'skylight bank...' does not clearly indicate a well-formed, targeted query. The phrase is vague and lacks specificity, suggesting that the user may not have a clear understanding of what they are looking for. Instead, it implies a lack of promising scent, which aligns more closely with the 'PoorScent' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9948977708816529,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:53:28.014432"
+    },
+    {
+      "session_id": "10133_2388",
+      "event_id": "10133_2388_qq-1257_serp",
+      "timestamp": "2006-04-18 00:51:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: skylight trust skylight trust, skylight solutions home skylight solutions, sun tek skylights skylights home commercial from sun tek skylights (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action 'SERP_VIEW' indicates that the user viewed multiple results related to 'skylight'. However, the fact that they viewed a list without indicating any clear intent or focus suggests a lack of strong information scent from the titles or snippets. Thus, this event is better labeled as 'ApproachingSource', indicating a preliminary exploration rather than a well-targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9982678830623627,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:53:28.014439"
+    },
+    {
+      "session_id": "10133_2388",
+      "event_id": "10133_2388_qq-1257_cd-8013",
+      "timestamp": "2006-04-18 00:51:45",
+      "action_type": "CLICK",
+      "content": "www skylight net",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action 'CLICK' on 'www skylight net...' suggests that the user may be exploring further, but the lack of context on whether this click was driven by compelling information scent or mere curiosity indicates that it should be labeled as 'ApproachingSource'. The previous vague queries indicate uncertainty, not a focused intent, making 'FollowingScent' an inappropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0136855036020278,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:53:28.014442"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.92086124420166,
+      "decisions": [
+        {
+          "event_id": "10133_2388_qq-1257",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2388_qq-1257_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2388_qq-1257_cd-8013",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.901963949203491,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action 'QUERY' with content 'skylight bank...' does not clearly indicate a well-formed, targeted query. The phrase is vague and lacks specificity, suggesting that the user may not have a clear understanding of what they are looking for. Instead, it implies a lack of promising scent, which aligns more closely with the 'PoorScent' label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action 'SERP_VIEW' indicates that the user viewed multiple results related to 'skylight'. However, the fact that they viewed a list without indicating any clear intent or focus suggests a lack of strong information scent from the titles or snippets. Thus, this event is better labeled as 'ApproachingSource', indicating a preliminary exploration rather than a well-targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action 'CLICK' on 'www skylight net...' suggests that the user may be exploring further, but the lack of context on whether this click was driven by compelling information scent or mere curiosity indicates that it should be labeled as 'ApproachingSource'. The previous vague queries indicate uncertainty, not a focused intent, making 'FollowingScent' an inappropriate label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.89180326461792,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0136855036020278
+}

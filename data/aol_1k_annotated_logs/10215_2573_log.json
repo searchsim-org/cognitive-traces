@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2573",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:31:51.944131",
+  "events": [
+    {
+      "session_id": "10215_2573",
+      "event_id": "10215_2573_qq-1359",
+      "timestamp": "2006-05-31 18:14:26",
+      "action_type": "QUERY",
+      "content": "runescape",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'runescape...' suggests they are searching for information about the game, but the presence of an invalid control character indicates an issue with the query. This suggests the user may not have received promising results based on their initial attempt, thereby exhibiting poor information scent rather than a well-formed query indicative of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8999063730239868,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:32:19.712455"
+    },
+    {
+      "session_id": "10215_2573",
+      "event_id": "10215_2573_qq-1359_serp",
+      "timestamp": "2006-05-31 18:14:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the free mmorpg runescape online fantasy rpg, www runescape cheater z zoom share com, the free mmorpg runescape online fantasy rpg (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results related to 'runescape', the presence of a repeated content description and the invalid control character may imply that the user is not finding what they are looking for. This suggests a lack of engaging content that leads them to abandon further exploration, which aligns more with LeavingPatch than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.918884003162384,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:32:19.712477"
+    },
+    {
+      "session_id": "10215_2573",
+      "event_id": "10215_2573_qq-1359_cd-8463",
+      "timestamp": "2006-05-31 18:14:26",
+      "action_type": "CLICK",
+      "content": "the free mmorpg runescape online fantasy rpg",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user clicked on a result, the invalid control character indicates they may have been misled by a poorly formatted snippet. This suggests they were approaching a potentially unhelpful source rather than engaging with a clear scent of valuable information, indicating a lack of genuine intent behind the click. Thus, ApproachingSource is a more suitable label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9190512835979462,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:32:19.712485"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.973941802978516,
+      "decisions": [
+        {
+          "event_id": "10215_2573_qq-1359",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2573_qq-1359_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2573_qq-1359_cd-8463",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.576767921447754,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'runescape...' suggests they are searching for information about the game, but the presence of an invalid control character indicates an issue with the query. This suggests the user may not have received promising results based on their initial attempt, thereby exhibiting poor information scent rather than a well-formed query indicative of FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results related to 'runescape', the presence of a repeated content description and the invalid control character may imply that the user is not finding what they are looking for. This suggests a lack of engaging content that leads them to abandon further exploration, which aligns more with LeavingPatch than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Although the user clicked on a result, the invalid control character indicates they may have been misled by a poorly formatted snippet. This suggests they were approaching a potentially unhelpful source rather than engaging with a clear scent of valuable information, indicating a lack of genuine intent behind the click. Thus, ApproachingSource is a more suitable label than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.951348066329956,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9190512835979462
+}

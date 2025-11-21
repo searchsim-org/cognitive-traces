@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2901",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:30:08.682679",
+  "events": [
+    {
+      "session_id": "11663_2901",
+      "event_id": "11663_2901_qq-1488",
+      "timestamp": "2006-05-12 12:32:40",
+      "action_type": "QUERY",
+      "content": "hancock county",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hancock county...' lacks specificity and may not have provided strong scent to guide the user effectively. The subsequent analysis error indicates that the user may not have found relevant information, leading to dissatisfaction with the initial query. This aligns with the concept of PoorScent, as the user did not click on any SERP results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9577647358179092,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:30:58.280493"
+    },
+    {
+      "session_id": "11663_2901",
+      "event_id": "11663_2901_qq-1488_serp",
+      "timestamp": "2006-05-12 12:32:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sheriff hancock county, hancock county indiana, hancock county ohio (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any resulting clicks suggests that the user did not find any of the presented options sufficiently promising. This indicates a lack of information scent, which is characteristic of PoorScent, rather than FollowingScent, which implies a clear intent to engage with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9965174369513988,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:30:58.280513"
+    },
+    {
+      "session_id": "11663_2901",
+      "event_id": "11663_2901_qq-1488_cd-8984",
+      "timestamp": "2006-05-12 12:32:40",
+      "action_type": "CLICK",
+      "content": "hancock county ohio",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'hancock county ohio...' does not imply a clear intent with strong scent, especially given the context of prior events indicating poor scent. The user may have been compelled to click out of frustration or curiosity rather than a clear following scent. This could lead to an eventual abandonment, marking it as LeavingPatch if they continued to find dissatisfaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0122513249516487,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:30:58.280518"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.937361001968384,
+      "decisions": [
+        {
+          "event_id": "11663_2901_qq-1488",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2901_qq-1488_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2901_qq-1488_cd-8984",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.31751823425293,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hancock county...' lacks specificity and may not have provided strong scent to guide the user effectively. The subsequent analysis error indicates that the user may not have found relevant information, leading to dissatisfaction with the initial query. This aligns with the concept of PoorScent, as the user did not click on any SERP results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any resulting clicks suggests that the user did not find any of the presented options sufficiently promising. This indicates a lack of information scent, which is characteristic of PoorScent, rather than FollowingScent, which implies a clear intent to engage with the results.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'hancock county ohio...' does not imply a clear intent with strong scent, especially given the context of prior events indicating poor scent. The user may have been compelled to click out of frustration or curiosity rather than a clear following scent. This could lead to an eventual abandonment, marking it as LeavingPatch if they continued to find dissatisfaction.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.080174922943115,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0122513249516487
+}

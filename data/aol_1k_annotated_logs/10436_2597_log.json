@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2597",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:28:14.077360",
+  "events": [
+    {
+      "session_id": "10436_2597",
+      "event_id": "10436_2597_qq-1385",
+      "timestamp": "2006-05-04 22:25:01",
+      "action_type": "QUERY",
+      "content": "lldent.",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'lldent....' appears to be malformed and lacks clarity, indicating a lack of promising information scent. The error message suggests that the user may not have intent or understanding of their query, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9487202405929566,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:28:45.808926"
+    },
+    {
+      "session_id": "10436_2597",
+      "event_id": "10436_2597_qq-1385_serp",
+      "timestamp": "2006-05-04 22:25:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www ll dent com, dent doctor same day dent repair, dent doctor same day dent repair (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed appears to be a list of results based on an unclear query. If the user is encountering a query with invalid characters, it indicates a lack of effective information scent. Thus, labeling the action as FollowingScent is inappropriate as the user is likely not following a promising lead but rather exploring erroneous results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9302878081798553,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:28:45.808934"
+    },
+    {
+      "session_id": "10436_2597",
+      "event_id": "10436_2597_qq-1385_cd-8569",
+      "timestamp": "2006-05-04 22:25:01",
+      "action_type": "CLICK",
+      "content": "www ll dent com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www ll dent com...' suggests the user may be attempting to salvage their search, but the initial query was unclear and likely unpromising. This indicates a PoorScent situation where the user is not engaging with content that aligns with a clear, targeted intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9540014147758484,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:28:45.808937"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.381625890731812,
+      "decisions": [
+        {
+          "event_id": "10436_2597_qq-1385",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2597_qq-1385_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2597_qq-1385_cd-8569",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.8334949016571045,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'lldent....' appears to be malformed and lacks clarity, indicating a lack of promising information scent. The error message suggests that the user may not have intent or understanding of their query, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content viewed appears to be a list of results based on an unclear query. If the user is encountering a query with invalid characters, it indicates a lack of effective information scent. Thus, labeling the action as FollowingScent is inappropriate as the user is likely not following a promising lead but rather exploring erroneous results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'www ll dent com...' suggests the user may be attempting to salvage their search, but the initial query was unclear and likely unpromising. This indicates a PoorScent situation where the user is not engaging with content that aligns with a clear, targeted intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.220746040344238,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9540014147758484
+}

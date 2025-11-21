@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3674",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:40:38.155546",
+  "events": [
+    {
+      "session_id": "15328_3674",
+      "event_id": "15328_3674_qq-2028",
+      "timestamp": "2006-03-26 11:30:57",
+      "action_type": "QUERY",
+      "content": "montgomery county recorder",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'montgomery county recorder...' lacks specificity and context, suggesting the user may not have a clear intent. The mention of an analysis error could indicate frustration or confusion, leading to a poor scent. A more targeted query would demonstrate better clarity of intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8635130167007445,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:41:02.679382"
+    },
+    {
+      "session_id": "15328_3674",
+      "event_id": "15328_3674_qq-2028_serp",
+      "timestamp": "2006-03-26 11:30:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: recorder brandon mcclain montgomery county oh, montgomery county ohio public records online, montgomery county (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed results, the generic nature of the search results ('recorder brandon mcclain montgomery county oh' and similar) implies that the user was likely evaluating options rather than following a clear scent. This action suggests they were still in the process of seeking the right information rather than decisively following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9938723586499691,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:41:02.679389"
+    },
+    {
+      "session_id": "15328_3674",
+      "event_id": "15328_3674_qq-2028_cd-11706",
+      "timestamp": "2006-03-26 11:30:57",
+      "action_type": "CLICK",
+      "content": "recorder brandon mcclain montgomery county oh",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not necessarily indicate that the user was following a strong scent. The click may have been exploratory rather than a targeted search, especially considering the preceding events. The user might have been trying to gather more information rather than confidently following a promising lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9874020248651505,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:41:02.679392"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.256873846054077,
+      "decisions": [
+        {
+          "event_id": "15328_3674_qq-2028",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3674_qq-2028_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3674_qq-2028_cd-11706",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.977803945541382,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'montgomery county recorder...' lacks specificity and context, suggesting the user may not have a clear intent. The mention of an analysis error could indicate frustration or confusion, leading to a poor scent. A more targeted query would demonstrate better clarity of intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed results, the generic nature of the search results ('recorder brandon mcclain montgomery county oh' and similar) implies that the user was likely evaluating options rather than following a clear scent. This action suggests they were still in the process of seeking the right information rather than decisively following a strong scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result does not necessarily indicate that the user was following a strong scent. The click may have been exploratory rather than a targeted search, especially considering the preceding events. The user might have been trying to gather more information rather than confidently following a promising lead.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.89464020729065,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9938723586499691
+}

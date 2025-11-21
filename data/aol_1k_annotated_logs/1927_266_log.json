@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_266",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:37:32.839234",
+  "events": [
+    {
+      "session_id": "1927_266",
+      "event_id": "1927_266_qq-163",
+      "timestamp": "2006-05-16 21:38:36",
+      "action_type": "QUERY",
+      "content": "growth hormone deficiency",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query about 'growth hormone deficiency', but without any clicks or subsequent actions indicated, this suggests that the initial query did not yield promising results, reflecting a lack of successful information scent rather than a clear intent to continue searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9654915928840637,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:37:58.038097"
+    },
+    {
+      "session_id": "1927_266",
+      "event_id": "1927_266_qq-163_serp",
+      "timestamp": "2006-05-16 21:38:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www test my hormones com, professional growth home, professional growth home (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed the SERP, the lack of engagement with the results (no clicks) suggests they did not find the results satisfactory. This aligns more with the concept of LeavingPatch, indicating an abandonment of the search after failing to find relevant information in the displayed results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.977491383254528,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:37:58.038104"
+    },
+    {
+      "session_id": "1927_266",
+      "event_id": "1927_266_qq-163_cd-1919",
+      "timestamp": "2006-05-16 21:38:36",
+      "action_type": "CLICK",
+      "content": "human growth foundation",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'human growth foundation' indicates an attempt to investigate further based on perceived relevance. However, since it follows a poor scent from the previous queries and results, this may not reflect a clear intent as much as a desperate attempt to find relevant information, suggesting they were still searching rather than acting with a strong intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9793630063533783,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:37:58.038107"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.437535047531128,
+      "decisions": [
+        {
+          "event_id": "1927_266_qq-163",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_266_qq-163_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_266_qq-163_cd-1919",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.344422817230225,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query about 'growth hormone deficiency', but without any clicks or subsequent actions indicated, this suggests that the initial query did not yield promising results, reflecting a lack of successful information scent rather than a clear intent to continue searching.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed the SERP, the lack of engagement with the results (no clicks) suggests they did not find the results satisfactory. This aligns more with the concept of LeavingPatch, indicating an abandonment of the search after failing to find relevant information in the displayed results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'human growth foundation' indicates an attempt to investigate further based on perceived relevance. However, since it follows a poor scent from the previous queries and results, this may not reflect a clear intent as much as a desperate attempt to find relevant information, suggesting they were still searching rather than acting with a strong intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.239561080932617,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9793630063533783
+}

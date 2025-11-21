@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3456",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:16:28.082765",
+  "events": [
+    {
+      "session_id": "14668_3456",
+      "event_id": "14668_3456_qq-1925",
+      "timestamp": "2006-04-12 18:02:40",
+      "action_type": "QUERY",
+      "content": "mahoning county clerk of courts",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mahoning county clerk of courts...' does not seem to reflect a robust targeted search given the presence of an analysis error. The user may have issued a query without a clear intent or failed to find relevant information, suggesting a lack of promising scent. This indicates a poor interaction with the search results rather than a well-formed targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9303910791873932,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:16:54.687486"
+    },
+    {
+      "session_id": "14668_3456",
+      "event_id": "14668_3456_qq-1925_serp",
+      "timestamp": "2006-04-12 18:02:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sumter county clerk of courts, hamilton county clerk of courts, hamilton county clerk of courts (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, which suggests they did not find the information scent strong enough to continue exploring. This indicates a potential abandonment of the search effort due to insufficient relevant results, rather than a targeted search behavior characterized by 'FollowingScent.'",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.987671010941267,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:16:54.687495"
+    },
+    {
+      "session_id": "14668_3456",
+      "event_id": "14668_3456_qq-1925_cd-11334",
+      "timestamp": "2006-04-12 18:02:40",
+      "action_type": "CLICK",
+      "content": "trumbull county clerk of courts",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'trumbull county clerk of courts...' could indicate the user found a promising result based on the title/snippet. However, labeling it as 'FollowingScent' implies a previous successful navigation that was not established in the earlier events. Given the prior lack of clicks, it would be more accurate to categorize this action as 'ApproachingSource', as it reflects an attempt to investigate a potentially relevant option.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0124523773789407,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:16:54.687497"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.058773040771484,
+      "decisions": [
+        {
+          "event_id": "14668_3456_qq-1925",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3456_qq-1925_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3456_qq-1925_cd-11334",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.651724100112915,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mahoning county clerk of courts...' does not seem to reflect a robust targeted search given the presence of an analysis error. The user may have issued a query without a clear intent or failed to find relevant information, suggesting a lack of promising scent. This indicates a poor interaction with the search results rather than a well-formed targeted query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, which suggests they did not find the information scent strong enough to continue exploring. This indicates a potential abandonment of the search effort due to insufficient relevant results, rather than a targeted search behavior characterized by 'FollowingScent.'",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'trumbull county clerk of courts...' could indicate the user found a promising result based on the title/snippet. However, labeling it as 'FollowingScent' implies a previous successful navigation that was not established in the earlier events. Given the prior lack of clicks, it would be more accurate to categorize this action as 'ApproachingSource', as it reflects an attempt to investigate a potentially relevant option.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.582366943359375,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0124523773789407
+}

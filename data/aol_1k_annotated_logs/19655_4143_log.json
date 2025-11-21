@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4143",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:26:31.877510",
+  "events": [
+    {
+      "session_id": "19655_4143",
+      "event_id": "19655_4143_qq-2412",
+      "timestamp": "2006-04-23 01:17:49",
+      "action_type": "QUERY",
+      "content": "imperial majesty cruise line",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiates a search query but the term 'imperial majesty cruise line...' suggests uncertainty or a lack of specificity, which could indicate that the user is not convinced of the relevance of their query. The control character error might imply a lack of clarity in the search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8709991455078125,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:26:51.632612"
+    },
+    {
+      "session_id": "19655_4143",
+      "event_id": "19655_4143_qq-2412_serp",
+      "timestamp": "2006-04-23 01:17:49",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www imperial majesty com, majesty casino cruises, majesty (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without taking action suggests that the user did not find the information scent strong enough to engage further. This indicates a potential abandonment of the initial search as they did not click on any results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9721432775259018,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:26:51.632618"
+    },
+    {
+      "session_id": "19655_4143",
+      "event_id": "19655_4143_qq-2412_cd-14193",
+      "timestamp": "2006-04-23 01:17:49",
+      "action_type": "CLICK",
+      "content": "www imperial majesty com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www imperial majesty com...' suggests that the user found a specific result that warranted further investigation, which aligns more with the label 'ApproachingSource' rather than 'FollowingScent' as it implies direct engagement with a potential source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9838282912969589,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:26:51.632621"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.278750896453857,
+      "decisions": [
+        {
+          "event_id": "19655_4143_qq-2412",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4143_qq-2412_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4143_qq-2412_cd-14193",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.647624254226685,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiates a search query but the term 'imperial majesty cruise line...' suggests uncertainty or a lack of specificity, which could indicate that the user is not convinced of the relevance of their query. The control character error might imply a lack of clarity in the search intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without taking action suggests that the user did not find the information scent strong enough to engage further. This indicates a potential abandonment of the initial search as they did not click on any results.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www imperial majesty com...' suggests that the user found a specific result that warranted further investigation, which aligns more with the label 'ApproachingSource' rather than 'FollowingScent' as it implies direct engagement with a potential source.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.747878789901733,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9838282912969589
+}

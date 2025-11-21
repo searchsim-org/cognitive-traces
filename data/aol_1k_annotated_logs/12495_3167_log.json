@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3167",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:40:24.962340",
+  "events": [
+    {
+      "session_id": "12495_3167",
+      "event_id": "12495_3167_qq-1661",
+      "timestamp": "2006-05-21 10:43:05",
+      "action_type": "QUERY",
+      "content": "glenwood new mexico",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'glenwood new mexico...' lacks specificity and does not indicate clear intent or a targeted search. The mention of an analysis error suggests that the query may not have provided sufficient information, leading the user to issue a new query rather than following a defined scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8829714775085449,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:41:26.174130"
+    },
+    {
+      "session_id": "12495_3167",
+      "event_id": "12495_3167_qq-1661_serp",
+      "timestamp": "2006-05-21 10:43:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: new mexico state athletics new mexico state university, new mexico limos, new mexico com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not necessarily indicate strong information scent from the titles/snippets. The generic nature of the search results implies that the user was likely still exploring options rather than following a clear scent, thus better fitting the label 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9778966844081879,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:41:26.174141"
+    },
+    {
+      "session_id": "12495_3167",
+      "event_id": "12495_3167_qq-1661_cd-9684",
+      "timestamp": "2006-05-21 10:43:05",
+      "action_type": "CLICK",
+      "content": "new mexico magazine",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'new mexico magazine...' suggests some engagement, but without evidence of successful information retrieval or satisfaction, it\u2019s likely that the user was still searching for more relevant content. If multiple clicks occurred without finding satisfactory information, this could indicate that the user was preparing to leave the search session.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9899077489972115,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:41:26.174143"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.099103689193726,
+      "decisions": [
+        {
+          "event_id": "12495_3167_qq-1661",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3167_qq-1661_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3167_qq-1661_cd-9684",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.650315046310425,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'glenwood new mexico...' lacks specificity and does not indicate clear intent or a targeted search. The mention of an analysis error suggests that the query may not have provided sufficient information, leading the user to issue a new query rather than following a defined scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results but did not necessarily indicate strong information scent from the titles/snippets. The generic nature of the search results implies that the user was likely still exploring options rather than following a clear scent, thus better fitting the label 'ApproachingSource'.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on 'new mexico magazine...' suggests some engagement, but without evidence of successful information retrieval or satisfaction, it\u2019s likely that the user was still searching for more relevant content. If multiple clicks occurred without finding satisfactory information, this could indicate that the user was preparing to leave the search session.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 33.152048110961914,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9899077489972115
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2823",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:31:39.970960",
+  "events": [
+    {
+      "session_id": "11451_2823",
+      "event_id": "11451_2823_qq-1481",
+      "timestamp": "2006-04-21 23:06:04",
+      "action_type": "QUERY",
+      "content": "arcadian in oakland california",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'arcadian in oakland california...' lacks specificity and does not exhibit strong intent. The mention of an 'invalid control character' suggests that the query may have been malformed or unclear, leading to a poor scent situation rather than a targeted search action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9090942561626434,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:32:28.262903"
+    },
+    {
+      "session_id": "11451_2823",
+      "event_id": "11451_2823_qq-1481_serp",
+      "timestamp": "2006-04-21 23:06:04",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: oakland ish city pride tees community, www oakland cinco de mayo com, www oakland hills real estate com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this event as 'FollowingScent', but viewing 10 results does not necessarily indicate a strong intent to pursue specific information. Instead, the user is likely assessing their options, which aligns more closely with 'ApproachingSource' as they are evaluating potential sources for further action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9822142869234085,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:32:28.262925"
+    },
+    {
+      "session_id": "11451_2823",
+      "event_id": "11451_2823_qq-1481_cd-8916",
+      "timestamp": "2006-04-21 23:06:04",
+      "action_type": "CLICK",
+      "content": "old oakland walking tours clifton tours",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'old oakland walking tours clifton tours...' indicates that the user is moving towards a specific source based on the perceived relevance of the title, rather than demonstrating a clear, strong intent as suggested by 'FollowingScent'. This action reflects an evaluation process rather than the initiation of a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0075134567916393,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:32:28.262933"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.58863615989685,
+      "decisions": [
+        {
+          "event_id": "11451_2823_qq-1481",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2823_qq-1481_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2823_qq-1481_cd-8916",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.575517892837524,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'arcadian in oakland california...' lacks specificity and does not exhibit strong intent. The mention of an 'invalid control character' suggests that the query may have been malformed or unclear, leading to a poor scent situation rather than a targeted search action.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The analyst labeled this event as 'FollowingScent', but viewing 10 results does not necessarily indicate a strong intent to pursue specific information. Instead, the user is likely assessing their options, which aligns more closely with 'ApproachingSource' as they are evaluating potential sources for further action.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'old oakland walking tours clifton tours...' indicates that the user is moving towards a specific source based on the perceived relevance of the title, rather than demonstrating a clear, strong intent as suggested by 'FollowingScent'. This action reflects an evaluation process rather than the initiation of a search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.90697431564331,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0075134567916393
+}

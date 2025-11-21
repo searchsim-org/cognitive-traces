@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3710",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:04:03.917712",
+  "events": [
+    {
+      "session_id": "15328_3710",
+      "event_id": "15328_3710_qq-2072",
+      "timestamp": "2006-04-19 21:16:32",
+      "action_type": "QUERY",
+      "content": "hamilton county common pleas court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query indicates a lack of specificity and may not yield strong results. The error message suggests confusion or an inability to process the request effectively, which typically aligns with a PoorScent scenario where the user is not finding promising information. The presence of an invalid control character further implies that the query was not well-formed, indicating dissatisfaction with the scent of the information offered.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8514395952224731,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:04:37.076919"
+    },
+    {
+      "session_id": "15328_3710",
+      "event_id": "15328_3710_qq-2072_serp",
+      "timestamp": "2006-04-19 21:16:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cuyahoga county common pleas court cccc p, northampton county pa of court common pleas serving the people of northampton county pa northampton county court of common pleas, wood county government court of common pleas probate division (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results without apparent engagement or satisfaction. The nature of the content viewed suggests that the user may not have found any relevant results, leading to a potential abandonment of the search. This aligns more with LeavingPatch, where the user sees multiple options but finds them unsatisfactory, indicating a failure to find useful information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9776319831609726,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:04:37.076924"
+    },
+    {
+      "session_id": "15328_3710",
+      "event_id": "15328_3710_qq-2072_cd-11785",
+      "timestamp": "2006-04-19 21:16:32",
+      "action_type": "CLICK",
+      "content": "hamilton county clerk of courts",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result suggests the user is investigating further, but given the context of previous actions and the potential error in query formation, this click may not be driven by a strong scent. Instead, it appears to be an attempt to salvage the search experience after previous failures. ApproachingSource typically indicates a strong positive scent, which may not apply here due to the earlier context of confusion and poor results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9716850101947785,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:04:37.076926"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.599877119064331,
+      "decisions": [
+        {
+          "event_id": "15328_3710_qq-2072",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3710_qq-2072_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3710_qq-2072_cd-11785",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.663182258605957,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query indicates a lack of specificity and may not yield strong results. The error message suggests confusion or an inability to process the request effectively, which typically aligns with a PoorScent scenario where the user is not finding promising information. The presence of an invalid control character further implies that the query was not well-formed, indicating dissatisfaction with the scent of the information offered.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results without apparent engagement or satisfaction. The nature of the content viewed suggests that the user may not have found any relevant results, leading to a potential abandonment of the search. This aligns more with LeavingPatch, where the user sees multiple options but finds them unsatisfactory, indicating a failure to find useful information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result suggests the user is investigating further, but given the context of previous actions and the potential error in query formation, this click may not be driven by a strong scent. Instead, it appears to be an attempt to salvage the search experience after previous failures. ApproachingSource typically indicates a strong positive scent, which may not apply here due to the earlier context of confusion and poor results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.800132274627686,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9776319831609726
+}

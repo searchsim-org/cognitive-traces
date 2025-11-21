@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3850",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:17:26.942017",
+  "events": [
+    {
+      "session_id": "17545_3850",
+      "event_id": "17545_3850_qq-2206",
+      "timestamp": "2006-05-11 12:40:29",
+      "action_type": "QUERY",
+      "content": "dennis kirk",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dennis kirk...' suggests a lack of specificity and intent, as indicated by the incomplete nature of the content. It appears the user may not have found relevant information, leading to a new query without sufficient clicks or engagement. This aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9802324712276459,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:17:47.940801"
+    },
+    {
+      "session_id": "17545_3850",
+      "event_id": "17545_3850_qq-2206_serp",
+      "timestamp": "2006-05-11 12:40:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: media dennis kirk com, motorcycle atv u tv and snowmobile parts and accessories dennis kirk, dennis cape cod dennis restaurants dennis hotels motels dennis real estate (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results list indicates a broad and possibly irrelevant set of links. The presence of multiple unrelated results suggests that the user did not find clear information scent. This suggests a lack of effective engagement, which aligns with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9947966523468494,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:17:47.940807"
+    },
+    {
+      "session_id": "17545_3850",
+      "event_id": "17545_3850_qq-2206_cd-12906",
+      "timestamp": "2006-05-11 12:40:29",
+      "action_type": "CLICK",
+      "content": "motorcycle atv u tv and snowmobile parts and accessories dennis kirk",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'motorcycle atv u tv and snowmobile parts and accessories dennis kirk...' indicates the user may have found a promising source to investigate further. This action demonstrates an intention to explore based on perceived relevance, which aligns with ApproachingSource rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9955834083259105,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:17:47.940809"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.961899995803833,
+      "decisions": [
+        {
+          "event_id": "17545_3850_qq-2206",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3850_qq-2206_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3850_qq-2206_cd-12906",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.427872657775879,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dennis kirk...' suggests a lack of specificity and intent, as indicated by the incomplete nature of the content. It appears the user may not have found relevant information, leading to a new query without sufficient clicks or engagement. This aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewed results list indicates a broad and possibly irrelevant set of links. The presence of multiple unrelated results suggests that the user did not find clear information scent. This suggests a lack of effective engagement, which aligns with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'motorcycle atv u tv and snowmobile parts and accessories dennis kirk...' indicates the user may have found a promising source to investigate further. This action demonstrates an intention to explore based on perceived relevance, which aligns with ApproachingSource rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.233366012573242,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9955834083259105
+}

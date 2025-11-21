@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2467",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:31:59.854489",
+  "events": [
+    {
+      "session_id": "10215_2467",
+      "event_id": "10215_2467_qq-1294",
+      "timestamp": "2006-03-18 19:57:41",
+      "action_type": "QUERY",
+      "content": "disney",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'disney...' is vague and lacks specificity, suggesting that the user may not have a clear intent in their search. Instead of indicating a strong directed search, this could imply that the user is uncertain about what information they are seeking, leading to a lack of promising scent. The error message regarding an invalid control character further suggests that the user's input may not have been well-formed, supporting the label of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9100398182868957,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:32:27.489367"
+    },
+    {
+      "session_id": "10215_2467",
+      "event_id": "10215_2467_qq-1294_serp",
+      "timestamp": "2006-03-18 19:57:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: a disney world sports disney go com, disney books official site disney publishing worldwide, artemis fowl disney books disney publishing worldwide (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the content listed indicates a lack of clarity in the user's intent. The titles such as 'disney world sports' and 'disney books official site' are generic and may not have provided strong information scent to indicate a focused search. This suggests the user is exploring various options without a definitive target, which aligns more with ApproachingSource than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0223635241389275,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:32:27.489377"
+    },
+    {
+      "session_id": "10215_2467",
+      "event_id": "10215_2467_qq-1294_cd-3471",
+      "timestamp": "2006-03-18 19:57:41",
+      "action_type": "CLICK",
+      "content": "disney world the largest unofficial online guide to disney world walt disney world",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'disney world the largest unofficial online guide to disney world' suggests that the user was exploring their options rather than executing a well-targeted query. The presence of an unofficial guide implies that the user may still be gathering information and not yet fully committed to a specific path, which contradicts the notion of FollowingScent. Thus, ApproachingSource is a more fitting label as it captures the exploratory nature of the user's action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0310161471366883,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:32:27.489382"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.182773113250732,
+      "decisions": [
+        {
+          "event_id": "10215_2467_qq-1294",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2467_qq-1294_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2467_qq-1294_cd-3471",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.750427961349487,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'disney...' is vague and lacks specificity, suggesting that the user may not have a clear intent in their search. Instead of indicating a strong directed search, this could imply that the user is uncertain about what information they are seeking, leading to a lack of promising scent. The error message regarding an invalid control character further suggests that the user's input may not have been well-formed, supporting the label of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the content listed indicates a lack of clarity in the user's intent. The titles such as 'disney world sports' and 'disney books official site' are generic and may not have provided strong information scent to indicate a focused search. This suggests the user is exploring various options without a definitive target, which aligns more with ApproachingSource than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'disney world the largest unofficial online guide to disney world' suggests that the user was exploring their options rather than executing a well-targeted query. The presence of an unofficial guide implies that the user may still be gathering information and not yet fully committed to a specific path, which contradicts the notion of FollowingScent. Thus, ApproachingSource is a more fitting label as it captures the exploratory nature of the user's action.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.170341968536377,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0310161471366883
+}

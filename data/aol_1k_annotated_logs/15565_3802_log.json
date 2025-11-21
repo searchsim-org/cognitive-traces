@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3802",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:02:24.524044",
+  "events": [
+    {
+      "session_id": "15565_3802",
+      "event_id": "15565_3802_qq-2166",
+      "timestamp": "2006-05-30 00:37:06",
+      "action_type": "QUERY",
+      "content": "pageant indian wear",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pageant indian wear...' lacks specificity and potential relevance, suggesting the user may not have found promising scent cues in prior interactions, leading to an ineffective query. The control character error indicates a lack of clarity in the user's intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8495158076286315,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:03:02.216181"
+    },
+    {
+      "session_id": "15565_3802",
+      "event_id": "15565_3802_qq-2166_serp",
+      "timestamp": "2006-05-30 00:37:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: miss missouri pageant an official preliminary for the miss america pageant, eye wear designer eye wear prescription eye wear, maternity wear maternity wear australia stylish maternity wear (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any suggests that none of the titles or snippets provided sufficient information scent for the user to pursue further. This indicates a lack of relevance and promising cues, contrary to the assumption of a 'FollowingScent' behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 1.0046837948262692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:03:02.216198"
+    },
+    {
+      "session_id": "15565_3802",
+      "event_id": "15565_3802_qq-2166_cd-12078",
+      "timestamp": "2006-05-30 00:37:06",
+      "action_type": "CLICK",
+      "content": "manufacturer and exporters of indian ethnic wear wholesaler e sika world",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the content related to 'manufacturer and exporters of indian ethnic wear' implies that the user found a specific interest or relevance in that result, indicating a targeted investigation rather than simply following scent. This suggests a more nuanced search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9709059536457062,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:03:02.216204"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.598505020141602,
+      "decisions": [
+        {
+          "event_id": "15565_3802_qq-2166",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3802_qq-2166_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3802_qq-2166_cd-12078",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.550468921661377,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pageant indian wear...' lacks specificity and potential relevance, suggesting the user may not have found promising scent cues in prior interactions, leading to an ineffective query. The control character error indicates a lack of clarity in the user's intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without engaging with any suggests that none of the titles or snippets provided sufficient information scent for the user to pursue further. This indicates a lack of relevance and promising cues, contrary to the assumption of a 'FollowingScent' behavior.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the content related to 'manufacturer and exporters of indian ethnic wear' implies that the user found a specific interest or relevance in that result, indicating a targeted investigation rather than simply following scent. This suggests a more nuanced search behavior.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.316131114959717,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0046837948262692
+}

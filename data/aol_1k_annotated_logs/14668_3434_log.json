@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3434",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:02:17.737904",
+  "events": [
+    {
+      "session_id": "14668_3434",
+      "event_id": "14668_3434_qq-1900",
+      "timestamp": "2006-03-22 08:18:34",
+      "action_type": "QUERY",
+      "content": "walgreens",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'walgreens...' does not seem to indicate a targeted or specific search intent, especially given the truncated nature of the content. If the user encountered an invalid control character, it suggests that the query may have been malformed or unclear, leading to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9127622306346893,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:02:55.780315"
+    },
+    {
+      "session_id": "14668_3434",
+      "event_id": "14668_3434_qq-1900_serp",
+      "timestamp": "2006-03-22 08:18:34",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: walgreens com, photo walgreens com, walgreens continuing education (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without interaction suggests the user may not have found any relevant information, indicating a poor scent and potentially leading to abandoning the search. The label 'FollowingScent' implies a strong intent to explore, which does not align with the user's lack of engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9970365479588509,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:02:55.780324"
+    },
+    {
+      "session_id": "14668_3434",
+      "event_id": "14668_3434_qq-1900_cd-718",
+      "timestamp": "2006-03-22 08:18:34",
+      "action_type": "CLICK",
+      "content": "www walgreens com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result may indicate some interest, but it should not be labeled as 'FollowingScent' without evidence of a clear, targeted query. The previous events suggest the user was likely struggling to find relevant information, making it more reasonable to label this as 'ApproachingSource' based on an assumption rather than strong intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.003556741029024,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:02:55.780327"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.208757877349854,
+      "decisions": [
+        {
+          "event_id": "14668_3434_qq-1900",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3434_qq-1900_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3434_qq-1900_cd-718",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.892364025115967,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'walgreens...' does not seem to indicate a targeted or specific search intent, especially given the truncated nature of the content. If the user encountered an invalid control character, it suggests that the query may have been malformed or unclear, leading to a lack of promising scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without interaction suggests the user may not have found any relevant information, indicating a poor scent and potentially leading to abandoning the search. The label 'FollowingScent' implies a strong intent to explore, which does not align with the user's lack of engagement.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result may indicate some interest, but it should not be labeled as 'FollowingScent' without evidence of a clear, targeted query. The previous events suggest the user was likely struggling to find relevant information, making it more reasonable to label this as 'ApproachingSource' based on an assumption rather than strong intent.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.71931004524231,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.003556741029024
+}

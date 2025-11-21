@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3105",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:47:35.345010",
+  "events": [
+    {
+      "session_id": "12495_3105",
+      "event_id": "12495_3105_qq-1620",
+      "timestamp": "2006-04-01 16:53:35",
+      "action_type": "QUERY",
+      "content": "lsu athletics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'lsu athletics...' suggests the user may not have had a clear or specific intent due to the ellipsis, which indicates incomplete thought or uncertainty. This could lead to a scenario where the user does not find promising results and subsequently issues a new query, reflecting a lack of strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9207250654697419,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:48:19.992484"
+    },
+    {
+      "session_id": "12495_3105",
+      "event_id": "12495_3105_qq-1620_serp",
+      "timestamp": "2006-04-01 16:53:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: lsu sports net the official website of lsu tigers athletics, lsu sports net the official website of lsu tigers athletics, lsu sports net the official website of lsu tigers athletics (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing multiple results, the repetition of the same source ('lsu sports net the official website of lsu tigers athletics') suggests a lack of diverse information scent. This reinforces the idea that the user is not finding a satisfactory or informative path and may be encountering diminishing returns from the current search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0053601868450641,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:48:19.992499"
+    },
+    {
+      "session_id": "12495_3105",
+      "event_id": "12495_3105_qq-1620_cd-9620",
+      "timestamp": "2006-04-01 16:53:35",
+      "action_type": "CLICK",
+      "content": "lsu sports net the official website of lsu tigers athletics",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on the link to 'lsu sports net the official website of lsu tigers athletics', indicating that they found the title promising enough to investigate further. This action implies they were drawn in by a perceived strong information scent, despite the previous context of poor search performance.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0060648530721665,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:48:19.992503"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.448944807052612,
+      "decisions": [
+        {
+          "event_id": "12495_3105_qq-1620",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3105_qq-1620_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3105_qq-1620_cd-9620",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.027490854263306,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'lsu athletics...' suggests the user may not have had a clear or specific intent due to the ellipsis, which indicates incomplete thought or uncertainty. This could lead to a scenario where the user does not find promising results and subsequently issues a new query, reflecting a lack of strong information scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing multiple results, the repetition of the same source ('lsu sports net the official website of lsu tigers athletics') suggests a lack of diverse information scent. This reinforces the idea that the user is not finding a satisfactory or informative path and may be encountering diminishing returns from the current search results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on the link to 'lsu sports net the official website of lsu tigers athletics', indicating that they found the title promising enough to investigate further. This action implies they were drawn in by a perceived strong information scent, despite the previous context of poor search performance.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.87613296508789,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0060648530721665
+}

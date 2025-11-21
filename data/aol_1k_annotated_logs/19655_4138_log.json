@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4138",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:23:49.281571",
+  "events": [
+    {
+      "session_id": "19655_4138",
+      "event_id": "19655_4138_qq-2362",
+      "timestamp": "2006-04-22 17:55:32",
+      "action_type": "QUERY",
+      "content": "amtrak",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'amtrak...' appears vague and lacks specificity, suggesting that it may not have provided a strong scent leading to further engagement. The presence of an invalid control character indicates the user may have been confused or frustrated, which aligns with a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9077391982078552,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:24:12.698535"
+    },
+    {
+      "session_id": "19655_4138",
+      "event_id": "19655_4138_qq-2362_serp",
+      "timestamp": "2006-04-22 17:55:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tickets amtrak com, www amtrak com, jobs at amtrak (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing results, the mention of 'tickets amtrak com, www amtrak com, jobs at amtrak' suggests a lack of focus on a specific information need. The diversity of results without a clear target indicates weak scent, as the user may not have found the results directly relevant or compelling, leading to a potential lack of strong engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0153318166732788,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:24:12.698542"
+    },
+    {
+      "session_id": "19655_4138",
+      "event_id": "19655_4138_qq-2362_cd-1",
+      "timestamp": "2006-04-22 17:55:32",
+      "action_type": "CLICK",
+      "content": "www amtrak com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www amtrak com' suggests that the user was drawn to a specific source based on its perceived relevance. This action indicates some level of intent to explore further, which aligns more closely with 'ApproachingSource' rather than 'FollowingScent', as the previous events indicated uncertainty and lack of clarity in the user's goals.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0207592308521272,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:24:12.698544"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.25118613243103,
+      "decisions": [
+        {
+          "event_id": "19655_4138_qq-2362",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4138_qq-2362_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4138_qq-2362_cd-1",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.436218023300171,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'amtrak...' appears vague and lacks specificity, suggesting that it may not have provided a strong scent leading to further engagement. The presence of an invalid control character indicates the user may have been confused or frustrated, which aligns with a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing results, the mention of 'tickets amtrak com, www amtrak com, jobs at amtrak' suggests a lack of focus on a specific information need. The diversity of results without a clear target indicates weak scent, as the user may not have found the results directly relevant or compelling, leading to a potential lack of strong engagement.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www amtrak com' suggests that the user was drawn to a specific source based on its perceived relevance. This action indicates some level of intent to explore further, which aligns more closely with 'ApproachingSource' rather than 'FollowingScent', as the previous events indicated uncertainty and lack of clarity in the user's goals.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.6197099685668945,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0207592308521272
+}

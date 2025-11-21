@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4048",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:00:13.559234",
+  "events": [
+    {
+      "session_id": "19162_4048",
+      "event_id": "19162_4048_qq-2322",
+      "timestamp": "2006-03-31 15:03:06",
+      "action_type": "QUERY",
+      "content": "rhianna",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'rhianna...' appears to be incomplete or poorly formed, indicating that the user may not have a clear direction or intent. This suggests a lack of promising information scent, rather than a well-formed search query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9286589205265046,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:00:44.575602"
+    },
+    {
+      "session_id": "19162_4048",
+      "event_id": "19162_4048_qq-2322_serp",
+      "timestamp": "2006-03-31 15:03:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: rh i anna schroeder, www rh i anna com, www rh i anna net (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that includes variations of 'rhianna' but without clear relevance indicates that the user may not have found satisfactory options. The presence of multiple variations suggests confusion rather than a focused search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9553014248609543,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:00:44.575627"
+    },
+    {
+      "session_id": "19162_4048",
+      "event_id": "19162_4048_qq-2322_cd-4580",
+      "timestamp": "2006-03-31 15:03:06",
+      "action_type": "CLICK",
+      "content": "rh i anna music art music",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'rh i anna music art music...' may not indicate a clear intent to follow scent, especially if the previous interactions were already unsatisfactory. Given the context of prior events, this click may represent an attempt to salvage the search rather than a true following of scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9891514420509339,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:00:44.575637"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.695092916488647,
+      "decisions": [
+        {
+          "event_id": "19162_4048_qq-2322",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4048_qq-2322_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4048_qq-2322_cd-4580",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.837278842926025,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'rhianna...' appears to be incomplete or poorly formed, indicating that the user may not have a clear direction or intent. This suggests a lack of promising information scent, rather than a well-formed search query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that includes variations of 'rhianna' but without clear relevance indicates that the user may not have found satisfactory options. The presence of multiple variations suggests confusion rather than a focused search intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'rh i anna music art music...' may not indicate a clear intent to follow scent, especially if the previous interactions were already unsatisfactory. Given the context of prior events, this click may represent an attempt to salvage the search rather than a true following of scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.275477170944214,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9891514420509339
+}

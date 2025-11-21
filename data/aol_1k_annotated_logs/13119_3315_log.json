@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3315",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:50:39.745717",
+  "events": [
+    {
+      "session_id": "13119_3315",
+      "event_id": "13119_3315_qq-1799",
+      "timestamp": "2006-04-04 19:40:24",
+      "action_type": "QUERY",
+      "content": "what is bon ami used for",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'what is bon ami used for...' lacks specificity or clarity, indicating that the user is likely not finding relevant results based on their intent. The presence of an analysis error suggests that the query did not lead to effective information retrieval, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.929798823595047,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:51:32.833708"
+    },
+    {
+      "session_id": "13119_3315",
+      "event_id": "13119_3315_qq-1799_serp",
+      "timestamp": "2006-04-04 19:40:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: amy s panties dirty used panties for sale, cute is what we aim for musical band cute is what we aim for cute is what we aim for, bon ami cleaner tough on grime simple on ingredients (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed a variety of unrelated results, and the titles provided do not indicate a strong scent related to their initial query about bon ami. Instead of indicating a clear path of inquiry, this behavior suggests a search for relevant information, which fits better with ApproachingSource as the user is trying to find a relevant source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9995278313755989,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:51:32.833732"
+    },
+    {
+      "session_id": "13119_3315",
+      "event_id": "13119_3315_qq-1799_cd-10099",
+      "timestamp": "2006-04-04 19:40:24",
+      "action_type": "CLICK",
+      "content": "bon ami cleaner tough on grime simple on ingredients",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'bon ami cleaner tough on grime simple on ingredients...' indicates an attempt to gather more information about the product related to their query. However, this action does not reflect the user's intent to follow a strong scent but rather aligns with ApproachingSource as they are exploring available options without strong conviction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9926399260759353,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:51:32.833738"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.932219982147217,
+      "decisions": [
+        {
+          "event_id": "13119_3315_qq-1799",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3315_qq-1799_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3315_qq-1799_cd-10099",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.69216513633728,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'what is bon ami used for...' lacks specificity or clarity, indicating that the user is likely not finding relevant results based on their intent. The presence of an analysis error suggests that the query did not lead to effective information retrieval, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed a variety of unrelated results, and the titles provided do not indicate a strong scent related to their initial query about bon ami. Instead of indicating a clear path of inquiry, this behavior suggests a search for relevant information, which fits better with ApproachingSource as the user is trying to find a relevant source.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'bon ami cleaner tough on grime simple on ingredients...' indicates an attempt to gather more information about the product related to their query. However, this action does not reflect the user's intent to follow a strong scent but rather aligns with ApproachingSource as they are exploring available options without strong conviction.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 32.15338706970215,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9995278313755989
+}

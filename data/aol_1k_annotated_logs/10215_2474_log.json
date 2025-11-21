@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2474",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:35:11.914352",
+  "events": [
+    {
+      "session_id": "10215_2474",
+      "event_id": "10215_2474_qq-1299",
+      "timestamp": "2006-03-20 12:20:59",
+      "action_type": "QUERY",
+      "content": "pet hotel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issues a vague query 'pet hotel...' which suggests a lack of clarity in their information need. Since the query is incomplete, it indicates that the user may not be receiving promising results, thus aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9591994345188141,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:40.895452"
+    },
+    {
+      "session_id": "10215_2474",
+      "event_id": "10215_2474_qq-1299_serp",
+      "timestamp": "2006-03-20 12:20:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pet friendly hotels and pet friendly lodging take your pet com, www oceanside pet hotel com, scottsdale pet hotel pet boarding grooming dog day care tempe (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results related to pet-friendly accommodations. This indicates a stronger intent to find relevant information rather than simply following a scent. The user is actively scanning for suitable options, which aligns more closely with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.000720240175724,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:40.895470"
+    },
+    {
+      "session_id": "10215_2474",
+      "event_id": "10215_2474_qq-1299_cd-8310",
+      "timestamp": "2006-03-20 12:20:59",
+      "action_type": "CLICK",
+      "content": "dog cat and other pet friendly hotels at pets welcome com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'dog cat and other pet friendly hotels at pets welcome com...' demonstrates the user engaging with a specific result that they found promising. This behavior reflects a decision-making process based on perceived value rather than merely following a scent, thus fitting better with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0246475100517274,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:35:40.895477"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.027999877929688,
+      "decisions": [
+        {
+          "event_id": "10215_2474_qq-1299",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2474_qq-1299_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2474_qq-1299_cd-8310",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.531464338302612,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issues a vague query 'pet hotel...' which suggests a lack of clarity in their information need. Since the query is incomplete, it indicates that the user may not be receiving promising results, thus aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results related to pet-friendly accommodations. This indicates a stronger intent to find relevant information rather than simply following a scent. The user is actively scanning for suitable options, which aligns more closely with ApproachingSource.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'dog cat and other pet friendly hotels at pets welcome com...' demonstrates the user engaging with a specific result that they found promising. This behavior reflects a decision-making process based on perceived value rather than merely following a scent, thus fitting better with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.140156030654907,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0246475100517274
+}

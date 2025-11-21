@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3628",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:12:50.133731",
+  "events": [
+    {
+      "session_id": "14987_3628",
+      "event_id": "14987_3628_qq-2023",
+      "timestamp": "2006-05-13 10:33:12",
+      "action_type": "QUERY",
+      "content": "juniors famous cheesecake",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'juniors famous cheesecake...' does not convey a clear intent or specific information need. The use of '...' suggests incompleteness and uncertainty, indicating a lack of promising scent that would lead to effective foraging. This could be inferred as the user may not have found relevant information, hence the label 'PoorScent' is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9897742360830307,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:13.970179"
+    },
+    {
+      "session_id": "14987_3628",
+      "event_id": "14987_3628_qq-2023_serp",
+      "timestamp": "2006-05-13 10:33:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: junior s cheesecake the world s most fabulous cheesecake, cheesecake delivery and the best cheesecake recipes cheesecake com, cheesecake recipes (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that likely provided varying degrees of relevance to their query. While 'FollowingScent' implies a strong targeted query, the user's action of viewing multiple results indicates they were exploring their options rather than following a clear scent. The label 'ApproachingSource' better fits the behavior of evaluating multiple sources for information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0125828728079795,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:13.970189"
+    },
+    {
+      "session_id": "14987_3628",
+      "event_id": "14987_3628_qq-2023_cd-11613",
+      "timestamp": "2006-05-13 10:33:12",
+      "action_type": "CLICK",
+      "content": "junior s cheesecake the world s most fabulous cheesecake",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'junior s cheesecake the world s most fabulous cheesecake...' indicates an examination of a specific result, but it does not necessarily reflect strong intent or a clear scent from the previous query. Given the potential for variability in the perceived quality of the clicks, the label 'ApproachingSource' would be more fitting as the user is approaching a specific piece of content based on its perceived relevance, rather than indicating a strong, directed search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9991321694105864,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:13:13.970198"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.125339984893799,
+      "decisions": [
+        {
+          "event_id": "14987_3628_qq-2023",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3628_qq-2023_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3628_qq-2023_cd-11613",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.422000169754028,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'juniors famous cheesecake...' does not convey a clear intent or specific information need. The use of '...' suggests incompleteness and uncertainty, indicating a lack of promising scent that would lead to effective foraging. This could be inferred as the user may not have found relevant information, hence the label 'PoorScent' is more appropriate.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results that likely provided varying degrees of relevance to their query. While 'FollowingScent' implies a strong targeted query, the user's action of viewing multiple results indicates they were exploring their options rather than following a clear scent. The label 'ApproachingSource' better fits the behavior of evaluating multiple sources for information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'junior s cheesecake the world s most fabulous cheesecake...' indicates an examination of a specific result, but it does not necessarily reflect strong intent or a clear scent from the previous query. Given the potential for variability in the perceived quality of the clicks, the label 'ApproachingSource' would be more fitting as the user is approaching a specific piece of content based on its perceived relevance, rather than indicating a strong, directed search effort.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.951861143112183,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0125828728079795
+}

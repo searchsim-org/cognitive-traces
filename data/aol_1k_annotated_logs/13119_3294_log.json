@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3294",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:35:26.511106",
+  "events": [
+    {
+      "session_id": "13119_3294",
+      "event_id": "13119_3294_qq-430",
+      "timestamp": "2006-03-03 20:29:25",
+      "action_type": "QUERY",
+      "content": "nbc.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query, but the content suggests it is not resulting in effective interaction due to an error. This indicates low information scent, as the user is likely not finding relevant content and is instead encountering a technical issue.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9440966963768005,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:36:07.182625"
+    },
+    {
+      "session_id": "13119_3294",
+      "event_id": "13119_3294_qq-430_serp",
+      "timestamp": "2006-03-03 20:29:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: today show the today show today show com www today show com msnbc com today com www today com http www today show com http www the today show com www msnbc com msnbc today show com today show com today show com com today msnbc msn com nbc com nbc com nbc today show nbc today show com nbc com com nbc news com nbc news news, nbc tv 4 los angeles blogspot com, dateline in depth investigations of news stories with lester holt nbc news nbc news (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any indicates that the user did not find satisfactory information. This suggests a lack of promising scent rather than a targeted search, as the titles appear repetitive and unhelpful.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9875920429825783,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:36:07.182644"
+    },
+    {
+      "session_id": "13119_3294",
+      "event_id": "13119_3294_qq-430_cd-3391",
+      "timestamp": "2006-03-03 20:29:25",
+      "action_type": "CLICK",
+      "content": "nbc tv network shows episodes schedule",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click action on a result that does not yield satisfactory information indicates a failure in finding relevant content. The user likely clicked due to frustration or lack of better options, not due to a clear intent or scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9714688330888748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:36:07.182648"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.155547857284546,
+      "decisions": [
+        {
+          "event_id": "13119_3294_qq-430",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3294_qq-430_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3294_qq-430_cd-3391",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.972800016403198,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query, but the content suggests it is not resulting in effective interaction due to an error. This indicates low information scent, as the user is likely not finding relevant content and is instead encountering a technical issue.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without engaging with any indicates that the user did not find satisfactory information. This suggests a lack of promising scent rather than a targeted search, as the titles appear repetitive and unhelpful.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click action on a result that does not yield satisfactory information indicates a failure in finding relevant content. The user likely clicked due to frustration or lack of better options, not due to a clear intent or scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.31333589553833,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9875920429825783
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3230",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:41:15.082111",
+  "events": [
+    {
+      "session_id": "12653_3230",
+      "event_id": "12653_3230_qq-1708",
+      "timestamp": "2006-05-18 13:22:44",
+      "action_type": "QUERY",
+      "content": "richmond homes",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'richmond homes...' suggests the user is searching for specific information, but the presence of an invalid control character indicates a potential error in the query itself. This may lead to a lack of relevant results, aligning more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9141928315162658,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:55.996021"
+    },
+    {
+      "session_id": "12653_3230",
+      "event_id": "12653_3230_qq-1708_serp",
+      "timestamp": "2006-05-18 13:22:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: richmond ky com, richmond hill ga, richmond coliseum net (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but the context of those results is unclear due to the earlier query error. If the results did not meet the user's expectations due to poor scent, it suggests they are likely to leave the patch rather than continuing to follow a scent, as indicated by the problematic query from Event 1.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9500468462705612,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:55.996030"
+    },
+    {
+      "session_id": "12653_3230",
+      "event_id": "12653_3230_qq-1708_cd-9767",
+      "timestamp": "2006-05-18 13:22:44",
+      "action_type": "CLICK",
+      "content": "find your new home local home builders richmond american homes",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'find your new home local home builders richmond american homes...' suggests the user perceives a strong scent based on the title and snippet. However, if the initial query was flawed, it indicates they may not be following a clear scent but attempting to salvage the search with this click, thus better fitting ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0041369538754226,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:55.996032"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.938918828964233,
+      "decisions": [
+        {
+          "event_id": "12653_3230_qq-1708",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3230_qq-1708_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3230_qq-1708_cd-9767",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.752884864807129,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'richmond homes...' suggests the user is searching for specific information, but the presence of an invalid control character indicates a potential error in the query itself. This may lead to a lack of relevant results, aligning more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, but the context of those results is unclear due to the earlier query error. If the results did not meet the user's expectations due to poor scent, it suggests they are likely to leave the patch rather than continuing to follow a scent, as indicated by the problematic query from Event 1.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'find your new home local home builders richmond american homes...' suggests the user perceives a strong scent based on the title and snippet. However, if the initial query was flawed, it indicates they may not be following a clear scent but attempting to salvage the search with this click, thus better fitting ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.881250143051147,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0041369538754226
+}

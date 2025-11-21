@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3310",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:47:23.053147",
+  "events": [
+    {
+      "session_id": "13119_3310",
+      "event_id": "13119_3310_qq-1794",
+      "timestamp": "2006-03-26 20:07:15",
+      "action_type": "QUERY",
+      "content": "homes for sale in blount county al",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'homes for sale in blount county al...' suggests an attempt to find specific real estate listings, but if the analyst's reasoning indicates an invalid control character, it may imply that the query was malformed or not yielding the expected results, thus reflecting poor information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8805069208145142,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:00.539659"
+    },
+    {
+      "session_id": "13119_3310",
+      "event_id": "13119_3310_qq-1794_serp",
+      "timestamp": "2006-03-26 20:07:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: homes com homes for sale homes for rent and real estate listings, austin real estate homes for sale austin austin homes austin real estate homes for sale austin austin homes, redlands real estate homes for sale for rent (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any content may suggest that the user is not finding satisfactory information. Instead of 'FollowingScent', the behavior indicates a potential abandonment of the search due to lack of relevant results, aligning more closely with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9873104050755501,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:00.539697"
+    },
+    {
+      "session_id": "13119_3310",
+      "event_id": "13119_3310_qq-1794_cd-2265",
+      "timestamp": "2006-03-26 20:07:15",
+      "action_type": "CLICK",
+      "content": "homes com homes for sale homes for rent and real estate listings",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result may not indicate a strong information scent if the user is clicking out of frustration or desperation after not finding relevant results. Given the context of the earlier events and the potential for invalid query issues, this action likely reflects poor scent rather than a successful follow-through.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9772899284958839,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:48:00.539705"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.334146976470947,
+      "decisions": [
+        {
+          "event_id": "13119_3310_qq-1794",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3310_qq-1794_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3310_qq-1794_cd-2265",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.159463167190552,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'homes for sale in blount county al...' suggests an attempt to find specific real estate listings, but if the analyst's reasoning indicates an invalid control character, it may imply that the query was malformed or not yielding the expected results, thus reflecting poor information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging with any content may suggest that the user is not finding satisfactory information. Instead of 'FollowingScent', the behavior indicates a potential abandonment of the search due to lack of relevant results, aligning more closely with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result may not indicate a strong information scent if the user is clicking out of frustration or desperation after not finding relevant results. Given the context of the earlier events and the potential for invalid query issues, this action likely reflects poor scent rather than a successful follow-through.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.747735023498535,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9873104050755501
+}

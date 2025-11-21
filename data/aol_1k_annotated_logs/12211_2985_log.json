@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2985",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:41:05.707597",
+  "events": [
+    {
+      "session_id": "12211_2985",
+      "event_id": "12211_2985_qq-1417",
+      "timestamp": "2006-04-08 20:07:13",
+      "action_type": "QUERY",
+      "content": "myspace",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'myspace...' does not indicate a clear and targeted intent, as it seems vague and incomplete. The presence of an invalid control character suggests that the user's query may not have been effectively constructed, leading to a lack of promising scent. Thus, this should be labeled as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9584294736385346,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:41:58.029162"
+    },
+    {
+      "session_id": "12211_2985",
+      "event_id": "12211_2985_qq-1417_serp",
+      "timestamp": "2006-04-08 20:07:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: featured content on myspace, featured content on myspace, www pimp myspace ca (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results that are similar in nature (e.g., multiple entries for 'myspace') indicates a lack of effective diversity or relevance in the information presented. This suggests that the user did not find any promising scent, thus aligning with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0121000364422799,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:41:58.029188"
+    },
+    {
+      "session_id": "12211_2985",
+      "event_id": "12211_2985_qq-1417_cd-699",
+      "timestamp": "2006-04-08 20:07:13",
+      "action_type": "CLICK",
+      "content": "featured content on myspace",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on content that does not provide satisfactory or relevant information (considering the context of repetitive and potentially low-quality results) indicates that the user is not finding what they seek. This aligns more closely with PoorScent, as the user's actions do not reflect effective foraging behavior but rather an attempt to salvage a failing search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0110772572457791,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:41:58.029196"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 30.344717741012573,
+      "decisions": [
+        {
+          "event_id": "12211_2985_qq-1417",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2985_qq-1417_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2985_qq-1417_cd-699",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.205650091171265,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'myspace...' does not indicate a clear and targeted intent, as it seems vague and incomplete. The presence of an invalid control character suggests that the user's query may not have been effectively constructed, leading to a lack of promising scent. Thus, this should be labeled as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results that are similar in nature (e.g., multiple entries for 'myspace') indicates a lack of effective diversity or relevance in the information presented. This suggests that the user did not find any promising scent, thus aligning with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on content that does not provide satisfactory or relevant information (considering the context of repetitive and potentially low-quality results) indicates that the user is not finding what they seek. This aligns more closely with PoorScent, as the user's actions do not reflect effective foraging behavior but rather an attempt to salvage a failing search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.69434690475464,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0121000364422799
+}

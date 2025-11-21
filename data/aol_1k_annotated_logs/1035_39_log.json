@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_39",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:48:14.914294",
+  "events": [
+    {
+      "session_id": "1035_39",
+      "event_id": "1035_39_qq-10",
+      "timestamp": "2006-04-01 12:36:03",
+      "action_type": "QUERY",
+      "content": "american idol.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'american idol.com...' does not indicate a clear and targeted intent. The presence of an invalid control character suggests the query may not have been properly formed, reflecting confusion or a lack of clarity in the user's information need, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9125055372714996,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:48:39.786825"
+    },
+    {
+      "session_id": "1035_39",
+      "event_id": "1035_39_qq-10_serp",
+      "timestamp": "2006-04-01 12:36:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: kristian idol american writer director, american idol 2006 blog blogspot com, www american idol jennifer hudson com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results does not necessarily indicate a strong intent to continue foraging. Given the previous event's PoorScent label, the user may be exploring without a clear direction, potentially leading them toward LeavingPatch as they evaluate results that do not meet their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9969584666192531,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:48:39.786843"
+    },
+    {
+      "session_id": "1035_39",
+      "event_id": "1035_39_qq-10_cd-1119",
+      "timestamp": "2006-04-01 12:36:03",
+      "action_type": "CLICK",
+      "content": "watch american idol tv show abc com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the context of the previous events suggests a lack of clear intent and direction in their search. The click may not reflect a strong information scent, but rather an exploration attempt influenced by the previous PoorScent experience, thus better fitting the label ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9868448987603188,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:48:39.786849"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.890780925750732,
+      "decisions": [
+        {
+          "event_id": "1035_39_qq-10",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_39_qq-10_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_39_qq-10_cd-1119",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.637695074081421,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'american idol.com...' does not indicate a clear and targeted intent. The presence of an invalid control character suggests the query may not have been properly formed, reflecting confusion or a lack of clarity in the user's information need, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of viewing 10 results does not necessarily indicate a strong intent to continue foraging. Given the previous event's PoorScent label, the user may be exploring without a clear direction, potentially leading them toward LeavingPatch as they evaluate results that do not meet their needs.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the context of the previous events suggests a lack of clear intent and direction in their search. The click may not reflect a strong information scent, but rather an exploration attempt influenced by the previous PoorScent experience, thus better fitting the label ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.104209899902344,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9969584666192531
+}

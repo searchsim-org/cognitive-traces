@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3207",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:19:37.197246",
+  "events": [
+    {
+      "session_id": "12653_3207",
+      "event_id": "12653_3207_qq-1681",
+      "timestamp": "2006-03-22 14:39:45",
+      "action_type": "QUERY",
+      "content": "edward hospital",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'edward hospital...' suggests that the user was looking for specific information related to a hospital named Edward. However, the presence of an invalid control character indicates that the query may not have been well-formed or complete, reflecting a lack of promising scent. Instead of indicating clear intent, it suggests frustration or confusion with the current search patch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8817619204521179,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:20:24.526805"
+    },
+    {
+      "session_id": "12653_3207",
+      "event_id": "12653_3207_qq-1681_serp",
+      "timestamp": "2006-03-22 14:39:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: edward bunker family association, edward sons trading co, www edward tunick com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but the titles and snippets provided (e.g., 'edward bunker family association') do not seem directly relevant to a hospital query. If the query was intended to find information about 'edward hospital,' the results may not have matched the user's expectations, indicating a poor scent. Thus, it may not reflect a strong intent to follow a scent but rather a lack of relevant options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9791279196739197,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:20:24.526814"
+    },
+    {
+      "session_id": "12653_3207",
+      "event_id": "12653_3207_qq-1681_cd-9732",
+      "timestamp": "2006-03-22 14:39:45",
+      "action_type": "CLICK",
+      "content": "home edward elmhurst health",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'home edward elmhurst health...' suggests a potential interest in health-related information. However, without context indicating that this was directly related to the user's original query about 'edward hospital,' it could be interpreted as a search for health information in general. Given the earlier poor scent from the query and SERP view, this click might represent a last-ditch effort rather than a confident following of a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0036633759737015,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:20:24.526816"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.855699062347412,
+      "decisions": [
+        {
+          "event_id": "12653_3207_qq-1681",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3207_qq-1681_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3207_qq-1681_cd-9732",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.800840139389038,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'edward hospital...' suggests that the user was looking for specific information related to a hospital named Edward. However, the presence of an invalid control character indicates that the query may not have been well-formed or complete, reflecting a lack of promising scent. Instead of indicating clear intent, it suggests frustration or confusion with the current search patch.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results, but the titles and snippets provided (e.g., 'edward bunker family association') do not seem directly relevant to a hospital query. If the query was intended to find information about 'edward hospital,' the results may not have matched the user's expectations, indicating a poor scent. Thus, it may not reflect a strong intent to follow a scent but rather a lack of relevant options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'home edward elmhurst health...' suggests a potential interest in health-related information. However, without context indicating that this was directly related to the user's original query about 'edward hospital,' it could be interpreted as a search for health information in general. Given the earlier poor scent from the query and SERP view, this click might represent a last-ditch effort rather than a confident following of a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.09159016609192,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0036633759737015
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2578",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:17:54.222510",
+  "events": [
+    {
+      "session_id": "10436_2578",
+      "event_id": "10436_2578_qq-1363",
+      "timestamp": "2006-04-02 19:43:11",
+      "action_type": "QUERY",
+      "content": "broadway classroom",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'broadway classroom...' appears to lack specificity and may not effectively capture the user's intent, indicating that the user is likely experiencing poor scent and may not have found promising results leading to the need for a new query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9682748764753342,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:18:17.807125"
+    },
+    {
+      "session_id": "10436_2578",
+      "event_id": "10436_2578_qq-1363_serp",
+      "timestamp": "2006-04-02 19:43:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: classroom, broadway tickets broadway shows theater tickets broadway com, broadway tickets broadway shows theater tickets broadway com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of a broad array of results with similar content suggests that the user was not satisfied with the options available, which aligns more with PoorScent as the outcome indicates a lack of effective results to engage with.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9866078048944473,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:18:17.807133"
+    },
+    {
+      "session_id": "10436_2578",
+      "event_id": "10436_2578_qq-1363_cd-8477",
+      "timestamp": "2006-04-02 19:43:11",
+      "action_type": "CLICK",
+      "content": "broadway tickets broadway shows theater tickets broadway com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, indicating a strong intent to investigate further, which is more aligned with ApproachingSource than FollowingScent since the initial search may not have conveyed a clear scent of relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0019184783101083,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:18:17.807136"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.123288869857788,
+      "decisions": [
+        {
+          "event_id": "10436_2578_qq-1363",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2578_qq-1363_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2578_qq-1363_cd-8477",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.833258152008057,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'broadway classroom...' appears to lack specificity and may not effectively capture the user's intent, indicating that the user is likely experiencing poor scent and may not have found promising results leading to the need for a new query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewing of a broad array of results with similar content suggests that the user was not satisfied with the options available, which aligns more with PoorScent as the outcome indicates a lack of effective results to engage with.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, indicating a strong intent to investigate further, which is more aligned with ApproachingSource than FollowingScent since the initial search may not have conveyed a clear scent of relevant information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.541028261184692,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0019184783101083
+}

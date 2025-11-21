@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_214",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:48:25.758315",
+  "events": [
+    {
+      "session_id": "1722_214",
+      "event_id": "1722_214_qq-86",
+      "timestamp": "2006-05-26 16:13:29",
+      "action_type": "QUERY",
+      "content": "fortmyersnewspress",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action was a query, but the presence of an 'Invalid control character' suggests that the query itself might not have been well-formed or relevant, indicating a lack of promising scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8820961475372314,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:48:53.187834"
+    },
+    {
+      "session_id": "1722_214",
+      "event_id": "1722_214_qq-86_serp",
+      "timestamp": "2006-05-26 16:13:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the news press fort myers cape coral naples bonita springs news news press com, the news press fort myers cape coral naples bonita springs news news press com, the news press fort myers cape coral naples bonita springs news news press com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results does not equate to strong information scent, especially given the error in the query. The repeated content in the results implies that the user may not have found relevant or diverse information, leading to a poor scent experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.962644898891449,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:48:53.187854"
+    },
+    {
+      "session_id": "1722_214",
+      "event_id": "1722_214_qq-86_cd-1603",
+      "timestamp": "2006-05-26 16:13:29",
+      "action_type": "CLICK",
+      "content": "the news press fort myers cape coral naples bonita springs news news press com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user clicked on a search result, the context of the previous errors suggests they were not effectively engaged with the content. The click may have been a result of frustration rather than a clear, targeted pursuit of information, indicating a potential PoorScent situation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9267364501953125,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:48:53.187858"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.400337219238281,
+      "decisions": [
+        {
+          "event_id": "1722_214_qq-86",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_214_qq-86_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_214_qq-86_cd-1603",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.5041890144348145,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action was a query, but the presence of an 'Invalid control character' suggests that the query itself might not have been well-formed or relevant, indicating a lack of promising scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results does not equate to strong information scent, especially given the error in the query. The repeated content in the results implies that the user may not have found relevant or diverse information, leading to a poor scent experience.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Although the user clicked on a search result, the context of the previous errors suggests they were not effectively engaged with the content. The click may have been a result of frustration rather than a clear, targeted pursuit of information, indicating a potential PoorScent situation.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.175487995147705,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.962644898891449
+}

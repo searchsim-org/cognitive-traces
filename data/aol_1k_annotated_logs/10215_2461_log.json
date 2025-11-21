@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2461",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:29:32.192794",
+  "events": [
+    {
+      "session_id": "10215_2461",
+      "event_id": "10215_2461_qq-1291",
+      "timestamp": "2006-03-13 17:46:52",
+      "action_type": "QUERY",
+      "content": "boxer puppy weights",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boxer puppy weights...' lacks specificity and does not indicate a targeted search intent. Since it appears to result in an analysis error, it suggests the user may not have received relevant information, indicating poor scent rather than a clear follow-through on an intended search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9278497695922852,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:29:51.848388"
+    },
+    {
+      "session_id": "10215_2461",
+      "event_id": "10215_2461_qq-1291_serp",
+      "timestamp": "2006-03-13 17:46:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bluegrass puppies, christmas puppies, great dane puppies puppy care great dane breeders great dane puppies breeders caring for great dane puppies great dane puppy care great dane puppies (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results containing varied terms like 'bluegrass puppies' and 'great dane puppies.' This broadening of terms suggests an exploration phase rather than a focused search. The potential confusion in the content indicates a lack of a clear direction, which aligns more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9928018875420094,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:29:51.848395"
+    },
+    {
+      "session_id": "10215_2461",
+      "event_id": "10215_2461_qq-1291_cd-8295",
+      "timestamp": "2006-03-13 17:46:52",
+      "action_type": "CLICK",
+      "content": "boxer world com welcome to boxer world the ultimate dog resource",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'boxer world com' suggests an interest in a specific resource, but without evidence of information scent leading to that decision, it may not qualify as FollowingScent. The click could reflect a general curiosity rather than targeted intent, suggesting the label might be more accurately described as ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.021753016114235,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:29:51.848397"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.432173013687134,
+      "decisions": [
+        {
+          "event_id": "10215_2461_qq-1291",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2461_qq-1291_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2461_qq-1291_cd-8295",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.4089179039001465,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boxer puppy weights...' lacks specificity and does not indicate a targeted search intent. Since it appears to result in an analysis error, it suggests the user may not have received relevant information, indicating poor scent rather than a clear follow-through on an intended search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results containing varied terms like 'bluegrass puppies' and 'great dane puppies.' This broadening of terms suggests an exploration phase rather than a focused search. The potential confusion in the content indicates a lack of a clear direction, which aligns more with the PoorScent label.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'boxer world com' suggests an interest in a specific resource, but without evidence of information scent leading to that decision, it may not qualify as FollowingScent. The click could reflect a general curiosity rather than targeted intent, suggesting the label might be more accurately described as ApproachingSource.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.724768877029419,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.021753016114235
+}

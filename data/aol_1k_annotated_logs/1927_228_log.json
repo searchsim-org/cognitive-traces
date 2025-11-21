@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_228",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:14:29.415941",
+  "events": [
+    {
+      "session_id": "1927_228",
+      "event_id": "1927_228_qq-100",
+      "timestamp": "2006-03-11 12:25:58",
+      "action_type": "QUERY",
+      "content": "cracker barrel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cracker barrel...' seems vague and lacks specificity, suggesting that the user may not have a clear target in mind, indicative of poor scent. This indicates a lack of clarity in the user's intent rather than a strong initiation of a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9845681622624397,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:15:00.185173"
+    },
+    {
+      "session_id": "1927_228",
+      "event_id": "1927_228_qq-100_serp",
+      "timestamp": "2006-03-11 12:25:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cracker barrel careers restaurant careers cracker barrel, the cracker barrel, welcome to cracker barrel old country store cracker barrel (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple SERP results, the content suggests a broad exploration rather than a focused search. The presence of multiple similar results indicates that the user is still assessing options and has not yet committed to a specific target, thus fitting better with 'ApproachingSource' rather than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.025339514017105,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:15:00.185184"
+    },
+    {
+      "session_id": "1927_228",
+      "event_id": "1927_228_qq-100_cd-1737",
+      "timestamp": "2006-03-11 12:25:58",
+      "action_type": "CLICK",
+      "content": "cracker barrel old country store breakfast restaurants cracker barrel",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'cracker barrel old country store breakfast' suggests the user is investigating a specific option rather than following a well-formed scent. This action reflects an intent to explore a promising result, which aligns more closely with 'ApproachingSource' than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0210003823041915,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:15:00.185187"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.989973068237305,
+      "decisions": [
+        {
+          "event_id": "1927_228_qq-100",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_228_qq-100_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_228_qq-100_cd-1737",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.807053804397583,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cracker barrel...' seems vague and lacks specificity, suggesting that the user may not have a clear target in mind, indicative of poor scent. This indicates a lack of clarity in the user's intent rather than a strong initiation of a focused search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple SERP results, the content suggests a broad exploration rather than a focused search. The presence of multiple similar results indicates that the user is still assessing options and has not yet committed to a specific target, thus fitting better with 'ApproachingSource' rather than 'FollowingScent'.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the 'cracker barrel old country store breakfast' suggests the user is investigating a specific option rather than following a well-formed scent. This action reflects an intent to explore a promising result, which aligns more closely with 'ApproachingSource' than 'FollowingScent'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.59792685508728,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.025339514017105
+}

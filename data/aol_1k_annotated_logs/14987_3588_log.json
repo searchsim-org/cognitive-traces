@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3588",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:49:57.221489",
+  "events": [
+    {
+      "session_id": "14987_3588",
+      "event_id": "14987_3588_qq-276",
+      "timestamp": "2006-03-22 09:12:52",
+      "action_type": "QUERY",
+      "content": "mapquest",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mapquest...' suggests a lack of specificity and clarity, indicating the user may not have a clear intent or is experiencing poor scent. The presence of an invalid control character may imply confusion or a failed attempt to compose a proper query, aligning more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9447899341583252,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:50:26.912803"
+    },
+    {
+      "session_id": "14987_3588",
+      "event_id": "14987_3588_qq-276_serp",
+      "timestamp": "2006-03-22 09:12:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mapquest driving directions maps driving directions, m q direct mapquest co uk, official mapquest maps driving directions live traffic (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the lack of clicks or engagement with any of the results suggests that the user did not find the information satisfying or relevant. This indicates a probable perception of poor scent rather than a clear, targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9934828639030456,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:50:26.912821"
+    },
+    {
+      "session_id": "14987_3588",
+      "event_id": "14987_3588_qq-276_cd-24",
+      "timestamp": "2006-03-22 09:12:52",
+      "action_type": "CLICK",
+      "content": "official mapquest maps driving directions live traffic",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, but given the context of previous events where there was poor scent and the unclear query, this action should be categorized as ApproachingSource only if there was a strong indication of intent. Instead, it seems more likely that the user was still exploring, potentially out of desperation rather than a well-formed intent, making PoorScent a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0002195939421654,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:50:26.912827"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.128398895263672,
+      "decisions": [
+        {
+          "event_id": "14987_3588_qq-276",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3588_qq-276_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3588_qq-276_cd-24",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.508460760116577,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mapquest...' suggests a lack of specificity and clarity, indicating the user may not have a clear intent or is experiencing poor scent. The presence of an invalid control character may imply confusion or a failed attempt to compose a proper query, aligning more closely with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed 10 results, the lack of clicks or engagement with any of the results suggests that the user did not find the information satisfying or relevant. This indicates a probable perception of poor scent rather than a clear, targeted search intent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, but given the context of previous events where there was poor scent and the unclear query, this action should be categorized as ApproachingSource only if there was a strong indication of intent. Instead, it seems more likely that the user was still exploring, potentially out of desperation rather than a well-formed intent, making PoorScent a more appropriate label.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.83194375038147,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0002195939421654
+}

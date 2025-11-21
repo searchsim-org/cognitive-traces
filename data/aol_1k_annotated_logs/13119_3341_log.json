@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3341",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:11:28.978577",
+  "events": [
+    {
+      "session_id": "13119_3341",
+      "event_id": "13119_3341_qq-1832",
+      "timestamp": "2006-05-23 18:26:41",
+      "action_type": "QUERY",
+      "content": "walmart gun prices",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'walmart gun prices...' suggests that the user is likely searching for specific information, but the lack of clicks or further engagement indicates that the results did not meet their expectations, reflecting a poor information scent rather than a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0012556791305542,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:12:14.980650"
+    },
+    {
+      "session_id": "13119_3341",
+      "event_id": "13119_3341_qq-1832_serp",
+      "timestamp": "2006-05-23 18:26:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cole gun fine guns and gun smithing, bills guns bills guns, gun magazines gun clip depot premium supplier of hand gun magazines gun mags gun clips and guns (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any of them suggests frustration or a lack of relevant information, indicating that the user may have been searching without finding satisfactory results and is likely considering abandoning the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9860366374254227,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:12:14.980658"
+    },
+    {
+      "session_id": "13119_3341",
+      "event_id": "13119_3341_qq-1832_cd-382",
+      "timestamp": "2006-05-23 18:26:41",
+      "action_type": "CLICK",
+      "content": "walmart com save money live better",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'walmart com save money live better...' implies an attempt to explore a potential source, but without confirming that it met their needs or led to useful information, this action does not clearly reflect a targeted search. The click may represent an exploratory move rather than a continuation of a well-formed search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0276694655418397,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:12:14.980661"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.481738090515137,
+      "decisions": [
+        {
+          "event_id": "13119_3341_qq-1832",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3341_qq-1832_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3341_qq-1832_cd-382",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.803356885910034,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'walmart gun prices...' suggests that the user is likely searching for specific information, but the lack of clicks or further engagement indicates that the results did not meet their expectations, reflecting a poor information scent rather than a targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging with any of them suggests frustration or a lack of relevant information, indicating that the user may have been searching without finding satisfactory results and is likely considering abandoning the search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'walmart com save money live better...' implies an attempt to explore a potential source, but without confirming that it met their needs or led to useful information, this action does not clearly reflect a targeted search. The click may represent an exploratory move rather than a continuation of a well-formed search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.40629768371582,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0276694655418397
+}

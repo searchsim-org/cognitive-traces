@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2560",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:24:35.778608",
+  "events": [
+    {
+      "session_id": "10215_2560",
+      "event_id": "10215_2560_qq-1356",
+      "timestamp": "2006-05-24 18:36:03",
+      "action_type": "QUERY",
+      "content": "saving stem cells",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'saving stem cells...' lacks specificity and does not indicate a clear intent or well-formed search. Instead, it suggests a user is still exploring options without a strong scent that would lead them to believe they will find relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9821955308318138,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:25:03.972891"
+    },
+    {
+      "session_id": "10215_2560",
+      "event_id": "10215_2560_qq-1356_serp",
+      "timestamp": "2006-05-24 18:36:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www cell nn com, cell bio l com, cell bone technology inc (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any clicks suggests that the user did not find the titles or snippets compelling enough to pursue further, indicating a lack of promising scent rather than a clear intent to follow a specific line of inquiry.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9827285736799241,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:25:03.972899"
+    },
+    {
+      "session_id": "10215_2560",
+      "event_id": "10215_2560_qq-1356_cd-8456",
+      "timestamp": "2006-05-24 18:36:03",
+      "action_type": "CLICK",
+      "content": "www cor cell com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the link indicates that the user found the title or snippet sufficiently intriguing to warrant further investigation, which aligns more closely with 'ApproachingSource' than 'FollowingScent.' The user is acting on a perceived strong scent from the link.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0061557471752167,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:25:03.972903"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.453075170516968,
+      "decisions": [
+        {
+          "event_id": "10215_2560_qq-1356",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2560_qq-1356_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2560_qq-1356_cd-8456",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.682187080383301,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'saving stem cells...' lacks specificity and does not indicate a clear intent or well-formed search. Instead, it suggests a user is still exploring options without a strong scent that would lead them to believe they will find relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any clicks suggests that the user did not find the titles or snippets compelling enough to pursue further, indicating a lack of promising scent rather than a clear intent to follow a specific line of inquiry.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the link indicates that the user found the title or snippet sufficiently intriguing to warrant further investigation, which aligns more closely with 'ApproachingSource' than 'FollowingScent.' The user is acting on a perceived strong scent from the link.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.713598966598511,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0061557471752167
+}

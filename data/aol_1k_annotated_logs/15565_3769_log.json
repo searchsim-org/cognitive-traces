@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3769",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:42:03.767592",
+  "events": [
+    {
+      "session_id": "15565_3769",
+      "event_id": "15565_3769_qq-2118",
+      "timestamp": "2006-04-11 00:20:52",
+      "action_type": "QUERY",
+      "content": "mac",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The vague query 'mac...' indicates a lack of specificity and clarity, suggesting that the user may not have found promising information scent. Therefore, it is more indicative of poor scent rather than a targeted intent to follow a specific lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9825124785304069,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:42:35.995026"
+    },
+    {
+      "session_id": "15565_3769",
+      "event_id": "15565_3769_qq-2118_serp",
+      "timestamp": "2006-04-11 00:20:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: members mac connect com, www cor mac com, win mac mvps org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that are not explicitly targeted or relevant to a specific need suggests a failure to find strong information scent. The diverse and unclear results imply that the user's search did not yield satisfactory leads, warranting a label of PoorScent instead of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.968890517950058,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:42:35.995039"
+    },
+    {
+      "session_id": "15565_3769",
+      "event_id": "15565_3769_qq-2118_cd-5033",
+      "timestamp": "2006-04-11 00:20:52",
+      "action_type": "CLICK",
+      "content": "www mac cosmetics com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www mac cosmetics com' suggests that the user found this source appealing based on its title and content, indicating an intention to investigate further. This aligns more closely with ApproachingSource rather than FollowingScent, which implies a broader, more targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0142951607704163,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:42:35.995045"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.636567115783691,
+      "decisions": [
+        {
+          "event_id": "15565_3769_qq-2118",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3769_qq-2118_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3769_qq-2118_cd-5033",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.513132095336914,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The vague query 'mac...' indicates a lack of specificity and clarity, suggesting that the user may not have found promising information scent. Therefore, it is more indicative of poor scent rather than a targeted intent to follow a specific lead.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that are not explicitly targeted or relevant to a specific need suggests a failure to find strong information scent. The diverse and unclear results imply that the user's search did not yield satisfactory leads, warranting a label of PoorScent instead of FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www mac cosmetics com' suggests that the user found this source appealing based on its title and content, indicating an intention to investigate further. This aligns more closely with ApproachingSource rather than FollowingScent, which implies a broader, more targeted search intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.82216215133667,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0142951607704163
+}

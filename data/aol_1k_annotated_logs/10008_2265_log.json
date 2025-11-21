@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2265",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:49:45.978485",
+  "events": [
+    {
+      "session_id": "10008_2265",
+      "event_id": "10008_2265_qq-1177",
+      "timestamp": "2006-03-14 17:44:29",
+      "action_type": "QUERY",
+      "content": "www.playhousedisney.",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query but received an error indicating an invalid control character, suggesting that the query did not yield any useful results or promising scent. This behavior is indicative of PoorScent as there was no valuable output from the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8630685806274414,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:22.007499"
+    },
+    {
+      "session_id": "10008_2265",
+      "event_id": "10008_2265_qq-1177_serp",
+      "timestamp": "2006-03-14 17:44:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: disney fr le site of fi ciel de l univers disney, hilton orlando buena vista palace disney springs walt disney world hotel, vintage disney collectibles disney an a appr as i ed evaluated (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that seem irrelevant or poorly formatted (as indicated by the control character error) implies that the user was not receiving useful information from the SERP. This aligns with the PoorScent label rather than FollowingScent, as the intent to explore promising information is undermined by the lack of quality in the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9126426696777343,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:22.007516"
+    },
+    {
+      "session_id": "10008_2265",
+      "event_id": "10008_2265_qq-1177_cd-1128",
+      "timestamp": "2006-03-14 17:44:29",
+      "action_type": "CLICK",
+      "content": "disney online the official home page of the walt disney company",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the click suggests the user was attempting to engage with content, the prior context of error messages and poor search results indicates that this might not be a case of FollowingScent. Instead, it is more likely that the user was approaching a source out of desperation for relevant content rather than a clear intent based on strong scent, which aligns better with the ApproachingSource label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9780644983053207,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:50:22.007523"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.753880977630615,
+      "decisions": [
+        {
+          "event_id": "10008_2265_qq-1177",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2265_qq-1177_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2265_qq-1177_cd-1128",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.1784961223602295,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query but received an error indicating an invalid control character, suggesting that the query did not yield any useful results or promising scent. This behavior is indicative of PoorScent as there was no valuable output from the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that seem irrelevant or poorly formatted (as indicated by the control character error) implies that the user was not receiving useful information from the SERP. This aligns with the PoorScent label rather than FollowingScent, as the intent to explore promising information is undermined by the lack of quality in the results.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the click suggests the user was attempting to engage with content, the prior context of error messages and poor search results indicates that this might not be a case of FollowingScent. Instead, it is more likely that the user was approaching a source out of desperation for relevant content rather than a clear intent based on strong scent, which aligns better with the ApproachingSource label.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.679611206054688,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9780644983053207
+}

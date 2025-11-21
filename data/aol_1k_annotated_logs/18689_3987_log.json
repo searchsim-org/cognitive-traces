@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3987",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:26:30.411209",
+  "events": [
+    {
+      "session_id": "18689_3987",
+      "event_id": "18689_3987_qq-2251",
+      "timestamp": "2006-04-17 19:39:45",
+      "action_type": "QUERY",
+      "content": "michael sanders realty sarasota",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'michael sanders realty sarasota...' appears to lack specificity and clear intent, suggesting the user may not have a focused goal. The presence of an invalid control character in the analysis indicates potential confusion or error in the query, which aligns more with a sign of poor information scent rather than a strong initial search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8332384586334228,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:27:09.137351"
+    },
+    {
+      "session_id": "18689_3987",
+      "event_id": "18689_3987_qq-2251_serp",
+      "timestamp": "2006-04-17 19:39:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: michael s sanders, sarasota life realty group, sarasota real estate luxury sarasota homes for sale michael saunders company (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results suggests the user is exploring options rather than continuing with a strong scent. This behavior indicates they may be assessing various sources to find relevant information, which aligns more closely with approaching different sources rather than following a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9803806066513061,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:27:09.137358"
+    },
+    {
+      "session_id": "18689_3987",
+      "event_id": "18689_3987_qq-2251_cd-13241",
+      "timestamp": "2006-04-17 19:39:45",
+      "action_type": "CLICK",
+      "content": "sarasota real estate luxury sarasota homes for sale michael saunders company",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which implies they were evaluating the potential relevance of the content. However, given the previous queries and the context of invalid characters, this may reflect an exploratory step rather than a clear following of a scent, suggesting the label should be adjusted to reflect the broader search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.944558048248291,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:27:09.137361"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.265054941177368,
+      "decisions": [
+        {
+          "event_id": "18689_3987_qq-2251",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3987_qq-2251_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3987_qq-2251_cd-13241",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.7178192138671875,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'michael sanders realty sarasota...' appears to lack specificity and clear intent, suggesting the user may not have a focused goal. The presence of an invalid control character in the analysis indicates potential confusion or error in the query, which aligns more with a sign of poor information scent rather than a strong initial search intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of viewing 10 results suggests the user is exploring options rather than continuing with a strong scent. This behavior indicates they may be assessing various sources to find relevant information, which aligns more closely with approaching different sources rather than following a specific scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result, which implies they were evaluating the potential relevance of the content. However, given the previous queries and the context of invalid characters, this may reflect an exploratory step rather than a clear following of a scent, suggesting the label should be adjusted to reflect the broader search behavior.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.40480923652649,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9803806066513061
+}

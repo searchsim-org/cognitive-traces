@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3982",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:24:15.198812",
+  "events": [
+    {
+      "session_id": "18689_3982",
+      "event_id": "18689_3982_qq-2234",
+      "timestamp": "2006-04-12 07:10:41",
+      "action_type": "QUERY",
+      "content": "sarasota herald tribune",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this as 'FollowingScent' based on the initial query, but the presence of an analysis error suggests that the user may not have found relevant information or may have been confused. This aligns more with 'PoorScent' as the user likely abandoned the query due to the lack of a promising outcome.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8995551109313964,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:24:44.108358"
+    },
+    {
+      "session_id": "18689_3982",
+      "event_id": "18689_3982_qq-2234_serp",
+      "timestamp": "2006-04-12 07:10:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sarasota herald tribune local news politics entertainment sports in sarasota fl, sarasota herald tribune local news politics entertainment sports in sarasota fl, sarasota herald tribune local news politics entertainment sports in sarasota fl (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the SERP results without further engagement indicates that the user did not find the titles or snippets compelling enough to click on. This aligns with 'PoorScent' rather than 'FollowingScent', as there is no evidence of strong intent or satisfaction with the results provided.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0011880300939082,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:24:44.108364"
+    },
+    {
+      "session_id": "18689_3982",
+      "event_id": "18689_3982_qq-2234_cd-5174",
+      "timestamp": "2006-04-12 07:10:41",
+      "action_type": "CLICK",
+      "content": "sarasota herald tribune local news politics entertainment sports in sarasota fl",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click action could imply some level of interest, but if the content did not meet expectations (as suggested by the previous errors), it is more likely that this action stemmed from a lack of better options. Therefore, labeling this as 'FollowingScent' is misleading; it should be 'PoorScent' due to the user's unsatisfactory experience with the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.982311126589775,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:24:44.108366"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.471408128738403,
+      "decisions": [
+        {
+          "event_id": "18689_3982_qq-2234",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3982_qq-2234_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3982_qq-2234_cd-5174",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.560624837875366,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst labeled this as 'FollowingScent' based on the initial query, but the presence of an analysis error suggests that the user may not have found relevant information or may have been confused. This aligns more with 'PoorScent' as the user likely abandoned the query due to the lack of a promising outcome.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing the SERP results without further engagement indicates that the user did not find the titles or snippets compelling enough to click on. This aligns with 'PoorScent' rather than 'FollowingScent', as there is no evidence of strong intent or satisfaction with the results provided.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click action could imply some level of interest, but if the content did not meet expectations (as suggested by the previous errors), it is more likely that this action stemmed from a lack of better options. Therefore, labeling this as 'FollowingScent' is misleading; it should be 'PoorScent' due to the user's unsatisfactory experience with the search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.549008131027222,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0011880300939082
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_95",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:58:33.339484",
+  "events": [
+    {
+      "session_id": "1338_95",
+      "event_id": "1338_95_qq-34",
+      "timestamp": "2006-03-10 22:12:33",
+      "action_type": "QUERY",
+      "content": "lexus e300 2001",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query 'lexus e300 2001', but it appears that the query did not lead to any clicks or further interactions, indicating a lack of promising scent. The presence of an error in the analysis suggests that the user may not have found relevant results, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.952681052684784,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:59:15.325430"
+    },
+    {
+      "session_id": "1338_95",
+      "event_id": "1338_95_qq-34_serp",
+      "timestamp": "2006-03-10 22:12:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dar cars lexus of silver spring lexus dealer near bethesda, new pre owned lexus dealer serving carlsbad ca lexus carlsbad, dar cars lexus of silver spring lexus dealer near bethesda (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed a set of results, the context suggests that the results may not have met their expectations or needs, as indicated by the previous query leading to errors. Viewing results without further engagement (like clicks) suggests a poor scent rather than following a clear information trail.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9455395460128784,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:59:15.325443"
+    },
+    {
+      "session_id": "1338_95",
+      "event_id": "1338_95_qq-34_cd-1412",
+      "timestamp": "2006-03-10 22:12:33",
+      "action_type": "CLICK",
+      "content": "lexus dealership in richmond hill ontario lexus of richmond hill",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result related to 'lexus dealership in richmond hill ontario'. This action indicates curiosity or interest in the content, which aligns more with ApproachingSource, as the user is attempting to engage with a potentially relevant source based on a perceived strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9894524455070496,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:59:15.325447"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.2204167842865,
+      "decisions": [
+        {
+          "event_id": "1338_95_qq-34",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_95_qq-34_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_95_qq-34_cd-1412",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.71742582321167,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query 'lexus e300 2001', but it appears that the query did not lead to any clicks or further interactions, indicating a lack of promising scent. The presence of an error in the analysis suggests that the user may not have found relevant results, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed a set of results, the context suggests that the results may not have met their expectations or needs, as indicated by the previous query leading to errors. Viewing results without further engagement (like clicks) suggests a poor scent rather than following a clear information trail.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result related to 'lexus dealership in richmond hill ontario'. This action indicates curiosity or interest in the content, which aligns more with ApproachingSource, as the user is attempting to engage with a potentially relevant source based on a perceived strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.683216094970703,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9894524455070496
+}

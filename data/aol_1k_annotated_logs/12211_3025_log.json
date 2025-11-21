@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3025",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:34:30.458262",
+  "events": [
+    {
+      "session_id": "12211_3025",
+      "event_id": "12211_3025_qq-437",
+      "timestamp": "2006-04-26 02:38:35",
+      "action_type": "QUERY",
+      "content": "ebay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query for 'ebay...' suggests a lack of specificity and clarity, which likely indicates that they are not following a clear scent. The invalid control character error further suggests confusion or an ineffective query rather than a well-formed search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8421701431274414,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:35:14.297864"
+    },
+    {
+      "session_id": "12211_3025",
+      "event_id": "12211_3025_qq-437_serp",
+      "timestamp": "2006-04-26 02:38:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: electronics cars fashion collectibles coupons and more ebay, items for sale by collector crazy king ebay, auction sniper ebay bidding tools go of bid (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a broad array of results without engaging with specific items may reflect frustration with the search process, suggesting the user is preparing to abandon the search. The vague content and lack of clear information scent reinforce this interpretation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9930981084704399,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:35:14.297882"
+    },
+    {
+      "session_id": "12211_3025",
+      "event_id": "12211_3025_qq-437_cd-367",
+      "timestamp": "2006-04-26 02:38:35",
+      "action_type": "CLICK",
+      "content": "electronics cars fashion collectibles coupons and more ebay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that does not seem to provide a clear path or relevant information likely indicates that the user is still struggling to find satisfactory information, thus reflecting poor scent rather than a well-directed search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9840000331401825,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:35:14.297888"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.52549386024475,
+      "decisions": [
+        {
+          "event_id": "12211_3025_qq-437",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3025_qq-437_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3025_qq-437_cd-367",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.6612420082092285,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query for 'ebay...' suggests a lack of specificity and clarity, which likely indicates that they are not following a clear scent. The invalid control character error further suggests confusion or an ineffective query rather than a well-formed search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing a broad array of results without engaging with specific items may reflect frustration with the search process, suggesting the user is preparing to abandon the search. The vague content and lack of clear information scent reinforce this interpretation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that does not seem to provide a clear path or relevant information likely indicates that the user is still struggling to find satisfactory information, thus reflecting poor scent rather than a well-directed search effort.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.559973001480103,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9930981084704399
+}

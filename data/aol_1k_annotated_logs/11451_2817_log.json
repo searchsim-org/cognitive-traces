@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2817",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:26:08.937367",
+  "events": [
+    {
+      "session_id": "11451_2817",
+      "event_id": "11451_2817_qq-1441",
+      "timestamp": "2006-04-19 10:09:21",
+      "action_type": "QUERY",
+      "content": "hershey",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hershey...' appears incomplete and lacks specificity, which suggests that the user may not have strong intent or clarity in their information need. This aligns more with the PoorScent label, indicating that the user did not find satisfactory information or scent leading them to a relevant result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9743798851966858,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:26:56.791555"
+    },
+    {
+      "session_id": "11451_2817",
+      "event_id": "11451_2817_qq-1441_serp",
+      "timestamp": "2006-04-19 10:09:21",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: hershey s chocolate candy candy recipes and crafts, 1825 inn bed and breakfast near hershey pa, hershey s chocolate candy candy recipes and crafts (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the presence of multiple similar titles, particularly the repetitiveness of 'hershey s chocolate candy candy recipes and crafts', indicates a lack of strong scent and possibly confusion in the search results. This suggests that the user may not have found the information they were seeking and could be categorized under PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9988894037902355,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:26:56.791576"
+    },
+    {
+      "session_id": "11451_2817",
+      "event_id": "11451_2817_qq-1441_cd-8676",
+      "timestamp": "2006-04-19 10:09:21",
+      "action_type": "CLICK",
+      "content": "hershey s chocolate candy candy recipes and crafts",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, which indicates an attempt to further investigate a relevant source. However, given the context of the previous events and the repetitive and unclear nature of the content, it suggests the user may not have been following a clear scent but rather taking a chance on a potential option. Therefore, ApproachingSource is more suitable than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.032174751162529,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:26:56.791584"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.500181913375854,
+      "decisions": [
+        {
+          "event_id": "11451_2817_qq-1441",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2817_qq-1441_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2817_qq-1441_cd-8676",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.430476903915405,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hershey...' appears incomplete and lacks specificity, which suggests that the user may not have strong intent or clarity in their information need. This aligns more with the PoorScent label, indicating that the user did not find satisfactory information or scent leading them to a relevant result.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed multiple results, the presence of multiple similar titles, particularly the repetitiveness of 'hershey s chocolate candy candy recipes and crafts', indicates a lack of strong scent and possibly confusion in the search results. This suggests that the user may not have found the information they were seeking and could be categorized under PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, which indicates an attempt to further investigate a relevant source. However, given the context of the previous events and the repetitive and unclear nature of the content, it suggests the user may not have been following a clear scent but rather taking a chance on a potential option. Therefore, ApproachingSource is more suitable than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 27.820644855499268,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.032174751162529
+}

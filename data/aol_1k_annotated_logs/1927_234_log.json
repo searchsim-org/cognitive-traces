@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_234",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:18:15.958050",
+  "events": [
+    {
+      "session_id": "1927_234",
+      "event_id": "1927_234_qq-110",
+      "timestamp": "2006-03-22 01:58:09",
+      "action_type": "QUERY",
+      "content": "fox prison break spoiler",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fox prison break spoiler...' lacks specificity and may indicate that the user is uncertain about where to find the desired information, leading to a low likelihood of promising results. The query does not show clear intent or scent, hence it should be labeled as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9767691165208816,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:50.319130"
+    },
+    {
+      "session_id": "1927_234",
+      "event_id": "1927_234_qq-110_serp",
+      "timestamp": "2006-03-22 01:58:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www prison break fic com, spoiler fix com, the spoiler centre (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any clicks can suggest that the user is not finding promising results, which indicates a lack of strong information scent. This may lead to the user abandoning this search altogether, thus it should be labeled as LeavingPatch rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9835521757602692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:50.319139"
+    },
+    {
+      "session_id": "1927_234",
+      "event_id": "1927_234_qq-110_cd-1753",
+      "timestamp": "2006-03-22 01:58:09",
+      "action_type": "CLICK",
+      "content": "spoiler fix com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'spoiler fix com' indicates that the user was attracted by the information scent, suggesting they found it promising enough to investigate further. This action is better represented as ApproachingSource rather than FollowingScent, as it implies a transition towards gathering detailed information rather than merely following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9909723043441773,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:50.319141"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.203932762145996,
+      "decisions": [
+        {
+          "event_id": "1927_234_qq-110",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_234_qq-110_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_234_qq-110_cd-1753",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.663931846618652,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fox prison break spoiler...' lacks specificity and may indicate that the user is uncertain about where to find the desired information, leading to a low likelihood of promising results. The query does not show clear intent or scent, hence it should be labeled as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without any clicks can suggest that the user is not finding promising results, which indicates a lack of strong information scent. This may lead to the user abandoning this search altogether, thus it should be labeled as LeavingPatch rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'spoiler fix com' indicates that the user was attracted by the information scent, suggesting they found it promising enough to investigate further. This action is better represented as ApproachingSource rather than FollowingScent, as it implies a transition towards gathering detailed information rather than merely following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.271278142929077,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9909723043441773
+}

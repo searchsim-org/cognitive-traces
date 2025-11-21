@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2481",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:39:36.697128",
+  "events": [
+    {
+      "session_id": "10215_2481",
+      "event_id": "10215_2481_qq-1305",
+      "timestamp": "2006-03-22 21:41:50",
+      "action_type": "QUERY",
+      "content": "boxer puppy anatomy forums",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boxer puppy anatomy forums...' seems vague and does not indicate strong intent or a well-formed targeted query. There\u2019s no evidence of clear information scent, as the user appears to be searching broadly without a specific goal, suggesting a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0186418086290359,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:12.169871"
+    },
+    {
+      "session_id": "10215_2481",
+      "event_id": "10215_2481_qq-1305_serp",
+      "timestamp": "2006-03-22 21:41:50",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: teaching anatomy auckland ac nz, veterinary anatomy website home page, great dane puppies puppy care great dane breeders great dane puppies breeders caring for great dane puppies great dane puppy care great dane puppies (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without a clear selection or engagement suggests the user did not find promising information scent in the displayed results. The lack of interaction indicates that the user is still unsure about their query and is likely experiencing poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9559800952672959,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:12.169888"
+    },
+    {
+      "session_id": "10215_2481",
+      "event_id": "10215_2481_qq-1305_cd-8270",
+      "timestamp": "2006-03-22 21:41:50",
+      "action_type": "CLICK",
+      "content": "boxer world com welcome to boxer world the ultimate dog resource",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result indicates that the user was drawn to the content based on its title/snippet, suggesting a strong information scent. The label 'FollowingScent' implies the user was still in a search initiation phase, which contradicts the action of clicking on a specific result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.007445901632309,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:12.169893"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.7205650806427,
+      "decisions": [
+        {
+          "event_id": "10215_2481_qq-1305",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2481_qq-1305_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2481_qq-1305_cd-8270",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.705582857131958,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boxer puppy anatomy forums...' seems vague and does not indicate strong intent or a well-formed targeted query. There\u2019s no evidence of clear information scent, as the user appears to be searching broadly without a specific goal, suggesting a poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without a clear selection or engagement suggests the user did not find promising information scent in the displayed results. The lack of interaction indicates that the user is still unsure about their query and is likely experiencing poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result indicates that the user was drawn to the content based on its title/snippet, suggesting a strong information scent. The label 'FollowingScent' implies the user was still in a search initiation phase, which contradicts the action of clicking on a specific result.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.774861812591553,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0186418086290359
+}

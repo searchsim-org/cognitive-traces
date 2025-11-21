@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2303",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:10:30.851502",
+  "events": [
+    {
+      "session_id": "10008_2303",
+      "event_id": "10008_2303_qq-1189",
+      "timestamp": "2006-05-12 11:29:21",
+      "action_type": "QUERY",
+      "content": "michael buble",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'michael buble...' appears vague and lacks specificity, suggesting they may not have a clear intent. The invalid control character error could imply that the query was not well-formed, indicating a lack of information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8297563076019288,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:10:54.455133"
+    },
+    {
+      "session_id": "10008_2303",
+      "event_id": "10008_2303_qq-1189_serp",
+      "timestamp": "2006-05-12 11:29:21",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: michael bubl official website, michael bubl official website, bungalow b the official michael bubl fan club the official fan club for michael bubl (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that appear repetitive (e.g., multiple links to the official website) suggests that the user is not finding varied or rich information, indicating poor scent. This could denote a lack of effective results leading to dissatisfaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9873556405305862,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:10:54.455141"
+    },
+    {
+      "session_id": "10008_2303",
+      "event_id": "10008_2303_qq-1189_cd-7862",
+      "timestamp": "2006-05-12 11:29:21",
+      "action_type": "CLICK",
+      "content": "michael bubl official website",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'michael bubl official website' indicates that the user is acting on the information scent perceived from the SERP, leading them to believe this source is relevant. This reflects an approach toward a potentially valuable source rather than continuing a search without sufficient scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0090418882668017,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:10:54.455145"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.904782056808472,
+      "decisions": [
+        {
+          "event_id": "10008_2303_qq-1189",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2303_qq-1189_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2303_qq-1189_cd-7862",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.343765020370483,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'michael buble...' appears vague and lacks specificity, suggesting they may not have a clear intent. The invalid control character error could imply that the query was not well-formed, indicating a lack of information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results that appear repetitive (e.g., multiple links to the official website) suggests that the user is not finding varied or rich information, indicating poor scent. This could denote a lack of effective results leading to dissatisfaction.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the 'michael bubl official website' indicates that the user is acting on the information scent perceived from the SERP, leading them to believe this source is relevant. This reflects an approach toward a potentially valuable source rather than continuing a search without sufficient scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.053835868835449,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0090418882668017
+}

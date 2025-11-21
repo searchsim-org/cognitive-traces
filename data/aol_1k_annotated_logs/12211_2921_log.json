@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2921",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:46:56.852659",
+  "events": [
+    {
+      "session_id": "12211_2921",
+      "event_id": "12211_2921_qq-1417",
+      "timestamp": "2006-03-09 12:16:51",
+      "action_type": "QUERY",
+      "content": "myspace",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'myspace...' does not demonstrate a clear and targeted intent, especially with the ellipsis indicating uncertainty or incompleteness. This suggests the user may not have found the initial scent promising, leading to a low-quality query signal rather than a strong information search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9717520236968994,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:47:39.137181"
+    },
+    {
+      "session_id": "12211_2921",
+      "event_id": "12211_2921_qq-1417_serp",
+      "timestamp": "2006-03-09 12:16:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: featured content on myspace, featured content on myspace, www pimp myspace ca (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that are similar and presumably not satisfactory (duplicated 'featured content on myspace') indicates a lack of strong information scent. This repeated content suggests the user is not finding what they need, leading to a poor scent experience rather than a continued search based on strong intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0074438706040383,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:47:39.137209"
+    },
+    {
+      "session_id": "12211_2921",
+      "event_id": "12211_2921_qq-1417_cd-699",
+      "timestamp": "2006-03-09 12:16:51",
+      "action_type": "CLICK",
+      "content": "featured content on myspace",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'featured content on myspace...' does indicate some level of interest, but given the context of previous events showing poor scent and similar results, it seems more likely that the user is still seeking clarity rather than confidently following a strong scent. This click may not reflect a clear intent to follow a promising lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0157955080270766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:47:39.137216"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.54749584197998,
+      "decisions": [
+        {
+          "event_id": "12211_2921_qq-1417",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2921_qq-1417_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2921_qq-1417_cd-699",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.290788173675537,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'myspace...' does not demonstrate a clear and targeted intent, especially with the ellipsis indicating uncertainty or incompleteness. This suggests the user may not have found the initial scent promising, leading to a low-quality query signal rather than a strong information search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that are similar and presumably not satisfactory (duplicated 'featured content on myspace') indicates a lack of strong information scent. This repeated content suggests the user is not finding what they need, leading to a poor scent experience rather than a continued search based on strong intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'featured content on myspace...' does indicate some level of interest, but given the context of previous events showing poor scent and similar results, it seems more likely that the user is still seeking clarity rather than confidently following a strong scent. This click may not reflect a clear intent to follow a promising lead.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.230597972869873,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0157955080270766
+}

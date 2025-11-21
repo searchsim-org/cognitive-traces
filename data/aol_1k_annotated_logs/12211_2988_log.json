@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2988",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:44:59.218164",
+  "events": [
+    {
+      "session_id": "12211_2988",
+      "event_id": "12211_2988_qq-1537",
+      "timestamp": "2006-04-11 01:19:45",
+      "action_type": "QUERY",
+      "content": "b&h photo",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of issuing a query without any clear indication of satisfaction or further refinement suggests that they are not finding promising results. The analyst's label of 'FollowingScent' implies strong intent, which is contradicted by the lack of engagement or follow-up actions. The presence of an error message further indicates a failure in the search process rather than a successful initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9549144148826599,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:45:46.684145"
+    },
+    {
+      "session_id": "12211_2988",
+      "event_id": "12211_2988_qq-1537_serp",
+      "timestamp": "2006-04-11 01:19:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: b h photo video digital cameras photography camcorders, b h photo video digital cameras photography camcorders, h photo home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's behavior of viewing multiple results without taking further action (such as clicking) indicates that they do not find the information sufficiently compelling. This suggests that the search results did not provide a strong scent, which aligns more with a 'PoorScent' label rather than 'FollowingScent', which would imply a positive engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0068437941372395,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:45:46.684155"
+    },
+    {
+      "session_id": "12211_2988",
+      "event_id": "12211_2988_qq-1537_cd-9354",
+      "timestamp": "2006-04-11 01:19:45",
+      "action_type": "CLICK",
+      "content": "b h photo video digital cameras photography camcorders",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a search result could indicate an attempt to gather more information; however, the context of the previous events points to a lack of satisfaction with the information available. For this reason, 'ApproachingSource' may not be appropriate, as it suggests a stronger positive intent than what is evidenced by the preceding poor engagement. Instead, this could be seen as a last-ditch effort to find relevant information despite previous failures, aligning better with 'PoorScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9979696493595839,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:45:46.684164"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.423210859298706,
+      "decisions": [
+        {
+          "event_id": "12211_2988_qq-1537",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2988_qq-1537_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2988_qq-1537_cd-9354",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.097681999206543,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of issuing a query without any clear indication of satisfaction or further refinement suggests that they are not finding promising results. The analyst's label of 'FollowingScent' implies strong intent, which is contradicted by the lack of engagement or follow-up actions. The presence of an error message further indicates a failure in the search process rather than a successful initiation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's behavior of viewing multiple results without taking further action (such as clicking) indicates that they do not find the information sufficiently compelling. This suggests that the search results did not provide a strong scent, which aligns more with a 'PoorScent' label rather than 'FollowingScent', which would imply a positive engagement.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a search result could indicate an attempt to gather more information; however, the context of the previous events points to a lack of satisfaction with the information available. For this reason, 'ApproachingSource' may not be appropriate, as it suggests a stronger positive intent than what is evidenced by the preceding poor engagement. Instead, this could be seen as a last-ditch effort to find relevant information despite previous failures, aligning better with 'PoorScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.657559156417847,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0068437941372395
+}

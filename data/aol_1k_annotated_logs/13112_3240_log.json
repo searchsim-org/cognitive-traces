@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3240",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:50:21.630074",
+  "events": [
+    {
+      "session_id": "13112_3240",
+      "event_id": "13112_3240_qq-1714",
+      "timestamp": "2006-03-03 19:31:56",
+      "action_type": "QUERY",
+      "content": "city of indianapolis zoning maps",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'city of indianapolis zoning maps' suggests an attempt to find specific zoning information. However, the lack of clarity in the query's effectiveness, indicated by the invalid control character error, suggests the user may not have found sufficient relevant information, leading to a new query without clicks. This aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9256092369556427,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:51:03.169325"
+    },
+    {
+      "session_id": "13112_3240",
+      "event_id": "13112_3240_qq-1714_serp",
+      "timestamp": "2006-03-03 19:31:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: city of indianapolis marion county, www map zone net, www map zone net (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results indicates the user is assessing potential sources based on the results from their initial query. However, the act of merely viewing results without any indication of clicks or further engagement suggests they are exploring options rather than following a strong scent. Thus, ApproachingSource may be a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9976783558726311,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:51:03.169332"
+    },
+    {
+      "session_id": "13112_3240",
+      "event_id": "13112_3240_qq-1714_cd-9847",
+      "timestamp": "2006-03-03 19:31:56",
+      "action_type": "CLICK",
+      "content": "city of indianapolis marion county",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result titled 'city of indianapolis marion county' can be interpreted as an effort to investigate further based on the perceived relevance of the title/snippet. This does not necessarily indicate a strong information scent, especially without context on the user's ongoing search satisfaction. Therefore, a label like ApproachingSource fits better than FollowingScent in this context.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0186222165822982,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:51:03.169342"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.252132892608643,
+      "decisions": [
+        {
+          "event_id": "13112_3240_qq-1714",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3240_qq-1714_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3240_qq-1714_cd-9847",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 14.037121057510376,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'city of indianapolis zoning maps' suggests an attempt to find specific zoning information. However, the lack of clarity in the query's effectiveness, indicated by the invalid control character error, suggests the user may not have found sufficient relevant information, leading to a new query without clicks. This aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of viewing 10 results indicates the user is assessing potential sources based on the results from their initial query. However, the act of merely viewing results without any indication of clicks or further engagement suggests they are exploring options rather than following a strong scent. Thus, ApproachingSource may be a more appropriate label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result titled 'city of indianapolis marion county' can be interpreted as an effort to investigate further based on the perceived relevance of the title/snippet. This does not necessarily indicate a strong information scent, especially without context on the user's ongoing search satisfaction. Therefore, a label like ApproachingSource fits better than FollowingScent in this context.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.953153133392334,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0186222165822982
+}

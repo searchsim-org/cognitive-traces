@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4084",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:50:26.276543",
+  "events": [
+    {
+      "session_id": "19655_4084",
+      "event_id": "19655_4084_qq-2359",
+      "timestamp": "2006-03-26 17:36:37",
+      "action_type": "QUERY",
+      "content": "brendan tours",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'brendan tours...' lacks specificity and does not indicate a clear intent. The presence of an analysis error suggests that the query may not have yielded any relevant results, which aligns with the characteristics of PoorScent, where the user initiates a search but finds no promising options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9248113632202148,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:47.431781"
+    },
+    {
+      "session_id": "19655_4084",
+      "event_id": "19655_4084_qq-2359_serp",
+      "timestamp": "2006-03-26 17:36:37",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: brochure brendan vacations com, st brendan the navigator, st brendan parish school (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not engage with any of them, indicating a lack of promising information scent. The fact that the user viewed 10 results without a clear indication of intent or satisfaction suggests they were exploring but ultimately found the content lacking, leading to a possible abandonment of the search path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9820976614952087,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:47.431788"
+    },
+    {
+      "session_id": "19655_4084",
+      "event_id": "19655_4084_qq-2359_cd-14121",
+      "timestamp": "2006-03-26 17:36:37",
+      "action_type": "CLICK",
+      "content": "best travel vacation deals ireland escorted and independent brendan vacations brendan vacations",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'best travel vacation deals ireland escorted and independent brendan vacations brendan vacations...' does not demonstrate a clear scent of valuable information as the preceding events suggest a lack of engagement with previous results. The click could indicate a last resort attempt rather than a successful foraging action, indicating a PoorScent situation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9895366340875625,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:47.431791"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.359908819198608,
+      "decisions": [
+        {
+          "event_id": "19655_4084_qq-2359",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4084_qq-2359_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4084_qq-2359_cd-14121",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.409628868103027,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'brendan tours...' lacks specificity and does not indicate a clear intent. The presence of an analysis error suggests that the query may not have yielded any relevant results, which aligns with the characteristics of PoorScent, where the user initiates a search but finds no promising options.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not engage with any of them, indicating a lack of promising information scent. The fact that the user viewed 10 results without a clear indication of intent or satisfaction suggests they were exploring but ultimately found the content lacking, leading to a possible abandonment of the search path.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'best travel vacation deals ireland escorted and independent brendan vacations brendan vacations...' does not demonstrate a clear scent of valuable information as the preceding events suggest a lack of engagement with previous results. The click could indicate a last resort attempt rather than a successful foraging action, indicating a PoorScent situation.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.146090984344482,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9895366340875625
+}

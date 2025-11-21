@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3636",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:17:18.510737",
+  "events": [
+    {
+      "session_id": "14987_3636",
+      "event_id": "14987_3636_qq-2008",
+      "timestamp": "2006-05-31 10:22:19",
+      "action_type": "QUERY",
+      "content": "seagate beach club",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'seagate beach club...' does not indicate a clear intent, as it is incomplete and lacks specificity. The presence of an invalid control character suggests the query may have been malformed, causing a lack of promising information scent, which aligns with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9289980530738831,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:17:52.284983"
+    },
+    {
+      "session_id": "14987_3636",
+      "event_id": "14987_3636_qq-2008_serp",
+      "timestamp": "2006-05-31 10:22:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sandpiper beach club, welcome to serena ta beach club serena ta beach club, sani bel beach club (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating an interest in exploring options. This suggests they are attempting to approach and evaluate sources, rather than simply following a scent. The term 'FollowingScent' implies a more targeted intent than what is exhibited here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.997141214646399,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:17:52.284998"
+    },
+    {
+      "session_id": "14987_3636",
+      "event_id": "14987_3636_qq-2008_cd-11549",
+      "timestamp": "2006-05-31 10:22:19",
+      "action_type": "CLICK",
+      "content": "sea gate beach club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'sea gate beach club...' indicates an attempt to engage with a specific result, rather than a strong, clear intent that would characterize FollowingScent. The action suggests they are exploring a likely promising source rather than following a defined scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.989917703717947,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:17:52.285004"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.058164834976196,
+      "decisions": [
+        {
+          "event_id": "14987_3636_qq-2008",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3636_qq-2008_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3636_qq-2008_cd-11549",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.323100805282593,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'seagate beach club...' does not indicate a clear intent, as it is incomplete and lacks specificity. The presence of an invalid control character suggests the query may have been malformed, causing a lack of promising information scent, which aligns with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating an interest in exploring options. This suggests they are attempting to approach and evaluate sources, rather than simply following a scent. The term 'FollowingScent' implies a more targeted intent than what is exhibited here.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'sea gate beach club...' indicates an attempt to engage with a specific result, rather than a strong, clear intent that would characterize FollowingScent. The action suggests they are exploring a likely promising source rather than following a defined scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.105007886886597,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.997141214646399
+}

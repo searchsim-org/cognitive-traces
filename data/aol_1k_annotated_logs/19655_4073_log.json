@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4073",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:45:19.504386",
+  "events": [
+    {
+      "session_id": "19655_4073",
+      "event_id": "19655_4073_qq-2351",
+      "timestamp": "2006-03-19 12:51:08",
+      "action_type": "QUERY",
+      "content": "dodge",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dodge...' does not provide sufficient information or clear intent, suggesting the user may not have found a promising direction with their initial query. The reference to an 'Invalid control character' indicates a possible error that could lead to frustration, thereby labeling this as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.87620050907135,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:45:50.399545"
+    },
+    {
+      "session_id": "19655_4073",
+      "event_id": "19655_4073_qq-2351_serp",
+      "timestamp": "2006-03-19 12:51:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: find a chrysler dodge or jeep dealer, find a chrysler dodge or jeep dealer, find a chrysler dodge or jeep dealer (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without a click suggests that the user is not finding what they need, indicating a lack of effective scent. This behavior aligns more with LeavingPatch, as the user is likely considering abandoning the search due to inadequate results rather than continuing with a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9899527743458748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:45:50.399555"
+    },
+    {
+      "session_id": "19655_4073",
+      "event_id": "19655_4073_qq-2351_cd-10187",
+      "timestamp": "2006-03-19 12:51:08",
+      "action_type": "CLICK",
+      "content": "dodge official site muscle cars sports cars",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on results indicates that the user is investigating further based on the information scent from the title/snippet. Given that the previous events suggest poor scent and potential abandonment, this click could represent a last effort rather than a clear, directed search, making ApproachingSource a more suitable label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9935677543282508,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:45:50.399562"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.68491005897522,
+      "decisions": [
+        {
+          "event_id": "19655_4073_qq-2351",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4073_qq-2351_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4073_qq-2351_cd-10187",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.292569160461426,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dodge...' does not provide sufficient information or clear intent, suggesting the user may not have found a promising direction with their initial query. The reference to an 'Invalid control character' indicates a possible error that could lead to frustration, thereby labeling this as PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without a click suggests that the user is not finding what they need, indicating a lack of effective scent. This behavior aligns more with LeavingPatch, as the user is likely considering abandoning the search due to inadequate results rather than continuing with a targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on results indicates that the user is investigating further based on the information scent from the title/snippet. Given that the previous events suggest poor scent and potential abandonment, this click could represent a last effort rather than a clear, directed search, making ApproachingSource a more suitable label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.731759071350098,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9935677543282508
+}

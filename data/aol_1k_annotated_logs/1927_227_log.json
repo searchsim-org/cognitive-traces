@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_227",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:14:00.567002",
+  "events": [
+    {
+      "session_id": "1927_227",
+      "event_id": "1927_227_qq-99",
+      "timestamp": "2006-03-10 16:49:17",
+      "action_type": "QUERY",
+      "content": "rdv sportsplex",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'rdv sportsplex...' lacks specificity and context, suggesting that the user may not have a strong sense of direction or information need. The mention of an invalid control character indicates that the query may not have been processed correctly, leading to a lack of promising information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.863968551158905,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:29.411542"
+    },
+    {
+      "session_id": "1927_227",
+      "event_id": "1927_227_qq-99_serp",
+      "timestamp": "2006-03-10 16:49:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: rd v sports plex com, www rd v sports plex com, v plex (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but likely found no relevant information due to the poor quality or relevance of the results indicated by the invalid control character. This suggests a lack of effective information scent, leading to a potential reconsideration of the query rather than a strong pursuit of information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8595991134643555,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:29.411552"
+    },
+    {
+      "session_id": "1927_227",
+      "event_id": "1927_227_qq-99_cd-1732",
+      "timestamp": "2006-03-10 16:49:17",
+      "action_type": "CLICK",
+      "content": "www rd v sports plex com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www rd v sports plex com...' does not indicate a strong pursuit of information due to the previous failures in the search process. The invalid control character suggests the user was not able to find satisfactory results, leading to a low likelihood of successful information retrieval.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8868400692939757,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:29.411555"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.709977149963379,
+      "decisions": [
+        {
+          "event_id": "1927_227_qq-99",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_227_qq-99_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_227_qq-99_cd-1732",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.5032148361206055,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'rdv sportsplex...' lacks specificity and context, suggesting that the user may not have a strong sense of direction or information need. The mention of an invalid control character indicates that the query may not have been processed correctly, leading to a lack of promising information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but likely found no relevant information due to the poor quality or relevance of the results indicated by the invalid control character. This suggests a lack of effective information scent, leading to a potential reconsideration of the query rather than a strong pursuit of information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'www rd v sports plex com...' does not indicate a strong pursuit of information due to the previous failures in the search process. The invalid control character suggests the user was not able to find satisfactory results, leading to a low likelihood of successful information retrieval.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.464972734451294,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.8868400692939757
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_261",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:33:26.844808",
+  "events": [
+    {
+      "session_id": "1927_261",
+      "event_id": "1927_261_qq-150",
+      "timestamp": "2006-05-10 21:46:02",
+      "action_type": "QUERY",
+      "content": "kids camp movie",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'kids camp movie...' lacks specificity and does not indicate a well-formed, targeted search. The trailing ellipsis suggests uncertainty or an incomplete thought, which implies that the user may not have had a clear intent or scent, hence it is more indicative of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9647120088338852,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:33:59.574367"
+    },
+    {
+      "session_id": "1927_261",
+      "event_id": "1927_261_qq-150_serp",
+      "timestamp": "2006-05-10 21:46:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: golf camp tennis camp summer camp belgrade maine, jazz camp jazz camp band camp for grownups, 2020 summer camps camp jobs camp resource com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results without clicking on any, indicating they were exploring options but not necessarily following a strong scent. The list of camps suggests a broad search rather than targeted intent, which aligns more with ApproachingSource as they are assessing potential sources rather than committing to a specific one.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9907669968903065,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:33:59.574386"
+    },
+    {
+      "session_id": "1927_261",
+      "event_id": "1927_261_qq-150_cd-1893",
+      "timestamp": "2006-05-10 21:46:02",
+      "action_type": "CLICK",
+      "content": "movies",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'movies...' does not indicate a strong scent or successful retrieval of information. If the click led to further exploration, it could imply a LeavingPatch scenario, especially if it was done without prior satisfactory results. This suggests the user might still be searching but has become frustrated or uncertain.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9914002373814583,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:33:59.574392"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.003596067428589,
+      "decisions": [
+        {
+          "event_id": "1927_261_qq-150",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_261_qq-150_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_261_qq-150_cd-1893",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.6820080280303955,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'kids camp movie...' lacks specificity and does not indicate a well-formed, targeted search. The trailing ellipsis suggests uncertainty or an incomplete thought, which implies that the user may not have had a clear intent or scent, hence it is more indicative of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results without clicking on any, indicating they were exploring options but not necessarily following a strong scent. The list of camps suggests a broad search rather than targeted intent, which aligns more with ApproachingSource as they are assessing potential sources rather than committing to a specific one.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'movies...' does not indicate a strong scent or successful retrieval of information. If the click led to further exploration, it could imply a LeavingPatch scenario, especially if it was done without prior satisfactory results. This suggests the user might still be searching but has become frustrated or uncertain.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.71826481819153,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9914002373814583
+}

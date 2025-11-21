@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3100",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:43:50.444455",
+  "events": [
+    {
+      "session_id": "12495_3100",
+      "event_id": "12495_3100_qq-1616",
+      "timestamp": "2006-03-28 12:11:48",
+      "action_type": "QUERY",
+      "content": "california dmv",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The search query 'california dmv...' appears to lack sufficient detail or specificity, indicating the user may not have found strong information scent. The label 'FollowingScent' suggests a clear intent, but the ellipsis indicates uncertainty or incompleteness in the query, which leads to an inadequate information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9677465260028839,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:44:35.050823"
+    },
+    {
+      "session_id": "12495_3100",
+      "event_id": "12495_3100_qq-1616_serp",
+      "timestamp": "2006-03-28 12:11:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: d mv info 4 d mv department of motor vehicles guide, d mv info 4 d mv department of motor vehicles guide, www nj d mv d wi com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of SERP results that heavily repeat the same content ('d mv info 4 d mv department of motor vehicles guide') suggests a lack of diversity in information scent, indicating the user may not have found satisfactory or relevant results. The label 'FollowingScent' implies the user is actively progressing in their search, which is contradicted by the observed redundancy and lack of promising options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0093075782060623,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:44:35.050834"
+    },
+    {
+      "session_id": "12495_3100",
+      "event_id": "12495_3100_qq-1616_cd-9615",
+      "timestamp": "2006-03-28 12:11:48",
+      "action_type": "CLICK",
+      "content": "www d mv ca gov",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'www d mv ca gov...' likely because it held the strongest potential for relevant information based on the prior SERP view, not because they were following a strong scent throughout. Labeling this as 'FollowingScent' overlooks the context that the user may have been navigating through low-scent options and was merely attempting to find something useful from the available results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0133550405502318,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:44:35.050836"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.765861988067627,
+      "decisions": [
+        {
+          "event_id": "12495_3100_qq-1616",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3100_qq-1616_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3100_qq-1616_cd-9615",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.333905220031738,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The search query 'california dmv...' appears to lack sufficient detail or specificity, indicating the user may not have found strong information scent. The label 'FollowingScent' suggests a clear intent, but the ellipsis indicates uncertainty or incompleteness in the query, which leads to an inadequate information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewing of SERP results that heavily repeat the same content ('d mv info 4 d mv department of motor vehicles guide') suggests a lack of diversity in information scent, indicating the user may not have found satisfactory or relevant results. The label 'FollowingScent' implies the user is actively progressing in their search, which is contradicted by the observed redundancy and lack of promising options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'www d mv ca gov...' likely because it held the strongest potential for relevant information based on the prior SERP view, not because they were following a strong scent throughout. Labeling this as 'FollowingScent' overlooks the context that the user may have been navigating through low-scent options and was merely attempting to find something useful from the available results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.16170382499695,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0133550405502318
+}

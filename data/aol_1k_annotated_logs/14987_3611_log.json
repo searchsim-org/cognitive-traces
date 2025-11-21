@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3611",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:03:26.929317",
+  "events": [
+    {
+      "session_id": "14987_3611",
+      "event_id": "14987_3611_qq-2014",
+      "timestamp": "2006-04-19 15:13:21",
+      "action_type": "QUERY",
+      "content": "map",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'map...' lacks specificity and seems to indicate that the user is not finding relevant information, as evidenced by the mention of an 'invalid control character.' This suggests that the user may be confused or dissatisfied with the results, rather than showing clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.897378659248352,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:04:03.330483"
+    },
+    {
+      "session_id": "14987_3611",
+      "event_id": "14987_3611_qq-2014_serp",
+      "timestamp": "2006-04-19 15:13:21",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: official mapquest maps driving directions live traffic, chicago neighborhoods chicago maps entertainment city guide, www u texas edu maps main images (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the titles appear generic and lack targeted information scent. The phrase 'Invalid control character' indicates a potential problem with the query itself, suggesting the user was not finding promising sources and was likely not following a scent effectively.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8343881964683533,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:04:03.330493"
+    },
+    {
+      "session_id": "14987_3611",
+      "event_id": "14987_3611_qq-2014_cd-24",
+      "timestamp": "2006-04-19 15:13:21",
+      "action_type": "CLICK",
+      "content": "official mapquest maps driving directions live traffic",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the content of the click suggests that they may have been attempting to investigate a source that was still unclear or problematic, given the previous errors in querying. The click may represent a last-ditch effort to find relevant information rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9364289939403534,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:04:03.330498"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.969993829727173,
+      "decisions": [
+        {
+          "event_id": "14987_3611_qq-2014",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3611_qq-2014_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3611_qq-2014_cd-24",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.087047815322876,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'map...' lacks specificity and seems to indicate that the user is not finding relevant information, as evidenced by the mention of an 'invalid control character.' This suggests that the user may be confused or dissatisfied with the results, rather than showing clear intent to follow a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed multiple results, the titles appear generic and lack targeted information scent. The phrase 'Invalid control character' indicates a potential problem with the query itself, suggesting the user was not finding promising sources and was likely not following a scent effectively.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the content of the click suggests that they may have been attempting to investigate a source that was still unclear or problematic, given the previous errors in querying. The click may represent a last-ditch effort to find relevant information rather than a clear intent to follow a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.049356937408447,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9364289939403534
+}

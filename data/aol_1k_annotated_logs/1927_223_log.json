@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_223",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:12:13.901495",
+  "events": [
+    {
+      "session_id": "1927_223",
+      "event_id": "1927_223_qq-95",
+      "timestamp": "2006-03-01 23:36:14",
+      "action_type": "QUERY",
+      "content": "williams and sonoma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'williams and sonoma...' lacks specificity and does not indicate a well-formed, targeted search intent. It appears to be more of a vague attempt to find information rather than a clear directive, suggesting that the user may not have found promising scent from their initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9752109795808792,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:12:42.077991"
+    },
+    {
+      "session_id": "1927_223",
+      "event_id": "1927_223_qq-95_serp",
+      "timestamp": "2006-03-01 23:36:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: williams sonoma inc welcome, williams sonoma 403 restricted access, williams sonoma 403 restricted access (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The view of results primarily containing '403 restricted access' indicates a lack of valuable information, which suggests the user is not finding useful results. This aligns more with a lack of scent rather than showing a strong intent to continue searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9767680168151855,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:12:42.078013"
+    },
+    {
+      "session_id": "1927_223",
+      "event_id": "1927_223_qq-95_cd-1721",
+      "timestamp": "2006-03-01 23:36:14",
+      "action_type": "CLICK",
+      "content": "williams sonoma 403 restricted access",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that leads to a '403 restricted access' page indicates a failed attempt to gather information, aligning more with a sense of leaving the current patch due to unsuccessful interactions. It does not indicate a clear intention to continue pursuing the query further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9417206823825837,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:12:42.078019"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.812741994857788,
+      "decisions": [
+        {
+          "event_id": "1927_223_qq-95",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_223_qq-95_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_223_qq-95_cd-1721",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.884598970413208,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'williams and sonoma...' lacks specificity and does not indicate a well-formed, targeted search intent. It appears to be more of a vague attempt to find information rather than a clear directive, suggesting that the user may not have found promising scent from their initial query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The view of results primarily containing '403 restricted access' indicates a lack of valuable information, which suggests the user is not finding useful results. This aligns more with a lack of scent rather than showing a strong intent to continue searching.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result that leads to a '403 restricted access' page indicates a failed attempt to gather information, aligning more with a sense of leaving the current patch due to unsuccessful interactions. It does not indicate a clear intention to continue pursuing the query further.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.328924894332886,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9767680168151855
+}

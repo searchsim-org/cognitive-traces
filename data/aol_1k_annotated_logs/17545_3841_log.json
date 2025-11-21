@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3841",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:12:43.869262",
+  "events": [
+    {
+      "session_id": "17545_3841",
+      "event_id": "17545_3841_qq-2172",
+      "timestamp": "2006-05-03 11:01:23",
+      "action_type": "QUERY",
+      "content": "renthal grips",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query with 'rental grips...' suggests that the user may not have a clear intent or that the query was too vague, leading to a lack of promising results. The term 'invalid control character' indicates that there was an error, which could signify difficulty in finding relevant information, thus aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8330751180648803,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:13:17.536278"
+    },
+    {
+      "session_id": "17545_3841",
+      "event_id": "17545_3841_qq-2172_serp",
+      "timestamp": "2006-05-03 11:01:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: rent hal motocross road cycling, hot grips heated grips hand warmers grip warmers, foam rubber tubing contoured grips specialty grip accessories grips by grip tek (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the titles listed seem to cover a broad selection that may not directly relate to the initial query. This suggests that the user is still exploring options and has not found a specific promising source yet. Therefore, ApproachingSource is more suitable than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0157657995820046,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:13:17.536294"
+    },
+    {
+      "session_id": "17545_3841",
+      "event_id": "17545_3841_qq-2172_cd-12843",
+      "timestamp": "2006-05-03 11:01:23",
+      "action_type": "CLICK",
+      "content": "rent hal motocross road cycling",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on one of the results does not necessarily indicate a strong scent. Given the previous events' context, the user may be clicking out of frustration or lack of better options rather than following a clear scent. This reflects a decision to leave the prior patch of information due to dissatisfaction with the options presented.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9913659535348416,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:13:17.536297"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.800567865371704,
+      "decisions": [
+        {
+          "event_id": "17545_3841_qq-2172",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3841_qq-2172_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3841_qq-2172_cd-12843",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.62398099899292,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query with 'rental grips...' suggests that the user may not have a clear intent or that the query was too vague, leading to a lack of promising results. The term 'invalid control character' indicates that there was an error, which could signify difficulty in finding relevant information, thus aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Although the user viewed multiple results, the titles listed seem to cover a broad selection that may not directly relate to the initial query. This suggests that the user is still exploring options and has not found a specific promising source yet. Therefore, ApproachingSource is more suitable than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on one of the results does not necessarily indicate a strong scent. Given the previous events' context, the user may be clicking out of frustration or lack of better options rather than following a clear scent. This reflects a decision to leave the prior patch of information due to dissatisfaction with the options presented.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.920623064041138,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0157657995820046
+}

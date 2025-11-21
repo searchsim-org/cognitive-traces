@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3094",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:39:28.914229",
+  "events": [
+    {
+      "session_id": "12211_3094",
+      "event_id": "12211_3094_qq-1611",
+      "timestamp": "2006-05-30 01:15:07",
+      "action_type": "QUERY",
+      "content": "palms las vegas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'palms las vegas...' suggests an attempt to find specific information, but without clicks or engagement with results, it indicates a lack of promising scent, prompting a new search. The presence of an error does not negate the user's intent, but rather reflects a lack of effective results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.996252166479826,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:40:16.053274"
+    },
+    {
+      "session_id": "12211_3094",
+      "event_id": "12211_3094_qq-1611_serp",
+      "timestamp": "2006-05-30 01:15:07",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: palm trees ltd, palm springs motors, gay palm springs (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of 10 results suggests an exploration phase, but if none of the results were compelling enough for the user to click, it indicates a potential abandonment of the search. This aligns more closely with LeavingPatch than FollowingScent, as the user is likely to be dissatisfied with the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9926239266991616,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:40:16.053297"
+    },
+    {
+      "session_id": "12211_3094",
+      "event_id": "12211_3094_qq-1611_cd-9344",
+      "timestamp": "2006-05-30 01:15:07",
+      "action_type": "CLICK",
+      "content": "palms casino resort",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'palms casino resort' indicates that the user found the result compelling enough to investigate further. This is better categorized as ApproachingSource since the click signifies a response to a perceived scent of valuable information rather than a continuation of a successful search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0041238404810429,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:40:16.053305"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.968351125717163,
+      "decisions": [
+        {
+          "event_id": "12211_3094_qq-1611",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3094_qq-1611_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3094_qq-1611_cd-9344",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.06187891960144,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'palms las vegas...' suggests an attempt to find specific information, but without clicks or engagement with results, it indicates a lack of promising scent, prompting a new search. The presence of an error does not negate the user's intent, but rather reflects a lack of effective results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The viewing of 10 results suggests an exploration phase, but if none of the results were compelling enough for the user to click, it indicates a potential abandonment of the search. This aligns more closely with LeavingPatch than FollowingScent, as the user is likely to be dissatisfied with the search results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'palms casino resort' indicates that the user found the result compelling enough to investigate further. This is better categorized as ApproachingSource since the click signifies a response to a perceived scent of valuable information rather than a continuation of a successful search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 21.797605752944946,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0041238404810429
+}

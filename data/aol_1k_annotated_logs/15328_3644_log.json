@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3644",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:21:39.684883",
+  "events": [
+    {
+      "session_id": "15328_3644",
+      "event_id": "15328_3644_qq-2033",
+      "timestamp": "2006-03-06 09:27:08",
+      "action_type": "QUERY",
+      "content": "replacements inc.",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have resulted in an analysis error related to invalid control characters, which suggests that the user's intent was not clear and did not lead to successful foraging. Instead of indicating a well-formed query, this suggests a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8789111137390136,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:22:08.214425"
+    },
+    {
+      "session_id": "15328_3644",
+      "event_id": "15328_3644_qq-2033_serp",
+      "timestamp": "2006-03-06 09:27:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: replacement china patterns flatware and crystal replacements ltd, replacement china patterns flatware and crystal replacements ltd, replacement china patterns flatware and crystal replacements ltd (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing multiple results on the SERP does not demonstrate clear intent or successful information foraging. The repetition of similar content indicates that the user might not find any strong scent, making it more appropriate to label this as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0231763169169426,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:22:08.214432"
+    },
+    {
+      "session_id": "15328_3644",
+      "event_id": "15328_3644_qq-2033_cd-6230",
+      "timestamp": "2006-03-06 09:27:08",
+      "action_type": "CLICK",
+      "content": "replacement china patterns flatware and crystal replacements ltd",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result implies that the user was attempting to investigate further, suggesting a stronger intent than what is captured by FollowingScent. The click indicates an attempt to find relevant information, even if the previous actions did not show successful scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0015678346157073,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:22:08.214436"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.103285074234009,
+      "decisions": [
+        {
+          "event_id": "15328_3644_qq-2033",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3644_qq-2033_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3644_qq-2033_cd-6230",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.53363299369812,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have resulted in an analysis error related to invalid control characters, which suggests that the user's intent was not clear and did not lead to successful foraging. Instead of indicating a well-formed query, this suggests a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing multiple results on the SERP does not demonstrate clear intent or successful information foraging. The repetition of similar content indicates that the user might not find any strong scent, making it more appropriate to label this as PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result implies that the user was attempting to investigate further, suggesting a stronger intent than what is captured by FollowingScent. The click indicates an attempt to find relevant information, even if the previous actions did not show successful scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.549678087234497,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0231763169169426
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_258",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:31:58.007638",
+  "events": [
+    {
+      "session_id": "1927_258",
+      "event_id": "1927_258_qq-147",
+      "timestamp": "2006-05-02 00:32:10",
+      "action_type": "QUERY",
+      "content": "dr sherman vision therapy fl",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query with incomplete information (indicated by the ellipsis), which suggests uncertainty or lack of clarity. The presence of an invalid control character indicates that the query might not have been properly formed, leading to potential poor scent rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8497730016708374,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:32:24.616514"
+    },
+    {
+      "session_id": "1927_258",
+      "event_id": "1927_258_qq-147_serp",
+      "timestamp": "2006-05-02 00:32:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: vision therapy, vision therapy directory, home alder wood vision therapy alder wood vision therapy (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this as FollowingScent, but viewing multiple results without any clicks often indicates that the search results did not align with the user's intent. The diverse nature of the viewed results suggests that the user may not have found a strong lead, leading to a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9685754358768464,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:32:24.616521"
+    },
+    {
+      "session_id": "1927_258",
+      "event_id": "1927_258_qq-147_cd-1726",
+      "timestamp": "2006-05-02 00:32:10",
+      "action_type": "CLICK",
+      "content": "optometrists referrals vision therapy pediatric eye care comprehensive vision care visual health vision therapy behavioral optometry developmental public medical communities",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the analyst labeled this as FollowingScent, the click on a broad and vague content description may suggest that the user was exploring multiple options rather than following a specific scent. The nature of the content implies that the user was not confident about their choice, which aligns more closely with ApproachingSource, where the user is investigating potential leads rather than following a definitive scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.976650370657444,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:32:24.616525"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.231641054153442,
+      "decisions": [
+        {
+          "event_id": "1927_258_qq-147",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_258_qq-147_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_258_qq-147_cd-1726",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.617578983306885,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query with incomplete information (indicated by the ellipsis), which suggests uncertainty or lack of clarity. The presence of an invalid control character indicates that the query might not have been properly formed, leading to potential poor scent rather than a clear intent to follow a scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst labeled this as FollowingScent, but viewing multiple results without any clicks often indicates that the search results did not align with the user's intent. The diverse nature of the viewed results suggests that the user may not have found a strong lead, leading to a poor scent rather than a targeted search.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the analyst labeled this as FollowingScent, the click on a broad and vague content description may suggest that the user was exploring multiple options rather than following a specific scent. The nature of the content implies that the user was not confident about their choice, which aligns more closely with ApproachingSource, where the user is investigating potential leads rather than following a definitive scent.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.6181480884552,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.976650370657444
+}

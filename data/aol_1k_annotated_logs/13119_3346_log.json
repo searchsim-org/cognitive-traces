@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3346",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:15:25.162575",
+  "events": [
+    {
+      "session_id": "13119_3346",
+      "event_id": "13119_3346_qq-1840",
+      "timestamp": "2006-05-30 18:43:36",
+      "action_type": "QUERY",
+      "content": "florida home insurance news",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'florida home insurance news...' lacks clarity and specificity, indicating that the user is likely not finding promising scent in the results. The analyst's assignment of 'FollowingScent' suggests a strong intent, which is not supported by the vague query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.990182913094759,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:16:03.160246"
+    },
+    {
+      "session_id": "13119_3346",
+      "event_id": "13119_3346_qq-1840_serp",
+      "timestamp": "2006-05-30 18:43:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: florida insurance council florida insurance council, get a home insurance quote florida family insurance, florida insurance specialists (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results that seem repetitive and may not provide the desired information, indicating a lack of strong scent. Labeling this as 'FollowingScent' implies a targeted search, which does not align with the observation of the viewed SERP results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0178809329867362,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:16:03.160256"
+    },
+    {
+      "session_id": "13119_3346",
+      "event_id": "13119_3346_qq-1840_cd-10283",
+      "timestamp": "2006-05-30 18:43:36",
+      "action_type": "CLICK",
+      "content": "florida insurance council florida insurance council",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result that appears generic and may not meet their needs, suggesting they are exploring sources but not necessarily following a strong scent. 'FollowingScent' implies a clear intent that is not evident in this click behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.013576751947403,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:16:03.160259"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.617910861968994,
+      "decisions": [
+        {
+          "event_id": "13119_3346_qq-1840",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3346_qq-1840_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3346_qq-1840_cd-10283",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.303177833557129,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'florida home insurance news...' lacks clarity and specificity, indicating that the user is likely not finding promising scent in the results. The analyst's assignment of 'FollowingScent' suggests a strong intent, which is not supported by the vague query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results that seem repetitive and may not provide the desired information, indicating a lack of strong scent. Labeling this as 'FollowingScent' implies a targeted search, which does not align with the observation of the viewed SERP results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result that appears generic and may not meet their needs, suggesting they are exploring sources but not necessarily following a strong scent. 'FollowingScent' implies a clear intent that is not evident in this click behavior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.785112857818604,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0178809329867362
+}

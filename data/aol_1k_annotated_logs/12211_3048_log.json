@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3048",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:52:34.251632",
+  "events": [
+    {
+      "session_id": "12211_3048",
+      "event_id": "12211_3048_qq-1577",
+      "timestamp": "2006-05-05 16:33:15",
+      "action_type": "QUERY",
+      "content": "dsl speed test",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'dsl speed test...' lacks explicit targeting or clarity, indicating uncertainty in finding relevant information. The invalid control character error suggests a potential failure to generate a useful search result, leading to no clicks or engagement, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8409572720527649,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:53:14.916579"
+    },
+    {
+      "session_id": "12211_3048",
+      "event_id": "12211_3048_qq-1577_serp",
+      "timestamp": "2006-05-05 16:33:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: random testing com random drug and alcohol testing software and services, ten key test online take the free online ten key tests, mfi net ocala internet dsl wireless dial up filtered access (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results without a strong, focused query suggests they were not satisfied or engaged with the content, indicative of PoorScent. The content viewed appears disjointed and may not reflect a clear intent to pursue valuable information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9932393953204155,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:53:14.916599"
+    },
+    {
+      "session_id": "12211_3048",
+      "event_id": "12211_3048_qq-1577_cd-9428",
+      "timestamp": "2006-05-05 16:33:15",
+      "action_type": "CLICK",
+      "content": "dsl reports home broadband isp reviews news tools and forums",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'dsl reports home broadband isp reviews news tools and forums...' signifies interest in a specific source that offers potential information. Given the context of clicking on a result, this aligns more closely with ApproachingSource rather than FollowingScent, as the user is acting on perceived value from the snippet.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0097878403961658,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:53:14.916606"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.565892219543457,
+      "decisions": [
+        {
+          "event_id": "12211_3048_qq-1577",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3048_qq-1577_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3048_qq-1577_cd-9428",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.3901519775390625,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'dsl speed test...' lacks explicit targeting or clarity, indicating uncertainty in finding relevant information. The invalid control character error suggests a potential failure to generate a useful search result, leading to no clicks or engagement, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing 10 results without a strong, focused query suggests they were not satisfied or engaged with the content, indicative of PoorScent. The content viewed appears disjointed and may not reflect a clear intent to pursue valuable information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'dsl reports home broadband isp reviews news tools and forums...' signifies interest in a specific source that offers potential information. Given the context of clicking on a result, this aligns more closely with ApproachingSource rather than FollowingScent, as the user is acting on perceived value from the snippet.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.3782639503479,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0097878403961658
+}

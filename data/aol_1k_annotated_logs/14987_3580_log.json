@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3580",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:44:26.231662",
+  "events": [
+    {
+      "session_id": "14987_3580",
+      "event_id": "14987_3580_qq-1444",
+      "timestamp": "2006-03-12 14:46:53",
+      "action_type": "QUERY",
+      "content": "fortunoff",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fortunoff...' appears to be either incomplete or improperly formatted, which suggests that the user is not engaging in a well-formed, targeted search. The presence of an invalid control character indicates a lack of clarity in intent, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8636054754257202,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:45:03.756791"
+    },
+    {
+      "session_id": "14987_3580",
+      "event_id": "14987_3580_qq-1444_serp",
+      "timestamp": "2006-03-12 14:46:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: for tun off, for tun off, for tun off (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewing multiple non-distinct results for 'for tun off' suggests a failed attempt to retrieve relevant information, indicating a lack of effective scent. The repeated results imply that the user is not finding promising sources, which is characteristic of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9773187085986137,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:45:03.756816"
+    },
+    {
+      "session_id": "14987_3580",
+      "event_id": "14987_3580_qq-1444_cd-8705",
+      "timestamp": "2006-03-12 14:46:53",
+      "action_type": "CLICK",
+      "content": "for tun off",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'for tun off...' does not indicate a clear intent or successful information retrieval, particularly given the context of previous events suggesting confusion or lack of direction. This could indicate that the user is attempting to salvage their search but is ultimately still leaving the patch due to the failed prior attempts.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9569445490837097,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:45:03.756824"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.269032955169678,
+      "decisions": [
+        {
+          "event_id": "14987_3580_qq-1444",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3580_qq-1444_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3580_qq-1444_cd-8705",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.912051200866699,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fortunoff...' appears to be either incomplete or improperly formatted, which suggests that the user is not engaging in a well-formed, targeted search. The presence of an invalid control character indicates a lack of clarity in intent, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewing multiple non-distinct results for 'for tun off' suggests a failed attempt to retrieve relevant information, indicating a lack of effective scent. The repeated results imply that the user is not finding promising sources, which is characteristic of PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'for tun off...' does not indicate a clear intent or successful information retrieval, particularly given the context of previous events suggesting confusion or lack of direction. This could indicate that the user is attempting to salvage their search but is ultimately still leaving the patch due to the failed prior attempts.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.012588024139404,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9773187085986137
+}

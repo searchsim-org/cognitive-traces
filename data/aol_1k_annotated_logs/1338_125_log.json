@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_125",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:37:21.004635",
+  "events": [
+    {
+      "session_id": "1338_125",
+      "event_id": "1338_125_qq-60",
+      "timestamp": "2006-05-22 13:38:37",
+      "action_type": "QUERY",
+      "content": "freedom boat club",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'freedom boat club...' appears to be incomplete or vague, indicating a lack of strong information scent. A well-formed query would typically not have an ellipsis and should demonstrate clearer intent. The analyst's label of 'FollowingScent' does not align with the ambiguity of the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.924296760559082,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:38:11.530380"
+    },
+    {
+      "session_id": "1338_125",
+      "event_id": "1338_125_qq-60_serp",
+      "timestamp": "2006-05-22 13:38:37",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: freedom boat club, freedom boat club private membership boating club, www freedom boat club va com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, but it is unclear whether they were strongly influenced by the information scent of the titles and snippets. Labeling this as 'FollowingScent' overlooks the possibility that the user might be exploring without a clear target, and 'ApproachingSource' better captures their behavior in evaluating multiple options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.007990227639675,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:38:11.530417"
+    },
+    {
+      "session_id": "1338_125",
+      "event_id": "1338_125_qq-60_cd-1559",
+      "timestamp": "2006-05-22 13:38:37",
+      "action_type": "CLICK",
+      "content": "freedom boat club private membership boating club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'freedom boat club private membership boating club...' suggests that the user found some potential value in the title, but it does not necessarily indicate a strong intent that characterizes 'FollowingScent'. The click could be more accurately labeled as 'ApproachingSource', reflecting that the user is investigating a specific item without definitive intent to fulfill a prior query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.99326426461339,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:38:11.530426"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 30.6180739402771,
+      "decisions": [
+        {
+          "event_id": "1338_125_qq-60",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_125_qq-60_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_125_qq-60_cd-1559",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.492615222930908,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'freedom boat club...' appears to be incomplete or vague, indicating a lack of strong information scent. A well-formed query would typically not have an ellipsis and should demonstrate clearer intent. The analyst's label of 'FollowingScent' does not align with the ambiguity of the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results, but it is unclear whether they were strongly influenced by the information scent of the titles and snippets. Labeling this as 'FollowingScent' overlooks the possibility that the user might be exploring without a clear target, and 'ApproachingSource' better captures their behavior in evaluating multiple options.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'freedom boat club private membership boating club...' suggests that the user found some potential value in the title, but it does not necessarily indicate a strong intent that characterizes 'FollowingScent'. The click could be more accurately labeled as 'ApproachingSource', reflecting that the user is investigating a specific item without definitive intent to fulfill a prior query.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.144048929214478,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.007990227639675
+}

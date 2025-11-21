@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3615",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:05:28.229473",
+  "events": [
+    {
+      "session_id": "14987_3615",
+      "event_id": "14987_3615_qq-17",
+      "timestamp": "2006-04-23 16:35:04",
+      "action_type": "QUERY",
+      "content": "dictionary",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of querying a dictionary indicates an initial search attempt, but the mention of an 'Invalid control character' suggests that the query was not successfully executed or understood. This points to a lack of promising information scent, leading to a poor interaction experience rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8806595087051392,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:05:56.656337"
+    },
+    {
+      "session_id": "14987_3615",
+      "event_id": "14987_3615_qq-17_serp",
+      "timestamp": "2006-04-23 16:35:04",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: computer dictionary of information technology computer dictionary online org, alpha dictionary free english online dictionary grammar word fun, dictionary com meanings and definitions of words at dictionary com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results from a SERP does not indicate that the user found the information relevant or promising. Given that the prior query resulted in an error, the user likely did not find satisfactory results, indicating a poor scent rather than a following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9699860841035843,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:05:56.656359"
+    },
+    {
+      "session_id": "14987_3615",
+      "event_id": "14987_3615_qq-17_cd-5191",
+      "timestamp": "2006-04-23 16:35:04",
+      "action_type": "CLICK",
+      "content": "dictionary by merriam webster america s most trusted online dictionary",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the Merriam-Webster dictionary suggests an attempt to find a reliable source; however, if the earlier query resulted in an error, it indicates that the search process was not fruitful. This scenario aligns more with the characteristics of poor scent, as the user may have been searching for something more specific but settled on this option due to lack of better alternatives.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9833949774503707,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:05:56.656367"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.697829961776733,
+      "decisions": [
+        {
+          "event_id": "14987_3615_qq-17",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3615_qq-17_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3615_qq-17_cd-5191",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.135102987289429,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of querying a dictionary indicates an initial search attempt, but the mention of an 'Invalid control character' suggests that the query was not successfully executed or understood. This points to a lack of promising information scent, leading to a poor interaction experience rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results from a SERP does not indicate that the user found the information relevant or promising. Given that the prior query resulted in an error, the user likely did not find satisfactory results, indicating a poor scent rather than a following scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on the Merriam-Webster dictionary suggests an attempt to find a reliable source; however, if the earlier query resulted in an error, it indicates that the search process was not fruitful. This scenario aligns more with the characteristics of poor scent, as the user may have been searching for something more specific but settled on this option due to lack of better alternatives.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.268909692764282,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9833949774503707
+}

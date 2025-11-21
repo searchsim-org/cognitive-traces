@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3605",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:59:44.450321",
+  "events": [
+    {
+      "session_id": "14987_3605",
+      "event_id": "14987_3605_qq-1991",
+      "timestamp": "2006-04-12 15:35:16",
+      "action_type": "QUERY",
+      "content": "aetna",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'aetna...' lacks specificity and clarity, suggesting the user may not have a clear intent or direction, indicating a poor scent. The presence of an invalid control character further suggests confusion or an error in formulating the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8706409931182861,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:00:16.131767"
+    },
+    {
+      "session_id": "14987_3605",
+      "event_id": "14987_3605_qq-1991_serp",
+      "timestamp": "2006-04-12 15:35:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: a etna plastics, a etna shirt, a etna shirt (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a set of results that include multiple references to 'a etna' suggests that the user is not finding relevant information, as indicated by the presence of irrelevant items. This indicates a lack of effective scent rather than a continued search with intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9642978817224502,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:00:16.131798"
+    },
+    {
+      "session_id": "14987_3605",
+      "event_id": "14987_3605_qq-1991_cd-1913",
+      "timestamp": "2006-04-12 15:35:16",
+      "action_type": "CLICK",
+      "content": "health insurance plans a etna",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'health insurance plans a etna...' indicates the user is attempting to find relevant information. However, given the previous context of poor query formulation and lack of relevant results, this could be seen as an effort to salvage the session rather than a clear following of scent. It suggests a more exploratory approach due to previous failures.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9518554419279098,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:00:16.131807"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.114158868789673,
+      "decisions": [
+        {
+          "event_id": "14987_3605_qq-1991",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3605_qq-1991_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3605_qq-1991_cd-1913",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.6292500495910645,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'aetna...' lacks specificity and clarity, suggesting the user may not have a clear intent or direction, indicating a poor scent. The presence of an invalid control character further suggests confusion or an error in formulating the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a set of results that include multiple references to 'a etna' suggests that the user is not finding relevant information, as indicated by the presence of irrelevant items. This indicates a lack of effective scent rather than a continued search with intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'health insurance plans a etna...' indicates the user is attempting to find relevant information. However, given the previous context of poor query formulation and lack of relevant results, this could be seen as an effort to salvage the session rather than a clear following of scent. It suggests a more exploratory approach due to previous failures.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.583039045333862,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9642978817224502
+}

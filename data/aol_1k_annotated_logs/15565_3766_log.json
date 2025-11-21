@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3766",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:40:28.606540",
+  "events": [
+    {
+      "session_id": "15565_3766",
+      "event_id": "15565_3766_qq-2114",
+      "timestamp": "2006-04-09 22:15:30",
+      "action_type": "QUERY",
+      "content": "insignia",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'insignia...' appears to be malformed or incomplete, indicating that the user may not have a clear intent or could be frustrated with the search. A well-formed query should not contain invalid control characters, suggesting the user is not following a strong scent for relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8704240322113037,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:40:55.912862"
+    },
+    {
+      "session_id": "15565_3766",
+      "event_id": "15565_3766_qq-2114_serp",
+      "timestamp": "2006-04-09 22:15:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: insignia films, www insignia music com, insignia group of companies (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed ten results that likely did not meet their expectations due to the presence of invalid characters in their initial query. The lack of promising results from the SERP indicates a weak information scent, rather than a targeted search effort. Users typically engage with SERP results when they have a reliable scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9317173719406128,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:40:55.912929"
+    },
+    {
+      "session_id": "15565_3766",
+      "event_id": "15565_3766_qq-2114_cd-11937",
+      "timestamp": "2006-04-09 22:15:30",
+      "action_type": "CLICK",
+      "content": "insignia group of companies",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'insignia group of companies' does not reflect a strong following scent, especially given the context of the previous events. The user might have clicked out of frustration or curiosity rather than a strong intent, suggesting a lack of clear information scent leading to this click.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9790598586201668,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:40:55.912943"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.75802206993103,
+      "decisions": [
+        {
+          "event_id": "15565_3766_qq-2114",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3766_qq-2114_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3766_qq-2114_cd-11937",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.7054221630096436,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'insignia...' appears to be malformed or incomplete, indicating that the user may not have a clear intent or could be frustrated with the search. A well-formed query should not contain invalid control characters, suggesting the user is not following a strong scent for relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed ten results that likely did not meet their expectations due to the presence of invalid characters in their initial query. The lack of promising results from the SERP indicates a weak information scent, rather than a targeted search effort. Users typically engage with SERP results when they have a reliable scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'insignia group of companies' does not reflect a strong following scent, especially given the context of the previous events. The user might have clicked out of frustration or curiosity rather than a strong intent, suggesting a lack of clear information scent leading to this click.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.6006441116333,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9790598586201668
+}

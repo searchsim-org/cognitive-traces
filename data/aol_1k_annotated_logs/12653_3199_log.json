@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3199",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:10:42.664125",
+  "events": [
+    {
+      "session_id": "12653_3199",
+      "event_id": "12653_3199_qq-1687",
+      "timestamp": "2006-03-18 12:05:08",
+      "action_type": "QUERY",
+      "content": "rushcopley",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'rushcopley...' indicates a lack of specificity and clarity, which suggests they may not have a well-formed intent. The presence of an invalid control character further supports the idea that the query was poorly constructed, leading to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8802234292030334,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:11:34.875593"
+    },
+    {
+      "session_id": "12653_3199",
+      "event_id": "12653_3199_qq-1687_serp",
+      "timestamp": "2006-03-18 12:05:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: rush copley medical center rush copley medical center, copley motorcars, copley news com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the search results does not necessarily imply a FollowingScent behavior, especially given the ambiguity of the initial query. The list of results may not have provided a strong scent for the user, leading to a potential exploration phase rather than a targeted approach. The repeated mention of 'rush copley medical center' suggests the user is still trying to make sense of the information rather than confirming their intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9764143511652946,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:11:34.875612"
+    },
+    {
+      "session_id": "12653_3199",
+      "event_id": "12653_3199_qq-1687_cd-9736",
+      "timestamp": "2006-03-18 12:05:08",
+      "action_type": "CLICK",
+      "content": "rush copley medical center rush copley medical center",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result based on a vague query does not align with FollowingScent, as it lacks the clear intent typically associated with that label. The user might have clicked out of curiosity or a lack of better options, indicating they are still in the exploratory phase rather than confidently following a scent that leads directly to their information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9985188931226731,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:11:34.875633"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.56495690345764,
+      "decisions": [
+        {
+          "event_id": "12653_3199_qq-1687",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3199_qq-1687_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3199_qq-1687_cd-9736",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 16.97622585296631,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'rushcopley...' indicates a lack of specificity and clarity, which suggests they may not have a well-formed intent. The presence of an invalid control character further supports the idea that the query was poorly constructed, leading to a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing the search results does not necessarily imply a FollowingScent behavior, especially given the ambiguity of the initial query. The list of results may not have provided a strong scent for the user, leading to a potential exploration phase rather than a targeted approach. The repeated mention of 'rush copley medical center' suggests the user is still trying to make sense of the information rather than confirming their intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result based on a vague query does not align with FollowingScent, as it lacks the clear intent typically associated with that label. The user might have clicked out of curiosity or a lack of better options, indicating they are still in the exploratory phase rather than confidently following a scent that leads directly to their information need.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.300879955291748,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9985188931226731
+}

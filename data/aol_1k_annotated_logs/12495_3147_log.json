@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3147",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:24:46.172053",
+  "events": [
+    {
+      "session_id": "12495_3147",
+      "event_id": "12495_3147_qq-1618",
+      "timestamp": "2006-04-28 08:40:05",
+      "action_type": "QUERY",
+      "content": "whippet",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'whippet...' suggests a vague or incomplete search intent, which typically indicates a lack of clarity or focus, leading to poor scent. The use of an ellipsis may imply the user did not have a specific target in mind, thus it does not fit the 'FollowingScent' category.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9675294637680054,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:25:31.227813"
+    },
+    {
+      "session_id": "12495_3147",
+      "event_id": "12495_3147_qq-1618_serp",
+      "timestamp": "2006-04-28 08:40:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: chelsea whippets, summit whippets, ani magi whippets (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed a list of search results, but without evidence of intent to pursue a specific item or clarity in the search query, this should be labeled as 'ApproachingSource'. The titles suggest a general interest rather than a targeted search, reflecting an exploratory rather than focused behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9984391111880541,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:25:31.227820"
+    },
+    {
+      "session_id": "12495_3147",
+      "event_id": "12495_3147_qq-1618_cd-9617",
+      "timestamp": "2006-04-28 08:40:05",
+      "action_type": "CLICK",
+      "content": "www american whippet club net",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www american whippet club net...' indicates some level of interest, but without a more targeted or specific query, this should not be classified as 'FollowingScent'. The action reflects an attempt to investigate further rather than a clear and confident pursuit of a specific goal.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0051831759512424,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:25:31.227822"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.39654517173767,
+      "decisions": [
+        {
+          "event_id": "12495_3147_qq-1618",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3147_qq-1618_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3147_qq-1618_cd-9617",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.34916090965271,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'whippet...' suggests a vague or incomplete search intent, which typically indicates a lack of clarity or focus, leading to poor scent. The use of an ellipsis may imply the user did not have a specific target in mind, thus it does not fit the 'FollowingScent' category.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed a list of search results, but without evidence of intent to pursue a specific item or clarity in the search query, this should be labeled as 'ApproachingSource'. The titles suggest a general interest rather than a targeted search, reflecting an exploratory rather than focused behavior.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www american whippet club net...' indicates some level of interest, but without a more targeted or specific query, this should not be classified as 'FollowingScent'. The action reflects an attempt to investigate further rather than a clear and confident pursuit of a specific goal.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.94063425064087,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0051831759512424
+}

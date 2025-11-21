@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3415",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:47:21.204455",
+  "events": [
+    {
+      "session_id": "14668_3415",
+      "event_id": "14668_3415_qq-1879",
+      "timestamp": "2006-03-06 15:37:01",
+      "action_type": "QUERY",
+      "content": "dkny",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dkny...' indicates a lack of specificity and may not reflect a well-formed, targeted intent. The presence of an invalid control character suggests the user may not have successfully executed their query, leading to poor scent. This implies that the user did not find the search results promising, warranting a label of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9204561352729798,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:48:06.986468"
+    },
+    {
+      "session_id": "14668_3415",
+      "event_id": "14668_3415_qq-1879_serp",
+      "timestamp": "2006-03-06 15:37:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: a dkny update, dkny official site and online store clothing bags shoes donna karan, www dkny com n shop product php view listing group name dresses dept shop category womens (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results without a clear focus implies they struggled to identify relevant content. The presence of long, convoluted titles and the mention of an invalid control character suggest that the user was not finding strong information scent, meriting a PoorScent label instead of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9420769870281219,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:48:06.986501"
+    },
+    {
+      "session_id": "14668_3415",
+      "event_id": "14668_3415_qq-1879_cd-11253",
+      "timestamp": "2006-03-06 15:37:01",
+      "action_type": "CLICK",
+      "content": "dkny official site and online store clothing bags shoes donna karan",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'dkny official site' indicates that the user was drawn to a specific source based on the information available in the snippet, which suggests a degree of intent and interest. However, this could also be interpreted as a last resort due to poor scent from previous results, making ApproachingSource more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0132407307624818,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:48:06.986512"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.53629493713379,
+      "decisions": [
+        {
+          "event_id": "14668_3415_qq-1879",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3415_qq-1879_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3415_qq-1879_cd-11253",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.231126070022583,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dkny...' indicates a lack of specificity and may not reflect a well-formed, targeted intent. The presence of an invalid control character suggests the user may not have successfully executed their query, leading to poor scent. This implies that the user did not find the search results promising, warranting a label of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing 10 results without a clear focus implies they struggled to identify relevant content. The presence of long, convoluted titles and the mention of an invalid control character suggest that the user was not finding strong information scent, meriting a PoorScent label instead of FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the 'dkny official site' indicates that the user was drawn to a specific source based on the information available in the snippet, which suggests a degree of intent and interest. However, this could also be interpreted as a last resort due to poor scent from previous results, making ApproachingSource more appropriate than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.69692325592041,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0132407307624818
+}

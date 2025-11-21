@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2707",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:55:10.424532",
+  "events": [
+    {
+      "session_id": "10900_2707",
+      "event_id": "10900_2707_qq-1460",
+      "timestamp": "2006-05-02 11:13:24",
+      "action_type": "QUERY",
+      "content": "flower girl dresses",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'flower girl dresses' suggests an initial attempt to find information. However, since the analyst noted an analysis error rather than successful interaction, it indicates that the user did not find promising scent from the results. Thus, this query failed to provide satisfactory results, aligning more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8970439672470092,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:55:56.775414"
+    },
+    {
+      "session_id": "10900_2707",
+      "event_id": "10900_2707_qq-1460_serp",
+      "timestamp": "2006-05-02 11:13:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: girl magazine girl power empowering girls worldwide girl com au, cocktail evening dresses by designer odette christiane dresses com dresses com odette christiane, uk fancy dress cheap fancy dress fancy dresses port talbot glam south wales (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed search results, the nature of the results\u2014ranging from various topics to unclear relevance\u2014suggests that they may not have found the information they were looking for. Given that there were multiple diverse entries that potentially did not match their needs, it indicates a lack of success or clarity, leading to a potential abandoning of the search, thus justifying the LeavingPatch label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9476033985614777,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:55:56.775438"
+    },
+    {
+      "session_id": "10900_2707",
+      "event_id": "10900_2707_qq-1460_cd-8726",
+      "timestamp": "2006-05-02 11:13:24",
+      "action_type": "CLICK",
+      "content": "wedding dresses bridesmaid dresses gowns david s bridal",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'wedding dresses bridesmaid dresses gowns david s bridal' indicates an attempt to find relevant information, but it does not suggest a well-formed intent based on the previous interactions. If the user had evaluated the content as relevant, they would not have continued to have issues leading to analysis errors. The click suggests an exploration rather than a targeted search, thus leaning towards PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9852758496999741,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:55:56.775446"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.630643129348755,
+      "decisions": [
+        {
+          "event_id": "10900_2707_qq-1460",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2707_qq-1460_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2707_qq-1460_cd-8726",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.274941921234131,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'flower girl dresses' suggests an initial attempt to find information. However, since the analyst noted an analysis error rather than successful interaction, it indicates that the user did not find promising scent from the results. Thus, this query failed to provide satisfactory results, aligning more with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed search results, the nature of the results\u2014ranging from various topics to unclear relevance\u2014suggests that they may not have found the information they were looking for. Given that there were multiple diverse entries that potentially did not match their needs, it indicates a lack of success or clarity, leading to a potential abandoning of the search, thus justifying the LeavingPatch label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'wedding dresses bridesmaid dresses gowns david s bridal' indicates an attempt to find relevant information, but it does not suggest a well-formed intent based on the previous interactions. If the user had evaluated the content as relevant, they would not have continued to have issues leading to analysis errors. The click suggests an exploration rather than a targeted search, thus leaning towards PoorScent rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.121004104614258,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9852758496999741
+}

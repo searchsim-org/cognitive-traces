@@ -1,0 +1,282 @@
+{
+  "session_id": "15328_3652",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:26:52.489911",
+  "events": [
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-2041",
+      "timestamp": "2006-03-10 22:16:37",
+      "action_type": "QUERY",
+      "content": "franklin county common pleas court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query about the 'franklin county common pleas court' does not seem to provide enough information scent to indicate strong intent, especially given the presence of an analysis error. The user might not have received relevant results, leading to a lack of engagement.",
+      "judge_justification": "The Analyst's labeling of 'FollowingScent' is unreliable due to an explicit analysis error, rendering its confidence score of 0.5 invalid. The Critic's perspective is compelling: the query 'franklin county common pleas court' lacks specificity (e.g., no mention of case type, location disambiguation, or action like 'filing' or 'records'), and the error suggests the system failed to parse meaningful intent. The absence of engagement (e.g., no SERP clicks or reformulations) in subsequent events further supports the Critic's argument that the initial query did not yield promising information scent. The user\u2019s intent appears exploratory rather than targeted, aligning with **PoorScent** (low confidence in the patch).",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.9611732989549637,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054433"
+    },
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-2041_serp",
+      "timestamp": "2006-03-10 22:16:37",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: franklin county court of common pleas, lehigh county court of common pleas, summit county court of common pleas (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any of them suggests that the user did not find promising information scent. The presence of multiple irrelevant results supports the idea that the user's intent was not met, leading to a poor scent experience.",
+      "judge_justification": "The Analyst's 'FollowingScent' label is again invalidated by the analysis error, while the Critic provides a coherent argument: viewing 10 results without any clicks\u2014especially when the results include irrelevant options like 'lehigh county' and 'summit county'\u2014strongly indicates the user did not perceive useful information scent. The SERP failed to disambiguate the user\u2019s need (e.g., no clear match for 'franklin county'), and the lack of interaction suggests dissatisfaction. This aligns with **PoorScent**, as the user is likely scanning a low-value patch without finding actionable cues.",
+      "confidence_score": 0.88,
+      "disagreement_score": 0.9859427452087403,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054449"
+    },
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-2041_cd-11726",
+      "timestamp": "2006-03-10 22:16:37",
+      "action_type": "CLICK",
+      "content": "franklin county court of common pleas",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result without prior engagement or satisfactory results indicates a lack of strong information scent. Given the previous events where the user did not find relevant content, this click may be an exploratory action rather than one driven by clear intent.",
+      "judge_justification": "While the Critic argues for **PoorScent** based on prior context, the *action* here is a **click**\u2014a deliberate engagement with a result titled 'franklin county court of common pleas,' which directly matches the original query. This suggests the user perceived *some* information scent, even if weak, and chose to investigate further. The Critic\u2019s focus on prior poor engagement is relevant but secondary to the click itself, which qualifies as **ApproachingSource** (albeit with low confidence in the source\u2019s value). The Analyst\u2019s error is disregarded, but the Critic\u2019s context reduces confidence slightly.",
+      "confidence_score": 0.7,
+      "disagreement_score": 0.9977044582366943,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054455"
+    },
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-437",
+      "timestamp": "2006-03-10 22:21:27",
+      "action_type": "QUERY",
+      "content": "ebay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ebay' is too broad and lacks specificity, suggesting that the user may not have a well-defined information need, leading to a poor scent experience. The lack of engagement with results further supports this label.",
+      "judge_justification": "The query 'ebay' is excessively broad, lacking any modifiers (e.g., 'buy,' 'sell,' or product category) to indicate targeted intent. The Critic\u2019s argument is robust: such queries typically yield unfocused results, and the user\u2019s failure to engage with the SERP (as seen in the next event) suggests no promising scent was detected. The Analyst\u2019s error-influenced 'FollowingScent' label is unsupported by the query\u2019s vagueness. This clearly aligns with **PoorScent**, as the user\u2019s information need is undefined, and the patch (ebay\u2019s homepage or generic results) offers no clear path forward.",
+      "confidence_score": 0.9,
+      "disagreement_score": 1.0028175726532935,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054461"
+    },
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-437_serp",
+      "timestamp": "2006-03-10 22:21:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: electronics cars fashion collectibles coupons and more ebay, items for sale by collector crazy king ebay, auction sniper ebay bidding tools go of bid (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to the previous event, the diverse topics in the results suggest that the user's query did not lead to a focused information scent. The lack of clicks implies dissatisfaction with the results, reinforcing the label of PoorScent.",
+      "judge_justification": "The SERP for 'ebay' displays highly diverse results (e.g., 'auction sniper,' 'collector crazy king'), none of which suggest a focused information scent. The user\u2019s inaction (no clicks) reinforces the Critic\u2019s claim of **PoorScent**: the patch is overwhelming and lacks relevance to a specific need. The Analyst\u2019s error renders its label unreliable. The Critic\u2019s confidence is justified by the mismatch between the broad query and the scattered results, indicating the user is likely dissatisfied or lost in the information space.",
+      "confidence_score": 0.92,
+      "disagreement_score": 0.9989001974463463,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054465"
+    },
+    {
+      "session_id": "15328_3652",
+      "event_id": "15328_3652_qq-437_cd-367",
+      "timestamp": "2006-03-10 22:21:27",
+      "action_type": "CLICK",
+      "content": "electronics cars fashion collectibles coupons and more ebay",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a broad result again indicates that the user is likely searching through irrelevant options rather than following a strong information scent. Given the previous context of poor engagement, this should be labeled as PoorScent.",
+      "judge_justification": "Despite the Critic\u2019s argument for **PoorScent**, the user\u2019s click on 'electronics cars fashion collectibles coupons and more ebay'\u2014while broad\u2014represents an attempt to engage with the most general result available. This action, though not high-scent, qualifies as **ApproachingSource** because the user is explicitly investigating a potential source (ebay\u2019s homepage or category hub). The Critic\u2019s focus on prior poor engagement is valid but secondary to the click itself, which demonstrates minimal but present information scent. The Analyst\u2019s error is ignored. Low confidence reflects the weak scent, but the label is technically correct.",
+      "confidence_score": 0.65,
+      "disagreement_score": 0.9834222108125686,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:27:40.054471"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.714200019836426,
+      "decisions": [
+        {
+          "event_id": "15328_3652_qq-2041",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3652_qq-2041_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3652_qq-2041_cd-11726",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3652_qq-437",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3652_qq-437_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3652_qq-437_cd-367",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.866119146347046,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query about the 'franklin county common pleas court' does not seem to provide enough information scent to indicate strong intent, especially given the presence of an analysis error. The user might not have received relevant results, leading to a lack of engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without engaging with any of them suggests that the user did not find promising information scent. The presence of multiple irrelevant results supports the idea that the user's intent was not met, leading to a poor scent experience.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result without prior engagement or satisfactory results indicates a lack of strong information scent. Given the previous events where the user did not find relevant content, this click may be an exploratory action rather than one driven by clear intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "4",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ebay' is too broad and lacks specificity, suggesting that the user may not have a well-defined information need, leading to a poor scent experience. The lack of engagement with results further supports this label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "5",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to the previous event, the diverse topics in the results suggest that the user's query did not lead to a focused information scent. The lack of clicks implies dissatisfaction with the results, reinforcing the label of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "6",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a broad result again indicates that the user is likely searching through irrelevant options rather than following a strong information scent. Given the previous context of poor engagement, this should be labeled as PoorScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.731337070465088,
+      "decisions": [
+        {
+          "event_id": "15328_3652_qq-2041",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's labeling of 'FollowingScent' is unreliable due to an explicit analysis error, rendering its confidence score of 0.5 invalid. The Critic's perspective is compelling: the query 'franklin county common pleas court' lacks specificity (e.g., no mention of case type, location disambiguation, or action like 'filing' or 'records'), and the error suggests the system failed to parse meaningful intent. The absence of engagement (e.g., no SERP clicks or reformulations) in subsequent events further supports the Critic's argument that the initial query did not yield promising information scent. The user\u2019s intent appears exploratory rather than targeted, aligning with **PoorScent** (low confidence in the patch).",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "15328_3652_qq-2041_serp",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's 'FollowingScent' label is again invalidated by the analysis error, while the Critic provides a coherent argument: viewing 10 results without any clicks\u2014especially when the results include irrelevant options like 'lehigh county' and 'summit county'\u2014strongly indicates the user did not perceive useful information scent. The SERP failed to disambiguate the user\u2019s need (e.g., no clear match for 'franklin county'), and the lack of interaction suggests dissatisfaction. This aligns with **PoorScent**, as the user is likely scanning a low-value patch without finding actionable cues.",
+          "confidence": 0.88,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "15328_3652_qq-2041_cd-11726",
+          "final_label": "ApproachingSource",
+          "justification": "While the Critic argues for **PoorScent** based on prior context, the *action* here is a **click**\u2014a deliberate engagement with a result titled 'franklin county court of common pleas,' which directly matches the original query. This suggests the user perceived *some* information scent, even if weak, and chose to investigate further. The Critic\u2019s focus on prior poor engagement is relevant but secondary to the click itself, which qualifies as **ApproachingSource** (albeit with low confidence in the source\u2019s value). The Analyst\u2019s error is disregarded, but the Critic\u2019s context reduces confidence slightly.",
+          "confidence": 0.7,
+          "flag_for_review": true,
+          "disagreement_score": 0.45
+        },
+        {
+          "event_id": "15328_3652_qq-437",
+          "final_label": "PoorScent",
+          "justification": "The query 'ebay' is excessively broad, lacking any modifiers (e.g., 'buy,' 'sell,' or product category) to indicate targeted intent. The Critic\u2019s argument is robust: such queries typically yield unfocused results, and the user\u2019s failure to engage with the SERP (as seen in the next event) suggests no promising scent was detected. The Analyst\u2019s error-influenced 'FollowingScent' label is unsupported by the query\u2019s vagueness. This clearly aligns with **PoorScent**, as the user\u2019s information need is undefined, and the patch (ebay\u2019s homepage or generic results) offers no clear path forward.",
+          "confidence": 0.9,
+          "flag_for_review": false,
+          "disagreement_score": 0.4
+        },
+        {
+          "event_id": "15328_3652_qq-437_serp",
+          "final_label": "PoorScent",
+          "justification": "The SERP for 'ebay' displays highly diverse results (e.g., 'auction sniper,' 'collector crazy king'), none of which suggest a focused information scent. The user\u2019s inaction (no clicks) reinforces the Critic\u2019s claim of **PoorScent**: the patch is overwhelming and lacks relevance to a specific need. The Analyst\u2019s error renders its label unreliable. The Critic\u2019s confidence is justified by the mismatch between the broad query and the scattered results, indicating the user is likely dissatisfied or lost in the information space.",
+          "confidence": 0.92,
+          "flag_for_review": false,
+          "disagreement_score": 0.38
+        },
+        {
+          "event_id": "15328_3652_qq-437_cd-367",
+          "final_label": "ApproachingSource",
+          "justification": "Despite the Critic\u2019s argument for **PoorScent**, the user\u2019s click on 'electronics cars fashion collectibles coupons and more ebay'\u2014while broad\u2014represents an attempt to engage with the most general result available. This action, though not high-scent, qualifies as **ApproachingSource** because the user is explicitly investigating a potential source (ebay\u2019s homepage or category hub). The Critic\u2019s focus on prior poor engagement is valid but secondary to the click itself, which demonstrates minimal but present information scent. The Analyst\u2019s error is ignored. Low confidence reflects the weak scent, but the label is technically correct.",
+          "confidence": 0.65,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 6,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0028175726532935
+}

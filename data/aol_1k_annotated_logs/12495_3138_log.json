@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3138",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:16:19.290443",
+  "events": [
+    {
+      "session_id": "12495_3138",
+      "event_id": "12495_3138_qq-1645",
+      "timestamp": "2006-04-18 11:04:33",
+      "action_type": "QUERY",
+      "content": "ballytotal fitness",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ballytotal fitness...' lacks clarity and specificity, which suggests the user is not confident in the information scent. An invalid control character indicates potential confusion or error in the input, pointing to a lack of effective scent for further exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8610861420631408,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:17:06.629607"
+    },
+    {
+      "session_id": "12495_3138",
+      "event_id": "12495_3138_qq-1645_serp",
+      "timestamp": "2006-04-18 11:04:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www ball y fitness com, ball y com official online store ball y, exercise ball medicine ball fitness ball free exercises balls thera gear com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, indicating dissatisfaction with the presented options. This suggests they may not have found any promising scent, leading to a potential abandonment of the search, rather than an ongoing search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9848628029227257,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:17:06.629626"
+    },
+    {
+      "session_id": "12495_3138",
+      "event_id": "12495_3138_qq-1645_cd-7809",
+      "timestamp": "2006-04-18 11:04:33",
+      "action_type": "CLICK",
+      "content": "www ball y fitness com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'www ball y fitness com...' after viewing results, which indicates they found this result to have sufficient information scent, leading them to investigate further. However, without proper context or clarity in the previous events, this does not confirm a well-formed intent, thus suggesting a transition phase rather than pure following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.014677384495735,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:17:06.629632"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.47299098968506,
+      "decisions": [
+        {
+          "event_id": "12495_3138_qq-1645",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3138_qq-1645_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3138_qq-1645_cd-7809",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.658138036727905,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ballytotal fitness...' lacks clarity and specificity, which suggests the user is not confident in the information scent. An invalid control character indicates potential confusion or error in the input, pointing to a lack of effective scent for further exploration.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not click on any, indicating dissatisfaction with the presented options. This suggests they may not have found any promising scent, leading to a potential abandonment of the search, rather than an ongoing search intent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'www ball y fitness com...' after viewing results, which indicates they found this result to have sufficient information scent, leading them to investigate further. However, without proper context or clarity in the previous events, this does not confirm a well-formed intent, thus suggesting a transition phase rather than pure following scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.816205978393555,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.014677384495735
+}

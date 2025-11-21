@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2485",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:41:29.165872",
+  "events": [
+    {
+      "session_id": "10215_2485",
+      "event_id": "10215_2485_qq-1307",
+      "timestamp": "2006-03-26 18:56:08",
+      "action_type": "QUERY",
+      "content": "wife swap tv show",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'wife swap tv show...' lacks specificity and clarity, suggesting that the user may not have a well-formed intent. This indicates the user is possibly experiencing poor scent, as the query does not provide strong direction or clear information needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9440966844558716,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:50.433560"
+    },
+    {
+      "session_id": "10215_2485",
+      "event_id": "10215_2485_qq-1307_serp",
+      "timestamp": "2006-03-26 18:56:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: turtle wife com, tv tv tv tv, tv talk shows com nbsp this website is for sale nbsp tv talk shows resources and information (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that do not appear relevant or actionable indicates that the user is struggling to find useful information. The content viewed does not suggest a strong scent, but rather reinforces a failure to find satisfactory results, which aligns with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0028265312314033,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:50.433576"
+    },
+    {
+      "session_id": "10215_2485",
+      "event_id": "10215_2485_qq-1307_cd-251",
+      "timestamp": "2006-03-26 18:56:08",
+      "action_type": "CLICK",
+      "content": "tv com free full episodes clips show info and tv listings guide",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'tv com free full episodes...' indicates an attempt to pursue a specific source that seems potentially useful. This aligns more with the ApproachingSource label, as the user is making a choice based on perceived value from the snippet rather than continuing in a well-formed search path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9804506897926331,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:41:50.433580"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.323823928833008,
+      "decisions": [
+        {
+          "event_id": "10215_2485_qq-1307",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2485_qq-1307_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2485_qq-1307_cd-251",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 3.9802560806274414,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'wife swap tv show...' lacks specificity and clarity, suggesting that the user may not have a well-formed intent. This indicates the user is possibly experiencing poor scent, as the query does not provide strong direction or clear information needs.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results that do not appear relevant or actionable indicates that the user is struggling to find useful information. The content viewed does not suggest a strong scent, but rather reinforces a failure to find satisfactory results, which aligns with PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'tv com free full episodes...' indicates an attempt to pursue a specific source that seems potentially useful. This aligns more with the ApproachingSource label, as the user is making a choice based on perceived value from the snippet rather than continuing in a well-formed search path.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.717457056045532,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0028265312314033
+}

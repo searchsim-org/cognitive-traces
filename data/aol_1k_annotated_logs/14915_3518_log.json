@@ -1,0 +1,159 @@
+{
+  "session_id": "14915_3518",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:00:19.939808",
+  "events": [
+    {
+      "session_id": "14915_3518",
+      "event_id": "14915_3518_qq-1967",
+      "timestamp": "2006-03-21 19:40:39",
+      "action_type": "QUERY",
+      "content": "tiava",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'tiava...' appears to be incomplete or malformed, indicating low confidence in the search's effectiveness. The presence of an invalid control character further suggests that the user may not have a clear intent, thus aligning better with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8879401445388794,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:00:55.625097"
+    },
+    {
+      "session_id": "14915_3518",
+      "event_id": "14915_3518_qq-1967_serp",
+      "timestamp": "2006-03-21 19:40:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ti avas girls com nbsp ti avas girls resources and information, free porno movies ti ava com, free porno movies ti ava com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's engagement with SERP results that include 'ti avas girls com' and 'free porno movies ti ava com' suggests they are not finding relevant or acceptable information. This lack of meaningful content indicates a poor information scent, therefore the PoorScent label is more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.007448449730873,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:00:55.625115"
+    },
+    {
+      "session_id": "14915_3518",
+      "event_id": "14915_3518_qq-1967_cd-7234",
+      "timestamp": "2006-03-21 19:40:39",
+      "action_type": "CLICK",
+      "content": "free porno movies ti ava com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'free porno movies ti ava com' does not reflect a clear intent but rather a desperate attempt to find relevant content amid poor results. Given the context of the previous events, this action is likely a result of frustration rather than a successful foraging effort, justifying the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 1.0159168809652328,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:00:55.625122"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.610163927078247,
+      "decisions": [
+        {
+          "event_id": "14915_3518_qq-1967",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3518_qq-1967_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3518_qq-1967_cd-7234",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.525954008102417,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'tiava...' appears to be incomplete or malformed, indicating low confidence in the search's effectiveness. The presence of an invalid control character further suggests that the user may not have a clear intent, thus aligning better with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's engagement with SERP results that include 'ti avas girls com' and 'free porno movies ti ava com' suggests they are not finding relevant or acceptable information. This lack of meaningful content indicates a poor information scent, therefore the PoorScent label is more appropriate than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'free porno movies ti ava com' does not reflect a clear intent but rather a desperate attempt to find relevant content amid poor results. Given the context of the previous events, this action is likely a result of frustration rather than a successful foraging effort, justifying the PoorScent label.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.298489093780518,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0159168809652328
+}

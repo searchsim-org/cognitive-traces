@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3274",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:21:28.670663",
+  "events": [
+    {
+      "session_id": "13112_3274",
+      "event_id": "13112_3274_qq-1755",
+      "timestamp": "2006-05-11 11:15:43",
+      "action_type": "QUERY",
+      "content": "microsoft wireless optical mouse software",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'microsoft wireless optical mouse software' lacks specificity regarding the user's intent, making it unclear if they are following a strong scent. The presence of an error suggests that the query did not yield relevant results, indicating poor scent rather than an active search. This points to a lack of a well-formed, targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9836108982563019,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:22:31.915627"
+    },
+    {
+      "session_id": "13112_3274",
+      "event_id": "13112_3274_qq-1755_serp",
+      "timestamp": "2006-05-11 11:15:43",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: activex microsoft com, update microsoft com, go microsoft com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without following up on any indicates that the user is likely not finding promising information and may be feeling overwhelmed or unsatisfied with the options presented. This is more indicative of leaving the patch rather than actively following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.014538049697876,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:22:31.915656"
+    },
+    {
+      "session_id": "13112_3274",
+      "event_id": "13112_3274_qq-1755_cd-1057",
+      "timestamp": "2006-05-11 11:15:43",
+      "action_type": "CLICK",
+      "content": "www microsoft com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www microsoft com' suggests the user is attempting to investigate further based on the information scent from the SERP. However, if the previous results did not yield satisfactory information, this action could more accurately be labeled as 'ApproachingSource', as the click is a response to perceived potential rather than a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.995420677959919,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:22:31.915665"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.840525150299072,
+      "decisions": [
+        {
+          "event_id": "13112_3274_qq-1755",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3274_qq-1755_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3274_qq-1755_cd-1057",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.431571006774902,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'microsoft wireless optical mouse software' lacks specificity regarding the user's intent, making it unclear if they are following a strong scent. The presence of an error suggests that the query did not yield relevant results, indicating poor scent rather than an active search. This points to a lack of a well-formed, targeted query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without following up on any indicates that the user is likely not finding promising information and may be feeling overwhelmed or unsatisfied with the options presented. This is more indicative of leaving the patch rather than actively following a scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www microsoft com' suggests the user is attempting to investigate further based on the information scent from the SERP. However, if the previous results did not yield satisfactory information, this action could more accurately be labeled as 'ApproachingSource', as the click is a response to perceived potential rather than a strong scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 33.6044807434082,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.014538049697876
+}

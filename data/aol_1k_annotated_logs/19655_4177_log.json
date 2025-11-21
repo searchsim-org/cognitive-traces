@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4177",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:46:45.595892",
+  "events": [
+    {
+      "session_id": "19655_4177",
+      "event_id": "19655_4177_qq-2468",
+      "timestamp": "2006-05-20 16:06:55",
+      "action_type": "QUERY",
+      "content": "poplar forest",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'poplar forest...' appears to be incomplete or improperly formed, suggesting a lack of clarity in the user's intent. The presence of an analysis error indicates that the query may not have been effective in generating relevant results, which aligns with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9248694241046905,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:47:11.384835"
+    },
+    {
+      "session_id": "19655_4177",
+      "event_id": "19655_4177_qq-2468_serp",
+      "timestamp": "2006-05-20 16:06:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: thomas jefferson s poplar forest, hybrid poplar, poplar springs hospital in va poplar springs com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but the context of the query indicates a potential mismatch between the user's intent and the results displayed. If the query was unclear or poorly formulated, viewing the results would not demonstrate FollowingScent, but rather an exploration of a patch that does not fulfill their information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9793261289596558,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:47:11.384841"
+    },
+    {
+      "session_id": "19655_4177",
+      "event_id": "19655_4177_qq-2468_cd-14285",
+      "timestamp": "2006-05-20 16:06:55",
+      "action_type": "CLICK",
+      "content": "thomas jefferson s poplar forest",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result suggests an attempt to engage further, but given the prior context of the query and the analysis error, it could indicate that the user is still struggling to find effective information. If the click was made out of frustration or lack of better options, this aligns more closely with LeavingPatch, indicating a potential abandonment of their original search goal.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8982591152191162,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:47:11.384843"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.384491920471191,
+      "decisions": [
+        {
+          "event_id": "19655_4177_qq-2468",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4177_qq-2468_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4177_qq-2468_cd-14285",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.675148010253906,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'poplar forest...' appears to be incomplete or improperly formed, suggesting a lack of clarity in the user's intent. The presence of an analysis error indicates that the query may not have been effective in generating relevant results, which aligns with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results but the context of the query indicates a potential mismatch between the user's intent and the results displayed. If the query was unclear or poorly formulated, viewing the results would not demonstrate FollowingScent, but rather an exploration of a patch that does not fulfill their information need.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result suggests an attempt to engage further, but given the prior context of the query and the analysis error, it could indicate that the user is still struggling to find effective information. If the click was made out of frustration or lack of better options, this aligns more closely with LeavingPatch, indicating a potential abandonment of their original search goal.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.605702877044678,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9793261289596558
+}

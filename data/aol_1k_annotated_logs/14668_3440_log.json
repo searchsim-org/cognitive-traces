@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3440",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:06:14.227553",
+  "events": [
+    {
+      "session_id": "14668_3440",
+      "event_id": "14668_3440_qq-1906",
+      "timestamp": "2006-04-01 23:34:30",
+      "action_type": "QUERY",
+      "content": "better business bureau",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'better business bureau...' suggests that the user is looking for specific information but does not imply a strong intent. The ellipsis indicates uncertainty or incompleteness, which could signal an inadequate scent of information leading to a lack of clicks. Thus, this should be labeled as PoorScent.",
+      "judge_justification": "The Analyst's perspective is invalidated by a parsing error, leaving the Critic's reasoning as the primary input. The Critic's argument is compelling: the query 'better business bureau...' is incomplete (indicated by the ellipsis), suggesting the user lacks a well-formed intent or is dissatisfied with the information scent of their current path. The absence of a clear, targeted query (e.g., 'Better Business Bureau complaints for [company]') aligns with **PoorScent**, as it implies the user is not finding promising cues to continue foraging effectively. The Critic's high confidence (0.85) further supports this label, as the query structure itself signals uncertainty or frustration, a hallmark of weak information scent.",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.9593340516090393,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:44.180883"
+    },
+    {
+      "session_id": "14668_3440",
+      "event_id": "14668_3440_qq-1906_serp",
+      "timestamp": "2006-04-01 23:34:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: better business bureau loi pine l, bbb start with trust better business bureau, bbb start with trust better business bureau (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the titles provided do not seem particularly compelling or relevant, indicating that they may not have found a strong scent. If the user had a strong intent, they would likely have engaged more deeply with the results. This suggests a potential abandonment of the search path, aligning more with LeavingPatch than FollowingScent.",
+      "judge_justification": "The Analyst's error leaves the Critic's **LeavingPatch** suggestion as the only valid input, but this label is not fully justified by the evidence. While the Critic notes the lack of compelling results (e.g., repetitive titles like 'bbb start with trust'), the user *did* view all 10 results, which suggests active evaluation rather than immediate abandonment. However, the absence of a click or further interaction (e.g., query reformulation) indicates the SERP failed to provide a strong information scent. This aligns better with **PoorScent** than **LeavingPatch**, as the session did not yet end (no explicit abandonment), but the user\u2019s passive viewing implies dissatisfaction with the available options. The Critic\u2019s reasoning about weak scent is valid, but the label requires adjustment to reflect the user\u2019s ongoing (though unproductive) foraging.",
+      "confidence_score": 0.75,
+      "disagreement_score": 0.9966293703764677,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:44.180919"
+    },
+    {
+      "session_id": "14668_3440",
+      "event_id": "14668_3440_qq-1906_cd-7756",
+      "timestamp": "2006-04-01 23:34:30",
+      "action_type": "CLICK",
+      "content": "bbb start with trust better business bureau",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'bbb start with trust better business bureau...' indicates that the user is investigating a specific source due to perceived value in the title. This aligns more with ApproachingSource, as the user is taking a step to explore a result rather than simply following a scent with a clear intention.",
+      "judge_justification": "The Critic\u2019s label (**ApproachingSource**) is the correct choice here. The user\u2019s click on 'bbb start with trust better business bureau...' demonstrates an active decision to investigate a specific result, driven by perceived relevance in the title. This aligns with the definition of **ApproachingSource**: the user is moving closer to a potential information source based on its scent. The Analyst\u2019s **FollowingScent** suggestion is less precise, as it implies a broader, ongoing search rather than a targeted investigation of a single result. The Critic\u2019s confidence (0.75) is justified by the action\u2019s clarity (click = intent to explore), though the title\u2019s repetition in the SERP (noted earlier) slightly tempers the confidence. No flag for review is needed, as the Critic\u2019s logic is sound and the action is unambiguous.",
+      "confidence_score": 0.8,
+      "disagreement_score": 0.9604349046945572,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:44.180931"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.01692509651184,
+      "decisions": [
+        {
+          "event_id": "14668_3440_qq-1906",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3440_qq-1906_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3440_qq-1906_cd-7756",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.74557638168335,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'better business bureau...' suggests that the user is looking for specific information but does not imply a strong intent. The ellipsis indicates uncertainty or incompleteness, which could signal an inadequate scent of information leading to a lack of clicks. Thus, this should be labeled as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results, the titles provided do not seem particularly compelling or relevant, indicating that they may not have found a strong scent. If the user had a strong intent, they would likely have engaged more deeply with the results. This suggests a potential abandonment of the search path, aligning more with LeavingPatch than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'bbb start with trust better business bureau...' indicates that the user is investigating a specific source due to perceived value in the title. This aligns more with ApproachingSource, as the user is taking a step to explore a result rather than simply following a scent with a clear intention.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.953033924102783,
+      "decisions": [
+        {
+          "event_id": "14668_3440_qq-1906",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's perspective is invalidated by a parsing error, leaving the Critic's reasoning as the primary input. The Critic's argument is compelling: the query 'better business bureau...' is incomplete (indicated by the ellipsis), suggesting the user lacks a well-formed intent or is dissatisfied with the information scent of their current path. The absence of a clear, targeted query (e.g., 'Better Business Bureau complaints for [company]') aligns with **PoorScent**, as it implies the user is not finding promising cues to continue foraging effectively. The Critic's high confidence (0.85) further supports this label, as the query structure itself signals uncertainty or frustration, a hallmark of weak information scent.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.0
+        },
+        {
+          "event_id": "14668_3440_qq-1906_serp",
+          "final_label": "PoorScent",
+          "justification": "The Analyst's error leaves the Critic's **LeavingPatch** suggestion as the only valid input, but this label is not fully justified by the evidence. While the Critic notes the lack of compelling results (e.g., repetitive titles like 'bbb start with trust'), the user *did* view all 10 results, which suggests active evaluation rather than immediate abandonment. However, the absence of a click or further interaction (e.g., query reformulation) indicates the SERP failed to provide a strong information scent. This aligns better with **PoorScent** than **LeavingPatch**, as the session did not yet end (no explicit abandonment), but the user\u2019s passive viewing implies dissatisfaction with the available options. The Critic\u2019s reasoning about weak scent is valid, but the label requires adjustment to reflect the user\u2019s ongoing (though unproductive) foraging.",
+          "confidence": 0.75,
+          "flag_for_review": true,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "14668_3440_qq-1906_cd-7756",
+          "final_label": "ApproachingSource",
+          "justification": "The Critic\u2019s label (**ApproachingSource**) is the correct choice here. The user\u2019s click on 'bbb start with trust better business bureau...' demonstrates an active decision to investigate a specific result, driven by perceived relevance in the title. This aligns with the definition of **ApproachingSource**: the user is moving closer to a potential information source based on its scent. The Analyst\u2019s **FollowingScent** suggestion is less precise, as it implies a broader, ongoing search rather than a targeted investigation of a single result. The Critic\u2019s confidence (0.75) is justified by the action\u2019s clarity (click = intent to explore), though the title\u2019s repetition in the SERP (noted earlier) slightly tempers the confidence. No flag for review is needed, as the Critic\u2019s logic is sound and the action is unambiguous.",
+          "confidence": 0.8,
+          "flag_for_review": false,
+          "disagreement_score": 0.25
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9966293703764677
+}

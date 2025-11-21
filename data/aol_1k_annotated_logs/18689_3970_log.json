@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3970",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:18:08.688902",
+  "events": [
+    {
+      "session_id": "18689_3970",
+      "event_id": "18689_3970_qq-2234",
+      "timestamp": "2006-03-11 10:49:53",
+      "action_type": "QUERY",
+      "content": "sarasota herald tribune",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'sarasota herald tribune...' lacks specificity and does not elicit any clicks or engagement, indicating that the initial search did not yield promising results. The presence of an invalid control character suggests confusion or error in the query formulation, leading to poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9283860385417938,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:34.291546"
+    },
+    {
+      "session_id": "18689_3970",
+      "event_id": "18689_3970_qq-2234_serp",
+      "timestamp": "2006-03-11 10:49:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www sarasota mercedes center com, sarasota modern contemporary furniture store, www abundant life sarasota com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not engage with any of them effectively. This indicates a lack of satisfying information scent, leading to a potential abandonment of the search effort. Labeling this as FollowingScent does not account for the absence of interaction with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9977753449231386,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:34.291558"
+    },
+    {
+      "session_id": "18689_3970",
+      "event_id": "18689_3970_qq-2234_cd-13214",
+      "timestamp": "2006-03-11 10:49:53",
+      "action_type": "CLICK",
+      "content": "www welcome to sarasota com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www welcome to sarasota com...' suggests that the user identified this result as a potential source of valuable information, aligning more with ApproachingSource than FollowingScent. However, without prior effective engagement, it is questionable whether this was a strong scent, thus supporting a label of PoorScent or LeavingPatch as well.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0210035383701324,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:34.291561"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.36219310760498,
+      "decisions": [
+        {
+          "event_id": "18689_3970_qq-2234",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3970_qq-2234_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3970_qq-2234_cd-13214",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.6259541511535645,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'sarasota herald tribune...' lacks specificity and does not elicit any clicks or engagement, indicating that the initial search did not yield promising results. The presence of an invalid control character suggests confusion or error in the query formulation, leading to poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not engage with any of them effectively. This indicates a lack of satisfying information scent, leading to a potential abandonment of the search effort. Labeling this as FollowingScent does not account for the absence of interaction with the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www welcome to sarasota com...' suggests that the user identified this result as a potential source of valuable information, aligning more with ApproachingSource than FollowingScent. However, without prior effective engagement, it is questionable whether this was a strong scent, thus supporting a label of PoorScent or LeavingPatch as well.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.332972049713135,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0210035383701324
+}

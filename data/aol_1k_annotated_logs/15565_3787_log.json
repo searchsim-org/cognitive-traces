@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3787",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:53:07.624837",
+  "events": [
+    {
+      "session_id": "15565_3787",
+      "event_id": "15565_3787_qq-2139",
+      "timestamp": "2006-05-05 16:20:10",
+      "action_type": "QUERY",
+      "content": "xenical",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query of 'xenical...' without any further context or clicks suggests that the user may not have found relevant information from the results, indicating a lack of promising scent. The label 'FollowingScent' implies a clear intent and expectation of finding value, which is not evident here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9965586885809898,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:53:34.769584"
+    },
+    {
+      "session_id": "15565_3787",
+      "event_id": "15565_3787_qq-2139_serp",
+      "timestamp": "2006-05-05 16:20:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: xen ical, roche xen ical, roche xen ical (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, which points to a lack of compelling information scent. The viewing behavior alone does not indicate a strong intent or satisfaction with the search results, making 'FollowingScent' an inappropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.994062251970172,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:53:34.769591"
+    },
+    {
+      "session_id": "15565_3787",
+      "event_id": "15565_3787_qq-2139_cd-11984",
+      "timestamp": "2006-05-05 16:20:10",
+      "action_type": "CLICK",
+      "content": "xen ical",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result labeled as 'xen ical...' does not reflect a positive scent if it follows a pattern of unsuccessful engagement (as implied by previous events). The click may have happened out of curiosity or necessity rather than a clear direction, which challenges the assumption of 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0194960966706277,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:53:34.769594"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.709731817245483,
+      "decisions": [
+        {
+          "event_id": "15565_3787_qq-2139",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3787_qq-2139_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3787_qq-2139_cd-11984",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.186440944671631,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query of 'xenical...' without any further context or clicks suggests that the user may not have found relevant information from the results, indicating a lack of promising scent. The label 'FollowingScent' implies a clear intent and expectation of finding value, which is not evident here.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but did not click on any, which points to a lack of compelling information scent. The viewing behavior alone does not indicate a strong intent or satisfaction with the search results, making 'FollowingScent' an inappropriate label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result labeled as 'xen ical...' does not reflect a positive scent if it follows a pattern of unsuccessful engagement (as implied by previous events). The click may have happened out of curiosity or necessity rather than a clear direction, which challenges the assumption of 'FollowingScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.998753070831299,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0194960966706277
+}

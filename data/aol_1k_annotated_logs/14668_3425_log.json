@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3425",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:54:25.859468",
+  "events": [
+    {
+      "session_id": "14668_3425",
+      "event_id": "14668_3425_qq-1890",
+      "timestamp": "2006-03-16 09:07:59",
+      "action_type": "QUERY",
+      "content": "friends of animals",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'friends of animals...' does not indicate strong intent or a well-formed search; it appears vague and lacks specificity, suggesting the user might not have found a promising direction in their search. This aligns more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0001408003270627,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:55:10.721655"
+    },
+    {
+      "session_id": "14668_3425",
+      "event_id": "14668_3425_qq-1890_serp",
+      "timestamp": "2006-03-16 09:07:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: friends of animals animal rights veganism, www friends of animals net, friends of long beach animals (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without a clear engagement (clicking) suggests that the user is still seeking relevant information but may be dissatisfied with the options presented. This indicates a potential LeavingPatch scenario as they are not finding a satisfactory path to follow based on their initial interests.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9849377751350403,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:55:10.721681"
+    },
+    {
+      "session_id": "14668_3425",
+      "event_id": "14668_3425_qq-1890_cd-11275",
+      "timestamp": "2006-03-16 09:07:59",
+      "action_type": "CLICK",
+      "content": "friends of animals animal rights veganism",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result suggests the user was drawn to a specific source based on the title/snippet, which indicates they perceived some value in that result. Labeling this as FollowingScent assumes a more directed intent than what is supported by the user's previous vague queries.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0034952573478222,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:55:10.721691"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.880202054977417,
+      "decisions": [
+        {
+          "event_id": "14668_3425_qq-1890",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3425_qq-1890_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3425_qq-1890_cd-11275",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.984385013580322,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'friends of animals...' does not indicate strong intent or a well-formed search; it appears vague and lacks specificity, suggesting the user might not have found a promising direction in their search. This aligns more with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without a clear engagement (clicking) suggests that the user is still seeking relevant information but may be dissatisfied with the options presented. This indicates a potential LeavingPatch scenario as they are not finding a satisfactory path to follow based on their initial interests.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result suggests the user was drawn to a specific source based on the title/snippet, which indicates they perceived some value in that result. Labeling this as FollowingScent assumes a more directed intent than what is supported by the user's previous vague queries.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.803101301193237,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0034952573478222
+}

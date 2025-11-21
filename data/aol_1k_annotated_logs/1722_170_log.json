@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_170",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:18:24.702242",
+  "events": [
+    {
+      "session_id": "1722_170",
+      "event_id": "1722_170_qq-78",
+      "timestamp": "2006-03-24 16:26:26",
+      "action_type": "QUERY",
+      "content": "black river falls",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'black river falls...' lacks specificity and appears to be an exploratory search rather than a targeted one. The ellipsis suggests that the user might be uncertain or seeking to refine their understanding of the topic, indicating an intent to broaden or explore rather than a focused search with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9540379405021667,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:19:00.586295"
+    },
+    {
+      "session_id": "1722_170",
+      "event_id": "1722_170_qq-78_serp",
+      "timestamp": "2006-03-24 16:26:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: black river falls com, pheasant ridge resort black river falls wisconsin, home school district of black river falls (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results implies an exploratory approach rather than a focused search. The user has not clicked on any specific result yet, which suggests they are still in the early stages of their information-seeking process, assessing options rather than following a strong scent. The label 'ApproachingSource' may misrepresent the user\u2019s intent at this stage.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9960029605776072,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:19:00.586303"
+    },
+    {
+      "session_id": "1722_170",
+      "event_id": "1722_170_qq-78_cd-1595",
+      "timestamp": "2006-03-24 16:26:26",
+      "action_type": "CLICK",
+      "content": "black river falls com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the click on 'black river falls com' indicates some level of interest, the previous events suggest a lack of clear intent. Given the ambiguity in the initial query and the subsequent viewing of multiple results, the user might have clicked out of curiosity rather than following a strong scent. This could indicate a poor scent if the click does not lead to satisfactory information, aligning better with a 'LeavingPatch' label if that click does not yield results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9678270071744919,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:19:00.586305"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.542781829833984,
+      "decisions": [
+        {
+          "event_id": "1722_170_qq-78",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_170_qq-78_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_170_qq-78_cd-1595",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.317138910293579,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The query 'black river falls...' lacks specificity and appears to be an exploratory search rather than a targeted one. The ellipsis suggests that the user might be uncertain or seeking to refine their understanding of the topic, indicating an intent to broaden or explore rather than a focused search with clear intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results implies an exploratory approach rather than a focused search. The user has not clicked on any specific result yet, which suggests they are still in the early stages of their information-seeking process, assessing options rather than following a strong scent. The label 'ApproachingSource' may misrepresent the user\u2019s intent at this stage.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the click on 'black river falls com' indicates some level of interest, the previous events suggest a lack of clear intent. Given the ambiguity in the initial query and the subsequent viewing of multiple results, the user might have clicked out of curiosity rather than following a strong scent. This could indicate a poor scent if the click does not lead to satisfactory information, aligning better with a 'LeavingPatch' label if that click does not yield results.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.673616170883179,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 99)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9960029605776072
+}

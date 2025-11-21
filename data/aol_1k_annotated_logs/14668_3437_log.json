@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3437",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:04:22.488447",
+  "events": [
+    {
+      "session_id": "14668_3437",
+      "event_id": "14668_3437_qq-1903",
+      "timestamp": "2006-03-27 15:11:17",
+      "action_type": "QUERY",
+      "content": "anderson bus tours",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query 'anderson bus tours...' does not demonstrate strong intent or clear targeting, especially given the context of an analysis error. The lack of specificity in the query suggests that the user may not have a clear information need, indicative of poor scent. This query might have been a broad search without clear direction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9265280961990356,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:54.894696"
+    },
+    {
+      "session_id": "14668_3437",
+      "event_id": "14668_3437_qq-1903_serp",
+      "timestamp": "2006-03-27 15:11:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tour bus tour bus touring bus tours for you, anderson tours home, starr bus tours charters charters bus tours since 1947 (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a SERP with multiple results that are not directly relevant to the user's specific interest indicates a lack of effective scent. The user's engagement with a collection of vague and repetitive titles suggests that they are not finding promising leads, which aligns more with the PoorScent label than FollowingScent. The analyst's assumption of clear intent is unfounded given the information presented.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9795805215835571,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:54.894714"
+    },
+    {
+      "session_id": "14668_3437",
+      "event_id": "14668_3437_qq-1903_cd-11297",
+      "timestamp": "2006-03-27 15:11:17",
+      "action_type": "CLICK",
+      "content": "charter bus service pa ohio ny coach bus service anderson",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result may imply some level of interest, but the context of the previous events suggests the user is struggling to find relevant information. Given the previous poor engagement with SERP results, the click could indicate frustration rather than clear intent, leading to a potential exit from the search process if the outcome is not satisfactory. Thus, LeavingPatch may be a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9796793133020401,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:54.894720"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.227165937423706,
+      "decisions": [
+        {
+          "event_id": "14668_3437_qq-1903",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3437_qq-1903_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3437_qq-1903_cd-11297",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.527912855148315,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query 'anderson bus tours...' does not demonstrate strong intent or clear targeting, especially given the context of an analysis error. The lack of specificity in the query suggests that the user may not have a clear information need, indicative of poor scent. This query might have been a broad search without clear direction.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a SERP with multiple results that are not directly relevant to the user's specific interest indicates a lack of effective scent. The user's engagement with a collection of vague and repetitive titles suggests that they are not finding promising leads, which aligns more with the PoorScent label than FollowingScent. The analyst's assumption of clear intent is unfounded given the information presented.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result may imply some level of interest, but the context of the previous events suggests the user is struggling to find relevant information. Given the previous poor engagement with SERP results, the click could indicate frustration rather than clear intent, leading to a potential exit from the search process if the outcome is not satisfactory. Thus, LeavingPatch may be a more appropriate label.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.53837299346924,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9796793133020401
+}

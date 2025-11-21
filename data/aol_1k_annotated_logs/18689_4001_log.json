@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_4001",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:34:03.731455",
+  "events": [
+    {
+      "session_id": "18689_4001",
+      "event_id": "18689_4001_qq-2262",
+      "timestamp": "2006-05-14 08:08:48",
+      "action_type": "QUERY",
+      "content": "hofbrauhaus",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hofbrauhaus...' appears to be incomplete or poorly formed, suggesting the user did not have a clear intent or promising direction. The presence of an invalid control character indicates a lack of clarity in the user's information need, which is more indicative of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8796816349029541,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:34:26.888086"
+    },
+    {
+      "session_id": "18689_4001",
+      "event_id": "18689_4001_qq-2262_serp",
+      "timestamp": "2006-05-14 08:08:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home h of bra u haus newport, the h of bra u haus american and bavarian cuisine, www chicago bra u haus com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further clicks or engagement suggests that the user may not have found the information sufficiently relevant or satisfactory. This indicates a lack of strong information scent, leading the user to potentially abandon this search. Therefore, LeavingPatch is a more appropriate label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9920004859566689,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:34:26.888104"
+    },
+    {
+      "session_id": "18689_4001",
+      "event_id": "18689_4001_qq-2262_cd-13311",
+      "timestamp": "2006-05-14 08:08:48",
+      "action_type": "CLICK",
+      "content": "home h of bra u haus newport",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'home h of bra u haus newport...' which implies that they found a sufficient level of interest and potential relevance in the search result, suggesting they are approaching a source of information rather than continuing to follow a scent. Therefore, ApproachingSource is a more fitting label here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0179215848445893,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:34:26.888111"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.638097047805786,
+      "decisions": [
+        {
+          "event_id": "18689_4001_qq-2262",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_4001_qq-2262_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_4001_qq-2262_cd-13311",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.794724225997925,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hofbrauhaus...' appears to be incomplete or poorly formed, suggesting the user did not have a clear intent or promising direction. The presence of an invalid control character indicates a lack of clarity in the user's information need, which is more indicative of PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without further clicks or engagement suggests that the user may not have found the information sufficiently relevant or satisfactory. This indicates a lack of strong information scent, leading the user to potentially abandon this search. Therefore, LeavingPatch is a more appropriate label than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'home h of bra u haus newport...' which implies that they found a sufficient level of interest and potential relevance in the search result, suggesting they are approaching a source of information rather than continuing to follow a scent. Therefore, ApproachingSource is a more fitting label here.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.575874090194702,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0179215848445893
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3117",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:58:01.198930",
+  "events": [
+    {
+      "session_id": "12495_3117",
+      "event_id": "12495_3117_qq-1632",
+      "timestamp": "2006-04-07 22:13:08",
+      "action_type": "QUERY",
+      "content": "irs mailing address",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query for 'irs mailing address' shows an intent to find specific information. However, the presence of an error indicates a lack of promising scent from the results, leading to the conclusion that the user did not find satisfactory information. Thus, this event aligns more closely with 'PoorScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.985557222366333,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:58:46.229014"
+    },
+    {
+      "session_id": "12495_3117",
+      "event_id": "12495_3117_qq-1632_serp",
+      "timestamp": "2006-04-07 22:13:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home irs help, www steels ir, com part ir (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any suggests that the user did not find the information sufficiently relevant or appealing. This indicates that the search did not yield promising results, making 'PoorScent' a more appropriate label than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9876767516136169,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:58:46.229020"
+    },
+    {
+      "session_id": "12495_3117",
+      "event_id": "12495_3117_qq-1632_cd-2026",
+      "timestamp": "2006-04-07 22:13:08",
+      "action_type": "CLICK",
+      "content": "www irs gov",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'www irs gov', which indicates they found the link promising enough to investigate further. This action suggests they were approaching a source of information rather than simply following a scent, making 'ApproachingSource' a more suitable label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9976367235183716,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:58:46.229023"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.582717895507812,
+      "decisions": [
+        {
+          "event_id": "12495_3117_qq-1632",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3117_qq-1632_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3117_qq-1632_cd-2026",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.77479100227356,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query for 'irs mailing address' shows an intent to find specific information. However, the presence of an error indicates a lack of promising scent from the results, leading to the conclusion that the user did not find satisfactory information. Thus, this event aligns more closely with 'PoorScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without engaging with any suggests that the user did not find the information sufficiently relevant or appealing. This indicates that the search did not yield promising results, making 'PoorScent' a more appropriate label than 'FollowingScent'.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'www irs gov', which indicates they found the link promising enough to investigate further. This action suggests they were approaching a source of information rather than simply following a scent, making 'ApproachingSource' a more suitable label.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.243906021118164,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9976367235183716
+}

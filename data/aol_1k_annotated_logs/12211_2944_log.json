@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2944",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:07:53.972480",
+  "events": [
+    {
+      "session_id": "12211_2944",
+      "event_id": "12211_2944_qq-1520",
+      "timestamp": "2006-03-22 03:22:48",
+      "action_type": "QUERY",
+      "content": "alibaba",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query ('alibaba...') but the lack of meaningful content suggests that the query did not yield satisfactory results. The 'Invalid control character' indicates a potential misunderstanding or error in the query, which aligns more with PoorScent as it signifies the user found no promising scent to follow.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8356430768966675,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:08:38.018281"
+    },
+    {
+      "session_id": "12211_2944",
+      "event_id": "12211_2944_qq-1520_serp",
+      "timestamp": "2006-03-22 03:22:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www windsurf baba org, www baba ji ca, desi baba da ru (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but the diversity and potential irrelevance of these results (e.g., 'www windsurf baba org, www baba ji ca') suggest a lack of focused intent. Given the previous query's issues, this indicates a failed search session rather than a successful FollowingScent, thus aligning more closely with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9399936079978943,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:08:38.018288"
+    },
+    {
+      "session_id": "12211_2944",
+      "event_id": "12211_2944_qq-1520_cd-2674",
+      "timestamp": "2006-03-22 03:22:48",
+      "action_type": "CLICK",
+      "content": "ali baba com manufacturers suppliers exporters importers from the world s largest online b 2 b marketplace",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a specific result appears to be a desperate attempt to salvage the search experience rather than a clear indication of FollowingScent. The context suggests that the previous queries did not lead to a satisfactory information path, pointing to PoorScent due to the lack of a strong, targeted query leading to the click.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9641789764165878,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:08:38.018291"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.167391061782837,
+      "decisions": [
+        {
+          "event_id": "12211_2944_qq-1520",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2944_qq-1520_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2944_qq-1520_cd-2674",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.55644702911377,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query ('alibaba...') but the lack of meaningful content suggests that the query did not yield satisfactory results. The 'Invalid control character' indicates a potential misunderstanding or error in the query, which aligns more with PoorScent as it signifies the user found no promising scent to follow.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, but the diversity and potential irrelevance of these results (e.g., 'www windsurf baba org, www baba ji ca') suggest a lack of focused intent. Given the previous query's issues, this indicates a failed search session rather than a successful FollowingScent, thus aligning more closely with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a specific result appears to be a desperate attempt to salvage the search experience rather than a clear indication of FollowingScent. The context suggests that the previous queries did not lead to a satisfactory information path, pointing to PoorScent due to the lack of a strong, targeted query leading to the click.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.236986875534058,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9641789764165878
+}

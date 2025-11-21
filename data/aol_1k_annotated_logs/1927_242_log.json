@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_242",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:22:14.715457",
+  "events": [
+    {
+      "session_id": "1927_242",
+      "event_id": "1927_242_qq-121",
+      "timestamp": "2006-04-02 19:30:58",
+      "action_type": "QUERY",
+      "content": "free font",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'free font...' does not demonstrate a clear intent or specificity, indicating that the user might not be finding promising results, which is consistent with the PoorScent label. The presence of an invalid control character suggests confusion or lack of clarity in the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9261054635047913,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:22:34.981303"
+    },
+    {
+      "session_id": "1927_242",
+      "event_id": "1927_242_qq-121_serp",
+      "timestamp": "2006-04-02 19:30:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: divide by zero fonts free true type fonts, font paradise 2 800 free fonts to download, download free fonts com nbsp download free fonts resources and information (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clicking indicates that the user may not be satisfied with the information presented, suggesting a decision to leave the search or refine their query rather than actively pursuing a result, which aligns better with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9843657344579697,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:22:34.981312"
+    },
+    {
+      "session_id": "1927_242",
+      "event_id": "1927_242_qq-121_cd-1802",
+      "timestamp": "2006-04-02 19:30:58",
+      "action_type": "CLICK",
+      "content": "free fonts search and download",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'free fonts search and download...' indicates that the user found a specific result appealing enough to investigate further, suggesting they were attracted by a strong scent from the title/snippet rather than a continued search initiative. This aligns more closely with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9961328826844692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:22:34.981315"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.244805812835693,
+      "decisions": [
+        {
+          "event_id": "1927_242_qq-121",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_242_qq-121_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_242_qq-121_cd-1802",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.678776979446411,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'free font...' does not demonstrate a clear intent or specificity, indicating that the user might not be finding promising results, which is consistent with the PoorScent label. The presence of an invalid control character suggests confusion or lack of clarity in the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without clicking indicates that the user may not be satisfied with the information presented, suggesting a decision to leave the search or refine their query rather than actively pursuing a result, which aligns better with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'free fonts search and download...' indicates that the user found a specific result appealing enough to investigate further, suggesting they were attracted by a strong scent from the title/snippet rather than a continued search initiative. This aligns more closely with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.077193021774292,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9961328826844692
+}

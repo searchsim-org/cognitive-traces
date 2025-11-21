@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2263",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:48:27.710188",
+  "events": [
+    {
+      "session_id": "10008_2263",
+      "event_id": "10008_2263_qq-1175",
+      "timestamp": "2006-03-13 08:34:27",
+      "action_type": "QUERY",
+      "content": "nancy clayton real estate falmouth ma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'nancy clayton real estate falmouth ma...' shows a lack of specificity and the presence of an invalid control character suggests that the user may not have found the query satisfactory, indicating a low scent. Instead of exhibiting a clear intent to follow a scent, it appears the user may be struggling with the query formulation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9034699916839599,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:49:10.307228"
+    },
+    {
+      "session_id": "10008_2263",
+      "event_id": "10008_2263_qq-1175_serp",
+      "timestamp": "2006-03-13 08:34:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: real estate brockton ma the king of real estate real estate north easton ma the king of real estate, century 21 sexton donohue melrose ma real estate wakefield ma real estate, falmouth country club east falmouth ma a billy casper course (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results without engaging with any suggests that the user did not find the titles or snippets compelling enough to continue their search, indicating poor information scent. The label 'FollowingScent' implies an engaged and directed search which does not align with the behavior observed here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0072395503520966,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:49:10.307245"
+    },
+    {
+      "session_id": "10008_2263",
+      "event_id": "10008_2263_qq-1175_cd-7827",
+      "timestamp": "2006-03-13 08:34:27",
+      "action_type": "CLICK",
+      "content": "www falmouth ma world web com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a URL that appears problematic suggests a lack of confidence in the search results or a desperate attempt to find relevant information, which aligns more with the concept of LeavingPatch. The user may have been unable to find satisfactory results from previous interactions, thus indicating an unproductive search session.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.946561974287033,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:49:10.307251"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.208318948745728,
+      "decisions": [
+        {
+          "event_id": "10008_2263_qq-1175",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2263_qq-1175_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2263_qq-1175_cd-7827",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.396951913833618,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'nancy clayton real estate falmouth ma...' shows a lack of specificity and the presence of an invalid control character suggests that the user may not have found the query satisfactory, indicating a low scent. Instead of exhibiting a clear intent to follow a scent, it appears the user may be struggling with the query formulation.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results without engaging with any suggests that the user did not find the titles or snippets compelling enough to continue their search, indicating poor information scent. The label 'FollowingScent' implies an engaged and directed search which does not align with the behavior observed here.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a URL that appears problematic suggests a lack of confidence in the search results or a desperate attempt to find relevant information, which aligns more with the concept of LeavingPatch. The user may have been unable to find satisfactory results from previous interactions, thus indicating an unproductive search session.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.518070936203003,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0072395503520966
+}

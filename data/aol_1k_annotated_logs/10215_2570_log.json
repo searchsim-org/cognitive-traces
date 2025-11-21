@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2570",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:30:24.549938",
+  "events": [
+    {
+      "session_id": "10215_2570",
+      "event_id": "10215_2570_qq-1275",
+      "timestamp": "2006-05-30 15:00:16",
+      "action_type": "QUERY",
+      "content": "ass.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query issued contains an invalid control character, which suggests that the user may not have found the initial query fruitful or relevant. The lack of proper formatting indicates a potential lack of clarity in what information they are seeking, leading to a poor scent. This does not align with 'FollowingScent', which implies a clear and targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9312597274780273,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:30:57.154503"
+    },
+    {
+      "session_id": "10215_2570",
+      "event_id": "10215_2570_qq-1275_serp",
+      "timestamp": "2006-05-30 15:00:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www as s watcher com, holmes shu s as com, big as s motors com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further interaction or clicks suggests that the user did not find the information they were seeking. If they were genuinely following a scent, they would likely have engaged with at least one of the results. The lack of engagement hints that the user is not satisfied and is potentially ready to abandon the search, fitting the 'LeavingPatch' label better than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9914265803992748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:30:57.154530"
+    },
+    {
+      "session_id": "10215_2570",
+      "event_id": "10215_2570_qq-1275_cd-8271",
+      "timestamp": "2006-05-30 15:00:16",
+      "action_type": "CLICK",
+      "content": "www panty as s com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result with an invalid control character in the previous actions suggests that the user may be clicking out of frustration or exploratory behavior rather than a clear intent to follow a scent. The nature of the content and the error indicates that the user might not have been satisfied with their search results, reflecting a poor scent rather than the targeted approach suggested by 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8988273978233337,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:30:57.154538"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.890381097793579,
+      "decisions": [
+        {
+          "event_id": "10215_2570_qq-1275",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2570_qq-1275_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2570_qq-1275_cd-8271",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.532709121704102,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query issued contains an invalid control character, which suggests that the user may not have found the initial query fruitful or relevant. The lack of proper formatting indicates a potential lack of clarity in what information they are seeking, leading to a poor scent. This does not align with 'FollowingScent', which implies a clear and targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without further interaction or clicks suggests that the user did not find the information they were seeking. If they were genuinely following a scent, they would likely have engaged with at least one of the results. The lack of engagement hints that the user is not satisfied and is potentially ready to abandon the search, fitting the 'LeavingPatch' label better than 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result with an invalid control character in the previous actions suggests that the user may be clicking out of frustration or exploratory behavior rather than a clear intent to follow a scent. The nature of the content and the error indicates that the user might not have been satisfied with their search results, reflecting a poor scent rather than the targeted approach suggested by 'FollowingScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.950212001800537,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9914265803992748
+}

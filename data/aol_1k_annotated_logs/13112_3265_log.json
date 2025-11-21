@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3265",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:14:39.144856",
+  "events": [
+    {
+      "session_id": "13112_3265",
+      "event_id": "13112_3265_qq-1745",
+      "timestamp": "2006-04-26 10:06:30",
+      "action_type": "QUERY",
+      "content": "aircraftbuyersguide.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have encountered an error, suggesting the user did not find the intended information. The presence of an invalid character indicates a failed attempt to form a coherent query, which aligns with 'PoorScent' as the user likely found no promising scent to continue with.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.885987651348114,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:15:16.821207"
+    },
+    {
+      "session_id": "13112_3265",
+      "event_id": "13112_3265_qq-1745_serp",
+      "timestamp": "2006-04-26 10:06:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: aircraft engine preheat aircraft engine pre heaters tan is aircraft com, cr m software directory cr m news cr m buyers guides cr m news articles buyer s guides, bobs guide com connecting buyers and sellers of financial technology bobs guide com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing the SERP with poorly formatted results suggests a lack of clarity in their query. The description indicates confusion or ineffectiveness in the search results, which does not support the notion of a strong information scent as required for 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9846144750714302,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:15:16.821228"
+    },
+    {
+      "session_id": "13112_3265",
+      "event_id": "13112_3265_qq-1745_cd-9918",
+      "timestamp": "2006-04-26 10:06:30",
+      "action_type": "CLICK",
+      "content": "cessna 210 t 210 p 210 buyers guide",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that is likely based on a flawed query and surrounded by invalid content suggests that the user was not following a clear scent. If the content led to confusion, it indicates a lack of promising information, making 'PoorScent' a more appropriate label here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9664550811052323,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:15:16.821235"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.017496109008789,
+      "decisions": [
+        {
+          "event_id": "13112_3265_qq-1745",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3265_qq-1745_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3265_qq-1745_cd-9918",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.513751029968262,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have encountered an error, suggesting the user did not find the intended information. The presence of an invalid character indicates a failed attempt to form a coherent query, which aligns with 'PoorScent' as the user likely found no promising scent to continue with.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing the SERP with poorly formatted results suggests a lack of clarity in their query. The description indicates confusion or ineffectiveness in the search results, which does not support the notion of a strong information scent as required for 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that is likely based on a flawed query and surrounded by invalid content suggests that the user was not following a clear scent. If the content led to confusion, it indicates a lack of promising information, making 'PoorScent' a more appropriate label here.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.84821915626526,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9846144750714302
+}

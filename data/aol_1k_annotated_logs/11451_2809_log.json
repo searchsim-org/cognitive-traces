@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2809",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:19:56.865148",
+  "events": [
+    {
+      "session_id": "11451_2809",
+      "event_id": "11451_2809_qq-887",
+      "timestamp": "2006-04-04 16:13:06",
+      "action_type": "QUERY",
+      "content": "delta airlines",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'delta airlines...' does not indicate a clearly targeted intent, especially considering the presence of an invalid control character suggesting an incomplete or malformed query. This suggests the user is not finding promising information scent, leading to a need for a reformulation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9061139643192291,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:20:38.685920"
+    },
+    {
+      "session_id": "11451_2809",
+      "event_id": "11451_2809_qq-887_serp",
+      "timestamp": "2006-04-04 16:13:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: delta dental insurance, alpha xi delta, delta design home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that include unrelated items such as 'delta dental insurance' suggests a lack of relevant information scent. The presence of diverse and potentially irrelevant results indicates that the user's query did not yield a focused or promising set of options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9597842901945114,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:20:38.685933"
+    },
+    {
+      "session_id": "11451_2809",
+      "event_id": "11451_2809_qq-887_cd-5836",
+      "timestamp": "2006-04-04 16:13:06",
+      "action_type": "CLICK",
+      "content": "www delta com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'www delta com...' after encountering issues in previous events could indicate that the user is attempting to salvage the session rather than following a strong scent. However, it may reflect a last-ditch effort to find relevant information, suggesting the user is potentially leaving their initial search patch due to lack of success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9707133710384369,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:20:38.685937"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.244686126708984,
+      "decisions": [
+        {
+          "event_id": "11451_2809_qq-887",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2809_qq-887_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2809_qq-887_cd-5836",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.946471929550171,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'delta airlines...' does not indicate a clearly targeted intent, especially considering the presence of an invalid control character suggesting an incomplete or malformed query. This suggests the user is not finding promising information scent, leading to a need for a reformulation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that include unrelated items such as 'delta dental insurance' suggests a lack of relevant information scent. The presence of diverse and potentially irrelevant results indicates that the user's query did not yield a focused or promising set of options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'www delta com...' after encountering issues in previous events could indicate that the user is attempting to salvage the session rather than following a strong scent. However, it may reflect a last-ditch effort to find relevant information, suggesting the user is potentially leaving their initial search patch due to lack of success.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.341696977615356,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9707133710384369
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2482",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:40:12.172407",
+  "events": [
+    {
+      "session_id": "10215_2482",
+      "event_id": "10215_2482_qq-1303",
+      "timestamp": "2006-03-23 22:16:12",
+      "action_type": "QUERY",
+      "content": "boxer anatomy forums",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boxer anatomy forums...' suggests an initial exploration; however, the label 'FollowingScent' implies a clear intent and focus, which isn't evident given the vague nature of the query. The presence of an error message suggests a lack of clarity or proper formulation in the search, indicating the user did not find promising information, thus aligning more with a 'PoorScent' scenario.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9587851643562317,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:38.638425"
+    },
+    {
+      "session_id": "10215_2482",
+      "event_id": "10215_2482_qq-1303_serp",
+      "timestamp": "2006-03-23 22:16:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: human anatomy and physiology society, grey s anatomy tv fanatic, www anatomy in motion com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results indicates engagement but does not confirm a strong intent to pursue those results, as the titles listed seem only tangentially related to the initial query. The lack of clicks or any decisive action afterward suggests that the user may not have found sufficient information scent, leading to potential abandonment of the search process, hence 'LeavingPatch' is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9605155110359191,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:38.638445"
+    },
+    {
+      "session_id": "10215_2482",
+      "event_id": "10215_2482_qq-1303_cd-8270",
+      "timestamp": "2006-03-23 22:16:12",
+      "action_type": "CLICK",
+      "content": "boxer world com welcome to boxer world the ultimate dog resource",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'boxer world com' shows an attempt to investigate further based on the information scent, but given previous events indicating lack of effective search results and poor scent, this click appears to be more exploratory rather than a confident move towards a valid source. Therefore, a label of 'ApproachingSource' may not accurately reflect the user's uncertain journey through the search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0032069124281406,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:40:38.638458"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.196388006210327,
+      "decisions": [
+        {
+          "event_id": "10215_2482_qq-1303",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2482_qq-1303_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2482_qq-1303_cd-8270",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.718475103378296,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boxer anatomy forums...' suggests an initial exploration; however, the label 'FollowingScent' implies a clear intent and focus, which isn't evident given the vague nature of the query. The presence of an error message suggests a lack of clarity or proper formulation in the search, indicating the user did not find promising information, thus aligning more with a 'PoorScent' scenario.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results indicates engagement but does not confirm a strong intent to pursue those results, as the titles listed seem only tangentially related to the initial query. The lack of clicks or any decisive action afterward suggests that the user may not have found sufficient information scent, leading to potential abandonment of the search process, hence 'LeavingPatch' is more appropriate.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'boxer world com' shows an attempt to investigate further based on the information scent, but given previous events indicating lack of effective search results and poor scent, this click appears to be more exploratory rather than a confident move towards a valid source. Therefore, a label of 'ApproachingSource' may not accurately reflect the user's uncertain journey through the search process.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.344676971435547,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0032069124281406
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "14915_3525",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:06:12.883530",
+  "events": [
+    {
+      "session_id": "14915_3525",
+      "event_id": "14915_3525_qq-1972",
+      "timestamp": "2006-03-31 06:50:26",
+      "action_type": "QUERY",
+      "content": "www.miamibeach.gov",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The presence of an analysis error indicates that the user's query did not yield useful results, as the system could not process it correctly. This reflects a lack of promising scent rather than a focused search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.841685152053833,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:06:41.053421"
+    },
+    {
+      "session_id": "14915_3525",
+      "event_id": "14915_3525_qq-1972_serp",
+      "timestamp": "2006-03-31 06:50:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: miami travel guide and tourist information miami florida fl usa, www miami valleys team show org, www it al cons miami com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clicking on any suggests that the user did not find the information sufficiently relevant or promising. This indicates a lack of compelling scent rather than an ongoing focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9880756638944149,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:06:41.053440"
+    },
+    {
+      "session_id": "14915_3525",
+      "event_id": "14915_3525_qq-1972_cd-11481",
+      "timestamp": "2006-03-31 06:50:26",
+      "action_type": "CLICK",
+      "content": "city of miami beach the official website of the city of miami beach stay informed find important information on city services news alerts events trolley routes government employment and more",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the official website indicates an intention to explore further based on recognizable information scent from the title and description, rather than reflecting a focused search. The fact that the query resulted in an error suggests the user was trying to find information but was misled by the system's failure to process it correctly.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9428523004055023,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:06:41.053447"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.849455833435059,
+      "decisions": [
+        {
+          "event_id": "14915_3525_qq-1972",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3525_qq-1972_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3525_qq-1972_cd-11481",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.977818727493286,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The presence of an analysis error indicates that the user's query did not yield useful results, as the system could not process it correctly. This reflects a lack of promising scent rather than a focused search effort.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without clicking on any suggests that the user did not find the information sufficiently relevant or promising. This indicates a lack of compelling scent rather than an ongoing focused search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the official website indicates an intention to explore further based on recognizable information scent from the title and description, rather than reflecting a focused search. The fact that the query resulted in an error suggests the user was trying to find information but was misled by the system's failure to process it correctly.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.019519090652466,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9880756638944149
+}

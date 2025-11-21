@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3068",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:10:34.860742",
+  "events": [
+    {
+      "session_id": "12211_3068",
+      "event_id": "12211_3068_qq-1592",
+      "timestamp": "2006-05-16 04:38:38",
+      "action_type": "QUERY",
+      "content": "the venetian las vegas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the venetian las vegas...' does not show a clear intent as it lacks specificity and context. This suggests the user may not be satisfied with the initial search results, indicating a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0026624634861947,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:11:30.341170"
+    },
+    {
+      "session_id": "12211_3068",
+      "event_id": "12211_3068_qq-1592_serp",
+      "timestamp": "2006-05-16 04:38:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home las vegas net, home las vegas philharmonic, las vegas travel guide (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not indicate a clear intent to continue with a specific source. The diversity of results including 'home las vegas net' and 'las vegas travel guide' suggests that the user is still exploring options rather than following a strong scent to a specific source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9953966207802296,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:11:30.341188"
+    },
+    {
+      "session_id": "12211_3068",
+      "event_id": "12211_3068_qq-1592_cd-9481",
+      "timestamp": "2006-05-16 04:38:38",
+      "action_type": "CLICK",
+      "content": "las vegas sands corporation",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on the 'las vegas sands corporation', this action alone does not indicate a strong information scent. The click could be exploratory rather than indicative of a targeted follow-up, particularly if the previous events showed confusion or lack of specificity in intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0026127893477679,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:11:30.341195"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.07478904724121,
+      "decisions": [
+        {
+          "event_id": "12211_3068_qq-1592",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3068_qq-1592_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3068_qq-1592_cd-9481",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.556004047393799,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the venetian las vegas...' does not show a clear intent as it lacks specificity and context. This suggests the user may not be satisfied with the initial search results, indicating a poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results but did not indicate a clear intent to continue with a specific source. The diversity of results including 'home las vegas net' and 'las vegas travel guide' suggests that the user is still exploring options rather than following a strong scent to a specific source.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on the 'las vegas sands corporation', this action alone does not indicate a strong information scent. The click could be exploratory rather than indicative of a targeted follow-up, particularly if the previous events showed confusion or lack of specificity in intent.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 21.569413900375366,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0026624634861947
+}

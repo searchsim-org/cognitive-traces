@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3854",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:19:00.056585",
+  "events": [
+    {
+      "session_id": "17545_3854",
+      "event_id": "17545_3854_qq-2208",
+      "timestamp": "2006-05-28 12:09:42",
+      "action_type": "QUERY",
+      "content": "bayliner",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'bayliner...' appears vague and incomplete, suggesting the user may not have a clear intent or focused search goal. This uncertainty is indicative of PoorScent, as it may not lead to effective results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9759301841259003,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:21.784044"
+    },
+    {
+      "session_id": "17545_3854",
+      "event_id": "17545_3854_qq-2208_serp",
+      "timestamp": "2006-05-28 12:09:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home bay liner boats, forums bay liner owners club, page not found bay liner boats (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, which indicates some level of engagement; however, if they are still viewing results without a clear indication of satisfaction or successful navigation, it may suggest they were not finding promising options and could be preparing to leave the search without a successful outcome.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9779640272259712,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:21.784051"
+    },
+    {
+      "session_id": "17545_3854",
+      "event_id": "17545_3854_qq-2208_cd-12908",
+      "timestamp": "2006-05-28 12:09:42",
+      "action_type": "CLICK",
+      "content": "home bay liner boats",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'home bay liner boats' suggests the user found the title promising enough to explore further, indicating they are not just following scent but actively trying to gather information. This action better fits the ApproachingSource label, as it reflects an intention to investigate a specific source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0101491421461106,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:21.784053"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.920608043670654,
+      "decisions": [
+        {
+          "event_id": "17545_3854_qq-2208",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3854_qq-2208_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3854_qq-2208_cd-12908",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.2058820724487305,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'bayliner...' appears vague and incomplete, suggesting the user may not have a clear intent or focused search goal. This uncertainty is indicative of PoorScent, as it may not lead to effective results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, which indicates some level of engagement; however, if they are still viewing results without a clear indication of satisfaction or successful navigation, it may suggest they were not finding promising options and could be preparing to leave the search without a successful outcome.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'home bay liner boats' suggests the user found the title promising enough to explore further, indicating they are not just following scent but actively trying to gather information. This action better fits the ApproachingSource label, as it reflects an intention to investigate a specific source.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.126241207122803,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0101491421461106
+}

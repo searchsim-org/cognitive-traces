@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4166",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:40:50.877687",
+  "events": [
+    {
+      "session_id": "19655_4166",
+      "event_id": "19655_4166_qq-2351",
+      "timestamp": "2006-05-10 14:40:13",
+      "action_type": "QUERY",
+      "content": "dodge",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dodge...' appears incomplete and lacks specificity, indicating that it may not have been a targeted or intentional search. The presence of an error message suggests user frustration, which aligns more with a lack of promising information scent than with a successful initiation of a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9238441824913025,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:41:13.588199"
+    },
+    {
+      "session_id": "19655_4166",
+      "event_id": "19655_4166_qq-2351_serp",
+      "timestamp": "2006-05-10 14:40:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: find a chrysler dodge or jeep dealer, find a chrysler dodge or jeep dealer, find a chrysler dodge or jeep dealer (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The repeated viewing of search results for 'find a chrysler dodge or jeep dealer' implies that the user may not have found the information they were seeking, demonstrating a lack of effective information scent. The repetition suggests that the user was searching for something specific but was not satisfied with the options presented.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9742864221334457,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:41:13.588210"
+    },
+    {
+      "session_id": "19655_4166",
+      "event_id": "19655_4166_qq-2351_cd-10187",
+      "timestamp": "2006-05-10 14:40:13",
+      "action_type": "CLICK",
+      "content": "dodge official site muscle cars sports cars",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the action of clicking on the 'dodge official site' may seem to indicate a clear intent, it is important to consider that the user might have been exploring options rather than executing a well-formed search. If the click was a result of frustration from previous attempts (as indicated by the incomplete query and lack of satisfactory results), this action aligns more with a search for potential information sources rather than a targeted query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9659956216812133,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:41:13.588214"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.082496166229248,
+      "decisions": [
+        {
+          "event_id": "19655_4166_qq-2351",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4166_qq-2351_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4166_qq-2351_cd-10187",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.7291481494903564,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dodge...' appears incomplete and lacks specificity, indicating that it may not have been a targeted or intentional search. The presence of an error message suggests user frustration, which aligns more with a lack of promising information scent than with a successful initiation of a search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The repeated viewing of search results for 'find a chrysler dodge or jeep dealer' implies that the user may not have found the information they were seeking, demonstrating a lack of effective information scent. The repetition suggests that the user was searching for something specific but was not satisfied with the options presented.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the action of clicking on the 'dodge official site' may seem to indicate a clear intent, it is important to consider that the user might have been exploring options rather than executing a well-formed search. If the click was a result of frustration from previous attempts (as indicated by the incomplete query and lack of satisfactory results), this action aligns more with a search for potential information sources rather than a targeted query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.730941295623779,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9742864221334457
+}

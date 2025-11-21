@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2805",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:16:48.954674",
+  "events": [
+    {
+      "session_id": "11451_2805",
+      "event_id": "11451_2805_qq-1190",
+      "timestamp": "2006-03-28 22:57:30",
+      "action_type": "QUERY",
+      "content": "craigslist",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is labeled as 'FollowingScent' based on the initial query, but the content suggests a lack of clarity or intent in the search query 'craigslist...'. The presence of an error indicates that the user may not have effectively communicated their information need, which aligns more with 'PoorScent' than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9749595522880554,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:17:37.487691"
+    },
+    {
+      "session_id": "11451_2805",
+      "event_id": "11451_2805_qq-1190_serp",
+      "timestamp": "2006-03-28 22:57:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: craigslist lansing mi jobs apartments for sale services community and events, craigslist pittsburgh pa jobs apartments for sale services community and events, craigslist new haven ct jobs apartments for sale services community and events (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the analyst labeled this event as 'FollowingScent', the user appears to be viewing multiple generic results related to craigslist without a clear direction or satisfaction in their search. This behavior indicates potential frustration or a lack of promising information, suggesting the user is on the verge of abandoning their search, thus aligning more with 'LeavingPatch'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9787285834550857,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:17:37.487707"
+    },
+    {
+      "session_id": "11451_2805",
+      "event_id": "11451_2805_qq-1190_cd-1326",
+      "timestamp": "2006-03-28 22:57:30",
+      "action_type": "CLICK",
+      "content": "craigslist dallas fort worth jobs apartments for sale services community and events",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The label 'FollowingScent' does not account for the user's action of clicking on a specific result. The clicked content seems to contain relevant context but without clear indication of success or satisfaction. A more fitting label would be 'ApproachingSource', as the user is actively engaging with a specific result in hopes of finding relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.025269240140915,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:17:37.487714"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.196099042892456,
+      "decisions": [
+        {
+          "event_id": "11451_2805_qq-1190",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2805_qq-1190_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2805_qq-1190_cd-1326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.340110778808594,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is labeled as 'FollowingScent' based on the initial query, but the content suggests a lack of clarity or intent in the search query 'craigslist...'. The presence of an error indicates that the user may not have effectively communicated their information need, which aligns more with 'PoorScent' than 'FollowingScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Although the analyst labeled this event as 'FollowingScent', the user appears to be viewing multiple generic results related to craigslist without a clear direction or satisfaction in their search. This behavior indicates potential frustration or a lack of promising information, suggesting the user is on the verge of abandoning their search, thus aligning more with 'LeavingPatch'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The label 'FollowingScent' does not account for the user's action of clicking on a specific result. The clicked content seems to contain relevant context but without clear indication of success or satisfaction. A more fitting label would be 'ApproachingSource', as the user is actively engaging with a specific result in hopes of finding relevant information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.743977069854736,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.025269240140915
+}

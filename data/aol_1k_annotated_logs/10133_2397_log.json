@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2397",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:57:49.754303",
+  "events": [
+    {
+      "session_id": "10133_2397",
+      "event_id": "10133_2397_qq-1245",
+      "timestamp": "2006-04-24 10:03:40",
+      "action_type": "QUERY",
+      "content": "black people meet",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'black people meet...' lacks specificity and could indicate confusion or lack of clarity in the user's intent. The presence of an error message suggests the query may not have yielded promising results, thus reflecting a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9307479381561279,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:58:19.429382"
+    },
+    {
+      "session_id": "10133_2397",
+      "event_id": "10133_2397_qq-1245_serp",
+      "timestamp": "2006-04-24 10:03:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: black people meet com black dating network for black singles, black christian people meet com the black christian dating network, meet the people (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed several results, which indicates they were assessing the relevance of the information provided. However, since they viewed a list of results that included variations of similar terms, it suggests they are still exploring options rather than following a clear scent. A more fitting label may be 'ApproachingSource' as they are investigating promising links.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9974358566105366,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:58:19.429391"
+    },
+    {
+      "session_id": "10133_2397",
+      "event_id": "10133_2397_qq-1245_cd-8022",
+      "timestamp": "2006-04-24 10:03:40",
+      "action_type": "CLICK",
+      "content": "black people meet com black dating network for black singles",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the result 'black people meet com black dating network for black singles' indicates that the user is investigating a specific option rather than following a clear scent. This action suggests they were drawn to the title and snippet, thus aligning more closely with 'ApproachingSource' than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.982500447332859,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:58:19.429394"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.815825700759888,
+      "decisions": [
+        {
+          "event_id": "10133_2397_qq-1245",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2397_qq-1245_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2397_qq-1245_cd-8022",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.614449977874756,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'black people meet...' lacks specificity and could indicate confusion or lack of clarity in the user's intent. The presence of an error message suggests the query may not have yielded promising results, thus reflecting a poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed several results, which indicates they were assessing the relevance of the information provided. However, since they viewed a list of results that included variations of similar terms, it suggests they are still exploring options rather than following a clear scent. A more fitting label may be 'ApproachingSource' as they are investigating promising links.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the result 'black people meet com black dating network for black singles' indicates that the user is investigating a specific option rather than following a clear scent. This action suggests they were drawn to the title and snippet, thus aligning more closely with 'ApproachingSource' than 'FollowingScent'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.059138774871826,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9974358566105366
+}

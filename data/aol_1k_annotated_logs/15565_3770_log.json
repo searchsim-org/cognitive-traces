@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3770",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:42:36.003220",
+  "events": [
+    {
+      "session_id": "15565_3770",
+      "event_id": "15565_3770_qq-2119",
+      "timestamp": "2006-04-11 22:49:48",
+      "action_type": "QUERY",
+      "content": "preschool worksheets",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'preschool worksheets...' lacks specificity and does not demonstrate strong intent or a well-formed targeted query, indicating the user may not have found promising information scent. The invalid control character in the analysis suggests a possible error in capturing the full context of the query, leading to a lack of clarity in the user's intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.821977686882019,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:43:04.997458"
+    },
+    {
+      "session_id": "15565_3770",
+      "event_id": "15565_3770_qq-2119_serp",
+      "timestamp": "2006-04-11 22:49:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: preschool kindergarten lesson plans activities and worksheets, primary worksheets free primary school worksheets, shirley preschool holts ville preschool medford preschool middle island preschool patch o gue preschool (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clicking indicates that the user is not finding satisfactory options, which is more aligned with LeavingPatch than FollowingScent. The user's behavior suggests they are assessing their options but are not satisfied with the results, leading to a potential abandonment of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9941513910889626,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:43:04.997473"
+    },
+    {
+      "session_id": "15565_3770",
+      "event_id": "15565_3770_qq-2119_cd-5529",
+      "timestamp": "2006-04-11 22:49:48",
+      "action_type": "CLICK",
+      "content": "free printable worksheets for preschool sixth grade in math english and more",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, indicating they found the content relevant enough to warrant further investigation. This suggests they were responding to strong information scent from the title/snippet rather than simply continuing their search, which aligns better with ApproachingSource than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9915275722742081,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:43:04.997480"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.212169170379639,
+      "decisions": [
+        {
+          "event_id": "15565_3770_qq-2119",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3770_qq-2119_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3770_qq-2119_cd-5529",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.969651937484741,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'preschool worksheets...' lacks specificity and does not demonstrate strong intent or a well-formed targeted query, indicating the user may not have found promising information scent. The invalid control character in the analysis suggests a possible error in capturing the full context of the query, leading to a lack of clarity in the user's intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without clicking indicates that the user is not finding satisfactory options, which is more aligned with LeavingPatch than FollowingScent. The user's behavior suggests they are assessing their options but are not satisfied with the results, leading to a potential abandonment of the search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result, indicating they found the content relevant enough to warrant further investigation. This suggests they were responding to strong information scent from the title/snippet rather than simply continuing their search, which aligns better with ApproachingSource than FollowingScent.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.627980947494507,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9941513910889626
+}

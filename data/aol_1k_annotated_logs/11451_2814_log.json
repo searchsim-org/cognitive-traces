@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2814",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:23:51.901213",
+  "events": [
+    {
+      "session_id": "11451_2814",
+      "event_id": "11451_2814_qq-1190",
+      "timestamp": "2006-04-12 23:25:11",
+      "action_type": "QUERY",
+      "content": "craigslist",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The provided content (craigslist...) suggests that the user's query was vague or lacked specificity. The mention of an 'Invalid control character' indicates an error in processing that might reflect insufficient information scent from the query itself, leading to no promising results. This aligns more with a PoorScent label, as it indicates that the user did not find relevant information worth pursuing.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8494651079177856,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:24:42.239604"
+    },
+    {
+      "session_id": "11451_2814",
+      "event_id": "11451_2814_qq-1190_serp",
+      "timestamp": "2006-04-12 23:25:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: craigslist lansing mi jobs apartments for sale services community and events, craigslist pittsburgh pa jobs apartments for sale services community and events, craigslist new haven ct jobs apartments for sale services community and events (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not make a selection. This suggests that while they were exploring, they may not have found the information appealing or relevant enough to continue. Without any clicks, this could indicate a tendency to leave the current search patch due to unsuccessful interactions, thus fitting the LeavingPatch label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9625811487436294,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:24:42.239623"
+    },
+    {
+      "session_id": "11451_2814",
+      "event_id": "11451_2814_qq-1190_cd-1326",
+      "timestamp": "2006-04-12 23:25:11",
+      "action_type": "CLICK",
+      "content": "craigslist dallas fort worth jobs apartments for sale services community and events",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the analyst labeled this as FollowingScent, the action of clicking suggests the user was responding to a perceived strong scent from the specific result about 'craigslist dallas fort worth jobs'. This indicates the user was approaching a source based on the information scent from the title/snippet rather than a general continuation of a search, making ApproachingSource a more accurate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9799823701381684,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:24:42.239629"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.892582893371582,
+      "decisions": [
+        {
+          "event_id": "11451_2814_qq-1190",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2814_qq-1190_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2814_qq-1190_cd-1326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.081809997558594,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The provided content (craigslist...) suggests that the user's query was vague or lacked specificity. The mention of an 'Invalid control character' indicates an error in processing that might reflect insufficient information scent from the query itself, leading to no promising results. This aligns more with a PoorScent label, as it indicates that the user did not find relevant information worth pursuing.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not make a selection. This suggests that while they were exploring, they may not have found the information appealing or relevant enough to continue. Without any clicks, this could indicate a tendency to leave the current search patch due to unsuccessful interactions, thus fitting the LeavingPatch label better than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the analyst labeled this as FollowingScent, the action of clicking suggests the user was responding to a perceived strong scent from the specific result about 'craigslist dallas fort worth jobs'. This indicates the user was approaching a source based on the information scent from the title/snippet rather than a general continuation of a search, making ApproachingSource a more accurate label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.127046823501587,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9799823701381684
+}

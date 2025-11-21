@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3031",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:39:04.897614",
+  "events": [
+    {
+      "session_id": "12211_3031",
+      "event_id": "12211_3031_qq-1562",
+      "timestamp": "2006-04-27 13:52:39",
+      "action_type": "QUERY",
+      "content": "kelly pickler",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'kelly pickler...' does not indicate a clear intent or a well-formed query. Instead, it suggests a lack of clarity in the user's search, which may lead to a lack of promising results. Therefore, this should be labeled as PoorScent due to the ambiguity and potential failure to engage effectively with the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9789406582713127,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:43.055739"
+    },
+    {
+      "session_id": "12211_3031",
+      "event_id": "12211_3031_qq-1562_serp",
+      "timestamp": "2006-04-27 13:52:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: kelly pickle r online, www k pickle r com, k ellie pickle r fan (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results that appear to be poorly targeted, suggesting they did not find effective matches for their query. The presence of multiple variations of 'kelly pickle r' indicates a lack of quality or relevance in the presented results, aligning this event more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.957515025138855,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:43.055760"
+    },
+    {
+      "session_id": "12211_3031",
+      "event_id": "12211_3031_qq-1562_cd-9402",
+      "timestamp": "2006-04-27 13:52:39",
+      "action_type": "CLICK",
+      "content": "www k pickle r com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'www k pickle r com', which may indicate a willingness to explore further based on perceived relevance. However, the context of previous events suggests that this click might not reflect a well-formed intent or strong information scent. Therefore, it is more appropriate to consider this action as ApproachingSource, as the user is attempting to engage with content despite previous poor results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0225043386220931,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:39:43.055767"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.216954946517944,
+      "decisions": [
+        {
+          "event_id": "12211_3031_qq-1562",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3031_qq-1562_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3031_qq-1562_cd-9402",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.627192735671997,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'kelly pickler...' does not indicate a clear intent or a well-formed query. Instead, it suggests a lack of clarity in the user's search, which may lead to a lack of promising results. Therefore, this should be labeled as PoorScent due to the ambiguity and potential failure to engage effectively with the search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results that appear to be poorly targeted, suggesting they did not find effective matches for their query. The presence of multiple variations of 'kelly pickle r' indicates a lack of quality or relevance in the presented results, aligning this event more with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'www k pickle r com', which may indicate a willingness to explore further based on perceived relevance. However, the context of previous events suggests that this click might not reflect a well-formed intent or strong information scent. Therefore, it is more appropriate to consider this action as ApproachingSource, as the user is attempting to engage with content despite previous poor results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.11636996269226,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0225043386220931
+}

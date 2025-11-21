@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2608",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:35:55.834798",
+  "events": [
+    {
+      "session_id": "10436_2608",
+      "event_id": "10436_2608_qq-1383",
+      "timestamp": "2006-05-29 10:58:01",
+      "action_type": "QUERY",
+      "content": "free e-cards",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'free e-cards...' is vague and lacks specificity, suggesting that the user may not have a clear target in mind. The presence of an error message indicates confusion rather than a directed search effort, leading to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.976803295314312,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:36:27.450132"
+    },
+    {
+      "session_id": "10436_2608",
+      "event_id": "10436_2608_qq-1383_serp",
+      "timestamp": "2006-05-29 10:58:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: christian e cards scripture e cards christian music christian poetry religious art religious e cards healing prayers childrens prayers healing scriptures bible scriptures christmas e cards easter e cards thanksgiving e cards new year e cards valentine e cards christian animated e cards scripture puzzles friendship scripture e cards funny e cards birthday e cards all occasion e cards flash christian animated e cards and more, free greetings cards, funny e cards omg humor turns into free animated musical cards (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that are largely repetitive and not necessarily aligned with a specific need. This suggests that the user was not finding satisfying options, indicating a lack of clear intent and a poor information scent rather than following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9707409858703613,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:36:27.450151"
+    },
+    {
+      "session_id": "10436_2608",
+      "event_id": "10436_2608_qq-1383_cd-1058",
+      "timestamp": "2006-05-29 10:58:01",
+      "action_type": "CLICK",
+      "content": "free greeting cards wishes e cards birthday wishes funny cards gif s 123 greetings",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'free greeting cards wishes...' suggests that the user identified a specific source that seemed promising based on its title, indicating an approach towards that source rather than just following a scent. The analyst's label does not capture the user's evaluative action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9696609169244766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:36:27.450155"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.104839086532593,
+      "decisions": [
+        {
+          "event_id": "10436_2608_qq-1383",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2608_qq-1383_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2608_qq-1383_cd-1058",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 12.38936185836792,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'free e-cards...' is vague and lacks specificity, suggesting that the user may not have a clear target in mind. The presence of an error message indicates confusion rather than a directed search effort, leading to a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results that are largely repetitive and not necessarily aligned with a specific need. This suggests that the user was not finding satisfying options, indicating a lack of clear intent and a poor information scent rather than following a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'free greeting cards wishes...' suggests that the user identified a specific source that seemed promising based on its title, indicating an approach towards that source rather than just following a scent. The analyst's label does not capture the user's evaluative action.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.683012962341309,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.976803295314312
+}

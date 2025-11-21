@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2491",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:46:37.357686",
+  "events": [
+    {
+      "session_id": "10215_2491",
+      "event_id": "10215_2491_qq-1314",
+      "timestamp": "2006-03-30 18:41:11",
+      "action_type": "QUERY",
+      "content": "abc wife swap",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'abc wife swap...' does not appear to be a focused search intent, and the presence of an analysis error suggests that the user may not have found this query promising, leading to a lack of engagement. The lack of clicks or further action indicates a poor scent rather than a well-directed search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9097667694091797,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:47:12.920207"
+    },
+    {
+      "session_id": "10215_2491",
+      "event_id": "10215_2491_qq-1314_serp",
+      "timestamp": "2006-03-30 18:41:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: stitch marker swap, abc home page abc com, abc home page abc com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further engagement (i.e., no clicks) suggests that the user did not find the results satisfactory. This indicates that they may be considering abandoning the search due to a lack of relevant information, which aligns more closely with 'LeavingPatch' rather than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9799781158566475,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:47:12.920227"
+    },
+    {
+      "session_id": "10215_2491",
+      "event_id": "10215_2491_qq-1314_cd-2619",
+      "timestamp": "2006-03-30 18:41:11",
+      "action_type": "CLICK",
+      "content": "abc home page abc com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'abc home page abc com...' indicates some level of interest or perceived relevance, but the context suggests that the user might have been exploring out of desperation rather than a clear scent of information. This aligns more with 'ApproachingSource' as the user attempted to gain information, though it lacks the clarity of a targeted search identified by 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9920609220862389,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:47:12.920233"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.354240655899048,
+      "decisions": [
+        {
+          "event_id": "10215_2491_qq-1314",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2491_qq-1314_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2491_qq-1314_cd-2619",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.394155025482178,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'abc wife swap...' does not appear to be a focused search intent, and the presence of an analysis error suggests that the user may not have found this query promising, leading to a lack of engagement. The lack of clicks or further action indicates a poor scent rather than a well-directed search effort.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without further engagement (i.e., no clicks) suggests that the user did not find the results satisfactory. This indicates that they may be considering abandoning the search due to a lack of relevant information, which aligns more closely with 'LeavingPatch' rather than 'FollowingScent'.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the 'abc home page abc com...' indicates some level of interest or perceived relevance, but the context suggests that the user might have been exploring out of desperation rather than a clear scent of information. This aligns more with 'ApproachingSource' as the user attempted to gain information, though it lacks the clarity of a targeted search identified by 'FollowingScent'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.539366960525513,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9920609220862389
+}

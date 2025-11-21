@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3704",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:00:00.635499",
+  "events": [
+    {
+      "session_id": "15328_3704",
+      "event_id": "15328_3704_qq-2069",
+      "timestamp": "2006-04-17 19:14:32",
+      "action_type": "QUERY",
+      "content": "norfolk county mass. probate court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'norfolk county mass. probate court...' lacks specificity and clarity, indicating that the user may not have a well-formed query. The mention of an analysis error suggests that the user's intent is unclear, leading to a lack of promising results, rather than a strong initiation of a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9454240381717682,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:00:29.928296"
+    },
+    {
+      "session_id": "15328_3704",
+      "event_id": "15328_3704_qq-2069_serp",
+      "timestamp": "2006-04-17 19:14:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: summit county probate court summit county court of common pleas probate division judge elinor e marsh storm er, summit county probate court summit county court of common pleas probate division judge elinor e marsh storm er, wood county government court of common pleas probate division (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple SERP results without clicking on any implies that the user is not finding relevant information, which aligns with the PoorScent label. The action suggests that the user is still searching but is not satisfied with the options provided, rather than demonstrating a clear, targeted approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.012424996495247,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:00:29.928303"
+    },
+    {
+      "session_id": "15328_3704",
+      "event_id": "15328_3704_qq-2069_cd-11779",
+      "timestamp": "2006-04-17 19:14:32",
+      "action_type": "CLICK",
+      "content": "norfolk county registry of deeds norfolk county ma",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'norfolk county registry of deeds norfolk county ma...' indicates that the user is attempting to investigate a specific piece of information, suggesting a more deliberate action than simply following a scent. It implies the user has identified a potential source of relevant information, which aligns better with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0275066077709198,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:00:29.928306"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.91963815689087,
+      "decisions": [
+        {
+          "event_id": "15328_3704_qq-2069",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3704_qq-2069_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3704_qq-2069_cd-11779",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.992913961410522,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'norfolk county mass. probate court...' lacks specificity and clarity, indicating that the user may not have a well-formed query. The mention of an analysis error suggests that the user's intent is unclear, leading to a lack of promising results, rather than a strong initiation of a focused search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple SERP results without clicking on any implies that the user is not finding relevant information, which aligns with the PoorScent label. The action suggests that the user is still searching but is not satisfied with the options provided, rather than demonstrating a clear, targeted approach.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'norfolk county registry of deeds norfolk county ma...' indicates that the user is attempting to investigate a specific piece of information, suggesting a more deliberate action than simply following a scent. It implies the user has identified a potential source of relevant information, which aligns better with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.027752876281738,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0275066077709198
+}

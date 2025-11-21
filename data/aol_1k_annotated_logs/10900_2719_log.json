@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2719",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T10:04:18.499235",
+  "events": [
+    {
+      "session_id": "10900_2719",
+      "event_id": "10900_2719_qq-197",
+      "timestamp": "2006-05-07 13:42:28",
+      "action_type": "QUERY",
+      "content": "cartoon network",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cartoon network...' lacks specificity and does not indicate a well-formed search intent. The ellipsis suggests uncertainty or incompleteness, implying that the user may not be confident in the information they are seeking, which aligns with a 'PoorScent' designation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9701349139213562,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:05:07.460292"
+    },
+    {
+      "session_id": "10900_2719",
+      "event_id": "10900_2719_qq-197_serp",
+      "timestamp": "2006-05-07 13:42:28",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cartoon network free games online videos full episodes and kids tv shows, cartoon network free games online videos full episodes and kids tv shows, cartoon network free games online videos full episodes and kids tv shows (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed does not demonstrate a clear intent to continue following a scent. The repetition of similar titles indicates that the user is potentially scanning for relevance rather than being led by a strong scent. This suggests a move toward examining the sources, making 'ApproachingSource' a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.005448942631483,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:05:07.460307"
+    },
+    {
+      "session_id": "10900_2719",
+      "event_id": "10900_2719_qq-197_cd-1990",
+      "timestamp": "2006-05-07 13:42:28",
+      "action_type": "CLICK",
+      "content": "cartoon network free games online videos full episodes and kids tv shows",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user clicked on a result, there is no indication of successful engagement. Given the previous events lacked specificity and clear intent, it is likely that this click was a last resort without satisfactory results from prior exploration, indicating a transition towards abandoning the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9934600867331028,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:05:07.460313"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.951622009277344,
+      "decisions": [
+        {
+          "event_id": "10900_2719_qq-197",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2719_qq-197_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2719_qq-197_cd-1990",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.272318840026855,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cartoon network...' lacks specificity and does not indicate a well-formed search intent. The ellipsis suggests uncertainty or incompleteness, implying that the user may not be confident in the information they are seeking, which aligns with a 'PoorScent' designation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The content viewed does not demonstrate a clear intent to continue following a scent. The repetition of similar titles indicates that the user is potentially scanning for relevance rather than being led by a strong scent. This suggests a move toward examining the sources, making 'ApproachingSource' a more fitting label.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Although the user clicked on a result, there is no indication of successful engagement. Given the previous events lacked specificity and clear intent, it is likely that this click was a last resort without satisfactory results from prior exploration, indicating a transition towards abandoning the search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.412766218185425,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.005448942631483
+}

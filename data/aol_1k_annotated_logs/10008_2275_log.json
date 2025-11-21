@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2275",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:55:57.400903",
+  "events": [
+    {
+      "session_id": "10008_2275",
+      "event_id": "10008_2275_qq-1187",
+      "timestamp": "2006-03-30 19:42:03",
+      "action_type": "QUERY",
+      "content": "barmakian jewelers",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'barmakian jewelers...' lacks specificity and likely indicates the user is uncertain about their search intent. The presence of an error message suggests frustration or confusion, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9431066751480103,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:56:14.489176"
+    },
+    {
+      "session_id": "10008_2275",
+      "event_id": "10008_2275_qq-1187_serp",
+      "timestamp": "2006-03-30 19:42:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bar maki an jewelers your source for diamonds jewelry and watches, maki maki com nbsp this website is for sale nbsp maki maki resources and information, www an caster jewellers com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results but encountering irrelevant or confusing content implies a lack of promising scent. This suggests that the user may not have found appealing or relevant information, thus aligning better with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.000572407245636,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:56:14.489192"
+    },
+    {
+      "session_id": "10008_2275",
+      "event_id": "10008_2275_qq-1187_cd-7846",
+      "timestamp": "2006-03-30 19:42:03",
+      "action_type": "CLICK",
+      "content": "bar maki an jewelers your source for diamonds jewelry and watches",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicking on a result without a clear positive scent from their previous actions suggests they might be grasping at straws rather than having a strong intent. If the click was based on poor information scent and the user was unable to satisfy their need, it indicates a potential LeavingPatch scenario.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9743893206119537,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:56:14.489198"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.087787628173828,
+      "decisions": [
+        {
+          "event_id": "10008_2275_qq-1187",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2275_qq-1187_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2275_qq-1187_cd-7846",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.2453789710998535,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'barmakian jewelers...' lacks specificity and likely indicates the user is uncertain about their search intent. The presence of an error message suggests frustration or confusion, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing 10 results but encountering irrelevant or confusing content implies a lack of promising scent. This suggests that the user may not have found appealing or relevant information, thus aligning better with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicking on a result without a clear positive scent from their previous actions suggests they might be grasping at straws rather than having a strong intent. If the click was based on poor information scent and the user was unable to satisfy their need, it indicates a potential LeavingPatch scenario.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.483384132385254,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.000572407245636
+}

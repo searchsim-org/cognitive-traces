@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3317",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:52:14.278318",
+  "events": [
+    {
+      "session_id": "13119_3317",
+      "event_id": "13119_3317_qq-1801",
+      "timestamp": "2006-04-06 11:50:14",
+      "action_type": "QUERY",
+      "content": "doctors who accept tri care for life in birmingham al area",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'doctors who accept tri care for life in birmingham al area...' is a targeted query, but it may not have yielded any clicks or results that aligned with the user's intent. The presence of an invalid control character suggests that the query may not have been processed correctly, indicating a lack of promising scent rather than a clear search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9235511422157288,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:52:46.771154"
+    },
+    {
+      "session_id": "13119_3317",
+      "event_id": "13119_3317_qq-1801_serp",
+      "timestamp": "2006-04-06 11:50:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: lawn care in memphis and surrounding areas, tri state orthopaedics urgent care, www tri care online com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without further engagement suggests that while the user had intent, the results did not meet their needs. This indicates a transition towards abandoning the search rather than continuing with a specific scent. The failure to click on any results reflects a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9795637398958206,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:52:46.771176"
+    },
+    {
+      "session_id": "13119_3317",
+      "event_id": "13119_3317_qq-1801_cd-10108",
+      "timestamp": "2006-04-06 11:50:14",
+      "action_type": "CLICK",
+      "content": "www tri care osd mil",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www tri care osd mil...' implies that the user was attempting to explore a potential source of information. However, without context on whether this was a successful click or not, it's more indicative of a search for relevant information rather than a continuation of a targeted scent. The click could also reflect desperation due to poor results earlier.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9823800578713417,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:52:46.771183"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.442112922668457,
+      "decisions": [
+        {
+          "event_id": "13119_3317_qq-1801",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3317_qq-1801_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3317_qq-1801_cd-10108",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.747325897216797,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'doctors who accept tri care for life in birmingham al area...' is a targeted query, but it may not have yielded any clicks or results that aligned with the user's intent. The presence of an invalid control character suggests that the query may not have been processed correctly, indicating a lack of promising scent rather than a clear search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without further engagement suggests that while the user had intent, the results did not meet their needs. This indicates a transition towards abandoning the search rather than continuing with a specific scent. The failure to click on any results reflects a lack of promising scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www tri care osd mil...' implies that the user was attempting to explore a potential source of information. However, without context on whether this was a successful click or not, it's more indicative of a search for relevant information rather than a continuation of a targeted scent. The click could also reflect desperation due to poor results earlier.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.088590145111084,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9823800578713417
+}

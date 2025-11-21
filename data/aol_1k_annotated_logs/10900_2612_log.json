@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2612",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:38:22.001895",
+  "events": [
+    {
+      "session_id": "10900_2612",
+      "event_id": "10900_2612_qq-1404",
+      "timestamp": "2006-03-03 17:52:20",
+      "action_type": "QUERY",
+      "content": "cartoonnetwork",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cartoonnetwork...' suggests an attempt to find specific content related to Cartoon Network. However, the presence of an invalid control character indicates that the query may not have been well-formed, which could lead to a lack of relevant results. This aligns more with PoorScent, as the user likely did not find promising results and may not have clicked on any, leading to a potential abandonment of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9333134531974793,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:38:45.575050"
+    },
+    {
+      "session_id": "10900_2612",
+      "event_id": "10900_2612_qq-1404_serp",
+      "timestamp": "2006-03-03 17:52:20",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cur toons cartoon logo designs cartooning services, ca g le cartoons inc editorial cartoons, cartoon network free online games downloads competitions videos for kids (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but the titles listed indicate a lack of clear, relevant information based on the flawed query. Given that the query was problematic and given the context of the results viewed, the user may have realized the lack of relevance and could be preparing to abandon the search. This aligns more with LeavingPatch than FollowingScent, which implies an active engagement with promising content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9572960555553436,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:38:45.575069"
+    },
+    {
+      "session_id": "10900_2612",
+      "event_id": "10900_2612_qq-1404_cd-1985",
+      "timestamp": "2006-03-03 17:52:20",
+      "action_type": "CLICK",
+      "content": "cartoon network free online games downloads competitions videos for kids",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'cartoon network free online games downloads competitions videos for kids' suggests a response to perceived relevance. However, given the previous problematic query, the user may have clicked out of desperation rather than a clear scent of valuable information. This indicates a PoorScent scenario, as the user is likely to find the content disappointing, further suggesting they were not following a strong scent throughout their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0105880305171013,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:38:45.575076"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.494269847869873,
+      "decisions": [
+        {
+          "event_id": "10900_2612_qq-1404",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2612_qq-1404_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2612_qq-1404_cd-1985",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.26713490486145,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cartoonnetwork...' suggests an attempt to find specific content related to Cartoon Network. However, the presence of an invalid control character indicates that the query may not have been well-formed, which could lead to a lack of relevant results. This aligns more with PoorScent, as the user likely did not find promising results and may not have clicked on any, leading to a potential abandonment of the search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but the titles listed indicate a lack of clear, relevant information based on the flawed query. Given that the query was problematic and given the context of the results viewed, the user may have realized the lack of relevance and could be preparing to abandon the search. This aligns more with LeavingPatch than FollowingScent, which implies an active engagement with promising content.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'cartoon network free online games downloads competitions videos for kids' suggests a response to perceived relevance. However, given the previous problematic query, the user may have clicked out of desperation rather than a clear scent of valuable information. This indicates a PoorScent scenario, as the user is likely to find the content disappointing, further suggesting they were not following a strong scent throughout their search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.554531097412109,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0105880305171013
+}

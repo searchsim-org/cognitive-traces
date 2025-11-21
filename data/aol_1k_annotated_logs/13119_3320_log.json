@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3320",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:54:38.182989",
+  "events": [
+    {
+      "session_id": "13119_3320",
+      "event_id": "13119_3320_qq-1795",
+      "timestamp": "2006-04-09 19:03:20",
+      "action_type": "QUERY",
+      "content": "real estate agents in panama city fl",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'real estate agents in panama city fl' suggests an initial attempt to search for specific information, but if the analyst noted an invalid control character in the response, it indicates that the search did not yield useful results or proper formatting. This suggests that the user may not have found promising scent initially, leading to a lack of engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.869855260848999,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:19.241481"
+    },
+    {
+      "session_id": "13119_3320",
+      "event_id": "13119_3320_qq-1795_serp",
+      "timestamp": "2006-04-09 19:03:20",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: new hampshire real estate max field real estate, lake point real estate belgrade lakes real estate, contact cj hole estate and letting agents in cheltenham (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results indicates an attempt to gather information, but without clicking on any particular result, it does not align with 'FollowingScent'. Instead, it suggests the user is scanning for relevant sources based on the scent of the titles but has not yet committed to further investigation, which aligns more closely with 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9791670203208923,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:19.241504"
+    },
+    {
+      "session_id": "13119_3320",
+      "event_id": "13119_3320_qq-1795_cd-2827",
+      "timestamp": "2006-04-09 19:03:20",
+      "action_type": "CLICK",
+      "content": "reals com real estate directory",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'reals com real estate directory' indicates that the user is still engaged in the search process rather than leaving it. This action suggests they are still following the scent of information rather than abandoning their search, and thus should be labeled as 'ApproachingSource' instead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9699950993061066,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:19.241511"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.299978017807007,
+      "decisions": [
+        {
+          "event_id": "13119_3320_qq-1795",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3320_qq-1795_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3320_qq-1795_cd-2827",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.236891984939575,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'real estate agents in panama city fl' suggests an initial attempt to search for specific information, but if the analyst noted an invalid control character in the response, it indicates that the search did not yield useful results or proper formatting. This suggests that the user may not have found promising scent initially, leading to a lack of engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of viewing 10 results indicates an attempt to gather information, but without clicking on any particular result, it does not align with 'FollowingScent'. Instead, it suggests the user is scanning for relevant sources based on the scent of the titles but has not yet committed to further investigation, which aligns more closely with 'ApproachingSource'.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'reals com real estate directory' indicates that the user is still engaged in the search process rather than leaving it. This action suggests they are still following the scent of information rather than abandoning their search, and thus should be labeled as 'ApproachingSource' instead.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.389458894729614,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9791670203208923
+}

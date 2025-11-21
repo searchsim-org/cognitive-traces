@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4057",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:06:08.653183",
+  "events": [
+    {
+      "session_id": "19162_4057",
+      "event_id": "19162_4057_qq-2333",
+      "timestamp": "2006-05-05 18:43:40",
+      "action_type": "QUERY",
+      "content": "ashleys furniture",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ashleys furniture...' lacks specificity and does not indicate a clear intent for a focused search, suggesting the user may not have found promising information from prior searches. This aligns more with PoorScent as it appears the user is not engaging further with the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9910005941987038,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:06:28.922194"
+    },
+    {
+      "session_id": "19162_4057",
+      "event_id": "19162_4057_qq-2333_serp",
+      "timestamp": "2006-05-05 18:43:40",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ashley furniture home store home furniture decor, ashley furniture home store home furniture decor, ashley furniture home store home furniture decor (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but the repetition in the content suggests a lack of satisfactory options, indicating the user may have felt the results did not meet their needs. This is more indicative of LeavingPatch as the user might abandon the search due to insufficient variety or quality in results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9691806018352509,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:06:28.922202"
+    },
+    {
+      "session_id": "19162_4057",
+      "event_id": "19162_4057_qq-2333_cd-4689",
+      "timestamp": "2006-05-05 18:43:40",
+      "action_type": "CLICK",
+      "content": "ashley furniture home store home furniture decor",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result that is an exact match for the previous query, indicating they are investigating a specific source rather than continuing with a well-formed targeted query. This aligns more with ApproachingSource as they are making a decision to explore that particular result further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6240000000000001,
+      "disagreement_score": 0.9904635839164257,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:06:28.922204"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.211816072463989,
+      "decisions": [
+        {
+          "event_id": "19162_4057_qq-2333",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4057_qq-2333_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4057_qq-2333_cd-4689",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.964742183685303,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ashleys furniture...' lacks specificity and does not indicate a clear intent for a focused search, suggesting the user may not have found promising information from prior searches. This aligns more with PoorScent as it appears the user is not engaging further with the search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but the repetition in the content suggests a lack of satisfactory options, indicating the user may have felt the results did not meet their needs. This is more indicative of LeavingPatch as the user might abandon the search due to insufficient variety or quality in results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result that is an exact match for the previous query, indicating they are investigating a specific source rather than continuing with a well-formed targeted query. This aligns more with ApproachingSource as they are making a decision to explore that particular result further.",
+          "confidence": 0.78
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.91812801361084,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6240000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9910005941987038
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_206",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:43:42.425549",
+  "events": [
+    {
+      "session_id": "1722_206",
+      "event_id": "1722_206_qq-91",
+      "timestamp": "2006-05-21 07:31:57",
+      "action_type": "QUERY",
+      "content": "masstimes",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'masstimes...' suggests a potential lack of clarity or specificity in the user's intent, which is further indicated by the presence of an invalid control character error. This suggests that the user may not have found promising scent, leading to a new query without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9279527783393859,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:44:10.363824"
+    },
+    {
+      "session_id": "1722_206",
+      "event_id": "1722_206_qq-91_serp",
+      "timestamp": "2006-05-21 07:31:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mass times home, corpus christi catholic church home mass times, mass plumbers mass plumbers (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results does not necessarily indicate a targeted search; rather, the presence of an invalid control character error could signify that the user's initial query was poorly formed, leading to a lack of clear intent and effective information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8734142541885376,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:44:10.363833"
+    },
+    {
+      "session_id": "1722_206",
+      "event_id": "1722_206_qq-91_cd-1607",
+      "timestamp": "2006-05-21 07:31:57",
+      "action_type": "CLICK",
+      "content": "mass times home",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'mass times home' indicates that the user found a potentially relevant result despite earlier errors, suggesting they were responding to perceived scent. However, the initial query issues and search path indicate that they may not have had a strong initial scent, thus supporting a label of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9883089087903499,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:44:10.363836"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.068570137023926,
+      "decisions": [
+        {
+          "event_id": "1722_206_qq-91",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_206_qq-91_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_206_qq-91_cd-1607",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.971689939498901,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'masstimes...' suggests a potential lack of clarity or specificity in the user's intent, which is further indicated by the presence of an invalid control character error. This suggests that the user may not have found promising scent, leading to a new query without clicks.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results does not necessarily indicate a targeted search; rather, the presence of an invalid control character error could signify that the user's initial query was poorly formed, leading to a lack of clear intent and effective information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'mass times home' indicates that the user found a potentially relevant result despite earlier errors, suggesting they were responding to perceived scent. However, the initial query issues and search path indicate that they may not have had a strong initial scent, thus supporting a label of PoorScent rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.56855297088623,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9883089087903499
+}

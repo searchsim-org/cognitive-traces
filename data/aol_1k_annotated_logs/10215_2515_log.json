@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2515",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:59:23.707259",
+  "events": [
+    {
+      "session_id": "10215_2515",
+      "event_id": "10215_2515_qq-1326",
+      "timestamp": "2006-04-15 12:33:05",
+      "action_type": "QUERY",
+      "content": "orlando condos for sale",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'orlando condos for sale...' appears to reflect an initial exploration of options rather than a strong, targeted query with a clear intent, suggesting a refinement of information need rather than a straightforward search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9910325035452843,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:48.999270"
+    },
+    {
+      "session_id": "10215_2515",
+      "event_id": "10215_2515_qq-1326_serp",
+      "timestamp": "2006-04-15 12:33:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: orlando economic partnership orlando florida economic development, orlando phone book and orlando phone directory, orlando economic partnership orlando florida economic development (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results that seem to be diverse in content and not specifically directed towards a particular need, indicating they might be assessing various sources rather than following a strong scent towards a specific information goal.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9758143782615661,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:48.999280"
+    },
+    {
+      "session_id": "10215_2515",
+      "event_id": "10215_2515_qq-1326_cd-1920",
+      "timestamp": "2006-04-15 12:33:05",
+      "action_type": "CLICK",
+      "content": "orlando news weather sports business orlando sentinel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content clicked, 'orlando news weather sports business orlando sentinel...', suggests the user might not have found satisfactory results in previous actions, leading to a click that reflects an exploration of uncertain relevance rather than a strong follow-through on a promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0058233194053172,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:59:48.999284"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.649744272232056,
+      "decisions": [
+        {
+          "event_id": "10215_2515_qq-1326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2515_qq-1326_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2515_qq-1326_cd-1920",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.935494899749756,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The query 'orlando condos for sale...' appears to reflect an initial exploration of options rather than a strong, targeted query with a clear intent, suggesting a refinement of information need rather than a straightforward search initiation.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results that seem to be diverse in content and not specifically directed towards a particular need, indicating they might be assessing various sources rather than following a strong scent towards a specific information goal.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content clicked, 'orlando news weather sports business orlando sentinel...', suggests the user might not have found satisfactory results in previous actions, leading to a click that reflects an exploration of uncertain relevance rather than a strong follow-through on a promising scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.496671199798584,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0058233194053172
+}

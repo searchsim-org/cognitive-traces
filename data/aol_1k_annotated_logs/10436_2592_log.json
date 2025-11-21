@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2592",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:24:50.471916",
+  "events": [
+    {
+      "session_id": "10436_2592",
+      "event_id": "10436_2592_qq-1377",
+      "timestamp": "2006-04-25 21:51:34",
+      "action_type": "QUERY",
+      "content": "ftd",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'ftd...' suggests a lack of clarity or specificity in the query. The presence of an 'Invalid control character' indicates that the query may not have been well-formed, which aligns more closely with a PoorScent scenario rather than FollowingScent, as it implies the user is not finding promising information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8673952579498291,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:25:38.746193"
+    },
+    {
+      "session_id": "10436_2592",
+      "event_id": "10436_2592_qq-1377_serp",
+      "timestamp": "2006-04-25 21:51:34",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: td jakes, td garden, lado td (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with vague content like 'td jakes, td garden, lado td' suggests that the user is not finding relevant or satisfactory information. This lack of specificity indicates that the user might be experiencing PoorScent, as the information viewed does not provide strong cues for further investigation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9687084287405014,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:25:38.746225"
+    },
+    {
+      "session_id": "10436_2592",
+      "event_id": "10436_2592_qq-1377_cd-8558",
+      "timestamp": "2006-04-25 21:51:34",
+      "action_type": "CLICK",
+      "content": "flowers delivered order fresh floral arrangements online f td",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'flowers delivered order fresh floral arrangements online f td...' appears to be based on a non-specific and potentially misleading title. The presence of an invalid character again suggests that the content does not provide a strong information scent. Thus, this action is more indicative of PoorScent, as it likely reflects an attempt to find clarity rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9758296728134155,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:25:38.746235"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 25.197299242019653,
+      "decisions": [
+        {
+          "event_id": "10436_2592_qq-1377",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2592_qq-1377_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2592_qq-1377_cd-8558",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.76948094367981,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'ftd...' suggests a lack of clarity or specificity in the query. The presence of an 'Invalid control character' indicates that the query may not have been well-formed, which aligns more closely with a PoorScent scenario rather than FollowingScent, as it implies the user is not finding promising information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with vague content like 'td jakes, td garden, lado td' suggests that the user is not finding relevant or satisfactory information. This lack of specificity indicates that the user might be experiencing PoorScent, as the information viewed does not provide strong cues for further investigation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'flowers delivered order fresh floral arrangements online f td...' appears to be based on a non-specific and potentially misleading title. The presence of an invalid character again suggests that the content does not provide a strong information scent. Thus, this action is more indicative of PoorScent, as it likely reflects an attempt to find clarity rather than a targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.013509035110474,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9758296728134155
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3301",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:40:39.682379",
+  "events": [
+    {
+      "session_id": "13119_3301",
+      "event_id": "13119_3301_qq-1784",
+      "timestamp": "2006-03-07 13:37:19",
+      "action_type": "QUERY",
+      "content": "boat storage in panama city florida",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boat storage in panama city florida...' lacks specificity and may not reflect a clear intent to find a specific solution, indicating that the user is not receiving strong information scent. The mention of an 'Invalid control character' suggests potential confusion or a lack of relevant results, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8904943704605102,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:41:19.474688"
+    },
+    {
+      "session_id": "13119_3301",
+      "event_id": "13119_3301_qq-1784_serp",
+      "timestamp": "2006-03-07 13:37:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: storage units in maryland virginia dc ez storage, storage units in maryland virginia dc ez storage, sunrise florida business directory businesses in the city of sunrise florida (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the repetition in the content suggests they may have found the results unsatisfactory or uninformative, leading to a lack of effective engagement. This aligns better with LeavingPatch, as the user might have abandoned the search for more relevant information after realizing the results did not meet their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9692529410123825,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:41:19.474695"
+    },
+    {
+      "session_id": "13119_3301",
+      "event_id": "13119_3301_qq-1784_cd-9997",
+      "timestamp": "2006-03-07 13:37:19",
+      "action_type": "CLICK",
+      "content": "florida marine guide com your guide to boating fishing and diving in florida",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the 'florida marine guide com' suggests an exploration of potential information sources rather than a targeted search with a clear goal. 'FollowingScent' implies a strong intent based on promising results, which may not be applicable here if the user was generally browsing for information related to boating, fishing, and diving without a clear objective.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9977102970704437,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:41:19.474697"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.38275694847107,
+      "decisions": [
+        {
+          "event_id": "13119_3301_qq-1784",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3301_qq-1784_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3301_qq-1784_cd-9997",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.392035961151123,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boat storage in panama city florida...' lacks specificity and may not reflect a clear intent to find a specific solution, indicating that the user is not receiving strong information scent. The mention of an 'Invalid control character' suggests potential confusion or a lack of relevant results, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results, the repetition in the content suggests they may have found the results unsatisfactory or uninformative, leading to a lack of effective engagement. This aligns better with LeavingPatch, as the user might have abandoned the search for more relevant information after realizing the results did not meet their needs.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the 'florida marine guide com' suggests an exploration of potential information sources rather than a targeted search with a clear goal. 'FollowingScent' implies a strong intent based on promising results, which may not be applicable here if the user was generally browsing for information related to boating, fishing, and diving without a clear objective.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.64397382736206,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9977102970704437
+}

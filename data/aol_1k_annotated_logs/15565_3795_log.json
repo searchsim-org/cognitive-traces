@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3795",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:58:25.638228",
+  "events": [
+    {
+      "session_id": "15565_3795",
+      "event_id": "15565_3795_qq-2151",
+      "timestamp": "2006-05-11 21:57:57",
+      "action_type": "QUERY",
+      "content": "extra tv",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'extra tv...' appears vague and lacks specificity, suggesting the user may not have a clear intent or direction, which aligns with a lack of promising scent. The analyst's label of FollowingScent assumes clear intent, which is not evident here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9838755756616593,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:01.730901"
+    },
+    {
+      "session_id": "15565_3795",
+      "event_id": "15565_3795_qq-2151_serp",
+      "timestamp": "2006-05-11 21:57:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: entertainment news page extra tv com, spanish extra espa ol extra, be onscreen be on a tv show free audience tickets tv extras (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any clear indication of interest or further engagement suggests the user is still exploring options without finding satisfactory leads. The assumption of FollowingScent misinterprets exploratory behavior as targeted searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.014223074913025,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:01.730937"
+    },
+    {
+      "session_id": "15565_3795",
+      "event_id": "15565_3795_qq-2151_cd-12017",
+      "timestamp": "2006-05-11 21:57:57",
+      "action_type": "CLICK",
+      "content": "entertainment news page extra tv com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the result indicates some interest or relevance, suggesting the user is attempting to further investigate a potential source of information. This behavior aligns more with ApproachingSource, as it implies a movement towards a specific piece of content rather than a clear, targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9904755353927612,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:59:01.730946"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.031768083572388,
+      "decisions": [
+        {
+          "event_id": "15565_3795_qq-2151",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3795_qq-2151_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3795_qq-2151_cd-12017",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.910492897033691,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'extra tv...' appears vague and lacks specificity, suggesting the user may not have a clear intent or direction, which aligns with a lack of promising scent. The analyst's label of FollowingScent assumes clear intent, which is not evident here.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without any clear indication of interest or further engagement suggests the user is still exploring options without finding satisfactory leads. The assumption of FollowingScent misinterprets exploratory behavior as targeted searching.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the result indicates some interest or relevance, suggesting the user is attempting to further investigate a potential source of information. This behavior aligns more with ApproachingSource, as it implies a movement towards a specific piece of content rather than a clear, targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.792355060577393,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.014223074913025
+}

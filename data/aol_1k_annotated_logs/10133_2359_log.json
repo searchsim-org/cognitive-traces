@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2359",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:38:18.885713",
+  "events": [
+    {
+      "session_id": "10133_2359",
+      "event_id": "10133_2359_qq-1255",
+      "timestamp": "2006-03-28 13:12:50",
+      "action_type": "QUERY",
+      "content": "board of veterans appeals",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'board of veterans appeals...' seems vague and may not have offered sufficient information scent leading to further actions. The presence of an error indicates a lack of clarity in the intent or relevance of the query, suggesting the user did not find promising results, thus aligning with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9153333067893982,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:38:42.999249"
+    },
+    {
+      "session_id": "10133_2359",
+      "event_id": "10133_2359_qq-1255_serp",
+      "timestamp": "2006-03-28 13:12:50",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: new york state veterans homes, gulf war veteran resource pages, national coalition for homeless veterans (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results indicates the user is exploring options but does not necessarily reflect a strong intention to pursue specific results. The term 'FollowingScent' implies a focused search, whereas merely viewing multiple results may indicate an exploratory phase without a clear target, aligning better with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0091161988675594,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:38:42.999263"
+    },
+    {
+      "session_id": "10133_2359",
+      "event_id": "10133_2359_qq-1255_cd-2618",
+      "timestamp": "2006-03-28 13:12:50",
+      "action_type": "CLICK",
+      "content": "va gov home veterans affairs",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'va gov home veterans affairs...' suggests the user found this result promising enough based on its title/snippet, but it indicates an action taken to investigate further rather than a clear intent from the start. This aligns more closely with ApproachingSource, as the click is exploratory rather than a direct continuation of a scent-based search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.017673136293888,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:38:42.999269"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.75466799736023,
+      "decisions": [
+        {
+          "event_id": "10133_2359_qq-1255",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2359_qq-1255_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2359_qq-1255_cd-2618",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.50114107131958,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'board of veterans appeals...' seems vague and may not have offered sufficient information scent leading to further actions. The presence of an error indicates a lack of clarity in the intent or relevance of the query, suggesting the user did not find promising results, thus aligning with the PoorScent label.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results indicates the user is exploring options but does not necessarily reflect a strong intention to pursue specific results. The term 'FollowingScent' implies a focused search, whereas merely viewing multiple results may indicate an exploratory phase without a clear target, aligning better with ApproachingSource.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'va gov home veterans affairs...' suggests the user found this result promising enough based on its title/snippet, but it indicates an action taken to investigate further rather than a clear intent from the start. This aligns more closely with ApproachingSource, as the click is exploratory rather than a direct continuation of a scent-based search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.485589027404785,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.017673136293888
+}

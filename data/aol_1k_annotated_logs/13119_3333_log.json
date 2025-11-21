@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3333",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:05:16.300580",
+  "events": [
+    {
+      "session_id": "13119_3333",
+      "event_id": "13119_3333_qq-1822",
+      "timestamp": "2006-05-13 18:00:24",
+      "action_type": "QUERY",
+      "content": "mother day cards",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'mother day cards...' does not show clear intent or specificity, suggesting that the user may not have found promising results based on their current search. The lack of any indication of successful interaction with this query implies that the user may not be confident in the scent provided by this initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9911645479500294,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:06:04.110154"
+    },
+    {
+      "session_id": "13119_3333",
+      "event_id": "13119_3333_qq-1822_serp",
+      "timestamp": "2006-05-13 18:00:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: american greetings shop greeting cards e cards printable cards party supplies gift wrap gifts, free greeting cards wishes e cards birthday wishes funny cards gif s 123 greetings, free greeting cards wishes e cards birthday wishes funny cards gif s 123 greetings (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The SERP_VIEW action indicates that the user viewed results but does not imply satisfaction or intent to follow a particular scent. The analysis suggests the user is exposed to a range of results without a clear target, indicating that the user may not have found a strong scent leading them to feel confident in their search, hence labeling this as PoorScent is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0018713980913163,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:06:04.110173"
+    },
+    {
+      "session_id": "13119_3333",
+      "event_id": "13119_3333_qq-1822_cd-5803",
+      "timestamp": "2006-05-13 18:00:24",
+      "action_type": "CLICK",
+      "content": "free greeting cards wishes e cards birthday wishes funny cards gif s 123 greetings",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result which indicates some level of interest and intent, but the previous events suggest that the user was still uncertain about the information scent. While the click could imply a step towards finding valuable information, labeling it as FollowingScent does not capture the essence of the user's exploratory behavior, which appears to be more aligned with approaching a source rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0144138664007187,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:06:04.110180"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.25113821029663,
+      "decisions": [
+        {
+          "event_id": "13119_3333_qq-1822",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3333_qq-1822_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3333_qq-1822_cd-5803",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 11.728779077529907,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'mother day cards...' does not show clear intent or specificity, suggesting that the user may not have found promising results based on their current search. The lack of any indication of successful interaction with this query implies that the user may not be confident in the scent provided by this initial query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The SERP_VIEW action indicates that the user viewed results but does not imply satisfaction or intent to follow a particular scent. The analysis suggests the user is exposed to a range of results without a clear target, indicating that the user may not have found a strong scent leading them to feel confident in their search, hence labeling this as PoorScent is more appropriate.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result which indicates some level of interest and intent, but the previous events suggest that the user was still uncertain about the information scent. While the click could imply a step towards finding valuable information, labeling it as FollowingScent does not capture the essence of the user's exploratory behavior, which appears to be more aligned with approaching a source rather than following a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.573579788208008,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0144138664007187
+}

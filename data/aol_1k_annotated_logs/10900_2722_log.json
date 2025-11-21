@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2722",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T10:06:34.250413",
+  "events": [
+    {
+      "session_id": "10900_2722",
+      "event_id": "10900_2722_qq-1456",
+      "timestamp": "2006-05-08 11:31:32",
+      "action_type": "QUERY",
+      "content": "toys r us",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'toys r us...' is vague and lacks specificity, suggesting that the user may not be receiving adequate information scent from the search results. This label better captures the uncertainty and lack of intent in the query rather than labeling it as a strong search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9939671814441681,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:07:11.689951"
+    },
+    {
+      "session_id": "10900_2722",
+      "event_id": "10900_2722_qq-1456_serp",
+      "timestamp": "2006-05-08 11:31:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: toys r us mos li com, toys r us ce tow com, toys rus com the official toys r us site toys games more (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing 10 results indicates an attempt to find relevant information, but the titles and snippets listed do not suggest a strong scent. The lack of specific queries or clear intent in the results implies that the user is still searching for better options, which aligns with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9948407888412476,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:07:11.689966"
+    },
+    {
+      "session_id": "10900_2722",
+      "event_id": "10900_2722_qq-1456_cd-8471",
+      "timestamp": "2006-05-08 11:31:32",
+      "action_type": "CLICK",
+      "content": "toys rus com the official toys r us site toys games more",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'toys rus com the official toys r us site toys games more...' indicates the user's interest in a specific source, suggesting they found it promising. However, it does not necessarily imply clear intent from a well-formed query, which better fits the ApproachingSource label rather than FollowingScent, as the initial query lacked specificity and clarity.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0183422178030015,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:07:11.689971"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.240356922149658,
+      "decisions": [
+        {
+          "event_id": "10900_2722_qq-1456",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2722_qq-1456_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2722_qq-1456_cd-8471",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.423113822937012,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'toys r us...' is vague and lacks specificity, suggesting that the user may not be receiving adequate information scent from the search results. This label better captures the uncertainty and lack of intent in the query rather than labeling it as a strong search initiation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing 10 results indicates an attempt to find relevant information, but the titles and snippets listed do not suggest a strong scent. The lack of specific queries or clear intent in the results implies that the user is still searching for better options, which aligns with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'toys rus com the official toys r us site toys games more...' indicates the user's interest in a specific source, suggesting they found it promising. However, it does not necessarily imply clear intent from a well-formed query, which better fits the ApproachingSource label rather than FollowingScent, as the initial query lacked specificity and clarity.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.50588321685791,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0183422178030015
+}

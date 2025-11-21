@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3502",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:48:38.153736",
+  "events": [
+    {
+      "session_id": "14668_3502",
+      "event_id": "14668_3502_qq-1956",
+      "timestamp": "2006-05-25 00:03:10",
+      "action_type": "QUERY",
+      "content": "aviation international news magazine",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query lacks specificity and does not indicate a clear intent to pursue a particular piece of information, suggesting the user may not have found the scent promising enough to continue with that query. The presence of an error message implies a potential disruption in the search process, indicating that the user\u2019s query was not effective.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9389774322509765,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:49:11.528635"
+    },
+    {
+      "session_id": "14668_3502",
+      "event_id": "14668_3502_qq-1956_serp",
+      "timestamp": "2006-05-25 00:03:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: aviation international news business air transport defense general aviation news, latest aviation news and information pilot magazine, aviation news aviation headlines com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but this does not necessarily indicate a strong information scent. Instead, it suggests they may be struggling to find relevant information, which aligns more closely with a leaving patch scenario if they did not find satisfactory results to click on afterwards.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9660416543483734,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:49:11.528647"
+    },
+    {
+      "session_id": "14668_3502",
+      "event_id": "14668_3502_qq-1956_cd-11411",
+      "timestamp": "2006-05-25 00:03:10",
+      "action_type": "CLICK",
+      "content": "aviation international news business air transport defense general aviation news",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result suggests the user was attempting to investigate further, indicating they were not merely following a scent. If the previous actions indicated poor scent and no satisfactory results, this click may represent a desperate attempt rather than a continuation of a successful information foraging process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9781186446547508,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:49:11.528650"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.820966243743896,
+      "decisions": [
+        {
+          "event_id": "14668_3502_qq-1956",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3502_qq-1956_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3502_qq-1956_cd-11411",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.299676895141602,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query lacks specificity and does not indicate a clear intent to pursue a particular piece of information, suggesting the user may not have found the scent promising enough to continue with that query. The presence of an error message implies a potential disruption in the search process, indicating that the user\u2019s query was not effective.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, but this does not necessarily indicate a strong information scent. Instead, it suggests they may be struggling to find relevant information, which aligns more closely with a leaving patch scenario if they did not find satisfactory results to click on afterwards.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result suggests the user was attempting to investigate further, indicating they were not merely following a scent. If the previous actions indicated poor scent and no satisfactory results, this click may represent a desperate attempt rather than a continuation of a successful information foraging process.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.95125699043274,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9781186446547508
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2416",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:07:21.821351",
+  "events": [
+    {
+      "session_id": "10133_2416",
+      "event_id": "10133_2416_qq-1263",
+      "timestamp": "2006-05-02 10:36:01",
+      "action_type": "QUERY",
+      "content": "calling nigeria",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'calling nigeria...' lacks specificity and does not indicate a well-formed, targeted intent that would be characteristic of FollowingScent. It appears to be a vague query that may suggest the user is not finding useful information, thus aligning more with PoorScent due to the lack of clarity in the search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9950271300971508,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:07:48.805573"
+    },
+    {
+      "session_id": "10133_2416",
+      "event_id": "10133_2416_qq-1263_serp",
+      "timestamp": "2006-05-02 10:36:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: firefighter close calls home of the secret list, sissy salon for sissy calls and sissy training, grasshopper virtual phone system manage your calls online (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the titles listed do not suggest a clear, targeted intention correlated with FollowingScent. Instead, the variety in titles implies a lack of focus, indicating that the user is exploring options rather than following a specific scent, which is more aligned with ApproachingSource where the user is drawn to investigate promising avenues.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.006615662574768,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:07:48.805585"
+    },
+    {
+      "session_id": "10133_2416",
+      "event_id": "10133_2416_qq-1263_cd-8045",
+      "timestamp": "2006-05-02 10:36:01",
+      "action_type": "CLICK",
+      "content": "international country calling codes and world time zones",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'international country calling codes and world time zones...' suggests the user is refining or expanding their information need rather than simply following a scent. This action reflects a shift in focus to a more relevant topic related to their original query, aligning with the notion of DietEnrichment, as the user is likely adjusting their search strategy based on the available options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9790104180574417,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:07:48.805591"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.74533224105835,
+      "decisions": [
+        {
+          "event_id": "10133_2416_qq-1263",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2416_qq-1263_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2416_qq-1263_cd-8045",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.1695380210876465,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'calling nigeria...' lacks specificity and does not indicate a well-formed, targeted intent that would be characteristic of FollowingScent. It appears to be a vague query that may suggest the user is not finding useful information, thus aligning more with PoorScent due to the lack of clarity in the search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed 10 results, the titles listed do not suggest a clear, targeted intention correlated with FollowingScent. Instead, the variety in titles implies a lack of focus, indicating that the user is exploring options rather than following a specific scent, which is more aligned with ApproachingSource where the user is drawn to investigate promising avenues.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The click on 'international country calling codes and world time zones...' suggests the user is refining or expanding their information need rather than simply following a scent. This action reflects a shift in focus to a more relevant topic related to their original query, aligning with the notion of DietEnrichment, as the user is likely adjusting their search strategy based on the available options.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.826202869415283,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.006615662574768
+}

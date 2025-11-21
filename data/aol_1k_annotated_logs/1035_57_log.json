@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_57",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:57:14.284886",
+  "events": [
+    {
+      "session_id": "1035_57",
+      "event_id": "1035_57_qq-17",
+      "timestamp": "2006-05-03 18:40:06",
+      "action_type": "QUERY",
+      "content": "dictionary",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query for 'dictionary' suggests the user is attempting to find a specific type of information. However, the mention of an invalid control character indicates a potential error or a lack of appropriate results, likely leading to frustration and signaling poor information scent. Therefore, it should be labeled as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9032628953456878,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:57:40.051525"
+    },
+    {
+      "session_id": "1035_57",
+      "event_id": "1035_57_qq-17_serp",
+      "timestamp": "2006-05-03 18:40:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: abbreviations and acronyms dictionary, fold oc computing dictionary, www sports dictionary com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that include various types of dictionaries but not finding satisfactory options suggests the user is not engaged with the results and may be experiencing a lack of relevant information. Thus, this event should be labeled as PoorScent, as the user is likely not finding what they need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9922235190868378,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:57:40.051564"
+    },
+    {
+      "session_id": "1035_57",
+      "event_id": "1035_57_qq-17_cd-1125",
+      "timestamp": "2006-05-03 18:40:06",
+      "action_type": "CLICK",
+      "content": "one look dictionary search",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'one look dictionary search' implies an attempt to retrieve specific information, but if the previous events indicated issues with the content's relevance, it suggests the user is still struggling to find satisfactory results. Therefore, this should also be labeled as PoorScent, given the context of prior actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0183252349495888,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:57:40.051575"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.819501876831055,
+      "decisions": [
+        {
+          "event_id": "1035_57_qq-17",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_57_qq-17_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_57_qq-17_cd-1125",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.357655048370361,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query for 'dictionary' suggests the user is attempting to find a specific type of information. However, the mention of an invalid control character indicates a potential error or a lack of appropriate results, likely leading to frustration and signaling poor information scent. Therefore, it should be labeled as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that include various types of dictionaries but not finding satisfactory options suggests the user is not engaged with the results and may be experiencing a lack of relevant information. Thus, this event should be labeled as PoorScent, as the user is likely not finding what they need.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'one look dictionary search' implies an attempt to retrieve specific information, but if the previous events indicated issues with the content's relevance, it suggests the user is still struggling to find satisfactory results. Therefore, this should also be labeled as PoorScent, given the context of prior actions.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.29018497467041,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0183252349495888
+}

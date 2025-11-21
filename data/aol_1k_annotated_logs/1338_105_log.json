@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_105",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:20:01.914691",
+  "events": [
+    {
+      "session_id": "1338_105",
+      "event_id": "1338_105_qq-44",
+      "timestamp": "2006-04-01 18:10:30",
+      "action_type": "QUERY",
+      "content": "geroge mason university",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'geroge mason university...' suggests an initial search effort, but the presence of a malformed query indicates that there was likely confusion or a lack of clarity in the intended search. Therefore, rather than showing clear intent, it reflects poor information scent which may lead to a reformulation or abandonment of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9459484100341797,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:20:37.992405"
+    },
+    {
+      "session_id": "1338_105",
+      "event_id": "1338_105_qq-44_serp",
+      "timestamp": "2006-04-01 18:10:30",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: julie mason, mason jennings, the masonic (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results indicates an attempt to gather more information, but if the results primarily feature irrelevant items like 'julie mason' and 'mason jennings', it suggests that the user is not finding what they need. This could lead to a decision to leave the patch due to insufficient relevant results, rather than an indication of following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9778335675597191,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:20:37.992417"
+    },
+    {
+      "session_id": "1338_105",
+      "event_id": "1338_105_qq-44_cd-1454",
+      "timestamp": "2006-04-01 18:10:30",
+      "action_type": "CLICK",
+      "content": "george mason",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'george mason...' is ambiguous without additional context about whether the clicked result was relevant or satisfactory. If the initial query was malformed, the click might reflect an attempt to salvage the search, but not necessarily a strong intent. This suggests that the scent was not rich enough to indicate a successful foraging behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9900042228400707,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:20:37.992422"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.16538405418396,
+      "decisions": [
+        {
+          "event_id": "1338_105_qq-44",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_105_qq-44_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_105_qq-44_cd-1454",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.398890972137451,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'geroge mason university...' suggests an initial search effort, but the presence of a malformed query indicates that there was likely confusion or a lack of clarity in the intended search. Therefore, rather than showing clear intent, it reflects poor information scent which may lead to a reformulation or abandonment of the search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of viewing 10 results indicates an attempt to gather more information, but if the results primarily feature irrelevant items like 'julie mason' and 'mason jennings', it suggests that the user is not finding what they need. This could lead to a decision to leave the patch due to insufficient relevant results, rather than an indication of following a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'george mason...' is ambiguous without additional context about whether the clicked result was relevant or satisfactory. If the initial query was malformed, the click might reflect an attempt to salvage the search, but not necessarily a strong intent. This suggests that the scent was not rich enough to indicate a successful foraging behavior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.216189861297607,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9900042228400707
+}

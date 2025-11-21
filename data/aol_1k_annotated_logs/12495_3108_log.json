@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3108",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:49:54.385336",
+  "events": [
+    {
+      "session_id": "12495_3108",
+      "event_id": "12495_3108_qq-1622",
+      "timestamp": "2006-04-02 22:13:28",
+      "action_type": "QUERY",
+      "content": "great race of agoura",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'great race of agoura...' does not display a well-formed intent or a clear direction. Instead, the presence of an analysis error suggests that the user might have encountered a technical issue or was unsure about their search, leading to a lack of promising scent. A more appropriate label would be PoorScent, as it indicates that the user did not find the initial query fruitful.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8966767072677613,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:50:33.944814"
+    },
+    {
+      "session_id": "12495_3108",
+      "event_id": "12495_3108_qq-1622_serp",
+      "timestamp": "2006-04-02 22:13:28",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: great yarmouth racecourse great yarmouth races, www great race com, great texas balloon race (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without clear engagement or clicks suggests that the user was not satisfied with the information presented. Since the user's query did not lead to any clicks on the SERP results, it indicates a lack of promising scent, which aligns more closely with LeavingPatch than FollowingScent. The user is likely reconsidering their approach to the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9891513608396053,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:50:33.944825"
+    },
+    {
+      "session_id": "12495_3108",
+      "event_id": "12495_3108_qq-1622_cd-9623",
+      "timestamp": "2006-04-02 22:13:28",
+      "action_type": "CLICK",
+      "content": "great race los angeles half marathon 10 k 5 k run the dole great race agoura hills pacific half marathon che s ebro half marathon 10 k 5 k 1 mile fun run 32 nd annual agoura hills california",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a long and detailed result suggests that the user was intrigued by the content and sought further information. This aligns with the concept of ApproachingSource, indicating that the user was following a scent that seemed promising enough to warrant exploration. While the label FollowingScent could apply, ApproachingSource more accurately reflects the user's action of clicking on a specific result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0220166176557541,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:50:33.944829"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.587068796157837,
+      "decisions": [
+        {
+          "event_id": "12495_3108_qq-1622",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3108_qq-1622_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3108_qq-1622_cd-9623",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.3982319831848145,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'great race of agoura...' does not display a well-formed intent or a clear direction. Instead, the presence of an analysis error suggests that the user might have encountered a technical issue or was unsure about their search, leading to a lack of promising scent. A more appropriate label would be PoorScent, as it indicates that the user did not find the initial query fruitful.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without clear engagement or clicks suggests that the user was not satisfied with the information presented. Since the user's query did not lead to any clicks on the SERP results, it indicates a lack of promising scent, which aligns more closely with LeavingPatch than FollowingScent. The user is likely reconsidering their approach to the search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a long and detailed result suggests that the user was intrigued by the content and sought further information. This aligns with the concept of ApproachingSource, indicating that the user was following a scent that seemed promising enough to warrant exploration. While the label FollowingScent could apply, ApproachingSource more accurately reflects the user's action of clicking on a specific result.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.199944972991943,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0220166176557541
+}

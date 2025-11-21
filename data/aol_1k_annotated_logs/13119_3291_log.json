@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3291",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:33:29.166675",
+  "events": [
+    {
+      "session_id": "13119_3291",
+      "event_id": "13119_3291_qq-1777",
+      "timestamp": "2006-03-02 12:08:55",
+      "action_type": "QUERY",
+      "content": "wheel of fortune spin number",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'wheel of fortune spin number...' lacks specificity and clarity, indicating that the user may not find satisfactory results. The presence of an invalid control character suggests the user may have encountered technical issues or confusion, leading to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9119080007076263,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:02.074649"
+    },
+    {
+      "session_id": "13119_3291",
+      "event_id": "13119_3291_qq-1777_serp",
+      "timestamp": "2006-03-02 12:08:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: wheel of fortune fan wheel of fortune fan, wheels of chance wheels of fortune custom wheels promotional wheels, wheel of fortune america s game wheel watchers club (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without clear engagement (e.g., no clicks) demonstrates that the user is likely dissatisfied with the options available, suggesting they are in a state of searching without finding relevant information, leading them toward leaving the current patch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0116661995649339,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:02.074667"
+    },
+    {
+      "session_id": "13119_3291",
+      "event_id": "13119_3291_qq-1777_cd-5005",
+      "timestamp": "2006-03-02 12:08:55",
+      "action_type": "CLICK",
+      "content": "wheel of fortune america s game wheel watchers club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'wheel of fortune america s game wheel watchers club' indicates an attempt to investigate a potentially relevant source based on the title/snippet. However, the previous events suggest the user was not satisfied with their options, indicating they were not necessarily following a strong scent but rather trying to salvage their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9711998671293258,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:34:02.074675"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.124380111694336,
+      "decisions": [
+        {
+          "event_id": "13119_3291_qq-1777",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3291_qq-1777_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3291_qq-1777_cd-5005",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.593916893005371,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'wheel of fortune spin number...' lacks specificity and clarity, indicating that the user may not find satisfactory results. The presence of an invalid control character suggests the user may have encountered technical issues or confusion, leading to a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without clear engagement (e.g., no clicks) demonstrates that the user is likely dissatisfied with the options available, suggesting they are in a state of searching without finding relevant information, leading them toward leaving the current patch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'wheel of fortune america s game wheel watchers club' indicates an attempt to investigate a potentially relevant source based on the title/snippet. However, the previous events suggest the user was not satisfied with their options, indicating they were not necessarily following a strong scent but rather trying to salvage their search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.900463104248047,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0116661995649339
+}

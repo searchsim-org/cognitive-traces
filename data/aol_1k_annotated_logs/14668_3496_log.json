@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3496",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:45:45.846645",
+  "events": [
+    {
+      "session_id": "14668_3496",
+      "event_id": "14668_3496_qq-1955",
+      "timestamp": "2006-05-18 13:14:54",
+      "action_type": "QUERY",
+      "content": "fun things to do in northeast ohio",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fun things to do in northeast ohio...' does not indicate a well-formed targeted query since it lacks specificity and may not lead to relevant results. The presence of an invalid control character could also suggest that the user is experiencing difficulty in framing their query, leading to a lack of promising results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.951680937409401,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:13.245661"
+    },
+    {
+      "session_id": "14668_3496",
+      "event_id": "14668_3496_qq-1955_serp",
+      "timestamp": "2006-05-18 13:14:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tour canada fun things to do, top fun things to do in miami frost science aquarium planetarium best things to do, fun things to do in virginia vacation packages virginia (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any suggests that the user did not find the information scent strong enough to pursue any of the options presented. This indicates a potential abandoning of the search rather than a successful following of a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9848001226782799,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:13.245672"
+    },
+    {
+      "session_id": "14668_3496",
+      "event_id": "14668_3496_qq-1955_cd-11401",
+      "timestamp": "2006-05-18 13:14:54",
+      "action_type": "CLICK",
+      "content": "welcome to things to do things to do",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'welcome to things to do things to do...' suggests that the user may have been led by poor or misleading information scent, as the title appears vague and repetitive, indicating a lack of targeted intent or satisfaction with the previous results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9958107247948647,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:13.245676"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.24450421333313,
+      "decisions": [
+        {
+          "event_id": "14668_3496_qq-1955",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3496_qq-1955_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3496_qq-1955_cd-11401",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.276083946228027,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fun things to do in northeast ohio...' does not indicate a well-formed targeted query since it lacks specificity and may not lead to relevant results. The presence of an invalid control character could also suggest that the user is experiencing difficulty in framing their query, leading to a lack of promising results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without engaging with any suggests that the user did not find the information scent strong enough to pursue any of the options presented. This indicates a potential abandoning of the search rather than a successful following of a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'welcome to things to do things to do...' suggests that the user may have been led by poor or misleading information scent, as the title appears vague and repetitive, indicating a lack of targeted intent or satisfaction with the previous results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.739797115325928,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9958107247948647
+}

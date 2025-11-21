@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2262",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:47:45.926154",
+  "events": [
+    {
+      "session_id": "10008_2262",
+      "event_id": "10008_2262_qq-1173",
+      "timestamp": "2006-03-12 16:14:27",
+      "action_type": "QUERY",
+      "content": "cape cod real estate.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query provided does not demonstrate a strong intent to proceed with a focused search, as indicated by the presence of an invalid control character. This suggests a failure in forming a coherent query, leading to a lack of promising scent to follow.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8758347749710083,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:48:27.708638"
+    },
+    {
+      "session_id": "10008_2262",
+      "event_id": "10008_2262_qq-1173_serp",
+      "timestamp": "2006-03-12 16:14:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cape cod real estate, cape cod real estate cape cod homes cape cod vacation rentals, cape cod real estate com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the presence of invalid control characters in the content suggests that the information presented was not clear or relevant, indicating a lack of strong information scent. The user likely did not find any results compelling enough to encourage further investigation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.889620590209961,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:48:27.708644"
+    },
+    {
+      "session_id": "10008_2262",
+      "event_id": "10008_2262_qq-1173_cd-7822",
+      "timestamp": "2006-03-12 16:14:27",
+      "action_type": "CLICK",
+      "content": "cape cod real estate com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the result does not indicate a successful foraging effort due to the existing issue with the query content. The invalid control character implies that the user may have clicked out of confusion or misinterpretation rather than a targeted search intent, thus reflecting poor scent rather than following a clear path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8829135179519654,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:48:27.708646"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.795419931411743,
+      "decisions": [
+        {
+          "event_id": "10008_2262_qq-1173",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2262_qq-1173_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2262_qq-1173_cd-7822",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.934903621673584,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query provided does not demonstrate a strong intent to proceed with a focused search, as indicated by the presence of an invalid control character. This suggests a failure in forming a coherent query, leading to a lack of promising scent to follow.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed multiple results, the presence of invalid control characters in the content suggests that the information presented was not clear or relevant, indicating a lack of strong information scent. The user likely did not find any results compelling enough to encourage further investigation.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on the result does not indicate a successful foraging effort due to the existing issue with the query content. The invalid control character implies that the user may have clicked out of confusion or misinterpretation rather than a targeted search intent, thus reflecting poor scent rather than following a clear path.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.685631036758423,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.889620590209961
+}

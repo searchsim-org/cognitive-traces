@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2945",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:08:38.020792",
+  "events": [
+    {
+      "session_id": "12211_2945",
+      "event_id": "12211_2945_qq-1521",
+      "timestamp": "2006-03-22 13:53:56",
+      "action_type": "QUERY",
+      "content": "sams club",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The contents of the query 'sams club...' are vague and lack specificity, suggesting the user may not have a clear intent. The fact that the analyst noted an analysis error indicates that the query did not lead to expected results, aligning with a poor scent rather than a strong, targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8565695524215697,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:09:24.206535"
+    },
+    {
+      "session_id": "12211_2945",
+      "event_id": "12211_2945_qq-1521_serp",
+      "timestamp": "2006-03-22 13:53:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home page sam s club com auctions, www sam s club member services com, www good sam club com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, which typically indicates indecision or dissatisfaction with the presented options. This suggests the user is likely leaving the patch to refine their search or seek better options, rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9760884881019593,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:09:24.206552"
+    },
+    {
+      "session_id": "12211_2945",
+      "event_id": "12211_2945_qq-1521_cd-6267",
+      "timestamp": "2006-03-22 13:53:56",
+      "action_type": "CLICK",
+      "content": "sam s club find wholesale clubs near you or shop online",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's click on the result implies a desire to investigate further rather than a strong scent-driven search intent. The content of the clicked item is general and may not directly address the user's needs, suggesting they are approaching a source without a clear scent rather than actively following one.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0154968902468682,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:09:24.206558"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.65934705734253,
+      "decisions": [
+        {
+          "event_id": "12211_2945_qq-1521",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2945_qq-1521_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2945_qq-1521_cd-6267",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.454569339752197,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The contents of the query 'sams club...' are vague and lack specificity, suggesting the user may not have a clear intent. The fact that the analyst noted an analysis error indicates that the query did not lead to expected results, aligning with a poor scent rather than a strong, targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, which typically indicates indecision or dissatisfaction with the presented options. This suggests the user is likely leaving the patch to refine their search or seek better options, rather than following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user's click on the result implies a desire to investigate further rather than a strong scent-driven search intent. The content of the clicked item is general and may not directly address the user's needs, suggesting they are approaching a source without a clear scent rather than actively following one.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.992103099822998,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0154968902468682
+}

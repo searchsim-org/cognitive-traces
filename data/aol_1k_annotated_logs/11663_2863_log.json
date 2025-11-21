@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2863",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:01:54.346079",
+  "events": [
+    {
+      "session_id": "11663_2863",
+      "event_id": "11663_2863_qq-1491",
+      "timestamp": "2006-03-14 00:42:02",
+      "action_type": "QUERY",
+      "content": "cruises",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cruises...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction in their search. This likely indicates a poor information scent, prompting a need for re-evaluation rather than indicating a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9635546714067459,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:02:35.397806"
+    },
+    {
+      "session_id": "11663_2863",
+      "event_id": "11663_2863_qq-1491_serp",
+      "timestamp": "2006-03-14 00:42:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mystic blue cruises chicago mystic blue cruises, cruise toronto corporate wedding dinner boat cruises, dinner cruises charters sightseeing tours entertainment cruises (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with a variety of cruise-related keywords suggests the user is still exploring options and looking for relevant information. This is indicative of approaching potential sources rather than a clear follow-through with a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9867471694946289,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:02:35.397819"
+    },
+    {
+      "session_id": "11663_2863",
+      "event_id": "11663_2863_qq-1491_cd-8979",
+      "timestamp": "2006-03-14 00:42:02",
+      "action_type": "CLICK",
+      "content": "royal caribbean cruises vacations and cruise deals",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result titled 'royal caribbean cruises vacations and cruise deals' suggests that the user is seeking further information based on the perceived relevance of the title. This reflects an attempt to approach a source rather than a clear following of a scent, signifying the user is still in the exploratory phase.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0125554621219635,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:02:35.397824"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.355939149856567,
+      "decisions": [
+        {
+          "event_id": "11663_2863_qq-1491",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2863_qq-1491_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2863_qq-1491_cd-8979",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.839326858520508,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cruises...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction in their search. This likely indicates a poor information scent, prompting a need for re-evaluation rather than indicating a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results with a variety of cruise-related keywords suggests the user is still exploring options and looking for relevant information. This is indicative of approaching potential sources rather than a clear follow-through with a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result titled 'royal caribbean cruises vacations and cruise deals' suggests that the user is seeking further information based on the perceived relevance of the title. This reflects an attempt to approach a source rather than a clear following of a scent, signifying the user is still in the exploratory phase.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.606183052062988,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0125554621219635
+}

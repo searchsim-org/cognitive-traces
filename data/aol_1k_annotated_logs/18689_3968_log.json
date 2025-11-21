@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3968",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:17:09.446308",
+  "events": [
+    {
+      "session_id": "18689_3968",
+      "event_id": "18689_3968_qq-2232",
+      "timestamp": "2006-03-07 07:08:32",
+      "action_type": "QUERY",
+      "content": "sams wholesale club",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'sams wholesale club...' appears vague and lacks specificity, indicating that they are not strongly motivated by a clear intent. This suggests that the user may have found the initial search results unsatisfactory, leading them to issue a new query without any clicks. The presence of an error message further supports the idea that the user is struggling to find relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9555253475904465,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:17:38.248929"
+    },
+    {
+      "session_id": "18689_3968",
+      "event_id": "18689_3968_qq-2232_serp",
+      "timestamp": "2006-03-07 07:08:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sam s club, sam s club find wholesale clubs near you or shop online, sam s club find wholesale clubs near you or shop online (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 search results but did not click on any of them, indicating that the information scent from the titles and snippets was not strong enough to warrant further investigation. This aligns more with the 'PoorScent' label, as the user likely did not find the results compelling or relevant to their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9704655706882477,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:17:38.248947"
+    },
+    {
+      "session_id": "18689_3968",
+      "event_id": "18689_3968_qq-2232_cd-6267",
+      "timestamp": "2006-03-07 07:08:32",
+      "action_type": "CLICK",
+      "content": "sam s club find wholesale clubs near you or shop online",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, it appears that they may not have found the information satisfactory, as indicated by the previously mentioned issues with search results and the lack of engagement with other snippets. This suggests a potential frustration that could lead to leaving the search session altogether, rather than being labeled as 'FollowingScent' which assumes a clear and successful path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9798152446746826,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:17:38.248955"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.778329849243164,
+      "decisions": [
+        {
+          "event_id": "18689_3968_qq-2232",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3968_qq-2232_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3968_qq-2232_cd-6267",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.478999137878418,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'sams wholesale club...' appears vague and lacks specificity, indicating that they are not strongly motivated by a clear intent. This suggests that the user may have found the initial search results unsatisfactory, leading them to issue a new query without any clicks. The presence of an error message further supports the idea that the user is struggling to find relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 search results but did not click on any of them, indicating that the information scent from the titles and snippets was not strong enough to warrant further investigation. This aligns more with the 'PoorScent' label, as the user likely did not find the results compelling or relevant to their needs.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user clicked on a result, it appears that they may not have found the information satisfactory, as indicated by the previously mentioned issues with search results and the lack of engagement with other snippets. This suggests a potential frustration that could lead to leaving the search session altogether, rather than being labeled as 'FollowingScent' which assumes a clear and successful path.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.24032187461853,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9798152446746826
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4062",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:08:51.123335",
+  "events": [
+    {
+      "session_id": "19162_4062",
+      "event_id": "19162_4062_qq-2339",
+      "timestamp": "2006-05-21 12:05:42",
+      "action_type": "QUERY",
+      "content": "fashion rock",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fashion rock...' lacks specificity and does not indicate a clear intent. The mention of an 'invalid control character' suggests a potential error in the query, which could lead to a lack of effective scent for the user. Therefore, it is more indicative of poor scent rather than following a clear scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8789240479469299,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:27.014388"
+    },
+    {
+      "session_id": "19162_4062",
+      "event_id": "19162_4062_qq-2339_serp",
+      "timestamp": "2006-05-21 12:05:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www fashion rock now com, sarah 039 s fashions rock and roll fashion gear bargain brute com, fashion fashion collection (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not engage further with any of them. This suggests that the user did not find the information satisfactory or relevant enough to click, indicating that they might have been considering leaving the search session without finding useful information, rather than continuing to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9733857035636901,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:27.014408"
+    },
+    {
+      "session_id": "19162_4062",
+      "event_id": "19162_4062_qq-2339_cd-13857",
+      "timestamp": "2006-05-21 12:05:42",
+      "action_type": "CLICK",
+      "content": "www fashion rock now com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www fashion rock now com' does not necessarily indicate following a strong scent, especially given the previous events indicating a lack of clarity and effectiveness in the user's search strategy. This click could be a desperate attempt to find something relevant after an unsatisfactory search, suggesting a potential exit from the patch rather than a successful scent-following.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9864152401685715,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:27.014415"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.78368592262268,
+      "decisions": [
+        {
+          "event_id": "19162_4062_qq-2339",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4062_qq-2339_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4062_qq-2339_cd-13857",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.136255264282227,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fashion rock...' lacks specificity and does not indicate a clear intent. The mention of an 'invalid control character' suggests a potential error in the query, which could lead to a lack of effective scent for the user. Therefore, it is more indicative of poor scent rather than following a clear scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not engage further with any of them. This suggests that the user did not find the information satisfactory or relevant enough to click, indicating that they might have been considering leaving the search session without finding useful information, rather than continuing to follow a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on 'www fashion rock now com' does not necessarily indicate following a strong scent, especially given the previous events indicating a lack of clarity and effectiveness in the user's search strategy. This click could be a desperate attempt to find something relevant after an unsatisfactory search, suggesting a potential exit from the patch rather than a successful scent-following.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.62256383895874,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9864152401685715
+}

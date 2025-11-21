@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3815",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:59:25.744996",
+  "events": [
+    {
+      "session_id": "17545_3815",
+      "event_id": "17545_3815_qq-2180",
+      "timestamp": "2006-03-24 17:52:00",
+      "action_type": "QUERY",
+      "content": "deals gap",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'deals gap...' lacks specificity and is vague, indicating that the user may not have a clear target or intent. This suggests that the user is not following a strong scent but rather struggling to articulate their information need, thus classifying it as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9854275315999985,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:56.081016"
+    },
+    {
+      "session_id": "17545_3815",
+      "event_id": "17545_3815_qq-2180_serp",
+      "timestamp": "2006-03-24 17:52:00",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www deals gap forum com, gaps n, gaps c (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple search results without further engagement (clicking) may indicate the user is not finding relevant information and is likely to abandon the search, rather than following a scent. This behavior aligns more with LeavingPatch, as it suggests a lack of satisfactory options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9925406537950039,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:56.081022"
+    },
+    {
+      "session_id": "17545_3815",
+      "event_id": "17545_3815_qq-2180_cd-12860",
+      "timestamp": "2006-03-24 17:52:00",
+      "action_type": "CLICK",
+      "content": "www deals gap forum com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on the link 'www deals gap forum com...' but this action does not necessarily signify that they were following a strong scent. Without context on the user's information need or intent, it is more appropriate to label this as ApproachingSource, indicating curiosity or interest rather than a well-formed intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0117942601442338,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:59:56.081025"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.061915874481201,
+      "decisions": [
+        {
+          "event_id": "17545_3815_qq-2180",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3815_qq-2180_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3815_qq-2180_cd-12860",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.873369932174683,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'deals gap...' lacks specificity and is vague, indicating that the user may not have a clear target or intent. This suggests that the user is not following a strong scent but rather struggling to articulate their information need, thus classifying it as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple search results without further engagement (clicking) may indicate the user is not finding relevant information and is likely to abandon the search, rather than following a scent. This behavior aligns more with LeavingPatch, as it suggests a lack of satisfactory options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on the link 'www deals gap forum com...' but this action does not necessarily signify that they were following a strong scent. Without context on the user's information need or intent, it is more appropriate to label this as ApproachingSource, indicating curiosity or interest rather than a well-formed intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.968034029006958,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0117942601442338
+}

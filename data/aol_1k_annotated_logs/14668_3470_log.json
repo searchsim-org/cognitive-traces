@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3470",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:26:05.121230",
+  "events": [
+    {
+      "session_id": "14668_3470",
+      "event_id": "14668_3470_qq-1933",
+      "timestamp": "2006-04-21 07:29:59",
+      "action_type": "QUERY",
+      "content": "medical mutual of ohio",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'medical mutual of ohio...' lacks specificity and does not demonstrate clear intent. The presence of an analysis error suggests that the user may not have found relevant information, indicative of a poor scent leading to a need for reformulation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.915482497215271,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:26:43.817216"
+    },
+    {
+      "session_id": "14668_3470",
+      "event_id": "14668_3470_qq-1933_serp",
+      "timestamp": "2006-04-21 07:29:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: medical mutual, ohio health insurance plans medical mutual home, ohio health insurance plans medical mutual home (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results implies a search for more information, but it does not indicate a strong intent to follow a specific scent. The user may be browsing through results without a clear target in mind, suggesting a lower level of intent than what 'FollowingScent' implies.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0232967257499694,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:26:43.817237"
+    },
+    {
+      "session_id": "14668_3470",
+      "event_id": "14668_3470_qq-1933_cd-11341",
+      "timestamp": "2006-04-21 07:29:59",
+      "action_type": "CLICK",
+      "content": "ohio health insurance plans medical mutual home",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not necessarily indicate that the user was following a strong scent, especially if the previous query was vague or poorly formed. The click could be exploratory rather than indicative of a focused search, aligning more with 'LeavingPatch' if it leads to further confusion or dissatisfaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9757311552762985,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:26:43.817244"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.7474422454834,
+      "decisions": [
+        {
+          "event_id": "14668_3470_qq-1933",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3470_qq-1933_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3470_qq-1933_cd-11341",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.894032955169678,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'medical mutual of ohio...' lacks specificity and does not demonstrate clear intent. The presence of an analysis error suggests that the user may not have found relevant information, indicative of a poor scent leading to a need for reformulation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing multiple results implies a search for more information, but it does not indicate a strong intent to follow a specific scent. The user may be browsing through results without a clear target in mind, suggesting a lower level of intent than what 'FollowingScent' implies.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result does not necessarily indicate that the user was following a strong scent, especially if the previous query was vague or poorly formed. The click could be exploratory rather than indicative of a focused search, aligning more with 'LeavingPatch' if it leads to further confusion or dissatisfaction.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.832605123519897,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0232967257499694
+}

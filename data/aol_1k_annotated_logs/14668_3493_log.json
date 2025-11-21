@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3493",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:43:48.670318",
+  "events": [
+    {
+      "session_id": "14668_3493",
+      "event_id": "14668_3493_qq-1951",
+      "timestamp": "2006-05-10 12:20:54",
+      "action_type": "QUERY",
+      "content": "personalized golf balls",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'personalized golf balls...' lacks specificity and does not indicate a clear target. The presence of an invalid control character suggests that the query may have been malformed or uninformative, leading to uncertainty about the user's intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8963103055953979,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:44:24.925330"
+    },
+    {
+      "session_id": "14668_3493",
+      "event_id": "14668_3493_qq-1951_serp",
+      "timestamp": "2006-05-10 12:20:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: personalized imprinted golf balls, golf balls personalized and custom golf balls from top brands golf balls com, custom logo golf balls personalized golf tees rush service (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any clicks indicates that the user did not find the presented options satisfactory or relevant. This suggests that the user is likely experiencing a lack of promising scent, leading them to consider abandoning the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9858122736215591,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:44:24.925341"
+    },
+    {
+      "session_id": "14668_3493",
+      "event_id": "14668_3493_qq-1951_cd-11390",
+      "timestamp": "2006-05-10 12:20:54",
+      "action_type": "CLICK",
+      "content": "personalized imprinted golf balls",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'personalized imprinted golf balls...' suggests that this item was selected based on its perceived relevance, indicating that the user was attempting to engage with a specific source that seemed promising, rather than continuing a successful foraging pattern.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9979542165994644,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:44:24.925346"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.785329103469849,
+      "decisions": [
+        {
+          "event_id": "14668_3493_qq-1951",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3493_qq-1951_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3493_qq-1951_cd-11390",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.470818042755127,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'personalized golf balls...' lacks specificity and does not indicate a clear target. The presence of an invalid control character suggests that the query may have been malformed or uninformative, leading to uncertainty about the user's intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without any clicks indicates that the user did not find the presented options satisfactory or relevant. This suggests that the user is likely experiencing a lack of promising scent, leading them to consider abandoning the search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'personalized imprinted golf balls...' suggests that this item was selected based on its perceived relevance, indicating that the user was attempting to engage with a specific source that seemed promising, rather than continuing a successful foraging pattern.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.715176105499268,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9979542165994644
+}

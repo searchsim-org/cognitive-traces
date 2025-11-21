@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3633",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:15:31.907879",
+  "events": [
+    {
+      "session_id": "14987_3633",
+      "event_id": "14987_3633_qq-2012",
+      "timestamp": "2006-05-21 20:32:18",
+      "action_type": "QUERY",
+      "content": "gangland",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's initial query 'gangland...' lacks specificity and does not demonstrate a clear intent to search for targeted information, which is indicative of poor scent. The invalid control character suggests a malfunction or error that might lead to dissatisfaction, making it unlikely that the user felt they were on the right track.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8355215072631836,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:16:17.673113"
+    },
+    {
+      "session_id": "14987_3633",
+      "event_id": "14987_3633_qq-2012_serp",
+      "timestamp": "2006-05-21 20:32:18",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: gangland victims, gangland net, america s expert on organized crime gangland news (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the titles suggest a lack of clarity in the search intent. The presence of an invalid control character in the previous query likely indicates that the initial search did not yield strong scent, leading to a futile exploration of results, thus aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9511538922786713,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:16:17.673132"
+    },
+    {
+      "session_id": "14987_3633",
+      "event_id": "14987_3633_qq-2012_cd-11537",
+      "timestamp": "2006-05-21 20:32:18",
+      "action_type": "CLICK",
+      "content": "america s expert on organized crime gangland news",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result indicates an attempt to find more information, but given the context of the prior events, it may be more reflective of a search based on weak scent rather than a strong, intentional search. The invalid control character suggests the user may not have had a clear idea of what they needed, leading to an attempt at exploration rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8813778519630432,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:16:17.673143"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.95644998550415,
+      "decisions": [
+        {
+          "event_id": "14987_3633_qq-2012",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3633_qq-2012_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3633_qq-2012_cd-11537",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.985904932022095,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's initial query 'gangland...' lacks specificity and does not demonstrate a clear intent to search for targeted information, which is indicative of poor scent. The invalid control character suggests a malfunction or error that might lead to dissatisfaction, making it unlikely that the user felt they were on the right track.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Although the user viewed multiple results, the titles suggest a lack of clarity in the search intent. The presence of an invalid control character in the previous query likely indicates that the initial search did not yield strong scent, leading to a futile exploration of results, thus aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a result indicates an attempt to find more information, but given the context of the prior events, it may be more reflective of a search based on weak scent rather than a strong, intentional search. The invalid control character suggests the user may not have had a clear idea of what they needed, leading to an attempt at exploration rather than a targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.50525212287903,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9511538922786713
+}

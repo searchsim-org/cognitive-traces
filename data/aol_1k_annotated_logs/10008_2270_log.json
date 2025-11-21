@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2270",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:52:56.539925",
+  "events": [
+    {
+      "session_id": "10008_2270",
+      "event_id": "10008_2270_qq-1181",
+      "timestamp": "2006-03-22 09:49:56",
+      "action_type": "QUERY",
+      "content": "boston.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query but received an error indicating that the information scent was poor, as they could not proceed due to a control character issue. A query with an invalid character suggests that the user did not find promising content, leading to a lack of engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8429341197013855,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:53:34.627481"
+    },
+    {
+      "session_id": "10008_2270",
+      "event_id": "10008_2270_qq-1181_serp",
+      "timestamp": "2006-03-22 09:49:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: boston history info boston history resources and information, gymnastics academy of boston gymnastics academy of boston, shalom boston jewish resources boston ma new england (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the presence of an error in the initial analysis suggests that the results may not have aligned well with their information needs, indicating a lack of effective scent. This viewing behavior does not imply strong intent but rather an attempt to find better options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9321018695831299,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:53:34.627562"
+    },
+    {
+      "session_id": "10008_2270",
+      "event_id": "10008_2270_qq-1181_cd-2529",
+      "timestamp": "2006-03-22 09:49:56",
+      "action_type": "CLICK",
+      "content": "local boston breaking news sports weather and events boston com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result may indicate some interest, but the previous errors suggest that the user was likely frustrated with the lack of relevant content. This could lead to abandoning the search if the clicked result did not meet expectations, reflecting a possible end to their search session.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9627120047807693,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:53:34.627574"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.759305000305176,
+      "decisions": [
+        {
+          "event_id": "10008_2270_qq-1181",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2270_qq-1181_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2270_qq-1181_cd-2529",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.800562858581543,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query but received an error indicating that the information scent was poor, as they could not proceed due to a control character issue. A query with an invalid character suggests that the user did not find promising content, leading to a lack of engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed multiple results, the presence of an error in the initial analysis suggests that the results may not have aligned well with their information needs, indicating a lack of effective scent. This viewing behavior does not imply strong intent but rather an attempt to find better options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result may indicate some interest, but the previous errors suggest that the user was likely frustrated with the lack of relevant content. This could lead to abandoning the search if the clicked result did not meet expectations, reflecting a possible end to their search session.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.218127012252808,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9627120047807693
+}

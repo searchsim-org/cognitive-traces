@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3273",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:20:48.023314",
+  "events": [
+    {
+      "session_id": "13112_3273",
+      "event_id": "13112_3273_qq-1754",
+      "timestamp": "2006-05-10 07:03:00",
+      "action_type": "QUERY",
+      "content": "pressure drop in copper pipe",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pressure drop in copper pipe...' appears to be vague and does not demonstrate a well-formed, targeted intent. The mention of an analysis error suggests that the user may not have received relevant information or guidance, leading to a lack of promising scent in their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8989432215690613,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:21:28.668820"
+    },
+    {
+      "session_id": "13112_3273",
+      "event_id": "13112_3273_qq-1754_serp",
+      "timestamp": "2006-05-10 07:03:00",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pie la sze k research drag drop physics, wholesale hub find compare wholesale suppliers drop shippers, specialty industrial copper wire cable distributor austin texas (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed in the SERP, which includes seemingly unrelated terms, indicates that the user is not finding effective matches for their query. They may have viewed multiple results without finding a relevant source, reflecting a lack of promising scent rather than a strong targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9806393533945084,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:21:28.668827"
+    },
+    {
+      "session_id": "13112_3273",
+      "event_id": "13112_3273_qq-1754_cd-8102",
+      "timestamp": "2006-05-10 07:03:00",
+      "action_type": "CLICK",
+      "content": "official site of copper development association inc usa",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on the official site of the copper development association, the prior events suggest confusion or lack of clarity in their search intent. This click does not indicate a strong information scent but rather a potential exploration stemming from poor results in previous steps.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9530675709247589,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:21:28.668830"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.57514977455139,
+      "decisions": [
+        {
+          "event_id": "13112_3273_qq-1754",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3273_qq-1754_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3273_qq-1754_cd-8102",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.222385883331299,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pressure drop in copper pipe...' appears to be vague and does not demonstrate a well-formed, targeted intent. The mention of an analysis error suggests that the user may not have received relevant information or guidance, leading to a lack of promising scent in their search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content viewed in the SERP, which includes seemingly unrelated terms, indicates that the user is not finding effective matches for their query. They may have viewed multiple results without finding a relevant source, reflecting a lack of promising scent rather than a strong targeted search.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on the official site of the copper development association, the prior events suggest confusion or lack of clarity in their search intent. This click does not indicate a strong information scent but rather a potential exploration stemming from poor results in previous steps.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.516671895980835,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9806393533945084
+}

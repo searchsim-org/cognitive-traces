@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_226",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:13:34.770590",
+  "events": [
+    {
+      "session_id": "1927_226",
+      "event_id": "1927_226_qq-98",
+      "timestamp": "2006-03-04 17:05:10",
+      "action_type": "QUERY",
+      "content": "dlp tv",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'dlp tv...' indicates the user might not have a clear direction or intent, especially with an incomplete term. This suggests they are not following a strong scent, but rather struggling to find relevant information, which aligns with the PoorScent label. The analyst's reasoning does not address the user's intent adequately.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9448454856872559,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:00.562141"
+    },
+    {
+      "session_id": "1927_226",
+      "event_id": "1927_226_qq-98_serp",
+      "timestamp": "2006-03-04 17:05:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www d lp tv review com, the lp tv store com, www d lp com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did so without a clear, targeted query or focus. The mention of 'Invalid control character' suggests the results may not meet the user's needs, indicating a lack of promising scent. Thus, this is better categorized as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9036197304725647,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:00.562161"
+    },
+    {
+      "session_id": "1927_226",
+      "event_id": "1927_226_qq-98_cd-1728",
+      "timestamp": "2006-03-04 17:05:10",
+      "action_type": "CLICK",
+      "content": "www d lp tv review com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The act of clicking on a link without a clear, targeted query suggests the user is still in search of relevant information but is unable to find it effectively. This aligns more with PoorScent as the click does not indicate a successful search, especially given the lack of a strong query or focus.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9974457502365113,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:14:00.562250"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.483327150344849,
+      "decisions": [
+        {
+          "event_id": "1927_226_qq-98",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_226_qq-98_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_226_qq-98_cd-1728",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.746799945831299,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'dlp tv...' indicates the user might not have a clear direction or intent, especially with an incomplete term. This suggests they are not following a strong scent, but rather struggling to find relevant information, which aligns with the PoorScent label. The analyst's reasoning does not address the user's intent adequately.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but did so without a clear, targeted query or focus. The mention of 'Invalid control character' suggests the results may not meet the user's needs, indicating a lack of promising scent. Thus, this is better categorized as PoorScent rather than FollowingScent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The act of clicking on a link without a clear, targeted query suggests the user is still in search of relevant information but is unable to find it effectively. This aligns more with PoorScent as the click does not indicate a successful search, especially given the lack of a strong query or focus.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.341417789459229,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9974457502365113
+}

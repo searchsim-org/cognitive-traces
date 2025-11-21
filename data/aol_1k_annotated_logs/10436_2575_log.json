@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2575",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:16:19.565743",
+  "events": [
+    {
+      "session_id": "10436_2575",
+      "event_id": "10436_2575_qq-80",
+      "timestamp": "2006-03-09 20:38:56",
+      "action_type": "QUERY",
+      "content": "walmart",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'walmart...' lacks specificity and does not indicate strong intent. The presence of an invalid control character suggests a poorly formed query, which typically aligns with a lack of promising scent, leading to the need for a new search. Thus, it should be labeled as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9542626321315766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:16:50.028419"
+    },
+    {
+      "session_id": "10436_2575",
+      "event_id": "10436_2575_qq-80_serp",
+      "timestamp": "2006-03-09 20:38:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www www walmart com, walmart com time online ws, www walmart workers rights org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing results from a query that was poorly formed (as indicated by the previous event) likely does not reflect a strong information scent. The analyst's label of FollowingScent does not account for the potential lack of relevance in the results viewed, which should be considered as PoorScent given the context.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.958548080921173,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:16:50.028442"
+    },
+    {
+      "session_id": "10436_2575",
+      "event_id": "10436_2575_qq-80_cd-382",
+      "timestamp": "2006-03-09 20:38:56",
+      "action_type": "CLICK",
+      "content": "walmart com save money live better",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the context of the initial query suggests that the user may not have had a clear intent or strong scent to follow. The click could reflect an attempt to explore the most promising option from a set of poor results, thus labeling it as ApproachingSource might be more fitting than FollowingScent due to the lack of clarity in intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0004997752606868,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:16:50.028448"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.747936010360718,
+      "decisions": [
+        {
+          "event_id": "10436_2575_qq-80",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2575_qq-80_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2575_qq-80_cd-382",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.208592891693115,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'walmart...' lacks specificity and does not indicate strong intent. The presence of an invalid control character suggests a poorly formed query, which typically aligns with a lack of promising scent, leading to the need for a new search. Thus, it should be labeled as PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing results from a query that was poorly formed (as indicated by the previous event) likely does not reflect a strong information scent. The analyst's label of FollowingScent does not account for the potential lack of relevance in the results viewed, which should be considered as PoorScent given the context.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the context of the initial query suggests that the user may not have had a clear intent or strong scent to follow. The click could reflect an attempt to explore the most promising option from a set of poor results, thus labeling it as ApproachingSource might be more fitting than FollowingScent due to the lack of clarity in intent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.403745889663696,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0004997752606868
+}

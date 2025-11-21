@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3413",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:45:53.472013",
+  "events": [
+    {
+      "session_id": "14668_3413",
+      "event_id": "14668_3413_qq-1877",
+      "timestamp": "2006-03-03 11:16:51",
+      "action_type": "QUERY",
+      "content": "contact lenses on line",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'contact lenses on line...' lacks specificity and may indicate that the user is unsure of what information they are seeking. The presence of an invalid control character suggests issues with the query itself, which may reflect a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9026652693748474,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:46:29.366458"
+    },
+    {
+      "session_id": "14668_3413",
+      "event_id": "14668_3413_qq-1877_serp",
+      "timestamp": "2006-03-03 11:16:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: full contact fighter, phoenix contact software, 1 800 contacts (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing a SERP with diverse results such as 'full contact fighter' and 'phoenix contact software' indicates a lack of focused intent. This suggests they are not effectively following a strong scent, but rather exploring a patch that is not relevant to their original query, indicating a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0050430051982402,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:46:29.366466"
+    },
+    {
+      "session_id": "14668_3413",
+      "event_id": "14668_3413_qq-1877_cd-11248",
+      "timestamp": "2006-03-03 11:16:51",
+      "action_type": "CLICK",
+      "content": "1 800 contacts",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on '1 800 contacts...' implies that the user found this result compelling enough to investigate further, suggesting they are approaching a source rather than simply following a scent. This indicates a level of interest and decision based on the information scent from the SERP.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.018919551372528,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:46:29.366469"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.013468980789185,
+      "decisions": [
+        {
+          "event_id": "14668_3413_qq-1877",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3413_qq-1877_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3413_qq-1877_cd-11248",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.024734020233154,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'contact lenses on line...' lacks specificity and may indicate that the user is unsure of what information they are seeking. The presence of an invalid control character suggests issues with the query itself, which may reflect a poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of viewing a SERP with diverse results such as 'full contact fighter' and 'phoenix contact software' indicates a lack of focused intent. This suggests they are not effectively following a strong scent, but rather exploring a patch that is not relevant to their original query, indicating a poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on '1 800 contacts...' implies that the user found this result compelling enough to investigate further, suggesting they are approaching a source rather than simply following a scent. This indicates a level of interest and decision based on the information scent from the SERP.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.532145977020264,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.018919551372528
+}

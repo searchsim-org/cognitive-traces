@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3008",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:19:28.857252",
+  "events": [
+    {
+      "session_id": "12211_3008",
+      "event_id": "12211_3008_qq-1545",
+      "timestamp": "2006-04-20 14:35:03",
+      "action_type": "QUERY",
+      "content": "pioneer elite",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pioneer elite...' is vague and lacks specificity, suggesting that the user is not following a strong scent but rather is exploring without clear intent. The presence of an error message indicates a potential breakdown in the search process, rather than a directed and purposeful query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9567022621631622,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:20:12.890280"
+    },
+    {
+      "session_id": "12211_3008",
+      "event_id": "12211_3008_qq-1545_serp",
+      "timestamp": "2006-04-20 14:35:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: welcome to elite firearms, home rebound gymnastics elite, www florida elite com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but the content listed appears to lack strong relevance to a well-defined query, indicating that the user may not be finding useful information and is instead exploring without clear direction. This suggests the user is likely encountering a poor scent rather than following a solid lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9721542984247208,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:20:12.890293"
+    },
+    {
+      "session_id": "12211_3008",
+      "event_id": "12211_3008_qq-1545_cd-4749",
+      "timestamp": "2006-04-20 14:35:03",
+      "action_type": "CLICK",
+      "content": "pioneer usa car stereo speakers home theater navigation dj pioneer electronics usa",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result like 'pioneer usa car stereo speakers home theater navigation dj pioneer electronics usa...' suggests that the user might have been searching for something related but it likely stems from a lack of clarity in their previous searches. Given the preceding events, it's more plausible that the user is abandoning a coherent search strategy rather than following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0045243736356497,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:20:12.890298"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.599300146102905,
+      "decisions": [
+        {
+          "event_id": "12211_3008_qq-1545",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3008_qq-1545_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3008_qq-1545_cd-4749",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.749004125595093,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pioneer elite...' is vague and lacks specificity, suggesting that the user is not following a strong scent but rather is exploring without clear intent. The presence of an error message indicates a potential breakdown in the search process, rather than a directed and purposeful query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but the content listed appears to lack strong relevance to a well-defined query, indicating that the user may not be finding useful information and is instead exploring without clear direction. This suggests the user is likely encountering a poor scent rather than following a solid lead.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result like 'pioneer usa car stereo speakers home theater navigation dj pioneer electronics usa...' suggests that the user might have been searching for something related but it likely stems from a lack of clarity in their previous searches. Given the preceding events, it's more plausible that the user is abandoning a coherent search strategy rather than following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.559024810791016,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0045243736356497
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3443",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:07:50.884640",
+  "events": [
+    {
+      "session_id": "14668_3443",
+      "event_id": "14668_3443_qq-1910",
+      "timestamp": "2006-04-04 15:47:23",
+      "action_type": "QUERY",
+      "content": "caldwell banker",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'caldwell banker...' appears incomplete or vague, which suggests that it may not have provided sufficient information scent. Without a clear and targeted intent, this fits better with PoorScent as it indicates a lack of promising options leading to a new query being necessary.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9504774212837219,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:08:28.068118"
+    },
+    {
+      "session_id": "14668_3443",
+      "event_id": "14668_3443_qq-1910_serp",
+      "timestamp": "2006-04-04 15:47:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cold well banker wallace and wallace knoxville real estate, the community banker the internet home page for america, cold well banker pacesetter steel corpus christi real estate (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, which indicates they were still assessing the relevance of the options presented. This behavior suggests they were attempting to identify promising sources rather than having a strong scent indicating a clear next step. Therefore, ApproachingSource is a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9955931302160025,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:08:28.068125"
+    },
+    {
+      "session_id": "14668_3443",
+      "event_id": "14668_3443_qq-1910_cd-11112",
+      "timestamp": "2006-04-04 15:47:23",
+      "action_type": "CLICK",
+      "content": "real estate and homes for sale cold well banker",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, it does not necessarily imply a strong information scent from the title/snippet. The click could be a result of curiosity or exploratory behavior rather than a targeted intent to follow a specific scent. If the search was based on insufficient information, it may also indicate that the user was attempting to broaden their understanding of the topic, aligning more with DietEnrichment.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9643183946609497,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:08:28.068128"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.78070306777954,
+      "decisions": [
+        {
+          "event_id": "14668_3443_qq-1910",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3443_qq-1910_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3443_qq-1910_cd-11112",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.390082120895386,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'caldwell banker...' appears incomplete or vague, which suggests that it may not have provided sufficient information scent. Without a clear and targeted intent, this fits better with PoorScent as it indicates a lack of promising options leading to a new query being necessary.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results but did not click on any, which indicates they were still assessing the relevance of the options presented. This behavior suggests they were attempting to identify promising sources rather than having a strong scent indicating a clear next step. Therefore, ApproachingSource is a more fitting label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "While the user clicked on a result, it does not necessarily imply a strong information scent from the title/snippet. The click could be a result of curiosity or exploratory behavior rather than a targeted intent to follow a specific scent. If the search was based on insufficient information, it may also indicate that the user was attempting to broaden their understanding of the topic, aligning more with DietEnrichment.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.744410037994385,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9955931302160025
+}

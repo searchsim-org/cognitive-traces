@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2927",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:52:16.249747",
+  "events": [
+    {
+      "session_id": "12211_2927",
+      "event_id": "12211_2927_qq-1510",
+      "timestamp": "2006-03-15 14:52:12",
+      "action_type": "QUERY",
+      "content": "the mens club reno",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the mens club reno...' lacks specificity and does not indicate a strong intent or well-formed search. Given that it seems to lead to confusion (indicated by the error message), it is more indicative of a user struggling to find relevant information rather than effectively following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9436133503913879,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:53:19.312066"
+    },
+    {
+      "session_id": "12211_2927",
+      "event_id": "12211_2927_qq-1510_serp",
+      "timestamp": "2006-03-15 14:52:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sierra club california sierra club, swimming club uk community club, breaking news from your local news source leader in men dota illinois the men dota reporter (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that appear to be unrelated or lack a clear connection to 'the mens club reno...' suggests the user is not finding relevant information. The lack of a targeted engagement implies poor scent rather than an effective follow-through on a promising lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9615134090185166,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:53:19.312087"
+    },
+    {
+      "session_id": "12211_2927",
+      "event_id": "12211_2927_qq-1510_cd-1344",
+      "timestamp": "2006-03-15 14:52:12",
+      "action_type": "CLICK",
+      "content": "strip club list strip clubs and gentlemen s clubs",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not indicate a clear, effective scent-following behavior, especially if the content is about 'strip clubs and gentlemen's clubs,' which may not align with the user's initial query. This suggests the user is still searching for relevance and may be abandoning their original intent, indicative of leaving the patch rather than successfully following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0036476954817772,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:53:19.312094"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 36.5605571269989,
+      "decisions": [
+        {
+          "event_id": "12211_2927_qq-1510",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2927_qq-1510_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2927_qq-1510_cd-1344",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.322458982467651,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the mens club reno...' lacks specificity and does not indicate a strong intent or well-formed search. Given that it seems to lead to confusion (indicated by the error message), it is more indicative of a user struggling to find relevant information rather than effectively following a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that appear to be unrelated or lack a clear connection to 'the mens club reno...' suggests the user is not finding relevant information. The lack of a targeted engagement implies poor scent rather than an effective follow-through on a promising lead.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result does not indicate a clear, effective scent-following behavior, especially if the content is about 'strip clubs and gentlemen's clubs,' which may not align with the user's initial query. This suggests the user is still searching for relevance and may be abandoning their original intent, indicative of leaving the patch rather than successfully following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.85058879852295,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0036476954817772
+}

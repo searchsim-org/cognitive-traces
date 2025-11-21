@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4055",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:04:36.410131",
+  "events": [
+    {
+      "session_id": "19162_4055",
+      "event_id": "19162_4055_qq-2330",
+      "timestamp": "2006-05-03 17:33:52",
+      "action_type": "QUERY",
+      "content": "names",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'names...' appears to lack specificity and clarity, which may indicate that the user is not receiving promising results or information scent, leading to a potential failure in finding relevant information. The issue with the control character may suggest confusion or frustration with their initial search approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8536484479904174,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:05:21.436011"
+    },
+    {
+      "session_id": "19162_4055",
+      "event_id": "19162_4055_qq-2330_serp",
+      "timestamp": "2006-05-03 17:33:52",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www trans name com, the baby name wizard, domain name under construction (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that include 'domain name under construction' suggests that the user did not find satisfactory or relevant information in the initial search. This could indicate a lack of promising scent leading to a decision to abandon the search rather than a continued focused inquiry.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9731353700160981,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:05:21.436018"
+    },
+    {
+      "session_id": "19162_4055",
+      "event_id": "19162_4055_qq-2330_cd-2043",
+      "timestamp": "2006-05-03 17:33:52",
+      "action_type": "CLICK",
+      "content": "www baby names com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www baby names com...' indicates that the user found some potential value in the link based on the title or snippet, suggesting they are exploring a promising source rather than continuing a focused search. The label 'FollowingScent' implies a clear intent to search, which is not supported by the prior context of confusion indicated in Event 1.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0035170696675777,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:05:21.436021"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.071768045425415,
+      "decisions": [
+        {
+          "event_id": "19162_4055_qq-2330",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4055_qq-2330_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4055_qq-2330_cd-2043",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.530222177505493,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'names...' appears to lack specificity and clarity, which may indicate that the user is not receiving promising results or information scent, leading to a potential failure in finding relevant information. The issue with the control character may suggest confusion or frustration with their initial search approach.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results that include 'domain name under construction' suggests that the user did not find satisfactory or relevant information in the initial search. This could indicate a lack of promising scent leading to a decision to abandon the search rather than a continued focused inquiry.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www baby names com...' indicates that the user found some potential value in the link based on the title or snippet, suggesting they are exploring a promising source rather than continuing a focused search. The label 'FollowingScent' implies a clear intent to search, which is not supported by the prior context of confusion indicated in Event 1.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.17043685913086,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0035170696675777
+}

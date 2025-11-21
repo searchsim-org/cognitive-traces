@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3439",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:05:28.403856",
+  "events": [
+    {
+      "session_id": "14668_3439",
+      "event_id": "14668_3439_qq-1905",
+      "timestamp": "2006-03-28 07:45:21",
+      "action_type": "QUERY",
+      "content": "arabic writing",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'arabic writing...' lacks specificity and does not indicate a clear intent or promising scent. Instead, it suggests the user might be uncertain about their information need, leading to a potential lack of relevant results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9535790890455246,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:14.223078"
+    },
+    {
+      "session_id": "14668_3439",
+      "event_id": "14668_3439_qq-1905_serp",
+      "timestamp": "2006-03-28 07:45:21",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: in i cio escuela de e studios arab es instituto, egypt news chat movies music tv football and arabic search, yemen travel guide travels to yemen and other arab countries (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that seem unrelated or poorly aligned with the original query indicates that the user is not finding a strong information scent. The diversity of the results suggests a lack of clarity in the user's intent, signaling that they may not have found promising sources.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9597839742898941,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:14.223096"
+    },
+    {
+      "session_id": "14668_3439",
+      "event_id": "14668_3439_qq-1905_cd-11300",
+      "timestamp": "2006-03-28 07:45:21",
+      "action_type": "CLICK",
+      "content": "al bab com an open door to the arab world",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'al bab com an open door to the arab world...' does not reflect a strong follow-through from a well-defined query; rather, it suggests the user is still exploring options without a clear sense of direction, indicative of a poor scent experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9764930456876755,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:06:14.223103"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.044841051101685,
+      "decisions": [
+        {
+          "event_id": "14668_3439_qq-1905",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3439_qq-1905_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3439_qq-1905_cd-11300",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.494255781173706,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'arabic writing...' lacks specificity and does not indicate a clear intent or promising scent. Instead, it suggests the user might be uncertain about their information need, leading to a potential lack of relevant results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that seem unrelated or poorly aligned with the original query indicates that the user is not finding a strong information scent. The diversity of the results suggests a lack of clarity in the user's intent, signaling that they may not have found promising sources.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'al bab com an open door to the arab world...' does not reflect a strong follow-through from a well-defined query; rather, it suggests the user is still exploring options without a clear sense of direction, indicative of a poor scent experience.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.027900218963623,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9764930456876755
+}

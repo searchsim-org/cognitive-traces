@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2894",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:25:04.810413",
+  "events": [
+    {
+      "session_id": "11663_2894",
+      "event_id": "11663_2894_qq-1498",
+      "timestamp": "2006-05-01 20:26:37",
+      "action_type": "QUERY",
+      "content": "galaxy golf",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'galaxy golf...' appears to be vague and may not indicate a strong information scent. The presence of an invalid control character suggests a lack of clarity or precision in the user's intent, which aligns more with PoorScent as the user likely did not find promising results leading to a new query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8648755311965942,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:25:44.696274"
+    },
+    {
+      "session_id": "11663_2894",
+      "event_id": "11663_2894_qq-1498_serp",
+      "timestamp": "2006-05-01 20:26:37",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: golf galaxy official website, golf galaxy official website, golf galaxy official website (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results that are all from the same source ('golf galaxy official website'). This indicates that the user is attempting to gather further information about a specific source, which is characteristic of ApproachingSource. The label FollowingScent may not accurately reflect the user\u2019s engagement with a specific source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9789218991994858,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:25:44.696279"
+    },
+    {
+      "session_id": "11663_2894",
+      "event_id": "11663_2894_qq-1498_cd-8997",
+      "timestamp": "2006-05-01 20:26:37",
+      "action_type": "CLICK",
+      "content": "golf galaxy official website",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicking on the 'golf galaxy official website' suggests that they are actively investigating a specific source of information rather than simply following a scent. The action demonstrates intent to delve deeper into a particular site rather than continuing a general search, which aligns better with ApproachingSource.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9994942873716355,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:25:44.696282"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 19.640059232711792,
+      "decisions": [
+        {
+          "event_id": "11663_2894_qq-1498",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2894_qq-1498_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2894_qq-1498_cd-8997",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.634833335876465,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'galaxy golf...' appears to be vague and may not indicate a strong information scent. The presence of an invalid control character suggests a lack of clarity or precision in the user's intent, which aligns more with PoorScent as the user likely did not find promising results leading to a new query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results that are all from the same source ('golf galaxy official website'). This indicates that the user is attempting to gather further information about a specific source, which is characteristic of ApproachingSource. The label FollowingScent may not accurately reflect the user\u2019s engagement with a specific source.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicking on the 'golf galaxy official website' suggests that they are actively investigating a specific source of information rather than simply following a scent. The action demonstrates intent to delve deeper into a particular site rather than continuing a general search, which aligns better with ApproachingSource.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.286392211914062,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9994942873716355
+}

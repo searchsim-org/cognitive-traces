@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_91",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:55:34.464964",
+  "events": [
+    {
+      "session_id": "1338_91",
+      "event_id": "1338_91_qq-27",
+      "timestamp": "2006-03-05 08:30:01",
+      "action_type": "QUERY",
+      "content": "virginia lottery",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'virginia lottery...' lacks specificity and does not indicate a clear intent to find particular information, suggesting a weak scent rather than a strong one. The presence of an error message may indicate confusion or lack of clarity in the search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0012879475951195,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:56:16.456453"
+    },
+    {
+      "session_id": "1338_91",
+      "event_id": "1338_91_qq-27_serp",
+      "timestamp": "2006-03-05 08:30:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: virginia lottery com, www virginia lottery com, virginia lottery 6524 blogspot com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without a clear focus or the presence of an error suggests the user was still exploring options without strong intent, indicative of poor scent rather than following a strong lead. The presence of multiple similar results may have contributed to a lack of decisive action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.95461146235466,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:56:16.456460"
+    },
+    {
+      "session_id": "1338_91",
+      "event_id": "1338_91_qq-27_cd-1382",
+      "timestamp": "2006-03-05 08:30:01",
+      "action_type": "CLICK",
+      "content": "official home of the virginia lottery",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the official home of the Virginia lottery indicates a more focused intent towards a specific source of information, rather than a general following of scent. The user likely identified this source as credible and relevant, transitioning from a vague query to a targeted action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0479001164436341,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:56:16.456463"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.477797031402588,
+      "decisions": [
+        {
+          "event_id": "1338_91_qq-27",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_91_qq-27_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_91_qq-27_cd-1382",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.48957109451294,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'virginia lottery...' lacks specificity and does not indicate a clear intent to find particular information, suggesting a weak scent rather than a strong one. The presence of an error message may indicate confusion or lack of clarity in the search process.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without a clear focus or the presence of an error suggests the user was still exploring options without strong intent, indicative of poor scent rather than following a strong lead. The presence of multiple similar results may have contributed to a lack of decisive action.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the official home of the Virginia lottery indicates a more focused intent towards a specific source of information, rather than a general following of scent. The user likely identified this source as credible and relevant, transitioning from a vague query to a targeted action.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.701872110366821,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0479001164436341
+}

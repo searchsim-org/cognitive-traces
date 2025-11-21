@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2950",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:13:37.905901",
+  "events": [
+    {
+      "session_id": "12211_2950",
+      "event_id": "12211_2950_qq-405",
+      "timestamp": "2006-03-24 16:38:45",
+      "action_type": "QUERY",
+      "content": "hotwire",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'hotwire...' lacks specificity and does not indicate a clear intent to find specific information, suggesting the user may not have received promising results from prior attempts. The absence of clicks or additional context aligns better with a lack of promising scent rather than a FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0119796633720397,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:14:22.453028"
+    },
+    {
+      "session_id": "12211_2950",
+      "event_id": "12211_2950_qq-405_serp",
+      "timestamp": "2006-03-24 16:38:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www dar hot wire com, www hot wire machines com, www hot wire jobs com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results does not guarantee the presence of a strong information scent. The list of URLs suggests a broad and potentially unfocused search, indicating that the user may not have found relevant information. This supports a PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0263881742954255,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:14:22.453040"
+    },
+    {
+      "session_id": "12211_2950",
+      "event_id": "12211_2950_qq-405_cd-1706",
+      "timestamp": "2006-03-24 16:38:45",
+      "action_type": "CLICK",
+      "content": "hotels hotel deals book hotel reservations hot wire",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a link does not necessarily demonstrate a clear intent or strong information scent. The content described ('hotels hotel deals book hotel reservations hot wire...') lacks specificity and may reflect an exploratory rather than targeted search, suggesting an ApproachingSource label is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9952517300844193,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:14:22.453043"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.035487174987793,
+      "decisions": [
+        {
+          "event_id": "12211_2950_qq-405",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2950_qq-405_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2950_qq-405_cd-1706",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.166018962860107,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'hotwire...' lacks specificity and does not indicate a clear intent to find specific information, suggesting the user may not have received promising results from prior attempts. The absence of clicks or additional context aligns better with a lack of promising scent rather than a FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results does not guarantee the presence of a strong information scent. The list of URLs suggests a broad and potentially unfocused search, indicating that the user may not have found relevant information. This supports a PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a link does not necessarily demonstrate a clear intent or strong information scent. The content described ('hotels hotel deals book hotel reservations hot wire...') lacks specificity and may reflect an exploratory rather than targeted search, suggesting an ApproachingSource label is more appropriate.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.225244998931885,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0263881742954255
+}

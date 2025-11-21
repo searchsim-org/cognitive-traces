@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3099",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:43:12.330155",
+  "events": [
+    {
+      "session_id": "12495_3099",
+      "event_id": "12495_3099_qq-1615",
+      "timestamp": "2006-03-28 10:42:58",
+      "action_type": "QUERY",
+      "content": "sonoma ranch las cruces nm",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sonoma ranch las cruces nm...' does not demonstrate a targeted intent based on available information. The invalid control character suggests that the query may have been malformed or improperly formed, leading to a lack of promising scent, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9302341401576996,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:43:50.440109"
+    },
+    {
+      "session_id": "12495_3099",
+      "event_id": "12495_3099_qq-1615_serp",
+      "timestamp": "2006-03-28 10:42:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mountain view regional medical center las cruces nm, sonoma ranch, thomas bran ig an memorial library las cruces nm (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the lack of engagement (clicking) suggests they did not find the titles/snippets compelling enough to investigate further. This indicates a weaker scent than what is required for FollowingScent, leaning more towards ApproachingSource as they are evaluating potential sources.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0029037427157164,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:43:50.440120"
+    },
+    {
+      "session_id": "12495_3099",
+      "event_id": "12495_3099_qq-1615_cd-9614",
+      "timestamp": "2006-03-28 10:42:58",
+      "action_type": "CLICK",
+      "content": "home sonoma ranch",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'home sonoma ranch...' implies some level of interest, but given the previous events indicating a lack of promising scent, it could be interpreted that the user is attempting to leave a patch of unsatisfactory information. Therefore, LeavingPatch may be more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.009260043501854,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:43:50.440144"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.651406049728394,
+      "decisions": [
+        {
+          "event_id": "12495_3099_qq-1615",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3099_qq-1615_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3099_qq-1615_cd-9614",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.841824054718018,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sonoma ranch las cruces nm...' does not demonstrate a targeted intent based on available information. The invalid control character suggests that the query may have been malformed or improperly formed, leading to a lack of promising scent, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed 10 results, the lack of engagement (clicking) suggests they did not find the titles/snippets compelling enough to investigate further. This indicates a weaker scent than what is required for FollowingScent, leaning more towards ApproachingSource as they are evaluating potential sources.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'home sonoma ranch...' implies some level of interest, but given the previous events indicating a lack of promising scent, it could be interpreted that the user is attempting to leave a patch of unsatisfactory information. Therefore, LeavingPatch may be more appropriate than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.35242223739624,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.009260043501854
+}

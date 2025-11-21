@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2341",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:30:18.729916",
+  "events": [
+    {
+      "session_id": "10133_2341",
+      "event_id": "10133_2341_qq-1248",
+      "timestamp": "2006-03-13 11:13:24",
+      "action_type": "QUERY",
+      "content": "yellow pages mississippi",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'yellow pages mississippi...' lacks specificity and may indicate that the user is not receiving promising results, leading to an ineffective search. Instead of a clear intent, this suggests dissatisfaction with the search results, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9752789527177811,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:30:42.087139"
+    },
+    {
+      "session_id": "10133_2341",
+      "event_id": "10133_2341_qq-1248_serp",
+      "timestamp": "2006-03-13 11:13:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: university of mississippi, university of mississippi, minnesota to mississippi (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not engage with any, indicating a lack of relevant information. This suggests that they might be losing interest in the current patch and considering abandoning the search, which fits the LeavingPatch label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9752524331212044,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:30:42.087152"
+    },
+    {
+      "session_id": "10133_2341",
+      "event_id": "10133_2341_qq-1248_cd-8025",
+      "timestamp": "2006-03-13 11:13:24",
+      "action_type": "CLICK",
+      "content": "area connect free yellow pages white pages and guides",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'area connect free yellow pages white pages and guides...' suggests that the user found some potential based on the title/snippet. This aligns more closely with ApproachingSource, as the user is actively seeking further information, rather than indicating a clear, well-formed query intent as suggested by FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0351761043071748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:30:42.087157"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.677788972854614,
+      "decisions": [
+        {
+          "event_id": "10133_2341_qq-1248",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2341_qq-1248_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2341_qq-1248_cd-8025",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.73584508895874,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'yellow pages mississippi...' lacks specificity and may indicate that the user is not receiving promising results, leading to an ineffective search. Instead of a clear intent, this suggests dissatisfaction with the search results, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not engage with any, indicating a lack of relevant information. This suggests that they might be losing interest in the current patch and considering abandoning the search, which fits the LeavingPatch label better than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'area connect free yellow pages white pages and guides...' suggests that the user found some potential based on the title/snippet. This aligns more closely with ApproachingSource, as the user is actively seeking further information, rather than indicating a clear, well-formed query intent as suggested by FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.615444898605347,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0351761043071748
+}

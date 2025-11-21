@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2620",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:43:30.390408",
+  "events": [
+    {
+      "session_id": "10900_2620",
+      "event_id": "10900_2620_qq-1410",
+      "timestamp": "2006-03-08 15:03:49",
+      "action_type": "QUERY",
+      "content": "sirius",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's initial query 'sirius...' appears incomplete or vague, indicating uncertainty or lack of clarity in their search intent. This suggests that the user did not have a strong information scent, leading to a lack of engagement or further exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.965228658914566,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:44:15.954265"
+    },
+    {
+      "session_id": "10900_2620",
+      "event_id": "10900_2620_qq-1410_serp",
+      "timestamp": "2006-03-08 15:03:49",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sirius publications electronic and print book store, sirius xm radio retailer satellite radio superstore, puppy training classes sirius berkeley sunnyvale san francisco (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed a list of search results but did not click on any. This indicates that while the user attempted to gather information, the results did not meet their needs or expectations, likely leading them to abandon the current search without further interaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9629560768604278,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:44:15.954272"
+    },
+    {
+      "session_id": "10900_2620",
+      "event_id": "10900_2620_qq-1410_cd-3039",
+      "timestamp": "2006-03-08 15:03:49",
+      "action_type": "CLICK",
+      "content": "sirius xm stream or listen to music entertainment sports more",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'sirius xm stream or listen to music entertainment sports more...' could suggest a lack of clarity or relevance in the previous steps, as the user might have been exploring options due to insufficient information scent. This could be indicative of trying to salvage the search rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9730048060417176,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:44:15.954275"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.962430953979492,
+      "decisions": [
+        {
+          "event_id": "10900_2620_qq-1410",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2620_qq-1410_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2620_qq-1410_cd-3039",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.412768125534058,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's initial query 'sirius...' appears incomplete or vague, indicating uncertainty or lack of clarity in their search intent. This suggests that the user did not have a strong information scent, leading to a lack of engagement or further exploration.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed a list of search results but did not click on any. This indicates that while the user attempted to gather information, the results did not meet their needs or expectations, likely leading them to abandon the current search without further interaction.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'sirius xm stream or listen to music entertainment sports more...' could suggest a lack of clarity or relevance in the previous steps, as the user might have been exploring options due to insufficient information scent. This could be indicative of trying to salvage the search rather than following a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.85108780860901,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9730048060417176
+}

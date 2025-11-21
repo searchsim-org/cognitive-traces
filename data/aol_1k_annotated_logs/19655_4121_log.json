@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4121",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:12:05.221683",
+  "events": [
+    {
+      "session_id": "19655_4121",
+      "event_id": "19655_4121_qq-2394",
+      "timestamp": "2006-04-14 03:50:13",
+      "action_type": "QUERY",
+      "content": "new york newyork hotel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'new york newyork hotel...' lacks specificity and clarity, suggesting the user may not have a well-formed intent. The use of '...' indicates an incomplete thought or confusion, which aligns more with an attempt that does not yield promising results, characteristic of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.977754807472229,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:31.956442"
+    },
+    {
+      "session_id": "19655_4121",
+      "event_id": "19655_4121_qq-2394_serp",
+      "timestamp": "2006-04-14 03:50:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: new york new york, las vegas strip hotel new york new york hotel casino, midtown new york hotels dream hotel midtown new york city (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that include variations of 'new york' hotels. This indicates an exploratory behavior rather than a confirmed directed search. The user's engagement with multiple results suggests they are seeking to evaluate options, which aligns more with ApproachingSource than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9973109319806099,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:31.956459"
+    },
+    {
+      "session_id": "19655_4121",
+      "event_id": "19655_4121_qq-2394_cd-14175",
+      "timestamp": "2006-04-14 03:50:13",
+      "action_type": "CLICK",
+      "content": "las vegas strip hotel new york new york hotel casino",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific hotel result, which indicates they are following a lead based on perceived value from the snippet. This behavior aligns with ApproachingSource, as they are investigating a promising option rather than initiating a new targeted query. Therefore, it should not be labeled as FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9883873641490937,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:31.956465"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.733148097991943,
+      "decisions": [
+        {
+          "event_id": "19655_4121_qq-2394",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4121_qq-2394_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4121_qq-2394_cd-14175",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.541596174240112,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'new york newyork hotel...' lacks specificity and clarity, suggesting the user may not have a well-formed intent. The use of '...' indicates an incomplete thought or confusion, which aligns more with an attempt that does not yield promising results, characteristic of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results that include variations of 'new york' hotels. This indicates an exploratory behavior rather than a confirmed directed search. The user's engagement with multiple results suggests they are seeking to evaluate options, which aligns more with ApproachingSource than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific hotel result, which indicates they are following a lead based on perceived value from the snippet. This behavior aligns with ApproachingSource, as they are investigating a promising option rather than initiating a new targeted query. Therefore, it should not be labeled as FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.249165058135986,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9973109319806099
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3751",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:32:16.832240",
+  "events": [
+    {
+      "session_id": "15565_3751",
+      "event_id": "15565_3751_qq-2097",
+      "timestamp": "2006-03-05 01:38:59",
+      "action_type": "QUERY",
+      "content": "newbury park prowler",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'newbury park prowler...' suggests an initial attempt to gather information, but the lack of clarity or specificity indicates that the scent is weak. The mention of an 'Invalid control character' implies an error in the query itself, which aligns more with PoorScent as it shows a lack of effective search strategy.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8782410860061645,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:42.846270"
+    },
+    {
+      "session_id": "15565_3751",
+      "event_id": "15565_3751_qq-2097_serp",
+      "timestamp": "2006-03-05 01:38:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: newbury park ca house info, newbury open newbury events, bmw motorcycle dealership newbury park ca (+7 more)",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of multiple results does not indicate a clear intent to follow a particular scent. Instead, it may reflect an exploratory phase where the user is assessing different options without a clear focus, suggesting an enrichment of query scope rather than a targeted approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0056470450013877,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:42.846294"
+    },
+    {
+      "session_id": "15565_3751",
+      "event_id": "15565_3751_qq-2097_cd-11899",
+      "timestamp": "2006-03-05 01:38:59",
+      "action_type": "CLICK",
+      "content": "prowler online com plymouth chrysler prowler owners association club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a link related to 'prowler online com plymouth chrysler prowler owners association club...' may not reflect a strong information scent. The click could be driven by curiosity rather than a well-formed intent. This action is better labeled as LeavingPatch, as it may indicate a last-ditch effort to find relevant information after preceding failures.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9844351038336754,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:42.846300"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 5.110851764678955,
+      "decisions": [
+        {
+          "event_id": "15565_3751_qq-2097",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3751_qq-2097_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3751_qq-2097_cd-11899",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.3651368618011475,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'newbury park prowler...' suggests an initial attempt to gather information, but the lack of clarity or specificity indicates that the scent is weak. The mention of an 'Invalid control character' implies an error in the query itself, which aligns more with PoorScent as it shows a lack of effective search strategy.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The viewing of multiple results does not indicate a clear intent to follow a particular scent. Instead, it may reflect an exploratory phase where the user is assessing different options without a clear focus, suggesting an enrichment of query scope rather than a targeted approach.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a link related to 'prowler online com plymouth chrysler prowler owners association club...' may not reflect a strong information scent. The click could be driven by curiosity rather than a well-formed intent. This action is better labeled as LeavingPatch, as it may indicate a last-ditch effort to find relevant information after preceding failures.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.235837936401367,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0056470450013877
+}

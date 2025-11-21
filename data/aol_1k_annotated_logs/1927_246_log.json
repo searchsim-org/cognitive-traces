@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_246",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:24:50.363638",
+  "events": [
+    {
+      "session_id": "1927_246",
+      "event_id": "1927_246_qq-128",
+      "timestamp": "2006-04-14 13:17:54",
+      "action_type": "QUERY",
+      "content": "altamonte springs utilities",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'altamonte springs utilities' lacks specificity and does not indicate strong intent; it could reflect a user uncertain of their information need, leading to a lack of clicks or engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0075570844113826,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:25:19.855002"
+    },
+    {
+      "session_id": "1927_246",
+      "event_id": "1927_246_qq-128_serp",
+      "timestamp": "2006-04-14 13:17:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: altamonte christian school altamonte springs fl, shopping mall in altamonte springs fl altamonte mall, colorado springs utilities (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, indicating a search strategy that suggests they are still exploring options rather than following a strong scent. The label 'FollowingScent' implies a clear intent, which is not evident in this behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.003050834313035,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:25:19.855010"
+    },
+    {
+      "session_id": "1927_246",
+      "event_id": "1927_246_qq-128_cd-1823",
+      "timestamp": "2006-04-14 13:17:54",
+      "action_type": "CLICK",
+      "content": "altamonte springs fl official website official website",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the repeated mention of an 'official website' suggests they may be frustrated by the lack of varied or useful information, indicating they are still searching but may soon abandon the session. This could suggest a lack of success rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0004739943891763,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:25:19.855013"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.489734172821045,
+      "decisions": [
+        {
+          "event_id": "1927_246_qq-128",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_246_qq-128_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_246_qq-128_cd-1823",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.399967908859253,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'altamonte springs utilities' lacks specificity and does not indicate strong intent; it could reflect a user uncertain of their information need, leading to a lack of clicks or engagement.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not click on any, indicating a search strategy that suggests they are still exploring options rather than following a strong scent. The label 'FollowingScent' implies a clear intent, which is not evident in this behavior.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user clicked on a result, the repeated mention of an 'official website' suggests they may be frustrated by the lack of varied or useful information, indicating they are still searching but may soon abandon the session. This could suggest a lack of success rather than a clear intent to follow a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.305857181549072,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0075570844113826
+}

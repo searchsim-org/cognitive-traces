@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3145",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:22:35.799099",
+  "events": [
+    {
+      "session_id": "12495_3145",
+      "event_id": "12495_3145_qq-1618",
+      "timestamp": "2006-04-27 08:53:46",
+      "action_type": "QUERY",
+      "content": "whippet",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'whippet...' seems incomplete or vague, which might indicate that the user is not confident in their search direction. This suggests a lack of promising scent, leading to a potential lack of relevant results, hence aligning more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0113369636237621,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:23:29.819119"
+    },
+    {
+      "session_id": "12495_3145",
+      "event_id": "12495_3145_qq-1618_serp",
+      "timestamp": "2006-04-27 08:53:46",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: chelsea whippets, summit whippets, ani magi whippets (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite the user viewing 10 results, the content is highly specific (e.g., 'chelsea whippets') and may not align with a clear, well-formed intent. If the user is exploring multiple specific terms without a clear focus, it indicates uncertainty and suggests the scent is not strong, aligning with PoorScent instead of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9739686131477356,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:23:29.819140"
+    },
+    {
+      "session_id": "12495_3145",
+      "event_id": "12495_3145_qq-1618_cd-9617",
+      "timestamp": "2006-04-27 08:53:46",
+      "action_type": "CLICK",
+      "content": "www american whippet club net",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www american whippet club net...' indicates the user is attempting to engage further, but if this is based on previous vague queries, it suggests they may be abandoning a coherent goal. If this click does not lead to satisfactory information or further exploration, it could indicate a LeavingPatch situation rather than a successful FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9750383704900741,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:23:29.819148"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 25.003931045532227,
+      "decisions": [
+        {
+          "event_id": "12495_3145_qq-1618",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3145_qq-1618_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3145_qq-1618_cd-9617",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.177867889404297,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'whippet...' seems incomplete or vague, which might indicate that the user is not confident in their search direction. This suggests a lack of promising scent, leading to a potential lack of relevant results, hence aligning more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite the user viewing 10 results, the content is highly specific (e.g., 'chelsea whippets') and may not align with a clear, well-formed intent. If the user is exploring multiple specific terms without a clear focus, it indicates uncertainty and suggests the scent is not strong, aligning with PoorScent instead of FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'www american whippet club net...' indicates the user is attempting to engage further, but if this is based on previous vague queries, it suggests they may be abandoning a coherent goal. If this click does not lead to satisfactory information or further exploration, it could indicate a LeavingPatch situation rather than a successful FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.51724624633789,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0113369636237621
+}

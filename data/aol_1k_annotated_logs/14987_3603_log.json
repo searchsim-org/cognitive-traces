@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3603",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:58:48.474176",
+  "events": [
+    {
+      "session_id": "14987_3603",
+      "event_id": "14987_3603_qq-2007",
+      "timestamp": "2006-04-10 21:42:33",
+      "action_type": "QUERY",
+      "content": "fraction bars",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fraction bars...' lacks specificity and does not indicate a clear intent; it suggests that the user may be uncertain about what they are searching for, as evidenced by the ambiguous phrasing. This is more indicative of a poor scent where the query does not lead to satisfactory results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9477192342281342,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:59:13.450052"
+    },
+    {
+      "session_id": "14987_3603",
+      "event_id": "14987_3603_qq-2007_serp",
+      "timestamp": "2006-04-10 21:42:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: fraction bars interactive games references, fractional ownership, visual fractions learn fractions with visual models (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that includes a mix of potentially relevant and irrelevant content (e.g., interactive games, fractional ownership) suggests that the user is not fully engaged with a clear intent. The variety of topics indicates a lack of clear information scent, leading to the conclusion that this event reflects a poor scent rather than a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9788719192147255,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:59:13.450063"
+    },
+    {
+      "session_id": "14987_3603",
+      "event_id": "14987_3603_qq-2007_cd-11561",
+      "timestamp": "2006-04-10 21:42:33",
+      "action_type": "CLICK",
+      "content": "fraction bars interactive games references",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'fraction bars interactive games references...' implies that the user found something promising in the title or snippet, indicating an approach to a potentially relevant source. However, without context about the user's goals, it is challenging to label this as FollowingScent since it may also indicate an exploratory click rather than a targeted inquiry.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.983646211028099,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:59:13.450067"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.209295749664307,
+      "decisions": [
+        {
+          "event_id": "14987_3603_qq-2007",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3603_qq-2007_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3603_qq-2007_cd-11561",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.0153279304504395,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fraction bars...' lacks specificity and does not indicate a clear intent; it suggests that the user may be uncertain about what they are searching for, as evidenced by the ambiguous phrasing. This is more indicative of a poor scent where the query does not lead to satisfactory results.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that includes a mix of potentially relevant and irrelevant content (e.g., interactive games, fractional ownership) suggests that the user is not fully engaged with a clear intent. The variety of topics indicates a lack of clear information scent, leading to the conclusion that this event reflects a poor scent rather than a focused search.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'fraction bars interactive games references...' implies that the user found something promising in the title or snippet, indicating an approach to a potentially relevant source. However, without context about the user's goals, it is challenging to label this as FollowingScent since it may also indicate an exploratory click rather than a targeted inquiry.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.418819904327393,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.983646211028099
+}

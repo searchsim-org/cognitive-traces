@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4122",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:12:31.960744",
+  "events": [
+    {
+      "session_id": "19655_4122",
+      "event_id": "19655_4122_qq-2395",
+      "timestamp": "2006-04-14 23:22:37",
+      "action_type": "QUERY",
+      "content": "great smoky mountain railroad",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'great smoky mountain railroad...' lacks specificity and context, indicating they may not have found the information they were seeking, leading to an invalid character error. This suggests a lack of promising scent rather than a strong intent to follow a specific information trail.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8997437715530395,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:58.870978"
+    },
+    {
+      "session_id": "19655_4122",
+      "event_id": "19655_4122_qq-2395_serp",
+      "timestamp": "2006-04-14 23:22:37",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: smoky mountain getaways restaurants in the great smoky mountains, stay in the great smoky mountains smoky mountains of nc, great smoky vacations great smoky mountains cabin rentals s mok ies (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any of them, which implies dissatisfaction with the available options. This indicates they might be considering leaving the current search patch due to poor scent or relevance, rather than actively following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9913570545613766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:58.870992"
+    },
+    {
+      "session_id": "19655_4122",
+      "event_id": "19655_4122_qq-2395_cd-14178",
+      "timestamp": "2006-04-14 23:22:37",
+      "action_type": "CLICK",
+      "content": "great smoky mountains railroad steam train rides for families in north carolina",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result, indicating interest and intent to investigate further, which aligns with the definition of ApproachingSource. The label 'FollowingScent' does not accurately reflect the action of clicking based on perceived relevance from the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0122042402625084,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:12:58.870995"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.448992967605591,
+      "decisions": [
+        {
+          "event_id": "19655_4122_qq-2395",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4122_qq-2395_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4122_qq-2395_cd-14178",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.952380180358887,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'great smoky mountain railroad...' lacks specificity and context, indicating they may not have found the information they were seeking, leading to an invalid character error. This suggests a lack of promising scent rather than a strong intent to follow a specific information trail.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any of them, which implies dissatisfaction with the available options. This indicates they might be considering leaving the current search patch due to poor scent or relevance, rather than actively following a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result, indicating interest and intent to investigate further, which aligns with the definition of ApproachingSource. The label 'FollowingScent' does not accurately reflect the action of clicking based on perceived relevance from the search results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.124523639678955,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0122042402625084
+}

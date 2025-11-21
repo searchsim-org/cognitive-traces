@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3977",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:21:35.876405",
+  "events": [
+    {
+      "session_id": "18689_3977",
+      "event_id": "18689_3977_qq-2240",
+      "timestamp": "2006-03-30 13:49:27",
+      "action_type": "QUERY",
+      "content": "sarasota county property appraiser",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user is initiating a query but the content does not suggest clear intent or a well-formed search. The invalid control character indicates a potential issue with the query, which implies the user may not be receiving relevant results, meriting a PoorScent label instead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8341997146606446,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:22:09.574993"
+    },
+    {
+      "session_id": "18689_3977",
+      "event_id": "18689_3977_qq-2240_serp",
+      "timestamp": "2006-03-30 13:49:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: volusia county property appraiser s office home, indian river county florida property appraiser home, marty kia r broward county property appraiser (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, there is no indication that they are clearly targeting a specific result or that they are seeing a strong scent from the titles/snippets. The lack of clear intent suggests they are merely browsing rather than following a specific scent, thus ApproachingSource is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0038891851902008,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:22:09.575001"
+    },
+    {
+      "session_id": "18689_3977",
+      "event_id": "18689_3977_qq-2240_cd-13224",
+      "timestamp": "2006-03-30 13:49:27",
+      "action_type": "CLICK",
+      "content": "www sarasota property net",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the link suggests the user is exploring their options rather than following a strong scent. Given the previous context of uncertainty and issues with query formulation, it is plausible that the user was not convinced by the scent and may have clicked out of frustration rather than intent, making ApproachingSource a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9829583585262298,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:22:09.575003"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.419314861297607,
+      "decisions": [
+        {
+          "event_id": "18689_3977_qq-2240",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3977_qq-2240_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3977_qq-2240_cd-13224",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.187630653381348,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user is initiating a query but the content does not suggest clear intent or a well-formed search. The invalid control character indicates a potential issue with the query, which implies the user may not be receiving relevant results, meriting a PoorScent label instead.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed 10 results, there is no indication that they are clearly targeting a specific result or that they are seeing a strong scent from the titles/snippets. The lack of clear intent suggests they are merely browsing rather than following a specific scent, thus ApproachingSource is more appropriate.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the link suggests the user is exploring their options rather than following a strong scent. Given the previous context of uncertainty and issues with query formulation, it is plausible that the user was not convinced by the scent and may have clicked out of frustration rather than intent, making ApproachingSource a more fitting label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.830875873565674,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0038891851902008
+}

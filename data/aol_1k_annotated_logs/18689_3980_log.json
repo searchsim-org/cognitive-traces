@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3980",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:22:54.933050",
+  "events": [
+    {
+      "session_id": "18689_3980",
+      "event_id": "18689_3980_qq-2243",
+      "timestamp": "2006-04-10 11:58:57",
+      "action_type": "QUERY",
+      "content": "sarasota fl government",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sarasota fl government...' lacks specificity and does not indicate a strong intent to search for a specific piece of information. Instead, it suggests that the user may not have found relevant information in their previous searches, as indicated by the label 'FollowingScent', which is not supported by the vague nature of the query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9827013239264488,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:23:22.271474"
+    },
+    {
+      "session_id": "18689_3980",
+      "event_id": "18689_3980_qq-2243_serp",
+      "timestamp": "2006-04-10 11:58:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: sarasota fl org, sarasota jobs sarasota careers employment in sarasota fl, sarasota county libraries sarasota county fl (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results related to 'sarasota fl', the lack of context surrounding the user's intent suggests that this action is not indicative of strong information scent. The titles and snippets viewed may not have provided sufficient appeal to indicate a strong approach to a source, which is necessary for the 'FollowingScent' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.982558262348175,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:23:22.271483"
+    },
+    {
+      "session_id": "18689_3980",
+      "event_id": "18689_3980_qq-2243_cd-13223",
+      "timestamp": "2006-04-10 11:58:57",
+      "action_type": "CLICK",
+      "content": "sarasota county fl home",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'sarasota county fl home...' suggests an interest, but without evidence of strong prior information scent leading to this specific click, it is more appropriate to label this event as 'DietEnrichment'. The user may have refined their search intent rather than following a strong scent, given the ambiguity in the previous actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.021377819776535,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:23:22.271487"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.680124998092651,
+      "decisions": [
+        {
+          "event_id": "18689_3980_qq-2243",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3980_qq-2243_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3980_qq-2243_cd-13223",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.306868076324463,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sarasota fl government...' lacks specificity and does not indicate a strong intent to search for a specific piece of information. Instead, it suggests that the user may not have found relevant information in their previous searches, as indicated by the label 'FollowingScent', which is not supported by the vague nature of the query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed 10 results related to 'sarasota fl', the lack of context surrounding the user's intent suggests that this action is not indicative of strong information scent. The titles and snippets viewed may not have provided sufficient appeal to indicate a strong approach to a source, which is necessary for the 'FollowingScent' label.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'sarasota county fl home...' suggests an interest, but without evidence of strong prior information scent leading to this specific click, it is more appropriate to label this event as 'DietEnrichment'. The user may have refined their search intent rather than following a strong scent, given the ambiguity in the previous actions.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.083816051483154,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.021377819776535
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2472",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:34:06.256159",
+  "events": [
+    {
+      "session_id": "10215_2472",
+      "event_id": "10215_2472_qq-1297",
+      "timestamp": "2006-03-20 07:28:51",
+      "action_type": "QUERY",
+      "content": "www.labor.state.ny.us",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action represents an attempt to initiate a search with a specific URL, but the invalid control character suggests that the query did not yield useful results. This indicates a lack of promising scent rather than a well-formed query with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8858914852142334,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:34:32.874436"
+    },
+    {
+      "session_id": "10215_2472",
+      "event_id": "10215_2472_qq-1297_serp",
+      "timestamp": "2006-03-20 07:28:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www labor state ny us, ui labor state ny us u boc glossary en jsp, www empire state ny us (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, which implies they are still searching for relevant information. However, if the results viewed were uninformative or irrelevant, this could lead to abandoning the search altogether, suggesting a transition towards leaving the patch rather than a continuation of the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9962208956480026,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:34:32.874459"
+    },
+    {
+      "session_id": "10215_2472",
+      "event_id": "10215_2472_qq-1297_cd-7782",
+      "timestamp": "2006-03-20 07:28:51",
+      "action_type": "CLICK",
+      "content": "www labor state ny us",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that did not yield satisfactory information (as indicated by the previous invalid control character) suggests that the user was likely responding to poor scent, indicating a lack of useful content rather than a successful following of scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9025720715522766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:34:32.874467"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.054150819778442,
+      "decisions": [
+        {
+          "event_id": "10215_2472_qq-1297",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2472_qq-1297_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2472_qq-1297_cd-7782",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.900688886642456,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action represents an attempt to initiate a search with a specific URL, but the invalid control character suggests that the query did not yield useful results. This indicates a lack of promising scent rather than a well-formed query with clear intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results, which implies they are still searching for relevant information. However, if the results viewed were uninformative or irrelevant, this could lead to abandoning the search altogether, suggesting a transition towards leaving the patch rather than a continuation of the search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that did not yield satisfactory information (as indicated by the previous invalid control character) suggests that the user was likely responding to poor scent, indicating a lack of useful content rather than a successful following of scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.331865787506104,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9962208956480026
+}

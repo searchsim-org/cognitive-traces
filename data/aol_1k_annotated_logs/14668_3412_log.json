@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3412",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:45:16.410544",
+  "events": [
+    {
+      "session_id": "14668_3412",
+      "event_id": "14668_3412_qq-1876",
+      "timestamp": "2006-03-03 09:52:24",
+      "action_type": "QUERY",
+      "content": "cedar point",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cedar point...' suggests the user may not have a clear intent, as indicated by the ellipsis, which typically signifies uncertainty or an incomplete thought. This could imply a lack of strong information scent, prompting a new search without any clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9794919297099114,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:45:53.468573"
+    },
+    {
+      "session_id": "14668_3412",
+      "event_id": "14668_3412_qq-1876_serp",
+      "timestamp": "2006-03-03 09:52:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cedar land homepage, cedar on com, grow cedar valley (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results shows the user is likely assessing their options rather than actively following a scent. The list of results indicates they are exploring different sources, which aligns more with approaching sources rather than a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9844623982906342,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:45:53.468579"
+    },
+    {
+      "session_id": "14668_3412",
+      "event_id": "14668_3412_qq-1876_cd-11247",
+      "timestamp": "2006-03-03 09:52:24",
+      "action_type": "CLICK",
+      "content": "the roller coast capital of the world amusement park in ohio cedar point",
+      "cognitive_label": "FollowingScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "FollowingScent",
+      "critic_agreement": "agree",
+      "critic_justification": "The user clicked on a specific result that directly relates to their initial query about 'cedar point.' This indicates they have identified a clear information scent leading them to engage further with that content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.40446951836347583,
+      "flagged_for_review": false,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:45:53.468582"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.363889932632446,
+      "decisions": [
+        {
+          "event_id": "14668_3412_qq-1876",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3412_qq-1876_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3412_qq-1876_cd-11247",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.662299871444702,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cedar point...' suggests the user may not have a clear intent, as indicated by the ellipsis, which typically signifies uncertainty or an incomplete thought. This could imply a lack of strong information scent, prompting a new search without any clicks.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results shows the user is likely assessing their options rather than actively following a scent. The list of results indicates they are exploring different sources, which aligns more with approaching sources rather than a focused search.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "agree",
+          "label": "FollowingScent",
+          "justification": "The user clicked on a specific result that directly relates to their initial query about 'cedar point.' This indicates they have identified a clear information scent leading them to engage further with that content.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.770480155944824,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "FollowingScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9844623982906342
+}

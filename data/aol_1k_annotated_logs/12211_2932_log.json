@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2932",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:56:32.957101",
+  "events": [
+    {
+      "session_id": "12211_2932",
+      "event_id": "12211_2932_qq-1503",
+      "timestamp": "2006-03-15 22:51:35",
+      "action_type": "QUERY",
+      "content": "sw airlines",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query for 'sw airlines...', but the presence of an analysis error indicates that the query may not have been well-formed or targeted. The lack of clarity or effective scent in the query suggests a poor scent rather than a strong initiation of search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8567733764648438,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:57:23.421319"
+    },
+    {
+      "session_id": "12211_2932",
+      "event_id": "12211_2932_qq-1503_serp",
+      "timestamp": "2006-03-15 22:51:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: southwest airlines book flights more wanna get away, gemini jets die cast airplane and airliner models, hawaiian airlines flights to hawaii plane tickets airfare (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not appear to find any satisfactory information, as indicated by the diverse and seemingly unrelated topics (e.g., die-cast models and airfare). The lack of engagement with a relevant result suggests that the user was not following a clear scent but was instead preparing to leave the search due to ineffective results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9721211284399033,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:57:23.421331"
+    },
+    {
+      "session_id": "12211_2932",
+      "event_id": "12211_2932_qq-1503_cd-362",
+      "timestamp": "2006-03-15 22:51:35",
+      "action_type": "CLICK",
+      "content": "southwest airlines book flights more wanna get away",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result titled 'southwest airlines book flights more wanna get away', which indicates an interest in pursuing a specific source. However, the analysis error raises concerns about whether the user was truly following a scent. The click appears to be more exploratory, lacking strong scent, and should be labeled as ApproachingSource instead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9139315664768219,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:57:23.421337"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.30250883102417,
+      "decisions": [
+        {
+          "event_id": "12211_2932_qq-1503",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2932_qq-1503_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2932_qq-1503_cd-362",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.676619052886963,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query for 'sw airlines...', but the presence of an analysis error indicates that the query may not have been well-formed or targeted. The lack of clarity or effective scent in the query suggests a poor scent rather than a strong initiation of search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not appear to find any satisfactory information, as indicated by the diverse and seemingly unrelated topics (e.g., die-cast models and airfare). The lack of engagement with a relevant result suggests that the user was not following a clear scent but was instead preparing to leave the search due to ineffective results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result titled 'southwest airlines book flights more wanna get away', which indicates an interest in pursuing a specific source. However, the analysis error raises concerns about whether the user was truly following a scent. The click appears to be more exploratory, lacking strong scent, and should be labeled as ApproachingSource instead.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.36102294921875,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9721211284399033
+}

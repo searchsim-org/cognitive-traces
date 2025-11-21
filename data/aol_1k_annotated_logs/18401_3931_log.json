@@ -1,0 +1,159 @@
+{
+  "session_id": "18401_3931",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:55:51.402848",
+  "events": [
+    {
+      "session_id": "18401_3931",
+      "event_id": "18401_3931_qq-2217",
+      "timestamp": "2006-03-11 22:54:02",
+      "action_type": "QUERY",
+      "content": "mercruiser parts list",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'mercruiser parts list...' suggests an attempt to find specific information, but the presence of an analysis error indicates that the query did not yield usable results. The invalid control character suggests that the query may not have been processed correctly, leading to a lack of promising results, thus reflecting a PoorScent rather than a FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8504520535469056,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:56:13.750587"
+    },
+    {
+      "session_id": "18401_3931",
+      "event_id": "18401_3931_qq-2217_serp",
+      "timestamp": "2006-03-11 22:54:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: macs antique auto parts classic antique ford parts macs auto parts, used aircraft parts wentworth aircraft used cessna parts used piper parts, list ser v 16 5 list ser v archives at list ser v usf edu (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user views 10 results, indicating an attempt to gather information. However, if those results did not meet their needs (as suggested by the previous event's context), it may lead to frustration and an eventual abandonment of the search. This suggests the user is LeavingPatch rather than FollowingScent, as they are likely not finding satisfactory options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9698561757802964,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:56:13.750597"
+    },
+    {
+      "session_id": "18401_3931",
+      "event_id": "18401_3931_qq-2217_cd-13104",
+      "timestamp": "2006-03-11 22:54:02",
+      "action_type": "CLICK",
+      "content": "southwest marine inc boat engines boat parts marine engines out drives boat engines boat parts marine engines boat repair power heads lower units out drives evin rude johnson om c sea drive mercury yamaha mer cruiser gear case assemblies power head complete outboard engines",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content of the clicked result indicates a focus on boat parts, which aligns with the user's likely intent based on previous queries. The action of clicking suggests a specific interest in the information provided by the title/snippet, which is better categorized as ApproachingSource rather than FollowingScent since the user is interacting with a promising result rather than continuing a search for new queries.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9922988951206207,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:56:13.750600"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.920139074325562,
+      "decisions": [
+        {
+          "event_id": "18401_3931_qq-2217",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3931_qq-2217_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3931_qq-2217_cd-13104",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.377251148223877,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'mercruiser parts list...' suggests an attempt to find specific information, but the presence of an analysis error indicates that the query did not yield usable results. The invalid control character suggests that the query may not have been processed correctly, leading to a lack of promising results, thus reflecting a PoorScent rather than a FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user views 10 results, indicating an attempt to gather information. However, if those results did not meet their needs (as suggested by the previous event's context), it may lead to frustration and an eventual abandonment of the search. This suggests the user is LeavingPatch rather than FollowingScent, as they are likely not finding satisfactory options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The content of the clicked result indicates a focus on boat parts, which aligns with the user's likely intent based on previous queries. The action of clicking suggests a specific interest in the information provided by the title/snippet, which is better categorized as ApproachingSource rather than FollowingScent since the user is interacting with a promising result rather than continuing a search for new queries.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.745210886001587,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9922988951206207
+}

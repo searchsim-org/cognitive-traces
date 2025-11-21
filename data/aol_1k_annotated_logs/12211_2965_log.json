@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2965",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:24:38.177658",
+  "events": [
+    {
+      "session_id": "12211_2965",
+      "event_id": "12211_2965_qq-3",
+      "timestamp": "2006-03-30 14:37:07",
+      "action_type": "QUERY",
+      "content": "google",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of querying 'google...' suggests they did not have a clear, targeted search intent, especially given the presence of an invalid control character. This indicates a lack of promising scent, leading to an ineffective search attempt rather than a well-formed inquiry.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.904977548122406,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:25:23.033461"
+    },
+    {
+      "session_id": "12211_2965",
+      "event_id": "12211_2965_qq-3_serp",
+      "timestamp": "2006-03-30 14:37:07",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: google y com, www google nl, www google sk (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a SERP with results that include malformed URLs (like 'google y com') points to a lack of relevant or promising information scent. The listed results do not stem from a targeted query, and the user's experience likely reflects confusion or ineffective information retrieval rather than an intent-driven exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9916082337498665,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:25:23.033475"
+    },
+    {
+      "session_id": "12211_2965",
+      "event_id": "12211_2965_qq-3_cd-393",
+      "timestamp": "2006-03-30 14:37:07",
+      "action_type": "CLICK",
+      "content": "www google com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www google com' after viewing unclear or malformed results indicates an attempt to find relevance but suggests a dissatisfaction with prior options. The presence of an invalid control character implies that the user's initial query lacked clarity, leading to poor outcomes rather than a successful pursuit of information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8849625825881957,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:25:23.033480"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.51795506477356,
+      "decisions": [
+        {
+          "event_id": "12211_2965_qq-3",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2965_qq-3_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2965_qq-3_cd-393",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 89)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.500261068344116,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's action of querying 'google...' suggests they did not have a clear, targeted search intent, especially given the presence of an invalid control character. This indicates a lack of promising scent, leading to an ineffective search attempt rather than a well-formed inquiry.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a SERP with results that include malformed URLs (like 'google y com') points to a lack of relevant or promising information scent. The listed results do not stem from a targeted query, and the user's experience likely reflects confusion or ineffective information retrieval rather than an intent-driven exploration.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'www google com' after viewing unclear or malformed results indicates an attempt to find relevance but suggests a dissatisfaction with prior options. The presence of an invalid control character implies that the user's initial query lacked clarity, leading to poor outcomes rather than a successful pursuit of information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.76442289352417,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9916082337498665
+}

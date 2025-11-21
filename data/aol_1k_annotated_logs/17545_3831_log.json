@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3831",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:07:33.900954",
+  "events": [
+    {
+      "session_id": "17545_3831",
+      "event_id": "17545_3831_qq-2194",
+      "timestamp": "2006-04-20 20:45:15",
+      "action_type": "QUERY",
+      "content": "stuntme",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query 'stuntme...' suggests that the user may not have had a clear intent or sufficient information to produce a meaningful result. The presence of an invalid control character indicates a potential issue with the query's formulation, which aligns more with a lack of promising scent rather than a targeted search attempt.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8836795926094054,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:04.432113"
+    },
+    {
+      "session_id": "17545_3831",
+      "event_id": "17545_3831_qq-2194_serp",
+      "timestamp": "2006-04-20 20:45:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www stunt me com, stunt factory, united stunt women s association usa stunts (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Simply viewing search results does not imply a strong information scent if the query itself was poorly formulated. The fact that the user viewed results but did not engage with them (as indicated by the prior event) suggests that the results did not meet the user's expectations, indicating a lack of effective information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9819422274827957,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:04.432135"
+    },
+    {
+      "session_id": "17545_3831",
+      "event_id": "17545_3831_qq-2194_cd-12884",
+      "timestamp": "2006-04-20 20:45:15",
+      "action_type": "CLICK",
+      "content": "www stunt me com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result from a poorly formulated query does not suggest a strong intent or effective following of a scent. Since the initial query was flawed and likely did not lead to satisfactory results, the click could represent an attempt to salvage the search rather than an indication of clear intent. Thus, it aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0049046479165553,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:08:04.432141"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.279531002044678,
+      "decisions": [
+        {
+          "event_id": "17545_3831_qq-2194",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3831_qq-2194_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3831_qq-2194_cd-12884",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.299643754959106,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query 'stuntme...' suggests that the user may not have had a clear intent or sufficient information to produce a meaningful result. The presence of an invalid control character indicates a potential issue with the query's formulation, which aligns more with a lack of promising scent rather than a targeted search attempt.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Simply viewing search results does not imply a strong information scent if the query itself was poorly formulated. The fact that the user viewed results but did not engage with them (as indicated by the prior event) suggests that the results did not meet the user's expectations, indicating a lack of effective information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result from a poorly formulated query does not suggest a strong intent or effective following of a scent. Since the initial query was flawed and likely did not lead to satisfactory results, the click could represent an attempt to salvage the search rather than an indication of clear intent. Thus, it aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.584890127182007,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0049046479165553
+}

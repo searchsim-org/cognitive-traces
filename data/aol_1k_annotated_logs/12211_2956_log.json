@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2956",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:18:28.641805",
+  "events": [
+    {
+      "session_id": "12211_2956",
+      "event_id": "12211_2956_qq-1525",
+      "timestamp": "2006-03-26 00:43:17",
+      "action_type": "QUERY",
+      "content": "the red rooster las vegas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query that could indicate a lack of clarity or specificity in their search intent, as evidenced by the phrase 'the red rooster las vegas...', which is vague and may not lead to relevant results. This suggests the user is not following a strong scent, hence indicating poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9769989609718323,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:19:07.082314"
+    },
+    {
+      "session_id": "12211_2956",
+      "event_id": "12211_2956_qq-1525_serp",
+      "timestamp": "2006-03-26 00:43:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www vegas red rooster com, las vegas national las vegas, red rock canyon las vegas nevada (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, which implies they are in the process of evaluating their options rather than continuing a targeted search. The selection of results also suggests they were considering the relevance rather than following a strong scent, indicating they were approaching potential sources for further exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9796275585889817,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:19:07.082328"
+    },
+    {
+      "session_id": "12211_2956",
+      "event_id": "12211_2956_qq-1525_cd-9315",
+      "timestamp": "2006-03-26 00:43:17",
+      "action_type": "CLICK",
+      "content": "www vegas red rooster com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www vegas red rooster com' suggests the user was evaluating a specific option based on its perceived relevance from the SERP. This aligns more with the 'ApproachingSource' label, as the click indicates they were investigating a potential source rather than continuing a well-formed targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9929394103586674,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:19:07.082331"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.047794818878174,
+      "decisions": [
+        {
+          "event_id": "12211_2956_qq-1525",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2956_qq-1525_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2956_qq-1525_cd-9315",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.472407817840576,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query that could indicate a lack of clarity or specificity in their search intent, as evidenced by the phrase 'the red rooster las vegas...', which is vague and may not lead to relevant results. This suggests the user is not following a strong scent, hence indicating poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, which implies they are in the process of evaluating their options rather than continuing a targeted search. The selection of results also suggests they were considering the relevance rather than following a strong scent, indicating they were approaching potential sources for further exploration.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www vegas red rooster com' suggests the user was evaluating a specific option based on its perceived relevance from the SERP. This aligns more with the 'ApproachingSource' label, as the click indicates they were investigating a potential source rather than continuing a well-formed targeted search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.832768201828003,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9929394103586674
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2631",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:49:30.530969",
+  "events": [
+    {
+      "session_id": "10900_2631",
+      "event_id": "10900_2631_qq-1418",
+      "timestamp": "2006-03-14 22:52:43",
+      "action_type": "QUERY",
+      "content": "disney cruise",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a search with a vague query 'disney cruise...' which indicates a lack of specificity. Since the query is not well-formed or targeted, it suggests that the user may not have a clear intent and is potentially exploring options. This aligns more closely with the PoorScent label, as it indicates the user is not finding promising paths based on the initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9710567086935044,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:56.230557"
+    },
+    {
+      "session_id": "10900_2631",
+      "event_id": "10900_2631_qq-1418_serp",
+      "timestamp": "2006-03-14 22:52:43",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: disney cruises disney cruise line disney cruise travel agent, disney cruise disney go com, disney cruise line (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple search results for 'disney cruises', which suggests they are assessing potential sources of information. Given that the results include various options for 'disney cruise line' and related terms, this indicates they are evaluating their options rather than following a specific scent. Thus, ApproachingSource is more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0269419252872467,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:56.230571"
+    },
+    {
+      "session_id": "10900_2631",
+      "event_id": "10900_2631_qq-1418_cd-2955",
+      "timestamp": "2006-03-14 22:52:43",
+      "action_type": "CLICK",
+      "content": "disney cruise disney go com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a search result for 'disney cruise disney go com', which indicates they are engaging with a specific source after evaluating the options. This behavior is more indicative of ApproachingSource since it reflects an effort to gather more information from a specific link rather than a clear, targeted inquiry that aligns with FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.013361132144928,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:49:56.230577"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.546415090560913,
+      "decisions": [
+        {
+          "event_id": "10900_2631_qq-1418",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2631_qq-1418_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2631_qq-1418_cd-2955",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.21708083152771,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a search with a vague query 'disney cruise...' which indicates a lack of specificity. Since the query is not well-formed or targeted, it suggests that the user may not have a clear intent and is potentially exploring options. This aligns more closely with the PoorScent label, as it indicates the user is not finding promising paths based on the initial query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple search results for 'disney cruises', which suggests they are assessing potential sources of information. Given that the results include various options for 'disney cruise line' and related terms, this indicates they are evaluating their options rather than following a specific scent. Thus, ApproachingSource is more appropriate than FollowingScent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a search result for 'disney cruise disney go com', which indicates they are engaging with a specific source after evaluating the options. This behavior is more indicative of ApproachingSource since it reflects an effort to gather more information from a specific link rather than a clear, targeted inquiry that aligns with FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.726325035095215,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0269419252872467
+}

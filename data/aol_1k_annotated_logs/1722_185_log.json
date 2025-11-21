@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_185",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:28:47.750230",
+  "events": [
+    {
+      "session_id": "1722_185",
+      "event_id": "1722_185_qq-85",
+      "timestamp": "2006-04-03 13:14:33",
+      "action_type": "QUERY",
+      "content": "sprint",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query with the term 'sprint...' suggests that the user may not have had a clear or focused intent, particularly if it resulted in an error. The lack of specific keywords indicates an unclear scent leading to no promising results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9321598052978516,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:29:16.745790"
+    },
+    {
+      "session_id": "1722_185",
+      "event_id": "1722_185_qq-85_serp",
+      "timestamp": "2006-04-03 13:14:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www sprint store locator com, best value in wireless sprint, www super sprint com au (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of search results does not necessarily indicate a FollowingScent action. The user may be exploring options based on vague interest rather than a targeted intent. Thus, this aligns more with an ApproachingSource label as they are assessing potential sources based on the displayed information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0046040389686823,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:29:16.745794"
+    },
+    {
+      "session_id": "1722_185",
+      "event_id": "1722_185_qq-85_cd-1602",
+      "timestamp": "2006-04-03 13:14:33",
+      "action_type": "CLICK",
+      "content": "best value in wireless sprint",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'best value in wireless sprint...' suggests that the user is acting on a perceived information scent but does not demonstrate a clear, well-formed query intent. This aligns more with the ApproachingSource label, as the user is attempting to investigate a potentially relevant resource rather than confirming a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9777656391263008,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:29:16.745796"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.593536138534546,
+      "decisions": [
+        {
+          "event_id": "1722_185_qq-85",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_185_qq-85_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_185_qq-85_cd-1602",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.8475940227508545,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query with the term 'sprint...' suggests that the user may not have had a clear or focused intent, particularly if it resulted in an error. The lack of specific keywords indicates an unclear scent leading to no promising results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing a list of search results does not necessarily indicate a FollowingScent action. The user may be exploring options based on vague interest rather than a targeted intent. Thus, this aligns more with an ApproachingSource label as they are assessing potential sources based on the displayed information scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'best value in wireless sprint...' suggests that the user is acting on a perceived information scent but does not demonstrate a clear, well-formed query intent. This aligns more with the ApproachingSource label, as the user is attempting to investigate a potentially relevant resource rather than confirming a strong scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.09840202331543,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0046040389686823
+}

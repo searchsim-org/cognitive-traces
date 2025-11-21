@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3733",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:22:28.867039",
+  "events": [
+    {
+      "session_id": "15328_3733",
+      "event_id": "15328_3733_qq-2050",
+      "timestamp": "2006-05-12 21:13:59",
+      "action_type": "QUERY",
+      "content": "hamilton county probate court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of querying 'hamilton county probate court...' suggests that the user intended to find specific information. However, the lack of clarity in the query and the presence of an error message implies that the query may have not yielded promising results, thus indicating a poor scent rather than a strong, targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.992097444087267,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:22:47.920844"
+    },
+    {
+      "session_id": "15328_3733",
+      "event_id": "15328_3733_qq-2050_serp",
+      "timestamp": "2006-05-12 21:13:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: lee county clerk of court fl home, home page broward county clerk of courts, home page broward county clerk of courts (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any. This suggests that, despite viewing multiple options, the results did not meet the user's needs, leading to a lack of engagement. This behavior aligns more closely with LeavingPatch, as the user appears to be disengaging from the search process due to unsatisfactory results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9587593466043473,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:22:47.920861"
+    },
+    {
+      "session_id": "15328_3733",
+      "event_id": "15328_3733_qq-2050_cd-11727",
+      "timestamp": "2006-05-12 21:13:59",
+      "action_type": "CLICK",
+      "content": "www probate ct org",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'www probate ct org...' indicates that the user identified this result as potentially valuable based on its title/snippet. This aligns with ApproachingSource, as the user is attempting to further investigate a source that they perceive to have relevant information, contrary to the assumption of a FollowingScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.015509507060051,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:22:47.920868"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 5.797850847244263,
+      "decisions": [
+        {
+          "event_id": "15328_3733_qq-2050",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3733_qq-2050_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3733_qq-2050_cd-11727",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.1976330280303955,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of querying 'hamilton county probate court...' suggests that the user intended to find specific information. However, the lack of clarity in the query and the presence of an error message implies that the query may have not yielded promising results, thus indicating a poor scent rather than a strong, targeted search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not click on any. This suggests that, despite viewing multiple options, the results did not meet the user's needs, leading to a lack of engagement. This behavior aligns more closely with LeavingPatch, as the user appears to be disengaging from the search process due to unsatisfactory results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'www probate ct org...' indicates that the user identified this result as potentially valuable based on its title/snippet. This aligns with ApproachingSource, as the user is attempting to further investigate a source that they perceive to have relevant information, contrary to the assumption of a FollowingScent label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.720253944396973,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.015509507060051
+}

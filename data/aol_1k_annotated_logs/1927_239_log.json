@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_239",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:20:55.560740",
+  "events": [
+    {
+      "session_id": "1927_239",
+      "event_id": "1927_239_qq-118",
+      "timestamp": "2006-03-26 13:05:23",
+      "action_type": "QUERY",
+      "content": "winxclub.tv.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query does not indicate a strong intent or clear targeting of information. The presence of an 'Invalid control character' suggests there may have been an error or unexpected issue with the input, which reflects a lack of promising scent rather than a focused search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8441343069076538,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:21:14.127172"
+    },
+    {
+      "session_id": "1927_239",
+      "event_id": "1927_239_qq-118_serp",
+      "timestamp": "2006-03-26 13:05:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www winx club tv, winx club winx cartoons, www winx tv (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any indicates that the user did not find the presented options to have a strong information scent. The user's engagement appears to be exploratory but lacking satisfaction with the results, thus not reflecting a clear intent to follow a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9936966106295586,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:21:14.127180"
+    },
+    {
+      "session_id": "1927_239",
+      "event_id": "1927_239_qq-118_cd-1784",
+      "timestamp": "2006-03-26 13:05:23",
+      "action_type": "CLICK",
+      "content": "www winx club tv",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result after viewing multiple unsatisfactory options indicates a lack of strong information scent. The user's click may have been driven by desperation or the need to resolve a perceived lack of information rather than a well-formed intent to follow a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9590069621801376,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:21:14.127183"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.123227119445801,
+      "decisions": [
+        {
+          "event_id": "1927_239_qq-118",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_239_qq-118_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_239_qq-118_cd-1784",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.139786958694458,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query does not indicate a strong intent or clear targeting of information. The presence of an 'Invalid control character' suggests there may have been an error or unexpected issue with the input, which reflects a lack of promising scent rather than a focused search initiation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without engaging with any indicates that the user did not find the presented options to have a strong information scent. The user's engagement appears to be exploratory but lacking satisfaction with the results, thus not reflecting a clear intent to follow a specific scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result after viewing multiple unsatisfactory options indicates a lack of strong information scent. The user's click may have been driven by desperation or the need to resolve a perceived lack of information rather than a well-formed intent to follow a specific scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.2288901805877686,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9936966106295586
+}

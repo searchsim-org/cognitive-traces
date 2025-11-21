@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3785",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:52:05.421941",
+  "events": [
+    {
+      "session_id": "15565_3785",
+      "event_id": "15565_3785_qq-2137",
+      "timestamp": "2006-05-01 23:03:24",
+      "action_type": "QUERY",
+      "content": "pageant photography",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'pageant photography...' does not indicate a well-formed and targeted search. The ellipsis suggests uncertainty or an incomplete thought, which is more typical of a user who is exploring rather than confidently pursuing a specific information scent. Thus, it does not fit the criteria of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.969115287065506,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:52:32.450507"
+    },
+    {
+      "session_id": "15565_3785",
+      "event_id": "15565_3785_qq-2137_serp",
+      "timestamp": "2006-05-01 23:03:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pageant photography gallery home page pageant photography, bud moffett photography award winning pageant photography, beauty pageants baby pageant natural pageant teen pageant east coast usa pageant (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's viewing of the SERP results does not indicate strong intent or a clear information need. The presence of multiple vague results suggests that the user may not find promising content or that the query lacked specificity. The titles presented do not convey a strong scent, which is indicative of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0105038315057755,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:52:32.450514"
+    },
+    {
+      "session_id": "15565_3785",
+      "event_id": "15565_3785_qq-2137_cd-11981",
+      "timestamp": "2006-05-01 23:03:24",
+      "action_type": "CLICK",
+      "content": "pageant photography gallery home page pageant photography",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the 'pageant photography gallery home page' implies that the user found the title promising enough, indicating they were exploring a source rather than following a strong scent. The previous events suggest that the user was not fully engaged with a clear intent, making this click more indicative of an approach based on curiosity rather than a strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.999596954882145,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:52:32.450516"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.849543809890747,
+      "decisions": [
+        {
+          "event_id": "15565_3785_qq-2137",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3785_qq-2137_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3785_qq-2137_cd-11981",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.6049721240997314,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'pageant photography...' does not indicate a well-formed and targeted search. The ellipsis suggests uncertainty or an incomplete thought, which is more typical of a user who is exploring rather than confidently pursuing a specific information scent. Thus, it does not fit the criteria of FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's viewing of the SERP results does not indicate strong intent or a clear information need. The presence of multiple vague results suggests that the user may not find promising content or that the query lacked specificity. The titles presented do not convey a strong scent, which is indicative of PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the 'pageant photography gallery home page' implies that the user found the title promising enough, indicating they were exploring a source rather than following a strong scent. The previous events suggest that the user was not fully engaged with a clear intent, making this click more indicative of an approach based on curiosity rather than a strong information scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.254509687423706,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0105038315057755
+}

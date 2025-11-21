@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3010",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:20:59.614475",
+  "events": [
+    {
+      "session_id": "12211_3010",
+      "event_id": "12211_3010_qq-1546",
+      "timestamp": "2006-04-21 02:25:27",
+      "action_type": "QUERY",
+      "content": "bankruptcy",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query without any evidence of clicks or further engagement. The presence of an error message suggests the user may have encountered difficulties in finding relevant information, indicating a lack of promising scent, rather than a clear intent to pursue a specific topic.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9412954807281494,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:21:53.143652"
+    },
+    {
+      "session_id": "12211_3010",
+      "event_id": "12211_3010_qq-1546_serp",
+      "timestamp": "2006-04-21 02:25:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bankruptcy, bankruptcy canada filing bankruptcy in canada bankruptcy canada, bankruptcy information com personal bankruptcy information (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating a broader search for information. However, since the results are closely related to the initial query, this could signify an attempt to assess available resources rather than a targeted search, aligning more with 'ApproachingSource' as the user is looking for a promising option.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9987389925867319,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:21:53.143663"
+    },
+    {
+      "session_id": "12211_3010",
+      "event_id": "12211_3010_qq-1546_cd-9367",
+      "timestamp": "2006-04-21 02:25:27",
+      "action_type": "CLICK",
+      "content": "bankruptcy information com personal bankruptcy information",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the result suggests the user is further investigating a specific source. However, without prior successful interactions or a clear indication that the clicked link met their needs, this should be labeled as 'PoorScent' since the user may be clicking out of desperation rather than informed intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9916742488741874,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:21:53.143668"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.641522884368896,
+      "decisions": [
+        {
+          "event_id": "12211_3010_qq-1546",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3010_qq-1546_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3010_qq-1546_cd-9367",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.3634889125823975,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query without any evidence of clicks or further engagement. The presence of an error message suggests the user may have encountered difficulties in finding relevant information, indicating a lack of promising scent, rather than a clear intent to pursue a specific topic.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating a broader search for information. However, since the results are closely related to the initial query, this could signify an attempt to assess available resources rather than a targeted search, aligning more with 'ApproachingSource' as the user is looking for a promising option.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the result suggests the user is further investigating a specific source. However, without prior successful interactions or a clear indication that the clicked link met their needs, this should be labeled as 'PoorScent' since the user may be clicking out of desperation rather than informed intent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 26.42188811302185,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9987389925867319
+}

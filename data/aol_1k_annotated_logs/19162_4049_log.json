@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4049",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:00:44.584799",
+  "events": [
+    {
+      "session_id": "19162_4049",
+      "event_id": "19162_4049_qq-2323",
+      "timestamp": "2006-03-31 16:04:56",
+      "action_type": "QUERY",
+      "content": "song meaning",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'song meaning...' is vague and lacks specificity, indicating the user may not be finding relevant information. This suggests a poor scent rather than a clear intent to follow a scent. The lack of refinement implies the user is not experiencing a strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9998289559036493,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:18.193243"
+    },
+    {
+      "session_id": "19162_4049",
+      "event_id": "19162_4049_qq-2323_serp",
+      "timestamp": "2006-03-31 16:04:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: song lyrics song meanings more at song meanings, song meanings at song facts, song crossfire song interpretations and meanings (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The description of viewing 10 results implies an exploration phase rather than a clear intent to follow a scent. The user's action can be interpreted as scanning for potential sources rather than definitively following a scent, as they are still assessing multiple options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9937207244336606,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:18.193266"
+    },
+    {
+      "session_id": "19162_4049",
+      "event_id": "19162_4049_qq-2323_cd-5846",
+      "timestamp": "2006-03-31 16:04:56",
+      "action_type": "CLICK",
+      "content": "song lyrics song meanings more at song meanings",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result reflects an effort to investigate a source but does not qualify as following a scent if the previous actions indicated poor scent. The user may still be uncertain, suggesting they are in a state of exploration rather than confidently following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9981194827705622,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:01:18.193275"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.674633979797363,
+      "decisions": [
+        {
+          "event_id": "19162_4049_qq-2323",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4049_qq-2323_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4049_qq-2323_cd-5846",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.200026750564575,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'song meaning...' is vague and lacks specificity, indicating the user may not be finding relevant information. This suggests a poor scent rather than a clear intent to follow a scent. The lack of refinement implies the user is not experiencing a strong information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The description of viewing 10 results implies an exploration phase rather than a clear intent to follow a scent. The user's action can be interpreted as scanning for potential sources rather than definitively following a scent, as they are still assessing multiple options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result reflects an effort to investigate a source but does not qualify as following a scent if the previous actions indicated poor scent. The user may still be uncertain, suggesting they are in a state of exploration rather than confidently following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.457956075668335,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9998289559036493
+}

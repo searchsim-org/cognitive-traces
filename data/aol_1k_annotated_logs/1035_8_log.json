@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_8",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:11:34.204107",
+  "events": [
+    {
+      "session_id": "1035_8",
+      "event_id": "1035_8_qq-4",
+      "timestamp": "2006-03-06 12:52:44",
+      "action_type": "QUERY",
+      "content": "goggle",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'goggle...' suggests that the user might not have a clear intent or is experiencing difficulty formulating their search. The presence of an invalid control character indicates potential confusion or a lack of clarity in the user's query, which aligns more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8909244537353516,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:11:58.114676"
+    },
+    {
+      "session_id": "1035_8",
+      "event_id": "1035_8_qq-4_serp",
+      "timestamp": "2006-03-06 12:52:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www foggy goggles com, squash goggles blogspot com, goggle com google com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the lack of clarity in the initial query and the mention of 'Invalid control character' in the reasoning suggests the user may not have found relevant results. This could lead to frustration, indicating a potential LeavingPatch scenario rather than FollowingScent, as the user may be abandoning their search due to insufficient results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8611735939979552,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:11:58.114685"
+    },
+    {
+      "session_id": "1035_8",
+      "event_id": "1035_8_qq-4_cd-1102",
+      "timestamp": "2006-03-06 12:52:44",
+      "action_type": "CLICK",
+      "content": "goggle a official web site",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'goggle a official web site...' implies an action taken based on a perceived value, but the prior events indicate a lack of effective search strategies from the user. Given the context of previous confusion, this click may not represent a clear intent or confidence, suggesting ApproachingSource may be more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0172767713665962,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:11:58.114688"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.645246028900146,
+      "decisions": [
+        {
+          "event_id": "1035_8_qq-4",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_8_qq-4_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_8_qq-4_cd-1102",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 85)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.4901649951934814,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'goggle...' suggests that the user might not have a clear intent or is experiencing difficulty formulating their search. The presence of an invalid control character indicates potential confusion or a lack of clarity in the user's query, which aligns more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results, the lack of clarity in the initial query and the mention of 'Invalid control character' in the reasoning suggests the user may not have found relevant results. This could lead to frustration, indicating a potential LeavingPatch scenario rather than FollowingScent, as the user may be abandoning their search due to insufficient results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'goggle a official web site...' implies an action taken based on a perceived value, but the prior events indicate a lack of effective search strategies from the user. Given the context of previous confusion, this click may not represent a clear intent or confidence, suggesting ApproachingSource may be more appropriate than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.622553825378418,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 91)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0172767713665962
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2942",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:05:57.542179",
+  "events": [
+    {
+      "session_id": "12211_2942",
+      "event_id": "12211_2942_qq-1519",
+      "timestamp": "2006-03-21 16:44:47",
+      "action_type": "QUERY",
+      "content": "petsmart",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'petsmart...' suggests that the user is either unsure about the information they are seeking or that the query formulation is too vague, indicating a lack of strong information scent. The presence of the invalid control character suggests confusion or an error in the query itself, leading to a lack of promising results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8622308015823363,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:06:44.129614"
+    },
+    {
+      "session_id": "12211_2942",
+      "event_id": "12211_2942_qq-1519_serp",
+      "timestamp": "2006-03-21 16:44:47",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pet store locations pet smart, working at pet smart, working at pet smart (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that includes repetitive and potentially irrelevant items ('working at pet smart') implies that the user is not finding the desired information or is receiving low-quality scent from the results. This indicates a lack of strong intent or clarity in the search, qualifying it for the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.985518142580986,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:06:44.129637"
+    },
+    {
+      "session_id": "12211_2942",
+      "event_id": "12211_2942_qq-1519_cd-5956",
+      "timestamp": "2006-03-21 16:44:47",
+      "action_type": "CLICK",
+      "content": "pet supplies accessories and products online pet smart",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific result that appears to be related to pet supplies; however, if the user's previous actions indicated confusion or dissatisfaction (as suggested in Events 1 and 2), this click may not represent a strong intent or successful foraging behavior. It is more indicative of an attempt to find relevant information amid inadequate results, which is better captured by the ApproachingSource label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0003760233521461,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:06:44.129644"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.601912260055542,
+      "decisions": [
+        {
+          "event_id": "12211_2942_qq-1519",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2942_qq-1519_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2942_qq-1519_cd-5956",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.2867591381073,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'petsmart...' suggests that the user is either unsure about the information they are seeking or that the query formulation is too vague, indicating a lack of strong information scent. The presence of the invalid control character suggests confusion or an error in the query itself, leading to a lack of promising results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that includes repetitive and potentially irrelevant items ('working at pet smart') implies that the user is not finding the desired information or is receiving low-quality scent from the results. This indicates a lack of strong intent or clarity in the search, qualifying it for the PoorScent label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific result that appears to be related to pet supplies; however, if the user's previous actions indicated confusion or dissatisfaction (as suggested in Events 1 and 2), this click may not represent a strong intent or successful foraging behavior. It is more indicative of an attempt to find relevant information amid inadequate results, which is better captured by the ApproachingSource label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.602458238601685,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0003760233521461
+}

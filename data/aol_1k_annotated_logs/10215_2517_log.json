@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2517",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T07:00:20.133184",
+  "events": [
+    {
+      "session_id": "10215_2517",
+      "event_id": "10215_2517_qq-1280",
+      "timestamp": "2006-04-16 09:56:19",
+      "action_type": "QUERY",
+      "content": "boxer puppy pics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boxer puppy pics...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction. It indicates a potential lack of promising scent since the query does not lead to a focused information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0022121734917164,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:00:54.596947"
+    },
+    {
+      "session_id": "10215_2517",
+      "event_id": "10215_2517_qq-1280_serp",
+      "timestamp": "2006-04-16 09:56:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: s abo boxers champion boxers and puppies, boxer dogs and puppy pictures from be lire, boxer puppies for sale adopt a pet com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results seem to be a mixed bag of content related to boxer puppies but do not indicate a strong information scent from the titles or snippets. The analyst's label of FollowingScent is not justified as the user's action does not reflect a clear intent to investigate specific content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9689189791679382,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:00:54.596966"
+    },
+    {
+      "session_id": "10215_2517",
+      "event_id": "10215_2517_qq-1280_cd-8332",
+      "timestamp": "2006-04-16 09:56:19",
+      "action_type": "CLICK",
+      "content": "boxer dogs and puppy pictures from be lire",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'boxer dogs and puppy pictures from be lire...' may not reflect a strong information scent, especially if the accompanying snippet does not indicate high relevance. The click could be driven by curiosity rather than clear intent, suggesting a more ambiguous approach than what FollowingScent implies.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0152111172676086,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T07:00:54.596972"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.773498773574829,
+      "decisions": [
+        {
+          "event_id": "10215_2517_qq-1280",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2517_qq-1280_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2517_qq-1280_cd-8332",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.024797916412354,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boxer puppy pics...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction. It indicates a potential lack of promising scent since the query does not lead to a focused information need.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The viewed results seem to be a mixed bag of content related to boxer puppies but do not indicate a strong information scent from the titles or snippets. The analyst's label of FollowingScent is not justified as the user's action does not reflect a clear intent to investigate specific content.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'boxer dogs and puppy pictures from be lire...' may not reflect a strong information scent, especially if the accompanying snippet does not indicate high relevance. The click could be driven by curiosity rather than clear intent, suggesting a more ambiguous approach than what FollowingScent implies.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.462877035140991,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0152111172676086
+}

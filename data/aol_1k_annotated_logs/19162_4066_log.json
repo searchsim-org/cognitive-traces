@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4066",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:11:19.223960",
+  "events": [
+    {
+      "session_id": "19162_4066",
+      "event_id": "19162_4066_qq-2343",
+      "timestamp": "2006-05-29 20:10:51",
+      "action_type": "QUERY",
+      "content": "cute is what we aim for lyrics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cute is what we aim for lyrics...' suggests an attempt to find specific lyrics, yet the absence of clicks indicates that the user did not perceive the search results as relevant or promising. This aligns more with PoorScent, as the user issued a query without engaging with the content presented.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9995949648320674,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:11:43.806555"
+    },
+    {
+      "session_id": "19162_4066",
+      "event_id": "19162_4066_qq-2343_serp",
+      "timestamp": "2006-05-29 20:10:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: lyrics info, home lyrics, direct lyrics (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed the SERP but did not click on any of the 10 results, which demonstrates a lack of engagement despite the attempt to find relevant content. This can indicate frustration or a lack of promising options, suggesting the user may be preparing to leave the patch due to poor results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9750140264630318,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:11:43.806576"
+    },
+    {
+      "session_id": "19162_4066",
+      "event_id": "19162_4066_qq-2343_cd-9119",
+      "timestamp": "2006-05-29 20:10:51",
+      "action_type": "CLICK",
+      "content": "lyrics mania",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'lyrics mania...', which implies a targeted search for lyrics, indicating a step towards finding relevant information. However, without context about the user\u2019s satisfaction post-click, it could be argued that this action does not necessarily reflect a successful following of scent, especially if the user was still seeking answers. Thus, ApproachingSource may be more appropriate if it is assumed the user was still searching for information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0194972902536392,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:11:43.806582"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.934961080551147,
+      "decisions": [
+        {
+          "event_id": "19162_4066_qq-2343",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4066_qq-2343_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4066_qq-2343_cd-9119",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.183625936508179,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cute is what we aim for lyrics...' suggests an attempt to find specific lyrics, yet the absence of clicks indicates that the user did not perceive the search results as relevant or promising. This aligns more with PoorScent, as the user issued a query without engaging with the content presented.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed the SERP but did not click on any of the 10 results, which demonstrates a lack of engagement despite the attempt to find relevant content. This can indicate frustration or a lack of promising options, suggesting the user may be preparing to leave the patch due to poor results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'lyrics mania...', which implies a targeted search for lyrics, indicating a step towards finding relevant information. However, without context about the user\u2019s satisfaction post-click, it could be argued that this action does not necessarily reflect a successful following of scent, especially if the user was still seeking answers. Thus, ApproachingSource may be more appropriate if it is assumed the user was still searching for information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.155133962631226,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0194972902536392
+}

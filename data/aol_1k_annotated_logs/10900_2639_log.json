@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2639",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:53:45.168183",
+  "events": [
+    {
+      "session_id": "10900_2639",
+      "event_id": "10900_2639_qq-1424",
+      "timestamp": "2006-03-19 19:47:44",
+      "action_type": "QUERY",
+      "content": "park slope day camp",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'park slope day camp...' suggests the user initiated a search, but without additional context (e.g., whether they clicked any results), it indicates a lack of strong information scent. The absence of clicks or engagement with SERP results implies the user may not have found the initial query promising, leading to a potential need for a new search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9810516014695168,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:12.421920"
+    },
+    {
+      "session_id": "10900_2639",
+      "event_id": "10900_2639_qq-1424_serp",
+      "timestamp": "2006-03-19 19:47:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: park slope day camp summer camp in brooklyn, park slope neighbors, park slope reader (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results indicates the user is exploring potential options; however, they have not yet clicked on any. The term 'FollowingScent' implies a strong intent to pursue specific information, which may not be accurate here as the user is still in the evaluation phase. A better label would be 'ApproachingSource' since they are assessing multiple options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9975007966160774,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:12.421937"
+    },
+    {
+      "session_id": "10900_2639",
+      "event_id": "10900_2639_qq-1424_cd-8683",
+      "timestamp": "2006-03-19 19:47:44",
+      "action_type": "CLICK",
+      "content": "park slope day camp summer camp in brooklyn",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result indicates interest but not necessarily a strong information scent. The previous events suggest the user may not have found the search fruitful, and thus the click could be exploratory rather than a definitive pursuit of specific information. A more appropriate label might be 'PoorScent' or 'ApproachingSource' depending on the context of their intent during the session.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.0007834047079087,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:12.421942"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.14038610458374,
+      "decisions": [
+        {
+          "event_id": "10900_2639_qq-1424",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2639_qq-1424_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2639_qq-1424_cd-8683",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.94894814491272,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'park slope day camp...' suggests the user initiated a search, but without additional context (e.g., whether they clicked any results), it indicates a lack of strong information scent. The absence of clicks or engagement with SERP results implies the user may not have found the initial query promising, leading to a potential need for a new search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results indicates the user is exploring potential options; however, they have not yet clicked on any. The term 'FollowingScent' implies a strong intent to pursue specific information, which may not be accurate here as the user is still in the evaluation phase. A better label would be 'ApproachingSource' since they are assessing multiple options.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result indicates interest but not necessarily a strong information scent. The previous events suggest the user may not have found the search fruitful, and thus the click could be exploratory rather than a definitive pursuit of specific information. A more appropriate label might be 'PoorScent' or 'ApproachingSource' depending on the context of their intent during the session.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.828232049942017,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0007834047079087
+}

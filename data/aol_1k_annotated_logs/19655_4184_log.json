@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4184",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:51:28.040768",
+  "events": [
+    {
+      "session_id": "19655_4184",
+      "event_id": "19655_4184_qq-2482",
+      "timestamp": "2006-05-23 09:06:48",
+      "action_type": "QUERY",
+      "content": "mississippi river rentals",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mississippi river rentals...' lacks specificity and may not reflect a clear intent. The continuation without any clicks suggests that the user did not find promising results, indicating poor scent rather than a well-formed search with clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9706826627254486,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:51:53.417526"
+    },
+    {
+      "session_id": "19655_4184",
+      "event_id": "19655_4184_qq-2482_serp",
+      "timestamp": "2006-05-23 09:06:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dillon beach rentals and moore vacation rentals, smart source rentals nationwide computer av rentals, greater philadelphia party rentals and linen rentals (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, indicating they were assessing the information available rather than following a specific scent. The action of viewing results suggests curiosity about the options, but not necessarily a clear intent to follow a particular scent, which is more characteristic of the ApproachingSource label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0008210636675359,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:51:53.417562"
+    },
+    {
+      "session_id": "19655_4184",
+      "event_id": "19655_4184_qq-2482_cd-6221",
+      "timestamp": "2006-05-23 09:06:48",
+      "action_type": "CLICK",
+      "content": "vacation home rental by vacation rentals 411",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'vacation home rental by vacation rentals 411...' indicates an exploratory behavior rather than a direct pursuit of a known scent. The user may have been intrigued by the content but not necessarily following a targeted scent, which would be better captured by the ApproachingSource label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.998677632957697,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:51:53.417572"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.0381481647491455,
+      "decisions": [
+        {
+          "event_id": "19655_4184_qq-2482",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4184_qq-2482_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4184_qq-2482_cd-6221",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.170864820480347,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mississippi river rentals...' lacks specificity and may not reflect a clear intent. The continuation without any clicks suggests that the user did not find promising results, indicating poor scent rather than a well-formed search with clear intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results, indicating they were assessing the information available rather than following a specific scent. The action of viewing results suggests curiosity about the options, but not necessarily a clear intent to follow a particular scent, which is more characteristic of the ApproachingSource label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'vacation home rental by vacation rentals 411...' indicates an exploratory behavior rather than a direct pursuit of a known scent. The user may have been intrigued by the content but not necessarily following a targeted scent, which would be better captured by the ApproachingSource label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.033578157424927,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0008210636675359
+}

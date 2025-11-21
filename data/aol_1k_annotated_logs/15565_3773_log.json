@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3773",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:44:01.125772",
+  "events": [
+    {
+      "session_id": "15565_3773",
+      "event_id": "15565_3773_qq-2122",
+      "timestamp": "2006-04-17 23:34:38",
+      "action_type": "QUERY",
+      "content": "aol yellow pages",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'aol yellow pages...' indicates that the user may not have found relevant results previously, as suggested by the invalid control character error. Instead of demonstrating a clear intent to continue a focused search, this seems to indicate a lack of promising options, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8958406209945678,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:36.970659"
+    },
+    {
+      "session_id": "15565_3773",
+      "event_id": "15565_3773_qq-2122_serp",
+      "timestamp": "2006-04-17 23:34:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: yellow pages aol com, www aol yellow pages com, yellow pages yellow page city com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with a focus on 'yellow pages' suggests the user is still seeking relevant information. However, the context of the previous query and the mention of an invalid control character indicates that these results may not have met the user\u2019s expectations, implying the user is still struggling to find satisfactory information, which aligns with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8875496983528137,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:36.970668"
+    },
+    {
+      "session_id": "15565_3773",
+      "event_id": "15565_3773_qq-2122_cd-5989",
+      "timestamp": "2006-04-17 23:34:38",
+      "action_type": "CLICK",
+      "content": "yellow pages aol com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'yellow pages aol com...' may not indicate a successful follow-through with intent if the previous actions suggest frustration or confusion. Given the context of potential errors and the lack of promising scent from earlier interactions, this could signify the user is attempting a last resort before leaving the patch, hence better suited to LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9892065256834031,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:44:36.970671"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.24064016342163,
+      "decisions": [
+        {
+          "event_id": "15565_3773_qq-2122",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3773_qq-2122_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3773_qq-2122_cd-5989",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.185712814331055,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'aol yellow pages...' indicates that the user may not have found relevant results previously, as suggested by the invalid control character error. Instead of demonstrating a clear intent to continue a focused search, this seems to indicate a lack of promising options, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with a focus on 'yellow pages' suggests the user is still seeking relevant information. However, the context of the previous query and the mention of an invalid control character indicates that these results may not have met the user\u2019s expectations, implying the user is still struggling to find satisfactory information, which aligns with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'yellow pages aol com...' may not indicate a successful follow-through with intent if the previous actions suggest frustration or confusion. Given the context of potential errors and the lack of promising scent from earlier interactions, this could signify the user is attempting a last resort before leaving the patch, hence better suited to LeavingPatch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.097551107406616,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9892065256834031
+}

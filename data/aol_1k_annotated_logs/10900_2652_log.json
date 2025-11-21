@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2652",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:06:36.890034",
+  "events": [
+    {
+      "session_id": "10900_2652",
+      "event_id": "10900_2652_qq-1420",
+      "timestamp": "2006-03-26 14:49:49",
+      "action_type": "QUERY",
+      "content": "omaha beef",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'omaha beef...' is incomplete and lacks specificity, suggesting that the user may not have a clear direction or intent. This warrants a label indicating poor scent as it does not demonstrate a focused search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9690495014190674,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:07:42.141889"
+    },
+    {
+      "session_id": "10900_2652",
+      "event_id": "10900_2652_qq-1420_serp",
+      "timestamp": "2006-03-26 14:49:49",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www bellwether omaha org, www omaha playhouse com, omaha children s museum (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any clear intent or engagement (e.g., clicks) indicates that the user may not have found relevant information. This suggests a potential abandonment of effective search strategies, which aligns more with LeavingPatch rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9851593092083931,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:07:42.141910"
+    },
+    {
+      "session_id": "10900_2652",
+      "event_id": "10900_2652_qq-1420_cd-8667",
+      "timestamp": "2006-03-26 14:49:49",
+      "action_type": "CLICK",
+      "content": "www omaha steaks com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'www omaha steaks com' indicates the user is pursuing a specific source that they found appealing based on the information scent. This is more indicative of an ApproachingSource behavior rather than FollowingScent, as the user is actively deciding to investigate a result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0019398421049117,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:07:42.141919"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 36.901429653167725,
+      "decisions": [
+        {
+          "event_id": "10900_2652_qq-1420",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2652_qq-1420_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2652_qq-1420_cd-8667",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.665613889694214,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'omaha beef...' is incomplete and lacks specificity, suggesting that the user may not have a clear direction or intent. This warrants a label indicating poor scent as it does not demonstrate a focused search behavior.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without any clear intent or engagement (e.g., clicks) indicates that the user may not have found relevant information. This suggests a potential abandonment of effective search strategies, which aligns more with LeavingPatch rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'www omaha steaks com' indicates the user is pursuing a specific source that they found appealing based on the information scent. This is more indicative of an ApproachingSource behavior rather than FollowingScent, as the user is actively deciding to investigate a result.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.353380918502808,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0019398421049117
+}

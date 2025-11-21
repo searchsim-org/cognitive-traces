@@ -1,0 +1,159 @@
+{
+  "session_id": "14915_3565",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:33:16.490108",
+  "events": [
+    {
+      "session_id": "14915_3565",
+      "event_id": "14915_3565_qq-1968",
+      "timestamp": "2006-05-15 10:48:58",
+      "action_type": "QUERY",
+      "content": "colonialbank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'colonialbank...' does not indicate targeted intent or a clear information need due to the presence of an error message. This suggests the user is not finding promising results, aligning more with PoorScent as they are not engaging further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.93360675573349,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:33:50.408445"
+    },
+    {
+      "session_id": "14915_3565",
+      "event_id": "14915_3565_qq-1968_serp",
+      "timestamp": "2006-05-15 10:48:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: personal business banking banks in delaware ws fs bank, bb t bank personal banking business banking mortgages investments, bb t bank personal banking business banking mortgages investments (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the analyst labeled this as FollowingScent, the user merely viewed 10 results without clicking on any, indicating that they might be assessing various options. This behavior aligns more with ApproachingSource as they are exploring sources based on the information scent but have not committed to any specific result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9755584627389908,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:33:50.408450"
+    },
+    {
+      "session_id": "14915_3565",
+      "event_id": "14915_3565_qq-1968_cd-11472",
+      "timestamp": "2006-05-15 10:48:58",
+      "action_type": "CLICK",
+      "content": "bb t bank personal banking business banking mortgages investments",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which suggests they found something potentially promising. However, considering the context of previous events and the invalid control character error, it may indicate a failure to find satisfactory information, leading them to abandon further exploration. Thus, LeavingPatch is more appropriate given the overall unsuccessful search trajectory.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9090241014957428,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:33:50.408452"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.33231019973755,
+      "decisions": [
+        {
+          "event_id": "14915_3565_qq-1968",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3565_qq-1968_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3565_qq-1968_cd-11472",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.412156105041504,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'colonialbank...' does not indicate targeted intent or a clear information need due to the presence of an error message. This suggests the user is not finding promising results, aligning more with PoorScent as they are not engaging further.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the analyst labeled this as FollowingScent, the user merely viewed 10 results without clicking on any, indicating that they might be assessing various options. This behavior aligns more with ApproachingSource as they are exploring sources based on the information scent but have not committed to any specific result.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result, which suggests they found something potentially promising. However, considering the context of previous events and the invalid control character error, it may indicate a failure to find satisfactory information, leading them to abandon further exploration. Thus, LeavingPatch is more appropriate given the overall unsuccessful search trajectory.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.855357885360718,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9755584627389908
+}

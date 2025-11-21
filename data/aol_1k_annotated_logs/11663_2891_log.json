@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2891",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:23:12.406363",
+  "events": [
+    {
+      "session_id": "11663_2891",
+      "event_id": "11663_2891_qq-1492",
+      "timestamp": "2006-04-24 21:22:13",
+      "action_type": "QUERY",
+      "content": "findlay city schools",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'findlay city schools...' lacks specificity or clarity, suggesting that the user may not have a clear target in mind. The lack of engagement (e.g., no clicks) indicates that the initial search did not provide promising scent, leading to a lack of relevant results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9889532327651978,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:23:49.012280"
+    },
+    {
+      "session_id": "11663_2891",
+      "event_id": "11663_2891_qq-1492_serp",
+      "timestamp": "2006-04-24 21:22:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: findlay city schools trojan true, findlay, findlay jobs findlay careers employment in findlay oh (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Even though the user viewed 10 results, the content suggests a lack of engagement with those results, possibly due to poor relevance or clarity of the initial query. This indicates the user may still be searching for better information, rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9796580418944358,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:23:49.012293"
+    },
+    {
+      "session_id": "11663_2891",
+      "event_id": "11663_2891_qq-1492_cd-8988",
+      "timestamp": "2006-04-24 21:22:13",
+      "action_type": "CLICK",
+      "content": "findlay city schools trojan true",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, it\u2019s possible they were still exploring without a clear target, especially if the previous actions indicated poor relevance. The click may not reflect a strong information scent as it could be an exploratory click rather than a targeted follow-up.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.987270237505436,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:23:49.012299"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.100253105163574,
+      "decisions": [
+        {
+          "event_id": "11663_2891_qq-1492",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2891_qq-1492_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2891_qq-1492_cd-8988",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.064175128936768,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'findlay city schools...' lacks specificity or clarity, suggesting that the user may not have a clear target in mind. The lack of engagement (e.g., no clicks) indicates that the initial search did not provide promising scent, leading to a lack of relevant results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Even though the user viewed 10 results, the content suggests a lack of engagement with those results, possibly due to poor relevance or clarity of the initial query. This indicates the user may still be searching for better information, rather than following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, it\u2019s possible they were still exploring without a clear target, especially if the previous actions indicated poor relevance. The click may not reflect a strong information scent as it could be an exploratory click rather than a targeted follow-up.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.19376826286316,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9889532327651978
+}

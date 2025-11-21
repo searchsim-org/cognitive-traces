@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4074",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:45:50.403469",
+  "events": [
+    {
+      "session_id": "19655_4074",
+      "event_id": "19655_4074_qq-2352",
+      "timestamp": "2006-03-19 16:43:43",
+      "action_type": "QUERY",
+      "content": "prince of wales",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'prince of wales...' appears vague and lacks specificity, suggesting that the user is not yet committed to a clear information need. The presence of an invalid control character indicates a potential confusion or error in the search process, which aligns with the characteristics of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9114190697669983,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:16.893304"
+    },
+    {
+      "session_id": "19655_4074",
+      "event_id": "19655_4074_qq-2352_serp",
+      "timestamp": "2006-03-19 16:43:43",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home prince of wales, prince of wales secondary school, prince of wales island realty llc home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing multiple results, the vague nature of the query suggests that the user may not have found satisfactory information. The lack of meaningful engagement or specific intent in the viewed results aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9976068891584873,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:16.893312"
+    },
+    {
+      "session_id": "19655_4074",
+      "event_id": "19655_4074_qq-2352_cd-14095",
+      "timestamp": "2006-03-19 16:43:43",
+      "action_type": "CLICK",
+      "content": "home prince of wales",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'home prince of wales...' indicates a choice made based on perceived relevance. However, the previous events suggest a lack of strong information scent, making it more appropriate to label this as ApproachingSource, as the user is attempting to engage with a source that may or may not fulfill their information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0065040223300457,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:16.893315"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.64366602897644,
+      "decisions": [
+        {
+          "event_id": "19655_4074_qq-2352",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4074_qq-2352_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4074_qq-2352_cd-14095",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.832153081893921,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'prince of wales...' appears vague and lacks specificity, suggesting that the user is not yet committed to a clear information need. The presence of an invalid control character indicates a potential confusion or error in the search process, which aligns with the characteristics of PoorScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing multiple results, the vague nature of the query suggests that the user may not have found satisfactory information. The lack of meaningful engagement or specific intent in the viewed results aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'home prince of wales...' indicates a choice made based on perceived relevance. However, the previous events suggest a lack of strong information scent, making it more appropriate to label this as ApproachingSource, as the user is attempting to engage with a source that may or may not fulfill their information need.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.857199907302856,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0065040223300457
+}

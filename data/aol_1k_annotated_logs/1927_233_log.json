@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_233",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:17:52.393893",
+  "events": [
+    {
+      "session_id": "1927_233",
+      "event_id": "1927_233_qq-109",
+      "timestamp": "2006-03-21 23:04:01",
+      "action_type": "QUERY",
+      "content": "eckerds.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The presence of an invalid control character suggests that the query was malformed or unsearchable, leading to unsuccessful attempts at finding relevant information. This indicates a lack of promising scent rather than a focused search effort.",
+      "judge_justification": "The event involves a malformed query ('eckerds.com...') containing invalid control characters, which the Critic correctly identifies as indicative of a failed or unsearchable attempt. The Analyst's 'FollowingScent' label is unsupported due to an analysis error, and the Critic's reasoning aligns with the schema: a malformed query suggests no viable information scent was present to guide the user. The user likely experienced a breakdown in the search process rather than a targeted effort.",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.8361300945281982,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:15.952654"
+    },
+    {
+      "session_id": "1927_233",
+      "event_id": "1927_233_qq-109_serp",
+      "timestamp": "2006-03-21 23:04:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www ecker ds us, ds ds ds, ecker net com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results with multiple invalid URLs points to a lack of effective information scent. The user likely encountered irrelevant results or errors, leading to a poor experience rather than a targeted search.",
+      "judge_justification": "The SERP view displays 10 results, many of which are malformed or nonsensical (e.g., 'ds ds ds', 'ecker net com'). The Critic's assessment is compelling: such results lack meaningful information scent, as they are either irrelevant or error-laden. The Analyst's 'FollowingScent' label is again unsupported by valid analysis, while the Critic's argument aligns with the schema's definition of 'PoorScent'\u2014a patch offering no promising options. The user\u2019s interaction here reflects frustration or confusion rather than progress.",
+      "confidence_score": 0.88,
+      "disagreement_score": 0.9637475550174713,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:15.952686"
+    },
+    {
+      "session_id": "1927_233",
+      "event_id": "1927_233_qq-109_cd-1751",
+      "timestamp": "2006-03-21 23:04:01",
+      "action_type": "CLICK",
+      "content": "www ecker d com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a link that also contains an invalid control character suggests that the user did not find a reliable or relevant source. This behavior aligns more with a failed search attempt rather than a successful one, indicating poor scent.",
+      "judge_justification": "The user clicked on a malformed URL ('www ecker d com...'), which, per the Critic, suggests a lack of reliable or relevant sources in the SERP. The Analyst's 'FollowingScent' label is invalid due to analysis errors, while the Critic\u2019s reasoning is consistent with the schema: clicking on a broken or nonsensical link indicates the user was unable to find viable information scent. This behavior mirrors a 'dead-end' in foraging, where the user\u2019s action does not reflect intentional progress but rather a last-resort attempt in a low-quality patch.",
+      "confidence_score": 0.9,
+      "disagreement_score": 0.8943678498268127,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:18:15.952698"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.464140176773071,
+      "decisions": [
+        {
+          "event_id": "1927_233_qq-109",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_233_qq-109_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_233_qq-109_cd-1751",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.150843143463135,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The presence of an invalid control character suggests that the query was malformed or unsearchable, leading to unsuccessful attempts at finding relevant information. This indicates a lack of promising scent rather than a focused search effort.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results with multiple invalid URLs points to a lack of effective information scent. The user likely encountered irrelevant results or errors, leading to a poor experience rather than a targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a link that also contains an invalid control character suggests that the user did not find a reliable or relevant source. This behavior aligns more with a failed search attempt rather than a successful one, indicating poor scent.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.76720905303955,
+      "decisions": [
+        {
+          "event_id": "1927_233_qq-109",
+          "final_label": "PoorScent",
+          "justification": "The event involves a malformed query ('eckerds.com...') containing invalid control characters, which the Critic correctly identifies as indicative of a failed or unsearchable attempt. The Analyst's 'FollowingScent' label is unsupported due to an analysis error, and the Critic's reasoning aligns with the schema: a malformed query suggests no viable information scent was present to guide the user. The user likely experienced a breakdown in the search process rather than a targeted effort.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        },
+        {
+          "event_id": "1927_233_qq-109_serp",
+          "final_label": "PoorScent",
+          "justification": "The SERP view displays 10 results, many of which are malformed or nonsensical (e.g., 'ds ds ds', 'ecker net com'). The Critic's assessment is compelling: such results lack meaningful information scent, as they are either irrelevant or error-laden. The Analyst's 'FollowingScent' label is again unsupported by valid analysis, while the Critic's argument aligns with the schema's definition of 'PoorScent'\u2014a patch offering no promising options. The user\u2019s interaction here reflects frustration or confusion rather than progress.",
+          "confidence": 0.88,
+          "flag_for_review": false,
+          "disagreement_score": 0.3
+        },
+        {
+          "event_id": "1927_233_qq-109_cd-1751",
+          "final_label": "PoorScent",
+          "justification": "The user clicked on a malformed URL ('www ecker d com...'), which, per the Critic, suggests a lack of reliable or relevant sources in the SERP. The Analyst's 'FollowingScent' label is invalid due to analysis errors, while the Critic\u2019s reasoning is consistent with the schema: clicking on a broken or nonsensical link indicates the user was unable to find viable information scent. This behavior mirrors a 'dead-end' in foraging, where the user\u2019s action does not reflect intentional progress but rather a last-resort attempt in a low-quality patch.",
+          "confidence": 0.9,
+          "flag_for_review": false,
+          "disagreement_score": 0.35
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9637475550174713
+}

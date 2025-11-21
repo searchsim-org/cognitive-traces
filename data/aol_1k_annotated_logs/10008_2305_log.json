@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2305",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:11:16.395787",
+  "events": [
+    {
+      "session_id": "10008_2305",
+      "event_id": "10008_2305_qq-1230",
+      "timestamp": "2006-05-22 08:36:35",
+      "action_type": "QUERY",
+      "content": "tufts university",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query with 'tufts university', but the presence of an analysis error suggests the query may not have been well-formed or targeted enough to evoke a strong scent. Instead of indicating a clear intent, the error points to a failure in retrieving relevant results, which is characteristic of PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9075297892093659,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:11:50.106367"
+    },
+    {
+      "session_id": "10008_2305",
+      "event_id": "10008_2305_qq-1230_serp",
+      "timestamp": "2006-05-22 08:36:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tufts university tufts admissions, tufts university, tufts university (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results related to 'tufts university', indicating an investigation of sources. However, given the context of the previous event indicating an error, the user may not have had a targeted query or clear intent, making ApproachingSource less applicable. A more fitting label could be DietEnrichment, as the user seems to be broadening their search through the displayed results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9604861855506897,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:11:50.106394"
+    },
+    {
+      "session_id": "10008_2305",
+      "event_id": "10008_2305_qq-1230_cd-7912",
+      "timestamp": "2006-05-22 08:36:35",
+      "action_type": "CLICK",
+      "content": "tufts university",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a search result, the previous events suggest that the search did not yield satisfactory results. The click could reflect a desperate attempt to find relevant information rather than a strong intent, thus indicating a potential LeavingPatch scenario instead of FollowingScent. This shows a lack of successful engagement with the content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.975679361820221,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:11:50.106402"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.062665939331055,
+      "decisions": [
+        {
+          "event_id": "10008_2305_qq-1230",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2305_qq-1230_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2305_qq-1230_cd-7912",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.334122896194458,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query with 'tufts university', but the presence of an analysis error suggests the query may not have been well-formed or targeted enough to evoke a strong scent. Instead of indicating a clear intent, the error points to a failure in retrieving relevant results, which is characteristic of PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results related to 'tufts university', indicating an investigation of sources. However, given the context of the previous event indicating an error, the user may not have had a targeted query or clear intent, making ApproachingSource less applicable. A more fitting label could be DietEnrichment, as the user seems to be broadening their search through the displayed results.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user clicked on a search result, the previous events suggest that the search did not yield satisfactory results. The click could reflect a desperate attempt to find relevant information rather than a strong intent, thus indicating a potential LeavingPatch scenario instead of FollowingScent. This shows a lack of successful engagement with the content.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.92122197151184,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.975679361820221
+}

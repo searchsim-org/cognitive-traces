@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_93",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:57:09.812346",
+  "events": [
+    {
+      "session_id": "1338_93",
+      "event_id": "1338_93_qq-31",
+      "timestamp": "2006-03-10 08:01:25",
+      "action_type": "QUERY",
+      "content": "beco",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears incomplete and lacks clarity, suggesting that the user may not have a targeted intent. The analyst's label of 'FollowingScent' assumes a clear query, but the content 'beco...' indicates uncertainty or confusion, which aligns more with 'PoorScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9529033303260803,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:57:46.804721"
+    },
+    {
+      "session_id": "1338_93",
+      "event_id": "1338_93_qq-31_serp",
+      "timestamp": "2006-03-10 08:01:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www be ch tel co uk, li be co home online shop authentic belgian linen since 1858 li be co home, be rlitz language school speak with confidence be rlitz co uk (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without clicking on any suggests that the user did not find sufficient information scent to warrant further investigation. The label 'FollowingScent' implies strong intent, which is inconsistent with the behavior of merely viewing results but not engaging with them.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 1.003549788892269,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:57:46.804735"
+    },
+    {
+      "session_id": "1338_93",
+      "event_id": "1338_93_qq-31_cd-1402",
+      "timestamp": "2006-03-10 08:01:25",
+      "action_type": "CLICK",
+      "content": "be co improving communities with quality construction",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the content 'be co improving communities with quality construction...' suggests that the user found this result promising enough to investigate further. This behavior aligns better with 'ApproachingSource', as it indicates an interest based on the information scent from the snippet, rather than the previous assumption of 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0197313100099563,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:57:46.804741"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.158448696136475,
+      "decisions": [
+        {
+          "event_id": "1338_93_qq-31",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_93_qq-31_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_93_qq-31_cd-1402",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.056765079498291,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears incomplete and lacks clarity, suggesting that the user may not have a targeted intent. The analyst's label of 'FollowingScent' assumes a clear query, but the content 'beco...' indicates uncertainty or confusion, which aligns more with 'PoorScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without clicking on any suggests that the user did not find sufficient information scent to warrant further investigation. The label 'FollowingScent' implies strong intent, which is inconsistent with the behavior of merely viewing results but not engaging with them.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on the content 'be co improving communities with quality construction...' suggests that the user found this result promising enough to investigate further. This behavior aligns better with 'ApproachingSource', as it indicates an interest based on the information scent from the snippet, rather than the previous assumption of 'FollowingScent'.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.526407957077026,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0197313100099563
+}

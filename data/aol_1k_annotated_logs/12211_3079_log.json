@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3079",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:21:46.560345",
+  "events": [
+    {
+      "session_id": "12211_3079",
+      "event_id": "12211_3079_qq-1600",
+      "timestamp": "2006-05-23 15:21:34",
+      "action_type": "QUERY",
+      "content": "light fair",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'light fair...' is vague and incomplete, suggesting that the user may not have a clear intent or information need. This aligns more with PoorScent as the user has not formed a well-targeted query to initiate a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0068329289555549,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:22:41.233556"
+    },
+    {
+      "session_id": "12211_3079",
+      "event_id": "12211_3079_qq-1600_serp",
+      "timestamp": "2006-05-23 15:21:34",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www light fair com, fair light jarre redir ec cio nando, fair trade gifts lighting furniture lamps more om gallery (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results indicate a lack of clarity and a potentially misleading or irrelevant set of links based on the incomplete query. This suggests that the user did not find promising scent in the results, aligning more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9963733822107315,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:22:41.233574"
+    },
+    {
+      "session_id": "12211_3079",
+      "event_id": "12211_3079_qq-1600_cd-9491",
+      "timestamp": "2006-05-23 15:21:34",
+      "action_type": "CLICK",
+      "content": "www light fair com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a result could indicate a pursuit of more information, but given the context of previous events showing poor clarity and relevance, it may be more appropriate to categorize this as ApproachingSource, as the user is attempting to investigate further despite the weak scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0153138294816018,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:22:41.233584"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 25.346917867660522,
+      "decisions": [
+        {
+          "event_id": "12211_3079_qq-1600",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3079_qq-1600_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3079_qq-1600_cd-9491",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 10.058122873306274,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'light fair...' is vague and incomplete, suggesting that the user may not have a clear intent or information need. This aligns more with PoorScent as the user has not formed a well-targeted query to initiate a search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewed results indicate a lack of clarity and a potentially misleading or irrelevant set of links based on the incomplete query. This suggests that the user did not find promising scent in the results, aligning more with PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a result could indicate a pursuit of more information, but given the context of previous events showing poor clarity and relevance, it may be more appropriate to categorize this as ApproachingSource, as the user is attempting to investigate further despite the weak scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.9979510307312,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0153138294816018
+}

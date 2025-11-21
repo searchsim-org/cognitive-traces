@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2347",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:33:35.398620",
+  "events": [
+    {
+      "session_id": "10133_2347",
+      "event_id": "10133_2347_qq-1251",
+      "timestamp": "2006-03-18 16:49:36",
+      "action_type": "QUERY",
+      "content": "calling card plus",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'calling card plus...' does not appear to indicate a well-formed, targeted search. The presence of an analysis error suggests that the query may not have provided sufficient information scent, leading to a lack of relevant results. This indicates a failure to find promising content, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9612749487161636,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:34:07.272736"
+    },
+    {
+      "session_id": "10133_2347",
+      "event_id": "10133_2347_qq-1251_serp",
+      "timestamp": "2006-03-18 16:49:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: calling cards phone cards international calling cards prepaid calling cards phone cards, calling cards phone cards international calling cards prepaid calling cards phone cards, calling card international calling card prepaid calling card prepaid phone card (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, but given the earlier analysis error and the repetitive nature of the results, it suggests that the user might not have found relevant information. Instead of indicating a targeted search (FollowingScent), it signifies a potential departure from the search due to disappointment with the quality of results, aligning more with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9057207643985749,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:34:07.272761"
+    },
+    {
+      "session_id": "10133_2347",
+      "event_id": "10133_2347_qq-1251_cd-8027",
+      "timestamp": "2006-03-18 16:49:36",
+      "action_type": "CLICK",
+      "content": "calling cards phone cards prepaid phone card prepaid calling card",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the content suggests that it may not have met their needs as indicated by the earlier analysis errors. If the clicked result was part of a series of poor experiences, this could lead to a lack of satisfaction, suggesting that the click was not driven by a strong information scent but rather desperation to find something relevant, indicating PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9388236403465271,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:34:07.272768"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.094517946243286,
+      "decisions": [
+        {
+          "event_id": "10133_2347_qq-1251",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2347_qq-1251_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2347_qq-1251_cd-8027",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.6794140338897705,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'calling card plus...' does not appear to indicate a well-formed, targeted search. The presence of an analysis error suggests that the query may not have provided sufficient information scent, leading to a lack of relevant results. This indicates a failure to find promising content, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results, but given the earlier analysis error and the repetitive nature of the results, it suggests that the user might not have found relevant information. Instead of indicating a targeted search (FollowingScent), it signifies a potential departure from the search due to disappointment with the quality of results, aligning more with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user clicked on a result, the content suggests that it may not have met their needs as indicated by the earlier analysis errors. If the clicked result was part of a series of poor experiences, this could lead to a lack of satisfaction, suggesting that the click was not driven by a strong information scent but rather desperation to find something relevant, indicating PoorScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.767266035079956,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9612749487161636
+}

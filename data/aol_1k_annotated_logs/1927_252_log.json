@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_252",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:28:42.352158",
+  "events": [
+    {
+      "session_id": "1927_252",
+      "event_id": "1927_252_qq-138",
+      "timestamp": "2006-04-18 00:39:16",
+      "action_type": "QUERY",
+      "content": "florida lottery",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'florida lottery...' may not indicate a well-targeted intent if the user receives an error related to the query format. This suggests that the user did not find promising information scent from the query, leading to the need to reformulate. Therefore, this is better classified as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9868192851543427,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:29:09.127183"
+    },
+    {
+      "session_id": "1927_252",
+      "event_id": "1927_252_qq-138_serp",
+      "timestamp": "2006-04-18 00:39:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: the florida lottery, the florida lottery, the florida lottery (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that are all the same ('the florida lottery') suggests the user may be frustrated or confused, leading to a lack of promising scent. Given that the content is repetitive, the user likely feels stuck and may abandon the search, which indicates LeavingPatch rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0115864403545856,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:29:09.127198"
+    },
+    {
+      "session_id": "1927_252",
+      "event_id": "1927_252_qq-138_cd-1837",
+      "timestamp": "2006-04-18 00:39:16",
+      "action_type": "CLICK",
+      "content": "the florida lottery",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'the florida lottery...' after viewing identical results indicates that the user did not find satisfactory information and is likely exploring the only option available. Thus, this reflects PoorScent rather than FollowingScent, as it suggests a lack of effective information scent guiding the user's choices.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0137091144919395,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:29:09.127206"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.847723007202148,
+      "decisions": [
+        {
+          "event_id": "1927_252_qq-138",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_252_qq-138_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_252_qq-138_cd-1837",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.391244173049927,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'florida lottery...' may not indicate a well-targeted intent if the user receives an error related to the query format. This suggests that the user did not find promising information scent from the query, leading to the need to reformulate. Therefore, this is better classified as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results that are all the same ('the florida lottery') suggests the user may be frustrated or confused, leading to a lack of promising scent. Given that the content is repetitive, the user likely feels stuck and may abandon the search, which indicates LeavingPatch rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'the florida lottery...' after viewing identical results indicates that the user did not find satisfactory information and is likely exploring the only option available. Thus, this reflects PoorScent rather than FollowingScent, as it suggests a lack of effective information scent guiding the user's choices.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.289341926574707,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0137091144919395
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3287",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:31:16.096826",
+  "events": [
+    {
+      "session_id": "13112_3287",
+      "event_id": "13112_3287_qq-1773",
+      "timestamp": "2006-05-26 15:56:58",
+      "action_type": "QUERY",
+      "content": "indianapolis contractors",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'indianapolis contractors...' does not demonstrate clear intent or a well-formed search. The presence of an analysis error suggests that the query may not have been successfully processed, indicating a lack of promising scent, which aligns with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9719684779644012,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:31:54.267415"
+    },
+    {
+      "session_id": "13112_3287",
+      "event_id": "13112_3287_qq-1773_serp",
+      "timestamp": "2006-05-26 15:56:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: indianapolis real estate agents homes for sale century 21 s chee tz, ed martin cadillac in anderson in serving indianapolis muncie carmel cadillac customers, dog indianapolis upton s famous pet training center upton s k 9 (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results which indicates they were engaging with the content presented to them, suggesting they were evaluating their options based on the information scent. Labeling this as FollowingScent overlooks the exploratory nature of this action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0086359620094298,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:31:54.267434"
+    },
+    {
+      "session_id": "13112_3287",
+      "event_id": "13112_3287_qq-1773_cd-9983",
+      "timestamp": "2006-05-26 15:56:58",
+      "action_type": "CLICK",
+      "content": "city of com indianapolis in things to do business directory local resources",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'city of com indianapolis in things to do business directory local resources...' indicates the user was trying to find specific information which suggests they were investigating sources rather than simply following a scent. This action is better aligned with ApproachingSource than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0037135899066925,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:31:54.267443"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.703421115875244,
+      "decisions": [
+        {
+          "event_id": "13112_3287_qq-1773",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3287_qq-1773_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3287_qq-1773_cd-9983",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.257496118545532,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'indianapolis contractors...' does not demonstrate clear intent or a well-formed search. The presence of an analysis error suggests that the query may not have been successfully processed, indicating a lack of promising scent, which aligns with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results which indicates they were engaging with the content presented to them, suggesting they were evaluating their options based on the information scent. Labeling this as FollowingScent overlooks the exploratory nature of this action.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'city of com indianapolis in things to do business directory local resources...' indicates the user was trying to find specific information which suggests they were investigating sources rather than simply following a scent. This action is better aligned with ApproachingSource than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.801501274108887,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0086359620094298
+}

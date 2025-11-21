@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4037",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:54:24.634097",
+  "events": [
+    {
+      "session_id": "19162_4037",
+      "event_id": "19162_4037_qq-2308",
+      "timestamp": "2006-03-13 23:13:31",
+      "action_type": "QUERY",
+      "content": "song meanings",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'song meanings...' lacks specificity and does not indicate a well-formed intent; it suggests the user may not have found promising information, as indicated by the need for further exploration. This aligns more closely with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0112334489822388,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:55:01.525735"
+    },
+    {
+      "session_id": "19162_4037",
+      "event_id": "19162_4037_qq-2308_serp",
+      "timestamp": "2006-03-13 23:13:31",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: song lyrics song meanings more at song meanings, song meanings at song facts, song crossfire song interpretations and meanings (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the lack of clear engagement or selection implies that they were not necessarily following a strong information scent. Instead, this action better fits the ApproachingSource label as they are assessing potential sources based on the presented titles and snippets.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9828918948769569,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:55:01.525758"
+    },
+    {
+      "session_id": "19162_4037",
+      "event_id": "19162_4037_qq-2308_cd-5846",
+      "timestamp": "2006-03-13 23:13:31",
+      "action_type": "CLICK",
+      "content": "song lyrics song meanings more at song meanings",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click indicates some level of engagement; however, without further context on user satisfaction post-click, this action could suggest a transition rather than a successful foraging. If the click did not lead to satisfactory content, it could imply leaving the patch. Therefore, LeavingPatch may better capture the potential frustration or lack of satisfaction experienced.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9967744141817093,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:55:01.525766"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.05336594581604,
+      "decisions": [
+        {
+          "event_id": "19162_4037_qq-2308",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4037_qq-2308_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4037_qq-2308_cd-5846",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.322906255722046,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'song meanings...' lacks specificity and does not indicate a well-formed intent; it suggests the user may not have found promising information, as indicated by the need for further exploration. This aligns more closely with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the lack of clear engagement or selection implies that they were not necessarily following a strong information scent. Instead, this action better fits the ApproachingSource label as they are assessing potential sources based on the presented titles and snippets.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click indicates some level of engagement; however, without further context on user satisfaction post-click, this action could suggest a transition rather than a successful foraging. If the click did not lead to satisfactory content, it could imply leaving the patch. Therefore, LeavingPatch may better capture the potential frustration or lack of satisfaction experienced.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.403330087661743,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0112334489822388
+}

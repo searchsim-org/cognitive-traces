@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2294",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:06:06.375544",
+  "events": [
+    {
+      "session_id": "10008_2294",
+      "event_id": "10008_2294_qq-1215",
+      "timestamp": "2006-04-24 09:35:00",
+      "action_type": "QUERY",
+      "content": "blue hills golf courses canton ma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'blue hills golf courses canton ma...' appears to be vague and may not yield strong results. The user likely did not find promising scent, as indicated by the invalid control character error, suggesting frustration or confusion with the search process, leading to a lack of clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9542208194732666,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:26.387010"
+    },
+    {
+      "session_id": "10008_2294",
+      "event_id": "10008_2294_qq-1215_serp",
+      "timestamp": "2006-04-24 09:35:00",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: friends of the blue hills, blue hill com welcomes you, home blue hill public library (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any indication of engagement (like clicks) suggests the user did not perceive strong information scent. Instead of actively following a scent, the user's lack of interaction implies they are dissatisfied with the search results, pointing to a poor scent experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9886748291552067,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:26.387040"
+    },
+    {
+      "session_id": "10008_2294",
+      "event_id": "10008_2294_qq-1215_cd-7880",
+      "timestamp": "2006-04-24 09:35:00",
+      "action_type": "CLICK",
+      "content": "home blue hill country club",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'home blue hill country club...' indicates an attempt to investigate a specific result that seemed relevant based on the snippet. However, this does not imply a strong following scent initiated by a targeted query, as the previous events suggest confusion and poor scent. Thus, a more appropriate label would be 'ApproachingSource'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9822325319051742,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:26.387048"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.485469818115234,
+      "decisions": [
+        {
+          "event_id": "10008_2294_qq-1215",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2294_qq-1215_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2294_qq-1215_cd-7880",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.689494848251343,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'blue hills golf courses canton ma...' appears to be vague and may not yield strong results. The user likely did not find promising scent, as indicated by the invalid control character error, suggesting frustration or confusion with the search process, leading to a lack of clicks.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any indication of engagement (like clicks) suggests the user did not perceive strong information scent. Instead of actively following a scent, the user's lack of interaction implies they are dissatisfied with the search results, pointing to a poor scent experience.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'home blue hill country club...' indicates an attempt to investigate a specific result that seemed relevant based on the snippet. However, this does not imply a strong following scent initiated by a targeted query, as the previous events suggest confusion and poor scent. Thus, a more appropriate label would be 'ApproachingSource'.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.50655722618103,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9886748291552067
+}

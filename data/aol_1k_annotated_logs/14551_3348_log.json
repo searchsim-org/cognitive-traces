@@ -1,0 +1,159 @@
+{
+  "session_id": "14551_3348",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:01:58.284301",
+  "events": [
+    {
+      "session_id": "14551_3348",
+      "event_id": "14551_3348_qq-1842",
+      "timestamp": "2006-03-03 19:02:45",
+      "action_type": "QUERY",
+      "content": "www.dell.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a search with a specific URL, indicating they were looking for information related to Dell. However, the presence of an error message suggests that the query was malformed or did not yield promising results, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9645649760961532,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:02:44.572643"
+    },
+    {
+      "session_id": "14551_3348",
+      "event_id": "14551_3348_qq-1842_serp",
+      "timestamp": "2006-03-03 19:02:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www dells com, dell laptop parts dell parts dell laptop repair dell repair, dell dell linux community web (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a SERP with multiple results but no engaging or successful clicks indicates that the user's information needs were not met, which suggests frustration or lack of promising content. This behavior aligns more with LeavingPatch, as the user might be abandoning the search after failing to find relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9953430075198412,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:02:44.572649"
+    },
+    {
+      "session_id": "14551_3348",
+      "event_id": "14551_3348_qq-1842_cd-11178",
+      "timestamp": "2006-03-03 19:02:45",
+      "action_type": "CLICK",
+      "content": "dell official site dell australia",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result, especially one noted as the official site, typically indicates an intention to evaluate further information; however, the context suggests the user's previous actions were not successful. This action could suggest an attempt to salvage the session, but the overall context indicates a search that was likely not fruitful, leaning more towards PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9781826049089432,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:02:44.572651"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 26.32820415496826,
+      "decisions": [
+        {
+          "event_id": "14551_3348_qq-1842",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3348_qq-1842_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3348_qq-1842_cd-11178",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.471726655960083,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a search with a specific URL, indicating they were looking for information related to Dell. However, the presence of an error message suggests that the query was malformed or did not yield promising results, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing a SERP with multiple results but no engaging or successful clicks indicates that the user's information needs were not met, which suggests frustration or lack of promising content. This behavior aligns more with LeavingPatch, as the user might be abandoning the search after failing to find relevant information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result, especially one noted as the official site, typically indicates an intention to evaluate further information; however, the context suggests the user's previous actions were not successful. This action could suggest an attempt to salvage the session, but the overall context indicates a search that was likely not fruitful, leaning more towards PoorScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.208731174468994,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9953430075198412
+}

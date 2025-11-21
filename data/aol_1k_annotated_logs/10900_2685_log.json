@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2685",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:34:43.191566",
+  "events": [
+    {
+      "session_id": "10900_2685",
+      "event_id": "10900_2685_qq-197",
+      "timestamp": "2006-04-21 10:01:29",
+      "action_type": "QUERY",
+      "content": "cartoon network",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cartoon network...' lacks specificity and does not indicate a clear intent or information need, suggesting the user may not have found promising scent in the initial results. Instead of showing targeted intent, it appears vague, reflecting a poor starting point for the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0003490556031465,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:35:40.189680"
+    },
+    {
+      "session_id": "10900_2685",
+      "event_id": "10900_2685_qq-197_serp",
+      "timestamp": "2006-04-21 10:01:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cartoon network free games online videos full episodes and kids tv shows, cartoon network free games online videos full episodes and kids tv shows, cartoon network free games online videos full episodes and kids tv shows (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the content of the titles indicates a lack of differentiation or relevance. The repetition of the same phrase suggests the user is not actively engaging with varied options, which may reflect a failure to find promising scent in the initial query. Labeling this as 'FollowingScent' does not accurately represent the user's apparent lack of enthusiasm towards the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0001438528299331,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:35:40.189704"
+    },
+    {
+      "session_id": "10900_2685",
+      "event_id": "10900_2685_qq-197_cd-1990",
+      "timestamp": "2006-04-21 10:01:29",
+      "action_type": "CLICK",
+      "content": "cartoon network free games online videos full episodes and kids tv shows",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a repetitive title such as 'cartoon network free games online videos full episodes and kids tv shows...' indicates that the user might not have found a better option. This action could be better classified as 'PoorScent' since the click does not demonstrate a strong intent but rather a lack of alternatives, reflecting a forced choice rather than a true interest in the clicked result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.996536286175251,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:35:40.189712"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.6839120388031,
+      "decisions": [
+        {
+          "event_id": "10900_2685_qq-197",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2685_qq-197_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2685_qq-197_cd-1990",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 11.063198804855347,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cartoon network...' lacks specificity and does not indicate a clear intent or information need, suggesting the user may not have found promising scent in the initial results. Instead of showing targeted intent, it appears vague, reflecting a poor starting point for the search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the content of the titles indicates a lack of differentiation or relevance. The repetition of the same phrase suggests the user is not actively engaging with varied options, which may reflect a failure to find promising scent in the initial query. Labeling this as 'FollowingScent' does not accurately represent the user's apparent lack of enthusiasm towards the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a repetitive title such as 'cartoon network free games online videos full episodes and kids tv shows...' indicates that the user might not have found a better option. This action could be better classified as 'PoorScent' since the click does not demonstrate a strong intent but rather a lack of alternatives, reflecting a forced choice rather than a true interest in the clicked result.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 26.942012071609497,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0003490556031465
+}

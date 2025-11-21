@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3598",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:56:10.163427",
+  "events": [
+    {
+      "session_id": "14987_3598",
+      "event_id": "14987_3598_qq-2001",
+      "timestamp": "2006-04-06 16:10:27",
+      "action_type": "QUERY",
+      "content": "inkjets",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'inkjets...' is vague and does not indicate a clear intent or specific information need. The ellipsis suggests uncertainty or incompleteness, which aligns more with a lack of promising scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9751153528690338,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:56:35.542895"
+    },
+    {
+      "session_id": "14987_3598",
+      "event_id": "14987_3598_qq-2001_serp",
+      "timestamp": "2006-04-06 16:10:27",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: inkjet transfer paper alizarin coating co ltd, industrial inkjet print heads fuji film usa, inkjet color systems the psychology of color (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the content indicates a mix of relevant and seemingly unrelated results. This suggests that the user may be browsing for information rather than following a strong scent. A more appropriate label would be ApproachingSource as the user is assessing various options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9791154861450195,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:56:35.542900"
+    },
+    {
+      "session_id": "14987_3598",
+      "event_id": "14987_3598_qq-2001_cd-11550",
+      "timestamp": "2006-04-06 16:10:27",
+      "action_type": "CLICK",
+      "content": "printer ink cartridges printer toner save up to 80 inkjet s com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The clicked content appears to be generic and lacks specificity regarding the user's intent. This suggests that the user is exploring options rather than following a clear scent. The label FollowingScent implies a targeted intent that is not clearly evident here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.016412791609764,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:56:35.542903"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.12724494934082,
+      "decisions": [
+        {
+          "event_id": "14987_3598_qq-2001",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3598_qq-2001_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3598_qq-2001_cd-11550",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.633602857589722,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'inkjets...' is vague and does not indicate a clear intent or specific information need. The ellipsis suggests uncertainty or incompleteness, which aligns more with a lack of promising scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed 10 results, the content indicates a mix of relevant and seemingly unrelated results. This suggests that the user may be browsing for information rather than following a strong scent. A more appropriate label would be ApproachingSource as the user is assessing various options.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The clicked content appears to be generic and lacks specificity regarding the user's intent. This suggests that the user is exploring options rather than following a clear scent. The label FollowingScent implies a targeted intent that is not clearly evident here.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.172585248947144,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.016412791609764
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4182",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:49:59.550243",
+  "events": [
+    {
+      "session_id": "19655_4182",
+      "event_id": "19655_4182_qq-2476",
+      "timestamp": "2006-05-23 02:19:13",
+      "action_type": "QUERY",
+      "content": "racism against native americans",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query on a specific topic, but the lack of clarity and the presence of an error suggests that the query did not yield promising results. This indicates a failure in information scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9368117451667786,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:50:25.370760"
+    },
+    {
+      "session_id": "19655_4182",
+      "event_id": "19655_4182_qq-2476_serp",
+      "timestamp": "2006-05-23 02:19:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: metal heads against racism, racism against indians org nbsp this website is for sale nbsp native american american indian native people mascots stereotypes racism education sports image resources and information, native americans native americans org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, but the presence of irrelevant or low-quality content suggests that the information scent was poor. Instead of continuing a focused search, the user is likely assessing the quality of available information, indicating a lack of promising leads.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9781068205833435,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:50:25.370767"
+    },
+    {
+      "session_id": "19655_4182",
+      "event_id": "19655_4182_qq-2476_cd-14299",
+      "timestamp": "2006-05-23 02:19:13",
+      "action_type": "CLICK",
+      "content": "racism against indians org nbsp this website is for sale nbsp native american american indian native people mascots stereotypes racism education sports image resources and information",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that appears to be a placeholder or a low-quality website indicates that the user did not find relevant or useful information. This aligns more with a poor scent than with a successful search, suggesting they were still struggling to find quality content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9618863642215729,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:50:25.370770"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.68539810180664,
+      "decisions": [
+        {
+          "event_id": "19655_4182_qq-2476",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4182_qq-2476_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4182_qq-2476_cd-14299",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.146360158920288,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query on a specific topic, but the lack of clarity and the presence of an error suggests that the query did not yield promising results. This indicates a failure in information scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results, but the presence of irrelevant or low-quality content suggests that the information scent was poor. Instead of continuing a focused search, the user is likely assessing the quality of available information, indicating a lack of promising leads.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result that appears to be a placeholder or a low-quality website indicates that the user did not find relevant or useful information. This aligns more with a poor scent than with a successful search, suggesting they were still struggling to find quality content.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.894663095474243,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9781068205833435
+}

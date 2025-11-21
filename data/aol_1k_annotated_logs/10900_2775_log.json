@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2775",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T10:52:25.776186",
+  "events": [
+    {
+      "session_id": "10900_2775",
+      "event_id": "10900_2775_qq-1476",
+      "timestamp": "2006-05-26 19:58:39",
+      "action_type": "QUERY",
+      "content": "excalibur",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query for 'excalibur...', which does not indicate a clear intent to find specific information. The presence of an invalid control character suggests a problem that may have led to confusion or lack of clarity in the user's intent, resulting in a lack of promising scent. Hence, it should be labeled as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9241954922676087,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:53:06.895299"
+    },
+    {
+      "session_id": "10900_2775",
+      "event_id": "10900_2775_qq-1476_serp",
+      "timestamp": "2006-05-26 19:58:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: excalibur publications, excalibur gymnastics excalibur gymnastics in virginia beach, excalibur hotel casino las vegas excalibur hotel casino (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed a set of results that seem to have low relevance based on the content listed (e.g., multiple mentions of 'excalibur' with varying contexts). This indicates that the user may not have found satisfactory results, leading them to consider leaving the search without further engagement. Thus, it is more appropriate to label this as LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.977236345410347,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:53:06.895307"
+    },
+    {
+      "session_id": "10900_2775",
+      "event_id": "10900_2775_qq-1476_cd-8688",
+      "timestamp": "2006-05-26 19:58:39",
+      "action_type": "CLICK",
+      "content": "excalibur hotel casino las vegas excalibur hotel casino",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'excalibur hotel casino las vegas' does not indicate a successful search, especially if the previous events show confusion or lack of clarity. The user may have clicked out of desperation rather than intent, indicating a PoorScent rather than a FollowingScent. The invalid control character issue might have contributed to the user's ineffective navigation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8938181519508361,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:53:06.895310"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.925801992416382,
+      "decisions": [
+        {
+          "event_id": "10900_2775_qq-1476",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2775_qq-1476_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2775_qq-1476_cd-8688",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.578477144241333,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query for 'excalibur...', which does not indicate a clear intent to find specific information. The presence of an invalid control character suggests a problem that may have led to confusion or lack of clarity in the user's intent, resulting in a lack of promising scent. Hence, it should be labeled as PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed a set of results that seem to have low relevance based on the content listed (e.g., multiple mentions of 'excalibur' with varying contexts). This indicates that the user may not have found satisfactory results, leading them to consider leaving the search without further engagement. Thus, it is more appropriate to label this as LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'excalibur hotel casino las vegas' does not indicate a successful search, especially if the previous events show confusion or lack of clarity. The user may have clicked out of desperation rather than intent, indicating a PoorScent rather than a FollowingScent. The invalid control character issue might have contributed to the user's ineffective navigation.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.488555908203125,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.977236345410347
+}

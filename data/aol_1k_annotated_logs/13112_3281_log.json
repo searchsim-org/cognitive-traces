@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3281",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:26:45.674574",
+  "events": [
+    {
+      "session_id": "13112_3281",
+      "event_id": "13112_3281_qq-1764",
+      "timestamp": "2006-05-21 11:14:33",
+      "action_type": "QUERY",
+      "content": "military summer school",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'military summer school...' suggests an exploratory intent, but the lack of clear control character suggests that the query may not have been well-formed or relevant, indicating weak information scent rather than a strong, targeted search effort.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.968611228466034,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:27:17.470973"
+    },
+    {
+      "session_id": "13112_3281",
+      "event_id": "13112_3281_qq-1764_serp",
+      "timestamp": "2006-05-21 11:14:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: summer tan home summer tan, military and veteran benefits news joining military us military, welcome senior summer school com blue host com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results without clicking on any, indicating a lack of satisfactory options. This suggests frustration with the search results, which aligns more closely with abandoning the search rather than maintaining a strong pursuit of information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9893226653337479,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:27:17.470986"
+    },
+    {
+      "session_id": "13112_3281",
+      "event_id": "13112_3281_qq-1764_cd-9966",
+      "timestamp": "2006-05-21 11:14:33",
+      "action_type": "CLICK",
+      "content": "affordable boarding school for boys camden military academy",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on a link indicates some interest, but given the previous context of poor scent and invalid query issues, this click might be more exploratory than indicative of a strong, targeted search. It does not show a clear intent to follow a promising lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9894089192152024,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:27:17.470991"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.70886516571045,
+      "decisions": [
+        {
+          "event_id": "13112_3281_qq-1764",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3281_qq-1764_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3281_qq-1764_cd-9966",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.5061798095703125,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'military summer school...' suggests an exploratory intent, but the lack of clear control character suggests that the query may not have been well-formed or relevant, indicating weak information scent rather than a strong, targeted search effort.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results without clicking on any, indicating a lack of satisfactory options. This suggests frustration with the search results, which aligns more closely with abandoning the search rather than maintaining a strong pursuit of information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on a link indicates some interest, but given the previous context of poor scent and invalid query issues, this click might be more exploratory than indicative of a strong, targeted search. It does not show a clear intent to follow a promising lead.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.260019779205322,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9894089192152024
+}

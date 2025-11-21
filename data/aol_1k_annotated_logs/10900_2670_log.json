@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2670",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:21:50.229910",
+  "events": [
+    {
+      "session_id": "10900_2670",
+      "event_id": "10900_2670_qq-1419",
+      "timestamp": "2006-04-05 15:59:19",
+      "action_type": "QUERY",
+      "content": "mohegan sun",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mohegan sun...' is too vague and lacks specificity, suggesting the user might not have found sufficient information scent, leading to a poor scent evaluation. The lack of control character issues indicates a failure in query formulation rather than a clear intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9020380020141602,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:22:34.901994"
+    },
+    {
+      "session_id": "10900_2670",
+      "event_id": "10900_2670_qq-1419_serp",
+      "timestamp": "2006-04-05 15:59:19",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mohegan sun casino city com, mohegan sun bar america in, casino resort in ct mohegan sun (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating they were evaluating options based on the information scent from the snippets. However, since the titles seem generic and the user could still be searching for more specific information, this suggests they were not necessarily following a strong scent but rather assessing their options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.976347291469574,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:22:34.902000"
+    },
+    {
+      "session_id": "10900_2670",
+      "event_id": "10900_2670_qq-1419_cd-8677",
+      "timestamp": "2006-04-05 15:59:19",
+      "action_type": "CLICK",
+      "content": "casino resort in ct mohegan sun",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'casino resort in ct mohegan sun...' suggests some level of intent, but it may not reflect a clear following of scent due to the vagueness of the initial query. It may represent an exploratory click rather than a targeted action, indicating a weak scent rather than a strong, informed decision.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9919408194720745,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:22:34.902003"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.006312131881714,
+      "decisions": [
+        {
+          "event_id": "10900_2670_qq-1419",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2670_qq-1419_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2670_qq-1419_cd-8677",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.836992979049683,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mohegan sun...' is too vague and lacks specificity, suggesting the user might not have found sufficient information scent, leading to a poor scent evaluation. The lack of control character issues indicates a failure in query formulation rather than a clear intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating they were evaluating options based on the information scent from the snippets. However, since the titles seem generic and the user could still be searching for more specific information, this suggests they were not necessarily following a strong scent but rather assessing their options.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'casino resort in ct mohegan sun...' suggests some level of intent, but it may not reflect a clear following of scent due to the vagueness of the initial query. It may represent an exploratory click rather than a targeted action, indicating a weak scent rather than a strong, informed decision.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.574177026748657,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9919408194720745
+}

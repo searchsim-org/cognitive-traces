@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_158",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:11:55.666735",
+  "events": [
+    {
+      "session_id": "1722_158",
+      "event_id": "1722_158_qq-64",
+      "timestamp": "2006-03-14 14:10:11",
+      "action_type": "QUERY",
+      "content": "mibank",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mibank...' suggests an incomplete or unclear intent, indicating a lack of promising information scent, which aligns with the PoorScent label rather than FollowingScent. The presence of an error suggests frustration or confusion, which typically leads to a new query without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9376348853111267,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:12:20.903387"
+    },
+    {
+      "session_id": "1722_158",
+      "event_id": "1722_158_qq-64_serp",
+      "timestamp": "2006-03-14 14:10:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www mi ru, www mi edu, herring bank banking services made personal (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any indication of engagement or satisfaction points toward PoorScent. The user might not have found any of the displayed results promising enough to click on, indicating a lack of effective information scent rather than an active and targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0032459508627654,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:12:20.903395"
+    },
+    {
+      "session_id": "1722_158",
+      "event_id": "1722_158_qq-64_cd-1574",
+      "timestamp": "2006-03-14 14:10:11",
+      "action_type": "CLICK",
+      "content": "personal banking accounts bmo harris bank",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'personal banking accounts bmo harris bank' suggests a clear intent to investigate further based on the information scent from the title. This behavior fits the ApproachingSource label better than FollowingScent, as it indicates the user identified this result as a potentially valuable source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9656227499246597,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:12:20.903397"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.326466083526611,
+      "decisions": [
+        {
+          "event_id": "1722_158_qq-64",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_158_qq-64_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_158_qq-64_cd-1574",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.9407103061676025,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mibank...' suggests an incomplete or unclear intent, indicating a lack of promising information scent, which aligns with the PoorScent label rather than FollowingScent. The presence of an error suggests frustration or confusion, which typically leads to a new query without clicks.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without any indication of engagement or satisfaction points toward PoorScent. The user might not have found any of the displayed results promising enough to click on, indicating a lack of effective information scent rather than an active and targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'personal banking accounts bmo harris bank' suggests a clear intent to investigate further based on the information scent from the title. This behavior fits the ApproachingSource label better than FollowingScent, as it indicates the user identified this result as a potentially valuable source.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.864283323287964,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0032459508627654
+}

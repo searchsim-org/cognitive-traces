@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3664",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:34:52.262221",
+  "events": [
+    {
+      "session_id": "15328_3664",
+      "event_id": "15328_3664_qq-2030",
+      "timestamp": "2006-03-21 16:49:29",
+      "action_type": "QUERY",
+      "content": "montgomery county probate court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'montgomery county probate court...' lacks specificity and may not have prompted any meaningful engagement with the content. The presence of an error in the analysis indicates that the query was not effective, suggesting the user did not find promising scent in the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9589420825242996,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:35:10.650608"
+    },
+    {
+      "session_id": "15328_3664",
+      "event_id": "15328_3664_qq-2030_serp",
+      "timestamp": "2006-03-21 16:49:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: montgomery cycle ry home page, www so md montgomery org, home page auburn montgomery library (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any indicates a lack of promising information scent. The user likely did not find relevant or appealing content based on the titles and snippets presented, leading to this assessment.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9758064210414886,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:35:10.650618"
+    },
+    {
+      "session_id": "15328_3664",
+      "event_id": "15328_3664_qq-2030_cd-11718",
+      "timestamp": "2006-03-21 16:49:29",
+      "action_type": "CLICK",
+      "content": "www co montgomery oh us",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result without a clear indication of finding satisfactory information suggests that the user might still be searching for better options. If the click did not satisfy their need, it could indicate an unsuccessful foraging attempt rather than a clear indication of finding scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0011556714773178,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:35:10.650622"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.588471174240112,
+      "decisions": [
+        {
+          "event_id": "15328_3664_qq-2030",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3664_qq-2030_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3664_qq-2030_cd-11718",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.917866945266724,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'montgomery county probate court...' lacks specificity and may not have prompted any meaningful engagement with the content. The presence of an error in the analysis indicates that the query was not effective, suggesting the user did not find promising scent in the results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without engaging with any indicates a lack of promising information scent. The user likely did not find relevant or appealing content based on the titles and snippets presented, leading to this assessment.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result without a clear indication of finding satisfactory information suggests that the user might still be searching for better options. If the click did not satisfy their need, it could indicate an unsuccessful foraging attempt rather than a clear indication of finding scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.792997121810913,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0011556714773178
+}

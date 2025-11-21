@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3212",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:25:25.576652",
+  "events": [
+    {
+      "session_id": "12653_3212",
+      "event_id": "12653_3212_qq-1682",
+      "timestamp": "2006-03-26 00:01:15",
+      "action_type": "QUERY",
+      "content": "waubonsee community college",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'waubonsee community college...' appears to be a broad search that does not indicate strong targeting or intent. If the analyst noted an error or lack of specificity, it suggests the user is not finding satisfactory results, aligning more with the PoorScent label. The lack of an effective query structure indicates a failure to yield promising information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9235077261924743,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:26:18.426845"
+    },
+    {
+      "session_id": "12653_3212",
+      "event_id": "12653_3212_qq-1682_serp",
+      "timestamp": "2006-03-26 00:01:15",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: homepage wau bon see community college, library wau bon see community college, homepage wau bon see community college (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the SERP results for 'waubonsee community college...' does not inherently signify a continued search with intent. If the user is viewing multiple results but not actively clicking, it may indicate they are unsatisfied with the results, leading towards abandoning the search. Therefore, the LeavingPatch label is more appropriate, as it suggests a lack of satisfactory results prompting reconsideration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9750300019979476,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:26:18.426982"
+    },
+    {
+      "session_id": "12653_3212",
+      "event_id": "12653_3212_qq-1682_cd-9733",
+      "timestamp": "2006-03-26 00:01:15",
+      "action_type": "CLICK",
+      "content": "homepage wau bon see community college",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the homepage of 'waubonsee community college...' could suggest a lack of better options, or a quick decision made without thorough consideration of the search results. If the prior events indicated a lack of clarity or dissatisfaction, this click may not reflect a strong information scent but rather a last resort, aligning more with PoorScent. The user\u2019s exploration indicates they were not finding useful information, leading to an uninformed choice.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9585456371307373,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:26:18.426990"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.2210910320282,
+      "decisions": [
+        {
+          "event_id": "12653_3212_qq-1682",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3212_qq-1682_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3212_qq-1682_cd-9733",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.1017560958862305,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'waubonsee community college...' appears to be a broad search that does not indicate strong targeting or intent. If the analyst noted an error or lack of specificity, it suggests the user is not finding satisfactory results, aligning more with the PoorScent label. The lack of an effective query structure indicates a failure to yield promising information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing the SERP results for 'waubonsee community college...' does not inherently signify a continued search with intent. If the user is viewing multiple results but not actively clicking, it may indicate they are unsatisfied with the results, leading towards abandoning the search. Therefore, the LeavingPatch label is more appropriate, as it suggests a lack of satisfactory results prompting reconsideration.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on the homepage of 'waubonsee community college...' could suggest a lack of better options, or a quick decision made without thorough consideration of the search results. If the prior events indicated a lack of clarity or dissatisfaction, this click may not reflect a strong information scent but rather a last resort, aligning more with PoorScent. The user\u2019s exploration indicates they were not finding useful information, leading to an uninformed choice.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.28411602973938,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9750300019979476
+}

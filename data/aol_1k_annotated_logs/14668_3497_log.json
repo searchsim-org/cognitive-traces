@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3497",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:46:13.254263",
+  "events": [
+    {
+      "session_id": "14668_3497",
+      "event_id": "14668_3497_qq-1906",
+      "timestamp": "2006-05-19 14:36:12",
+      "action_type": "QUERY",
+      "content": "better business bureau",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'better business bureau...' suggests an attempt to find specific information. However, if the query was issued without clicks or engagement, it indicates a lack of promising scent and an indication that the user's information need was not met, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9886717617511749,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:31.684467"
+    },
+    {
+      "session_id": "14668_3497",
+      "event_id": "14668_3497_qq-1906_serp",
+      "timestamp": "2006-05-19 14:36:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: better business bureau loi pine l, bbb start with trust better business bureau, bbb start with trust better business bureau (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without any engagement (clicks) indicates that the user did not find the presented options satisfactory. This aligns with a PoorScent designation, as the user likely discerned that the results did not meet their expectations or needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9869881063699723,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:31.684489"
+    },
+    {
+      "session_id": "14668_3497",
+      "event_id": "14668_3497_qq-1906_cd-7756",
+      "timestamp": "2006-05-19 14:36:12",
+      "action_type": "CLICK",
+      "content": "bbb start with trust better business bureau",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on the result 'bbb start with trust better business bureau...' suggests that the user perceived some level of relevance and information scent in this result, indicating an approach towards a source rather than strictly following a scent without consideration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9700151711702347,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:46:31.684495"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.963969707489014,
+      "decisions": [
+        {
+          "event_id": "14668_3497_qq-1906",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3497_qq-1906_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3497_qq-1906_cd-7756",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.120841979980469,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'better business bureau...' suggests an attempt to find specific information. However, if the query was issued without clicks or engagement, it indicates a lack of promising scent and an indication that the user's information need was not met, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without any engagement (clicks) indicates that the user did not find the presented options satisfactory. This aligns with a PoorScent designation, as the user likely discerned that the results did not meet their expectations or needs.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on the result 'bbb start with trust better business bureau...' suggests that the user perceived some level of relevance and information scent in this result, indicating an approach towards a source rather than strictly following a scent without consideration.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.1494529247283936,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9886717617511749
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3321",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:55:19.245845",
+  "events": [
+    {
+      "session_id": "13119_3321",
+      "event_id": "13119_3321_qq-1804",
+      "timestamp": "2006-04-14 16:58:12",
+      "action_type": "QUERY",
+      "content": "free easter cards",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'free easter cards...' suggests initial intent, but without clicks or further engagement, it indicates a lack of promising scent leading to the user not being satisfied with the results. Thus, the label should reflect the user's unsuccessful interaction, rather than a strong initial intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0385850578546525,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:57.742018"
+    },
+    {
+      "session_id": "13119_3321",
+      "event_id": "13119_3321_qq-1804_serp",
+      "timestamp": "2006-04-14 16:58:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: personalized birthday cards greeting cards photo cards card store com, calling cards phone cards prepaid phone card prepaid calling card, romantic cards romantic greeting cards love cards (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with no indication of engagement (e.g., no clicks) suggests that the user did not find the results promising enough to pursue further, indicating poor scent rather than a strong intent to follow a lead. This aligns with the user's likely frustration or lack of satisfaction with the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.995988591760397,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:57.742032"
+    },
+    {
+      "session_id": "13119_3321",
+      "event_id": "13119_3321_qq-1804_cd-10129",
+      "timestamp": "2006-04-14 16:58:12",
+      "action_type": "CLICK",
+      "content": "easter greetings net this website is for sale easter greetings resources and information",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result does not necessarily indicate strong intent if the user does not find the content satisfactory. Given the previous events suggest a lack of promising scent, this click may indicate an exploratory attempt that ultimately led to dissatisfaction, resulting in abandoning the search altogether. Therefore, a label reflecting the end of the search session is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0084846213459968,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:55:57.742038"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.10816788673401,
+      "decisions": [
+        {
+          "event_id": "13119_3321_qq-1804",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3321_qq-1804_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3321_qq-1804_cd-10129",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.257822275161743,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'free easter cards...' suggests initial intent, but without clicks or further engagement, it indicates a lack of promising scent leading to the user not being satisfied with the results. Thus, the label should reflect the user's unsuccessful interaction, rather than a strong initial intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with no indication of engagement (e.g., no clicks) suggests that the user did not find the results promising enough to pursue further, indicating poor scent rather than a strong intent to follow a lead. This aligns with the user's likely frustration or lack of satisfaction with the search results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Clicking on a result does not necessarily indicate strong intent if the user does not find the content satisfactory. Given the previous events suggest a lack of promising scent, this click may indicate an exploratory attempt that ultimately led to dissatisfaction, resulting in abandoning the search altogether. Therefore, a label reflecting the end of the search session is more appropriate.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.760741233825684,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0385850578546525
+}

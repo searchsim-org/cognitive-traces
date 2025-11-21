@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2748",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T10:31:06.703376",
+  "events": [
+    {
+      "session_id": "10900_2748",
+      "event_id": "10900_2748_qq-1449",
+      "timestamp": "2006-05-15 17:53:08",
+      "action_type": "QUERY",
+      "content": "mandalay bay",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content provided is vague ('mandalay bay...') and does not indicate a well-formed, targeted query. Instead, it suggests a lack of clarity and specificity, which aligns more with PoorScent as the user may not have a strong intent to continue searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9786449775099755,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:31:57.086301"
+    },
+    {
+      "session_id": "10900_2748",
+      "event_id": "10900_2748_qq-1449_serp",
+      "timestamp": "2006-05-15 17:53:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mandala y bay resort and casino las vegas mandala y bay, mandala y bay resort and casino las vegas mandala y bay, mandala y bay resort and casino las vegas mandala y bay (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewed results seem repetitive and contain errors ('mandala y bay resort and casino las vegas mandala y bay') suggesting the user is not finding relevant or rich information. This indicates that the initial query did not lead to meaningful results, supporting the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9563767522573471,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:31:57.086314"
+    },
+    {
+      "session_id": "10900_2748",
+      "event_id": "10900_2748_qq-1449_cd-8749",
+      "timestamp": "2006-05-15 17:53:08",
+      "action_type": "CLICK",
+      "content": "mandala y bay resort and casino las vegas mandala y bay",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click event follows the same pattern as the previous events, indicating a lack of clarity in the search process. The repetitive nature of the content suggests that the user may not be effectively engaging with the information. The click does not reflect a strong intent to pursue the source based on promising scent, thus ApproachingSource is not an appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9964885041117668,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T10:31:57.086319"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.555108785629272,
+      "decisions": [
+        {
+          "event_id": "10900_2748_qq-1449",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2748_qq-1449_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2748_qq-1449_cd-8749",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.37519907951355,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content provided is vague ('mandalay bay...') and does not indicate a well-formed, targeted query. Instead, it suggests a lack of clarity and specificity, which aligns more with PoorScent as the user may not have a strong intent to continue searching.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The viewed results seem repetitive and contain errors ('mandala y bay resort and casino las vegas mandala y bay') suggesting the user is not finding relevant or rich information. This indicates that the initial query did not lead to meaningful results, supporting the PoorScent label rather than FollowingScent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click event follows the same pattern as the previous events, indicating a lack of clarity in the search process. The repetitive nature of the content suggests that the user may not be effectively engaging with the information. The click does not reflect a strong intent to pursue the source based on promising scent, thus ApproachingSource is not an appropriate label.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.110515832901,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9964885041117668
+}

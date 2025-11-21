@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4110",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:04:15.222581",
+  "events": [
+    {
+      "session_id": "19655_4110",
+      "event_id": "19655_4110_qq-2382",
+      "timestamp": "2006-04-08 02:35:24",
+      "action_type": "QUERY",
+      "content": "weather channel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'weather channel...' suggests an initial attempt to search, but the presence of an invalid control character indicates a failed query attempt. The user likely did not find the scent promising enough to proceed, which is characteristic of PoorScent, rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9391731560230255,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:04:44.319416"
+    },
+    {
+      "session_id": "19655_4110",
+      "event_id": "19655_4110_qq-2382_serp",
+      "timestamp": "2006-04-08 02:35:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: national and local weather radar daily forecast hurricane and information from the weather channel and weather com, national and local weather radar daily forecast hurricane and information from the weather channel and weather com, national and local weather radar daily forecast hurricane and information from the weather channel and weather com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the content suggests a lack of clear intent to pursue further investigation. The long string of text implies potential confusion or an overwhelmed state rather than a targeted approach. This aligns more closely with ApproachingSource, where a user engages with results that seem promising based on their initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9650383532047272,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:04:44.319426"
+    },
+    {
+      "session_id": "19655_4110",
+      "event_id": "19655_4110_qq-2382_cd-3548",
+      "timestamp": "2006-04-08 02:35:24",
+      "action_type": "CLICK",
+      "content": "national and local weather radar daily forecast hurricane and information from the weather channel and weather com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result indicates some level of engagement, but without a clear understanding or satisfaction from prior events, it is possible that the user is still exploring without clear direction. This is better captured by LeavingPatch, as the user may have clicked out of frustration or confusion rather than with intent, indicating a sense of abandonment in their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9968428209424018,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:04:44.319428"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.239516019821167,
+      "decisions": [
+        {
+          "event_id": "19655_4110_qq-2382",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4110_qq-2382_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4110_qq-2382_cd-3548",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.013057708740234,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'weather channel...' suggests an initial attempt to search, but the presence of an invalid control character indicates a failed query attempt. The user likely did not find the scent promising enough to proceed, which is characteristic of PoorScent, rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the content suggests a lack of clear intent to pursue further investigation. The long string of text implies potential confusion or an overwhelmed state rather than a targeted approach. This aligns more closely with ApproachingSource, where a user engages with results that seem promising based on their initial query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result indicates some level of engagement, but without a clear understanding or satisfaction from prior events, it is possible that the user is still exploring without clear direction. This is better captured by LeavingPatch, as the user may have clicked out of frustration or confusion rather than with intent, indicating a sense of abandonment in their search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.578227043151855,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9968428209424018
+}

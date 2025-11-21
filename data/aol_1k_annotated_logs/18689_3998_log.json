@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3998",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:32:00.025129",
+  "events": [
+    {
+      "session_id": "18689_3998",
+      "event_id": "18689_3998_qq-2249",
+      "timestamp": "2006-05-08 06:28:16",
+      "action_type": "QUERY",
+      "content": "thymefordinner",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have invalid characters, which could indicate a lack of clarity or intent. A well-formed query should yield promising results; however, the error suggests that the user may not be receiving relevant information, leading to a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8810026884078979,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:32:24.289597"
+    },
+    {
+      "session_id": "18689_3998",
+      "event_id": "18689_3998_qq-2249_serp",
+      "timestamp": "2006-05-08 06:28:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www thyme for dinner com, olde thyme aviation olde thyme aviation, www thyme for health com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results that may contain irrelevant or poorly formatted information suggests that the user is not following a strong scent. The presence of multiple results with invalid characters indicates the results may not align with the user's intent, leading to a poor scent experience.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.885863471031189,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:32:24.289616"
+    },
+    {
+      "session_id": "18689_3998",
+      "event_id": "18689_3998_qq-2249_cd-13236",
+      "timestamp": "2006-05-08 06:28:16",
+      "action_type": "CLICK",
+      "content": "www thyme for dinner com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result but likely did so out of frustration with the previous results, which were not promising. Given the context of errors and the invalid control characters in the previous events, this click may not indicate a strong following scent but rather an attempt to salvage the session, suggesting they might leave the patch soon after realizing the content is not suitable.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8955076575279235,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:32:24.289622"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.369109153747559,
+      "decisions": [
+        {
+          "event_id": "18689_3998_qq-2249",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3998_qq-2249_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3998_qq-2249_cd-13236",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.783308744430542,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have invalid characters, which could indicate a lack of clarity or intent. A well-formed query should yield promising results; however, the error suggests that the user may not be receiving relevant information, leading to a poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results that may contain irrelevant or poorly formatted information suggests that the user is not following a strong scent. The presence of multiple results with invalid characters indicates the results may not align with the user's intent, leading to a poor scent experience.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result but likely did so out of frustration with the previous results, which were not promising. Given the context of errors and the invalid control characters in the previous events, this click may not indicate a strong following scent but rather an attempt to salvage the session, suggesting they might leave the patch soon after realizing the content is not suitable.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.989381313323975,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.8955076575279235
+}

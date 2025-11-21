@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3584",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:47:45.955381",
+  "events": [
+    {
+      "session_id": "14987_3584",
+      "event_id": "14987_3584_qq-1989",
+      "timestamp": "2006-03-18 20:50:45",
+      "action_type": "QUERY",
+      "content": "subway",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'subway...' indicates a lack of specificity or clarity, which suggests that the user may not have a clear intent or that the query is not yielding promising results. Labeling this as 'FollowingScent' overlooks the potential ambiguity in the user's intention.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9916207194328308,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:48:12.732712"
+    },
+    {
+      "session_id": "14987_3584",
+      "event_id": "14987_3584_qq-1989_serp",
+      "timestamp": "2006-03-18 20:50:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www subway 1 com, www order subway com, www subway tile com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with generic references to 'www subway' indicates that the user is not finding relevant or satisfactory results. This aligns more closely with 'PoorScent,' as the user likely does not feel a strong connection to the presented options, suggesting a lack of effective information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9861053928732872,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:48:12.732719"
+    },
+    {
+      "session_id": "14987_3584",
+      "event_id": "14987_3584_qq-1989_cd-11523",
+      "timestamp": "2006-03-18 20:50:45",
+      "action_type": "CLICK",
+      "content": "sub sandwiches breakfast sandwiches salads more subway subway com united states english",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the content appears to be an attempt to gather more information, but given the context of ambiguous queries and poor results, it is more likely that the user is trying to salvage the search. If the content does not meet their needs, this could lead to abandoning the search altogether, thus aligning better with 'LeavingPatch.'",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9607650965452195,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:48:12.732722"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.297723054885864,
+      "decisions": [
+        {
+          "event_id": "14987_3584_qq-1989",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3584_qq-1989_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3584_qq-1989_cd-11523",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.308820962905884,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'subway...' indicates a lack of specificity or clarity, which suggests that the user may not have a clear intent or that the query is not yielding promising results. Labeling this as 'FollowingScent' overlooks the potential ambiguity in the user's intention.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with generic references to 'www subway' indicates that the user is not finding relevant or satisfactory results. This aligns more closely with 'PoorScent,' as the user likely does not feel a strong connection to the presented options, suggesting a lack of effective information scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on the content appears to be an attempt to gather more information, but given the context of ambiguous queries and poor results, it is more likely that the user is trying to salvage the search. If the content does not meet their needs, this could lead to abandoning the search altogether, thus aligning better with 'LeavingPatch.'",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.031075954437256,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9916207194328308
+}

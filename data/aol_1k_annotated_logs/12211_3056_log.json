@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3056",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:58:33.905770",
+  "events": [
+    {
+      "session_id": "12211_3056",
+      "event_id": "12211_3056_qq-1583",
+      "timestamp": "2006-05-10 02:40:50",
+      "action_type": "QUERY",
+      "content": "las vegas home rentals",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'las vegas home rentals...' indicates an exploratory intent but lacks specificity or refinement that would characterize a strong information scent. The presence of an invalid control character suggests confusion or a poorly formed query, signifying that the user may not have found promising information to engage with, thus reflecting a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.903843778371811,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:59:19.316554"
+    },
+    {
+      "session_id": "12211_3056",
+      "event_id": "12211_3056_qq-1583_serp",
+      "timestamp": "2006-05-10 02:40:50",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: las vegas 2005 com celebrate with us the las vegas centennial, jazz las vegas com nbsp jazz las vegas resources and information, stratosphere casino hotel tower las vegas hotels in las vegas las vegas casinos and gaming stage shows and live entertainment in vegas las vegas dining bars and lounges (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results without a clear indication of finding satisfactory information. The broad and somewhat vague nature of the results suggests they were not well-aligned with the user's intent. This incomplete engagement with the SERP indicates the user may have felt the need to abandon their current search strategy, rather than actively following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9886789426207543,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:59:19.316561"
+    },
+    {
+      "session_id": "12211_3056",
+      "event_id": "12211_3056_qq-1583_cd-9443",
+      "timestamp": "2006-05-10 02:40:50",
+      "action_type": "CLICK",
+      "content": "www las vegas homes 4 rent com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www las vegas homes 4 rent com...' suggests that the user was attempting to gather more specific information, which aligns with the label 'ApproachingSource'. However, this action should not be classified as 'FollowingScent', since earlier events indicated a lack of clarity in their intentions and an ineffective search strategy, reflecting a potential misalignment with their information goals.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9836763143539429,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:59:19.316564"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.70642113685608,
+      "decisions": [
+        {
+          "event_id": "12211_3056_qq-1583",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3056_qq-1583_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3056_qq-1583_cd-9443",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.888837814331055,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'las vegas home rentals...' indicates an exploratory intent but lacks specificity or refinement that would characterize a strong information scent. The presence of an invalid control character suggests confusion or a poorly formed query, signifying that the user may not have found promising information to engage with, thus reflecting a poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results without a clear indication of finding satisfactory information. The broad and somewhat vague nature of the results suggests they were not well-aligned with the user's intent. This incomplete engagement with the SERP indicates the user may have felt the need to abandon their current search strategy, rather than actively following a scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www las vegas homes 4 rent com...' suggests that the user was attempting to gather more specific information, which aligns with the label 'ApproachingSource'. However, this action should not be classified as 'FollowingScent', since earlier events indicated a lack of clarity in their intentions and an ineffective search strategy, reflecting a potential misalignment with their information goals.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.51221203804016,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9886789426207543
+}

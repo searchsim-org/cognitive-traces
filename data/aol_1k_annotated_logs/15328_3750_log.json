@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3750",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:31:45.003079",
+  "events": [
+    {
+      "session_id": "15328_3750",
+      "event_id": "15328_3750_qq-2096",
+      "timestamp": "2006-05-30 20:43:05",
+      "action_type": "QUERY",
+      "content": "christ child society of dayton",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'christ child society of dayton...' indicates an attempt to find information, but the presence of an invalid control character suggests the query was malformed. This could imply that the user did not find the initial results promising enough to continue, reflecting a lack of effective scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9180276393890381,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:16.827812"
+    },
+    {
+      "session_id": "15328_3750",
+      "event_id": "15328_3750_qq-2096_serp",
+      "timestamp": "2006-05-30 20:43:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dayton dental society, dayton nevada historical society of dayton valley home page, national christ child society where love leads to action (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without selecting any implies that the user is not finding the content relevant to their information need. The term 'FollowingScent' suggests a strong intent, which does not align with the behavior of engaging with results that do not lead to further action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0237637907266617,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:16.827819"
+    },
+    {
+      "session_id": "15328_3750",
+      "event_id": "15328_3750_qq-2096_cd-11822",
+      "timestamp": "2006-05-30 20:43:05",
+      "action_type": "CLICK",
+      "content": "national christ child society where love leads to action",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on the result 'national christ child society where love leads to action...' indicates a step towards further investigation based on perceived relevance. This is more indicative of 'ApproachingSource' rather than 'FollowingScent', as the user is acting on an identified potential source after reviewing the SERP.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.992143488675356,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:32:16.827822"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.805280685424805,
+      "decisions": [
+        {
+          "event_id": "15328_3750_qq-2096",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3750_qq-2096_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3750_qq-2096_cd-11822",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.096228837966919,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'christ child society of dayton...' indicates an attempt to find information, but the presence of an invalid control character suggests the query was malformed. This could imply that the user did not find the initial results promising enough to continue, reflecting a lack of effective scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without selecting any implies that the user is not finding the content relevant to their information need. The term 'FollowingScent' suggests a strong intent, which does not align with the behavior of engaging with results that do not lead to further action.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on the result 'national christ child society where love leads to action...' indicates a step towards further investigation based on perceived relevance. This is more indicative of 'ApproachingSource' rather than 'FollowingScent', as the user is acting on an identified potential source after reviewing the SERP.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.614847183227539,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0237637907266617
+}

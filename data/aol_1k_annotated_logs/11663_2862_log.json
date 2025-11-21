@@ -1,0 +1,159 @@
+{
+  "session_id": "11663_2862",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T12:01:10.418844",
+  "events": [
+    {
+      "session_id": "11663_2862",
+      "event_id": "11663_2862_qq-1490",
+      "timestamp": "2006-03-11 18:04:58",
+      "action_type": "QUERY",
+      "content": "brimfield",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'brimfield...' appears to be incomplete or poorly formed, as indicated by the presence of an invalid control character. This suggests that the user may not have a clear information need, leading to a lack of promising scent. Therefore, it aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9582274973392486,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:01:54.343919"
+    },
+    {
+      "session_id": "11663_2862",
+      "event_id": "11663_2862_qq-1490_serp",
+      "timestamp": "2006-03-11 18:04:58",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: brim field com, brim field antique show homepage, www brim field ohio com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's view of the SERP with results related to 'brim field' does not indicate a clear intent or successful engagement with the content. Given the previous action's issues with the query, the lack of strong scent from the viewed results suggests that the user is still struggling to find relevant information, thus more appropriately labeled as PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.000653225928545,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:01:54.343927"
+    },
+    {
+      "session_id": "11663_2862",
+      "event_id": "11663_2862_qq-1490_cd-8987",
+      "timestamp": "2006-03-11 18:04:58",
+      "action_type": "CLICK",
+      "content": "brim field antique show homepage",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on the 'brim field antique show homepage', the context of the previous actions indicates a lack of clarity or intent in their search. The click may be more exploratory rather than indicative of a strong scent, especially since the query was problematic. Therefore, this could align better with a label of PoorScent or even LeavingPatch, given the lack of promising results prior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9714870899915695,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T12:01:54.343930"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.613155126571655,
+      "decisions": [
+        {
+          "event_id": "11663_2862_qq-1490",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2862_qq-1490_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11663_2862_qq-1490_cd-8987",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.854516267776489,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'brimfield...' appears to be incomplete or poorly formed, as indicated by the presence of an invalid control character. This suggests that the user may not have a clear information need, leading to a lack of promising scent. Therefore, it aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's view of the SERP with results related to 'brim field' does not indicate a clear intent or successful engagement with the content. Given the previous action's issues with the query, the lack of strong scent from the viewed results suggests that the user is still struggling to find relevant information, thus more appropriately labeled as PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on the 'brim field antique show homepage', the context of the previous actions indicates a lack of clarity or intent in their search. The click may be more exploratory rather than indicative of a strong scent, especially since the query was problematic. Therefore, this could align better with a label of PoorScent or even LeavingPatch, given the lack of promising results prior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.202874183654785,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.000653225928545
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_220",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:52:04.296530",
+  "events": [
+    {
+      "session_id": "1722_220",
+      "event_id": "1722_220_qq-72",
+      "timestamp": "2006-05-31 09:49:36",
+      "action_type": "QUERY",
+      "content": "jockstrap",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query for 'jockstrap', but without any clicks or further engagement, it suggests the user might not have found promising information and is likely seeking a different result or topic. The presence of an invalid control character indicates a possible error in the query itself, leading to a lack of relevant search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8534319162368774,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:34.283379"
+    },
+    {
+      "session_id": "1722_220",
+      "event_id": "1722_220_qq-72_serp",
+      "timestamp": "2006-05-31 09:49:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: jockstraps com mens jockstraps and athletic supporters, pour les amateurs de jockstrap for jockstrap lovers, jockstraps and athletic supporters for sale jockstrap central (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing the SERP results, the content indicates a lack of engagement with these results, which suggests that the user did not find a satisfactory match for their query. The repetitive nature of the results may have led to a conclusion that the current search patch does not offer valuable information, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0056193739175796,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:34.283391"
+    },
+    {
+      "session_id": "1722_220",
+      "event_id": "1722_220_qq-72_cd-1585",
+      "timestamp": "2006-05-31 09:49:36",
+      "action_type": "CLICK",
+      "content": "all kink s jockstrap locker room men in jockstraps vintage jock straps jockstrap video chat",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "This click appears to stem from a lack of relevant results, as indicated in the previous events. If the user clicked on a result after a series of poor engagements, it could be indicative of them exploring options before ultimately abandoning the search due to dissatisfaction. A more fitting label would be LeavingPatch, as it suggests the user is not finding what they are looking for and may soon stop their search altogether.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9643679350614548,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:34.283396"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.784241914749146,
+      "decisions": [
+        {
+          "event_id": "1722_220_qq-72",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_220_qq-72_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_220_qq-72_cd-1585",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.61895489692688,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query for 'jockstrap', but without any clicks or further engagement, it suggests the user might not have found promising information and is likely seeking a different result or topic. The presence of an invalid control character indicates a possible error in the query itself, leading to a lack of relevant search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing the SERP results, the content indicates a lack of engagement with these results, which suggests that the user did not find a satisfactory match for their query. The repetitive nature of the results may have led to a conclusion that the current search patch does not offer valuable information, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "This click appears to stem from a lack of relevant results, as indicated in the previous events. If the user clicked on a result after a series of poor engagements, it could be indicative of them exploring options before ultimately abandoning the search due to dissatisfaction. A more fitting label would be LeavingPatch, as it suggests the user is not finding what they are looking for and may soon stop their search altogether.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.20542597770691,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0056193739175796
+}

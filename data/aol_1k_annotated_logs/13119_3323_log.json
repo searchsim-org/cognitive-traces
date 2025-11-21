@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3323",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:56:33.379351",
+  "events": [
+    {
+      "session_id": "13119_3323",
+      "event_id": "13119_3323_qq-1807",
+      "timestamp": "2006-04-17 18:45:39",
+      "action_type": "QUERY",
+      "content": "military.com",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content of the query suggests that the user is exploring a topic related to military information but does not indicate a clear targeted intent. The presence of an error in the analysis could imply that the user is still refining their search rather than following a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9130202412605286,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:57:09.833246"
+    },
+    {
+      "session_id": "13119_3323",
+      "event_id": "13119_3323_qq-1807_serp",
+      "timestamp": "2006-04-17 18:45:39",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: military family network at e military org, military injustice bringing you all things military, military history books online military history bookshop (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not necessarily indicate they were following a targeted scent. Instead, they may be exploring different options, which aligns more closely with the concept of ApproachingSource as they are assessing various sources for potential information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9944688685238361,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:57:09.833262"
+    },
+    {
+      "session_id": "13119_3323",
+      "event_id": "13119_3323_qq-1807_cd-1422",
+      "timestamp": "2006-04-17 18:45:39",
+      "action_type": "CLICK",
+      "content": "military and veteran benefits news veteran jobs military com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Given that the user clicked on a result, it indicates some level of interest or perceived value in the information presented. Therefore, labeling it as PoorScent is misleading; it may be better categorized as ApproachingSource, as the user is investigating a specific result rather than abandoning their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0048401225358248,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:57:09.833267"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.54477095603943,
+      "decisions": [
+        {
+          "event_id": "13119_3323_qq-1807",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3323_qq-1807_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3323_qq-1807_cd-1422",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.981268882751465,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The content of the query suggests that the user is exploring a topic related to military information but does not indicate a clear targeted intent. The presence of an error in the analysis could imply that the user is still refining their search rather than following a specific scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not necessarily indicate they were following a targeted scent. Instead, they may be exploring different options, which aligns more closely with the concept of ApproachingSource as they are assessing various sources for potential information.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Given that the user clicked on a result, it indicates some level of interest or perceived value in the information presented. Therefore, labeling it as PoorScent is misleading; it may be better categorized as ApproachingSource, as the user is investigating a specific result rather than abandoning their search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.590664148330688,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0048401225358248
+}

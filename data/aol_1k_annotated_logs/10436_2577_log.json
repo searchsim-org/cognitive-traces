@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2577",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:17:27.976239",
+  "events": [
+    {
+      "session_id": "10436_2577",
+      "event_id": "10436_2577_qq-1362",
+      "timestamp": "2006-03-30 18:47:25",
+      "action_type": "QUERY",
+      "content": "popplers",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query with 'popplers', which is vague and does not indicate a clear intent or targeted query. Given the nature of the query and the analysis error noted, it suggests that the user did not find promising information, leading to a lack of subsequent actions.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8727081298828125,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:17:54.215853"
+    },
+    {
+      "session_id": "10436_2577",
+      "event_id": "10436_2577_qq-1362_serp",
+      "timestamp": "2006-03-30 18:47:25",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: er pl, pop pl ers music download print sheet music online, six ers e nba pl (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but the content appears nonsensical and lacks coherence (e.g., 'er pl', 'six ers e nba pl'). This indicates that the results did not provide a strong information scent. The viewing of these results does not imply a targeted search effort, as the user likely recognized the poor quality of the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9555459350347519,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:17:54.215880"
+    },
+    {
+      "session_id": "10436_2577",
+      "event_id": "10436_2577_qq-1362_cd-8541",
+      "timestamp": "2006-03-30 18:47:25",
+      "action_type": "CLICK",
+      "content": "pop pl ers music download print sheet music online",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result that appears to be poorly constructed or irrelevant based on the previous context. This action reflects a lack of strong information scent, as it is more indicative of a search attempt that failed to yield useful results, rather than a successful or targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6240000000000001,
+      "disagreement_score": 0.9635821938514709,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:17:54.215889"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.610007047653198,
+      "decisions": [
+        {
+          "event_id": "10436_2577_qq-1362",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2577_qq-1362_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2577_qq-1362_cd-8541",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.326948165893555,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query with 'popplers', which is vague and does not indicate a clear intent or targeted query. Given the nature of the query and the analysis error noted, it suggests that the user did not find promising information, leading to a lack of subsequent actions.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but the content appears nonsensical and lacks coherence (e.g., 'er pl', 'six ers e nba pl'). This indicates that the results did not provide a strong information scent. The viewing of these results does not imply a targeted search effort, as the user likely recognized the poor quality of the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user clicked on a result that appears to be poorly constructed or irrelevant based on the previous context. This action reflects a lack of strong information scent, as it is more indicative of a search attempt that failed to yield useful results, rather than a successful or targeted search.",
+          "confidence": 0.78
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.975610017776489,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6240000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9635821938514709
+}

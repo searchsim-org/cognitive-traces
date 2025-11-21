@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4083",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:49:52.449224",
+  "events": [
+    {
+      "session_id": "19655_4083",
+      "event_id": "19655_4083_qq-2358",
+      "timestamp": "2006-03-25 17:12:23",
+      "action_type": "QUERY",
+      "content": "disneyland vacations",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'disneyland vacations...' suggests an initial intent to find information about Disneyland vacations; however, the lack of specific detail indicates a weak scent. The control character error might also suggest that the query was formulated poorly, leading to a lack of clicks or engagement. Therefore, it is more indicative of a PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9604776799678802,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:26.272302"
+    },
+    {
+      "session_id": "19655_4083",
+      "event_id": "19655_4083_qq-2358_serp",
+      "timestamp": "2006-03-25 17:12:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: s to vall s hotels four best western hotels near disneyland, d lp guide disneyland paris discovered your guide to the magic, north carolina vacations north carolina lodging north carolina vacation rentals nc vacation rentals family vacations north carolina lodging (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any indication of further interaction or clicks implies that the user may not have found satisfactory options, indicating a lack of promising scent. This suggests that the user might be reconsidering their approach and potentially leaving the patch rather than continuing with a clear intent, which is more consistent with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9827588707208633,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:26.272312"
+    },
+    {
+      "session_id": "19655_4083",
+      "event_id": "19655_4083_qq-2358_cd-14109",
+      "timestamp": "2006-03-25 17:12:23",
+      "action_type": "CLICK",
+      "content": "i need a vacation com over 35 years booking the world s most exciting destinations cruise vacations hotels and resorts all inclusive vacations mexico and the caribbean hawaii packages disney vacations disneyland walt disney world disney cruise line adventures by disney stockton california travel agency",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a vague and lengthy result suggests an attempt to gather more information rather than a clear intent to follow a strong scent. The content does not seem well-targeted and may indicate a search for general vacation information rather than a focused approach. Thus, ApproachingSource would be a more fitting label here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.008767881989479,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:50:26.272315"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.53877305984497,
+      "decisions": [
+        {
+          "event_id": "19655_4083_qq-2358",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4083_qq-2358_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4083_qq-2358_cd-14109",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.657397031784058,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'disneyland vacations...' suggests an initial intent to find information about Disneyland vacations; however, the lack of specific detail indicates a weak scent. The control character error might also suggest that the query was formulated poorly, leading to a lack of clicks or engagement. Therefore, it is more indicative of a PoorScent rather than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without any indication of further interaction or clicks implies that the user may not have found satisfactory options, indicating a lack of promising scent. This suggests that the user might be reconsidering their approach and potentially leaving the patch rather than continuing with a clear intent, which is more consistent with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on a vague and lengthy result suggests an attempt to gather more information rather than a clear intent to follow a strong scent. The content does not seem well-targeted and may indicate a search for general vacation information rather than a focused approach. Thus, ApproachingSource would be a more fitting label here.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.532389879226685,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.008767881989479
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3263",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:12:54.946386",
+  "events": [
+    {
+      "session_id": "13112_3263",
+      "event_id": "13112_3263_qq-1743",
+      "timestamp": "2006-04-23 19:48:59",
+      "action_type": "QUERY",
+      "content": "ground mount lighting fixture",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query without any subsequent clicks or further engagement suggests that the user did not find the initial search results promising. The mention of an 'invalid control character' indicates a possible error in the search input rather than a clear intent to find information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8357262253761292,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:13:55.930906"
+    },
+    {
+      "session_id": "13112_3263",
+      "event_id": "13112_3263_qq-1743_serp",
+      "timestamp": "2006-04-23 19:48:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: professional lighting fixtures controls philips lighting, professional lighting fixtures controls philips lighting, fluorescent lighting compact lighting fixtures cfl (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Despite viewing 10 results, the repeated nature of the content suggests that the user did not find any results with strong information scent. If the user was genuinely following a scent, we would expect them to show more engagement, such as clicking on a result. The lack of clicks reinforces the idea of poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0028856616467237,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:13:55.930922"
+    },
+    {
+      "session_id": "13112_3263",
+      "event_id": "13112_3263_qq-1743_cd-9910",
+      "timestamp": "2006-04-23 19:48:59",
+      "action_type": "CLICK",
+      "content": "home and outdoor lighting lighting fixtures louie lighting",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which typically indicates they found sufficient information scent to warrant further investigation. However, the context of earlier events suggests that this click may not reflect a genuine search intent, as it follows a series of poor scent indicators. Therefore, labeling it as 'ApproachingSource' may misinterpret the user's actual engagement level.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9958980780094862,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:13:55.930929"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 23.52052879333496,
+      "decisions": [
+        {
+          "event_id": "13112_3263_qq-1743",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3263_qq-1743_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3263_qq-1743_cd-9910",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 19.38035273551941,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query without any subsequent clicks or further engagement suggests that the user did not find the initial search results promising. The mention of an 'invalid control character' indicates a possible error in the search input rather than a clear intent to find information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Despite viewing 10 results, the repeated nature of the content suggests that the user did not find any results with strong information scent. If the user was genuinely following a scent, we would expect them to show more engagement, such as clicking on a result. The lack of clicks reinforces the idea of poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result, which typically indicates they found sufficient information scent to warrant further investigation. However, the context of earlier events suggests that this click may not reflect a genuine search intent, as it follows a series of poor scent indicators. Therefore, labeling it as 'ApproachingSource' may misinterpret the user's actual engagement level.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.80140495300293,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0028856616467237
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3498",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:46:31.690488",
+  "events": [
+    {
+      "session_id": "14668_3498",
+      "event_id": "14668_3498_qq-1934",
+      "timestamp": "2006-05-19 16:05:56",
+      "action_type": "QUERY",
+      "content": "natural progesterone",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'natural progesterone...' indicates the user is searching for specific information, but the presence of an 'Invalid control character' suggests that the query may not have been successfully interpreted, leading to poor scent. As a result, it is more appropriate to label this event as PoorScent due to the lack of effective information retrieval.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9320248365402222,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:47:05.560052"
+    },
+    {
+      "session_id": "14668_3498",
+      "event_id": "14668_3498_qq-1934_serp",
+      "timestamp": "2006-05-19 16:05:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: natures women natural progesterone, natural progesterone cream at affordable prices, bio identical natural progesterone women s health (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results related to 'natural progesterone,' the fact that they are still encountering an error suggests they may not have found what they were looking for. This could indicate frustration and lead to abandoning the search altogether, making LeavingPatch a more fitting label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9494363009929657,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:47:05.560069"
+    },
+    {
+      "session_id": "14668_3498",
+      "event_id": "14668_3498_qq-1934_cd-11346",
+      "timestamp": "2006-05-19 16:05:56",
+      "action_type": "CLICK",
+      "content": "organic progesterone cream women s health science",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'organic progesterone cream women s health science...' implies that the user is attempting to find information. However, given the previous errors and the context of the search, the click may not indicate a targeted search intent but rather an attempt to salvage the session, making ApproachingSource a more accurate label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9839525192975997,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:47:05.560076"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.746947050094604,
+      "decisions": [
+        {
+          "event_id": "14668_3498_qq-1934",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3498_qq-1934_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3498_qq-1934_cd-11346",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.1564130783081055,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'natural progesterone...' indicates the user is searching for specific information, but the presence of an 'Invalid control character' suggests that the query may not have been successfully interpreted, leading to poor scent. As a result, it is more appropriate to label this event as PoorScent due to the lack of effective information retrieval.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results related to 'natural progesterone,' the fact that they are still encountering an error suggests they may not have found what they were looking for. This could indicate frustration and lead to abandoning the search altogether, making LeavingPatch a more fitting label rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'organic progesterone cream women s health science...' implies that the user is attempting to find information. However, given the previous errors and the context of the search, the click may not indicate a targeted search intent but rather an attempt to salvage the session, making ApproachingSource a more accurate label than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.749666213989258,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9839525192975997
+}

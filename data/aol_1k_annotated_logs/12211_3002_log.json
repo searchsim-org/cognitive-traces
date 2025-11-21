@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3002",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:07:31.184984",
+  "events": [
+    {
+      "session_id": "12211_3002",
+      "event_id": "12211_3002_qq-1544",
+      "timestamp": "2006-04-18 15:25:46",
+      "action_type": "QUERY",
+      "content": "tommygunvodka.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have led to an error, suggesting that the user may not have found relevant or promising content, which is characteristic of PoorScent rather than FollowingScent. The presence of an 'Invalid control character' indicates that the query was likely malformed or unhelpful.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8716310501098632,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:08:48.334802"
+    },
+    {
+      "session_id": "12211_3002",
+      "event_id": "12211_3002_qq-1544_serp",
+      "timestamp": "2006-04-18 15:25:46",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: tommy guns vodka tommy guns vodka tommy gun s vodka, www tommy gun choppers com, www tommy gun com au (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results that likely did not meet their expectations or queries. If they were truly following a scent, they would engage with more promising results rather than viewing multiple results that did not seem relevant. This behavior suggests they are preparing to leave after recognizing a lack of quality information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.978841358423233,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:08:48.334822"
+    },
+    {
+      "session_id": "12211_3002",
+      "event_id": "12211_3002_qq-1544_cd-9364",
+      "timestamp": "2006-04-18 15:25:46",
+      "action_type": "CLICK",
+      "content": "tommy guns vodka tommy guns vodka tommy gun s vodka",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that follows from an erroneous query does not indicate a focused and intentional search. Instead, it implies that the user may have clicked out of frustration or confusion, which is indicative of PoorScent, as it shows a lack of relevant information guiding their choice.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9603848993778229,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:08:48.334828"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.124237060546875,
+      "decisions": [
+        {
+          "event_id": "12211_3002_qq-1544",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3002_qq-1544_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3002_qq-1544_cd-9364",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.499604940414429,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have led to an error, suggesting that the user may not have found relevant or promising content, which is characteristic of PoorScent rather than FollowingScent. The presence of an 'Invalid control character' indicates that the query was likely malformed or unhelpful.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results that likely did not meet their expectations or queries. If they were truly following a scent, they would engage with more promising results rather than viewing multiple results that did not seem relevant. This behavior suggests they are preparing to leave after recognizing a lack of quality information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result that follows from an erroneous query does not indicate a focused and intentional search. Instead, it implies that the user may have clicked out of frustration or confusion, which is indicative of PoorScent, as it shows a lack of relevant information guiding their choice.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 41.404024839401245,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.978841358423233
+}

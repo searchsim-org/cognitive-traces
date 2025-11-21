@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2501",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:51:59.813211",
+  "events": [
+    {
+      "session_id": "10215_2501",
+      "event_id": "10215_2501_qq-1317",
+      "timestamp": "2006-04-03 19:36:22",
+      "action_type": "QUERY",
+      "content": "ps2 cheats",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ps2 cheats...' indicates that the user is likely looking for specific information, but without any clicks or further actions noted, it suggests that the initial search did not yield promising results. The presence of an analysis error indicates confusion rather than a clear intent to continue, fitting the PoorScent label better.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.909308111667633,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:52:37.016286"
+    },
+    {
+      "session_id": "10215_2501",
+      "event_id": "10215_2501_qq-1317_serp",
+      "timestamp": "2006-04-03 19:36:22",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ps 2 gamedaily com, ps 2 gamespy com, playstation pro 2 0 media ps 4 ps 3 ps 2 psp and ps vita game videos and screenshots (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results which indicates an attempt to evaluate the available information sources. However, without a subsequent click, it suggests that the user may not have found sufficient scent to continue, making ApproachingSource a more fitting label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0012496784329414,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:52:37.016302"
+    },
+    {
+      "session_id": "10215_2501",
+      "event_id": "10215_2501_qq-1317_cd-8336",
+      "timestamp": "2006-04-03 19:36:22",
+      "action_type": "CLICK",
+      "content": "playstation 2 cheats co uk",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'playstation 2 cheats co uk' indicates the user is trying to find relevant information and is approaching a source. This action reflects an intention to investigate further, which aligns more with ApproachingSource rather than FollowingScent, as it does not imply a strong initial scent leading to this action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9914801634848118,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:52:37.016309"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 23.847020864486694,
+      "decisions": [
+        {
+          "event_id": "10215_2501_qq-1317",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2501_qq-1317_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2501_qq-1317_cd-8336",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.7746360301971436,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ps2 cheats...' indicates that the user is likely looking for specific information, but without any clicks or further actions noted, it suggests that the initial search did not yield promising results. The presence of an analysis error indicates confusion rather than a clear intent to continue, fitting the PoorScent label better.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results which indicates an attempt to evaluate the available information sources. However, without a subsequent click, it suggests that the user may not have found sufficient scent to continue, making ApproachingSource a more fitting label than FollowingScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'playstation 2 cheats co uk' indicates the user is trying to find relevant information and is approaching a source. This action reflects an intention to investigate further, which aligns more with ApproachingSource rather than FollowingScent, as it does not imply a strong initial scent leading to this action.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.1967079639434814,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0012496784329414
+}

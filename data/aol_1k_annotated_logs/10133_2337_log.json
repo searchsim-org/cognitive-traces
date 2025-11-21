@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2337",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:28:17.043592",
+  "events": [
+    {
+      "session_id": "10133_2337",
+      "event_id": "10133_2337_qq-1239",
+      "timestamp": "2006-03-10 01:42:01",
+      "action_type": "QUERY",
+      "content": "skylight bank online",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'skylight bank online...' does not clearly indicate a focused intent or a well-formed targeted query. Instead, the inclusion of an ellipsis suggests uncertainty or incompleteness, indicating that the user may not have a strong sense of direction in their search. This aligns more with PoorScent, as it signals a lack of clarity in the user's information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9546970725059509,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:28:42.866577"
+    },
+    {
+      "session_id": "10133_2337",
+      "event_id": "10133_2337_qq-1239_serp",
+      "timestamp": "2006-03-10 01:42:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: skylight trust skylight trust, skylight solutions home skylight solutions, sun tek skylights skylights home commercial from sun tek skylights (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any of them, which indicates that they did not find the information scent strong enough to warrant further investigation. This behavior aligns more closely with PoorScent, as it suggests the user is still searching for satisfactory results rather than actively pursuing a promising source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0027207389473916,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:28:42.866593"
+    },
+    {
+      "session_id": "10133_2337",
+      "event_id": "10133_2337_qq-1239_cd-8013",
+      "timestamp": "2006-03-10 01:42:01",
+      "action_type": "CLICK",
+      "content": "www skylight net",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Given that the user clicked on a result, it indicates an attempt to follow a lead, but the click does not necessarily indicate a well-formed intent or successful pursuit. If the click is based on weak information scent, it could also suggest that the user is leaving the previous patch of information due to insufficient results from prior actions. This can be seen as an indication of LeavingPatch, especially if the user does not follow up with further clicks or queries.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9775219976902008,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:28:42.866598"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.908203125,
+      "decisions": [
+        {
+          "event_id": "10133_2337_qq-1239",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2337_qq-1239_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2337_qq-1239_cd-8013",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.878412961959839,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'skylight bank online...' does not clearly indicate a focused intent or a well-formed targeted query. Instead, the inclusion of an ellipsis suggests uncertainty or incompleteness, indicating that the user may not have a strong sense of direction in their search. This aligns more with PoorScent, as it signals a lack of clarity in the user's information need.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results but did not click on any of them, which indicates that they did not find the information scent strong enough to warrant further investigation. This behavior aligns more closely with PoorScent, as it suggests the user is still searching for satisfactory results rather than actively pursuing a promising source.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Given that the user clicked on a result, it indicates an attempt to follow a lead, but the click does not necessarily indicate a well-formed intent or successful pursuit. If the click is based on weak information scent, it could also suggest that the user is leaving the previous patch of information due to insufficient results from prior actions. This can be seen as an indication of LeavingPatch, especially if the user does not follow up with further clicks or queries.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.654873132705688,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0027207389473916
+}

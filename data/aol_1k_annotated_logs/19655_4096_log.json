@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4096",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:57:05.363732",
+  "events": [
+    {
+      "session_id": "19655_4096",
+      "event_id": "19655_4096_qq-2372",
+      "timestamp": "2006-04-01 13:50:38",
+      "action_type": "QUERY",
+      "content": "cape cod chamber of commerce",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cape cod chamber of commerce...' suggests the user intended to find specific information. However, the analysis error indicates a potential failure in understanding or processing the query, which may have led to no effective results. This indicates the user experienced poor scent, as they did not find relevant information that satisfied their intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8267099738121033,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:57:26.284618"
+    },
+    {
+      "session_id": "19655_4096",
+      "event_id": "19655_4096_qq-2372_serp",
+      "timestamp": "2006-04-01 13:50:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: cape cod attractions cape cod tourist attractions things to do on cape cod for the entire family, cold well banker murray cape cod real estate cape cod home cape cod mls mls property search, cape cod museum of natural history cape cod s nature place in brewster ma (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating an attempt to find information relevant to their query. However, simply viewing results does not imply strong intent or satisfaction with the scent. Given the nature of the content, it\u2019s more accurate to label this as ApproachingSource, as the user is seeking to find a promising source but has not yet clicked.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0084267869591712,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:57:26.284626"
+    },
+    {
+      "session_id": "19655_4096",
+      "event_id": "19655_4096_qq-2372_cd-14147",
+      "timestamp": "2006-04-01 13:50:38",
+      "action_type": "CLICK",
+      "content": "visit cape cod hotels events things to do in cape cod",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on the content, labeling this action as FollowingScent assumes a clear and directed search intent. However, the previous events suggest the user may still be exploring options without a strong signal of finding a satisfying source. Therefore, ApproachingSource is more appropriate, as the user is investigating further without clear evidence of success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0380005419254303,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:57:26.284629"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.265399217605591,
+      "decisions": [
+        {
+          "event_id": "19655_4096_qq-2372",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4096_qq-2372_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4096_qq-2372_cd-14147",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.013872146606445,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cape cod chamber of commerce...' suggests the user intended to find specific information. However, the analysis error indicates a potential failure in understanding or processing the query, which may have led to no effective results. This indicates the user experienced poor scent, as they did not find relevant information that satisfied their intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating an attempt to find information relevant to their query. However, simply viewing results does not imply strong intent or satisfaction with the scent. Given the nature of the content, it\u2019s more accurate to label this as ApproachingSource, as the user is seeking to find a promising source but has not yet clicked.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on the content, labeling this action as FollowingScent assumes a clear and directed search intent. However, the previous events suggest the user may still be exploring options without a strong signal of finding a satisfying source. Therefore, ApproachingSource is more appropriate, as the user is investigating further without clear evidence of success.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.3689000606536865,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0380005419254303
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3260",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:09:33.810934",
+  "events": [
+    {
+      "session_id": "13112_3260",
+      "event_id": "13112_3260_qq-1728",
+      "timestamp": "2006-04-19 14:56:07",
+      "action_type": "QUERY",
+      "content": "in.gov",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query contains an invalid control character, which suggests that the user may not have been able to formulate a clear, targeted query. This indicates a lack of promising information scent, leading to the conclusion that the user is experiencing poor scent rather than successfully following it.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8613024115562439,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:10:29.377034"
+    },
+    {
+      "session_id": "13112_3260",
+      "event_id": "13112_3260_qq-1728_serp",
+      "timestamp": "2006-04-19 14:56:07",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: in gov the official website of the state of indiana, in gov the official website of the state of indiana, in gov the official website of the state of indiana (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The repeated viewing of the same result without any variation implies that the user is not finding satisfactory information and is likely struggling with the content they are encountering. This lack of diverse results suggests that the user is not effectively following a scent but rather is stuck in a cycle of poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.01560071259737,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:10:29.377041"
+    },
+    {
+      "session_id": "13112_3260",
+      "event_id": "13112_3260_qq-1728_cd-711",
+      "timestamp": "2006-04-19 14:56:07",
+      "action_type": "CLICK",
+      "content": "in gov the official website of the state of indiana",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that is the same as previously viewed indicates a lack of successful information discovery. The user is likely not finding new or valuable information, hence the click does not represent a successful following of scent but rather a continuation of a poor selection process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9924112305045127,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:10:29.377043"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 26.50635313987732,
+      "decisions": [
+        {
+          "event_id": "13112_3260_qq-1728",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3260_qq-1728_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3260_qq-1728_cd-711",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.191017150878906,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query contains an invalid control character, which suggests that the user may not have been able to formulate a clear, targeted query. This indicates a lack of promising information scent, leading to the conclusion that the user is experiencing poor scent rather than successfully following it.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The repeated viewing of the same result without any variation implies that the user is not finding satisfactory information and is likely struggling with the content they are encountering. This lack of diverse results suggests that the user is not effectively following a scent but rather is stuck in a cycle of poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that is the same as previously viewed indicates a lack of successful information discovery. The user is likely not finding new or valuable information, hence the click does not represent a successful following of scent but rather a continuation of a poor selection process.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.537644147872925,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.01560071259737
+}

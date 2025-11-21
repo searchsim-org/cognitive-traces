@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2510",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:56:59.006188",
+  "events": [
+    {
+      "session_id": "10215_2510",
+      "event_id": "10215_2510_qq-1321",
+      "timestamp": "2006-04-08 15:58:32",
+      "action_type": "QUERY",
+      "content": "sanibel florida",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sanibel florida...' lacks specificity and does not demonstrate a clear intent that would indicate a strong information scent. The incomplete nature of the query suggests that the user likely did not find promising results, leading to a lack of click-throughs on subsequent items.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.979733070731163,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:26.431574"
+    },
+    {
+      "session_id": "10215_2510",
+      "event_id": "10215_2510_qq-1321_serp",
+      "timestamp": "2006-04-08 15:58:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: seahorse cottage of sani bel florida sani bel florida seahorse cottages, www sani bel florida com, periwinkle cottages sani bel florida (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, suggesting an attempt to gather information. However, without clicks on any of the results, it indicates they were not sufficiently compelling. Therefore, this action aligns more closely with PoorScent, as the user likely did not find any items that met their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9893604271113873,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:26.431584"
+    },
+    {
+      "session_id": "10215_2510",
+      "event_id": "10215_2510_qq-1321_cd-8353",
+      "timestamp": "2006-04-08 15:58:32",
+      "action_type": "CLICK",
+      "content": "www sani bel florida com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www sani bel florida com' does not necessarily indicate FollowingScent, as the previous SERP view did not yield any satisfactory results. This action might reflect a last resort attempt due to poor information scent, aligning it with LeavingPatch rather than a motivated search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9895415902137756,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:57:26.431587"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.227718114852905,
+      "decisions": [
+        {
+          "event_id": "10215_2510_qq-1321",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2510_qq-1321_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2510_qq-1321_cd-8353",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.583490133285522,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sanibel florida...' lacks specificity and does not demonstrate a clear intent that would indicate a strong information scent. The incomplete nature of the query suggests that the user likely did not find promising results, leading to a lack of click-throughs on subsequent items.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, suggesting an attempt to gather information. However, without clicks on any of the results, it indicates they were not sufficiently compelling. Therefore, this action aligns more closely with PoorScent, as the user likely did not find any items that met their needs.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www sani bel florida com' does not necessarily indicate FollowingScent, as the previous SERP view did not yield any satisfactory results. This action might reflect a last resort attempt due to poor information scent, aligning it with LeavingPatch rather than a motivated search behavior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.47588300704956,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9895415902137756
+}

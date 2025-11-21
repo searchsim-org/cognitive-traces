@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2986",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:41:58.032638",
+  "events": [
+    {
+      "session_id": "12211_2986",
+      "event_id": "12211_2986_qq-1532",
+      "timestamp": "2006-04-10 02:05:50",
+      "action_type": "QUERY",
+      "content": "autotrader",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query for 'autotrader...' but the subsequent error indicates that the query did not yield any relevant results. This suggests that the user experienced poor scent, as they did not find promising information that led to clicks or further investigation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9223840832710266,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:42:34.176110"
+    },
+    {
+      "session_id": "12211_2986",
+      "event_id": "12211_2986_qq-1532_serp",
+      "timestamp": "2006-04-10 02:05:50",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: auto trader page unavailable, auto trader page unavailable, auto trader page unavailable (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed SERP results but found all of them to be unavailable, indicating a lack of valuable information. This is more indicative of leaving the patch due to repeated unsuccessful attempts to find relevant content rather than continuing the search with a clear intent as suggested by the 'FollowingScent' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9887251242995262,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:42:34.176137"
+    },
+    {
+      "session_id": "12211_2986",
+      "event_id": "12211_2986_qq-1532_cd-7512",
+      "timestamp": "2006-04-10 02:05:50",
+      "action_type": "CLICK",
+      "content": "auto trader page unavailable",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result that was also unavailable, which aligns with the behavior of issuing a new query or abandoning the search, showing that they found no promising scent in the prior results. This does not fit the criteria of 'FollowingScent' which implies a successful or fruitful path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 1.0209397107362748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:42:34.176145"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.517428874969482,
+      "decisions": [
+        {
+          "event_id": "12211_2986_qq-1532",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2986_qq-1532_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2986_qq-1532_cd-7512",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.270960092544556,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query for 'autotrader...' but the subsequent error indicates that the query did not yield any relevant results. This suggests that the user experienced poor scent, as they did not find promising information that led to clicks or further investigation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed SERP results but found all of them to be unavailable, indicating a lack of valuable information. This is more indicative of leaving the patch due to repeated unsuccessful attempts to find relevant content rather than continuing the search with a clear intent as suggested by the 'FollowingScent' label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user clicked on a result that was also unavailable, which aligns with the behavior of issuing a new query or abandoning the search, showing that they found no promising scent in the prior results. This does not fit the criteria of 'FollowingScent' which implies a successful or fruitful path.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.24297022819519,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0209397107362748
+}

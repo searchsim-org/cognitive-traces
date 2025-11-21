@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3649",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:24:35.466248",
+  "events": [
+    {
+      "session_id": "15328_3649",
+      "event_id": "15328_3649_qq-2037",
+      "timestamp": "2006-03-09 20:28:00",
+      "action_type": "QUERY",
+      "content": "barry manilow",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'barry manilow...' suggests an incomplete or unclear intent, possibly due to the trailing ellipsis. It does not demonstrate a well-formed targeted query but rather indicates uncertainty, which aligns more with PoorScent as the user may not have found promising information to pursue further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.922528064250946,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:09.120328"
+    },
+    {
+      "session_id": "15328_3649",
+      "event_id": "15328_3649_qq-2037_serp",
+      "timestamp": "2006-03-09 20:28:00",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www dave barry com, home du barry ie, www elliot barry com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results does not necessarily indicate a strong information scent from the titles or snippets. If the user was not confident in their query, they might be exploring options rather than actively following a strong scent, making ApproachingSource a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9793593615293503,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:09.120350"
+    },
+    {
+      "session_id": "15328_3649",
+      "event_id": "15328_3649_qq-2037_cd-11720",
+      "timestamp": "2006-03-09 20:28:00",
+      "action_type": "CLICK",
+      "content": "www barry net com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www barry net com...' suggests the user is attempting to engage with a result, but the previous events indicate a lack of strong informational scent. If the user had already demonstrated uncertainty or dissatisfaction, this action could represent a last-ditch effort before abandoning the search entirely, hence fitting LeavingPatch better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9703016221523285,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:09.120357"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.839468002319336,
+      "decisions": [
+        {
+          "event_id": "15328_3649_qq-2037",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3649_qq-2037_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3649_qq-2037_cd-11720",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.418115139007568,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'barry manilow...' suggests an incomplete or unclear intent, possibly due to the trailing ellipsis. It does not demonstrate a well-formed targeted query but rather indicates uncertainty, which aligns more with PoorScent as the user may not have found promising information to pursue further.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of viewing 10 results does not necessarily indicate a strong information scent from the titles or snippets. If the user was not confident in their query, they might be exploring options rather than actively following a strong scent, making ApproachingSource a more fitting label.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'www barry net com...' suggests the user is attempting to engage with a result, but the previous events indicate a lack of strong informational scent. If the user had already demonstrated uncertainty or dissatisfaction, this action could represent a last-ditch effort before abandoning the search entirely, hence fitting LeavingPatch better than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.119679927825928,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9793593615293503
+}

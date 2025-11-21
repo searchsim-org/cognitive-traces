@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3820",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:01:50.548980",
+  "events": [
+    {
+      "session_id": "17545_3820",
+      "event_id": "17545_3820_qq-2184",
+      "timestamp": "2006-03-31 11:54:48",
+      "action_type": "QUERY",
+      "content": "suzuki",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'suzuki...' lacks specificity and is likely too vague to generate promising results, indicating that the user may not have a clear information scent. The error message suggests a failure in processing rather than an intentional targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8966871976852417,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:02:24.672903"
+    },
+    {
+      "session_id": "17545_3820",
+      "event_id": "17545_3820_qq-2184_serp",
+      "timestamp": "2006-03-31 11:54:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: my suzuki com nbsp this website is for sale nbsp my suzuki my suzuki resources and information, crooks suzuki new and used suzuki motorcycles and parts cumbria uk, suzuki haya bus a org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results with low relevance and mixed signals (e.g., 'this website is for sale') suggests that the user did not perceive strong information scent from the SERP. This indicates a lack of clarity in their query rather than a continuation of a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9920180410146713,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:02:24.672910"
+    },
+    {
+      "session_id": "17545_3820",
+      "event_id": "17545_3820_qq-2184_cd-12867",
+      "timestamp": "2006-03-31 11:54:48",
+      "action_type": "CLICK",
+      "content": "suzuki motor of america inc",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the click appears to stem from the necessity to explore further due to the lack of clarity in previous results. The user may not have detected a strong scent, but rather a need to investigate despite poor initial results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9784454107284546,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:02:24.672913"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.522717952728271,
+      "decisions": [
+        {
+          "event_id": "17545_3820_qq-2184",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3820_qq-2184_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3820_qq-2184_cd-12867",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.321900129318237,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'suzuki...' lacks specificity and is likely too vague to generate promising results, indicating that the user may not have a clear information scent. The error message suggests a failure in processing rather than an intentional targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results with low relevance and mixed signals (e.g., 'this website is for sale') suggests that the user did not perceive strong information scent from the SERP. This indicates a lack of clarity in their query rather than a continuation of a targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the click appears to stem from the necessity to explore further due to the lack of clarity in previous results. The user may not have detected a strong scent, but rather a need to investigate despite poor initial results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.928648948669434,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9920180410146713
+}

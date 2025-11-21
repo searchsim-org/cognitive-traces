@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4051",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:01:50.917395",
+  "events": [
+    {
+      "session_id": "19162_4051",
+      "event_id": "19162_4051_qq-2325",
+      "timestamp": "2006-04-09 17:47:59",
+      "action_type": "QUERY",
+      "content": "aim icons",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'aim icons...' is ambiguous and lacks specificity, leading to an indication of poor scent, as evidenced by the presence of an analysis error. This suggests the user did not find the query promising enough to engage further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9108551144599915,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:02:21.338813"
+    },
+    {
+      "session_id": "19162_4051",
+      "event_id": "19162_4051_qq-2325_serp",
+      "timestamp": "2006-04-09 17:47:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: buddy icons aim icons anime icons aol icons, aim llama icons, instant icons com make your own aim buddy icons for aol instant messenger (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The SERP view of 10 results, despite viewing multiple options, does not indicate a clear intent or satisfaction with the search results. If the user had strong scent, they would likely narrow down to specific results rather than viewing a broad array that may not meet their needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0031329937279225,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:02:21.338824"
+    },
+    {
+      "session_id": "19162_4051",
+      "event_id": "19162_4051_qq-2325_cd-13832",
+      "timestamp": "2006-04-09 17:47:59",
+      "action_type": "CLICK",
+      "content": "buddy icons aim icons anime icons aol icons",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the result does not necessarily imply a strong following scent, especially considering the ambiguity of the initial query and the presence of an error during analysis. The click may indicate an attempt to find clarity rather than a confident, targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9410256922245026,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:02:21.338831"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.555987119674683,
+      "decisions": [
+        {
+          "event_id": "19162_4051_qq-2325",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4051_qq-2325_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4051_qq-2325_cd-13832",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.937541961669922,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'aim icons...' is ambiguous and lacks specificity, leading to an indication of poor scent, as evidenced by the presence of an analysis error. This suggests the user did not find the query promising enough to engage further.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The SERP view of 10 results, despite viewing multiple options, does not indicate a clear intent or satisfaction with the search results. If the user had strong scent, they would likely narrow down to specific results rather than viewing a broad array that may not meet their needs.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on the result does not necessarily imply a strong following scent, especially considering the ambiguity of the initial query and the presence of an error during analysis. The click may indicate an attempt to find clarity rather than a confident, targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.662463903427124,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0031329937279225
+}

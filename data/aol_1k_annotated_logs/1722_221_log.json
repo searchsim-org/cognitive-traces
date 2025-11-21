@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_221",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:52:34.290268",
+  "events": [
+    {
+      "session_id": "1722_221",
+      "event_id": "1722_221_qq-67",
+      "timestamp": "2006-05-31 17:31:20",
+      "action_type": "QUERY",
+      "content": "chrisgeary",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query contains an invalid control character, suggesting that the user may have encountered an issue that made the query ineffective. This likely indicates that the user did not find promising scent in their search and may need to reformulate their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8727979063987732,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:58.460979"
+    },
+    {
+      "session_id": "1722_221",
+      "event_id": "1722_221_qq-67_serp",
+      "timestamp": "2006-05-31 17:31:20",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: chris geary online, chris geary online, chris geary photos arena guys com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst labeled this event as FollowingScent, but the listing of multiple similar results with an invalid control character suggests that the user did not find sufficient diversity or relevance in the SERP, indicating poor scent rather than a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9168199002742767,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:58.460987"
+    },
+    {
+      "session_id": "1722_221",
+      "event_id": "1722_221_qq-67_cd-1578",
+      "timestamp": "2006-05-31 17:31:20",
+      "action_type": "CLICK",
+      "content": "chris geary online",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result does not necessarily indicate a following scent, especially given the context of prior errors and invalid characters. It suggests a possible attempt to salvage the search despite the poor outcome, aligning more with a poor scent scenario rather than a successful or targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9277842283248902,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:52:58.460990"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.548120975494385,
+      "decisions": [
+        {
+          "event_id": "1722_221_qq-67",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_221_qq-67_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_221_qq-67_cd-1578",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.626236200332642,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query contains an invalid control character, suggesting that the user may have encountered an issue that made the query ineffective. This likely indicates that the user did not find promising scent in their search and may need to reformulate their query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst labeled this event as FollowingScent, but the listing of multiple similar results with an invalid control character suggests that the user did not find sufficient diversity or relevance in the SERP, indicating poor scent rather than a targeted search intent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result does not necessarily indicate a following scent, especially given the context of prior errors and invalid characters. It suggests a possible attempt to salvage the search despite the poor outcome, aligning more with a poor scent scenario rather than a successful or targeted search.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.771442890167236,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9277842283248902
+}

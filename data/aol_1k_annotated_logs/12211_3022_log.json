@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3022",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:32:16.222547",
+  "events": [
+    {
+      "session_id": "12211_3022",
+      "event_id": "12211_3022_qq-1556",
+      "timestamp": "2006-04-25 01:42:55",
+      "action_type": "QUERY",
+      "content": "hankoelectronics.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to have resulted in an error due to an invalid control character, suggesting that the user did not successfully formulate a targeted query. This indicates a lack of promising scent rather than a clear intent to follow a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8884406328201293,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:33:07.084189"
+    },
+    {
+      "session_id": "12211_3022",
+      "event_id": "12211_3022_qq-1556_serp",
+      "timestamp": "2006-04-25 01:42:55",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: c hangzhou hank o electronics co ltd garden light, www hank o designs com, fra msi dan hank o (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The analyst's label of FollowingScent implies that the user was engaged in a meaningful exploration of search results. However, the mention of invalid control characters suggests that the user might not have effectively processed the search results, leading to a lack of engagement and indicating poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8580115795135498,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:33:07.084201"
+    },
+    {
+      "session_id": "12211_3022",
+      "event_id": "12211_3022_qq-1556_cd-9383",
+      "timestamp": "2006-04-25 01:42:55",
+      "action_type": "CLICK",
+      "content": "c hangzhou hank o electronics co ltd garden light",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to the previous events, the click occurred in the context of an error message indicating that the user's intent might not have been properly formed. The action does not reflect a successful following of scent but rather an attempt to engage with a result that may not have been informative or relevant.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.96950943171978,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:33:07.084203"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.847247838974,
+      "decisions": [
+        {
+          "event_id": "12211_3022_qq-1556",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3022_qq-1556_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3022_qq-1556_cd-9383",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.361739873886108,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to have resulted in an error due to an invalid control character, suggesting that the user did not successfully formulate a targeted query. This indicates a lack of promising scent rather than a clear intent to follow a scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The analyst's label of FollowingScent implies that the user was engaged in a meaningful exploration of search results. However, the mention of invalid control characters suggests that the user might not have effectively processed the search results, leading to a lack of engagement and indicating poor scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to the previous events, the click occurred in the context of an error message indicating that the user's intent might not have been properly formed. The action does not reflect a successful following of scent but rather an attempt to engage with a result that may not have been informative or relevant.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.531786918640137,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.96950943171978
+}

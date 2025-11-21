@@ -1,0 +1,159 @@
+{
+  "session_id": "18689_3969",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:17:38.255324",
+  "events": [
+    {
+      "session_id": "18689_3969",
+      "event_id": "18689_3969_qq-2230",
+      "timestamp": "2006-03-09 09:37:03",
+      "action_type": "QUERY",
+      "content": "cybersource",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'cybersource...' indicates uncertainty or incomplete information, which suggests a lack of promising scent rather than a clear intent to follow a scent. The presence of an error message further implies that the query was not successful in generating useful results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9360569000244141,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:08.681295"
+    },
+    {
+      "session_id": "18689_3969",
+      "event_id": "18689_3969_qq-2230_serp",
+      "timestamp": "2006-03-09 09:37:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www cyber source com, cyber security tools anti source com, cyber parrots cyber parrots (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results but the presence of 'Invalid control character' suggests that the results themselves may not have been relevant or promising. This indicates a lack of strong information scent, thus aligning more with the PoorScent label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9356147408485412,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:08.681313"
+    },
+    {
+      "session_id": "18689_3969",
+      "event_id": "18689_3969_qq-2230_cd-13208",
+      "timestamp": "2006-03-09 09:37:03",
+      "action_type": "CLICK",
+      "content": "www cyber source com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a link, the context of the previous errors and query suggests that this click was likely exploratory rather than a strong follow-up action. The underlying issues indicate a lack of satisfactory results, which makes LeavingPatch a more fitting label as the user seems to be reacting to failures rather than successfully following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9540049135684967,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:18:08.681325"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.637802124023438,
+      "decisions": [
+        {
+          "event_id": "18689_3969_qq-2230",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3969_qq-2230_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18689_3969_qq-2230_cd-13208",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.957182884216309,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'cybersource...' indicates uncertainty or incomplete information, which suggests a lack of promising scent rather than a clear intent to follow a scent. The presence of an error message further implies that the query was not successful in generating useful results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results but the presence of 'Invalid control character' suggests that the results themselves may not have been relevant or promising. This indicates a lack of strong information scent, thus aligning more with the PoorScent label than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user clicked on a link, the context of the previous errors and query suggests that this click was likely exploratory rather than a strong follow-up action. The underlying issues indicate a lack of satisfactory results, which makes LeavingPatch a more fitting label as the user seems to be reacting to failures rather than successfully following a scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.565119981765747,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9540049135684967
+}

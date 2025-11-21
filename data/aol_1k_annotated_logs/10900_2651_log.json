@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2651",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:05:55.886987",
+  "events": [
+    {
+      "session_id": "10900_2651",
+      "event_id": "10900_2651_qq-1434",
+      "timestamp": "2006-03-25 16:14:05",
+      "action_type": "QUERY",
+      "content": "busch garden",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'busch garden...' is vague and lacks specificity, which suggests they may not have found promising results in their initial search, leading to a lack of clicks. This indicates a poor scent rather than a strong intent to follow a specific line of inquiry.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9895133309066295,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:06:36.887574"
+    },
+    {
+      "session_id": "10900_2651",
+      "event_id": "10900_2651_qq-1434_serp",
+      "timestamp": "2006-03-25 16:14:05",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www busch garden com, www busch gardens com, www busch gardens news com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results without engaging with them suggests that the user's information need was not met. The presence of multiple similar URLs indicates a lack of unique, appealing content, reinforcing the idea of poor scent rather than following a clear path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0191815331578256,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:06:36.887594"
+    },
+    {
+      "session_id": "10900_2651",
+      "event_id": "10900_2651_qq-1434_cd-8666",
+      "timestamp": "2006-03-25 16:14:05",
+      "action_type": "CLICK",
+      "content": "www busch gardens com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www busch gardens com...' suggests that the user found a result with sufficient information scent to warrant further investigation. This action indicates they were approaching a source rather than simply following a scent without a clear target.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0008521109819413,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:06:36.887602"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.483335256576538,
+      "decisions": [
+        {
+          "event_id": "10900_2651_qq-1434",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2651_qq-1434_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2651_qq-1434_cd-8666",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.101282835006714,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'busch garden...' is vague and lacks specificity, which suggests they may not have found promising results in their initial search, leading to a lack of clicks. This indicates a poor scent rather than a strong intent to follow a specific line of inquiry.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results without engaging with them suggests that the user's information need was not met. The presence of multiple similar URLs indicates a lack of unique, appealing content, reinforcing the idea of poor scent rather than following a clear path.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www busch gardens com...' suggests that the user found a result with sufficient information scent to warrant further investigation. This action indicates they were approaching a source rather than simply following a scent without a clear target.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.178186893463135,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0191815331578256
+}

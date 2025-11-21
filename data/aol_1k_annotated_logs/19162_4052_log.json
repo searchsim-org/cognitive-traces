@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4052",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:02:21.342905",
+  "events": [
+    {
+      "session_id": "19162_4052",
+      "event_id": "19162_4052_qq-2326",
+      "timestamp": "2006-04-26 16:59:45",
+      "action_type": "QUERY",
+      "content": "eftours.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query appears to indicate that they are not finding relevant information, as inferred from the 'Invalid control character' error. This suggests that the initial query does not provide a clear scent for further searching, rather than indicating a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8345656633377075,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:03:09.006420"
+    },
+    {
+      "session_id": "19162_4052",
+      "event_id": "19162_4052_qq-2326_serp",
+      "timestamp": "2006-04-26 16:59:45",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: student tours and educational travel ef educational tours, student tours and educational travel ef educational tours, student tours and educational travel ef educational tours (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of search results without any indication of having clicked on or engaged with them suggests that the user is not finding adequate information. This lack of engagement reflects a poor scent rather than a clear intent to follow a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9987646900117397,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:03:09.006441"
+    },
+    {
+      "session_id": "19162_4052",
+      "event_id": "19162_4052_qq-2326_cd-7284",
+      "timestamp": "2006-04-26 16:59:45",
+      "action_type": "CLICK",
+      "content": "student tours and educational travel ef educational tours",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicks on a result, demonstrating an attempt to further investigate a potential source of information. This action aligns more closely with the 'ApproachingSource' label, as it indicates an effort to explore what appears to be relevant content despite previous issues.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.986550185084343,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:03:09.006448"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 20.142458200454712,
+      "decisions": [
+        {
+          "event_id": "19162_4052_qq-2326",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4052_qq-2326_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4052_qq-2326_cd-7284",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.6794047355651855,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query appears to indicate that they are not finding relevant information, as inferred from the 'Invalid control character' error. This suggests that the initial query does not provide a clear scent for further searching, rather than indicating a targeted search intent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of search results without any indication of having clicked on or engaged with them suggests that the user is not finding adequate information. This lack of engagement reflects a poor scent rather than a clear intent to follow a specific scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicks on a result, demonstrating an attempt to further investigate a potential source of information. This action aligns more closely with the 'ApproachingSource' label, as it indicates an effort to explore what appears to be relevant content despite previous issues.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.576102018356323,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9987646900117397
+}

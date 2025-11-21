@@ -1,0 +1,159 @@
+{
+  "session_id": "18401_3963",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:13:55.061994",
+  "events": [
+    {
+      "session_id": "18401_3963",
+      "event_id": "18401_3963_qq-2214",
+      "timestamp": "2006-05-24 16:39:16",
+      "action_type": "QUERY",
+      "content": "pussy",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pussy...' appears vague and incomplete, indicating a lack of clarity in the user's information need. This suggests that the user may not have a strong scent guiding their search, leading to a poor scent scenario rather than a targeted search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9626847743988037,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:14:24.778084"
+    },
+    {
+      "session_id": "18401_3963",
+      "event_id": "18401_3963_qq-2214_serp",
+      "timestamp": "2006-05-24 16:39:16",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: rate her pussy free pussy pictures pussy pic s free pussy pussy, blond pussy com rate my pussy free pussy live pussy, hairy pussy com rate my pussy free pussy live pussy (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed in the SERP consists of repetitive and potentially irrelevant results, indicating that the user may not have found promising options. This suggests that the user is likely experiencing poor scent rather than exhibiting clear intent in their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0002351958304643,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:14:24.778090"
+    },
+    {
+      "session_id": "18401_3963",
+      "event_id": "18401_3963_qq-2214_cd-7569",
+      "timestamp": "2006-05-24 16:39:16",
+      "action_type": "CLICK",
+      "content": "pussy org free pussy videos free pussy pictures free pussy movies",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'pussy org free pussy videos...' reflects a lack of strong information scent, as the content appears to be similar to previously viewed items. This indicates that the user is still in a state of searching without a clear direction, fitting the PoorScent label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0291396141052247,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:14:24.778095"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.205199241638184,
+      "decisions": [
+        {
+          "event_id": "18401_3963_qq-2214",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3963_qq-2214_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3963_qq-2214_cd-7569",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.956678867340088,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pussy...' appears vague and incomplete, indicating a lack of clarity in the user's information need. This suggests that the user may not have a strong scent guiding their search, leading to a poor scent scenario rather than a targeted search initiation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content viewed in the SERP consists of repetitive and potentially irrelevant results, indicating that the user may not have found promising options. This suggests that the user is likely experiencing poor scent rather than exhibiting clear intent in their search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'pussy org free pussy videos...' reflects a lack of strong information scent, as the content appears to be similar to previously viewed items. This indicates that the user is still in a state of searching without a clear direction, fitting the PoorScent label better than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.274733066558838,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0291396141052247
+}

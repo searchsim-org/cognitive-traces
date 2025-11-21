@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3015",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:25:59.244838",
+  "events": [
+    {
+      "session_id": "12211_3015",
+      "event_id": "12211_3015_qq-1549",
+      "timestamp": "2006-04-23 16:53:02",
+      "action_type": "QUERY",
+      "content": "hp.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user query seems to lack specificity and context, which suggests they did not find promising results on the SERP, leading to a new query being issued. The mention of 'Invalid control character' indicates an unsuccessful interaction, supporting the label of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9000346541404725,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:26:39.177395"
+    },
+    {
+      "session_id": "12211_3015",
+      "event_id": "12211_3015_qq-1549_serp",
+      "timestamp": "2006-04-23 16:53:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: laptop computers desktops printers ink toner hp official site, j hp usa dream it build it race it, scd a high performance driving track events hp de (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating a broad examination rather than a targeted approach, suggesting they are exploring options rather than following a specific scent. The content viewed may not have provided strong information scent to continue as indicated by the lack of a clear intent, making ApproachingSource a more fitting label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9812781006097794,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:26:39.177402"
+    },
+    {
+      "session_id": "12211_3015",
+      "event_id": "12211_3015_qq-1549_cd-303",
+      "timestamp": "2006-04-23 16:53:02",
+      "action_type": "CLICK",
+      "content": "laptop computers desktops printers ink toner hp official site",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result but given the context of previous errors and the user\u2019s potential lack of satisfaction with the scent, this action might imply they were still searching for valid information. If the click was uninformed, it could lead to abandoning further attempts, fitting the LeavingPatch label better than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9682962119579315,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:26:39.177405"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 14.33460807800293,
+      "decisions": [
+        {
+          "event_id": "12211_3015_qq-1549",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3015_qq-1549_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3015_qq-1549_cd-303",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.207098007202148,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user query seems to lack specificity and context, which suggests they did not find promising results on the SERP, leading to a new query being issued. The mention of 'Invalid control character' indicates an unsuccessful interaction, supporting the label of PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating a broad examination rather than a targeted approach, suggesting they are exploring options rather than following a specific scent. The content viewed may not have provided strong information scent to continue as indicated by the lack of a clear intent, making ApproachingSource a more fitting label.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result but given the context of previous errors and the user\u2019s potential lack of satisfaction with the scent, this action might imply they were still searching for valid information. If the click was uninformed, it could lead to abandoning further attempts, fitting the LeavingPatch label better than FollowingScent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 19.160612106323242,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9812781006097794
+}

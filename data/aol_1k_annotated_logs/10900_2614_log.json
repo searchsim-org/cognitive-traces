@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2614",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:39:27.727215",
+  "events": [
+    {
+      "session_id": "10900_2614",
+      "event_id": "10900_2614_qq-1405",
+      "timestamp": "2006-03-04 23:18:53",
+      "action_type": "QUERY",
+      "content": "harry potter",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'harry potter...' lacks specificity and may not indicate a clear intent to search for a particular aspect of Harry Potter. The presence of an invalid control character suggests that the user's query may not have been well-formed, which aligns more with PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9191598176956177,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:39:56.865314"
+    },
+    {
+      "session_id": "10900_2614",
+      "event_id": "10900_2614_qq-1405_serp",
+      "timestamp": "2006-03-04 23:18:53",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: harry potter realm com harry potter s realm of wizardry, harry potter la rp, harry potter ville com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any can indicate a lack of promising information scent, suggesting the user may not find the content relevant. This is more indicative of LeavingPatch, especially if the user did not click on any results, indicating a failure to find satisfactory content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.984249122440815,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:39:56.865321"
+    },
+    {
+      "session_id": "10900_2614",
+      "event_id": "10900_2614_qq-1405_cd-8658",
+      "timestamp": "2006-03-04 23:18:53",
+      "action_type": "CLICK",
+      "content": "the harry potter lexicon",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'the harry potter lexicon...' indicates that the user found a specific source appealing enough to investigate further, which aligns more closely with ApproachingSource than FollowingScent. FollowingScent implies a broader search intent rather than a targeted click.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0072231128811837,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:39:56.865324"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.826809167861938,
+      "decisions": [
+        {
+          "event_id": "10900_2614_qq-1405",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2614_qq-1405_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2614_qq-1405_cd-8658",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.686382055282593,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'harry potter...' lacks specificity and may not indicate a clear intent to search for a particular aspect of Harry Potter. The presence of an invalid control character suggests that the user's query may not have been well-formed, which aligns more with PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging with any can indicate a lack of promising information scent, suggesting the user may not find the content relevant. This is more indicative of LeavingPatch, especially if the user did not click on any results, indicating a failure to find satisfactory content.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'the harry potter lexicon...' indicates that the user found a specific source appealing enough to investigate further, which aligns more closely with ApproachingSource than FollowingScent. FollowingScent implies a broader search intent rather than a targeted click.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.307690143585205,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0072231128811837
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2681",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:31:26.461583",
+  "events": [
+    {
+      "session_id": "10900_2681",
+      "event_id": "10900_2681_qq-1444",
+      "timestamp": "2006-04-20 08:22:32",
+      "action_type": "QUERY",
+      "content": "fortunoff",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'fortunoff...' appears to be incomplete or malformed, suggesting the user may not have a clear intent or sufficient information to proceed. This aligns more with PoorScent, as it indicates the user may not find relevant results, leading to a lack of effective information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9204542100429535,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:32:08.308481"
+    },
+    {
+      "session_id": "10900_2681",
+      "event_id": "10900_2681_qq-1444_serp",
+      "timestamp": "2006-04-20 08:22:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: for tun off, for tun off, for tun off (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that are variations of 'for tun off' indicates that the user is likely not finding relevant or meaningful information. The repetition in the view suggests a lack of clarity in the search intent, which is characteristic of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9799348205327988,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:32:08.308505"
+    },
+    {
+      "session_id": "10900_2681",
+      "event_id": "10900_2681_qq-1444_cd-8705",
+      "timestamp": "2006-04-20 08:22:32",
+      "action_type": "CLICK",
+      "content": "for tun off",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'for tun off...' without prior clear intent or a well-formed query suggests that the user is acting on a whim rather than a targeted search. This indicates a lack of promising information scent, aligning better with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9998744942247868,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:32:08.308512"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.011785984039307,
+      "decisions": [
+        {
+          "event_id": "10900_2681_qq-1444",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2681_qq-1444_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2681_qq-1444_cd-8705",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.646230936050415,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'fortunoff...' appears to be incomplete or malformed, suggesting the user may not have a clear intent or sufficient information to proceed. This aligns more with PoorScent, as it indicates the user may not find relevant results, leading to a lack of effective information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results that are variations of 'for tun off' indicates that the user is likely not finding relevant or meaningful information. The repetition in the view suggests a lack of clarity in the search intent, which is characteristic of PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'for tun off...' without prior clear intent or a well-formed query suggests that the user is acting on a whim rather than a targeted search. This indicates a lack of promising information scent, aligning better with PoorScent than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.929535150527954,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9998744942247868
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3247",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:57:20.339046",
+  "events": [
+    {
+      "session_id": "13112_3247",
+      "event_id": "13112_3247_qq-1724",
+      "timestamp": "2006-03-21 16:06:48",
+      "action_type": "QUERY",
+      "content": "icc 300",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'icc 300...' appears vague and incomplete, potentially indicating that the user is not confident in their search direction. The presence of an error message suggests a lack of clarity in their intent, which is more indicative of poor scent rather than a well-formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9146288275718689,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:04.155827"
+    },
+    {
+      "session_id": "13112_3247",
+      "event_id": "13112_3247_qq-1724_serp",
+      "timestamp": "2006-03-21 16:06:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: columbia 300 columbia 300, 300, 300 (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not demonstrate a clear intent or satisfaction with any of them. The repeated mention of '300' without additional context suggests a lack of specificity, leading to a weak information scent. This does not align with the notion of FollowingScent, as the user seems to be struggling to find relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0008466221392154,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:04.155860"
+    },
+    {
+      "session_id": "13112_3247",
+      "event_id": "13112_3247_qq-1724_cd-9639",
+      "timestamp": "2006-03-21 16:06:48",
+      "action_type": "CLICK",
+      "content": "icc international code council icc",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'icc international code council icc...' suggests that the user found a title or snippet that piqued their interest, indicating an approach towards a source of potential information rather than a continuation of a well-formed targeted query. Therefore, ApproachingSource is a more fitting label here.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9734252393245697,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:58:04.155891"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.155415058135986,
+      "decisions": [
+        {
+          "event_id": "13112_3247_qq-1724",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3247_qq-1724_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3247_qq-1724_cd-9639",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.394432067871094,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'icc 300...' appears vague and incomplete, potentially indicating that the user is not confident in their search direction. The presence of an error message suggests a lack of clarity in their intent, which is more indicative of poor scent rather than a well-formed query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but did not demonstrate a clear intent or satisfaction with any of them. The repeated mention of '300' without additional context suggests a lack of specificity, leading to a weak information scent. This does not align with the notion of FollowingScent, as the user seems to be struggling to find relevant information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'icc international code council icc...' suggests that the user found a title or snippet that piqued their interest, indicating an approach towards a source of potential information rather than a continuation of a well-formed targeted query. Therefore, ApproachingSource is a more fitting label here.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.946826934814453,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0008466221392154
+}

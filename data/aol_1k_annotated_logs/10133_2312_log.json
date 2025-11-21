@@ -1,0 +1,159 @@
+{
+  "session_id": "10133_2312",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:15:39.531657",
+  "events": [
+    {
+      "session_id": "10133_2312",
+      "event_id": "10133_2312_qq-1240",
+      "timestamp": "2006-03-01 11:58:32",
+      "action_type": "QUERY",
+      "content": "warmoth",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query with a vague term like 'warmoth...' suggests the user may not have a clear intent, leading to an ineffective search. The analyst's label of 'FollowingScent' implies a strong intention that is not evidenced here. This query does not provide clear information scent, indicating a lack of promising results, which aligns with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9705529749393463,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:16:11.180760"
+    },
+    {
+      "session_id": "10133_2312",
+      "event_id": "10133_2312_qq-1240_serp",
+      "timestamp": "2006-03-01 11:58:32",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: moth guard odorless moth proofing, pantry moths clothes moths carpet beetles, pli moth glass (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Although the user viewed multiple results, the action of viewing does not necessarily reflect a clear intent to follow a promising scent. The diverse nature of the result titles suggests the user is exploring options rather than having a strong target, which aligns better with ApproachingSource as they seem to be investigating various potential sources rather than following a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9966159928590059,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:16:11.180789"
+    },
+    {
+      "session_id": "10133_2312",
+      "event_id": "10133_2312_qq-1240_cd-8014",
+      "timestamp": "2006-03-01 11:58:32",
+      "action_type": "CLICK",
+      "content": "war moth custom guitar parts custom bass and guitar bodies and necks",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'war moth custom guitar parts...' may indicate curiosity or interest rather than a direct and clear intent, which is required for the FollowingScent label. The previous events suggest the user was not particularly focused on a specific target, thus the click should be labeled as ApproachingSource, indicating an exploration of potentially relevant content rather than a clear, directed search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6240000000000001,
+      "disagreement_score": 0.9970386931672692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:16:11.180800"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.57999587059021,
+      "decisions": [
+        {
+          "event_id": "10133_2312_qq-1240",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2312_qq-1240_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10133_2312_qq-1240_cd-8014",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.888110160827637,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query with a vague term like 'warmoth...' suggests the user may not have a clear intent, leading to an ineffective search. The analyst's label of 'FollowingScent' implies a strong intention that is not evidenced here. This query does not provide clear information scent, indicating a lack of promising results, which aligns with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Although the user viewed multiple results, the action of viewing does not necessarily reflect a clear intent to follow a promising scent. The diverse nature of the result titles suggests the user is exploring options rather than having a strong target, which aligns better with ApproachingSource as they seem to be investigating various potential sources rather than following a specific scent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'war moth custom guitar parts...' may indicate curiosity or interest rather than a direct and clear intent, which is required for the FollowingScent label. The previous events suggest the user was not particularly focused on a specific target, thus the click should be labeled as ApproachingSource, indicating an exploration of potentially relevant content rather than a clear, directed search.",
+          "confidence": 0.78
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.851019144058228,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6240000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9970386931672692
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2287",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:02:17.843188",
+  "events": [
+    {
+      "session_id": "10008_2287",
+      "event_id": "10008_2287_qq-1204",
+      "timestamp": "2006-04-19 15:27:13",
+      "action_type": "QUERY",
+      "content": "marcy broden era key real estate framingham ma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query, 'marcy broden era key real estate framingham ma...', appears to lack specificity and clarity, which may indicate they were not confident in their search direction. The mention of an 'Invalid control character' implies that the query may not have been well-formed, suggesting that the user was likely not following a strong scent but rather struggling to find relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.835615360736847,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:02:53.105322"
+    },
+    {
+      "session_id": "10008_2287",
+      "event_id": "10008_2287_qq-1204_serp",
+      "timestamp": "2006-04-19 15:27:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: illinois real estate for sale illinois real estate for sale www illinois real estate, killington vermont real estate ski country real estate ski country real estate killington vermont, punta gorda florida real estate port charlotte florida real estate englewood florida real estate (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 SERP results without interaction or clicks suggests that the user found the results unpromising, indicating a lack of strong information scent. The repetition in the content (e.g., 'illinois real estate for sale') could imply redundancy and lack of useful information, leading the user to perceive the search as ineffective.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9832345724105835,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:02:53.105351"
+    },
+    {
+      "session_id": "10008_2287",
+      "event_id": "10008_2287_qq-1204_cd-7867",
+      "timestamp": "2006-04-19 15:27:13",
+      "action_type": "CLICK",
+      "content": "the domain name b roden homes com is for sale dan com",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a domain name may indicate a last-ditch effort to find relevant information after failing to find satisfactory results from the SERP view. This could suggest that the user was leaving their initial search patch due to dissatisfaction with the previous results, rather than actively following a scent. The click may not reflect confidence but rather desperation in finding information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9865149617195129,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:02:53.105360"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.130664348602295,
+      "decisions": [
+        {
+          "event_id": "10008_2287_qq-1204",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2287_qq-1204_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2287_qq-1204_cd-7867",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 11.133848190307617,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query, 'marcy broden era key real estate framingham ma...', appears to lack specificity and clarity, which may indicate they were not confident in their search direction. The mention of an 'Invalid control character' implies that the query may not have been well-formed, suggesting that the user was likely not following a strong scent but rather struggling to find relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of viewing 10 SERP results without interaction or clicks suggests that the user found the results unpromising, indicating a lack of strong information scent. The repetition in the content (e.g., 'illinois real estate for sale') could imply redundancy and lack of useful information, leading the user to perceive the search as ineffective.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a domain name may indicate a last-ditch effort to find relevant information after failing to find satisfactory results from the SERP view. This could suggest that the user was leaving their initial search patch due to dissatisfaction with the previous results, rather than actively following a scent. The click may not reflect confidence but rather desperation in finding information.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.680450201034546,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9865149617195129
+}

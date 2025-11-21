@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2280",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T04:58:30.879257",
+  "events": [
+    {
+      "session_id": "10008_2280",
+      "event_id": "10008_2280_qq-1195",
+      "timestamp": "2006-04-10 17:36:20",
+      "action_type": "QUERY",
+      "content": "boston scientific",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'boston scientific...' does not represent a well-formed or targeted search, suggesting the user may not be finding promising information. The presence of an analysis error indicates potential confusion or dissatisfaction with the current content, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8907561898231506,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:58:49.600601"
+    },
+    {
+      "session_id": "10008_2280",
+      "event_id": "10008_2280_qq-1195_serp",
+      "timestamp": "2006-04-10 17:36:20",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: boston scientific us boston scientific, urology procedures boston scientific, frey scientific frey scientific (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results related to 'boston scientific' without engaging with any suggests the user did not find the information compelling enough. This behavior indicates a lack of information scent, therefore it fits the PoorScent label more accurately than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9877357929944992,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:58:49.600647"
+    },
+    {
+      "session_id": "10008_2280",
+      "event_id": "10008_2280_qq-1195_cd-7852",
+      "timestamp": "2006-04-10 17:36:20",
+      "action_type": "CLICK",
+      "content": "boston scientific us boston scientific",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, but given the context of previous actions and the analysis error, it may indicate a final attempt to seek information rather than a targeted search. This click seems more like a last effort due to dissatisfaction with previous results, which aligns with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.8878627419471741,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T04:58:49.600655"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.017911672592163,
+      "decisions": [
+        {
+          "event_id": "10008_2280_qq-1195",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2280_qq-1195_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2280_qq-1195_cd-7852",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.696358919143677,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'boston scientific...' does not represent a well-formed or targeted search, suggesting the user may not be finding promising information. The presence of an analysis error indicates potential confusion or dissatisfaction with the current content, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results related to 'boston scientific' without engaging with any suggests the user did not find the information compelling enough. This behavior indicates a lack of information scent, therefore it fits the PoorScent label more accurately than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user clicked on a result, but given the context of previous actions and the analysis error, it may indicate a final attempt to seek information rather than a targeted search. This click seems more like a last effort due to dissatisfaction with previous results, which aligns with LeavingPatch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.70528507232666,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9877357929944992
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4157",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:35:49.134143",
+  "events": [
+    {
+      "session_id": "19655_4157",
+      "event_id": "19655_4157_qq-2370",
+      "timestamp": "2006-05-05 17:35:12",
+      "action_type": "QUERY",
+      "content": "washington dc bus tours",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'washington dc bus tours' lacks specificity and may not represent a strong information scent, especially if the user did not interact further. Without clicks or engagement, it indicates uncertainty about the relevance of the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0212413400411606,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:36:12.068185"
+    },
+    {
+      "session_id": "19655_4157",
+      "event_id": "19655_4157_qq-2370_serp",
+      "timestamp": "2006-05-05 17:35:12",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: who s best dentist in washington dc dc, jobs in washington dc help wanted dc com, dc visit com washington dc travel visitor information (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the SERP without clear engagement (clicks) suggests that the user found the results underwhelming. The presence of seemingly irrelevant results indicates a lack of promising scent from the search, rather than a targeted, focused exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.005393908545375,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:36:12.068190"
+    },
+    {
+      "session_id": "19655_4157",
+      "event_id": "19655_4157_qq-2370_cd-14142",
+      "timestamp": "2006-05-05 17:35:12",
+      "action_type": "CLICK",
+      "content": "official tourism site of washington dc washington org",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'official tourism site of washington dc' suggests that the user was trying to find credible and relevant information, indicating they were approaching a potentially valuable source rather than simply following a scent. This reflects a more discerning search behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9947246223688125,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:36:12.068192"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.732728958129883,
+      "decisions": [
+        {
+          "event_id": "19655_4157_qq-2370",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4157_qq-2370_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4157_qq-2370_cd-14142",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.3224499225616455,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'washington dc bus tours' lacks specificity and may not represent a strong information scent, especially if the user did not interact further. Without clicks or engagement, it indicates uncertainty about the relevance of the results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing the SERP without clear engagement (clicks) suggests that the user found the results underwhelming. The presence of seemingly irrelevant results indicates a lack of promising scent from the search, rather than a targeted, focused exploration.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on the 'official tourism site of washington dc' suggests that the user was trying to find credible and relevant information, indicating they were approaching a potentially valuable source rather than simply following a scent. This reflects a more discerning search behavior.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.739848852157593,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0212413400411606
+}

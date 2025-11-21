@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_224",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:12:42.083471",
+  "events": [
+    {
+      "session_id": "1927_224",
+      "event_id": "1927_224_qq-96",
+      "timestamp": "2006-03-02 20:26:29",
+      "action_type": "QUERY",
+      "content": "interlachen pediatrics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'interlachen pediatrics...' suggests an attempt to find specific information, but without additional context indicating that the user had a clear intent or received promising results, it is more appropriate to label this as PoorScent. The presence of an error indicates that the user may not have found what they were looking for initially, which aligns with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9680493116378784,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:13:10.753760"
+    },
+    {
+      "session_id": "1927_224",
+      "event_id": "1927_224_qq-96_serp",
+      "timestamp": "2006-03-02 20:26:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: inter la chen pediatrics child health care in oviedo and maitland, home inter la chen country club, home inter la chen country club (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results but not interacting with them in a meaningful way suggests that the user did not find satisfactory information. This could indicate that the results did not meet their expectations, thus leading to a potential abandonment of the search rather than a clear pursuit of a targeted query, which aligns better with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9498369753360748,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:13:10.753766"
+    },
+    {
+      "session_id": "1927_224",
+      "event_id": "1927_224_qq-96_cd-1723",
+      "timestamp": "2006-03-02 20:26:29",
+      "action_type": "CLICK",
+      "content": "inter la chen pediatrics child health care in oviedo and maitland",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a specific result indicates an exploration of a potentially relevant source, which aligns with ApproachingSource. However, given the previous events suggest a lack of satisfactory results, it might actually represent a moment of desperation rather than a clear pursuit of a targeted search, thus making ApproachingSource a more fitting label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.002413494884968,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:13:10.753779"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.485308170318604,
+      "decisions": [
+        {
+          "event_id": "1927_224_qq-96",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_224_qq-96_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_224_qq-96_cd-1723",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.127784252166748,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'interlachen pediatrics...' suggests an attempt to find specific information, but without additional context indicating that the user had a clear intent or received promising results, it is more appropriate to label this as PoorScent. The presence of an error indicates that the user may not have found what they were looking for initially, which aligns with PoorScent.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results but not interacting with them in a meaningful way suggests that the user did not find satisfactory information. This could indicate that the results did not meet their expectations, thus leading to a potential abandonment of the search rather than a clear pursuit of a targeted query, which aligns better with LeavingPatch.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a specific result indicates an exploration of a potentially relevant source, which aligns with ApproachingSource. However, given the previous events suggest a lack of satisfactory results, it might actually represent a moment of desperation rather than a clear pursuit of a targeted search, thus making ApproachingSource a more fitting label than FollowingScent.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.8203699588775635,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.002413494884968
+}

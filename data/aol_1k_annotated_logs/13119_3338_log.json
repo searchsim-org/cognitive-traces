@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3338",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:09:08.076632",
+  "events": [
+    {
+      "session_id": "13119_3338",
+      "event_id": "13119_3338_qq-1828",
+      "timestamp": "2006-05-21 23:33:56",
+      "action_type": "QUERY",
+      "content": "walmart gun sells",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'walmart gun sells...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction. The label 'FollowingScent' implies a strong, targeted query, which this does not reflect. The user's intent appears weak, indicating that they may not find promising results, hence a proper label would be 'PoorScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0108145758509637,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:09:43.813955"
+    },
+    {
+      "session_id": "13119_3338",
+      "event_id": "13119_3338_qq-1828_serp",
+      "timestamp": "2006-05-21 23:33:56",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: gop stein s gun books gun books out of print gun books gun books used gun books gun books rare gun books gun books modern gun books gun books older gun books gun books american gun books gun books foreign gun books gun books british gun books gun books militar i a site, price gun labels price guns pricing guns, cole gun fine guns and gun smithing (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed consists of repetitive phrases (e.g., 'gun books') without clear differentiation. This suggests that the user is not finding high-value information and may be overwhelmed or confused. As such, labeling this as 'FollowingScent' misrepresents the user's experience; a more fitting label would be 'PoorScent' due to the lack of diverse and informative results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9967596504837275,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:09:43.813962"
+    },
+    {
+      "session_id": "13119_3338",
+      "event_id": "13119_3338_qq-1828_cd-382",
+      "timestamp": "2006-05-21 23:33:56",
+      "action_type": "CLICK",
+      "content": "walmart com save money live better",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The clicked content 'walmart com save money live better...' does not seem contextually relevant to the user's apparent interest in gun-related products. The user may be attempting to find information but is not necessarily following a clear scent. Therefore, the label 'FollowingScent' is inappropriate, and 'ApproachingSource' better reflects an exploratory action without a strong information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0337043344974517,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:09:43.813964"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.80728793144226,
+      "decisions": [
+        {
+          "event_id": "13119_3338_qq-1828",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3338_qq-1828_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3338_qq-1828_cd-382",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.862449884414673,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'walmart gun sells...' is vague and lacks specificity, suggesting that the user may not have a clear intent or direction. The label 'FollowingScent' implies a strong, targeted query, which this does not reflect. The user's intent appears weak, indicating that they may not find promising results, hence a proper label would be 'PoorScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content viewed consists of repetitive phrases (e.g., 'gun books') without clear differentiation. This suggests that the user is not finding high-value information and may be overwhelmed or confused. As such, labeling this as 'FollowingScent' misrepresents the user's experience; a more fitting label would be 'PoorScent' due to the lack of diverse and informative results.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The clicked content 'walmart com save money live better...' does not seem contextually relevant to the user's apparent interest in gun-related products. The user may be attempting to find information but is not necessarily following a clear scent. Therefore, the label 'FollowingScent' is inappropriate, and 'ApproachingSource' better reflects an exploratory action without a strong information scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.56004810333252,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0337043344974517
+}

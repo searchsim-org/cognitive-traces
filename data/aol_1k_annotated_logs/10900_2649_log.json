@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2649",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T09:03:58.182861",
+  "events": [
+    {
+      "session_id": "10900_2649",
+      "event_id": "10900_2649_qq-1433",
+      "timestamp": "2006-03-22 22:10:24",
+      "action_type": "QUERY",
+      "content": "waltdisney world",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'waltdisney world...' does not seem to have a clear or well-formed intent, especially with the presence of an invalid control character. This indicates a lack of clarity in the user's information need, suggesting they may not have found promising results, thus aligning more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9351379096508026,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:04:58.009010"
+    },
+    {
+      "session_id": "10900_2649",
+      "event_id": "10900_2649_qq-1433_serp",
+      "timestamp": "2006-03-22 22:10:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ride max planning software for walt disney world and disneyland, all ears net the unofficial disney vacation planning guide walt disney world disneyland and disney cruise line, all ears net the unofficial disney vacation planning guide walt disney world disneyland and disney cruise line (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results for their query but did not demonstrate a clear intent to continue exploring those results or refine their query further. The presence of an invalid control character in the previous event may indicate frustration or confusion, leading to a potential abandonment of the search process, aligning better with LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8680299043655395,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:04:58.009034"
+    },
+    {
+      "session_id": "10900_2649",
+      "event_id": "10900_2649_qq-1433_cd-1749",
+      "timestamp": "2006-03-22 22:10:24",
+      "action_type": "CLICK",
+      "content": "disney world disney go com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'disney world disney go com...' suggests the user was enticed by the title or snippet, indicating strong information scent from that source. This is more indicative of ApproachingSource rather than FollowingScent, as the user is taking a specific action based on perceived value rather than a broader search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6240000000000001,
+      "disagreement_score": 1.010050006955862,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T09:04:58.009040"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 33.32352924346924,
+      "decisions": [
+        {
+          "event_id": "10900_2649_qq-1433",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2649_qq-1433_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2649_qq-1433_cd-1749",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.456805229187012,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'waltdisney world...' does not seem to have a clear or well-formed intent, especially with the presence of an invalid control character. This indicates a lack of clarity in the user's information need, suggesting they may not have found promising results, thus aligning more with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results for their query but did not demonstrate a clear intent to continue exploring those results or refine their query further. The presence of an invalid control character in the previous event may indicate frustration or confusion, leading to a potential abandonment of the search process, aligning better with LeavingPatch.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'disney world disney go com...' suggests the user was enticed by the title or snippet, indicating strong information scent from that source. This is more indicative of ApproachingSource rather than FollowingScent, as the user is taking a specific action based on perceived value rather than a broader search intent.",
+          "confidence": 0.78
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 18.537337064743042,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6240000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.010050006955862
+}

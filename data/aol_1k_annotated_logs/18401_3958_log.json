@@ -1,0 +1,159 @@
+{
+  "session_id": "18401_3958",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:11:26.358137",
+  "events": [
+    {
+      "session_id": "18401_3958",
+      "event_id": "18401_3958_qq-634",
+      "timestamp": "2006-05-05 18:16:31",
+      "action_type": "QUERY",
+      "content": "nascar",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The initial query 'nascar...' does not provide clear intent or specificity. The ellipsis suggests an incomplete thought, which indicates a lack of strong information scent. Thus, the action aligns more with PoorScent, as the user is not fully formed in their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9590394794940948,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:11:55.633938"
+    },
+    {
+      "session_id": "18401_3958",
+      "event_id": "18401_3958_qq-634_serp",
+      "timestamp": "2006-05-05 18:16:31",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: fantasy foot all basketball hockey nascar baseball golf soccer, sporting news nfl nba mlb ncaa nascar ufc boxing, book nascar race packages nfl and mlb ticket packages (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a SERP with various results related to 'nascar' could indicate that the user is still exploring options but lacks a clear focus, suggesting a failed attempt to find what they need. This aligns more with LeavingPatch, as the user may be overwhelmed or dissatisfied with the results, leading to the likelihood of abandoning the search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9626003444194794,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:11:55.633944"
+    },
+    {
+      "session_id": "18401_3958",
+      "event_id": "18401_3958_qq-634_cd-2081",
+      "timestamp": "2006-05-05 18:16:31",
+      "action_type": "CLICK",
+      "content": "nascar official home race results schedule standings news drivers",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'nascar official home race results schedule standings news drivers...' suggests the user is responding to a specific information scent, but it would be more accurate to label this as ApproachingSource since the click indicates a targeted investigation rather than a continuation of a well-formed search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.994816155731678,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:11:55.633947"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.199789047241211,
+      "decisions": [
+        {
+          "event_id": "18401_3958_qq-634",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3958_qq-634_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3958_qq-634_cd-2081",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.21928095817566,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The initial query 'nascar...' does not provide clear intent or specificity. The ellipsis suggests an incomplete thought, which indicates a lack of strong information scent. Thus, the action aligns more with PoorScent, as the user is not fully formed in their query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing a SERP with various results related to 'nascar' could indicate that the user is still exploring options but lacks a clear focus, suggesting a failed attempt to find what they need. This aligns more with LeavingPatch, as the user may be overwhelmed or dissatisfied with the results, leading to the likelihood of abandoning the search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'nascar official home race results schedule standings news drivers...' suggests the user is responding to a specific information scent, but it would be more accurate to label this as ApproachingSource since the click indicates a targeted investigation rather than a continuation of a well-formed search.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.414348840713501,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.994816155731678
+}

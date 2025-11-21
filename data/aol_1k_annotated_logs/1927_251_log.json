@@ -1,0 +1,159 @@
+{
+  "session_id": "1927_251",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:28:11.286205",
+  "events": [
+    {
+      "session_id": "1927_251",
+      "event_id": "1927_251_qq-137",
+      "timestamp": "2006-04-17 19:54:03",
+      "action_type": "QUERY",
+      "content": "usps pay scale",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query for 'usps pay scale', but the context indicates a lack of promising results leading to a lack of engagement. The subsequent error message suggests that the user's intent may not be met, resulting in poor scent rather than a clear targeted query continuation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9512416303157807,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:28:42.349337"
+    },
+    {
+      "session_id": "1927_251",
+      "event_id": "1927_251_qq-137_serp",
+      "timestamp": "2006-04-17 19:54:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: not found pay scale, dod pay scale khor dong pl, pay scales com nbsp this website is for sale nbsp pay scales resources and information (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not find relevant information, as indicated by the diverse and unhelpful result snippets. This suggests that the user was not following a strong scent, but rather encountered poor results leading to a potential reevaluation of their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9740020096302032,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:28:42.349343"
+    },
+    {
+      "session_id": "1927_251",
+      "event_id": "1927_251_qq-137_cd-1835",
+      "timestamp": "2006-04-17 19:54:03",
+      "action_type": "CLICK",
+      "content": "welcome usps",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result labeled 'welcome usps', indicating an exploratory behavior rather than a continuation of a successful scent. This action suggests that the user was attempting to approach a new source, potentially out of frustration with previous results, rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9925330251455307,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:28:42.349347"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.839099884033203,
+      "decisions": [
+        {
+          "event_id": "1927_251_qq-137",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_251_qq-137_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1927_251_qq-137_cd-1835",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.5223548412323,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query for 'usps pay scale', but the context indicates a lack of promising results leading to a lack of engagement. The subsequent error message suggests that the user's intent may not be met, resulting in poor scent rather than a clear targeted query continuation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results but did not find relevant information, as indicated by the diverse and unhelpful result snippets. This suggests that the user was not following a strong scent, but rather encountered poor results leading to a potential reevaluation of their query.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result labeled 'welcome usps', indicating an exploratory behavior rather than a continuation of a successful scent. This action suggests that the user was attempting to approach a new source, potentially out of frustration with previous results, rather than following a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.477986812591553,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9925330251455307
+}

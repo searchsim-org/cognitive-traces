@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3205",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:17:04.646366",
+  "events": [
+    {
+      "session_id": "12653_3205",
+      "event_id": "12653_3205_qq-1692",
+      "timestamp": "2006-03-21 22:37:29",
+      "action_type": "QUERY",
+      "content": "kanecountyelections",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user encountered an analysis error indicating a potential issue with the query itself, suggesting that the information scent was inadequate or misleading. The presence of an invalid control character implies that the query was not well-formed, which aligns more closely with the PoorScent label rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8300504088401794,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:18:03.931556"
+    },
+    {
+      "session_id": "12653_3205",
+      "event_id": "12653_3205_qq-1692_serp",
+      "timestamp": "2006-03-21 22:37:29",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www kane county elections org, kane county fair, shasta county ca elections shasta county ca elections (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did so with a query that was likely flawed due to the previous analysis error. This indicates a lack of promising information scent, making PoorScent a more fitting label than FollowingScent, as the user's intent may not have been effectively communicated.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9384057402610779,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:18:03.931575"
+    },
+    {
+      "session_id": "12653_3205",
+      "event_id": "12653_3205_qq-1692_cd-9746",
+      "timestamp": "2006-03-21 22:37:29",
+      "action_type": "CLICK",
+      "content": "www kane county elections org",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result that stemmed from a flawed query does not indicate a strong scent; rather, it suggests the user was still trying to find relevant information despite the earlier issues. The action seems more aligned with a lack of effective information scent, hence PoorScent is a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9802496522665024,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:18:03.931581"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.811694860458374,
+      "decisions": [
+        {
+          "event_id": "12653_3205_qq-1692",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3205_qq-1692_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3205_qq-1692_cd-9746",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.926533937454224,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user encountered an analysis error indicating a potential issue with the query itself, suggesting that the information scent was inadequate or misleading. The presence of an invalid control character implies that the query was not well-formed, which aligns more closely with the PoorScent label rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results but did so with a query that was likely flawed due to the previous analysis error. This indicates a lack of promising information scent, making PoorScent a more fitting label than FollowingScent, as the user's intent may not have been effectively communicated.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result that stemmed from a flawed query does not indicate a strong scent; rather, it suggests the user was still trying to find relevant information despite the earlier issues. The action seems more aligned with a lack of effective information scent, hence PoorScent is a more appropriate label.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 28.136327743530273,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9802496522665024
+}

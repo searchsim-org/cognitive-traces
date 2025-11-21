@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4075",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:46:16.897437",
+  "events": [
+    {
+      "session_id": "19655_4075",
+      "event_id": "19655_4075_qq-2353",
+      "timestamp": "2006-03-20 01:33:08",
+      "action_type": "QUERY",
+      "content": "altoids",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'altoids...' seems vague and lacks specificity, suggesting that the user may not have clear intent or that the query did not yield promising results. The presence of an invalid control character indicates a potential issue in the query itself, which can contribute to a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8780320167541504,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:38.910650"
+    },
+    {
+      "session_id": "19655_4075",
+      "event_id": "19655_4075_qq-2353_serp",
+      "timestamp": "2006-03-20 01:33:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www altoids com, yahoo search web search, mum n eric org (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without a clear indication of satisfaction or intent suggests that the user is not finding relevant content. The list of results includes various unrelated sources, indicating a lack of strong information scent, which aligns more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9988858442753553,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:38.910667"
+    },
+    {
+      "session_id": "19655_4075",
+      "event_id": "19655_4075_qq-2353_cd-14096",
+      "timestamp": "2006-03-20 01:33:08",
+      "action_type": "CLICK",
+      "content": "www altoids com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on 'www altoids com', the previous events indicate a lack of clarity in the search intent and poor scent from the previous results. The click does not necessarily indicate a strong intention, as the user may have clicked out of frustration or curiosity rather than a clear, targeted search. Hence, ApproachingSource is not the most appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9980165451765061,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:46:38.910670"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.409236907958984,
+      "decisions": [
+        {
+          "event_id": "19655_4075_qq-2353",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4075_qq-2353_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4075_qq-2353_cd-14096",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.889928102493286,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'altoids...' seems vague and lacks specificity, suggesting that the user may not have clear intent or that the query did not yield promising results. The presence of an invalid control character indicates a potential issue in the query itself, which can contribute to a poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without a clear indication of satisfaction or intent suggests that the user is not finding relevant content. The list of results includes various unrelated sources, indicating a lack of strong information scent, which aligns more closely with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on 'www altoids com', the previous events indicate a lack of clarity in the search intent and poor scent from the previous results. The click does not necessarily indicate a strong intention, as the user may have clicked out of frustration or curiosity rather than a clear, targeted search. Hence, ApproachingSource is not the most appropriate label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.630889177322388,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9988858442753553
+}

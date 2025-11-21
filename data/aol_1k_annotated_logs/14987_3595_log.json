@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3595",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:54:44.874649",
+  "events": [
+    {
+      "session_id": "14987_3595",
+      "event_id": "14987_3595_qq-1999",
+      "timestamp": "2006-04-05 12:37:13",
+      "action_type": "QUERY",
+      "content": "ventolin",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ventolin...' appears vague and lacks specificity, suggesting the user is unsure of their information need or is not receiving relevant results. There is no indication of a clear intent associated with the query, thus reflecting poor information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9422576487064361,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:55:13.572337"
+    },
+    {
+      "session_id": "14987_3595",
+      "event_id": "14987_3595_qq-1999_serp",
+      "timestamp": "2006-04-05 12:37:13",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: buy vent olin inhaler without prescription cheap generics online, olin home, olin college (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content viewed in the SERP includes several unrelated or poorly formed results, indicating that the user's initial query did not yield a strong or relevant scent. The presence of terms like 'buy vent olin inhaler without prescription' suggests confusion or misalignment with user intent, pointing to poor scent rather than a continuation of a focused search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9842148512601853,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:55:13.572343"
+    },
+    {
+      "session_id": "14987_3595",
+      "event_id": "14987_3595_qq-1999_cd-11547",
+      "timestamp": "2006-04-05 12:37:13",
+      "action_type": "CLICK",
+      "content": "vent olin r hf a alb utero l sulfate inhalation aerosol for asthma",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The clicked content 'vent olin r hf a alb utero l sulfate inhalation aerosol for asthma...' appears to be a misinterpretation of the user's intent. The user clicked on a result that seems to be irrelevant or confusing, which may imply they were searching for something specific but encountered a poor scent. This suggests they are not approaching a viable source, but rather taking a chance on a potentially misleading result.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9591048419475555,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:55:13.572346"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.138392210006714,
+      "decisions": [
+        {
+          "event_id": "14987_3595_qq-1999",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3595_qq-1999_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3595_qq-1999_cd-11547",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.976741790771484,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ventolin...' appears vague and lacks specificity, suggesting the user is unsure of their information need or is not receiving relevant results. There is no indication of a clear intent associated with the query, thus reflecting poor information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content viewed in the SERP includes several unrelated or poorly formed results, indicating that the user's initial query did not yield a strong or relevant scent. The presence of terms like 'buy vent olin inhaler without prescription' suggests confusion or misalignment with user intent, pointing to poor scent rather than a continuation of a focused search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The clicked content 'vent olin r hf a alb utero l sulfate inhalation aerosol for asthma...' appears to be a misinterpretation of the user's intent. The user clicked on a result that seems to be irrelevant or confusing, which may imply they were searching for something specific but encountered a poor scent. This suggests they are not approaching a viable source, but rather taking a chance on a potentially misleading result.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.370590925216675,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9842148512601853
+}

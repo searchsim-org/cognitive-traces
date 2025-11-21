@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3757",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:35:25.529662",
+  "events": [
+    {
+      "session_id": "15565_3757",
+      "event_id": "15565_3757_qq-2103",
+      "timestamp": "2006-03-12 21:59:26",
+      "action_type": "QUERY",
+      "content": "simple elegance",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'simple elegance...' lacks specificity and does not indicate a well-formed targeted query. The reference to an analysis error also suggests the user may not have found relevant information, indicating poor scent rather than a successful search initiation.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8963184118270874,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:51.823539"
+    },
+    {
+      "session_id": "15565_3757",
+      "event_id": "15565_3757_qq-2103_serp",
+      "timestamp": "2006-03-12 21:59:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: gowns by simple elegance com, www simple but elegant com, vegas weddings simple elegant packages from 199 (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results related to 'simple elegance,' indicating they are exploring sources rather than showing clear intent to follow a specific scent. This exploratory behavior aligns more with approaching potential sources for more information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0006245993077756,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:51.823559"
+    },
+    {
+      "session_id": "15565_3757",
+      "event_id": "15565_3757_qq-2103_cd-11915",
+      "timestamp": "2006-03-12 21:59:26",
+      "action_type": "CLICK",
+      "content": "gowns by simple elegance com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'gowns by simple elegance com...' suggests the user is investigating a specific item from the search results rather than following a well-defined scent. This aligns better with the label 'ApproachingSource' as the user is seeking to gather more detailed information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9818342477083206,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:35:51.823566"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.426880836486816,
+      "decisions": [
+        {
+          "event_id": "15565_3757_qq-2103",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3757_qq-2103_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3757_qq-2103_cd-11915",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.649285078048706,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'simple elegance...' lacks specificity and does not indicate a well-formed targeted query. The reference to an analysis error also suggests the user may not have found relevant information, indicating poor scent rather than a successful search initiation.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results related to 'simple elegance,' indicating they are exploring sources rather than showing clear intent to follow a specific scent. This exploratory behavior aligns more with approaching potential sources for more information.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'gowns by simple elegance com...' suggests the user is investigating a specific item from the search results rather than following a well-defined scent. This aligns better with the label 'ApproachingSource' as the user is seeking to gather more detailed information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.897453784942627,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0006245993077756
+}

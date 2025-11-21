@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4076",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:46:38.913707",
+  "events": [
+    {
+      "session_id": "19655_4076",
+      "event_id": "19655_4076_qq-2354",
+      "timestamp": "2006-03-20 21:21:01",
+      "action_type": "QUERY",
+      "content": "find a death",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'find a death...' is vague and lacks specificity, suggesting the user did not find promising information. This aligns with the characteristics of PoorScent, where a lack of clicks or an unclear query indicates an unsuccessful search attempt.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9649682104587555,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:08.347426"
+    },
+    {
+      "session_id": "19655_4076",
+      "event_id": "19655_4076_qq-2354_serp",
+      "timestamp": "2006-03-20 21:21:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: find a death home celebrity deaths find a death, find a death home celebrity deaths find a death, restoring a wrongful death (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the repeated and poorly formed titles indicate a lack of relevant information. The user likely found no satisfactory content, which is indicative of PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9779897972941398,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:08.347448"
+    },
+    {
+      "session_id": "19655_4076",
+      "event_id": "19655_4076_qq-2354_cd-12721",
+      "timestamp": "2006-03-20 21:21:01",
+      "action_type": "CLICK",
+      "content": "find a death home celebrity deaths find a death",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that still references 'find a death home celebrity deaths' suggests that the user was not satisfied with their options and may have been trying to salvage a poorly formed search. This aligns more with LeavingPatch as the user is trying to find closure after unsuccessful attempts.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9370273351669312,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:08.347456"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.41457223892212,
+      "decisions": [
+        {
+          "event_id": "19655_4076_qq-2354",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4076_qq-2354_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4076_qq-2354_cd-12721",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 9.437526941299438,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'find a death...' is vague and lacks specificity, suggesting the user did not find promising information. This aligns with the characteristics of PoorScent, where a lack of clicks or an unclear query indicates an unsuccessful search attempt.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed 10 results, the repeated and poorly formed titles indicate a lack of relevant information. The user likely found no satisfactory content, which is indicative of PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a result that still references 'find a death home celebrity deaths' suggests that the user was not satisfied with their options and may have been trying to salvage a poorly formed search. This aligns more with LeavingPatch as the user is trying to find closure after unsuccessful attempts.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.48612117767334,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9779897972941398
+}

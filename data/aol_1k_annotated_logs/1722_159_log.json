@@ -1,0 +1,159 @@
+{
+  "session_id": "1722_159",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T01:12:20.907623",
+  "events": [
+    {
+      "session_id": "1722_159",
+      "event_id": "1722_159_qq-65",
+      "timestamp": "2006-03-15 06:58:54",
+      "action_type": "QUERY",
+      "content": "vilascountynewsreview",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query seems to have resulted in an error message indicating a potential issue with the content rather than a well-formed search intent. This suggests the user may not have found the information they were looking for, reflecting a poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9549681335687638,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:13:03.546884"
+    },
+    {
+      "session_id": "1722_159",
+      "event_id": "1722_159_qq-65_serp",
+      "timestamp": "2006-03-15 06:58:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: trusted reviews independent tech news and reviews, best automotive news reviews, best automotive news reviews (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's action of viewing the SERP results does not necessarily indicate a clear intent to follow a specific scent. Instead, it reflects an exploration stage where the user is evaluating potential sources instead of pursuing a targeted query. Thus, 'ApproachingSource' is more appropriate.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0207348018884659,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:13:03.546892"
+    },
+    {
+      "session_id": "1722_159",
+      "event_id": "1722_159_qq-65_cd-1575",
+      "timestamp": "2006-03-15 06:58:54",
+      "action_type": "CLICK",
+      "content": "vc news review com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result due to an analysis error does not indicate a well-formed intent to follow a scent. It instead suggests the user is acting on a necessity to explore despite potential issues with the presented options. 'ApproachingSource' is more suitable as the user chose to investigate further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9232991576194763,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T01:13:03.546895"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.170689821243286,
+      "decisions": [
+        {
+          "event_id": "1722_159_qq-65",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_159_qq-65_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1722_159_qq-65_cd-1575",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.418646812438965,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query seems to have resulted in an error message indicating a potential issue with the content rather than a well-formed search intent. This suggests the user may not have found the information they were looking for, reflecting a poor scent rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user's action of viewing the SERP results does not necessarily indicate a clear intent to follow a specific scent. Instead, it reflects an exploration stage where the user is evaluating potential sources instead of pursuing a targeted query. Thus, 'ApproachingSource' is more appropriate.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result due to an analysis error does not indicate a well-formed intent to follow a scent. It instead suggests the user is acting on a necessity to explore despite potential issues with the presented options. 'ApproachingSource' is more suitable as the user chose to investigate further.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 27.898117065429688,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0207348018884659
+}

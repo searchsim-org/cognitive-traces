@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_2976",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T13:33:47.819344",
+  "events": [
+    {
+      "session_id": "12211_2976",
+      "event_id": "12211_2976_qq-1531",
+      "timestamp": "2006-04-07 02:13:54",
+      "action_type": "QUERY",
+      "content": "sprint pcs",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action is a query, but the content 'sprint pcs...' lacks specificity and does not demonstrate clear intent. The mention of an analysis error suggests the query may not have led the user to a satisfactory result, indicating a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8773251533508301,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:34:21.791711"
+    },
+    {
+      "session_id": "12211_2976",
+      "event_id": "12211_2976_qq-1531_serp",
+      "timestamp": "2006-04-07 02:13:54",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www pcs c nu edu, gmc sprint quick seek com, best value in wireless sprint (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, but the listed content does not indicate strong information scent. If the query was not specific or relevant, it suggests the user was not effectively following a scent but rather exploring a low-scent area, leading to a poor interaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9772026360034942,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:34:21.791724"
+    },
+    {
+      "session_id": "12211_2976",
+      "event_id": "12211_2976_qq-1531_cd-1602",
+      "timestamp": "2006-04-07 02:13:54",
+      "action_type": "CLICK",
+      "content": "best value in wireless sprint",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'best value in wireless sprint...' indicates an attempt to investigate further based on perceived relevance from the snippet. This suggests the user was following a potential lead rather than following a strong scent, as the earlier events indicate a lack of success.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9662677347660065,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T13:34:21.791730"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.988424062728882,
+      "decisions": [
+        {
+          "event_id": "12211_2976_qq-1531",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2976_qq-1531_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_2976_qq-1531_cd-1602",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.300204753875732,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action is a query, but the content 'sprint pcs...' lacks specificity and does not demonstrate clear intent. The mention of an analysis error suggests the query may not have led the user to a satisfactory result, indicating a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed multiple results, but the listed content does not indicate strong information scent. If the query was not specific or relevant, it suggests the user was not effectively following a scent but rather exploring a low-scent area, leading to a poor interaction.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'best value in wireless sprint...' indicates an attempt to investigate further based on perceived relevance from the snippet. This suggests the user was following a potential lead rather than following a strong scent, as the earlier events indicate a lack of success.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.60502290725708,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9772026360034942
+}

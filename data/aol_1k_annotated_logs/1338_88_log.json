@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_88",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:53:02.104126",
+  "events": [
+    {
+      "session_id": "1338_88",
+      "event_id": "1338_88_qq-26",
+      "timestamp": "2006-03-03 12:18:36",
+      "action_type": "QUERY",
+      "content": "xnxx",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query containing invalid characters, which indicates potential confusion or lack of clarity in their intent. The absence of a targeted query suggests that the user may not find the results promising, leading to a poor scent rather than a clear initiation of a search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.879071569442749,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:53:45.215400"
+    },
+    {
+      "session_id": "1338_88",
+      "event_id": "1338_88_qq-26_serp",
+      "timestamp": "2006-03-03 12:18:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: xn xx, xn xx movies org welcome to xn xx movies, xn xx movies org welcome to xn xx movies (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, which indicates that the search did not yield promising information. This behavior aligns more closely with leaving the patch due to poor scent rather than following a strong scent, as there is no engagement with the displayed results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9965477712452412,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:53:45.215421"
+    },
+    {
+      "session_id": "1338_88",
+      "event_id": "1338_88_qq-26_cd-1381",
+      "timestamp": "2006-03-03 12:18:36",
+      "action_type": "CLICK",
+      "content": "free xxx porn videos xn xx com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a link, the nature of the content (free porn videos) suggests that the click may not have been driven by a well-formed intent reflecting a clear search goal. The potentially misleading nature of the content implies that the user is still struggling to find appropriate information, indicating a poor scent rather than following a clear direction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0219953954219818,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:53:45.215453"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 17.1004958152771,
+      "decisions": [
+        {
+          "event_id": "1338_88_qq-26",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_88_qq-26_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_88_qq-26_cd-1381",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.938881874084473,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query containing invalid characters, which indicates potential confusion or lack of clarity in their intent. The absence of a targeted query suggests that the user may not find the results promising, leading to a poor scent rather than a clear initiation of a search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed multiple results but did not click on any, which indicates that the search did not yield promising information. This behavior aligns more closely with leaving the patch due to poor scent rather than following a strong scent, as there is no engagement with the displayed results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user clicked on a link, the nature of the content (free porn videos) suggests that the click may not have been driven by a well-formed intent reflecting a clear search goal. The potentially misleading nature of the content implies that the user is still struggling to find appropriate information, indicating a poor scent rather than following a clear direction.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.751556873321533,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0219953954219818
+}

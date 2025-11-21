@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4043",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:57:46.463558",
+  "events": [
+    {
+      "session_id": "19162_4043",
+      "event_id": "19162_4043_qq-2314",
+      "timestamp": "2006-03-26 11:45:36",
+      "action_type": "QUERY",
+      "content": "lets get out of this mess no one will even know we left lyrics",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'lets get out of this mess no one will even know we left lyrics...' suggests a lack of clarity in the user's intent, as it does not specify a precise information need like song title or artist. This indicates that the user might not find relevant results, reflecting poor information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9701622128486633,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:58:10.658437"
+    },
+    {
+      "session_id": "19162_4043",
+      "event_id": "19162_4043_qq-2314_serp",
+      "timestamp": "2006-03-26 11:45:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: whispers lyrics wonder lyrics com, p lyrics com punk lyrics, dark lyrics metal lyrics archive (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results that include various lyric sites, implying an exploration of options rather than a targeted approach. The presence of multiple results suggests the user is still evaluating potential sources rather than following a strong scent for a specific item.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9841753289103508,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:58:10.658459"
+    },
+    {
+      "session_id": "19162_4043",
+      "event_id": "19162_4043_qq-2314_cd-735",
+      "timestamp": "2006-03-26 11:45:36",
+      "action_type": "CLICK",
+      "content": "p lyrics com punk lyrics",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'p lyrics com punk lyrics...' indicates an attempt to gather information, but the lack of a clear, focused query beforehand suggests the user is still trying to navigate through uncertain options rather than confidently following a scent. This is more indicative of a user still searching for a suitable source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9918829739093781,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:58:10.658469"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.227909803390503,
+      "decisions": [
+        {
+          "event_id": "19162_4043_qq-2314",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4043_qq-2314_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4043_qq-2314_cd-735",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.70694613456726,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'lets get out of this mess no one will even know we left lyrics...' suggests a lack of clarity in the user's intent, as it does not specify a precise information need like song title or artist. This indicates that the user might not find relevant results, reflecting poor information scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results that include various lyric sites, implying an exploration of options rather than a targeted approach. The presence of multiple results suggests the user is still evaluating potential sources rather than following a strong scent for a specific item.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'p lyrics com punk lyrics...' indicates an attempt to gather information, but the lack of a clear, focused query beforehand suggests the user is still trying to navigate through uncertain options rather than confidently following a scent. This is more indicative of a user still searching for a suitable source.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 5.919780015945435,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9918829739093781
+}

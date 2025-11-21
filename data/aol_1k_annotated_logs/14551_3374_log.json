@@ -1,0 +1,159 @@
+{
+  "session_id": "14551_3374",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:19:59.592575",
+  "events": [
+    {
+      "session_id": "14551_3374",
+      "event_id": "14551_3374_qq-5",
+      "timestamp": "2006-05-13 09:35:57",
+      "action_type": "QUERY",
+      "content": "yahoo",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'yahoo...' suggests that the user encountered an issue with their input, leading to an invalid control character error. This indicates a lack of clear intent or direction, which aligns more closely with PoorScent rather than FollowingScent, as the query does not demonstrate effective information seeking.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8824475526809692,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:20:36.965879"
+    },
+    {
+      "session_id": "14551_3374",
+      "event_id": "14551_3374_qq-5_serp",
+      "timestamp": "2006-05-13 09:35:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: yahoo japan, yahoo mail, my yahoo (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The view of search results for 'yahoo japan, yahoo mail, my yahoo' suggests that the user might not have found the information they were looking for due to the previous invalid query. Without a clear and targeted query, it is more appropriate to label this event as PoorScent, indicating that the results were not effectively addressing the user's information need.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9543446511030197,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:20:36.965887"
+    },
+    {
+      "session_id": "14551_3374",
+      "event_id": "14551_3374_qq-5_cd-3033",
+      "timestamp": "2006-05-13 09:35:57",
+      "action_type": "CLICK",
+      "content": "yahoo mail",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'yahoo mail...' does not necessarily indicate FollowingScent, especially given the context of the previous events. The user may have clicked out of frustration or lack of options rather than clear intent or satisfaction. This scenario aligns with PoorScent, as the user is still navigating in a less effective information patch without a clear target.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.010151381790638,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:20:36.965891"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.025979042053223,
+      "decisions": [
+        {
+          "event_id": "14551_3374_qq-5",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3374_qq-5_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3374_qq-5_cd-3033",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.727725982666016,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'yahoo...' suggests that the user encountered an issue with their input, leading to an invalid control character error. This indicates a lack of clear intent or direction, which aligns more closely with PoorScent rather than FollowingScent, as the query does not demonstrate effective information seeking.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The view of search results for 'yahoo japan, yahoo mail, my yahoo' suggests that the user might not have found the information they were looking for due to the previous invalid query. Without a clear and targeted query, it is more appropriate to label this event as PoorScent, indicating that the results were not effectively addressing the user's information need.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'yahoo mail...' does not necessarily indicate FollowingScent, especially given the context of the previous events. The user may have clicked out of frustration or lack of options rather than clear intent or satisfaction. This scenario aligns with PoorScent, as the user is still navigating in a less effective information patch without a clear target.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.380975246429443,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 95)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.010151381790638
+}

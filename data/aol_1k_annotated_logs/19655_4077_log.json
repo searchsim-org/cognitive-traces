@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4077",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:47:08.355411",
+  "events": [
+    {
+      "session_id": "19655_4077",
+      "event_id": "19655_4077_qq-2355",
+      "timestamp": "2006-03-22 00:23:44",
+      "action_type": "QUERY",
+      "content": "smokey mountain chevy",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'smokey mountain chevy...' is vague and lacks specificity, indicating that the user may not have found effective information scent. The absence of engagement with results suggests that the user did not feel confident in the query's relevance, aligning more with the PoorScent label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9891819037497044,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:35.124813"
+    },
+    {
+      "session_id": "19655_4077",
+      "event_id": "19655_4077_qq-2355_serp",
+      "timestamp": "2006-03-22 00:23:44",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: smokey mountains net nbsp smokey mountains resources and information, smokey mountain trading biker patches, the great smokey mountains parkway (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not indicate a strong intent or targeted investigation, as the results listed do not appear to directly relate to a focused query. This lack of fruitful engagement suggests the user may be preparing to leave the search due to insufficient information scent rather than actively foraging.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9800666198134422,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:35.124819"
+    },
+    {
+      "session_id": "19655_4077",
+      "event_id": "19655_4077_qq-2355_cd-14099",
+      "timestamp": "2006-03-22 00:23:44",
+      "action_type": "CLICK",
+      "content": "www smoky mountain chevy com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www smoky mountain chevy com...' suggests an attempt to engage with potentially relevant content, but the vague nature of the previous events indicates uncertainty in the information scent. Therefore, this action could better be categorized as a tentative exploration rather than a strong following of scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0205535367131233,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:47:35.124821"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.566182851791382,
+      "decisions": [
+        {
+          "event_id": "19655_4077_qq-2355",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4077_qq-2355_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4077_qq-2355_cd-14099",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.318119287490845,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'smokey mountain chevy...' is vague and lacks specificity, indicating that the user may not have found effective information scent. The absence of engagement with results suggests that the user did not feel confident in the query's relevance, aligning more with the PoorScent label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not indicate a strong intent or targeted investigation, as the results listed do not appear to directly relate to a focused query. This lack of fruitful engagement suggests the user may be preparing to leave the search due to insufficient information scent rather than actively foraging.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www smoky mountain chevy com...' suggests an attempt to engage with potentially relevant content, but the vague nature of the previous events indicates uncertainty in the information scent. Therefore, this action could better be categorized as a tentative exploration rather than a strong following of scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.687407970428467,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0205535367131233
+}

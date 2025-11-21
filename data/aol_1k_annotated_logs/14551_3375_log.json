@@ -1,0 +1,159 @@
+{
+  "session_id": "14551_3375",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:20:36.970718",
+  "events": [
+    {
+      "session_id": "14551_3375",
+      "event_id": "14551_3375_qq-502",
+      "timestamp": "2006-05-13 19:07:57",
+      "action_type": "QUERY",
+      "content": "yahoo.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action was a QUERY that did not result in any interaction or click, suggesting that the user did not find promising information scent from the results. Instead of indicating a targeted search, the presence of an error suggests a lack of clarity in the query, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9337837934494019,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:21:11.946861"
+    },
+    {
+      "session_id": "14551_3375",
+      "event_id": "14551_3375_qq-502_serp",
+      "timestamp": "2006-05-13 19:07:57",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: yahoo mail, yahoo world, yahoo japan (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the SERP results without clicks indicates that the user did not find the displayed results appealing or relevant, which aligns with PoorScent. The label FollowingScent implies a strong intent which is contradicted by the lack of interaction with the results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0061038453131914,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:21:11.946868"
+    },
+    {
+      "session_id": "14551_3375",
+      "event_id": "14551_3375_qq-502_cd-3033",
+      "timestamp": "2006-05-13 19:07:57",
+      "action_type": "CLICK",
+      "content": "yahoo mail",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result, which shows some level of interest in the content. However, labeling it as FollowingScent implies a more focused intent that isn't supported by the previous events. The action here can better be classified as ApproachingSource since they were drawn to a specific item likely due to its informational scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0303985923528671,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:21:11.946872"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.39477825164795,
+      "decisions": [
+        {
+          "event_id": "14551_3375_qq-502",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3375_qq-502_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14551_3375_qq-502_cd-3033",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.753343105316162,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action was a QUERY that did not result in any interaction or click, suggesting that the user did not find promising information scent from the results. Instead of indicating a targeted search, the presence of an error suggests a lack of clarity in the query, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing the SERP results without clicks indicates that the user did not find the displayed results appealing or relevant, which aligns with PoorScent. The label FollowingScent implies a strong intent which is contradicted by the lack of interaction with the results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a result, which shows some level of interest in the content. However, labeling it as FollowingScent implies a more focused intent that isn't supported by the previous events. The action here can better be classified as ApproachingSource since they were drawn to a specific item likely due to its informational scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.60464096069336,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0303985923528671
+}

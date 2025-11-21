@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3417",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:48:45.519560",
+  "events": [
+    {
+      "session_id": "14668_3417",
+      "event_id": "14668_3417_qq-1880",
+      "timestamp": "2006-03-08 10:42:41",
+      "action_type": "QUERY",
+      "content": "jesse duplantis",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'jesse duplantis...' lacks specificity and appears to be a fragmented search, indicating that the user may not have found sufficient information or clarity in the results. This suggests a weak scent leading to no further engagement rather than a well-formed search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9611706227064133,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:49:35.588723"
+    },
+    {
+      "session_id": "14668_3417",
+      "event_id": "14668_3417_qq-1880_serp",
+      "timestamp": "2006-03-08 10:42:41",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: jesse du plant is ministries, huge domains com jess imports com is for sale jess imports, jesse mullan (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the content listed appears disjointed and lacks relevance, which indicates that the scent was poor. The analyst's label of FollowingScent implies an ongoing effective search process, which does not align with the context of results that seem unpromising.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9697145879268646,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:49:35.588746"
+    },
+    {
+      "session_id": "14668_3417",
+      "event_id": "14668_3417_qq-1880_cd-11255",
+      "timestamp": "2006-03-08 10:42:41",
+      "action_type": "CLICK",
+      "content": "jesse du plant is ministries",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'jesse du plant is ministries...' does not suggest a strong intent as the previous actions indicate the user was likely not satisfied with the SERP. This could reflect a last-ditch effort to find relevant information rather than a confident search action. The user may be on the verge of abandoning the patch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9795483589172364,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:49:35.588754"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.911349058151245,
+      "decisions": [
+        {
+          "event_id": "14668_3417_qq-1880",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3417_qq-1880_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3417_qq-1880_cd-11255",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.411499977111816,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'jesse duplantis...' lacks specificity and appears to be a fragmented search, indicating that the user may not have found sufficient information or clarity in the results. This suggests a weak scent leading to no further engagement rather than a well-formed search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "While the user viewed 10 results, the content listed appears disjointed and lacks relevance, which indicates that the scent was poor. The analyst's label of FollowingScent implies an ongoing effective search process, which does not align with the context of results that seem unpromising.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'jesse du plant is ministries...' does not suggest a strong intent as the previous actions indicate the user was likely not satisfied with the SERP. This could reflect a last-ditch effort to find relevant information rather than a confident search action. The user may be on the verge of abandoning the patch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 22.3856258392334,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9795483589172364
+}

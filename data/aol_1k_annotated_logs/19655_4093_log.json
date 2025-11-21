@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4093",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:54:32.680447",
+  "events": [
+    {
+      "session_id": "19655_4093",
+      "event_id": "19655_4093_qq-2365",
+      "timestamp": "2006-03-30 08:32:42",
+      "action_type": "QUERY",
+      "content": "ancestry",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'ancestry...' appears incomplete, which may indicate that the user was not satisfied or clear in their intent. The 'Invalid control character' suggests a lack of clarity or focus in the query, reflecting a poor scent for relevant information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8414445281028747,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:55:04.621368"
+    },
+    {
+      "session_id": "19655_4093",
+      "event_id": "19655_4093_qq-2365_serp",
+      "timestamp": "2006-03-30 08:32:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ancestry genealogy family trees family history records, ancestry genealogy family trees family history records, ancestry genealogy family trees family history records (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results that all contain the same repetitive content ('ancestry genealogy family trees family history records') suggests that the user is not finding valuable or diverse information. This indicates poor scent, as the user is likely not engaging with meaningful or informative content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.00333708897233,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:55:04.621394"
+    },
+    {
+      "session_id": "19655_4093",
+      "event_id": "19655_4093_qq-2365_cd-9",
+      "timestamp": "2006-03-30 08:32:42",
+      "action_type": "CLICK",
+      "content": "ancestry genealogy family trees family history records",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a repetitive result (the same title as in the SERP view) likely indicates desperation or an attempt at finding something relevant, rather than a clear, targeted intent typical of 'FollowingScent'. The user may have clicked out of frustration rather than genuine interest, suggesting a poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9962915137410164,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:55:04.621401"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.144841194152832,
+      "decisions": [
+        {
+          "event_id": "19655_4093_qq-2365",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4093_qq-2365_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4093_qq-2365_cd-9",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.4406068325042725,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'ancestry...' appears incomplete, which may indicate that the user was not satisfied or clear in their intent. The 'Invalid control character' suggests a lack of clarity or focus in the query, reflecting a poor scent for relevant information.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results that all contain the same repetitive content ('ancestry genealogy family trees family history records') suggests that the user is not finding valuable or diverse information. This indicates poor scent, as the user is likely not engaging with meaningful or informative content.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a repetitive result (the same title as in the SERP view) likely indicates desperation or an attempt at finding something relevant, rather than a clear, targeted intent typical of 'FollowingScent'. The user may have clicked out of frustration rather than genuine interest, suggesting a poor scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.243095636367798,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.00333708897233
+}

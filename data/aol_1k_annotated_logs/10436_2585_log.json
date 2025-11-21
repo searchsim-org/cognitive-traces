@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2585",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:21:07.798992",
+  "events": [
+    {
+      "session_id": "10436_2585",
+      "event_id": "10436_2585_qq-1370",
+      "timestamp": "2006-04-19 21:10:23",
+      "action_type": "QUERY",
+      "content": "katour wigs",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'katour wigs...' contains an incomplete thought and doesn't demonstrate a clear intent. Instead of leading to meaningful results, it indicates a lack of clarity or specificity in the user's information need, resulting in poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9793372035026551,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:21:28.964296"
+    },
+    {
+      "session_id": "10436_2585",
+      "event_id": "10436_2585_qq-1370_serp",
+      "timestamp": "2006-04-19 21:10:23",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www ka tour line wigs com, wigs wigs online quality wigs abc wigs, wigs lace wig synthetic wigs lace front wigs human hair wigs cancer wigs wig (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but did not click on any, suggesting dissatisfaction with the presented options. This behavior reflects a lack of promising scent from the search results, leading to a potential decision to abandon the current query topic rather than following a clear, targeted path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9791623532772065,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:21:28.964302"
+    },
+    {
+      "session_id": "10436_2585",
+      "event_id": "10436_2585_qq-1370_cd-8532",
+      "timestamp": "2006-04-19 21:10:23",
+      "action_type": "CLICK",
+      "content": "www ka tour line wigs com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www ka tour line wigs com...' does not indicate a successful follow-through on a strong scent, especially given the previous events indicating a lack of clarity and intent. The click may represent a desperate attempt to find something relevant rather than a confident choice based on promising information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9890537053346634,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:21:28.964305"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.623155832290649,
+      "decisions": [
+        {
+          "event_id": "10436_2585_qq-1370",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2585_qq-1370_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2585_qq-1370_cd-8532",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.557591199874878,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'katour wigs...' contains an incomplete thought and doesn't demonstrate a clear intent. Instead of leading to meaningful results, it indicates a lack of clarity or specificity in the user's information need, resulting in poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results but did not click on any, suggesting dissatisfaction with the presented options. This behavior reflects a lack of promising scent from the search results, leading to a potential decision to abandon the current query topic rather than following a clear, targeted path.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'www ka tour line wigs com...' does not indicate a successful follow-through on a strong scent, especially given the previous events indicating a lack of clarity and intent. The click may represent a desperate attempt to find something relevant rather than a confident choice based on promising information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.901914834976196,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9890537053346634
+}

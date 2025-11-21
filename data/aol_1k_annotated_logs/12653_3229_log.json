@@ -1,0 +1,159 @@
+{
+  "session_id": "12653_3229",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T17:40:34.281888",
+  "events": [
+    {
+      "session_id": "12653_3229",
+      "event_id": "12653_3229_qq-1707",
+      "timestamp": "2006-05-16 11:46:42",
+      "action_type": "QUERY",
+      "content": "darvin furniture",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of issuing a query with a vague or incomplete term like 'darvin furniture...' suggests a lack of clear intent or information scent, especially if the query was not specific enough to yield relevant results. This indicates the user may not have found promising information in prior sessions, leading to a poorly formed query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.953778862953186,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:15.078927"
+    },
+    {
+      "session_id": "12653_3229",
+      "event_id": "12653_3229_qq-1707_serp",
+      "timestamp": "2006-05-16 11:46:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www dar v in furniture com, dar v in furniture or land park chicago il furniture mattress store, dar ph in (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without a clear indication of intent or specific targeting suggests that the user is not successfully following a strong scent. The inclusion of '... (+7 more)' implies a potential lack of satisfactory results, which aligns more with a poor scent than a strong following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9695316851139069,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:15.078955"
+    },
+    {
+      "session_id": "12653_3229",
+      "event_id": "12653_3229_qq-1707_cd-9766",
+      "timestamp": "2006-05-16 11:46:42",
+      "action_type": "CLICK",
+      "content": "dar v in furniture or land park chicago il furniture mattress store",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a specific result, particularly one that is more detailed like 'dar v in furniture or land park chicago il furniture mattress store', indicates a stronger scent than merely following an undefined query. The user appears to be taking a step towards a specific source, suggesting they are interested in exploring that particular result further.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9858605578541756,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T17:41:15.078961"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 18.328370094299316,
+      "decisions": [
+        {
+          "event_id": "12653_3229_qq-1707",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3229_qq-1707_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12653_3229_qq-1707_cd-9766",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.301087856292725,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The action of issuing a query with a vague or incomplete term like 'darvin furniture...' suggests a lack of clear intent or information scent, especially if the query was not specific enough to yield relevant results. This indicates the user may not have found promising information in prior sessions, leading to a poorly formed query.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without a clear indication of intent or specific targeting suggests that the user is not successfully following a strong scent. The inclusion of '... (+7 more)' implies a potential lack of satisfactory results, which aligns more with a poor scent than a strong following scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a specific result, particularly one that is more detailed like 'dar v in furniture or land park chicago il furniture mattress store', indicates a stronger scent than merely following an undefined query. The user appears to be taking a step towards a specific source, suggesting they are interested in exploring that particular result further.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.798462867736816,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9858605578541756
+}

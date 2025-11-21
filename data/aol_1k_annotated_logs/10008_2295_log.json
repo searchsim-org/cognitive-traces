@@ -1,0 +1,159 @@
+{
+  "session_id": "10008_2295",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T05:06:26.389897",
+  "events": [
+    {
+      "session_id": "10008_2295",
+      "event_id": "10008_2295_qq-1217",
+      "timestamp": "2006-04-24 20:43:17",
+      "action_type": "QUERY",
+      "content": "meals on wheels ma",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'meals on wheels ma...' suggests the user is searching for specific information, but the presence of an invalid control character indicates a potential typing error or incomplete query. Since there is no indication of a successful interaction or clear direction, this suggests a lack of information scent rather than a well-formed search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8972241878509521,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:54.204164"
+    },
+    {
+      "session_id": "10008_2295",
+      "event_id": "10008_2295_qq-1217_serp",
+      "timestamp": "2006-04-24 20:43:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: call me fish meal, home meals for kids, www nice meal com (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results but not engaging with any suggests that the user did not find promising information scent. The analyst's label of FollowingScent assumes the user's intent was clear, but the context implies the opposite\u2014potential confusion or dissatisfaction with the SERP results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9830175757408142,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:54.204189"
+    },
+    {
+      "session_id": "10008_2295",
+      "event_id": "10008_2295_qq-1217_cd-7885",
+      "timestamp": "2006-04-24 20:43:17",
+      "action_type": "CLICK",
+      "content": "www meal call org",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'www meal call org...' could indicate a tentative approach to a source based on what the user perceived as relevant, but given the context of previous events, it may not reflect strong intent. The click could be exploratory rather than an affirmation of a clear information scent, suggesting that the user was still searching for a better fit.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0241363883018493,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T05:06:54.204196"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.399521112442017,
+      "decisions": [
+        {
+          "event_id": "10008_2295_qq-1217",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2295_qq-1217_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10008_2295_qq-1217_cd-7885",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.572977066040039,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'meals on wheels ma...' suggests the user is searching for specific information, but the presence of an invalid control character indicates a potential typing error or incomplete query. Since there is no indication of a successful interaction or clear direction, this suggests a lack of information scent rather than a well-formed search intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results but not engaging with any suggests that the user did not find promising information scent. The analyst's label of FollowingScent assumes the user's intent was clear, but the context implies the opposite\u2014potential confusion or dissatisfaction with the SERP results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'www meal call org...' could indicate a tentative approach to a source based on what the user perceived as relevant, but given the context of previous events, it may not reflect strong intent. The click could be exploratory rather than an affirmation of a clear information scent, suggesting that the user was still searching for a better fit.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.482655048370361,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0241363883018493
+}

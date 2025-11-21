@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3853",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:18:27.742215",
+  "events": [
+    {
+      "session_id": "17545_3853",
+      "event_id": "17545_3853_qq-2174",
+      "timestamp": "2006-05-25 17:25:02",
+      "action_type": "QUERY",
+      "content": "yamaha",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'yamaha...' is vague and lacks specificity, suggesting the user is not confident in their search direction. The presence of an invalid control character indicates potential confusion or error in the input, aligning with the PoorScent label as it suggests that the user did not engage further with relevant results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8520610570907592,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:00.052054"
+    },
+    {
+      "session_id": "17545_3853",
+      "event_id": "17545_3853_qq-2174_serp",
+      "timestamp": "2006-05-25 17:25:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pianos by yamaha petr of and v enables son for sale in uk, parker yamaha com 928 669 2549 800 s california ave parker az 85344, atv trader com atv sales polaris can am honda yamaha kawasaki atvs for sale (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results but the content of those results appears largely incoherent and irrelevant, indicating that they did not find a clear direction or information scent that matched their needs. This aligns with the PoorScent label, as it suggests a lack of promising leads in the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0019651588052512,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:00.052065"
+    },
+    {
+      "session_id": "17545_3853",
+      "event_id": "17545_3853_qq-2174_cd-12845",
+      "timestamp": "2006-05-25 17:25:02",
+      "action_type": "CLICK",
+      "content": "motorcycles off road vehicles boats outboard motors more yamaha motor corporation u s a",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that appears to be filled with irrelevant terms ('motorcycles off road vehicles boats outboard motors') indicates that the user likely clicked out of frustration or lack of better options rather than a clear intent to follow a promising scent. This suggests a PoorScent condition rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.978343565762043,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:19:00.052069"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.675540924072266,
+      "decisions": [
+        {
+          "event_id": "17545_3853_qq-2174",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3853_qq-2174_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3853_qq-2174_cd-12845",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.3246681690216064,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'yamaha...' is vague and lacks specificity, suggesting the user is not confident in their search direction. The presence of an invalid control character indicates potential confusion or error in the input, aligning with the PoorScent label as it suggests that the user did not engage further with relevant results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed 10 results but the content of those results appears largely incoherent and irrelevant, indicating that they did not find a clear direction or information scent that matched their needs. This aligns with the PoorScent label, as it suggests a lack of promising leads in the search results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result that appears to be filled with irrelevant terms ('motorcycles off road vehicles boats outboard motors') indicates that the user likely clicked out of frustration or lack of better options rather than a clear intent to follow a promising scent. This suggests a PoorScent condition rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.908944845199585,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0019651588052512
+}

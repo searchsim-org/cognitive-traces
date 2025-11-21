@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4031",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:51:17.452004",
+  "events": [
+    {
+      "session_id": "19162_4031",
+      "event_id": "19162_4031_qq-2299",
+      "timestamp": "2006-03-08 06:03:06",
+      "action_type": "QUERY",
+      "content": "quick and easy french recipes",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'quick and easy french recipes...' suggests an initial intent to find recipes, but the phrase 'Invalid control character' indicates that the query might have been improperly formed or misinterpreted, leading to a lack of relevant results. This suggests that the user did not find promising scent and may have been disappointed with the search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.895044994354248,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:51:43.145478"
+    },
+    {
+      "session_id": "19162_4031",
+      "event_id": "19162_4031_qq-2299_serp",
+      "timestamp": "2006-03-08 06:03:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: all recipes food friends and recipe inspiration, all recipes food friends and recipe inspiration, all recipes food friends and recipe inspiration (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing results that are repetitive or not relevant indicates that the user did not find satisfactory options. The fact that the results are the same makes it likely that the user perceived a lack of value in the information presented, which aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0045235387980938,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:51:43.145501"
+    },
+    {
+      "session_id": "19162_4031",
+      "event_id": "19162_4031_qq-2299_cd-3228",
+      "timestamp": "2006-03-08 06:03:06",
+      "action_type": "CLICK",
+      "content": "all recipes food friends and recipe inspiration",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'all recipes food friends and recipe inspiration' indicates an attempt to delve deeper into what seemed like a relevant result despite the earlier issues. This action aligns with approaching a source of information rather than maintaining a scent-based search, as it suggests the user was attempting to find useful content despite previous frustrations.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9930128067731857,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:51:43.145508"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.095417022705078,
+      "decisions": [
+        {
+          "event_id": "19162_4031_qq-2299",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4031_qq-2299_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4031_qq-2299_cd-3228",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.121687173843384,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'quick and easy french recipes...' suggests an initial intent to find recipes, but the phrase 'Invalid control character' indicates that the query might have been improperly formed or misinterpreted, leading to a lack of relevant results. This suggests that the user did not find promising scent and may have been disappointed with the search results.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing results that are repetitive or not relevant indicates that the user did not find satisfactory options. The fact that the results are the same makes it likely that the user perceived a lack of value in the information presented, which aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'all recipes food friends and recipe inspiration' indicates an attempt to delve deeper into what seemed like a relevant result despite the earlier issues. This action aligns with approaching a source of information rather than maintaining a scent-based search, as it suggests the user was attempting to find useful content despite previous frustrations.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.071910858154297,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0045235387980938
+}

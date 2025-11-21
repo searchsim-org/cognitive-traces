@@ -1,0 +1,159 @@
+{
+  "session_id": "10436_2580",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:18:49.463804",
+  "events": [
+    {
+      "session_id": "10436_2580",
+      "event_id": "10436_2580_qq-1365",
+      "timestamp": "2006-04-07 17:28:36",
+      "action_type": "QUERY",
+      "content": "encore music",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'encore music...' is vague and does not indicate clear intent or a focused search. The presence of an analysis error implies that the search may not have produced relevant results, leading to a lack of engagement with the content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9252116560935975,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:19:12.153243"
+    },
+    {
+      "session_id": "10436_2580",
+      "event_id": "10436_2580_qq-1365_serp",
+      "timestamp": "2006-04-07 17:28:36",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: encore music publishers pro shop, encore, encore publications welcome to encore publications (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the lack of clicks or clear engagement indicates that they did not find promising scent in the displayed SERP. This suggests that they may be considering abandoning the search due to insufficient information satisfaction.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9862556099891663,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:19:12.153249"
+    },
+    {
+      "session_id": "10436_2580",
+      "event_id": "10436_2580_qq-1365_cd-8543",
+      "timestamp": "2006-04-07 17:28:36",
+      "action_type": "CLICK",
+      "content": "encore music publishers pro shop",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'encore music publishers pro shop...' could indicate an attempt to find more information. However, without prior engagement (e.g., clicks on SERP results), this does not signify a well-informed decision. Therefore, it may align more with PoorScent, as the action does not follow a strong scent from the previous events.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.016608290374279,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:19:12.153251"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.792384147644043,
+      "decisions": [
+        {
+          "event_id": "10436_2580_qq-1365",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2580_qq-1365_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10436_2580_qq-1365_cd-8543",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.710838079452515,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'encore music...' is vague and does not indicate clear intent or a focused search. The presence of an analysis error implies that the search may not have produced relevant results, leading to a lack of engagement with the content.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed multiple results, the lack of clicks or clear engagement indicates that they did not find promising scent in the displayed SERP. This suggests that they may be considering abandoning the search due to insufficient information satisfaction.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'encore music publishers pro shop...' could indicate an attempt to find more information. However, without prior engagement (e.g., clicks on SERP results), this does not signify a well-informed decision. Therefore, it may align more with PoorScent, as the action does not follow a strong scent from the previous events.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.9569251537323,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.016608290374279
+}

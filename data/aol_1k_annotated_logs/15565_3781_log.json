@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3781",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:49:49.490250",
+  "events": [
+    {
+      "session_id": "15565_3781",
+      "event_id": "15565_3781_qq-406",
+      "timestamp": "2006-04-26 01:54:20",
+      "action_type": "QUERY",
+      "content": "american idol",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'american idol...' appears vague and lacks specificity, which suggests that the user may not have a clear intent or direction. This indicates that the user might not find strong information scent, prompting them to issue a new query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9803273260593415,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:50:15.758820"
+    },
+    {
+      "session_id": "15565_3781",
+      "event_id": "15565_3781_qq-406_serp",
+      "timestamp": "2006-04-26 01:54:20",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: american idol 2006 blog blogspot com, www american idol jennifer hudson com, watch american idol tv show abc com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed multiple results, the content listed does not reflect a strong intent or a specific focus on a target query. Strong information scent would typically lead to a click on a promising result, which is not guaranteed by merely viewing results. Therefore, a label of 'ApproachingSource' is more appropriate as it implies the user is evaluating options rather than actively following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0163588404655457,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:50:15.758840"
+    },
+    {
+      "session_id": "15565_3781",
+      "event_id": "15565_3781_qq-406_cd-1119",
+      "timestamp": "2006-04-26 01:54:20",
+      "action_type": "CLICK",
+      "content": "watch american idol tv show abc com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'watch american idol tv show abc com' does not necessarily indicate a clear following of scent but rather may suggest an exploratory behavior. Without context suggesting this was the most relevant option or a direct response to the query, it may reflect a lack of strong scent leading to a click. A more suitable label could be 'LeavingPatch' if this click was a last resort after inadequate options were presented to the user.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9740110397338867,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:50:15.758848"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.358579874038696,
+      "decisions": [
+        {
+          "event_id": "15565_3781_qq-406",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3781_qq-406_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3781_qq-406_cd-1119",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.471833229064941,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'american idol...' appears vague and lacks specificity, which suggests that the user may not have a clear intent or direction. This indicates that the user might not find strong information scent, prompting them to issue a new query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user viewed multiple results, the content listed does not reflect a strong intent or a specific focus on a target query. Strong information scent would typically lead to a click on a promising result, which is not guaranteed by merely viewing results. Therefore, a label of 'ApproachingSource' is more appropriate as it implies the user is evaluating options rather than actively following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'watch american idol tv show abc com' does not necessarily indicate a clear following of scent but rather may suggest an exploratory behavior. Without context suggesting this was the most relevant option or a direct response to the query, it may reflect a lack of strong scent leading to a click. A more suitable label could be 'LeavingPatch' if this click was a last resort after inadequate options were presented to the user.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.153486251831055,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0163588404655457
+}

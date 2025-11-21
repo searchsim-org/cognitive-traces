@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3431",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:59:23.649845",
+  "events": [
+    {
+      "session_id": "14668_3431",
+      "event_id": "14668_3431_qq-1896",
+      "timestamp": "2006-03-19 22:27:03",
+      "action_type": "QUERY",
+      "content": "gawker stalker",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'gawker stalker...' suggests an attempt to find information related to gossip or celebrity news. However, the analyst's reasoning points to an analysis error rather than clear intent, which indicates the user may not have found the scent promising enough to proceed further. This aligns more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.97023224234581,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:59:59.020536"
+    },
+    {
+      "session_id": "14668_3431",
+      "event_id": "14668_3431_qq-1896_serp",
+      "timestamp": "2006-03-19 22:27:03",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www stalker com, www night stalkers com, john c stalker institute (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The act of viewing 10 results indicates an interest in exploring options rather than a clear, targeted query intent. The user's actions suggest they are still in the exploratory phase, which aligns more with ApproachingSource as they assess potential sources for further investigation rather than confidently following a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9802320301532745,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:59:59.020557"
+    },
+    {
+      "session_id": "14668_3431",
+      "event_id": "14668_3431_qq-1896_cd-2402",
+      "timestamp": "2006-03-19 22:27:03",
+      "action_type": "CLICK",
+      "content": "gawker today s gossip is tomorrow s news",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'gawker today s gossip is tomorrow s news...' suggests that the user found this particular result appealing, but the lack of strong intent in the previous events indicates they may still be assessing content rather than following a specific information scent. This behavior is more indicative of ApproachingSource rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.006712856143713,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:59:59.020564"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.445568084716797,
+      "decisions": [
+        {
+          "event_id": "14668_3431_qq-1896",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3431_qq-1896_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3431_qq-1896_cd-2402",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.167255163192749,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'gawker stalker...' suggests an attempt to find information related to gossip or celebrity news. However, the analyst's reasoning points to an analysis error rather than clear intent, which indicates the user may not have found the scent promising enough to proceed further. This aligns more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The act of viewing 10 results indicates an interest in exploring options rather than a clear, targeted query intent. The user's actions suggest they are still in the exploratory phase, which aligns more with ApproachingSource as they assess potential sources for further investigation rather than confidently following a specific scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'gawker today s gossip is tomorrow s news...' suggests that the user found this particular result appealing, but the lack of strong intent in the previous events indicates they may still be assessing content rather than following a specific information scent. This behavior is more indicative of ApproachingSource rather than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.515526056289673,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.006712856143713
+}

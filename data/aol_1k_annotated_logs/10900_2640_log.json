@@ -1,0 +1,159 @@
+{
+  "session_id": "10900_2640",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:54:12.425207",
+  "events": [
+    {
+      "session_id": "10900_2640",
+      "event_id": "10900_2640_qq-1425",
+      "timestamp": "2006-03-19 22:09:26",
+      "action_type": "QUERY",
+      "content": "toyotafinancial.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to be an attempt to engage with a specific domain (toyotafinancial.com), but the presence of an error indicates a lack of effectiveness in the search process. The user likely did not find the desired information or faced an obstacle, which suggests that the query did not yield promising results, aligning more with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9289690434932709,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:42.401565"
+    },
+    {
+      "session_id": "10900_2640",
+      "event_id": "10900_2640_qq-1425_serp",
+      "timestamp": "2006-03-19 22:09:26",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: toyota financial toyota financial, toyota financial toyota financial, toyota fcu optimal financial solutions (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results that seem repetitive and may not provide the expected variety or depth of information. Given that the results are largely similar (e.g., variations of 'toyota financial'), the scent from the SERP likely did not meet the user's needs, indicating a lack of effective information scent and therefore aligning with PoorScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0083825938403606,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:42.401584"
+    },
+    {
+      "session_id": "10900_2640",
+      "event_id": "10900_2640_qq-1425_cd-8685",
+      "timestamp": "2006-03-19 22:09:26",
+      "action_type": "CLICK",
+      "content": "toyota financial toyota financial",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a link, the context suggests that the overall experience up to this point was ineffective due to the previous errors. The click may not indicate a successful search but rather a last-ditch effort to find information. Since the user did not appear to be satisfied with the prior results, this action could indicate a transition towards LeavingPatch as they seem to be struggling to find relevant content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9569474130868911,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:54:42.401592"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.765099048614502,
+      "decisions": [
+        {
+          "event_id": "10900_2640_qq-1425",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2640_qq-1425_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10900_2640_qq-1425_cd-8685",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.041953802108765,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to be an attempt to engage with a specific domain (toyotafinancial.com), but the presence of an error indicates a lack of effectiveness in the search process. The user likely did not find the desired information or faced an obstacle, which suggests that the query did not yield promising results, aligning more with PoorScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results that seem repetitive and may not provide the expected variety or depth of information. Given that the results are largely similar (e.g., variations of 'toyota financial'), the scent from the SERP likely did not meet the user's needs, indicating a lack of effective information scent and therefore aligning with PoorScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user clicked on a link, the context suggests that the overall experience up to this point was ineffective due to the previous errors. The click may not indicate a successful search but rather a last-ditch effort to find information. Since the user did not appear to be satisfied with the prior results, this action could indicate a transition towards LeavingPatch as they seem to be struggling to find relevant content.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.848743915557861,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0083825938403606
+}

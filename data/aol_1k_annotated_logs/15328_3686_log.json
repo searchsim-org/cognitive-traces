@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3686",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:48:55.605716",
+  "events": [
+    {
+      "session_id": "15328_3686",
+      "event_id": "15328_3686_qq-2062",
+      "timestamp": "2006-04-03 11:15:14",
+      "action_type": "QUERY",
+      "content": "keeneland",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'keeneland...' does not demonstrate a clear intent or well-formed structure. The presence of an invalid control character suggests that the user's query may not have been properly formed, indicating a lack of promising information scent and leading to a potential abandonment of useful search paths.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9038246989250183,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:49:24.441628"
+    },
+    {
+      "session_id": "15328_3686",
+      "event_id": "15328_3686_qq-2062_serp",
+      "timestamp": "2006-04-03 11:15:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: home keene land, home keene land, keene land pony club (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that appear to be variations of 'home keene land' does not show a clear targeted intent or successful engagement. The repetition and lack of diverse content may indicate that the user is not finding relevant information, suggesting a poor information scent rather than a following scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0185185968875885,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:49:24.441639"
+    },
+    {
+      "session_id": "15328_3686",
+      "event_id": "15328_3686_qq-2062_cd-11759",
+      "timestamp": "2006-04-03 11:15:14",
+      "action_type": "CLICK",
+      "content": "home keene land",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'home keene land...' after viewing redundant results indicates a lack of effective information retrieval. The click appears to be a last resort rather than a clear following scent, given the nature of the prior searches and the potential frustration with the results. This suggests the user is still not finding satisfactory information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0015358954668045,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:49:24.441642"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 8.981479167938232,
+      "decisions": [
+        {
+          "event_id": "15328_3686_qq-2062",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3686_qq-2062_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3686_qq-2062_cd-11759",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.518259763717651,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'keeneland...' does not demonstrate a clear intent or well-formed structure. The presence of an invalid control character suggests that the user's query may not have been properly formed, indicating a lack of promising information scent and leading to a potential abandonment of useful search paths.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that appear to be variations of 'home keene land' does not show a clear targeted intent or successful engagement. The repetition and lack of diverse content may indicate that the user is not finding relevant information, suggesting a poor information scent rather than a following scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on 'home keene land...' after viewing redundant results indicates a lack of effective information retrieval. The click appears to be a last resort rather than a clear following scent, given the nature of the prior searches and the potential frustration with the results. This suggests the user is still not finding satisfactory information.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.184270143508911,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0185185968875885
+}

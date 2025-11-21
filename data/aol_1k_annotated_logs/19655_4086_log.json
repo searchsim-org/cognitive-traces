@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4086",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:51:08.901375",
+  "events": [
+    {
+      "session_id": "19655_4086",
+      "event_id": "19655_4086_qq-2361",
+      "timestamp": "2006-03-27 00:41:08",
+      "action_type": "QUERY",
+      "content": "daniel lee zimmerman",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'daniel lee zimmerman...' does not reflect a well-formed query indicating clear intent. Instead, it suggests ambiguity or lack of direction, which aligns more with PoorScent as the user may not be confident in the information they are seeking.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.981389831006527,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:51:36.904681"
+    },
+    {
+      "session_id": "19655_4086",
+      "event_id": "19655_4086_qq-2361_serp",
+      "timestamp": "2006-03-27 00:41:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: lee daniels entertainment, dan zimmerman portfolio, www zimmerman collection com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing SERP results does not indicate a clear intent to continue following a scent. Given the variety of results viewed, it suggests the user is exploring options rather than pursuing a focused search, which aligns more with LeavingPatch if they did not find satisfactory results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0064671739935875,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:51:36.904688"
+    },
+    {
+      "session_id": "19655_4086",
+      "event_id": "19655_4086_qq-2361_cd-14126",
+      "timestamp": "2006-03-27 00:41:08",
+      "action_type": "CLICK",
+      "content": "dan zimmerman portfolio",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicking on 'dan zimmerman portfolio...' indicates an active engagement based on the information scent perceived from the title. This aligns better with ApproachingSource as the user demonstrates intent to further investigate a specific result rather than simply following a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9775994628667831,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:51:36.904691"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.917967081069946,
+      "decisions": [
+        {
+          "event_id": "19655_4086_qq-2361",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4086_qq-2361_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4086_qq-2361_cd-14126",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.092702865600586,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'daniel lee zimmerman...' does not reflect a well-formed query indicating clear intent. Instead, it suggests ambiguity or lack of direction, which aligns more with PoorScent as the user may not be confident in the information they are seeking.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of viewing SERP results does not indicate a clear intent to continue following a scent. Given the variety of results viewed, it suggests the user is exploring options rather than pursuing a focused search, which aligns more with LeavingPatch if they did not find satisfactory results.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicking on 'dan zimmerman portfolio...' indicates an active engagement based on the information scent perceived from the title. This aligns better with ApproachingSource as the user demonstrates intent to further investigate a specific result rather than simply following a scent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.910299301147461,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0064671739935875
+}

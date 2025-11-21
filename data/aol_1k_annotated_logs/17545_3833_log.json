@@ -1,0 +1,159 @@
+{
+  "session_id": "17545_3833",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T02:08:33.383606",
+  "events": [
+    {
+      "session_id": "17545_3833",
+      "event_id": "17545_3833_qq-2196",
+      "timestamp": "2006-04-23 12:50:02",
+      "action_type": "QUERY",
+      "content": "sport rider",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'sport rider...' lacks specificity and does not indicate a strong intent or clear information need. The presence of an analysis error further suggests that the query may not have provided useful results, aligning more with the characteristics of PoorScent where the user may not have found promising information to pursue.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8789899826049805,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:09:00.349073"
+    },
+    {
+      "session_id": "17545_3833",
+      "event_id": "17545_3833_qq-2196_serp",
+      "timestamp": "2006-04-23 12:50:02",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: forums sport rider com, www sport rider com, sport bike rider picture website (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results does not inherently indicate a strong information scent. The lack of successful clicks or engagement with the results suggests that the user is still searching for relevant information, aligning with PoorScent since they are likely not satisfied with the initial search results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0010193400084972,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:09:00.349080"
+    },
+    {
+      "session_id": "17545_3833",
+      "event_id": "17545_3833_qq-2196_cd-12887",
+      "timestamp": "2006-04-23 12:50:02",
+      "action_type": "CLICK",
+      "content": "www sport rider com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a link, the context does not suggest a strong intent to engage with the content based on a promising scent. The previous events indicate a lack of successful engagement with the search results, making it more appropriate to label this event as LeavingPatch, as the user might be trying to find something satisfactory after previous failures.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9913037590682506,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T02:09:00.349082"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.305988788604736,
+      "decisions": [
+        {
+          "event_id": "17545_3833_qq-2196",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3833_qq-2196_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "17545_3833_qq-2196_cd-12887",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.694514989852905,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'sport rider...' lacks specificity and does not indicate a strong intent or clear information need. The presence of an analysis error further suggests that the query may not have provided useful results, aligning more with the characteristics of PoorScent where the user may not have found promising information to pursue.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results does not inherently indicate a strong information scent. The lack of successful clicks or engagement with the results suggests that the user is still searching for relevant information, aligning with PoorScent since they are likely not satisfied with the initial search results.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a link, the context does not suggest a strong intent to engage with the content based on a promising scent. The previous events indicate a lack of successful engagement with the search results, making it more appropriate to label this event as LeavingPatch, as the user might be trying to find something satisfactory after previous failures.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.61928105354309,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0010193400084972
+}

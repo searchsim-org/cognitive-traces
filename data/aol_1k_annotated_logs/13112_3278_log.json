@@ -1,0 +1,159 @@
+{
+  "session_id": "13112_3278",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:24:45.941127",
+  "events": [
+    {
+      "session_id": "13112_3278",
+      "event_id": "13112_3278_qq-1760",
+      "timestamp": "2006-05-16 13:23:38",
+      "action_type": "QUERY",
+      "content": "restaurant equipment",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'restaurant equipment...' suggests an attempt to initiate a search, but the lack of specificity and the presence of an analysis error indicate that the user did not find promising information scent. This lack of clarity and effectiveness in the query points to PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9757740706205368,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:25:22.651362"
+    },
+    {
+      "session_id": "13112_3278",
+      "event_id": "13112_3278_qq-1760_serp",
+      "timestamp": "2006-05-16 13:23:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: restaurant equipment world restaurant equipment supplies, restaurant equipment world restaurant equipment supplies, restaurant equipment used restaurant equipment pierce equipment 708 354 1265 (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a list of results without any clicks suggests that the user did not find the displayed results compelling enough to pursue further. The presence of repeated terms in the results may indicate redundancy and lack of valuable information, reinforcing the PoorScent label instead of FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9881349444389343,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:25:22.651383"
+    },
+    {
+      "session_id": "13112_3278",
+      "event_id": "13112_3278_qq-1760_cd-9958",
+      "timestamp": "2006-05-16 13:23:38",
+      "action_type": "CLICK",
+      "content": "restaurant equipment world restaurant equipment supplies",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a specific result indicates some level of interest or perceived value, which aligns more with ApproachingSource. The user's action reflects an intention to investigate further based on the information scent from the title, despite the previous issues with the search process.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.990084458887577,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:25:22.651388"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.0054190158844,
+      "decisions": [
+        {
+          "event_id": "13112_3278_qq-1760",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3278_qq-1760_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13112_3278_qq-1760_cd-9958",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.679279088973999,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'restaurant equipment...' suggests an attempt to initiate a search, but the lack of specificity and the presence of an analysis error indicate that the user did not find promising information scent. This lack of clarity and effectiveness in the query points to PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a list of results without any clicks suggests that the user did not find the displayed results compelling enough to pursue further. The presence of repeated terms in the results may indicate redundancy and lack of valuable information, reinforcing the PoorScent label instead of FollowingScent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a specific result indicates some level of interest or perceived value, which aligns more with ApproachingSource. The user's action reflects an intention to investigate further based on the information scent from the title, despite the previous issues with the search process.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 16.72669792175293,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.990084458887577
+}

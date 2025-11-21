@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3735",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:23:26.789099",
+  "events": [
+    {
+      "session_id": "15328_3735",
+      "event_id": "15328_3735_qq-2030",
+      "timestamp": "2006-05-13 15:27:07",
+      "action_type": "QUERY",
+      "content": "montgomery county probate court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user issued a query about the Montgomery County Probate Court, but the provided reasoning indicates an invalid control character error, which suggests that the query was not effectively processed, potentially leading to a lack of relevant results. This indicates a poor scent rather than a clear intent to follow a specific search path.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8817476749420166,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:23:48.511042"
+    },
+    {
+      "session_id": "15328_3735",
+      "event_id": "15328_3735_qq-2030_serp",
+      "timestamp": "2006-05-13 15:27:07",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: montgomery county action council, montgomery county intermediate unit, www montgomery county com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results without any indication that the user found the information satisfactory suggests they are still searching but not finding relevant content. This aligns more with the 'LeavingPatch' label as they are likely not satisfied with the results presented and may abandon their search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9664865106344223,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:23:48.511062"
+    },
+    {
+      "session_id": "15328_3735",
+      "event_id": "15328_3735_qq-2030_cd-11712",
+      "timestamp": "2006-05-13 15:27:07",
+      "action_type": "CLICK",
+      "content": "welcome to montgomery county",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'welcome to montgomery county...' implies the user found the title or snippet appealing or relevant enough to investigate further. This behavior indicates an 'ApproachingSource' rather than 'FollowingScent', as it reflects a decision to explore a specific resource rather than simply following a scent from an initial query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0131032213568687,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:23:48.511069"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.964568853378296,
+      "decisions": [
+        {
+          "event_id": "15328_3735_qq-2030",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3735_qq-2030_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3735_qq-2030_cd-11712",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.421801328659058,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user issued a query about the Montgomery County Probate Court, but the provided reasoning indicates an invalid control character error, which suggests that the query was not effectively processed, potentially leading to a lack of relevant results. This indicates a poor scent rather than a clear intent to follow a specific search path.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of viewing 10 results without any indication that the user found the information satisfactory suggests they are still searching but not finding relevant content. This aligns more with the 'LeavingPatch' label as they are likely not satisfied with the results presented and may abandon their search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'welcome to montgomery county...' implies the user found the title or snippet appealing or relevant enough to investigate further. This behavior indicates an 'ApproachingSource' rather than 'FollowingScent', as it reflects a decision to explore a specific resource rather than simply following a scent from an initial query.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 7.987614870071411,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0131032213568687
+}

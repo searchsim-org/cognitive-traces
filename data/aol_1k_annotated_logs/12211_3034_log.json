@@ -1,0 +1,282 @@
+{
+  "session_id": "12211_3034",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:41:51.687397",
+  "events": [
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1567",
+      "timestamp": "2006-04-28 03:03:33",
+      "action_type": "QUERY",
+      "content": "microsoft downloads",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'microsoft downloads...' does not indicate a strong intent or specificity. The presence of an invalid control character suggests that the query may have been malformed or not properly formed, leading to poor scent. It does not demonstrate a clear, targeted query.",
+      "judge_justification": "The query 'microsoft downloads...' is vague and lacks specificity, which is a hallmark of **PoorScent**. The Analyst's default label of *FollowingScent* is unreliable due to a parsing error (invalid control character), while the Critic's assessment is well-supported: the malformed query and lack of clear intent strongly suggest the user did not have a well-formed information need. The control character further implies potential technical issues or user uncertainty, reinforcing the **PoorScent** classification. The Critic's confidence (0.85) is high and aligns with observable evidence.",
+      "confidence_score": 0.85,
+      "disagreement_score": 0.9417546510696411,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037626"
+    },
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1567_serp",
+      "timestamp": "2006-04-28 03:03:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: directions on microsoft, go microsoft com, search microsoft com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without engaging with any of them, especially given the context of an invalid control character in the previous query, indicates a lack of promising scent. The user likely felt that the results did not meet their needs, thus signaling a departure from the search path.",
+      "judge_justification": "The user viewed 10 SERP results without clicking any, following a poorly formed query. The Critic's label of **LeavingPatch** (confidence: 0.8) is compelling: the lack of engagement suggests the user found no promising information scent, especially given the context of the prior malformed query. The Analyst's *FollowingScent* label is invalid due to parsing errors. The Critic's reasoning aligns with Information Foraging Theory, where failure to engage with results after a poor query indicates patch abandonment. The high Critic confidence and contextual consistency justify this label.",
+      "confidence_score": 0.82,
+      "disagreement_score": 0.8824514865875244,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037632"
+    },
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1567_cd-1057",
+      "timestamp": "2006-04-28 03:03:33",
+      "action_type": "CLICK",
+      "content": "www microsoft com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www microsoft com...' appears to come after previous actions that did not yield valuable results. This click may not denote a strong information scent, but rather an attempt to salvage the search despite unclear or poor initial queries.",
+      "judge_justification": "The click on 'www.microsoft.com' occurs after a sequence of poorly formed queries and unengaged SERP views. The Critic's **PoorScent** label (confidence: 0.75) is more plausible than the Analyst's *FollowingScent* (which stems from a parsing error). The click appears reactive rather than intentional\u2014likely a fallback to a generic Microsoft homepage due to frustration or lack of better options. This behavior reflects weak information scent, as the user did not identify a targeted, relevant result earlier. The Critic's reasoning is contextually stronger.",
+      "confidence_score": 0.78,
+      "disagreement_score": 0.9719130545854568,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037634"
+    },
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1568",
+      "timestamp": "2006-04-28 03:11:18",
+      "action_type": "QUERY",
+      "content": "microsoft wireless keyboard drivers",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Similar to Event 1, the query 'microsoft wireless keyboard drivers...' lacks specificity and may have been affected by previous errors. The presence of a control character indicates potential issues with the query's formulation, leading to a lack of promising scent.",
+      "judge_justification": "The query 'microsoft wireless keyboard drivers...' is more specific than the first query but still suffers from potential malformation (indicated by the control character error). The Critic's **PoorScent** label (confidence: 0.8) is justified: the query lacks precision (e.g., missing model number or OS specificity), and the parsing error suggests technical issues. The Analyst's *FollowingScent* is again unreliable due to errors. The Critic's assessment aligns with the user's likely struggle to articulate their need effectively, reinforcing **PoorScent**.",
+      "confidence_score": 0.8,
+      "disagreement_score": 0.8879896879196167,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037636"
+    },
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1568_serp",
+      "timestamp": "2006-04-28 03:11:18",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: microsoft excel forum, directions on microsoft, microsoft games com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The viewing of 10 results without further clicks suggests that the user is not finding what they need. The previous queries had already indicated a lack of relevance, and this event likely reflects a continuation of that sentiment, leading the user to abandon their current search efforts.",
+      "judge_justification": "The user viewed 10 SERP results without clicking, following another poorly formed query. The Critic's **LeavingPatch** label (confidence: 0.85) is strongly supported: the results (e.g., 'microsoft excel forum') are irrelevant to 'wireless keyboard drivers,' indicating a complete mismatch. The Analyst's *FollowingScent* is invalid due to parsing errors. The Critic's reasoning\u2014lack of engagement after repeated poor queries\u2014clearly signals patch abandonment per Information Foraging Theory. High confidence in this label is warranted.",
+      "confidence_score": 0.87,
+      "disagreement_score": 0.9805850178003311,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037638"
+    },
+    {
+      "session_id": "12211_3034",
+      "event_id": "12211_3034_qq-1568_cd-1057",
+      "timestamp": "2006-04-28 03:11:18",
+      "action_type": "CLICK",
+      "content": "www microsoft com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Given the context of previous events characterized by poor scent and the user's potential frustration, the click on 'www microsoft com...' does not reflect a strong targeted search but rather a last resort attempt to find relevant information. This suggests the user did not effectively follow a promising scent.",
+      "judge_justification": "The click on 'www.microsoft.com' mirrors Event 3's behavior: a generic fallback after repeated failures. The Critic's **PoorScent** label (confidence: 0.75) is more credible than the Analyst's error-prone *FollowingScent*. The user's action reflects desperation rather than targeted foraging\u2014likely hoping the homepage would lead to drivers, but without clear scent guidance. The Critic's contextual analysis (prior poor queries, irrelevant SERPs) strongly supports **PoorScent** over any intentional information-seeking strategy.",
+      "confidence_score": 0.77,
+      "disagreement_score": 0.9975607380270958,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:42:53.037640"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 23.990336894989014,
+      "decisions": [
+        {
+          "event_id": "12211_3034_qq-1567",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1567_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1567_cd-1057",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1568",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1568_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1568_cd-1057",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 12.737531900405884,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'microsoft downloads...' does not indicate a strong intent or specificity. The presence of an invalid control character suggests that the query may have been malformed or not properly formed, leading to poor scent. It does not demonstrate a clear, targeted query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing 10 results without engaging with any of them, especially given the context of an invalid control character in the previous query, indicates a lack of promising scent. The user likely felt that the results did not meet their needs, thus signaling a departure from the search path.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 'www microsoft com...' appears to come after previous actions that did not yield valuable results. This click may not denote a strong information scent, but rather an attempt to salvage the search despite unclear or poor initial queries.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 4",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Similar to Event 1, the query 'microsoft wireless keyboard drivers...' lacks specificity and may have been affected by previous errors. The presence of a control character indicates potential issues with the query's formulation, leading to a lack of promising scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 5",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The viewing of 10 results without further clicks suggests that the user is not finding what they need. The previous queries had already indicated a lack of relevance, and this event likely reflects a continuation of that sentiment, leading the user to abandon their current search efforts.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 6",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Given the context of previous events characterized by poor scent and the user's potential frustration, the click on 'www microsoft com...' does not reflect a strong targeted search but rather a last resort attempt to find relevant information. This suggests the user did not effectively follow a promising scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 24.35543727874756,
+      "decisions": [
+        {
+          "event_id": "12211_3034_qq-1567",
+          "final_label": "PoorScent",
+          "justification": "The query 'microsoft downloads...' is vague and lacks specificity, which is a hallmark of **PoorScent**. The Analyst's default label of *FollowingScent* is unreliable due to a parsing error (invalid control character), while the Critic's assessment is well-supported: the malformed query and lack of clear intent strongly suggest the user did not have a well-formed information need. The control character further implies potential technical issues or user uncertainty, reinforcing the **PoorScent** classification. The Critic's confidence (0.85) is high and aligns with observable evidence.",
+          "confidence": 0.85,
+          "flag_for_review": false,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1567_serp",
+          "final_label": "LeavingPatch",
+          "justification": "The user viewed 10 SERP results without clicking any, following a poorly formed query. The Critic's label of **LeavingPatch** (confidence: 0.8) is compelling: the lack of engagement suggests the user found no promising information scent, especially given the context of the prior malformed query. The Analyst's *FollowingScent* label is invalid due to parsing errors. The Critic's reasoning aligns with Information Foraging Theory, where failure to engage with results after a poor query indicates patch abandonment. The high Critic confidence and contextual consistency justify this label.",
+          "confidence": 0.82,
+          "flag_for_review": false,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1567_cd-1057",
+          "final_label": "PoorScent",
+          "justification": "The click on 'www.microsoft.com' occurs after a sequence of poorly formed queries and unengaged SERP views. The Critic's **PoorScent** label (confidence: 0.75) is more plausible than the Analyst's *FollowingScent* (which stems from a parsing error). The click appears reactive rather than intentional\u2014likely a fallback to a generic Microsoft homepage due to frustration or lack of better options. This behavior reflects weak information scent, as the user did not identify a targeted, relevant result earlier. The Critic's reasoning is contextually stronger.",
+          "confidence": 0.78,
+          "flag_for_review": false,
+          "disagreement_score": 0.45
+        },
+        {
+          "event_id": "12211_3034_qq-1568",
+          "final_label": "PoorScent",
+          "justification": "The query 'microsoft wireless keyboard drivers...' is more specific than the first query but still suffers from potential malformation (indicated by the control character error). The Critic's **PoorScent** label (confidence: 0.8) is justified: the query lacks precision (e.g., missing model number or OS specificity), and the parsing error suggests technical issues. The Analyst's *FollowingScent* is again unreliable due to errors. The Critic's assessment aligns with the user's likely struggle to articulate their need effectively, reinforcing **PoorScent**.",
+          "confidence": 0.8,
+          "flag_for_review": false,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1568_serp",
+          "final_label": "LeavingPatch",
+          "justification": "The user viewed 10 SERP results without clicking, following another poorly formed query. The Critic's **LeavingPatch** label (confidence: 0.85) is strongly supported: the results (e.g., 'microsoft excel forum') are irrelevant to 'wireless keyboard drivers,' indicating a complete mismatch. The Analyst's *FollowingScent* is invalid due to parsing errors. The Critic's reasoning\u2014lack of engagement after repeated poor queries\u2014clearly signals patch abandonment per Information Foraging Theory. High confidence in this label is warranted.",
+          "confidence": 0.87,
+          "flag_for_review": false,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "12211_3034_qq-1568_cd-1057",
+          "final_label": "PoorScent",
+          "justification": "The click on 'www.microsoft.com' mirrors Event 3's behavior: a generic fallback after repeated failures. The Critic's **PoorScent** label (confidence: 0.75) is more credible than the Analyst's error-prone *FollowingScent*. The user's action reflects desperation rather than targeted foraging\u2014likely hoping the homepage would lead to drivers, but without clear scent guidance. The Critic's contextual analysis (prior poor queries, irrelevant SERPs) strongly supports **PoorScent** over any intentional information-seeking strategy.",
+          "confidence": 0.77,
+          "flag_for_review": false,
+          "disagreement_score": 0.45
+        }
+      ]
+    }
+  ],
+  "num_events": 6,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9975607380270958
+}

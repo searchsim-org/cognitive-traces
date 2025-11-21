@@ -1,0 +1,159 @@
+{
+  "session_id": "11451_2848",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T11:51:05.780591",
+  "events": [
+    {
+      "session_id": "11451_2848",
+      "event_id": "11451_2848_qq-1487",
+      "timestamp": "2006-05-26 14:20:28",
+      "action_type": "QUERY",
+      "content": "wellsfargo",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'wellsfargo...' indicates an initial attempt to find relevant information, but the presence of an invalid control character suggests that the query may not have been well-formed or clear, leading to a lack of promising results. This aligns more closely with PoorScent as it indicates a failure to generate relevant results rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9104379653930664,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:51:53.617317"
+    },
+    {
+      "session_id": "11451_2848",
+      "event_id": "11451_2848_qq-1487_serp",
+      "timestamp": "2006-05-26 14:20:28",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: bill pay service faq recurring payments wells fargo, wells fargo banking credit cards loans mortgages more, wells fargo banking credit cards loans mortgages more (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed 10 results, the lack of engagement with those results (no clicks) indicates a failure to find satisfactory information. This suggests that the user may have been ready to leave the search due to unsatisfactory results, making LeavingPatch a more fitting label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9652792364358902,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:51:53.617333"
+    },
+    {
+      "session_id": "11451_2848",
+      "event_id": "11451_2848_qq-1487_cd-5475",
+      "timestamp": "2006-05-26 14:20:28",
+      "action_type": "CLICK",
+      "content": "wells fargo banking credit cards loans mortgages more",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'wells fargo banking credit cards loans mortgages more...' indicates an attempt to engage with a specific source based on the information scent provided. However, given the context of previous events showing poor scent and lack of successful interaction, this click may not reflect a strong intent but rather an exploratory action that did not yield fruitful results. Thus, ApproachingSource is more appropriate than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0056084368377924,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T11:51:53.617339"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 22.75302815437317,
+      "decisions": [
+        {
+          "event_id": "11451_2848_qq-1487",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2848_qq-1487_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "11451_2848_qq-1487_cd-5475",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.9651939868927,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'wellsfargo...' indicates an initial attempt to find relevant information, but the presence of an invalid control character suggests that the query may not have been well-formed or clear, leading to a lack of promising results. This aligns more closely with PoorScent as it indicates a failure to generate relevant results rather than a targeted search.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed 10 results, the lack of engagement with those results (no clicks) indicates a failure to find satisfactory information. This suggests that the user may have been ready to leave the search due to unsatisfactory results, making LeavingPatch a more fitting label than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'wells fargo banking credit cards loans mortgages more...' indicates an attempt to engage with a specific source based on the information scent provided. However, given the context of previous events showing poor scent and lack of successful interaction, this click may not reflect a strong intent but rather an exploratory action that did not yield fruitful results. Thus, ApproachingSource is more appropriate than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.87668204307556,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0056084368377924
+}

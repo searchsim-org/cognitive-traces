@@ -1,0 +1,159 @@
+{
+  "session_id": "1035_63",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T08:00:25.948593",
+  "events": [
+    {
+      "session_id": "1035_63",
+      "event_id": "1035_63_qq-18",
+      "timestamp": "2006-05-11 18:20:42",
+      "action_type": "QUERY",
+      "content": "www.dehanas realestate service",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query appears to be vague and unstructured, as indicated by the mention of an analysis error. This lack of clarity suggests the user is not engaging with the content effectively, indicating a poor scent from the beginning rather than a targeted intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8829580068588256,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:55.693125"
+    },
+    {
+      "session_id": "1035_63",
+      "event_id": "1035_63_qq-18_serp",
+      "timestamp": "2006-05-11 18:20:42",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: waldorf maryland real estate de han as real estate services maryland real estate property management new construction bank owned homes short sales foreclosures, real estate services, ze re real estate services commercial real estate services (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging further suggests the user is not finding satisfactory information. This indicates frustration and a potential decision to abandon the search rather than continuing with a clear intention, which aligns more with LeavingPatch than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9817280501127243,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:55.693171"
+    },
+    {
+      "session_id": "1035_63",
+      "event_id": "1035_63_qq-18_cd-1126",
+      "timestamp": "2006-05-11 18:20:42",
+      "action_type": "CLICK",
+      "content": "waldorf maryland real estate de han as real estate services maryland real estate property management new construction bank owned homes short sales foreclosures",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result indicates an attempt to engage with specific content based on perceived relevance. Labeling this as FollowingScent assumes a clear targeted intention from the start, while the previous events suggest uncertainty and lack of clarity in the user's information needs.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.01060226932168,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T08:00:55.693182"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.251540184020996,
+      "decisions": [
+        {
+          "event_id": "1035_63_qq-18",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_63_qq-18_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1035_63_qq-18_cd-1126",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 92)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.2451300621032715,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query appears to be vague and unstructured, as indicated by the mention of an analysis error. This lack of clarity suggests the user is not engaging with the content effectively, indicating a poor scent from the beginning rather than a targeted intent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing multiple results without engaging further suggests the user is not finding satisfactory information. This indicates frustration and a potential decision to abandon the search rather than continuing with a clear intention, which aligns more with LeavingPatch than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a result indicates an attempt to engage with specific content based on perceived relevance. Labeling this as FollowingScent assumes a clear targeted intention from the start, while the previous events suggest uncertainty and lack of clarity in the user's information needs.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.031761884689331,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.01060226932168
+}

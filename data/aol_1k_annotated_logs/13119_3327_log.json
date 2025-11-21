@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3327",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:59:52.729726",
+  "events": [
+    {
+      "session_id": "13119_3327",
+      "event_id": "13119_3327_qq-1813",
+      "timestamp": "2006-04-23 12:04:09",
+      "action_type": "QUERY",
+      "content": "weather striping for foamcore garage doors",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action involves a query that suggests a need for refined information rather than a straightforward search intent. The term 'weather striping for foamcore garage doors' indicates that the user is possibly looking for specific types of weather stripping, which suggests they may have started with a broad concept and are now aiming to narrow it down. This would align more closely with 'DietEnrichment' than 'FollowingScent'.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.011753349751234,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:00:24.888154"
+    },
+    {
+      "session_id": "13119_3327",
+      "event_id": "13119_3327_qq-1813_serp",
+      "timestamp": "2006-04-23 12:04:09",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: weather king windows and doors inc, all about foam latex foam memory foam polyurethane, berg ad gel foam medical foam sponge foam (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without clicking indicates that the user likely found the results not promising enough to engage with further. This aligns with 'PoorScent' as they are assessing the relevance of the sources but not finding them satisfactory enough to click on, which suggests a lack of strong information scent rather than a continuation of a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9889346271753311,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:00:24.888168"
+    },
+    {
+      "session_id": "13119_3327",
+      "event_id": "13119_3327_qq-1813_cd-10158",
+      "timestamp": "2006-04-23 12:04:09",
+      "action_type": "CLICK",
+      "content": "garage door parts decorative hardware rollers openers more",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a specific item related to garage doors, which indicates they were drawn to that particular result based on its title/snapshot information. This is more characteristic of 'ApproachingSource', as they are investigating a potentially relevant result based on the information presented rather than continuing a focused query search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.7040000000000001,
+      "disagreement_score": 1.0211461514234543,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:00:24.888173"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 11.928430080413818,
+      "decisions": [
+        {
+          "event_id": "13119_3327_qq-1813",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3327_qq-1813_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3327_qq-1813_cd-10158",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.26958703994751,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The action involves a query that suggests a need for refined information rather than a straightforward search intent. The term 'weather striping for foamcore garage doors' indicates that the user is possibly looking for specific types of weather stripping, which suggests they may have started with a broad concept and are now aiming to narrow it down. This would align more closely with 'DietEnrichment' than 'FollowingScent'.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without clicking indicates that the user likely found the results not promising enough to engage with further. This aligns with 'PoorScent' as they are assessing the relevance of the sources but not finding them satisfactory enough to click on, which suggests a lack of strong information scent rather than a continuation of a targeted search.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on a specific item related to garage doors, which indicates they were drawn to that particular result based on its title/snapshot information. This is more characteristic of 'ApproachingSource', as they are investigating a potentially relevant result based on the information presented rather than continuing a focused query search.",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.57772183418274,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.7040000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0211461514234543
+}

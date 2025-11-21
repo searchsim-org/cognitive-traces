@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3306",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:44:23.868884",
+  "events": [
+    {
+      "session_id": "13119_3306",
+      "event_id": "13119_3306_qq-1789",
+      "timestamp": "2006-03-14 18:03:33",
+      "action_type": "QUERY",
+      "content": "tricare4u.com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The presence of an invalid control character suggests that the user did not find the query effective, demonstrating a lack of information scent. Instead of clearly initiating a well-formed query, the user faced an issue that likely led to frustration, indicating a poor scent rather than a clear intent to continue searching.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8554845571517944,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:45:10.025586"
+    },
+    {
+      "session_id": "13119_3306",
+      "event_id": "13119_3306_qq-1789_serp",
+      "timestamp": "2006-03-14 18:03:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www care 4 kids info, www tri care online com content appointments html, rv park 4 u com nbsp rv park 4 u resources and information (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a SERP with results that include invalid characters indicates that the user was not satisfied with the quality of the results. The analyst's label of FollowingScent is incorrect as the user likely did not find promising information in the displayed results, suggesting a lack of effective scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8711668729782105,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:45:10.025598"
+    },
+    {
+      "session_id": "13119_3306",
+      "event_id": "13119_3306_qq-1789_cd-10031",
+      "timestamp": "2006-03-14 18:03:33",
+      "action_type": "CLICK",
+      "content": "wp s tri care base url redirect",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result that leads to a redirect indicates that the user was likely misled by the title/snippet, which did not provide clear or reliable information. This suggests a failure in the information scent, as the click did not lead to meaningful content, rather than demonstrating a strong intent to follow a clear scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.953769764304161,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:45:10.025602"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 25.292020320892334,
+      "decisions": [
+        {
+          "event_id": "13119_3306_qq-1789",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3306_qq-1789_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3306_qq-1789_cd-10031",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.70112681388855,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The presence of an invalid control character suggests that the user did not find the query effective, demonstrating a lack of information scent. Instead of clearly initiating a well-formed query, the user faced an issue that likely led to frustration, indicating a poor scent rather than a clear intent to continue searching.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing a SERP with results that include invalid characters indicates that the user was not satisfied with the quality of the results. The analyst's label of FollowingScent is incorrect as the user likely did not find promising information in the displayed results, suggesting a lack of effective scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result that leads to a redirect indicates that the user was likely misled by the title/snippet, which did not provide clear or reliable information. This suggests a failure in the information scent, as the click did not lead to meaningful content, rather than demonstrating a strong intent to follow a clear scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.911312341690063,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.953769764304161
+}

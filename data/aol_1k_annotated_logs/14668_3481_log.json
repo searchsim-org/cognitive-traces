@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3481",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:35:12.784998",
+  "events": [
+    {
+      "session_id": "14668_3481",
+      "event_id": "14668_3481_qq-1941",
+      "timestamp": "2006-04-30 20:30:48",
+      "action_type": "QUERY",
+      "content": "mike barber prison ministry",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'mike barber prison ministry...' suggests the user is searching for specific information, but the presence of an error message indicates that the query may not have been effective, leading to a lack of promising results. This aligns more closely with PoorScent, as it suggests the user is not finding relevant results and may need to reformulate their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9329879999160766,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:35:41.263458"
+    },
+    {
+      "session_id": "14668_3481",
+      "event_id": "14668_3481_qq-1941_serp",
+      "timestamp": "2006-04-30 20:30:48",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mike barber ministries, prison ministry directory international network of prison ministries, prison ministry com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results, indicating an exploration phase rather than a targeted search. Labeling this as FollowingScent assumes that the user is still effectively following a strong scent, which may not be the case given the previous analysis error and lack of promising results. ApproachingSource captures the user's action of exploring options without yet confirming the relevance of any source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9898766055703163,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:35:41.263475"
+    },
+    {
+      "session_id": "14668_3481",
+      "event_id": "14668_3481_qq-1941_cd-11324",
+      "timestamp": "2006-04-30 20:30:48",
+      "action_type": "CLICK",
+      "content": "mike barber ministries",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'mike barber ministries...' suggests that the user is attempting to find relevant information, but given the context of prior errors and potential dissatisfaction, it is more indicative of an exploratory behavior rather than a strong, confident FollowingScent. ApproachingSource reflects the user's intention to further investigate the clicked result based on previous exploration.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.006820023059845,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:35:41.263482"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 13.147603988647461,
+      "decisions": [
+        {
+          "event_id": "14668_3481_qq-1941",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3481_qq-1941_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3481_qq-1941_cd-11324",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.257651090621948,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'mike barber prison ministry...' suggests the user is searching for specific information, but the presence of an error message indicates that the query may not have been effective, leading to a lack of promising results. This aligns more closely with PoorScent, as it suggests the user is not finding relevant results and may need to reformulate their query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed 10 results, indicating an exploration phase rather than a targeted search. Labeling this as FollowingScent assumes that the user is still effectively following a strong scent, which may not be the case given the previous analysis error and lack of promising results. ApproachingSource captures the user's action of exploring options without yet confirming the relevance of any source.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'mike barber ministries...' suggests that the user is attempting to find relevant information, but given the context of prior errors and potential dissatisfaction, it is more indicative of an exploratory behavior rather than a strong, confident FollowingScent. ApproachingSource reflects the user's intention to further investigate the clicked result based on previous exploration.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.793920993804932,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.006820023059845
+}

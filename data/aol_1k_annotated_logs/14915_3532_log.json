@@ -1,0 +1,159 @@
+{
+  "session_id": "14915_3532",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T22:10:45.247546",
+  "events": [
+    {
+      "session_id": "14915_3532",
+      "event_id": "14915_3532_qq-1974",
+      "timestamp": "2006-04-05 10:50:17",
+      "action_type": "QUERY",
+      "content": "sallie mae",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'sallie mae...' appears vague and incomplete, indicating that the user may not have a clear intent or direction in their search. The presence of an error in the query suggests that the user might not have found promising information to pursue further, which aligns more with the PoorScent label than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9736290365457535,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:11:15.643782"
+    },
+    {
+      "session_id": "14915_3532",
+      "event_id": "14915_3532_qq-1974_serp",
+      "timestamp": "2006-04-05 10:50:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: community engagement s allie mae, community engagement s allie mae, s allie mae 404 page not found (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results that seem repetitive and irrelevant, suggesting that the search did not yield valuable information. This reinforces the idea that the user is not engaging effectively with the content, indicating a lack of promising scent rather than strong intent. Therefore, PoorScent is a more appropriate label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0116965241730214,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:11:15.643813"
+    },
+    {
+      "session_id": "14915_3532",
+      "event_id": "14915_3532_qq-1974_cd-4625",
+      "timestamp": "2006-04-05 10:50:17",
+      "action_type": "CLICK",
+      "content": "s allie mae education loans college planning online banking",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 's allie mae education loans...' indicates some interest, but the previous context suggests that the user was likely struggling to find relevant information. The incomplete nature of the content and potential errors imply that this click was not driven by a strong information scent, making PoorScent more fitting than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9806324630975723,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T22:11:15.643825"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.897595882415771,
+      "decisions": [
+        {
+          "event_id": "14915_3532_qq-1974",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3532_qq-1974_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14915_3532_qq-1974_cd-4625",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.189730167388916,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'sallie mae...' appears vague and incomplete, indicating that the user may not have a clear intent or direction in their search. The presence of an error in the query suggests that the user might not have found promising information to pursue further, which aligns more with the PoorScent label than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results that seem repetitive and irrelevant, suggesting that the search did not yield valuable information. This reinforces the idea that the user is not engaging effectively with the content, indicating a lack of promising scent rather than strong intent. Therefore, PoorScent is a more appropriate label.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on 's allie mae education loans...' indicates some interest, but the previous context suggests that the user was likely struggling to find relevant information. The incomplete nature of the content and potential errors imply that this click was not driven by a strong information scent, making PoorScent more fitting than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.086167097091675,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0116965241730214
+}

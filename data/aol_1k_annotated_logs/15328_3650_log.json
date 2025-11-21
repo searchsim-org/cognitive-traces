@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3650",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:25:09.126637",
+  "events": [
+    {
+      "session_id": "15328_3650",
+      "event_id": "15328_3650_qq-2030",
+      "timestamp": "2006-03-09 21:49:01",
+      "action_type": "QUERY",
+      "content": "montgomery county probate court",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query about the Montgomery County probate court, but the mention of an 'invalid control character' suggests the query may have been poorly formed or an error occurred during input, which typically leads to a lack of informative output. This indicates that the user may not have found promising results, aligning more with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.859028673171997,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:37.668670"
+    },
+    {
+      "session_id": "15328_3650",
+      "event_id": "15328_3650_qq-2030_serp",
+      "timestamp": "2006-03-09 21:49:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: montgomery cycle ry home page, www so md montgomery org, home page auburn montgomery library (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed 10 results related to the query, but if the initial query was poorly formed or resulted in an invalid character error, the user may not have found relevant information in the SERP. If they were presented with results that did not meet their needs or expectations, this could indicate that they are preparing to abandon the search, which aligns more with LeavingPatch than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9078070104122162,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:37.668689"
+    },
+    {
+      "session_id": "15328_3650",
+      "event_id": "15328_3650_qq-2030_cd-11718",
+      "timestamp": "2006-03-09 21:49:01",
+      "action_type": "CLICK",
+      "content": "www co montgomery oh us",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on a result that seems to be from a poorly formed query, which indicates a lack of relevance or usefulness in the previous interactions. Clicking on a result without satisfaction from the previous steps suggests that the user is still not finding what they need, fitting the PoorScent label more appropriately than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.990432457625866,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:25:37.668695"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.6321210861206055,
+      "decisions": [
+        {
+          "event_id": "15328_3650_qq-2030",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3650_qq-2030_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3650_qq-2030_cd-11718",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.684006929397583,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query about the Montgomery County probate court, but the mention of an 'invalid control character' suggests the query may have been poorly formed or an error occurred during input, which typically leads to a lack of informative output. This indicates that the user may not have found promising results, aligning more with PoorScent than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The user viewed 10 results related to the query, but if the initial query was poorly formed or resulted in an invalid character error, the user may not have found relevant information in the SERP. If they were presented with results that did not meet their needs or expectations, this could indicate that they are preparing to abandon the search, which aligns more with LeavingPatch than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user clicked on a result that seems to be from a poorly formed query, which indicates a lack of relevance or usefulness in the previous interactions. Clicking on a result without satisfaction from the previous steps suggests that the user is still not finding what they need, fitting the PoorScent label more appropriately than FollowingScent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 13.920044898986816,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.990432457625866
+}

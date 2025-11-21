@@ -1,0 +1,159 @@
+{
+  "session_id": "14987_3617",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:06:45.484579",
+  "events": [
+    {
+      "session_id": "14987_3617",
+      "event_id": "14987_3617_qq-675",
+      "timestamp": "2006-04-26 11:16:47",
+      "action_type": "QUERY",
+      "content": "ikea",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'ikea...' suggests an incomplete or poorly formed search that lacks specificity. The mention of an 'Invalid control character' suggests that the query may not have been properly submitted or was malformed. Therefore, it indicates that the user did not find a promising scent and may have been unsure about their query.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8738653659820557,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:07:18.003414"
+    },
+    {
+      "session_id": "14987_3617",
+      "event_id": "14987_3617_qq-675_serp",
+      "timestamp": "2006-04-26 11:16:47",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: ikea, ikea, ikea com international homepage ikea (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results with repeated mentions of 'ikea' suggests that the user is still not satisfied with the quality or relevance of the results. The presence of multiple similar results indicates a lack of diversity in information, which points to a weak scent from the SERP. Thus, this event should be labeled as PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0131351590156554,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:07:18.003431"
+    },
+    {
+      "session_id": "14987_3617",
+      "event_id": "14987_3617_qq-675_cd-2812",
+      "timestamp": "2006-04-26 11:16:47",
+      "action_type": "CLICK",
+      "content": "ikea com international homepage ikea",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on the 'ikea com international homepage ikea...' reflects a lack of better options rather than a clear intent to follow a promising scent. Given the context of the previous events, this click may represent an attempt to salvage a poorly performing search rather than a confident decision based on a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0002018310129643,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:07:18.003438"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.584529876708984,
+      "decisions": [
+        {
+          "event_id": "14987_3617_qq-675",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3617_qq-675_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14987_3617_qq-675_cd-2812",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 96)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.7473368644714355,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'ikea...' suggests an incomplete or poorly formed search that lacks specificity. The mention of an 'Invalid control character' suggests that the query may not have been properly submitted or was malformed. Therefore, it indicates that the user did not find a promising scent and may have been unsure about their query.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results with repeated mentions of 'ikea' suggests that the user is still not satisfied with the quality or relevance of the results. The presence of multiple similar results indicates a lack of diversity in information, which points to a weak scent from the SERP. Thus, this event should be labeled as PoorScent rather than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on the 'ikea com international homepage ikea...' reflects a lack of better options rather than a clear intent to follow a promising scent. Given the context of the previous events, this click may represent an attempt to salvage a poorly performing search rather than a confident decision based on a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.820716857910156,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0131351590156554
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "12495_3125",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T16:05:02.791548",
+  "events": [
+    {
+      "session_id": "12495_3125",
+      "event_id": "12495_3125_qq-1638",
+      "timestamp": "2006-04-11 13:12:35",
+      "action_type": "QUERY",
+      "content": "college basketball players heading to 2006 nba draft",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query seems vague and lacks specificity. The phrase 'college basketball players heading to 2006 NBA draft' does not indicate a clear intent to find specific information, suggesting the user might not have found satisfactory information, leading to a new query without clicks.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9763304412364959,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:05:47.357014"
+    },
+    {
+      "session_id": "12495_3125",
+      "event_id": "12495_3125_qq-1638_serp",
+      "timestamp": "2006-04-11 13:12:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: draft express nba draft ncaa and international basketball, draft express nba draft ncaa and international basketball, 2020 nba mock draft and nba draft results (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results but did not click on any, indicating a lack of strong information scent. This suggests that while the user was trying to find relevant information, the results did not meet their needs, leading them to continue searching rather than following a clear scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9727335482835769,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:05:47.357022"
+    },
+    {
+      "session_id": "12495_3125",
+      "event_id": "12495_3125_qq-1638_cd-9651",
+      "timestamp": "2006-04-11 13:12:35",
+      "action_type": "CLICK",
+      "content": "draft express nba draft ncaa and international basketball",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user clicked on a result, the previous context implies that the search did not yield promising scents, as indicated by the lack of clicks on the SERP. This suggests the click was more exploratory rather than a confident following of scent, potentially indicating a 'PoorScent' due to insufficient information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9888850778341294,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T16:05:47.357025"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.36731791496277,
+      "decisions": [
+        {
+          "event_id": "12495_3125_qq-1638",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3125_qq-1638_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12495_3125_qq-1638_cd-9651",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.8880393505096436,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query seems vague and lacks specificity. The phrase 'college basketball players heading to 2006 NBA draft' does not indicate a clear intent to find specific information, suggesting the user might not have found satisfactory information, leading to a new query without clicks.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results but did not click on any, indicating a lack of strong information scent. This suggests that while the user was trying to find relevant information, the results did not meet their needs, leading them to continue searching rather than following a clear scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "While the user clicked on a result, the previous context implies that the search did not yield promising scents, as indicated by the lack of clicks on the SERP. This suggests the click was more exploratory rather than a confident following of scent, potentially indicating a 'PoorScent' due to insufficient information.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.843463897705078,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9888850778341294
+}

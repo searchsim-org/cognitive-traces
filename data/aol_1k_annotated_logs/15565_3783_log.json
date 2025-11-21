@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3783",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:50:44.970767",
+  "events": [
+    {
+      "session_id": "15565_3783",
+      "event_id": "15565_3783_qq-2135",
+      "timestamp": "2006-04-27 11:56:08",
+      "action_type": "QUERY",
+      "content": "knotts berry resort hotel",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'knotts berry resort hotel' lacks specificity and may indicate the user is unsure about their information need. This could reflect a lack of promising scent, leading to the issuance of a new query without clicks. The control character error suggests a misunderstanding in the query, reinforcing the idea of poor scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8442801475524903,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:51:30.404694"
+    },
+    {
+      "session_id": "15565_3783",
+      "event_id": "15565_3783_qq-2135_serp",
+      "timestamp": "2006-04-27 11:56:08",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: stay knott s berry farm, knott foundation, hotel resort destination hotels us resorts (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without a clear indication of intent or satisfaction suggests that the user is exploring multiple options but is not finding adequate information. The presence of an invalid control character in the original query indicates the user may not be effectively targeting their search, reflecting poor scent rather than a focused approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8532878398895263,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:51:30.404704"
+    },
+    {
+      "session_id": "15565_3783",
+      "event_id": "15565_3783_qq-2135_cd-11975",
+      "timestamp": "2006-04-27 11:56:08",
+      "action_type": "CLICK",
+      "content": "stay knott s berry farm",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user clicked on 'stay knott s berry farm' as a result of their SERP view. This action indicates a targeted exploration based on perceived relevance, which aligns more closely with approaching a source rather than a continued following scent from the initial query. The nature of the click indicates an attempt to engage more deeply with the content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9875841721892357,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:51:30.404707"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 27.04221487045288,
+      "decisions": [
+        {
+          "event_id": "15565_3783_qq-2135",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3783_qq-2135_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3783_qq-2135_cd-11975",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.772305965423584,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'knotts berry resort hotel' lacks specificity and may indicate the user is unsure about their information need. This could reflect a lack of promising scent, leading to the issuance of a new query without clicks. The control character error suggests a misunderstanding in the query, reinforcing the idea of poor scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without a clear indication of intent or satisfaction suggests that the user is exploring multiple options but is not finding adequate information. The presence of an invalid control character in the original query indicates the user may not be effectively targeting their search, reflecting poor scent rather than a focused approach.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user clicked on 'stay knott s berry farm' as a result of their SERP view. This action indicates a targeted exploration based on perceived relevance, which aligns more closely with approaching a source rather than a continued following scent from the initial query. The nature of the click indicates an attempt to engage more deeply with the content.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 12.407780885696411,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9875841721892357
+}

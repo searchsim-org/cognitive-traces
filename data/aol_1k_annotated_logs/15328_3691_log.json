@@ -1,0 +1,159 @@
+{
+  "session_id": "15328_3691",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T23:52:16.532319",
+  "events": [
+    {
+      "session_id": "15328_3691",
+      "event_id": "15328_3691_qq-2065",
+      "timestamp": "2006-04-08 13:27:14",
+      "action_type": "QUERY",
+      "content": "garden weasels",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'garden weasels...' is vague and lacks specificity, which might indicate that they are unsure of what they are looking for. The presence of an invalid control character suggests confusion or a poorly formed query, leading to a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9176017999649048,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:52:42.266737"
+    },
+    {
+      "session_id": "15328_3691",
+      "event_id": "15328_3691_qq-2065_serp",
+      "timestamp": "2006-04-08 13:27:14",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: weasels usa, weasel craft, garden weasel brand solutions from the ground up (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed the SERP, the titles 'weasels usa', 'weasel craft', and 'garden weasel brand solutions from the ground up' may not strongly align with their query intent. If they are seeing results that do not accurately match their information need, it could indicate a decision to leave the current patch rather than following a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0032276324927807,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:52:42.266755"
+    },
+    {
+      "session_id": "15328_3691",
+      "event_id": "15328_3691_qq-2065_cd-11762",
+      "timestamp": "2006-04-08 13:27:14",
+      "action_type": "CLICK",
+      "content": "garden weasel brand solutions from the ground up",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'garden weasel brand solutions from the ground up' suggests that the user is engaging with a source that appears relevant to their query, which is indicative of approaching a source rather than following a distinct scent. However, it's more likely the user is exploring based on limited options from prior vague queries.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.0177660658955574,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T23:52:42.266762"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.704747915267944,
+      "decisions": [
+        {
+          "event_id": "15328_3691_qq-2065",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3691_qq-2065_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15328_3691_qq-2065_cd-11762",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 4.829358100891113,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'garden weasels...' is vague and lacks specificity, which might indicate that they are unsure of what they are looking for. The presence of an invalid control character suggests confusion or a poorly formed query, leading to a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed the SERP, the titles 'weasels usa', 'weasel craft', and 'garden weasel brand solutions from the ground up' may not strongly align with their query intent. If they are seeing results that do not accurately match their information need, it could indicate a decision to leave the current patch rather than following a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'garden weasel brand solutions from the ground up' suggests that the user is engaging with a source that appears relevant to their query, which is indicative of approaching a source rather than following a distinct scent. However, it's more likely the user is exploring based on limited options from prior vague queries.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 11.08946681022644,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0177660658955574
+}

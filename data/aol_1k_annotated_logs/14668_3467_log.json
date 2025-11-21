@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3467",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:23:00.034418",
+  "events": [
+    {
+      "session_id": "14668_3467",
+      "event_id": "14668_3467_qq-1930",
+      "timestamp": "2006-04-20 15:49:17",
+      "action_type": "QUERY",
+      "content": "medical mutual",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'medical mutual...' indicates a lack of clarity or specificity, suggesting that the user did not have a clear target in mind. The presence of an invalid control character further underscores that the user's intent was likely compromised, leading to a situation where they abandoned the search or failed to find relevant results, indicating PoorScent rather than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.8994254112243651,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:23:40.212534"
+    },
+    {
+      "session_id": "14668_3467",
+      "event_id": "14668_3467_qq-1930_serp",
+      "timestamp": "2006-04-20 15:49:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: medical mutual, ohio health insurance plans medical mutual home, ohio health insurance plans medical mutual home (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results without engaging with any (as implied by the continued presence of the invalid control character) suggests that the user did not find strong information scent in the displayed results. The fact that they viewed results but did not click on any indicates that they were still struggling to find relevant information, aligning more closely with PoorScent than FollowingScent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9093791365623474,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:23:40.212549"
+    },
+    {
+      "session_id": "14668_3467",
+      "event_id": "14668_3467_qq-1930_cd-11341",
+      "timestamp": "2006-04-20 15:49:17",
+      "action_type": "CLICK",
+      "content": "ohio health insurance plans medical mutual home",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'ohio health insurance plans medical mutual home...' could imply some level of interest, but given the context of the previous events where the user showed signs of confusion and poor scent, the click may not indicate a clear, targeted attempt to follow a scent. Without a proper query or clear intent established earlier, this click may be seen more as an exploratory action rather than a confident approach to a well-defined source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9933050647377968,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:23:40.212552"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 9.890807151794434,
+      "decisions": [
+        {
+          "event_id": "14668_3467_qq-1930",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3467_qq-1930_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3467_qq-1930_cd-11341",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.0737669467926025,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'medical mutual...' indicates a lack of clarity or specificity, suggesting that the user did not have a clear target in mind. The presence of an invalid control character further underscores that the user's intent was likely compromised, leading to a situation where they abandoned the search or failed to find relevant results, indicating PoorScent rather than FollowingScent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing multiple results without engaging with any (as implied by the continued presence of the invalid control character) suggests that the user did not find strong information scent in the displayed results. The fact that they viewed results but did not click on any indicates that they were still struggling to find relevant information, aligning more closely with PoorScent than FollowingScent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The action of clicking on 'ohio health insurance plans medical mutual home...' could imply some level of interest, but given the context of the previous events where the user showed signs of confusion and poor scent, the click may not indicate a clear, targeted attempt to follow a scent. Without a proper query or clear intent established earlier, this click may be seen more as an exploratory action rather than a confident approach to a well-defined source.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 23.880458116531372,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9933050647377968
+}

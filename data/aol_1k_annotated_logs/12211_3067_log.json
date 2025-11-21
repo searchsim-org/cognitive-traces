@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3067",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T15:09:46.548159",
+  "events": [
+    {
+      "session_id": "12211_3067",
+      "event_id": "12211_3067_qq-1523",
+      "timestamp": "2006-05-15 18:14:01",
+      "action_type": "QUERY",
+      "content": "97.1 fm talk",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query does not demonstrate a clear intent or direction, especially given the presence of an analysis error. The lack of specific information suggests the user may not have found the current patch promising, indicating poor scent rather than a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9336690902709961,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:10:34.856488"
+    },
+    {
+      "session_id": "12211_3067",
+      "event_id": "12211_3067_qq-1523_serp",
+      "timestamp": "2006-05-15 18:14:01",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: country 97 1 hank fm, news talk 97 1 fm st louis news and talk kf tk fm radio com, 106 1 fm talk stay connected (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed results but did not demonstrate targeted engagement or clear intent. The presence of an analysis error in the content suggests that the search was not fruitful, leading to an overall poor scent rather than an active following of a scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9486835479736329,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:10:34.856501"
+    },
+    {
+      "session_id": "12211_3067",
+      "event_id": "12211_3067_qq-1523_cd-9311",
+      "timestamp": "2006-05-15 18:14:01",
+      "action_type": "CLICK",
+      "content": "news talk 97 1 fm st louis news and talk kf tk fm radio com",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a result after an analysis error indicates a lack of strong information scent. The user's action appears to be a last resort to find relevant information rather than a clear pursuit of a specific goal, suggesting poor scent rather than following a strong lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8499878525733948,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T15:10:34.856507"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 24.43030309677124,
+      "decisions": [
+        {
+          "event_id": "12211_3067_qq-1523",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3067_qq-1523_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3067_qq-1523_cd-9311",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.31552791595459,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query does not demonstrate a clear intent or direction, especially given the presence of an analysis error. The lack of specific information suggests the user may not have found the current patch promising, indicating poor scent rather than a targeted search.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user viewed results but did not demonstrate targeted engagement or clear intent. The presence of an analysis error in the content suggests that the search was not fruitful, leading to an overall poor scent rather than an active following of a scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Clicking on a result after an analysis error indicates a lack of strong information scent. The user's action appears to be a last resort to find relevant information rather than a clear pursuit of a specific goal, suggesting poor scent rather than following a strong lead.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 17.345214128494263,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9486835479736329
+}

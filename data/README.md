@@ -20,7 +20,7 @@ The **complete datasets** with all cognitive trace annotations are being made av
 
 ## Available Datasets
 
-### AOL Search Sessions (1,000 sessions)
+### AOL Search Sessions 
 - **Input**: `aol_1k_input.csv` - Raw search session data
 - **Output**: `aol_1k_annotated.csv` - Cognitive traces with multi-agent annotations
 

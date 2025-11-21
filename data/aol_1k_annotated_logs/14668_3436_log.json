@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3436",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T21:03:49.891288",
+  "events": [
+    {
+      "session_id": "14668_3436",
+      "event_id": "14668_3436_qq-1902",
+      "timestamp": "2006-03-25 20:17:33",
+      "action_type": "QUERY",
+      "content": "the last days of conrail video",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'the last days of conrail video...' indicates a specific interest, but it doesn't demonstrate clear intent shown by a well-formed query. The mention of an analysis error suggests that this query did not yield satisfactory results or scent, leading to a potential lack of engagement.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.943685519695282,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:22.483413"
+    },
+    {
+      "session_id": "14668_3436",
+      "event_id": "14668_3436_qq-1902_serp",
+      "timestamp": "2006-03-25 20:17:33",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: helpful tip of the day, frog rail rail tours, rebel rails rail wear (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing multiple results indicates the user is exploring options, but it does not necessarily signify a strong intent or scent. The list of results suggests a broad search rather than targeted engagement, thus it aligns more with 'ApproachingSource' as the user is assessing potential sources rather than directly pursuing a specific scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0033115155994892,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:22.483442"
+    },
+    {
+      "session_id": "14668_3436",
+      "event_id": "14668_3436_qq-1902_cd-11290",
+      "timestamp": "2006-03-25 20:17:33",
+      "action_type": "CLICK",
+      "content": "the rail fan network",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on 'the rail fan network...' suggests the user is trying to explore this source based on its perceived relevance, which aligns with 'ApproachingSource.' The label 'FollowingScent' implies a direct and targeted query, which is not supported here as the click seems more exploratory.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.986114040017128,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T21:04:22.483451"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 16.001450061798096,
+      "decisions": [
+        {
+          "event_id": "14668_3436_qq-1902",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3436_qq-1902_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3436_qq-1902_cd-11290",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.915430068969727,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'the last days of conrail video...' indicates a specific interest, but it doesn't demonstrate clear intent shown by a well-formed query. The mention of an analysis error suggests that this query did not yield satisfactory results or scent, leading to a potential lack of engagement.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing multiple results indicates the user is exploring options, but it does not necessarily signify a strong intent or scent. The list of results suggests a broad search rather than targeted engagement, thus it aligns more with 'ApproachingSource' as the user is assessing potential sources rather than directly pursuing a specific scent.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on 'the rail fan network...' suggests the user is trying to explore this source based on its perceived relevance, which aligns with 'ApproachingSource.' The label 'FollowingScent' implies a direct and targeted query, which is not supported here as the click seems more exploratory.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 8.339043140411377,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0033115155994892
+}

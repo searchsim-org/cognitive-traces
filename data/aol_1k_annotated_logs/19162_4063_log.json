@@ -1,0 +1,159 @@
+{
+  "session_id": "19162_4063",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T04:09:27.021045",
+  "events": [
+    {
+      "session_id": "19162_4063",
+      "event_id": "19162_4063_qq-2340",
+      "timestamp": "2006-05-21 13:21:06",
+      "action_type": "QUERY",
+      "content": "hydroxycut",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user initiated a query for 'hydroxycut', which suggests an intent to find specific information. However, the subsequent analysis error indicates a lack of relevant results or satisfactory content, leading to an assumption of poor information scent. The lack of follow-up actions further supports this label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9054665386676788,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:54.768063"
+    },
+    {
+      "session_id": "19162_4063",
+      "event_id": "19162_4063_qq-2340_serp",
+      "timestamp": "2006-05-21 13:21:06",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www hydroxy cut com, hydroxy z hcl b 3 o 3 com, bodybuilding supplements fat burner diet pill reviews xena dr in e hydroxy cut whey protein crea tine and more (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "While the user viewed several results, the analysis error indicates that these results did not provide a satisfactory scent. Instead of continuing to engage with the results, the user may have been assessing the relevance, which could lead to abandoning the search. This aligns more with 'LeavingPatch' as the user did not find compelling leads.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.8911581277847289,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:54.768068"
+    },
+    {
+      "session_id": "19162_4063",
+      "event_id": "19162_4063_qq-2340_cd-6966",
+      "timestamp": "2006-05-21 13:21:06",
+      "action_type": "CLICK",
+      "content": "bodybuilding supplements fat burner diet pill reviews xena dr in e hydroxy cut whey protein crea tine and more",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a result suggests some level of interest, but the preceding analysis error and lack of prior successful engagement indicate that the user may have clicked out of frustration or desperation rather than clear intent. This suggests that the scent from the result was ultimately poor.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9340913891792297,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T04:09:54.768077"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 10.006333827972412,
+      "decisions": [
+        {
+          "event_id": "19162_4063_qq-2340",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4063_qq-2340_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19162_4063_qq-2340_cd-6966",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.417737007141113,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user initiated a query for 'hydroxycut', which suggests an intent to find specific information. However, the subsequent analysis error indicates a lack of relevant results or satisfactory content, leading to an assumption of poor information scent. The lack of follow-up actions further supports this label.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "While the user viewed several results, the analysis error indicates that these results did not provide a satisfactory scent. Instead of continuing to engage with the results, the user may have been assessing the relevance, which could lead to abandoning the search. This aligns more with 'LeavingPatch' as the user did not find compelling leads.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The click on a result suggests some level of interest, but the preceding analysis error and lack of prior successful engagement indicate that the user may have clicked out of frustration or desperation rather than clear intent. This suggests that the scent from the result was ultimately poor.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.232033014297485,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9340913891792297
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "14668_3414",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T20:46:29.368507",
+  "events": [
+    {
+      "session_id": "14668_3414",
+      "event_id": "14668_3414_qq-1878",
+      "timestamp": "2006-03-05 00:01:38",
+      "action_type": "QUERY",
+      "content": "usps tracking",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'usps tracking...' indicates a lack of specificity and does not demonstrate a clear intent to find a particular type of information. This suggests the user may not be satisfied with the initial results, as evidenced by the vague query, which is characteristic of a PoorScent scenario.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 1.0019367832690478,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:47:21.198932"
+    },
+    {
+      "session_id": "14668_3414",
+      "event_id": "14668_3414_qq-1878_serp",
+      "timestamp": "2006-03-05 00:01:38",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: usps com usps tracking, usps tracking track trace, usps tracking track trace (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results related to 'usps tracking' indicates the user is actively browsing options with a focused intent to find relevant information. This aligns more closely with ApproachingSource, as the user is assessing multiple results rather than continuing a well-formed search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0213446378707887,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:47:21.198963"
+    },
+    {
+      "session_id": "14668_3414",
+      "event_id": "14668_3414_qq-1878_cd-1835",
+      "timestamp": "2006-03-05 00:01:38",
+      "action_type": "CLICK",
+      "content": "welcome usps",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of clicking on 'welcome usps...' suggests that the user is attempting to engage further rather than abandoning their search. Therefore, the label should reflect a more exploratory behavior, such as ApproachingSource or DietEnrichment, rather than LeavingPatch.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9944955352693796,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T20:47:21.198972"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 30.43903684616089,
+      "decisions": [
+        {
+          "event_id": "14668_3414_qq-1878",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3414_qq-1878_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "14668_3414_qq-1878_cd-1835",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.865654945373535,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'usps tracking...' indicates a lack of specificity and does not demonstrate a clear intent to find a particular type of information. This suggests the user may not be satisfied with the initial results, as evidenced by the vague query, which is characteristic of a PoorScent scenario.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results related to 'usps tracking' indicates the user is actively browsing options with a focused intent to find relevant information. This aligns more closely with ApproachingSource, as the user is assessing multiple results rather than continuing a well-formed search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of clicking on 'welcome usps...' suggests that the user is attempting to engage further rather than abandoning their search. Therefore, the label should reflect a more exploratory behavior, such as ApproachingSource or DietEnrichment, rather than LeavingPatch.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.147096157073975,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0213446378707887
+}

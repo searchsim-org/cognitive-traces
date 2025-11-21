@@ -1,0 +1,159 @@
+{
+  "session_id": "19655_4172",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T05:43:37.187748",
+  "events": [
+    {
+      "session_id": "19655_4172",
+      "event_id": "19655_4172_qq-2457",
+      "timestamp": "2006-05-14 20:16:35",
+      "action_type": "QUERY",
+      "content": "pella windows",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'pella windows...' suggests an initial attempt to find relevant information. However, the lack of detail or specificity indicates that the user may not have a clear intent or strong information scent. The labeling of this as 'FollowingScent' assumes a level of clarity that is not present in the query itself.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9882854968309402,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:43:58.890177"
+    },
+    {
+      "session_id": "19655_4172",
+      "event_id": "19655_4172_qq-2457_serp",
+      "timestamp": "2006-05-14 20:16:35",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: www pella windows and doors com, bella pella, homepage pella iowa pella area community economic alliance (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results without any clicks implies that the user did not find any of the displayed results compelling enough to pursue further. This aligns more closely with the 'PoorScent' label, as the user is likely assessing the quality of the options without engaging with them, indicating a lack of promising information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.7200000000000001,
+      "disagreement_score": 0.9908409066498279,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:43:58.890183"
+    },
+    {
+      "session_id": "19655_4172",
+      "event_id": "19655_4172_qq-2457_cd-7735",
+      "timestamp": "2006-05-14 20:16:35",
+      "action_type": "CLICK",
+      "content": "home page pella",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'home page pella...' does not necessarily indicate a strong intent to pursue this source based on its scent. Given the context of the previous events, it may be a desperate attempt to gather any information rather than a clear decision to engage with a high-quality source. Thus, it would be more appropriate to label this as 'LeavingPatch' since it suggests a last-ditch effort after poor results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9717764347791672,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T05:43:58.890186"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 6.896299839019775,
+      "decisions": [
+        {
+          "event_id": "19655_4172_qq-2457",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4172_qq-2457_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "19655_4172_qq-2457_cd-7735",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 8.236102104187012,
+      "decisions": [
+        {
+          "event_id": "1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'pella windows...' suggests an initial attempt to find relevant information. However, the lack of detail or specificity indicates that the user may not have a clear intent or strong information scent. The labeling of this as 'FollowingScent' assumes a level of clarity that is not present in the query itself.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results without any clicks implies that the user did not find any of the displayed results compelling enough to pursue further. This aligns more closely with the 'PoorScent' label, as the user is likely assessing the quality of the options without engaging with them, indicating a lack of promising information scent.",
+          "confidence": 0.9
+        },
+        {
+          "event_id": "3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'home page pella...' does not necessarily indicate a strong intent to pursue this source based on its scent. Given the context of the previous events, it may be a desperate attempt to gather any information rather than a clear decision to engage with a high-quality source. Thus, it would be more appropriate to label this as 'LeavingPatch' since it suggests a last-ditch effort after poor results.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 6.4074037075042725,
+      "decisions": [
+        {
+          "event_id": "1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.7200000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9908409066498279
+}

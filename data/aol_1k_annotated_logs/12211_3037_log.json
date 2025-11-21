@@ -1,0 +1,159 @@
+{
+  "session_id": "12211_3037",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T14:44:21.192023",
+  "events": [
+    {
+      "session_id": "12211_3037",
+      "event_id": "12211_3037_qq-1570",
+      "timestamp": "2006-05-01 15:17:10",
+      "action_type": "QUERY",
+      "content": "mgm mirage design group",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The content 'mgm mirage design group...' does not indicate a well-formed query with clear intent, and the mention of an analysis error suggests that the user may not have received relevant results, indicating a lack of promising scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9300710737705231,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:45:03.087517"
+    },
+    {
+      "session_id": "12211_3037",
+      "event_id": "12211_3037_qq-1570_serp",
+      "timestamp": "2006-05-01 15:17:10",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: mirage guitars, mirage palace, 4858 mgm (+7 more)",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results that do not seem relevant to the user's original query suggests that the user is not finding strong information scent. The variety of results indicates a broad search that may not align with the user's intent, thus pointing to poor scent rather than following a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.96720569729805,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:45:03.087546"
+    },
+    {
+      "session_id": "12211_3037",
+      "event_id": "12211_3037_qq-1570_cd-9409",
+      "timestamp": "2006-05-01 15:17:10",
+      "action_type": "CLICK",
+      "content": "secure 02 mgm mirage com supplier diversity images pdf 2002 diversity report pdf",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on a PDF related to 'supplier diversity images' does not indicate a clear follow-through on the user's intent. If the user clicked on this link after failing to find relevant information earlier, it could suggest they are grasping at straws, indicating a potential end to their effective search, thereby qualifying for a 'LeavingPatch' label.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.963101127743721,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T14:45:03.087552"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 21.084402799606323,
+      "decisions": [
+        {
+          "event_id": "12211_3037_qq-1570",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3037_qq-1570_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "12211_3037_qq-1570_cd-9409",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.450456619262695,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The content 'mgm mirage design group...' does not indicate a well-formed query with clear intent, and the mention of an analysis error suggests that the user may not have received relevant results, indicating a lack of promising scent.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "Viewing 10 results that do not seem relevant to the user's original query suggests that the user is not finding strong information scent. The variety of results indicates a broad search that may not align with the user's intent, thus pointing to poor scent rather than following a targeted search.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on a PDF related to 'supplier diversity images' does not indicate a clear follow-through on the user's intent. If the user clicked on this link after failing to find relevant information earlier, it could suggest they are grasping at straws, indicating a potential end to their effective search, thereby qualifying for a 'LeavingPatch' label.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 15.111470937728882,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.96720569729805
+}

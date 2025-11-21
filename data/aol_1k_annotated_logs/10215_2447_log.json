@@ -1,0 +1,159 @@
+{
+  "session_id": "10215_2447",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T06:21:31.892238",
+  "events": [
+    {
+      "session_id": "10215_2447",
+      "event_id": "10215_2447_qq-1279",
+      "timestamp": "2006-03-05 12:08:59",
+      "action_type": "QUERY",
+      "content": "free dog training",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'free dog training...' lacks specificity and does not indicate a targeted search intent. The use of 'free' suggests a broad interest rather than a focused inquiry, which aligns more closely with the characteristics of PoorScent, as the user may not find relevant results leading to further action.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 1.020437479019165,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:22:13.270017"
+    },
+    {
+      "session_id": "10215_2447",
+      "event_id": "10215_2447_qq-1279_serp",
+      "timestamp": "2006-03-05 12:08:59",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: dog i zone dog boarding dog training dog daycare rockville md, spokes dog diane rich dog training llc, the leash connection dog training dog supplies (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing 10 results indicates an exploration of options based on the initial query. The user is likely assessing the relevance of the search results, which is more indicative of ApproachingSource rather than FollowingScent, which implies a direct continuation of a targeted search.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9783779472112656,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:22:13.270040"
+    },
+    {
+      "session_id": "10215_2447",
+      "event_id": "10215_2447_qq-1279_cd-8276",
+      "timestamp": "2006-03-05 12:08:59",
+      "action_type": "CLICK",
+      "content": "free dog training behaviour downloads and manuals for dog owners instructors and behaviorists",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on the result suggests that the user is looking for specific resources related to dog training. However, the content description appears to be vague and may imply that the user is refining their search for more actionable results, aligning more with DietEnrichment rather than FollowingScent, which would require a clearer intent to continue in a focused manner.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.52,
+      "disagreement_score": 0.9924668848514557,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T06:22:13.270050"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.263391733169556,
+      "decisions": [
+        {
+          "event_id": "10215_2447_qq-1279",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2447_qq-1279_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "10215_2447_qq-1279_cd-8276",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 5.489450931549072,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'free dog training...' lacks specificity and does not indicate a targeted search intent. The use of 'free' suggests a broad interest rather than a focused inquiry, which aligns more closely with the characteristics of PoorScent, as the user may not find relevant results leading to further action.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing 10 results indicates an exploration of options based on the initial query. The user is likely assessing the relevance of the search results, which is more indicative of ApproachingSource rather than FollowingScent, which implies a direct continuation of a targeted search.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The click on the result suggests that the user is looking for specific resources related to dog training. However, the content description appears to be vague and may imply that the user is refining their search for more actionable results, aligning more with DietEnrichment rather than FollowingScent, which would require a clearer intent to continue in a focused manner.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 20.30341410636902,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.020437479019165
+}

@@ -1,0 +1,159 @@
+{
+  "session_id": "1338_123",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T19:34:57.638148",
+  "events": [
+    {
+      "session_id": "1338_123",
+      "event_id": "1338_123_qq-56",
+      "timestamp": "2006-05-22 00:10:17",
+      "action_type": "QUERY",
+      "content": "rent italian villas",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'rent italian villas...' lacks specificity and may indicate that the user is struggling to find relevant results, leading to a poor scent. The absence of a targeted query suggests they are not following a strong lead.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9484984040260315,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:35:35.371090"
+    },
+    {
+      "session_id": "1338_123",
+      "event_id": "1338_123_qq-56_serp",
+      "timestamp": "2006-05-22 00:10:17",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: italian villas for rent parker villas, www rent italian villas com, rent villas and vacation homes villa rentals rent villas rent villas com (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user viewed multiple results, but since the query indicates a lack of specificity, it's likely the user is exploring options rather than following a strong scent. They might be assessing the relevance of the results rather than confidently moving towards a known source.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9591760456562042,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:35:35.371112"
+    },
+    {
+      "session_id": "1338_123",
+      "event_id": "1338_123_qq-56_cd-1538",
+      "timestamp": "2006-05-22 00:10:17",
+      "action_type": "CLICK",
+      "content": "italian villas for rent parker villas",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'italian villas for rent parker villas...' indicates an attempt to engage further rather than a confident following of scent. Given the context of poor initial queries, it suggests the user is still searching for the right fit, potentially after viewing unsatisfactory results.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9597950756549836,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T19:35:35.371119"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.993806838989258,
+      "decisions": [
+        {
+          "event_id": "1338_123_qq-56",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_123_qq-56_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "1338_123_qq-56_cd-1538",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 93)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.9907755851745605,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'rent italian villas...' lacks specificity and may indicate that the user is struggling to find relevant results, leading to a poor scent. The absence of a targeted query suggests they are not following a strong lead.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The user viewed multiple results, but since the query indicates a lack of specificity, it's likely the user is exploring options rather than following a strong scent. They might be assessing the relevance of the results rather than confidently moving towards a known source.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The click on 'italian villas for rent parker villas...' indicates an attempt to engage further rather than a confident following of scent. Given the context of poor initial queries, it suggests the user is still searching for the right fit, potentially after viewing unsatisfactory results.",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 14.475663900375366,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 94)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9597950756549836
+}

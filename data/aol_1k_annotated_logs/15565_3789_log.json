@@ -1,0 +1,159 @@
+{
+  "session_id": "15565_3789",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T00:54:04.684077",
+  "events": [
+    {
+      "session_id": "15565_3789",
+      "event_id": "15565_3789_qq-2142",
+      "timestamp": "2006-05-09 00:18:11",
+      "action_type": "QUERY",
+      "content": "tropical swimwear kids",
+      "cognitive_label": "DietEnrichment",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "DietEnrichment",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'tropical swimwear kids' appears to be a broad search. There is no indication that the user is following a specific scent, as this query seems exploratory in nature. It could be an attempt to refine or expand their search for suitable options.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9981040269136429,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:54:28.469226"
+    },
+    {
+      "session_id": "15565_3789",
+      "event_id": "15565_3789_qq-2142_serp",
+      "timestamp": "2006-05-09 00:18:11",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: be active kids, santa cruz kids, the disillusioned kid (+7 more)",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing the search results does not demonstrate clear intent to follow a scent. The user is simply browsing through the results which suggests they are assessing options rather than having a targeted approach to a specific query. This aligns more with an exploratory or comparative browsing behavior.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 1.0013786494731902,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:54:28.469232"
+    },
+    {
+      "session_id": "15565_3789",
+      "event_id": "15565_3789_qq-2142_cd-8689",
+      "timestamp": "2006-05-09 00:18:11",
+      "action_type": "CLICK",
+      "content": "in fashion kids",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "Clicking on a link titled 'in fashion kids...' indicates that the user found the title appealing, but it does not confirm that they are following a scent. This click could also represent a random exploration rather than a focused search, suggesting a more tentative engagement rather than following a clear information scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+      "confidence_score": 0.52,
+      "disagreement_score": 1.0196258634328843,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T00:54:28.469235"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 7.890499114990234,
+      "decisions": [
+        {
+          "event_id": "15565_3789_qq-2142",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3789_qq-2142_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "15565_3789_qq-2142_cd-8689",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 6.053843021392822,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "DietEnrichment",
+          "justification": "The query 'tropical swimwear kids' appears to be a broad search. There is no indication that the user is following a specific scent, as this query seems exploratory in nature. It could be an attempt to refine or expand their search for suitable options.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Viewing the search results does not demonstrate clear intent to follow a scent. The user is simply browsing through the results which suggests they are assessing options rather than having a targeted approach to a specific query. This aligns more with an exploratory or comparative browsing behavior.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "Clicking on a link titled 'in fashion kids...' indicates that the user found the title appealing, but it does not confirm that they are following a scent. This click could also represent a random exploration rather than a focused search, suggesting a more tentative engagement rather than following a clear information scent.",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 9.563592910766602,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "DietEnrichment",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 103)",
+          "confidence": 0.52,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0196258634328843
+}

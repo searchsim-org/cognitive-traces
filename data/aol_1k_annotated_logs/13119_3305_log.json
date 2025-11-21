@@ -1,0 +1,159 @@
+{
+  "session_id": "13119_3305",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-19T18:43:32.894133",
+  "events": [
+    {
+      "session_id": "13119_3305",
+      "event_id": "13119_3305_qq-1788",
+      "timestamp": "2006-03-13 19:25:24",
+      "action_type": "QUERY",
+      "content": "payne heat pumps",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The user's query 'payne heat pumps...' suggests a search intent, but the lack of clear details and the ellipsis indicates uncertainty or lack of specificity. This aligns more with PoorScent as the incomplete query does not provide strong information scent that would lead the user to engaging content.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9550014793872833,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:44:23.864233"
+    },
+    {
+      "session_id": "13119_3305",
+      "event_id": "13119_3305_qq-1788_serp",
+      "timestamp": "2006-03-13 19:25:24",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: pumps distributor air compressors heat transfer cummins wagner, thermo dynamics ltd solar water heating solar pumps, pumps by king pumps water pumps centrifugal pumps fountain pumps jet pumps sump pumps turbine pumps sewage pumps submersible well pumps (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "The action of viewing 10 results indicates an effort to find relevant information, but if the results are not satisfactory or relevant, the session could be considered as approaching a dead end. This suggests LeavingPatch rather than FollowingScent, as the user may be realizing that the current search does not provide the expected information.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.5599999999999999,
+      "disagreement_score": 0.9824461996555328,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:44:23.864244"
+    },
+    {
+      "session_id": "13119_3305",
+      "event_id": "13119_3305_qq-1788_cd-10029",
+      "timestamp": "2006-03-13 19:25:24",
+      "action_type": "CLICK",
+      "content": "www payne com",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'www payne com...' indicates that the user is attempting to investigate further based on the title or snippet provided. This would be better categorized as ApproachingSource rather than FollowingScent, as it reflects a movement towards a specific source rather than a continuation of a targeted search intent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 0.9849505349993706,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-19T18:44:23.864255"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 15.39333200454712,
+      "decisions": [
+        {
+          "event_id": "13119_3305_qq-1788",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3305_qq-1788_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "13119_3305_qq-1788_cd-10029",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.217077016830444,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The user's query 'payne heat pumps...' suggests a search intent, but the lack of clear details and the ellipsis indicates uncertainty or lack of specificity. This aligns more with PoorScent as the incomplete query does not provide strong information scent that would lead the user to engaging content.",
+          "confidence": 0.75
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "The action of viewing 10 results indicates an effort to find relevant information, but if the results are not satisfactory or relevant, the session could be considered as approaching a dead end. This suggests LeavingPatch rather than FollowingScent, as the user may be realizing that the current search does not provide the expected information.",
+          "confidence": 0.7
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'www payne com...' indicates that the user is attempting to investigate further based on the title or snippet provided. This would be better categorized as ApproachingSource rather than FollowingScent, as it reflects a movement towards a specific source rather than a continuation of a targeted search intent.",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 28.131513118743896,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.5599999999999999,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 0.9849505349993706
+}

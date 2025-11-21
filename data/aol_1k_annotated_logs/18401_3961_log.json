@@ -1,0 +1,159 @@
+{
+  "session_id": "18401_3961",
+  "job_id": "44cdca32-786d-4fc9-b0cf-b3991122049b",
+  "timestamp": "2025-11-20T03:12:48.635900",
+  "events": [
+    {
+      "session_id": "18401_3961",
+      "event_id": "18401_3961_qq-2229",
+      "timestamp": "2006-05-15 15:42:51",
+      "action_type": "QUERY",
+      "content": "cd rates",
+      "cognitive_label": "PoorScent",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "PoorScent",
+      "critic_agreement": "disagree",
+      "critic_justification": "The query 'cd rates...' lacks specificity and generates an error, indicating that the user may not have found relevant or promising information, which aligns with the characteristics of PoorScent. The absence of a clear or targeted query suggests a weak scent prompting the need for a new approach.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.68,
+      "disagreement_score": 0.9833506718277931,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:13:19.120214"
+    },
+    {
+      "session_id": "18401_3961",
+      "event_id": "18401_3961_qq-2229_serp",
+      "timestamp": "2006-05-15 15:42:51",
+      "action_type": "SERP_VIEW",
+      "content": "Viewed 10 results: zenith hdtv low adjustable rate mortgage com, kindergarten classrooms low adjustable rate mortgage com, virtual guy low adjustable rate mortgage com (+7 more)",
+      "cognitive_label": "LeavingPatch",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "LeavingPatch",
+      "critic_agreement": "disagree",
+      "critic_justification": "Viewing a set of results that do not seem to meet the user's needs or expectations could indicate a transition towards abandoning the search. The collection of results appears to be irrelevant given the user's intent, suggesting that they may be considering leaving the patch instead of continuing their search with a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6400000000000001,
+      "disagreement_score": 1.0050990123301744,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:13:19.120235"
+    },
+    {
+      "session_id": "18401_3961",
+      "event_id": "18401_3961_qq-2229_cd-2045",
+      "timestamp": "2006-05-15 15:42:51",
+      "action_type": "CLICK",
+      "content": "bank rate master life s financial journey",
+      "cognitive_label": "ApproachingSource",
+      "analyst_label": "FollowingScent",
+      "analyst_justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+      "critic_label": "ApproachingSource",
+      "critic_agreement": "disagree",
+      "critic_justification": "The click on 'bank rate master life s financial journey...' suggests that the user is engaging with a specific source that appeared promising based on the title/snippet. However, without additional context on how the result aligned with their intent, it may be more appropriate to label this as ApproachingSource rather than FollowingScent, as the initial query and prior SERP view lack a strong scent.",
+      "judge_justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+      "confidence_score": 0.6000000000000001,
+      "disagreement_score": 0.9849835574626923,
+      "flagged_for_review": true,
+      "user_override": false,
+      "override_version": 1,
+      "override_timestamp": "2025-11-20T03:13:19.120246"
+    }
+  ],
+  "agent_interactions": [
+    {
+      "step": 1,
+      "agent": "analyst",
+      "status": "completed",
+      "elapsed_time": 12.27617597579956,
+      "decisions": [
+        {
+          "event_id": "18401_3961_qq-2229",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3961_qq-2229_serp",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        },
+        {
+          "event_id": "18401_3961_qq-2229_cd-2045",
+          "label": "FollowingScent",
+          "justification": "Analysis error: Invalid control character at: line 5 column 23 (char 97)",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "agent": "critic",
+      "status": "completed",
+      "elapsed_time": 7.545658111572266,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "agreement": "disagree",
+          "label": "PoorScent",
+          "justification": "The query 'cd rates...' lacks specificity and generates an error, indicating that the user may not have found relevant or promising information, which aligns with the characteristics of PoorScent. The absence of a clear or targeted query suggests a weak scent prompting the need for a new approach.",
+          "confidence": 0.85
+        },
+        {
+          "event_id": "Event 2",
+          "agreement": "disagree",
+          "label": "LeavingPatch",
+          "justification": "Viewing a set of results that do not seem to meet the user's needs or expectations could indicate a transition towards abandoning the search. The collection of results appears to be irrelevant given the user's intent, suggesting that they may be considering leaving the patch instead of continuing their search with a strong scent.",
+          "confidence": 0.8
+        },
+        {
+          "event_id": "Event 3",
+          "agreement": "disagree",
+          "label": "ApproachingSource",
+          "justification": "The click on 'bank rate master life s financial journey...' suggests that the user is engaging with a specific source that appeared promising based on the title/snippet. However, without additional context on how the result aligned with their intent, it may be more appropriate to label this as ApproachingSource rather than FollowingScent, as the initial query and prior SERP view lack a strong scent.",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "agent": "judge",
+      "status": "completed",
+      "elapsed_time": 10.393562078475952,
+      "decisions": [
+        {
+          "event_id": "Event 1",
+          "final_label": "PoorScent",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.68,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 2",
+          "final_label": "LeavingPatch",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6400000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        },
+        {
+          "event_id": "Event 3",
+          "final_label": "ApproachingSource",
+          "justification": "Judge parsing failed, using critic decision. Error: Invalid control character at: line 5 column 23 (char 98)",
+          "confidence": 0.6000000000000001,
+          "flag_for_review": true,
+          "disagreement_score": 0.5
+        }
+      ]
+    }
+  ],
+  "num_events": 3,
+  "flagged_for_review": true,
+  "max_disagreement": 1.0050990123301744
+}
