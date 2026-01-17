@@ -167,6 +167,7 @@ class BehavioralOnlyModel(nn.Module):
     
     def __init__(
         self,
+        input_dim: int = 384,
         num_layers: int = 4,
         num_heads: int = 8,
         hidden_dim: int = 768,
@@ -177,11 +178,11 @@ class BehavioralOnlyModel(nn.Module):
         self.hidden_dim = hidden_dim
         
         # Trainable embedding for zero-click events (SERP_VIEW with no subsequent CLICK)
-        self.zero_click_embedding = nn.Parameter(torch.randn(1, hidden_dim))
+        self.zero_click_embedding = nn.Parameter(torch.randn(1, input_dim))
         
         # Transformer model
         self.transformer_model = TransformerAbandonmentModel(
-            input_dim=hidden_dim,  # S-BERT outputs 768-dim
+            input_dim=input_dim,
             num_layers=num_layers,
             num_heads=num_heads,
             hidden_dim=hidden_dim,
@@ -231,6 +232,7 @@ class CognitiveEnhancedModel(nn.Module):
     def __init__(
         self,
         num_cognitive_labels: int,
+        sbert_embedding_dim: int = 384,
         cognitive_embedding_dim: int = 32,
         num_layers: int = 4,
         num_heads: int = 8,
@@ -246,10 +248,10 @@ class CognitiveEnhancedModel(nn.Module):
         self.cognitive_embeddings = nn.Embedding(num_cognitive_labels, cognitive_embedding_dim)
         
         # Trainable embedding for zero-click events
-        self.zero_click_embedding = nn.Parameter(torch.randn(1, hidden_dim))
+        self.zero_click_embedding = nn.Parameter(torch.randn(1, sbert_embedding_dim))
         
-        # Input dimension: S-BERT (768) + cognitive label (32)
-        input_dim = 768 + cognitive_embedding_dim
+        # Input dimension: S-BERT + cognitive label
+        input_dim = sbert_embedding_dim + cognitive_embedding_dim
         
         # Transformer model
         self.transformer_model = TransformerAbandonmentModel(

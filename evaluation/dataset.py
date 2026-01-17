@@ -53,9 +53,13 @@ class SessionAbandonmentDataset(Dataset):
         print(f"Loading data from {csv_file}...")
         self.df = pd.read_csv(csv_file)
         
-        # Load labels
-        with open(labels_file, 'r') as f:
-            self.session_labels = json.load(f)
+        # Forecasting Experiment:
+        # Labels are already in the CSV 'label' column.
+        # We don't need a separate session_labels map.
+        self.session_labels = None
+        # if (self.processed_dir / 'session_labels.json').exists():
+        #    with open(self.processed_dir / 'session_labels.json', 'r') as f:
+        #        self.session_labels = json.load(f)
         
         # Group events by session
         self.sessions = self._group_sessions()
@@ -203,7 +207,8 @@ class SessionAbandonmentDataset(Dataset):
         
         # Get label
         session_id = session_df.iloc[0]['session_id']
-        label = self.session_labels[session_id]
+        # For forecasting, label is in the row
+        label = session_df.iloc[0]['label']
         
         result = {
             'event_embeddings': torch.FloatTensor(embeddings),
@@ -216,9 +221,12 @@ class SessionAbandonmentDataset(Dataset):
         if self.include_cognitive:
             cognitive_ids = []
             for _, row in session_df.iterrows():
+                # Use standard cognitive labels for Forecasting task
                 label_str = row.get('cognitive_label', '<UNK>')
+                
                 if pd.isna(label_str):
                     label_str = '<UNK>'
+                    
                 label_id = self.cognitive_label_to_id.get(label_str, self.cognitive_label_to_id['<UNK>'])
                 cognitive_ids.append(label_id)
             
@@ -285,7 +293,7 @@ def collate_fn(batch: List[Dict[str, torch.Tensor]]) -> Dict[str, torch.Tensor]:
 def create_dataloaders(
     data_dir: str,
     batch_size: int = 32,
-    num_workers: int = 4,
+    num_workers: int = 0,
     sbert_model_name: str = 'all-MiniLM-L6-v2',
     max_seq_len: int = 50,
     include_cognitive: bool = False
