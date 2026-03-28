@@ -276,7 +276,7 @@ def train_behavioral_model(
         Best validation F1 score
     """
     if device is None:
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        device = 'cuda' if torch.cuda.is_available() else ('mps' if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available() else 'cpu')
     
     print("="*60)
     print("TRAINING BEHAVIORAL-ONLY BASELINE MODEL")
@@ -326,7 +326,7 @@ def train_cognitive_model(
         Best validation F1 score
     """
     if device is None:
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        device = 'cuda' if torch.cuda.is_available() else ('mps' if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available() else 'cpu')
     
     print("="*60)
     print("TRAINING COGNITIVE-ENHANCED MODEL")
@@ -381,7 +381,7 @@ def main():
                        help='Learning rate')
     parser.add_argument('--patience', type=int, default=5,
                        help='Early stopping patience')
-    parser.add_argument('--device', type=str, choices=['cpu', 'cuda'],
+    parser.add_argument('--device', type=str, choices=['cpu', 'cuda', 'mps'],
                        help='Device to train on (auto-detect if not specified)')
     
     args = parser.parse_args()

@@ -2,7 +2,7 @@
 
 [![traces.searchsim.org](images/cogtraces_01.png)](https://traces.searchsim.org)
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2602.24265)
 [![Demo](https://img.shields.io/badge/Demo-traces.searchsim.org-blue?style=flat-square)](https://traces.searchsim.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 

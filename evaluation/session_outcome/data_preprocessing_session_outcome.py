@@ -3,11 +3,14 @@
 Data preprocessing for Session Outcome Prediction
 
 TASK: Given the first half of a session, predict if the session will end
-in a SUCCESS state (ApproachingSource, ForagingSuccess) or FAILURE state
-(LeavingPatch, PoorScent with session abandonment).
+with the user clicking a result (SUCCESS) or abandoning without a click (FAILURE).
 
-This is a session-level prediction task that tests whether cognitive signals
+This is a session-level prediction task that tests whether behavioral signals
 in early events can forecast overall session outcome.
+
+TARGET (purely behavioral):
+- SUCCESS (1): Session's final event is a CLICK (user engaged with a result)
+- FAILURE (0): Session ends without clicking (final event is QUERY or SERP_VIEW)
 
 RATIONALE:
 - Early intervention in search sessions can improve user experience
@@ -22,40 +25,18 @@ from typing import Dict, List
 import json
 
 
-SUCCESS_LABELS = {'ApproachingSource', 'ForagingSuccess', 'DietEnrichment'}
-FAILURE_LABELS = {'PoorScent', 'LeavingPatch'}
-
-
 def get_user_from_session(session_id: str) -> str:
     """Extract user ID from session ID."""
     return session_id.split('_')[0] if '_' in session_id else session_id
 
 
 def get_session_outcome(session_df: pd.DataFrame) -> int:
+    """Determine session outcome from behavioral signals.
+    SUCCESS (1): Session's final event is a CLICK (user engaged with result)
+    FAILURE (0): Session ends without clicking (QUERY or SERP_VIEW)
     """
-    Determine session outcome.
-
-    SUCCESS (1): Session's final event is a success state OR session contains
-                 ApproachingSource/ForagingSuccess anywhere
-    FAILURE (0): Session ends in failure state without any success markers
-    """
-    labels = session_df['cognitive_label'].values
-
-    # Check if session ever reached success
-    has_success = any(label in SUCCESS_LABELS for label in labels)
-
-    # Check final state
-    final_label = labels[-1]
-    ends_in_failure = final_label in FAILURE_LABELS
-
-    # Success if reached success state at any point
-    if has_success:
-        return 1
-    # Failure if ends in failure without success
-    elif ends_in_failure:
-        return 0
-    else:
-        return 1  # Default to success if unclear
+    final_action = session_df.iloc[-1]['action_type']
+    return 1 if final_action == 'CLICK' else 0
 
 
 def create_early_prediction_samples(
@@ -220,9 +201,8 @@ def create_dataset(
     metadata = {
         'task': 'session_outcome_prediction',
         'description': 'Predict session success/failure from first 50% of events',
+        'target_definition': 'SUCCESS (1) = final event is CLICK; FAILURE (0) = final event is QUERY or SERP_VIEW',
         'prefix_ratio': prefix_ratio,
-        'success_labels': list(SUCCESS_LABELS),
-        'failure_labels': list(FAILURE_LABELS),
         'train_samples': len(train_samples),
         'val_samples': len(val_samples),
         'test_samples': len(test_samples),

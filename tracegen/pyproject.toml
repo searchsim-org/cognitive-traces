@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tracegen"
+version = "0.1.0"
+description = "CLI cognitive trace generation for AOL, StackOverflow, and MovieLens — domain-adapted IFT annotation at scale"
+authors = []
+packages = [{include = "tracegen", from = ".."}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+openai = ">=1.3.0"
+pandas = ">=2.1.0"
+python-dotenv = ">=1.0.0"
+rich = ">=13.0.0"
+tqdm = ">=4.66.0"
+httpx = ">=0.25.0"
+
+[tool.poetry.scripts]
+tracegen = "tracegen.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

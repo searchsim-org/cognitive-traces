@@ -196,7 +196,7 @@ def evaluate_behavioral_model(
 ):
     """Evaluate behavioral-only model on test set."""
     if device is None:
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        device = 'cuda' if torch.cuda.is_available() else ('mps' if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available() else 'cpu')
     
     print("="*60)
     print("EVALUATING BEHAVIORAL-ONLY BASELINE MODEL")
@@ -272,7 +272,7 @@ def evaluate_cognitive_model(
 ):
     """Evaluate cognitive-enhanced model on test set."""
     if device is None:
-        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        device = 'cuda' if torch.cuda.is_available() else ('mps' if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available() else 'cpu')
     
     print("="*60)
     print("EVALUATING COGNITIVE-ENHANCED MODEL")
@@ -411,7 +411,7 @@ def main():
                        help='Output directory for results')
     parser.add_argument('--batch-size', type=int, default=32,
                        help='Batch size')
-    parser.add_argument('--device', type=str, choices=['cpu', 'cuda'],
+    parser.add_argument('--device', type=str, choices=['cpu', 'cuda', 'mps'],
                        help='Device to evaluate on (auto-detect if not specified)')
     parser.add_argument('--compare', type=str,
                        help='Path to second checkpoint for comparison')

@@ -2,24 +2,33 @@
 """
 Data preprocessing for Struggle Recovery Prediction
 
-TASK: For sessions that START in a struggle state (PoorScent/LeavingPatch),
-predict whether the user will eventually recover to a success state or
-remain struggling throughout.
+TASK: For sessions that START with zero-click behavior (user not engaging
+with results), predict whether the user will eventually click a result
+(recover) or abandon without clicking.
 
-KEY INSIGHT: This tests whether cognitive patterns can predict recovery
-trajectories. A user starting in PoorScent might recover (find good results)
-or continue struggling. The cognitive signals should help differentiate.
+KEY INSIGHT: This tests whether behavioral patterns can predict recovery
+trajectories. A user who starts without clicking might recover (eventually
+engage with a result) or continue struggling. The behavioral signals
+should help differentiate.
+
+FILTER (purely behavioral):
+- Session must start with zero-click behavior: no CLICK in the first 3 events
+- This indicates the user is struggling to find relevant results
+
+TARGET (purely behavioral):
+- RECOVERY (1): Session eventually contains a CLICK (user engages with a result)
+- NO RECOVERY (0): Session never has a CLICK (user abandons without engaging)
 
 PRACTICAL UTILITY:
 - Identify users who are likely to recover vs those who need help
 - Allocate assistance resources efficiently
-- Understand what cognitive patterns lead to recovery
+- Understand what behavioral patterns lead to recovery
 
 DESIGN:
-- Filter: Only sessions where first event is a struggle state
+- Filter: Only sessions where first 3 events have no CLICK
 - Input: First 60% of session events
-- Target: 1 = session eventually reaches success state
-          0 = session never reaches success (stays in struggle)
+- Target: 1 = session eventually has a CLICK
+          0 = session never has a CLICK
 
 This is distinct from previous tasks by focusing specifically on
 recovery trajectories from initial struggle.
@@ -32,19 +41,14 @@ from typing import Dict, List
 import json
 
 
-SUCCESS_LABELS = {'ApproachingSource', 'ForagingSuccess', 'DietEnrichment', 'FollowingScent'}
-STRUGGLE_LABELS = {'PoorScent', 'LeavingPatch'}
-
-
 def get_user_from_session(session_id: str) -> str:
     """Extract user ID from session ID."""
     return session_id.split('_')[0] if '_' in session_id else session_id
 
 
 def session_has_recovery(session_df: pd.DataFrame) -> bool:
-    """Check if session ever reaches a success state."""
-    labels = set(session_df['cognitive_label'].values)
-    return bool(labels & SUCCESS_LABELS)
+    """Check if session eventually has a click (behavioral recovery)."""
+    return (session_df['action_type'] == 'CLICK').any()
 
 
 def create_recovery_samples(
@@ -55,7 +59,8 @@ def create_recovery_samples(
     """
     Create samples for struggle recovery prediction.
 
-    Only includes sessions that START in a struggle state.
+    Only includes sessions that START with zero-click behavior
+    (no CLICK in first 3 events).
     """
     samples = []
 
@@ -63,10 +68,10 @@ def create_recovery_samples(
         session_df = session_df.sort_values('event_timestamp').reset_index(drop=True)
         events = session_df.to_dict('records')
 
-        # Filter: must start in struggle state
-        first_label = events[0]['cognitive_label']
-        if first_label not in STRUGGLE_LABELS:
-            continue
+        # Filter: must start with zero-click behavior (no CLICK in first 3 events)
+        early_actions = [e['action_type'] for e in events[:min(3, len(events))]]
+        if 'CLICK' in early_actions:
+            continue  # Session starts with clicking = not a struggle start
 
         # Filter: must have minimum events
         if len(events) < min_events:
@@ -81,20 +86,20 @@ def create_recovery_samples(
         prefix_events = events[:n_prefix]
 
         # Analyze prefix patterns
-        prefix_labels = [e['cognitive_label'] for e in prefix_events]
-        prefix_struggle = sum(1 for l in prefix_labels if l in STRUGGLE_LABELS)
-        prefix_success = sum(1 for l in prefix_labels if l in SUCCESS_LABELS)
+        prefix_actions = [e['action_type'] for e in prefix_events]
+        prefix_queries = sum(1 for a in prefix_actions if a == 'QUERY')
+        prefix_clicks = sum(1 for a in prefix_actions if a == 'CLICK')
 
         sample = {
             'session_id': f"{session_id}_recovery",
             'original_session_id': session_id,
             'events': prefix_events,
             'target': target,
-            'first_label': first_label,
+            'first_action': events[0]['action_type'],
             'full_length': len(events),
             'prefix_length': n_prefix,
-            'prefix_struggle_count': prefix_struggle,
-            'prefix_success_count': prefix_success
+            'prefix_query_count': prefix_queries,
+            'prefix_click_count': prefix_clicks
         }
         samples.append(sample)
 
@@ -102,44 +107,44 @@ def create_recovery_samples(
 
 
 def analyze_patterns(samples: List[Dict]) -> None:
-    """Analyze recovery patterns."""
+    """Analyze recovery patterns based on behavioral signals."""
     print("\n=== STRUGGLE RECOVERY PATTERNS ===")
 
-    # By starting label
+    # By first action type
     by_start = {}
     for s in samples:
-        label = s['first_label']
-        if label not in by_start:
-            by_start[label] = {'recovers': 0, 'stays_struggle': 0}
+        action = s['first_action']
+        if action not in by_start:
+            by_start[action] = {'recovers': 0, 'stays_struggle': 0}
         if s['target'] == 1:
-            by_start[label]['recovers'] += 1
+            by_start[action]['recovers'] += 1
         else:
-            by_start[label]['stays_struggle'] += 1
+            by_start[action]['stays_struggle'] += 1
 
-    print("\nBy starting label:")
-    for label in sorted(by_start.keys()):
-        counts = by_start[label]
+    print("\nBy first action:")
+    for action in sorted(by_start.keys()):
+        counts = by_start[action]
         total = counts['recovers'] + counts['stays_struggle']
         recover_pct = 100 * counts['recovers'] / total if total > 0 else 0
-        print(f"  {label}: {recover_pct:.1f}% recover (n={total})")
+        print(f"  {action}: {recover_pct:.1f}% recover (n={total})")
 
-    # By prefix success count
-    print("\nBy prefix success indicators:")
-    by_success = {}
+    # By prefix click count
+    print("\nBy prefix click count:")
+    by_clicks = {}
     for s in samples:
-        success = s['prefix_success_count']
-        if success not in by_success:
-            by_success[success] = {'recovers': 0, 'stays_struggle': 0}
+        clicks = s['prefix_click_count']
+        if clicks not in by_clicks:
+            by_clicks[clicks] = {'recovers': 0, 'stays_struggle': 0}
         if s['target'] == 1:
-            by_success[success]['recovers'] += 1
+            by_clicks[clicks]['recovers'] += 1
         else:
-            by_success[success]['stays_struggle'] += 1
+            by_clicks[clicks]['stays_struggle'] += 1
 
-    for success in sorted(by_success.keys()):
-        counts = by_success[success]
+    for clicks in sorted(by_clicks.keys()):
+        counts = by_clicks[clicks]
         total = counts['recovers'] + counts['stays_struggle']
         recover_pct = 100 * counts['recovers'] / total if total > 0 else 0
-        print(f"  {success} success in prefix: {recover_pct:.1f}% recover (n={total})")
+        print(f"  {clicks} clicks in prefix: {recover_pct:.1f}% recover (n={total})")
 
 
 def balance_samples(samples: List[Dict], random_seed: int = 42) -> List[Dict]:
@@ -200,7 +205,7 @@ def create_dataset(
     print(f"Total sessions: {df['session_id'].nunique()}")
 
     # Create samples
-    print(f"\nCreating struggle recovery samples (sessions starting in struggle)...")
+    print(f"\nCreating struggle recovery samples (sessions with zero-click start)...")
     all_samples = create_recovery_samples(df, prefix_ratio)
     print(f"Total samples: {len(all_samples)}")
 
@@ -266,7 +271,9 @@ def create_dataset(
 
     metadata = {
         'task': 'struggle_recovery_prediction',
-        'description': 'For sessions starting in struggle, predict recovery (1) vs staying in struggle (0)',
+        'description': 'For sessions starting with zero-click behavior, predict recovery (1) vs no recovery (0)',
+        'filter_definition': 'Sessions where first 3 events have no CLICK (zero-click start)',
+        'target_definition': 'RECOVERY (1) = session eventually has a CLICK; NO RECOVERY (0) = session never has a CLICK',
         'prefix_ratio': prefix_ratio,
         'train_samples': len(train_samples),
         'val_samples': len(val_samples),

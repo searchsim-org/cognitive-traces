@@ -1,57 +1,56 @@
 # Datasets
 
-This directory contains **example datasets** that demonstrate the input format and output structure of the Cognitive Traces Annotator.
+This directory contains **small excerpts** from the full cognitive trace datasets, useful for testing the annotation pipeline and understanding the expected input/output format.
 
-<div align="center" style="margin: 0px 0 30px; padding: 0px 10px 10px; color: #856404; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: .25rem;">
+## Full Datasets on HuggingFace
 
-### 🚧 Important Notice 🚧
+The complete annotated datasets (532,673 events across 50,942 sessions) are hosted on HuggingFace:
 
-These datasets are **excerpts** from the full-sized datasets used in our research. They are provided here for: (1) testing the annotation pipeline, (2) understanding the expected input/output format, and (3) quick experimentation and validation
+| Dataset | Sessions | Events | HuggingFace |
+|---------|----------|--------|-------------|
+| **AOL Search Sessions** | 22,039 | 245,786 | [searchsim/cognitive-traces-aol](https://huggingface.co/datasets/searchsim/cognitive-traces-aol) |
+| **Stack Overflow Q&A** | 18,629 | 175,326 | [searchsim/cognitive-traces-stackoverflow](https://huggingface.co/datasets/searchsim/cognitive-traces-stackoverflow) |
+| **MovieLens Ratings** | 10,274 | 111,561 | [searchsim/cognitive-traces-movielens](https://huggingface.co/datasets/searchsim/cognitive-traces-movielens) |
 
-</div>
+### Quick Start
 
-## Full Dataset Access
+```python
+from datasets import load_dataset
 
-The **complete datasets** with all cognitive trace annotations are being made available on Zenodo.
+# Load any dataset
+aol = load_dataset("searchsim/cognitive-traces-aol")
+stackoverflow = load_dataset("searchsim/cognitive-traces-stackoverflow")
+movielens = load_dataset("searchsim/cognitive-traces-movielens")
 
-**Stack Overflow Dataset**: [https://doi.org/10.5281/zenodo.17523285](https://doi.org/10.5281/zenodo.17523285) 
+# Access the data
+df = aol["train"].to_pandas()
+```
 
-**AOL & MovieLens Datasets**: *Coming soon*
+## Local Excerpts (50 sessions each)
 
-## Available Datasets
+- `aol_annotated.csv` — 540 events from 50 AOL search sessions
+- `stackoverflow_annotated.csv` — 428 events from 50 Stack Overflow sessions
+- `movielens_annotated.csv` — 447 events from 50 MovieLens sessions
 
-### AOL Search Sessions 
-- **Input**: `aol_1k_input.csv` - Raw search session data
-- **Output**: `aol_1k_annotated.csv` - Cognitive traces with multi-agent annotations
+These excerpts are sampled directly from the HuggingFace datasets and share the same schema.
 
-### MovieLens User Interactions
-- **Input**: `movielens_input.csv` - User-movie interaction data
-- **Output**: `movielens_annotated.csv` - Cognitive traces with multi-agent annotations
+## Column Schema
 
-### StackOverflow User Interactions
-- **Input**: `stackoverflow_input.csv` - Technical Q&A interaction data
-- **Output**: `stackoverflow_annotated.csv` - Cognitive traces with multi-agent annotations
-
-
-## Format Details
-
-### Input Format
-CSV files with columns:
-- `session_id`: Unique identifier for each session
-- `event_id`: Unique identifier for each event
-- `timestamp`: When the event occurred
-- `action_type`: Type of action (QUERY, CLICK, SERP_VIEW, etc.)
-- `content`: Event content (query text, URL, etc.)
-
-### Output Format (Annotated)
-CSV files with additional columns:
-- `cognitive_label`: Final cognitive state label
-- `analyst_label`, `critic_label`: Multi-agent labels
-- `analyst_justification`, `critic_justification`, `judge_justification`: Reasoning
-- `confidence_score`: Model confidence (0-1)
-- `disagreement_score`: Agent disagreement measure
-- `flagged_for_review`: Whether human review is recommended
-- `user_override`: Whether a human annotator modified the label
-
-
-
+| Column | Description |
+|--------|-------------|
+| `session_id` | Unique session identifier |
+| `event_id` | Unique event identifier |
+| `event_timestamp` | When the event occurred |
+| `action_type` | Type of action (QUERY, CLICK, RATE, POST_QUESTION, etc.) |
+| `content` | Event content (query text, URL, movie rating, etc.) |
+| `cognitive_label` | Final IFT cognitive state label |
+| `analyst_label` | Label from the Analyst agent |
+| `analyst_justification` | Analyst reasoning |
+| `critic_label` | Label from the Critic agent |
+| `critic_agreement` | Whether Critic agreed with Analyst |
+| `critic_justification` | Critic reasoning |
+| `judge_justification` | Judge's final reasoning |
+| `confidence_score` | Model confidence (0–1) |
+| `disagreement_score` | Inter-agent disagreement measure |
+| `flagged_for_review` | Whether human review is recommended |
+| `pipeline_mode` | Annotation pipeline mode used |
