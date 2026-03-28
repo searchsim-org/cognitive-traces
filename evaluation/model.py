@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Transformer-based models for session abandonment prediction.
+Transformer-based models for binary prediction tasks.
 
-Two model variants:
-1. Behavioral-Only Baseline: S-BERT embeddings for queries and clicked documents
-2. Cognitive-Enhanced: S-BERT embeddings + cognitive label embeddings
+Three model variants:
+1. Behavioral-Only Baseline: S-BERT embeddings + action_type embeddings
+2. Cognitive-Enhanced: S-BERT + action_type + cognitive label embeddings
+3. Shuffled-Label Ablation: Same as cognitive but randomly permutes labels (control)
 """
 
 import torch
@@ -152,107 +153,125 @@ class PositionalEncoding(nn.Module):
 class BehavioralOnlyModel(nn.Module):
     """
     Behavioral-Only Baseline Model.
-    
+
     Event representation:
-    - QUERY: S-BERT embedding of query text (768-dim)
-    - CLICK: S-BERT embedding of first 256 tokens of document (768-dim)
-    - SERP_VIEW (zero-click): Trainable embedding (768-dim)
-    
+    - S-BERT embedding (384-dim) for query/document/SERP content
+    - Action type embedding (32-dim) for QUERY/CLICK/SERP_VIEW
+    - Total input: 416-dim
+
     Args:
+        num_action_types: Number of action types including PAD (default: 4)
+        action_type_embedding_dim: Dimension of action type embeddings (default: 32)
         num_layers: Number of transformer layers (default: 4)
         num_heads: Number of attention heads (default: 8)
         hidden_dim: Hidden dimension (default: 768)
         dropout: Dropout probability (default: 0.1)
     """
-    
+
     def __init__(
         self,
         input_dim: int = 384,
+        num_action_types: int = 4,
+        action_type_embedding_dim: int = 32,
         num_layers: int = 4,
         num_heads: int = 8,
         hidden_dim: int = 768,
         dropout: float = 0.1
     ):
         super().__init__()
-        
+
         self.hidden_dim = hidden_dim
-        
-        # Trainable embedding for zero-click events (SERP_VIEW with no subsequent CLICK)
-        self.zero_click_embedding = nn.Parameter(torch.randn(1, input_dim))
-        
+
+        # Action type embeddings: QUERY=0, CLICK=1, SERP_VIEW=2, PAD=3
+        self.action_type_embeddings = nn.Embedding(num_action_types, action_type_embedding_dim)
+
+        # Input dimension: S-BERT + action_type
+        combined_input_dim = input_dim + action_type_embedding_dim
+
         # Transformer model
         self.transformer_model = TransformerAbandonmentModel(
-            input_dim=input_dim,
+            input_dim=combined_input_dim,
             num_layers=num_layers,
             num_heads=num_heads,
             hidden_dim=hidden_dim,
             dropout=dropout
         )
-    
+
     def forward(
         self,
         event_embeddings: torch.Tensor,
+        action_type_ids: torch.Tensor,
         attention_mask: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Forward pass.
-        
+
         Args:
-            event_embeddings: Shape (batch_size, seq_len, 768)
-                             Pre-computed S-BERT embeddings for queries/docs
-                             Zero vectors for SERP_VIEW events (will be replaced)
+            event_embeddings: Shape (batch_size, seq_len, 384)
+                             Pre-computed S-BERT embeddings
+            action_type_ids: Shape (batch_size, seq_len)
+                            Action type indices (0=QUERY, 1=CLICK, 2=SERP_VIEW, 3=PAD)
             attention_mask: Shape (batch_size, seq_len), 1 for valid, 0 for padding
-            
+
         Returns:
             logits: Shape (batch_size, 1)
         """
-        # Note: Zero-click embeddings should be filled in during data preprocessing
-        # or we can identify them here if we have event type information
-        return self.transformer_model(event_embeddings, attention_mask)
+        # Get action type embeddings
+        action_embs = self.action_type_embeddings(action_type_ids)  # (batch, seq_len, 32)
+
+        # Concatenate S-BERT and action type representations
+        combined = torch.cat([event_embeddings, action_embs], dim=-1)  # (batch, seq_len, 416)
+
+        return self.transformer_model(combined, attention_mask)
 
 
 class CognitiveEnhancedModel(nn.Module):
     """
     Cognitive-Enhanced Model.
-    
+
     Event representation:
-    - S-BERT embedding (768-dim) for query/document content
-    - Concatenated with cognitive label embedding (32-dim)
-    - Total input: 800-dim
-    
+    - S-BERT embedding (384-dim) for query/document/SERP content
+    - Action type embedding (32-dim) for QUERY/CLICK/SERP_VIEW
+    - Cognitive label embedding (32-dim) for IFT labels
+    - Total input: 448-dim
+
     Args:
         num_cognitive_labels: Number of cognitive labels
         cognitive_embedding_dim: Dimension of cognitive label embeddings (default: 32)
+        num_action_types: Number of action types including PAD (default: 4)
+        action_type_embedding_dim: Dimension of action type embeddings (default: 32)
         num_layers: Number of transformer layers (default: 4)
         num_heads: Number of attention heads (default: 8)
         hidden_dim: Hidden dimension (default: 768)
         dropout: Dropout probability (default: 0.1)
     """
-    
+
     def __init__(
         self,
         num_cognitive_labels: int,
         sbert_embedding_dim: int = 384,
         cognitive_embedding_dim: int = 32,
+        num_action_types: int = 4,
+        action_type_embedding_dim: int = 32,
         num_layers: int = 4,
         num_heads: int = 8,
         hidden_dim: int = 768,
         dropout: float = 0.1
     ):
         super().__init__()
-        
+
         self.hidden_dim = hidden_dim
         self.cognitive_embedding_dim = cognitive_embedding_dim
-        
+
+        # Action type embeddings: QUERY=0, CLICK=1, SERP_VIEW=2, PAD=3
+        self.action_type_embeddings = nn.Embedding(num_action_types, action_type_embedding_dim)
+
         # Cognitive label embeddings
         self.cognitive_embeddings = nn.Embedding(num_cognitive_labels, cognitive_embedding_dim)
-        
-        # Trainable embedding for zero-click events
-        self.zero_click_embedding = nn.Parameter(torch.randn(1, sbert_embedding_dim))
-        
-        # Input dimension: S-BERT + cognitive label
-        input_dim = sbert_embedding_dim + cognitive_embedding_dim
-        
+
+        # Input dimension: S-BERT + action_type + cognitive label
+        input_dim = sbert_embedding_dim + action_type_embedding_dim + cognitive_embedding_dim
+
         # Transformer model
         self.transformer_model = TransformerAbandonmentModel(
             input_dim=input_dim,
@@ -261,33 +280,128 @@ class CognitiveEnhancedModel(nn.Module):
             hidden_dim=hidden_dim,
             dropout=dropout
         )
-    
+
     def forward(
         self,
         event_embeddings: torch.Tensor,
+        action_type_ids: torch.Tensor,
         cognitive_label_ids: torch.Tensor,
         attention_mask: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Forward pass.
-        
+
         Args:
-            event_embeddings: Shape (batch_size, seq_len, 768)
+            event_embeddings: Shape (batch_size, seq_len, 384)
                              Pre-computed S-BERT embeddings
+            action_type_ids: Shape (batch_size, seq_len)
+                            Action type indices
             cognitive_label_ids: Shape (batch_size, seq_len)
                                 Cognitive label indices
             attention_mask: Shape (batch_size, seq_len), 1 for valid, 0 for padding
-            
+
         Returns:
             logits: Shape (batch_size, 1)
         """
+        # Get action type embeddings
+        action_embs = self.action_type_embeddings(action_type_ids)  # (batch, seq_len, 32)
+
         # Get cognitive label embeddings
         cognitive_embs = self.cognitive_embeddings(cognitive_label_ids)  # (batch, seq_len, 32)
-        
-        # Concatenate behavioral and cognitive representations
-        combined = torch.cat([event_embeddings, cognitive_embs], dim=-1)  # (batch, seq_len, 800)
-        
+
+        # Concatenate all representations
+        combined = torch.cat([event_embeddings, action_embs, cognitive_embs], dim=-1)  # (batch, seq_len, 448)
+
         # Pass through transformer
+        return self.transformer_model(combined, attention_mask)
+
+
+class ShuffledLabelModel(nn.Module):
+    """
+    Shuffled-Label Ablation Model.
+
+    Same architecture as CognitiveEnhancedModel, but randomly permutes
+    cognitive_label_ids within each non-padded sequence during forward().
+    This tests whether the specific label assignments matter, or whether
+    ANY categorical signal would produce similar improvements.
+
+    Args:
+        Same as CognitiveEnhancedModel
+    """
+
+    def __init__(
+        self,
+        num_cognitive_labels: int,
+        sbert_embedding_dim: int = 384,
+        cognitive_embedding_dim: int = 32,
+        num_action_types: int = 4,
+        action_type_embedding_dim: int = 32,
+        num_layers: int = 4,
+        num_heads: int = 8,
+        hidden_dim: int = 768,
+        dropout: float = 0.1
+    ):
+        super().__init__()
+
+        self.hidden_dim = hidden_dim
+        self.cognitive_embedding_dim = cognitive_embedding_dim
+
+        # Action type embeddings
+        self.action_type_embeddings = nn.Embedding(num_action_types, action_type_embedding_dim)
+
+        # Cognitive label embeddings (same architecture, but labels will be shuffled)
+        self.cognitive_embeddings = nn.Embedding(num_cognitive_labels, cognitive_embedding_dim)
+
+        # Input dimension: S-BERT + action_type + cognitive label
+        input_dim = sbert_embedding_dim + action_type_embedding_dim + cognitive_embedding_dim
+
+        # Transformer model
+        self.transformer_model = TransformerAbandonmentModel(
+            input_dim=input_dim,
+            num_layers=num_layers,
+            num_heads=num_heads,
+            hidden_dim=hidden_dim,
+            dropout=dropout
+        )
+
+    def forward(
+        self,
+        event_embeddings: torch.Tensor,
+        action_type_ids: torch.Tensor,
+        cognitive_label_ids: torch.Tensor,
+        attention_mask: Optional[torch.Tensor] = None
+    ) -> torch.Tensor:
+        """
+        Forward pass with shuffled cognitive labels.
+
+        Randomly permutes cognitive_label_ids within each sequence's
+        non-padded positions, destroying temporal label patterns
+        while preserving label distribution.
+        """
+        batch_size, seq_len = cognitive_label_ids.shape
+
+        # Shuffle cognitive labels within each sequence's valid positions
+        shuffled_ids = cognitive_label_ids.clone()
+        if attention_mask is not None:
+            for i in range(batch_size):
+                valid_len = int(attention_mask[i].sum().item())
+                if valid_len > 1:
+                    perm = torch.randperm(valid_len, device=cognitive_label_ids.device)
+                    shuffled_ids[i, :valid_len] = cognitive_label_ids[i, perm]
+        else:
+            for i in range(batch_size):
+                perm = torch.randperm(seq_len, device=cognitive_label_ids.device)
+                shuffled_ids[i] = cognitive_label_ids[i, perm]
+
+        # Get action type embeddings
+        action_embs = self.action_type_embeddings(action_type_ids)
+
+        # Get cognitive label embeddings (shuffled)
+        cognitive_embs = self.cognitive_embeddings(shuffled_ids)
+
+        # Concatenate all representations
+        combined = torch.cat([event_embeddings, action_embs, cognitive_embs], dim=-1)
+
         return self.transformer_model(combined, attention_mask)
 
 
@@ -295,16 +409,7 @@ def create_behavioral_model(
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     **kwargs
 ) -> BehavioralOnlyModel:
-    """
-    Factory function to create behavioral-only model.
-    
-    Args:
-        device: Device to place model on
-        **kwargs: Additional arguments for BehavioralOnlyModel
-        
-    Returns:
-        Initialized model on specified device
-    """
+    """Factory function to create behavioral-only model."""
     model = BehavioralOnlyModel(**kwargs)
     model = model.to(device)
     return model
@@ -315,39 +420,48 @@ def create_cognitive_model(
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     **kwargs
 ) -> CognitiveEnhancedModel:
-    """
-    Factory function to create cognitive-enhanced model.
-    
-    Args:
-        num_cognitive_labels: Number of cognitive labels in dataset
-        device: Device to place model on
-        **kwargs: Additional arguments for CognitiveEnhancedModel
-        
-    Returns:
-        Initialized model on specified device
-    """
+    """Factory function to create cognitive-enhanced model."""
     model = CognitiveEnhancedModel(num_cognitive_labels=num_cognitive_labels, **kwargs)
     model = model.to(device)
     return model
 
 
+def create_shuffled_model(
+    num_cognitive_labels: int,
+    device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
+    **kwargs
+) -> ShuffledLabelModel:
+    """Factory function to create shuffled-label ablation model."""
+    model = ShuffledLabelModel(num_cognitive_labels=num_cognitive_labels, **kwargs)
+    model = model.to(device)
+    return model
+
+
 if __name__ == '__main__':
-    # Test models
+    batch_size, seq_len = 4, 10
+    sbert_dim = 384
+    event_embs = torch.randn(batch_size, seq_len, sbert_dim)
+    action_ids = torch.randint(0, 3, (batch_size, seq_len))
+    mask = torch.ones(batch_size, seq_len)
+
     print("Testing Behavioral-Only Model...")
     behavioral_model = create_behavioral_model(device='cpu')
-    batch_size, seq_len = 4, 10
-    event_embs = torch.randn(batch_size, seq_len, 768)
-    mask = torch.ones(batch_size, seq_len)
-    logits = behavioral_model(event_embs, mask)
-    print(f"Output shape: {logits.shape}")
-    print(f"Output: {logits}")
-    
+    logits = behavioral_model(event_embs, action_ids, mask)
+    print(f"  Output shape: {logits.shape}")
+    print(f"  Parameters: {sum(p.numel() for p in behavioral_model.parameters()):,}")
+
     print("\nTesting Cognitive-Enhanced Model...")
-    cognitive_model = create_cognitive_model(num_cognitive_labels=20, device='cpu')
-    cognitive_ids = torch.randint(0, 20, (batch_size, seq_len))
-    logits = cognitive_model(event_embs, cognitive_ids, mask)
-    print(f"Output shape: {logits.shape}")
-    print(f"Output: {logits}")
-    
-    print("\nModels created successfully!")
+    cognitive_model = create_cognitive_model(num_cognitive_labels=7, device='cpu')
+    cognitive_ids = torch.randint(0, 7, (batch_size, seq_len))
+    logits = cognitive_model(event_embs, action_ids, cognitive_ids, mask)
+    print(f"  Output shape: {logits.shape}")
+    print(f"  Parameters: {sum(p.numel() for p in cognitive_model.parameters()):,}")
+
+    print("\nTesting Shuffled-Label Model...")
+    shuffled_model = create_shuffled_model(num_cognitive_labels=7, device='cpu')
+    logits = shuffled_model(event_embs, action_ids, cognitive_ids, mask)
+    print(f"  Output shape: {logits.shape}")
+    print(f"  Parameters: {sum(p.numel() for p in shuffled_model.parameters()):,}")
+
+    print("\nAll models created successfully!")
 
