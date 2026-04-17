@@ -5,9 +5,13 @@ import { usePathname } from 'next/navigation'
 import { Github } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { useSession } from 'next-auth/react'
+import { SignInButton } from '@/components/auth/SignInButton'
+import { UserMenu } from '@/components/auth/UserMenu'
 
 export function Navigation() {
   const pathname = usePathname()
+  const { status } = useSession()
 
   const links = [
     { href: '/', label: 'Home' },
@@ -49,22 +53,26 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <Button
-            asChild
-            size="sm"
-            className="bg-gray-900 hover:bg-gray-800 text-white rounded-full px-6"
-          >
-            <a
-              href="https://github.com/searchsim-org/cognitive-traces"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
+          {/* Right side: GitHub repo link + auth UI */}
+          <div className="flex items-center gap-3">
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="rounded-full px-4"
             >
-              <Github className="w-4 h-4" />
-              <span className="hidden sm:inline">GitHub</span>
-            </a>
-          </Button>
+              <a
+                href="https://github.com/searchsim-org/cognitive-traces"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Github className="w-4 h-4" />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
+            </Button>
+            {status === 'authenticated' ? <UserMenu /> : <SignInButton />}
+          </div>
         </div>
       </div>
     </nav>
