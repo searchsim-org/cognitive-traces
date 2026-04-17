@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { useRouter, useParams } from 'next/navigation'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
+import { LoginBanner } from '@/components/auth/LoginBanner'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
 
@@ -242,6 +243,7 @@ function AnnotatorContent() {
       
       <main className="flex-1">
         <div className="container py-12 md:py-16">
+          <LoginBanner />
           {/* Header */}
           <div className="text-center mb-12 max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4">
