@@ -99,3 +99,32 @@ def increment_resolved(db: Session, job_id: str) -> None:
         .where(AnnotationRun.job_id == job_id)
         .values(resolved_count=AnnotationRun.resolved_count + 1)
     )
+
+
+def persist_run_if_authed(
+    db: Session,
+    *,
+    current_user,
+    job_id: str,
+    dataset_id: str,
+    dataset_filename: str,
+    total_sessions: int,
+    llm_config: dict,
+) -> bool:
+    """Create an annotation_runs row when a user is present. No-op when anonymous.
+    Returns True if a row was inserted."""
+    from app.services.config_sanitizer import strip_secrets
+
+    if current_user is None:
+        return False
+    create(
+        db,
+        user_id=current_user.id,
+        job_id=job_id,
+        dataset_id=dataset_id,
+        dataset_filename=dataset_filename,
+        total_sessions=total_sessions,
+        llm_config_snapshot=strip_secrets(llm_config),
+    )
+    db.commit()
+    return True

@@ -2,17 +2,23 @@
 Annotation endpoints for cognitive trace generation
 """
 
-from fastapi import APIRouter, UploadFile, File, HTTPException, Body
+from fastapi import APIRouter, Depends, UploadFile, File, HTTPException, Body
 from typing import List, Dict, Any, Optional
 from app.schemas.annotation import (
-    AnnotationRequest, 
-    AnnotationResponse, 
+    AnnotationRequest,
+    AnnotationResponse,
     BatchAnnotationRequest,
     LLMConfigSchema
 )
 from app.services.annotation_service import AnnotationService
 from datetime import datetime
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
+
+from app.auth.deps import get_current_user_optional
+from app.db.models import User
+from app.db.repositories import runs as runs_repo
+from app.db.session import get_db
 
 router = APIRouter()
 annotation_service = AnnotationService()
@@ -97,10 +103,14 @@ class StartJobRequest(BaseModel):
 
 
 @router.post("/start-job")
-async def start_annotation_job(request: StartJobRequest):
+async def start_annotation_job(
+    request: StartJobRequest,
+    current_user: Optional[User] = Depends(get_current_user_optional),
+    db: Session = Depends(get_db),
+):
     """
     Start annotation job for an uploaded dataset.
-    
+
     Required fields:
     - dataset_id: ID from upload endpoint
     - llm_config: Configuration for LLM models, API keys, and processing strategies
@@ -109,12 +119,30 @@ async def start_annotation_job(request: StartJobRequest):
     """
     try:
         result = await annotation_service.start_annotation_job(
-            request.dataset_id, 
-            request.llm_config.model_dump(), 
-            request.dataset_name, 
+            request.dataset_id,
+            request.llm_config.model_dump(),
+            request.dataset_name,
             request.resume_job_id
         )
+
+        # If authed, persist a run row. No-op when anonymous.
+        try:
+            dataset_filename = annotation_service.uploaded_datasets[request.dataset_id]["filename"]
+        except (KeyError, AttributeError):
+            dataset_filename = f"{request.dataset_name}.csv"
+        runs_repo.persist_run_if_authed(
+            db,
+            current_user=current_user,
+            job_id=result["job_id"],
+            dataset_id=request.dataset_id,
+            dataset_filename=dataset_filename,
+            total_sessions=len(result.get("session_ids", [])),
+            llm_config=request.llm_config.model_dump(),
+        )
+
         return result
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
