@@ -3,6 +3,8 @@
  */
 
 import axios, { AxiosInstance } from 'axios'
+import { getBackendToken, clearBackendTokenCache } from '@/lib/auth-client'
+import type { UserOut, RunListOut, RunOut, PresetOut } from '@/types/auth'
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/v1'
 
@@ -18,32 +20,36 @@ class ApiClient {
       timeout: 10000, // 10 seconds (faster timeout for status checks)
     })
 
-    // Request interceptor
+    // Request interceptor — attach backend-bound JWT when a NextAuth session is present.
     this.client.interceptors.request.use(
-      (config) => {
-        // Add auth token if available
-        const token = localStorage.getItem('auth_token')
-        if (token) {
-          config.headers.Authorization = `Bearer ${token}`
+      async (config) => {
+        try {
+          const token = await getBackendToken()
+          if (token) {
+            config.headers = config.headers ?? {}
+            ;(config.headers as any).Authorization = `Bearer ${token}`
+          }
+        } catch {
+          // Network blip fetching the backend token — proceed unauthenticated
+          // rather than blocking the request. Backend will 401 if auth was required.
         }
         return config
       },
-      (error) => {
-        return Promise.reject(error)
-      }
+      (error) => Promise.reject(error),
     )
 
-    // Response interceptor
+    // Response interceptor — clear the backend-token cache on 401 so the next
+    // request tries to mint a fresh one. No redirect: anonymous users hitting
+    // an authed endpoint should just get their 401 back; the caller decides
+    // how to react.
     this.client.interceptors.response.use(
       (response) => response,
-      (error) => {
+      async (error) => {
         if (error.response?.status === 401) {
-          // Handle unauthorized
-          localStorage.removeItem('auth_token')
-          window.location.href = '/login'
+          clearBackendTokenCache()
         }
         return Promise.reject(error)
-      }
+      },
     )
   }
 
@@ -209,6 +215,36 @@ class ApiClient {
   // Health check
   async healthCheck() {
     return this.client.get('/health')
+  }
+
+  // Auth / users
+  async getMe() {
+    return this.client.get<UserOut>('/users/me')
+  }
+
+  // Runs
+  async listRuns(limit = 50, offset = 0) {
+    return this.client.get<RunListOut>('/runs', { params: { limit, offset } })
+  }
+  async getRun(id: string) {
+    return this.client.get<RunOut>(`/runs/${id}`)
+  }
+  async deleteRun(id: string) {
+    return this.client.delete(`/runs/${id}`)
+  }
+
+  // Config presets
+  async listPresets() {
+    return this.client.get<PresetOut[]>('/configs')
+  }
+  async createPreset(body: { name: string; description?: string; config_json: Record<string, unknown> }) {
+    return this.client.post<PresetOut>('/configs', body)
+  }
+  async updatePreset(id: string, body: { name?: string; description?: string; config_json?: Record<string, unknown> }) {
+    return this.client.patch<PresetOut>(`/configs/${id}`, body)
+  }
+  async deletePreset(id: string) {
+    return this.client.delete(`/configs/${id}`)
   }
 }
 
