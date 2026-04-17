@@ -27,13 +27,14 @@ annotation_service = AnnotationService()
 def _make_terminal_hook():
     """Build an on_terminal callback that writes to the DB using a fresh
     SessionLocal (the request session is long gone by the time the
-    background thread finishes)."""
+    background thread finishes). Normalizes the orchestrator's status
+    vocabulary onto the DB enum — `stopped` → `paused`, etc."""
     def _hook(*, job_id, status, completed_sessions, flagged_count, error_message=None):
         with SessionLocal() as s:
             runs_repo.mark_terminal(
                 s,
                 job_id,
-                status=status,
+                status=runs_repo.normalize_status(status),
                 completed_sessions=completed_sessions,
                 flagged_count=flagged_count,
                 error_message=error_message,

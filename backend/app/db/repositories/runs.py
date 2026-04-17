@@ -4,10 +4,26 @@ from datetime import datetime, timezone
 from typing import Optional
 from uuid import UUID
 
-from sqlalchemy import select, update
+from sqlalchemy import func, select, update
 from sqlalchemy.orm import Session
 
 from app.db.models import AnnotationRun
+
+# Orchestrator emits `'completed' | 'stopped' | 'failed'`; the DB's
+# annotation_runs.status column is documented as `running|paused|completed|failed`.
+# Translate so we never persist a value outside the declared state machine.
+_ORCHESTRATOR_STATUS_TO_DB = {
+    "completed": "completed",
+    "stopped": "paused",
+    "failed": "failed",
+    "running": "running",
+    "paused": "paused",
+}
+
+
+def normalize_status(orchestrator_status: str) -> str:
+    """Map an orchestrator-internal status onto the persisted enum."""
+    return _ORCHESTRATOR_STATUS_TO_DB.get(orchestrator_status, "completed")
 
 
 def create(
@@ -80,13 +96,23 @@ def mark_terminal(
     flagged_count: int,
     error_message: Optional[str] = None,
 ) -> None:
+    """Persist a job's final state.
+
+    `status` must already be normalized to the DB enum (see normalize_status).
+    `flagged_count` is taken as the MAX of the stored value and the new one so
+    a resumed run (whose orchestrator only tracks flags from the resumed
+    sessions) cannot overwrite the accumulated total from earlier runs.
+    `completed_sessions` uses the same MAX guard for the same reason.
+    """
     db.execute(
         update(AnnotationRun)
         .where(AnnotationRun.job_id == job_id)
         .values(
             status=status,
-            completed_sessions=completed_sessions,
-            flagged_count=flagged_count,
+            completed_sessions=func.greatest(
+                AnnotationRun.completed_sessions, completed_sessions
+            ),
+            flagged_count=func.greatest(AnnotationRun.flagged_count, flagged_count),
             error_message=error_message,
             completed_at=datetime.now(timezone.utc),
         )
@@ -112,10 +138,18 @@ def persist_run_if_authed(
     llm_config: dict,
 ) -> bool:
     """Create an annotation_runs row when a user is present. No-op when anonymous.
-    Returns True if a row was inserted."""
+
+    Idempotent on `job_id`: if a row already exists (e.g. /start-job called
+    with a `resume_job_id` for a job we previously persisted, or a racing
+    retry), returns False without raising on the unique constraint.
+
+    Returns True if a row was inserted.
+    """
     from app.services.config_sanitizer import strip_secrets
 
     if current_user is None:
+        return False
+    if get(db, job_id) is not None:
         return False
     create(
         db,
