@@ -162,14 +162,18 @@ async def get_session_log(job_id: str, session_id: str):
 
 
 @router.post("/job/{job_id}/stop")
-async def stop_job(job_id: str):
+async def stop_job(job_id: str, db: Session = Depends(get_db)):
     """
     Request a job to stop gracefully. The job will complete the current session
     and then stop. Progress is saved via checkpoint system for later resumption.
     """
     try:
         result = await annotation_service.stop_job(job_id)
+        runs_repo.mark_status(db, job_id, "paused")
+        db.commit()
         return result
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
@@ -181,21 +185,29 @@ class ResumeJobRequest(BaseModel):
 
 
 @router.post("/job/{job_id}/resume")
-async def resume_job(job_id: str, request: Optional[ResumeJobRequest] = None):
+async def resume_job(
+    job_id: str,
+    request: Optional[ResumeJobRequest] = None,
+    db: Session = Depends(get_db),
+):
     """
     Resume a paused or stopped annotation job from its checkpoint.
-    
+
     If the original dataset is not in memory, you can provide:
     - dataset_id: ID from a freshly uploaded dataset
     - llm_config: LLM configuration to use (optional, will use default if not provided)
-    
+
     The job will continue processing remaining sessions from where it left off.
     """
     try:
         dataset_id = request.dataset_id if request else None
         llm_config = request.llm_config.model_dump() if request and request.llm_config else None
         result = await annotation_service.resume_job(job_id, dataset_id, llm_config)
+        runs_repo.mark_status(db, job_id, "running")
+        db.commit()
         return result
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
@@ -354,7 +366,12 @@ Provide ONLY the JSON array, no additional text."""
 
 
 @router.post("/job/{job_id}/session/{session_id}/resolve")
-async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict[str, Any]):
+async def resolve_session_annotation(
+    job_id: str,
+    session_id: str,
+    payload: Dict[str, Any],
+    db: Session = Depends(get_db),
+):
     """
     Resolve flagged annotations for a session by applying a user-selected label.
     Overwrites cognitive labels for flagged events and updates output/logs.
@@ -492,6 +509,9 @@ async def resolve_session_annotation(job_id: str, session_id: str, payload: Dict
                 print(f"CSV UPDATE: Updated {updated_csv_count} events for session {session_id} in {output_file}")
             else:
                 print(f"CSV UPDATE: WARNING - No rows or fieldnames found for {output_file}")
+
+        runs_repo.increment_resolved(db, job_id)
+        db.commit()
 
         return {
             "status": "ok",
