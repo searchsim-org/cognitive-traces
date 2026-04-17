@@ -7,7 +7,6 @@ import json
 import io
 from typing import List, Dict, Any
 from collections import defaultdict
-import pandas as pd
 
 
 class FileParser:
@@ -35,6 +34,7 @@ class FileParser:
     @staticmethod
     async def _parse_csv(file_content: bytes) -> Dict[str, Any]:
         """Parse CSV file and extract sessions"""
+        import pandas as pd
         try:
             # Read CSV into pandas DataFrame with proper quoting for JSON content
             df = pd.read_csv(

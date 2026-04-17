@@ -575,6 +575,19 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
     loadDefaultPrompts()
   }, [])
 
+  // Auto-publish config to parent whenever it's valid so Start Annotation
+  // doesn't depend on the user remembering to click "Save Configuration".
+  // The Save button still persists keys to localStorage; this just keeps
+  // the parent's llmConfig in sync.
+  useEffect(() => {
+    if (isConfigValid) {
+      onConfigComplete(config)
+    }
+    // onConfigComplete is intentionally excluded: parent passes an inline
+    // arrow, so including it would refire on every parent render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isConfigValid, config])
+
   const tabs = [
     { id: 'models' as const, label: 'Models & API Keys', number: 1, description: 'Select AI models' },
     { id: 'strategy' as const, label: 'Session Strategy', number: 2, description: 'Handle long sessions' },

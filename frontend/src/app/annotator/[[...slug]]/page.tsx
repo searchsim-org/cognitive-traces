@@ -384,6 +384,7 @@ function AnnotatorContent() {
                   <button
                     onClick={handleStartAnnotation}
                     disabled={!llmConfig || isLoading}
+                    title={!llmConfig ? 'Configure at least one model provider (API key) to enable' : undefined}
                     className="px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? 'Starting...' : 'Start Annotation'}

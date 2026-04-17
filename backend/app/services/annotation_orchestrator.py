@@ -8,9 +8,6 @@ import os
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-import numpy as np
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 
 from app.services.llm_agents import AnalystAgent, CriticAgent, JudgeAgent, LLMConfig
 
@@ -384,6 +381,7 @@ class AnnotationOrchestrator:
             if self.similarity_model is None:
                 try:
                     print("[DISAGREEMENT] Loading SentenceTransformer 'all-MiniLM-L6-v2'...")
+                    from sentence_transformers import SentenceTransformer
                     self.similarity_model = SentenceTransformer('all-MiniLM-L6-v2')
                     self.similarity_model_loaded = True
                     self.similarity_model_error = None
@@ -395,17 +393,19 @@ class AnnotationOrchestrator:
                     print(f"[DISAGREEMENT][ERROR] Failed to load SentenceTransformer: {load_err}")
                     # Early return zeros so pipeline continues without flags
                     return [0.0] * len(analyst_decisions)
-            
+
+            from sklearn.metrics.pairwise import cosine_similarity
+
             disagreement_scores = []
-            
+
             for analyst, critic in zip(analyst_decisions, critic_decisions):
                 # Label disagreement
                 label_disagree = 1.0 if analyst['label'] != critic['label'] else 0.0
-                
+
                 # Semantic disagreement in justifications
                 analyst_text = analyst['justification']
                 critic_text = critic['justification']
-                
+
                 embeddings = self.similarity_model.encode([analyst_text, critic_text])
                 similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
                 semantic_disagree = 1.0 - similarity  # Convert similarity to disagreement
