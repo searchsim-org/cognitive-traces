@@ -18,10 +18,28 @@ from sqlalchemy.orm import Session
 from app.auth.deps import get_current_user_optional
 from app.db.models import User
 from app.db.repositories import runs as runs_repo
-from app.db.session import get_db
+from app.db.session import SessionLocal, get_db
 
 router = APIRouter()
 annotation_service = AnnotationService()
+
+
+def _make_terminal_hook():
+    """Build an on_terminal callback that writes to the DB using a fresh
+    SessionLocal (the request session is long gone by the time the
+    background thread finishes)."""
+    def _hook(*, job_id, status, completed_sessions, flagged_count, error_message=None):
+        with SessionLocal() as s:
+            runs_repo.mark_terminal(
+                s,
+                job_id,
+                status=status,
+                completed_sessions=completed_sessions,
+                flagged_count=flagged_count,
+                error_message=error_message,
+            )
+            s.commit()
+    return _hook
 
 
 @router.post("/annotate", response_model=AnnotationResponse)
@@ -118,11 +136,13 @@ async def start_annotation_job(
     - resume_job_id: Job ID to resume from checkpoint (optional)
     """
     try:
+        on_terminal = _make_terminal_hook() if current_user is not None else None
         result = await annotation_service.start_annotation_job(
             request.dataset_id,
             request.llm_config.model_dump(),
             request.dataset_name,
-            request.resume_job_id
+            request.resume_job_id,
+            on_terminal=on_terminal,
         )
 
         # If authed, persist a run row. No-op when anonymous.
@@ -202,7 +222,9 @@ async def resume_job(
     try:
         dataset_id = request.dataset_id if request else None
         llm_config = request.llm_config.model_dump() if request and request.llm_config else None
-        result = await annotation_service.resume_job(job_id, dataset_id, llm_config)
+        result = await annotation_service.resume_job(
+            job_id, dataset_id, llm_config, on_terminal=_make_terminal_hook()
+        )
         runs_repo.mark_status(db, job_id, "running")
         db.commit()
         return result

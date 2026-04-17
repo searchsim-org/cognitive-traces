@@ -7,7 +7,7 @@ import asyncio
 import threading
 import json
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Callable
 from fastapi import UploadFile
 
 from app.schemas.annotation import AnnotationRequest, BatchAnnotationRequest
@@ -98,7 +98,9 @@ class AnnotationService:
         dataset_id: str,
         llm_config: Dict[str, Any],
         dataset_name: str = "dataset",
-        resume_job_id: Optional[str] = None
+        resume_job_id: Optional[str] = None,
+        *,
+        on_terminal: Optional[Callable[..., None]] = None,
     ) -> Dict[str, Any]:
         """Start annotation job for uploaded dataset"""
         
@@ -181,13 +183,40 @@ class AnnotationService:
         self.uploaded_datasets[dataset_id]['job_sessions'] = session_ids
         orchestrator.session_ids = session_ids  # Store in orchestrator for status retrieval
         
-        # Start annotation in a background thread to avoid blocking the event loop
+        # Start annotation in a background thread to avoid blocking the event loop.
+        # After the run ends (success or failure), invoke the optional on_terminal
+        # callback so the API layer can mirror the final state into the DB.
         def _run_annotation():
-            asyncio.run(orchestrator.annotate_dataset(sessions, job_id, dataset_name))
+            try:
+                summary = asyncio.run(orchestrator.annotate_dataset(sessions, job_id, dataset_name))
+                if on_terminal is not None:
+                    try:
+                        on_terminal(
+                            job_id=job_id,
+                            status=summary.get('status', 'completed'),
+                            completed_sessions=summary.get('completed_sessions', 0),
+                            flagged_count=len(summary.get('flagged_sessions', [])),
+                            error_message=None,
+                        )
+                    except Exception as hook_err:
+                        print(f"[WARN] on_terminal hook failed (non-fatal): {hook_err}")
+            except Exception as run_err:
+                print(f"[ERROR] Annotation job {job_id} crashed: {run_err}")
+                if on_terminal is not None:
+                    try:
+                        on_terminal(
+                            job_id=job_id,
+                            status='failed',
+                            completed_sessions=0,
+                            flagged_count=0,
+                            error_message=str(run_err),
+                        )
+                    except Exception:
+                        pass
 
         thread = threading.Thread(target=_run_annotation, daemon=True)
         thread.start()
-        
+
         return {
             'job_id': job_id,
             'status': 'started',
@@ -430,10 +459,12 @@ class AnnotationService:
         }
     
     async def resume_job(
-        self, 
-        job_id: str, 
+        self,
+        job_id: str,
         dataset_id: Optional[str] = None,
-        llm_config_dict: Optional[Dict[str, Any]] = None
+        llm_config_dict: Optional[Dict[str, Any]] = None,
+        *,
+        on_terminal: Optional[Callable[..., None]] = None,
     ) -> Dict[str, Any]:
         """Resume a paused or stopped job from checkpoint"""
         
@@ -567,10 +598,37 @@ class AnnotationService:
         # Store session list
         orchestrator.session_ids = session_ids
         
-        # Start annotation in background thread
+        # Start annotation in a background thread to avoid blocking the event loop.
+        # After the run ends (success or failure), invoke the optional on_terminal
+        # callback so the API layer can mirror the final state into the DB.
         def _run_annotation():
-            asyncio.run(orchestrator.annotate_dataset(sessions, job_id, dataset_name))
-        
+            try:
+                summary = asyncio.run(orchestrator.annotate_dataset(sessions, job_id, dataset_name))
+                if on_terminal is not None:
+                    try:
+                        on_terminal(
+                            job_id=job_id,
+                            status=summary.get('status', 'completed'),
+                            completed_sessions=summary.get('completed_sessions', 0),
+                            flagged_count=len(summary.get('flagged_sessions', [])),
+                            error_message=None,
+                        )
+                    except Exception as hook_err:
+                        print(f"[WARN] on_terminal hook failed (non-fatal): {hook_err}")
+            except Exception as run_err:
+                print(f"[ERROR] Annotation job {job_id} crashed: {run_err}")
+                if on_terminal is not None:
+                    try:
+                        on_terminal(
+                            job_id=job_id,
+                            status='failed',
+                            completed_sessions=0,
+                            flagged_count=0,
+                            error_message=str(run_err),
+                        )
+                    except Exception:
+                        pass
+
         thread = threading.Thread(target=_run_annotation, daemon=True)
         thread.start()
         
