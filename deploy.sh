@@ -85,21 +85,27 @@ if [ "$DEPLOY_BACKEND" = true ]; then
     git pull || true
 
     # Reconcile lock with pyproject (poetry.lock is gitignored, so local lock
-    # can drift whenever pyproject.toml changes). --no-update keeps resolved
-    # versions stable; it only adds/removes entries to match pyproject.
+    # can drift whenever pyproject.toml changes). Poetry >=2 doesn't update
+    # resolved versions by default, so a plain `poetry lock` is what we want
+    # on both 1.x (defaults to no-update) and 2.x.
     echo "  → Reconciling poetry.lock with pyproject.toml..."
-    poetry lock --no-update
+    poetry lock
 
     # Install dependencies with Poetry
     echo "  → Installing dependencies..."
     poetry install --only main --no-interaction
 
-    # Optional: on CPU-only Linux servers, swap torch for the CPU wheel to
-    # save ~1.5 GB of unused CUDA libs. Opt in with FORCE_CPU_TORCH=1.
-    if [ "${FORCE_CPU_TORCH:-0}" = "1" ]; then
-        echo "  → Swapping torch to CPU-only wheel (FORCE_CPU_TORCH=1)..."
-        poetry run pip install --force-reinstall --no-deps torch \
-            --index-url https://download.pytorch.org/whl/cpu > /dev/null
+    # On Linux servers, swap torch for the CPU-only wheel to save ~1.5 GB of
+    # unused CUDA libs (nvidia-*, triton). Idempotent: a no-op if torch is
+    # already the CPU wheel. Set FORCE_CPU_TORCH=0 to skip.
+    if [ "$(uname -s)" = "Linux" ] && [ "${FORCE_CPU_TORCH:-1}" != "0" ]; then
+        if poetry run python -c "import torch; exit(0 if '+cpu' in torch.__version__ else 1)" 2>/dev/null; then
+            echo "  → torch already CPU-only; skipping swap."
+        else
+            echo "  → Swapping torch to CPU-only wheel..."
+            poetry run pip install --force-reinstall --no-deps torch \
+                --index-url https://download.pytorch.org/whl/cpu > /dev/null
+        fi
     fi
 
     # Apply database migrations (safe no-op when already at head)
