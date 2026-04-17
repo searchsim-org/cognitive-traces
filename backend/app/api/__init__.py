@@ -3,7 +3,7 @@ API routes module
 """
 
 from fastapi import APIRouter
-from app.api.endpoints import annotations, sessions, models, export, users
+from app.api.endpoints import annotations, sessions, models, export, users, runs
 
 router = APIRouter()
 
@@ -12,4 +12,5 @@ router.include_router(sessions.router, prefix="/sessions", tags=["sessions"])
 router.include_router(models.router, prefix="/models", tags=["models"])
 router.include_router(export.router, prefix="/export", tags=["export"])
 router.include_router(users.router, prefix="/users", tags=["users"])
+router.include_router(runs.router, prefix="/runs", tags=["runs"])
 
