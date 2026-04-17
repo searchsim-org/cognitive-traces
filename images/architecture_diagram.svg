@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#999" stroke-width="1.5" opacity="0.5"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- ============ TOP: Output ============ -->
+
+  <!-- Binary output -->
+  <rect x="295" y="12" width="130" height="36" rx="18" fill="#5B7B94" opacity="0.12" stroke="#5B7B94" stroke-width="1.2"/>
+  <text x="360" y="35" text-anchor="middle" font-size="13" font-weight="600" fill="#3a5568">Binary Output</text>
+
+  <!-- Arrow: CLS → Output -->
+  <line x1="360" y1="48" x2="360" y2="68" stroke="#999" stroke-width="1.2" marker-start="url(#arrow)"/>
+
+  <!-- CLS token -->
+  <circle cx="360" cy="84" r="18" fill="#5B7B94" opacity="0.15" stroke="#5B7B94" stroke-width="1.2"/>
+  <text x="360" y="89" text-anchor="middle" font-size="11" font-weight="700" fill="#3a5568">CLS</text>
+
+  <!-- Arrow: Transformer → CLS -->
+  <line x1="360" y1="102" x2="360" y2="130" stroke="#999" stroke-width="1.2" marker-start="url(#arrow)"/>
+
+  <!-- ============ TRANSFORMER BLOCK ============ -->
+
+  <rect x="140" y="130" width="440" height="70" rx="10" fill="#f0f4f8" stroke="#5B7B94" stroke-width="1.5"/>
+  <text x="360" y="158" text-anchor="middle" font-size="15" font-weight="700" fill="#2d4354">4-Layer Transformer Encoder</text>
+  <text x="360" y="178" text-anchor="middle" font-size="11" fill="#7a8fa0">768 hidden · 8 heads · 3072 FFN</text>
+
+  <!-- Arrow: Embeddings → Transformer -->
+  <line x1="360" y1="200" x2="360" y2="230" stroke="#999" stroke-width="1.2" marker-start="url(#arrow)"/>
+
+  <!-- ============ EMBEDDING VARIANTS ============ -->
+
+  <!-- Section label -->
+  <text x="360" y="250" text-anchor="middle" font-size="12" font-weight="600" fill="#5B7B94" letter-spacing="1.5">INPUT PER EVENT</text>
+
+  <!-- === Bar 1: Behavioral (416d) === -->
+  <g transform="translate(100, 264)">
+    <!-- S-BERT block -->
+    <rect x="0" y="0" width="306" height="38" rx="4" fill="#5B7B94" opacity="0.18" stroke="#5B7B94" stroke-width="1"/>
+    <text x="153" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#3a5568">S-BERT text</text>
+    <text x="153" y="34" text-anchor="middle" font-size="9" fill="#6b8399">384d</text>
+
+    <!-- Action-type block -->
+    <rect x="310" y="0" width="76" height="38" rx="4" fill="#C4A24E" opacity="0.22" stroke="#C4A24E" stroke-width="1"/>
+    <text x="348" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#7a6520">action</text>
+    <text x="348" y="34" text-anchor="middle" font-size="9" fill="#9a8030">32d</text>
+
+    <!-- Empty space (no IFT) -->
+    <rect x="390" y="0" width="76" height="38" rx="4" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Label -->
+    <text x="500" y="18" font-size="13" font-weight="700" fill="#3a5568">Behavioral</text>
+    <text x="500" y="33" font-size="11" fill="#7a8fa0">416d</text>
+  </g>
+
+  <!-- === Bar 2: Cognitive (448d) === -->
+  <g transform="translate(100, 310)">
+    <!-- S-BERT block -->
+    <rect x="0" y="0" width="306" height="38" rx="4" fill="#5B7B94" opacity="0.18" stroke="#5B7B94" stroke-width="1"/>
+    <text x="153" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#3a5568">S-BERT text</text>
+    <text x="153" y="34" text-anchor="middle" font-size="9" fill="#6b8399">384d</text>
+
+    <!-- Action-type block -->
+    <rect x="310" y="0" width="76" height="38" rx="4" fill="#C4A24E" opacity="0.22" stroke="#C4A24E" stroke-width="1"/>
+    <text x="348" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#7a6520">action</text>
+    <text x="348" y="34" text-anchor="middle" font-size="9" fill="#9a8030">32d</text>
+
+    <!-- IFT label block -->
+    <rect x="390" y="0" width="76" height="38" rx="4" fill="#5B9B8A" opacity="0.22" stroke="#5B9B8A" stroke-width="1"/>
+    <text x="428" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#3a6b5a">IFT</text>
+    <text x="428" y="34" text-anchor="middle" font-size="9" fill="#4a8a72">32d</text>
+
+    <!-- Label -->
+    <text x="500" y="18" font-size="13" font-weight="700" fill="#3a6b5a">Cognitive</text>
+    <text x="500" y="33" font-size="11" fill="#7a8fa0">448d</text>
+  </g>
+
+  <!-- === Bar 3: Shuffled (448d) === -->
+  <g transform="translate(100, 356)">
+    <!-- S-BERT block -->
+    <rect x="0" y="0" width="306" height="38" rx="4" fill="#5B7B94" opacity="0.18" stroke="#5B7B94" stroke-width="1"/>
+    <text x="153" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#3a5568">S-BERT text</text>
+    <text x="153" y="34" text-anchor="middle" font-size="9" fill="#6b8399">384d</text>
+
+    <!-- Action-type block -->
+    <rect x="310" y="0" width="76" height="38" rx="4" fill="#C4A24E" opacity="0.22" stroke="#C4A24E" stroke-width="1"/>
+    <text x="348" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#7a6520">action</text>
+    <text x="348" y="34" text-anchor="middle" font-size="9" fill="#9a8030">32d</text>
+
+    <!-- Shuffled block with hatch -->
+    <rect x="390" y="0" width="76" height="38" rx="4" fill="url(#hatch)" stroke="#999" stroke-width="1"/>
+    <text x="428" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#666">rand</text>
+    <text x="428" y="34" text-anchor="middle" font-size="9" fill="#888">32d</text>
+
+    <!-- Label -->
+    <text x="500" y="18" font-size="13" font-weight="700" fill="#777">Shuffled</text>
+    <text x="500" y="33" font-size="11" fill="#7a8fa0">448d</text>
+  </g>
+
+  <!-- ============ Annotation labels below bars ============ -->
+  <text x="253" y="414" text-anchor="middle" font-size="10" fill="#99aabb" font-style="italic">all-MiniLM-L6-v2</text>
+  <text x="448" y="414" text-anchor="middle" font-size="10" fill="#99aabb" font-style="italic">learned embeddings</text>
+
+  <!-- ============ BOTTOM: Input events ============ -->
+
+  <!-- Arrow: Events → Embeddings -->
+  <line x1="360" y1="424" x2="360" y2="448" stroke="#999" stroke-width="1.2" marker-start="url(#arrow)"/>
+
+  <!-- Event sequence -->
+  <g transform="translate(130, 452)">
+    <!-- e1 -->
+    <rect x="0" y="0" width="52" height="44" rx="5" fill="#fff" stroke="#c0cdd8" stroke-width="1.2"/>
+    <line x1="10" y1="12" x2="42" y2="12" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="10" y1="20" x2="36" y2="20" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="10" y1="28" x2="30" y2="28" stroke="#d0dae2" stroke-width="2"/>
+    <text x="26" y="56" text-anchor="middle" font-size="10" fill="#7a8fa0">e₁</text>
+
+    <!-- e2 -->
+    <rect x="66" y="0" width="52" height="44" rx="5" fill="#fff" stroke="#c0cdd8" stroke-width="1.2"/>
+    <line x1="76" y1="12" x2="108" y2="12" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="76" y1="20" x2="102" y2="20" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="76" y1="28" x2="96" y2="28" stroke="#d0dae2" stroke-width="2"/>
+    <text x="92" y="56" text-anchor="middle" font-size="10" fill="#7a8fa0">e₂</text>
+
+    <!-- e3 -->
+    <rect x="132" y="0" width="52" height="44" rx="5" fill="#fff" stroke="#c0cdd8" stroke-width="1.2"/>
+    <line x1="142" y1="12" x2="174" y2="12" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="142" y1="20" x2="168" y2="20" stroke="#d0dae2" stroke-width="2"/>
+    <line x1="142" y1="28" x2="162" y2="28" stroke="#d0dae2" stroke-width="2"/>
+    <text x="158" y="56" text-anchor="middle" font-size="10" fill="#7a8fa0">e₃</text>
+
+    <!-- dots -->
+    <text x="215" y="28" text-anchor="middle" font-size="16" fill="#aabbcc">···</text>
+
+    <!-- et (highlighted) -->
+    <rect x="248" y="0" width="52" height="44" rx="5" fill="#5B7B94" opacity="0.08" stroke="#5B7B94" stroke-width="1.5"/>
+    <line x1="258" y1="12" x2="290" y2="12" stroke="#5B7B94" stroke-width="2" opacity="0.3"/>
+    <line x1="258" y1="20" x2="284" y2="20" stroke="#5B7B94" stroke-width="2" opacity="0.3"/>
+    <line x1="258" y1="28" x2="278" y2="28" stroke="#5B7B94" stroke-width="2" opacity="0.3"/>
+    <text x="274" y="56" text-anchor="middle" font-size="10" font-weight="600" fill="#5B7B94">eₜ</text>
+
+    <!-- et+1 (faded, future) -->
+    <rect x="314" y="0" width="52" height="44" rx="5" fill="#fff" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="324" y1="12" x2="356" y2="12" stroke="#e8e8e8" stroke-width="2"/>
+    <line x1="324" y1="20" x2="350" y2="20" stroke="#e8e8e8" stroke-width="2"/>
+    <line x1="324" y1="28" x2="344" y2="28" stroke="#e8e8e8" stroke-width="2"/>
+    <text x="340" y="56" text-anchor="middle" font-size="10" fill="#ccc">eₜ₊₁</text>
+
+    <!-- Question mark over future event -->
+    <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#C47070" opacity="0.6">?</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="360" y="518" text-anchor="middle" font-size="12" font-weight="600" fill="#5B7B94" letter-spacing="1">SESSION PREFIX</text>
+
+  <!-- Bracket: prefix vs prediction target -->
+  <line x1="134" y1="502" x2="400" y2="502" stroke="#5B7B94" stroke-width="1" opacity="0.4"/>
+  <line x1="420" y1="502" x2="492" y2="502" stroke="#C47070" stroke-width="1" opacity="0.4"/>
+  <text x="456" y="516" text-anchor="middle" font-size="10" fill="#C47070" font-style="italic">predict</text>
+</svg>
