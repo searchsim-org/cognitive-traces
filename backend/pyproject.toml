@@ -23,17 +23,13 @@ sentence-transformers = "^2.2.2"
 # unused CUDA libs (nvidia-*, triton) that bloat both disk and RSS on
 # our CPU-only VPS. The pytorch-cpu source is declared below.
 torch = {version = "^2.1.1", source = "pytorch-cpu"}
-transformers = "^4.35.0"
 sqlalchemy = "^2.0.23"
 alembic = "^1.12.1"
 psycopg2-binary = "^2.9.9"
-redis = "^5.0.1"
-celery = "^5.3.4"
+# python-jose stays: required by the GitHub login spec (HS256 JWT decode).
 python-jose = {extras = ["cryptography"], version = "^3.3.0"}
-passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-dotenv = "^1.0.0"
 httpx = "^0.25.2"
-aiofiles = "^23.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
