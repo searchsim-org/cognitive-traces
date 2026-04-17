@@ -1,5 +1,13 @@
 #!/bin/bash
-# Deployment script for Cognitive Traces app
+# Deployment script for Cognitive Traces app.
+#
+# NOTE: This is a REFERENCE deploy script — the paths/services below match
+# our production VPS (systemd-based, Caddy, Poetry, pnpm). For local
+# development, use SETUP.md (Option 1) or `docker-compose up -d`
+# (Option 2) instead. If you adapt this for your own server, override
+# PROJECT_ROOT / BACKEND_SERVICE / FRONTEND_SERVICE / API_URL via env vars
+# or edit the Configuration block directly.
+#
 # Usage: ./deploy.sh [--backend] [--frontend] [--all]
 
 set -e  # Exit on error
@@ -10,13 +18,13 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Configuration
-PROJECT_ROOT="/srv/traces"
+# Configuration (env-overridable so this script is reusable)
+PROJECT_ROOT="${PROJECT_ROOT:-/srv/traces}"
 BACKEND_DIR="${PROJECT_ROOT}/backend"
 FRONTEND_DIR="${PROJECT_ROOT}/frontend"
-BACKEND_SERVICE="traces-backend"
-FRONTEND_SERVICE="traces-frontend"
-API_URL="https://traces.searchsim.org/api/v1"
+BACKEND_SERVICE="${BACKEND_SERVICE:-traces-backend}"
+FRONTEND_SERVICE="${FRONTEND_SERVICE:-traces-frontend}"
+API_URL="${API_URL:-https://traces.searchsim.org/api/v1}"
 
 # Default flags
 DEPLOY_BACKEND=false
@@ -75,11 +83,29 @@ if [ "$DEPLOY_BACKEND" = true ]; then
     # Pull latest changes
     echo "  → Pulling latest code..."
     git pull || true
-    
+
+    # Reconcile lock with pyproject (poetry.lock is gitignored, so local lock
+    # can drift whenever pyproject.toml changes). --no-update keeps resolved
+    # versions stable; it only adds/removes entries to match pyproject.
+    echo "  → Reconciling poetry.lock with pyproject.toml..."
+    poetry lock --no-update
+
     # Install dependencies with Poetry
     echo "  → Installing dependencies..."
     poetry install --only main --no-interaction
-    
+
+    # Optional: on CPU-only Linux servers, swap torch for the CPU wheel to
+    # save ~1.5 GB of unused CUDA libs. Opt in with FORCE_CPU_TORCH=1.
+    if [ "${FORCE_CPU_TORCH:-0}" = "1" ]; then
+        echo "  → Swapping torch to CPU-only wheel (FORCE_CPU_TORCH=1)..."
+        poetry run pip install --force-reinstall --no-deps torch \
+            --index-url https://download.pytorch.org/whl/cpu > /dev/null
+    fi
+
+    # Apply database migrations (safe no-op when already at head)
+    echo "  → Running Alembic migrations..."
+    poetry run alembic upgrade head
+
     # Restart backend service
     echo "  → Restarting backend service..."
     sudo systemctl restart "$BACKEND_SERVICE"
