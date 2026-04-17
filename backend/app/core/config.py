@@ -43,7 +43,12 @@ class Settings(BaseSettings):
         default="postgresql://postgres:postgres@localhost:5432/cognitive_traces",
         description="PostgreSQL database URL"
     )
-    
+
+    NEXTAUTH_SECRET: str = Field(
+        default="",
+        description="Shared secret used to verify HS256 JWTs minted by the NextAuth frontend",
+    )
+
     # Redis
     REDIS_URL: str = Field(default="redis://localhost:6379/0", description="Redis URL")
     
