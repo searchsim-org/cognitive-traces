@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { Eye, EyeOff, Save, Key, Brain, RefreshCw, Server, CheckCircle, XCircle, Settings, Zap, FileText, AlertCircle, Info, HelpCircle, Loader2 } from 'lucide-react'
 import { api } from '@/lib/api'
 import toast from 'react-hot-toast'
+import { PresetSelect } from '@/components/annotator/PresetSelect'
+import { SavePresetButton } from '@/components/annotator/SavePresetButton'
 
 // Dynamic import for crypto-js to avoid SSR issues
 let CryptoJS: any = null
@@ -657,6 +659,10 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
         {/* TAB 1: Models & API Keys */}
         {activeTab === 'models' && (
       <div className="space-y-8">
+        <div className="flex items-center gap-3">
+          <PresetSelect onLoad={(loaded) => setConfig(prev => ({ ...prev, ...loaded }))} />
+          <SavePresetButton config={config as unknown as Record<string, unknown>} />
+        </div>
         {/* Agent Model Selection */}
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4">Select Models for Each Agent</h3>
