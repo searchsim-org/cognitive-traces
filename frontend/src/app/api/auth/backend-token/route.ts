@@ -1,11 +1,19 @@
 import { getToken } from 'next-auth/jwt'
 import jwt from 'jsonwebtoken'
 import { NextRequest } from 'next/server'
+import { jwtDecode } from '@/lib/auth-options'
 
 const BACKEND_TOKEN_TTL_SECONDS = 60 * 15 // 15 minutes
 
 export async function GET(req: NextRequest) {
-  const claims = await getToken({ req, secret: process.env.NEXTAUTH_SECRET! })
+  // Pass the same HS256 decoder that NextAuth uses to mint the session
+  // cookie. Default getToken expects JWE — without overriding, it fails
+  // to decode our HS256 cookie and returns null.
+  const claims = await getToken({
+    req,
+    secret: process.env.NEXTAUTH_SECRET!,
+    decode: jwtDecode,
+  })
   if (!claims) return new Response('Unauthorized', { status: 401 })
 
   const token = jwt.sign(
