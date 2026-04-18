@@ -785,6 +785,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                   value={config.anthropic_api_key || ''}
                   onChange={(e) => setConfig({ ...config, anthropic_api_key: e.target.value })}
                   placeholder="sk-ant-..."
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  data-lpignore="true"
                       className="w-full px-4 py-2.5 pr-10 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white text-sm"
                 />
                 <button
@@ -809,6 +812,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                   value={config.openai_api_key || ''}
                   onChange={(e) => setConfig({ ...config, openai_api_key: e.target.value })}
                   placeholder="sk-..."
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  data-lpignore="true"
                       className="w-full px-4 py-2.5 pr-10 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-sm"
                 />
                 <button
@@ -833,6 +839,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                   value={config.google_api_key || ''}
                   onChange={(e) => setConfig({ ...config, google_api_key: e.target.value })}
                   placeholder="AIza..."
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  data-lpignore="true"
                       className="w-full px-4 py-2.5 pr-10 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white text-sm"
                 />
                 <button
@@ -857,6 +866,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                   value={config.mistral_api_key || ''}
                   onChange={(e) => setConfig({ ...config, mistral_api_key: e.target.value })}
                   placeholder="..."
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  data-lpignore="true"
                       className="w-full px-4 py-2.5 pr-10 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white text-sm"
                 />
                 <button
@@ -966,6 +978,9 @@ export function LLMConfigPanel({ onConfigComplete }: LLMConfigPanelProps) {
                         value={newEndpoint.api_key}
                         onChange={(e) => setNewEndpoint({ ...newEndpoint, api_key: e.target.value })}
                         placeholder="Enter API key if required"
+                        autoComplete="off"
+                        data-1p-ignore="true"
+                        data-lpignore="true"
                         className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 bg-white text-sm"
                       />
                     </div>

@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Upload, FileText, Loader2, ArrowRight, Database } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 interface FileUploaderProps {
   onUpload: (file: File) => void
@@ -44,7 +45,7 @@ export function FileUploader({ onUpload, isLoading }: FileUploaderProps) {
       onUpload(file)
     } catch (error) {
       console.error('Error loading example dataset:', error)
-      alert('Failed to load example dataset. Please try uploading your own file.')
+      toast.error('Failed to load example dataset. Please try uploading your own file.')
     } finally {
       setIsLoadingExample(false)
     }
